@@ -1,6 +1,7 @@
 # Code of Conduct
 
 ## 1. How do we plan to collaborate?
+
 - Management Collaboration
 
   Team members are all familiar with the Agile way of working, and will be expected to perform according to some of its metrics. Stand-ups and flexibility when adapting to requirements are expected practices. Additional specified roles may be added as required in order to aid with a clear seperation of responsibility. 
