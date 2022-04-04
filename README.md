@@ -174,3 +174,8 @@ docker run --rm 2022-group-05/project:latest <arguments>
 
 This command will run the program and you will see the output based on the argument input.
 
+### For further information, the contributors can be contacted:
+Drake Axelrod - drake@draxel.io  
+Klara Svensson - gussvekla@student.gu.se  
+Sicily Brannen - gusbrannsi@student.gu.se  
+Vernita Gouws - gusgouve@student.gu.se 
