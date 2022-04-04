@@ -3,6 +3,6 @@
 #include <cstdint>
 class PrimeChecker {
    public:
-    bool isPrime(uint16_t n);
+    bool isPrime(uint16_t n); //Klara was here
 };
 #endif
