@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+  # web interface
+  opendlv-vehicle-view:
+    image: chalmersrevere/opendlv-vehicle-view-multi:v0.0.60
+    restart: always
+    network_mode: "host"
+    ipc: host
+    ports:
+      - "8081:8081"
+    volumes:
+      - $PWD/recordings:/opt/vehicle-view/recordings
+  # decode image data
+  h264decoder:
+    image: h264decoder:v0.0.4
+    build: 
+      context: https://github.com/chalmers-revere/opendlv-video-h264-decoder.git 
+      dockerfile: Dockerfile.amd64
+    restart: always
+    network_mode: "host"
+    ipc: host
+    environment:
+      DISPLAY: $DISPLAY
+    volumes:
+      - /tmp:/tmp
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/root/.Xauthority
+    depends_on:
+      - opendlv-vehicle-view
+    command: --cid=253 --name=img
+  # overlay for image data
+  cyphy:
+    image: cyphy/group5:latest
+    build:
+      context: ./cyphy
+      dockerfile: Dockerfile
+    restart: always
+    network_mode: "host"
+    ipc: host
+    environment:
+      DISPLAY: $DISPLAY
+    volumes:
+      - /tmp:/tmp
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/root/.Xauthority
+    depends_on:
+      - h264decoder
+      - opendlv-vehicle-view
+    links: 
+      - h264decoder
+    command: --cid=253 --name=img --width=640 --height=480 --verbose
