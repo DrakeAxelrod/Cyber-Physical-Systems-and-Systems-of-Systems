@@ -36,19 +36,17 @@ before_script:
 
 # This section describes what shall be done to build and test the project.
 build:
-  tag_name: $CI_COMMIT_TAG
   tags:
     - docker-build
   stage: build
   script:
-    - cd demo
+    - cd cyphy 
     - docker build -f Dockerfile .
   except:
     - $CI_COMMIT_TAG  
   allow_failure: false
 
 test:
-  tag_name: $CI_COMMIT_TAG
   tags:
     - docker-testsuite
   stage: test
@@ -62,7 +60,6 @@ test:
 
 # This section describes what shall be done to deploy artefacts from the project.
 release:
-  tag_name: $CI_COMMIT_TAG
   tags:
     - docker-build
   stage: deploy
@@ -70,7 +67,7 @@ release:
     - docker build -f Dockerfile -t "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG" .
     - docker push "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
   rules: 
-    -if: $CI_COMMIT_TAG && $CI_COMMIT_TAG =~/^v[0-9]+.[0-9]+.[0-9]+$/ 
+    - if: $CI_COMMIT_TAG && $CI_COMMIT_TAG =~/^v[0-9]+.[0-9]+.[0-9]+$/ 
   
 
 
