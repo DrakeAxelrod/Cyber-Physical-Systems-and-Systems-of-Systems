@@ -1,7 +1,7 @@
 # 2022-group-05
 
 ### Pipeline status
-[![pipeline status](https://git.chalmers.se/courses/dit638/students/2022-group-05/badges/master/pipeline.svg)](https://git.chalmers.se/courses/dit638/students/2022-group-05/-/commits/main)
+[![pipeline status](https://git.chalmers.se/courses/dit638/students/2022-group-05/badges/main/pipeline.svg)](https://git.chalmers.se/courses/dit638/students/2022-group-05/-/commits/main)
 
 ## Getting started
 
