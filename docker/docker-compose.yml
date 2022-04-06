@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  builder:
+    image: drakeaxelrod/cyphybuilder:0.0.1
+    build: 
+      dockerfile: Dockerfile.builder
+  runner:
+    image: drakeaxelrod/cyphyrunner:0.0.1
+    build: 
+      dockerfile: Dockerfile.runner
