@@ -48,7 +48,7 @@ build:
 
 test:
   tags:
-    - docker-testsuite
+    - docker-build
   stage: test
   script:
     - echo "Testing will be added"
@@ -86,4 +86,3 @@ release:
 # - the deployment stage must only be executed when making a new release (ie., a tag) but only when the project could be built and tested successfully
 
 # - the deployment stage must only be executed when the tags to your repository follow semantic versioning (cf. background information here: https://semver.org (Links to an external site.) and https://docs.gitlab.com/ee/user/project/releases/ (Links to an external site.)) according to the pattern
-
