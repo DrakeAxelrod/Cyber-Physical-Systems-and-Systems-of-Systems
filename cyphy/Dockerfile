@@ -18,7 +18,7 @@
 
 # First stage for building the software:
 FROM ubuntu:18.04 as builder
-LABEL Drake Axelrod "drake@draxel.io"
+LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -40,12 +40,11 @@ WORKDIR /opt/sources
 RUN mkdir build && \
     cd build && \
     cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/tmp .. && \
-    make && make install
-
+    make && make test && make install
 
 # Second stage for packaging the software into a software bundle:
 FROM ubuntu:18.04
-LABEL Drake Axelrod "drake@draxel.io"
+LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
 
 ENV DEBIAN_FRONTEND noninteractive
 
