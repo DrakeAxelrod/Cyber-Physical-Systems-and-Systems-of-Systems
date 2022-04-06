@@ -144,3 +144,39 @@ Example of accepted structure
 "added front IR sensor reading #2"
 ```
 
+## Docker
+
+In order to run the project, you need to have docker installed on your computer. There are various ways to install docker. Follow the instructions for your specific setup at [installation](https://docs.docker.com/get-docker/).
+
+Once you've downloaded docker, navigate to the project repository in your terminal.
+
+Run:
+```
+docker start
+```
+
+After docker has started successfully, and you're in the correct folder, run:
+```
+docker build -rm 2022-group-05/project -f Dockerfile .
+```
+This might take a while when you run it the first time. Once completed, you should be able to see the image with the following command:
+
+```
+docker images
+```
+The output will look like this:
+![images](https://imgur.com/AJAvKw0l.png)
+
+When the image has been built, run the image by using the following command:
+```
+docker run --rm 2022-group-05/project:latest <arguments>
+```
+
+This command will run the program and you will see the output based on the argument input.
+
+
+### For further information, the contributors can be contacted:
+Drake Axelrod - drake@draxel.io  
+Klara Svensson - gussvekla@student.gu.se  
+Sicily Brannen - gusbrannsi@student.gu.se  
+Vernita Gouws - gusgouve@student.gu.se 
