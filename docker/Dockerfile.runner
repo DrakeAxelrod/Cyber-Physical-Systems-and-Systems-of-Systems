@@ -18,7 +18,7 @@
 
 # First stage for building the software:
 FROM ubuntu:18.04
-LABEL Drake Axelrod "drake@draxel.io"
+LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
 
 ENV DEBIAN_FRONTEND noninteractive
 
