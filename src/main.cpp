@@ -10,6 +10,6 @@ int main(int argc, char **argv)
         SensorReading sensor;
         std::cout << "Group5 " << number1 << " + " << number2 << " equals " << sensor.Addition(number1, number2) << std::endl;
         std::cout << "Group5 " << number1 << " * " << number2 << " equals " << sensor.Multiply(number1, number2) << std::endl;
-    }
+    } else std::cout << "Enter 2 arguments." << std::endl;
     return 0;
 }
