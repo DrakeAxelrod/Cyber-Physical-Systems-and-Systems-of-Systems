@@ -1,3 +1,4 @@
 # Ignore stuff :D
 
 export
+.ccls-cache
