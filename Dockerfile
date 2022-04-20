@@ -19,6 +19,7 @@
 # First stage for building the software:
 # FROM drakeaxelrod/cyphybuilder:0.0.1 as builder
 FROM ubuntu:18.04 as builder
+
 LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
 
 ENV DEBIAN_FRONTEND noninteractive
