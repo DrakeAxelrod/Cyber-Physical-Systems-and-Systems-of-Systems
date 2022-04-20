@@ -16,7 +16,7 @@
 ---
 
 
-2. To generate SSH keys, use following command:
+2. To generate SSH keys, use the following command:
 
     ```
     ssh-keygen -t ed25519 -C "<comment>"                      
@@ -34,7 +34,7 @@
     Enter passphrase (empty for no passphrase): 
     ```
 ---
-3. Add SSH key to Gitlab.  
+3. Add the SSH key to Gitlab.  
     
     Start by copying the key to clipboard:
     #### Mac
@@ -63,11 +63,12 @@
 
 ---
 
-4. To clone the repository, click the blue clone dropdown and copy the SSH repository url as displayed here:
+4. To clone the repository, click the blue "Clone"
+ dropdown and copy the url under "Clone with SSH" as displayed here:
 
     ![alt text](https://imgur.com/Fq2jXaQ.png)
 
-    Open a terminal and create then navigate to a folder where you want to clone the repository:
+    Open a terminal, create and then navigate to a folder where you want to clone the repository:
 
     ``` 
     mkdir project
@@ -104,6 +105,7 @@
     docker images
     ```
     The output will look like this:
+    
     ![images](https://imgur.com/AJAvKw0l.png)
 
     When the image has been built, run the image by using the following command:
