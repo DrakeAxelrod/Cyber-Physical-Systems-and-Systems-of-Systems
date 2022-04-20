@@ -62,7 +62,7 @@ coverage:
   #image: "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
   stage: test
   before_script:
-    - apt-get -qq update && apt-get -qq install -y make autoconf gcc g++ gcovr ggcov lcov
+    - sudo apt-get -qq update && sudo apt-get -qq install -y make autoconf gcc g++ gcovr ggcov lcov
   script:
     - lcov --list /opt/sources/build/coverage.info
     
