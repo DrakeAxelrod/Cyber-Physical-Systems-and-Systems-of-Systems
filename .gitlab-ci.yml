@@ -59,12 +59,11 @@ build-and-test:
 #   allow_failure: false
 
 coverage:
-  image: "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
   stage: test
   before_script:
     #- apt-get -qq update && apt-get -qq install -y make autoconf gcc g++ gcovr ggcov lcov
-    - apt-get update && apt-get -y upgrade
-    - apt-get install -y lcov
+    - sudo apt-get update && apt-get -y upgrade
+    - sudo apt-get install -y lcov
   script:
     - lcov --list /opt/sources/build/coverage.info
     
