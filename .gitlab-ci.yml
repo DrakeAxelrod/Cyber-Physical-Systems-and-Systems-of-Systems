@@ -59,7 +59,7 @@ build-and-test:
 #   allow_failure: false
 
 coverage:
-  #image: "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
+  image: "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
   stage: test
   before_script:
     #- apt-get -qq update && apt-get -qq install -y make autoconf gcc g++ gcovr ggcov lcov
