@@ -15,7 +15,7 @@
 
 cmake_minimum_required(VERSION 3.2)
 
-project(Cyphy)
+project(SensorReading)
 
 ################################################################################
 # Defining the relevant versions of OpenDLV Standard Message Set and libcluon.
@@ -33,8 +33,10 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}" ${CMAKE_MODULE_PATH})
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+
+
 # Build a static binary.
-set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++ --coverage")
 # Add further warning levels to increase the code quality.
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     -D_XOPEN_SOURCE=700 \
@@ -49,7 +51,10 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     -Wuninitialized -Wunreachable-code \
     -Wunused -Wunused-function -Wunused-label -Wunused-parameter -Wunused-but-set-parameter -Wunused-but-set-variable \
     -Wunused-value -Wunused-variable -Wunused-result \
-    -Wmissing-field-initializers -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn")
+    -Wmissing-field-initializers -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn \
+    -g -O0 -Wall -fprofile-arcs -ftest-coverage \
+    --coverage")
+set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 # Threads are necessary for linking the resulting binaries as the network communication is running inside a thread.
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
@@ -87,18 +92,18 @@ if(UNIX)
 endif()
 
 # This project uses OpenCV for image processing.
-find_package(OpenCV REQUIRED core highgui imgproc)
-include_directories(SYSTEM ${OpenCV_INCLUDE_DIRS})
-set(LIBRARIES ${LIBRARIES} ${OpenCV_LIBS})
+# find_package(OpenCV REQUIRED core highgui imgproc)
+# include_directories(SYSTEM ${OpenCV_INCLUDE_DIRS})
+# set(LIBRARIES ${LIBRARIES} ${OpenCV_LIBS})
 
 ################################################################################
 # Create executable.
-add_executable(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/src/${PROJECT_NAME}.cpp)
+add_executable(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/src/SensorReading.cpp)
 target_link_libraries(${PROJECT_NAME} ${LIBRARIES})
 
 # Add dependency to OpenDLV Standard Message Set.
-add_custom_target(generate_opendlv_standard_message_set_hpp DEPENDS ${CMAKE_BINARY_DIR}/opendlv-standard-message-set.hpp)
-add_dependencies(${PROJECT_NAME} generate_opendlv_standard_message_set_hpp)
+# add_custom_target(generate_opendlv_standard_message_set_hpp DEPENDS ${CMAKE_BINARY_DIR}/opendlv-standard-message-set.hpp)
+# add_dependencies(${PROJECT_NAME} generate_opendlv_standard_message_set_hpp)
 
 ################################################################################
 # Install executable.
@@ -107,6 +112,6 @@ install(TARGETS ${PROJECT_NAME} DESTINATION bin COMPONENT ${PROJECT_NAME})
 ################################################################################
 # Tests.
 enable_testing()
-add_executable(${PROJECT_NAME}-Runner ${CMAKE_CURRENT_SOURCE_DIR}/src/Test.cpp ${CMAKE_CURRENT_SOURCE_DIR}/src/Fail.cpp)
+add_executable(${PROJECT_NAME}-Runner ${CMAKE_CURRENT_SOURCE_DIR}/src/Test.cpp ${CMAKE_CURRENT_SOURCE_DIR}/src/SensorReading.cpp)
 add_test(NAME ${PROJECT_NAME}-Runner COMMAND ${PROJECT_NAME}-Runner)
-set_tests_properties(${PROJECT_NAME}-Runner PROPERTIES WILL_FAIL TRUE)
+#set_tests_properties(${PROJECT_NAME}-Runner PROPERTIES WILL_FAIL TRUE)
