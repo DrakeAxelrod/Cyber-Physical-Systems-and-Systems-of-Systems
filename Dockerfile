@@ -19,7 +19,6 @@
 # First stage for building the software:
 FROM drakeaxelrod/cyphybuilder:0.0.1 as builder
 # FROM ubuntu:18.04 as builder
-
 LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -28,6 +27,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # RUN apt-get update -y && \
 #     apt-get upgrade -y && \
 #     apt-get dist-upgrade -y
+
 
 # Install the development libraries for OpenCV
 # RUN apt-get install -y --no-install-recommends \
@@ -54,10 +54,9 @@ RUN mkdir build && \
   cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/tmp .. && \
   make && make test && make install && /opt/sources/scripts/build.sh
 
-# # Second stage for packaging the software into a software bundle:
+# Second stage for packaging the software into a software bundle:
 FROM drakeaxelrod/cyphyrunner:0.0.1
 # FROM ubuntu:18.04
-
 LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
 
 ENV DEBIAN_FRONTEND noninteractive
