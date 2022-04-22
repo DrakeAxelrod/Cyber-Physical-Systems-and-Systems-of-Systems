@@ -32,4 +32,5 @@ RUN apt-get install -y --no-install-recommends \
         ca-certificates \
         cmake \
         build-essential \
-        libopencv-dev
+        libopencv-dev \
+        lcov
