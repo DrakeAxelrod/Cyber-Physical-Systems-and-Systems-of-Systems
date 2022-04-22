@@ -58,19 +58,19 @@ build-and-test:
 #     - $CI_COMMIT_TAG
 #   allow_failure: false
 
-coverage:
-  stage: test
-  tags:
-    - docker-build
-  script:
-    - ls
-    - mkdir build
-    - cd build
-    - cmake ..
-    - make
-    - cd ..
-    - ./scripts/build.sh
-    - ./scripts/lcov --list coverage.info
+# coverage:
+#   stage: test
+#   tags:
+#     - docker-build
+#   script:
+#     - ls
+#     - mkdir build
+#     - cd build
+#     - cmake ..
+#     - make
+#     - cd ..
+#     - ./scripts/build.sh
+#     - ./scripts/lcov --list coverage.info
 
 # This section describes what shall be done to deploy artefacts from the project.
 release:
