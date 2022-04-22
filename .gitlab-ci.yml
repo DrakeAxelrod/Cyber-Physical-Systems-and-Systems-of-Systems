@@ -63,9 +63,14 @@ coverage:
   tags:
     - docker-build
   script:
-  - docker build -f Dockerfile .
-  - ls
-  -./scripts/ lcov --list coverage.info
+    - ls
+    - mkdir build
+    - cd build
+    - cmake ..
+    - make
+    - cd ..
+    - ./scripts/build.sh
+    - ./scripts/lcov --list coverage.info
 
 # This section describes what shall be done to deploy artefacts from the project.
 release:
