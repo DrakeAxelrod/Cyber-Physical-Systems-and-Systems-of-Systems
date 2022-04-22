@@ -63,7 +63,7 @@ coverage:
   tags:
     - docker-build  
   script:
-    - docker build -f Dockerfile -t "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG" .
+    - docker build -f Dockerfile .
     - ls
     - lcov --list coverage.info
 
