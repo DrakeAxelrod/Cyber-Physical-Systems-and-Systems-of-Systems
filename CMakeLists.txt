@@ -33,8 +33,10 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}" ${CMAKE_MODULE_PATH})
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+
+
 # Build a static binary.
-set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++ --coverage")
 # Add further warning levels to increase the code quality.
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     -D_XOPEN_SOURCE=700 \
@@ -50,7 +52,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
     -Wunused -Wunused-function -Wunused-label -Wunused-parameter -Wunused-but-set-parameter -Wunused-but-set-variable \
     -Wunused-value -Wunused-variable -Wunused-result \
     -Wmissing-field-initializers -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn \
-    -g -O0 -Wall -fprofile-arcs -ftest-coverage")
+    -g -O0 -Wall -fprofile-arcs -ftest-coverage \
+    --coverage")
 set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 # Threads are necessary for linking the resulting binaries as the network communication is running inside a thread.
 set(THREADS_PREFER_PTHREAD_FLAG ON)

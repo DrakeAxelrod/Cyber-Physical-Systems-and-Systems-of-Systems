@@ -33,41 +33,37 @@ stages:
 # Display information before we start the build.
 before_script:
   - docker info
-  # - docker login -u $DOCKER_REG_CID -p $DOCKER_REG_TOKEN $CI_REGISTRY
-  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  - docker login -u $DOCKER_REG_CID -p $DOCKER_REG_TOKEN $CI_REGISTRY
+  # - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY/tests/* */c++/* -o coverageFiltered.info
+  # - lcov --list coverageFiltered.info
 
 # This section describes what shall be done to build and test the project.
 build-and-test:
   tags:
     - docker-build
   stage: build
+  before_script:
+    - apt-get -qq update && apt-get -qq install -y make autoconf gcc g++ gcovr ggcov lcov
+    - apt-get update && apt-get -y upgrade
+    - apt-get install -y lcov
   script:
-    - docker build -f Dockerfile .
+    - docker build -t "$CI_REGISTRY_IMAGE":latest -f Dockerfile
+    - lcov --list /opt/sources/build/coverage.info
   except:
-    - $CI_COMMIT_TAG  
+    - $CI_COMMIT_TAG
   allow_failure: false
-
-# test:
-#   tags:
-#     - docker-build
-#   stage: test
-#   script:
-#     - echo "Testing will be added"
-#     #- docker run -it --rm --name springboot-test java-docker ./mvnw test
-#   except:
-#     - $CI_COMMIT_TAG
-#   allow_failure: false
-
+  
 coverage:
-  stage: test
+  image: "$CI_REGISTRY_IMAGE":latest
+  stage: coverage
   tags:
     - docker-build
   before_script:
-    - apk update --no-cache && apk upgrade --no-cache
-    - apk add --no-cache lcov
-  script:
-    - docker build -f Dockerfile .
-    - lcov --list coverage.info
+    - apt-get -qq update && apt-get -qq install -y make autoconf gcc g++ gcovr ggcov lcov
+    - apt-get update && apt-get -y upgrade
+    - apt-get install -y lcov
+  script: 
+    - lcov --list /opt/sources/build/coverage.info
     
 # This section describes what shall be done to deploy artefacts from the project.
 release:

@@ -72,9 +72,14 @@ ENV DEBIAN_FRONTEND noninteractive
 #   libopencv-highgui3.2 \
 #   libopencv-imgproc3.2
 
+RUN apt-get install -y --no-install-recommends lcov
+
 WORKDIR /usr/bin
 
 COPY --from=builder /tmp/bin/SensorReading .
+COPY --from=builder /opt/sources/build/coverage.info .
+
+RUN apt-get install -y --no-install-recommends lcov
 
 # This is the entrypoint when starting the Docker container; hence, this Docker image is automatically starting our software on its creation
 ENTRYPOINT ["/usr/bin/SensorReading"]
