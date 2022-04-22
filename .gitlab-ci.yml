@@ -61,11 +61,11 @@ build-and-test:
 coverage:
   stage: test
   tags:
-    - docker-build  
+    - docker-build
   script:
-    - docker build -f Dockerfile .
-    - ls
-    - lcov --list coverage.info
+  - docker build -f Dockerfile .
+  - ls
+  -./scripts/ lcov --list coverage.info
 
 # This section describes what shall be done to deploy artefacts from the project.
 release:
