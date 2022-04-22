@@ -14,8 +14,8 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # Which Docker image shall be used on the GitLab runner?
 
-#image: registry.git.chalmers.se/courses/dit638/students/docker/docker:19.03.3
-image: ubuntu:18.04
+image: registry.git.chalmers.se/courses/dit638/students/docker/docker:19.03.3
+
 # Details about how to connect to the Docker service to run this build.
 variables:
   DOCKER_HOST: tcp://docker:2375
@@ -60,6 +60,8 @@ build-and-test:
 
 coverage:
   stage: test
+  tags:
+    - docker-build
   before_script:
     #- apt-get -qq update && apt-get -qq install -y make autoconf gcc g++ gcovr ggcov lcov
     - apt-get update && apt-get -y upgrade
@@ -78,10 +80,3 @@ release:
   rules: 
     - if: $CI_COMMIT_TAG && $CI_COMMIT_TAG =~ /^v[0-9]+.[0-9]+.[0-9]+$/ 
   
-
-#ASSIGNMENT
-# - the project must be built and tested on any push to any branch in the repository except for new releases (ie., a tag)
-
-# - the deployment stage must only be executed when making a new release (ie., a tag) but only when the project could be built and tested successfully
-
-# - the deployment stage must only be executed when the tags to your repository follow semantic versioning (cf. background information here: https://semver.org (Links to an external site.) and https://docs.gitlab.com/ee/user/project/releases/ (Links to an external site.)) according to the pattern
