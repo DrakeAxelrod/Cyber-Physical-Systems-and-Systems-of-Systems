@@ -61,14 +61,12 @@ build-and-test:
 coverage:
   stage: test
   tags:
-    - docker-build
-  before_script:
-    - apk update --no-cache && apk upgrade --no-cache
-    - apk add --no-cache lcov
+    - docker-build  
   script:
-    - docker build -f Dockerfile .
+    - docker build -f Dockerfile -t "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG" .
+    - ls
     - lcov --list coverage.info
-    
+
 # This section describes what shall be done to deploy artefacts from the project.
 release:
   tags:
