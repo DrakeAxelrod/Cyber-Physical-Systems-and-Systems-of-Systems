@@ -6,7 +6,7 @@
 
 function declare_section() {
     echo "================================================================================"
-    echo $@
+    echo "$@"
     echo "================================================================================"
 }
 
@@ -17,14 +17,14 @@ EOF
 }
 
 function run_code() {
-    output $(/opt/sources/build/SensorReading-Runner)
+    output "$(/opt/sources/build/SensorReading-Runner)"
 }
 
 function run_lcov() {
     local dir="/opt/sources/build/CMakeFiles/SensorReading-Runner.dir/src"
     local file="/opt/sources/build/coverage.info"
-    output $(lcov --capture --directory $dir --output-file $file)
-    output $(genhtml $file -o /opt/sources/build)
+    output "$(lcov --capture --directory $dir --output-file $file)"
+    output "$(genhtml $file -o /opt/sources/build)"
 }
 
 declare_section "Running build.sh"
