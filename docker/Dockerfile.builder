@@ -33,4 +33,5 @@ RUN apt-get install -y --no-install-recommends \
         cmake \
         build-essential \
         libopencv-dev \
-        lcov
+        lcov \
+        clang-tidy
