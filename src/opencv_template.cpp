@@ -25,6 +25,9 @@
 // Include the GUI and image processing header files from OpenCV
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+#include <chrono>
+#include <string>
+#include <time.h>
 
 #include "cyphy.hpp"
 
@@ -102,41 +105,49 @@ int32_t main(int32_t argc, char **argv) {
         // OpenCV data structure to hold an image.
         cv::Mat img;
 
-        // Wait for a notification of a new frame.
-        sharedMemory->wait();
+                // Lock the shared memory.
+                sharedMemory->lock();
+                {
+                    // Copy the pixels from the shared memory into our own data structure.
+                    cv::Mat wrapped(HEIGHT, WIDTH, CV_8UC4, sharedMemory->data());
+                    img = wrapped.clone();
+                }
+                // Code to show the current timestamp
+                cluon::data::TimeStamp utctime{cluon::time::now()};
+                time_t epoch = utctime.seconds();
+                struct tm *timeutc;
+                char buffer[60];
+                timeutc = gmtime(&epoch);
+                const char *fmt = "%Y-%m-%dT%H:%M:%SZ";
+                strftime(buffer, 60, fmt, timeutc);
 
-        // Lock the shared memory.
-        sharedMemory->lock();
-        {
-          // Copy the pixels from the shared memory into our own data structure.
-          cv::Mat wrapped(HEIGHT, WIDTH, CV_8UC4, sharedMemory->data());
-          img = wrapped.clone();
-        }
+                std::pair<bool, cluon::data::TimeStamp> timestamp = sharedMemory->getTimeStamp();
+                const cluon::data::TimeStamp timeNow = timestamp.second;
+                const uint64 thistime = cluon::time::toMicroseconds(timeNow);
 
-        // TODO code goes under here.
-        // If you want to access the latest received ground steering, don't
-        // forget to lock the mutex:
-        sharedMemory->unlock();
-        {
-          std::lock_guard<std::mutex> lck(gsrMutex);
-          std::cout << "main: groundSteering = " << gsr.groundSteering()
-                    << std::endl;
-        }
-        
-        sharedMemory->lock();
-        {
-        // TODO get all the data from sharedMemory and store in in a struct
-        // that we can pass to our functions in cpp (possible way of doing it)
-        
-        // TODO add code to get all the data in a terminal
+                auto timeframe = std::to_string(thistime);
+                char output[100];
+                //lock mutex in order to read from the gsr
+                std::lock_guard<std::mutex> lck(gsrMutex);
+                sprintf(output, "timestamp: %lu; steering angle: %f", thistime, gsr.groundSteering());
 
-        // TODO manipulate the data and base steering off of it
-        }
-        sharedMemory->unlock();
-        // Display image on your screen. <- was here but didnt want to remove it
-        if (VERBOSE) {
-          cv::imshow(sharedMemory->name().c_str(), img);
-          cv::waitKey(1);
+                sharedMemory->unlock();
+
+                cv::putText(img,
+                            output, // text
+                            cv::Point(10, 15),
+                            cv::FONT_HERSHEY_SIMPLEX,
+                            0.5,
+                            CV_RGB(255, 255, 255), // font color
+                            1);
+
+                // Display image on your screen.
+                if (VERBOSE)
+                {
+                    cv::imshow(sharedMemory->name().c_str(), img);
+                    cv::waitKey(1);
+                }
+            }
         }
         /**************************************************************
         *********************** Code Ends Here ************************
