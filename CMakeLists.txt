@@ -36,7 +36,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # linting
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=*")
+set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
 
 
 # Build a static binary.

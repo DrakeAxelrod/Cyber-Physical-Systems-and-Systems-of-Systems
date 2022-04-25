@@ -11,10 +11,14 @@ build:
 
 lint:
 	@echo Linting Project
-	clang-tidy src/*.cpp src/*.hpp --use-color -p build/*/**
+	clang-tidy \
+		src/cyphy.cpp src/SensorReading.cpp \
+		src/cyphy.hpp src/SensorReading.hpp \
+		-header-filter=.* --fix-errors --use-color -p build/*/**
 
 doc:
 	@echo Generate Documentation
+	rm -rf docs
 	doxygen
 
 .PHONY: all build lint doc
