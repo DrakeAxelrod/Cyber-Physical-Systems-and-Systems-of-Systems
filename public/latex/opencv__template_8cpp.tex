@@ -1,0 +1,146 @@
+\hypertarget{opencv__template_8cpp}{}\doxysection{src/opencv\+\_\+template.cpp File Reference}
+\label{opencv__template_8cpp}\index{src/opencv\_template.cpp@{src/opencv\_template.cpp}}
+{\ttfamily \#include \char`\"{}cluon-\/complete-\/v0.\+0.\+127.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opendlv-\/standard-\/message-\/set.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/imgproc/imgproc.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}cyphy.\+hpp\char`\"{}}\newline
+Include dependency graph for opencv\+\_\+template.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{opencv__template_8cpp_af19ddca125f05a2090dd132045573ee4}{main}} (int32\+\_\+t argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{opencv__template_8cpp_af19ddca125f05a2090dd132045573ee4}\label{opencv__template_8cpp_af19ddca125f05a2090dd132045573ee4}} 
+\index{opencv\_template.cpp@{opencv\_template.cpp}!main@{main}}
+\index{main@{main}!opencv\_template.cpp@{opencv\_template.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int32\+\_\+t main (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                         \{}
+\DoxyCodeLine{32   int32\_t retCode\{1\};}
+\DoxyCodeLine{33   \textcolor{comment}{// Parse the command line parameters as we require the user to specify some}}
+\DoxyCodeLine{34   \textcolor{comment}{// mandatory information on startup.}}
+\DoxyCodeLine{35   \textcolor{keyword}{auto} commandlineArguments = cluon::getCommandlineArguments(argc, argv);}
+\DoxyCodeLine{36   \textcolor{keywordflow}{if} ((0 == commandlineArguments.count(\textcolor{stringliteral}{"{}cid"{}})) ||}
+\DoxyCodeLine{37       (0 == commandlineArguments.count(\textcolor{stringliteral}{"{}name"{}})) ||}
+\DoxyCodeLine{38       (0 == commandlineArguments.count(\textcolor{stringliteral}{"{}width"{}})) ||}
+\DoxyCodeLine{39       (0 == commandlineArguments.count(\textcolor{stringliteral}{"{}height"{}}))) \{}
+\DoxyCodeLine{40     std::cerr << argv[0]}
+\DoxyCodeLine{41               << \textcolor{stringliteral}{"{} attaches to a shared memory area containing an ARGB image."{}}}
+\DoxyCodeLine{42               << std::endl;}
+\DoxyCodeLine{43     std::cerr << \textcolor{stringliteral}{"{}Usage:   "{}} << argv[0]}
+\DoxyCodeLine{44               << \textcolor{stringliteral}{"{} -\/-\/cid=<OD4 session> -\/-\/name=<name of shared memory area> "{}}}
+\DoxyCodeLine{45                  \textcolor{stringliteral}{"{}[-\/-\/verbose]"{}}}
+\DoxyCodeLine{46               << std::endl;}
+\DoxyCodeLine{47     std::cerr << \textcolor{stringliteral}{"{}         -\/-\/cid:    CID of the OD4Session to send and receive "{}}}
+\DoxyCodeLine{48                  \textcolor{stringliteral}{"{}messages"{}}}
+\DoxyCodeLine{49               << std::endl;}
+\DoxyCodeLine{50     std::cerr << \textcolor{stringliteral}{"{}         -\/-\/name:   name of the shared memory area to attach"{}}}
+\DoxyCodeLine{51               << std::endl;}
+\DoxyCodeLine{52     std::cerr << \textcolor{stringliteral}{"{}         -\/-\/width:  width of the frame"{}} << std::endl;}
+\DoxyCodeLine{53     std::cerr << \textcolor{stringliteral}{"{}         -\/-\/height: height of the frame"{}} << std::endl;}
+\DoxyCodeLine{54     std::cerr << \textcolor{stringliteral}{"{}Example: "{}} << argv[0]}
+\DoxyCodeLine{55               << \textcolor{stringliteral}{"{} -\/-\/cid=253 -\/-\/name=img -\/-\/width=640 -\/-\/height=480 -\/-\/verbose"{}}}
+\DoxyCodeLine{56               << std::endl;}
+\DoxyCodeLine{57   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{58     \textcolor{comment}{// Extract the values from the command line parameters}}
+\DoxyCodeLine{59     \textcolor{keyword}{const} std::string NAME\{commandlineArguments[\textcolor{stringliteral}{"{}name"{}}]\};}
+\DoxyCodeLine{60     \textcolor{keyword}{const} uint32\_t WIDTH\{}
+\DoxyCodeLine{61         \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(std::stoi(commandlineArguments[\textcolor{stringliteral}{"{}width"{}}]))\};}
+\DoxyCodeLine{62     \textcolor{keyword}{const} uint32\_t HEIGHT\{}
+\DoxyCodeLine{63         \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(std::stoi(commandlineArguments[\textcolor{stringliteral}{"{}height"{}}]))\};}
+\DoxyCodeLine{64     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} VERBOSE\{commandlineArguments.count(\textcolor{stringliteral}{"{}verbose"{}}) != 0\};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{comment}{// Attach to the shared memory.}}
+\DoxyCodeLine{67     std::unique\_ptr<cluon::SharedMemory> sharedMemory\{}
+\DoxyCodeLine{68         \textcolor{keyword}{new} cluon::SharedMemory\{NAME\}\};}
+\DoxyCodeLine{69     \textcolor{keywordflow}{if} (sharedMemory \&\& sharedMemory-\/>valid()) \{}
+\DoxyCodeLine{70       std::clog << argv[0] << \textcolor{stringliteral}{"{}: Attached to shared memory '"{}}}
+\DoxyCodeLine{71                 << sharedMemory-\/>name() << \textcolor{stringliteral}{"{} ("{}} << sharedMemory-\/>size()}
+\DoxyCodeLine{72                 << \textcolor{stringliteral}{"{} bytes)."{}} << std::endl;}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74       \textcolor{comment}{// Interface to a running OpenDaVINCI session where network messages are}}
+\DoxyCodeLine{75       \textcolor{comment}{// exchanged. The instance od4 allows you to send and receive messages.}}
+\DoxyCodeLine{76       cluon::OD4Session od4\{}
+\DoxyCodeLine{77           \textcolor{keyword}{static\_cast<}uint16\_t\textcolor{keyword}{>}(std::stoi(commandlineArguments[\textcolor{stringliteral}{"{}cid"{}}]))\};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79       opendlv::proxy::GroundSteeringRequest gsr;}
+\DoxyCodeLine{80       std::mutex gsrMutex;}
+\DoxyCodeLine{81       \textcolor{keyword}{auto} onGroundSteeringRequest = [\&gsr,}
+\DoxyCodeLine{82                                       \&gsrMutex](cluon::data::Envelope \&\&env) \{}
+\DoxyCodeLine{83         \textcolor{comment}{// The envelope data structure provide further details, such as}}
+\DoxyCodeLine{84         \textcolor{comment}{// sampleTimePoint as shown in this test case:}}
+\DoxyCodeLine{85         \textcolor{comment}{// https://github.com/chrberger/libcluon/blob/master/libcluon/testsuites/TestEnvelopeConverter.cpp\#L31-\/L40}}
+\DoxyCodeLine{86         std::lock\_guard<std::mutex> lck(gsrMutex);}
+\DoxyCodeLine{87         gsr = cluon::extractMessage<opendlv::proxy::GroundSteeringRequest>(}
+\DoxyCodeLine{88             std::move(env));}
+\DoxyCodeLine{89         std::cout << \textcolor{stringliteral}{"{}lambda: groundSteering = "{}} << gsr.groundSteering()}
+\DoxyCodeLine{90                   << std::endl;}
+\DoxyCodeLine{91       \};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93       od4.dataTrigger(opendlv::proxy::GroundSteeringRequest::ID(),}
+\DoxyCodeLine{94                       onGroundSteeringRequest);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96       \textcolor{comment}{// Endless loop; end the program by pressing Ctrl-\/C.}}
+\DoxyCodeLine{97       \textcolor{keywordflow}{while} (od4.isRunning()) \{}
+\DoxyCodeLine{98 \textcolor{comment}{        /**************************************************************}}
+\DoxyCodeLine{99 \textcolor{comment}{        *********************** Code Goes Here ************************}}
+\DoxyCodeLine{100 \textcolor{comment}{        **************************************************************/}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102         \textcolor{comment}{// OpenCV data structure to hold an image.}}
+\DoxyCodeLine{103         cv::Mat img;}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105         \textcolor{comment}{// Wait for a notification of a new frame.}}
+\DoxyCodeLine{106         sharedMemory-\/>wait();}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108         \textcolor{comment}{// Lock the shared memory.}}
+\DoxyCodeLine{109         sharedMemory-\/>lock();}
+\DoxyCodeLine{110         \{}
+\DoxyCodeLine{111           \textcolor{comment}{// Copy the pixels from the shared memory into our own data structure.}}
+\DoxyCodeLine{112           cv::Mat wrapped(HEIGHT, WIDTH, CV\_8UC4, sharedMemory-\/>data());}
+\DoxyCodeLine{113           img = wrapped.clone();}
+\DoxyCodeLine{114         \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116         \textcolor{comment}{// TODO code goes under here.}}
+\DoxyCodeLine{117         \textcolor{comment}{// If you want to access the latest received ground steering, don't}}
+\DoxyCodeLine{118         \textcolor{comment}{// forget to lock the mutex:}}
+\DoxyCodeLine{119         sharedMemory-\/>unlock();}
+\DoxyCodeLine{120         \{}
+\DoxyCodeLine{121           std::lock\_guard<std::mutex> lck(gsrMutex);}
+\DoxyCodeLine{122           std::cout << \textcolor{stringliteral}{"{}main: groundSteering = "{}} << gsr.groundSteering()}
+\DoxyCodeLine{123                     << std::endl;}
+\DoxyCodeLine{124         \}}
+\DoxyCodeLine{125         }
+\DoxyCodeLine{126         sharedMemory-\/>lock();}
+\DoxyCodeLine{127         \{}
+\DoxyCodeLine{128         \textcolor{comment}{// TODO get all the data from sharedMemory and store in in a struct}}
+\DoxyCodeLine{129         \textcolor{comment}{// that we can pass to our functions in cpp (possible way of doing it)}}
+\DoxyCodeLine{130         }
+\DoxyCodeLine{131         \textcolor{comment}{// TODO add code to get all the data in a terminal}}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133         \textcolor{comment}{// TODO manipulate the data and base steering off of it}}
+\DoxyCodeLine{134         \}}
+\DoxyCodeLine{135         sharedMemory-\/>unlock();}
+\DoxyCodeLine{136         \textcolor{comment}{// Display image on your screen. <-\/ was here but didnt want to remove it}}
+\DoxyCodeLine{137         \textcolor{keywordflow}{if} (VERBOSE) \{}
+\DoxyCodeLine{138           cv::imshow(sharedMemory-\/>name().c\_str(), img);}
+\DoxyCodeLine{139           cv::waitKey(1);}
+\DoxyCodeLine{140         \}}
+\DoxyCodeLine{141 \textcolor{comment}{        /**************************************************************}}
+\DoxyCodeLine{142 \textcolor{comment}{        *********************** Code Ends Here ************************}}
+\DoxyCodeLine{143 \textcolor{comment}{        **************************************************************/}}
+\DoxyCodeLine{144       \}}
+\DoxyCodeLine{145     \}}
+\DoxyCodeLine{146     retCode = 0;}
+\DoxyCodeLine{147   \}}
+\DoxyCodeLine{148   \textcolor{keywordflow}{return} retCode;}
+\DoxyCodeLine{149 \}}
+
+\end{DoxyCode}
