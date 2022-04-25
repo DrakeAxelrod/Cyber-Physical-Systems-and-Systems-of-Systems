@@ -1,0 +1,70 @@
+\hypertarget{test_8cpp}{}\doxysection{src/test.cpp File Reference}
+\label{test_8cpp}\index{src/test.cpp@{src/test.cpp}}
+{\ttfamily \#include \char`\"{}catch.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Sensor\+Reading.\+hpp\char`\"{}}\newline
+Include dependency graph for test.\+cpp\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test_8cpp_a656eb5868e824d59f489f910db438420}{CATCH\+\_\+\+CONFIG\+\_\+\+MAIN}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test_8cpp_a3ead59edaef38a389b7cbd79931a6cdd}{TEST\+\_\+\+CASE}} (\char`\"{}Test Addition\char`\"{})
+\item 
+\mbox{\hyperlink{test_8cpp_ac6b3336a148db4a6ee362dbea6320b80}{TEST\+\_\+\+CASE}} (\char`\"{}Test Multiplication\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test_8cpp_a656eb5868e824d59f489f910db438420}\label{test_8cpp_a656eb5868e824d59f489f910db438420}} 
+\index{test.cpp@{test.cpp}!CATCH\_CONFIG\_MAIN@{CATCH\_CONFIG\_MAIN}}
+\index{CATCH\_CONFIG\_MAIN@{CATCH\_CONFIG\_MAIN}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{CATCH\_CONFIG\_MAIN}{CATCH\_CONFIG\_MAIN}}
+{\footnotesize\ttfamily \#define CATCH\+\_\+\+CONFIG\+\_\+\+MAIN}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test_8cpp_a3ead59edaef38a389b7cbd79931a6cdd}\label{test_8cpp_a3ead59edaef38a389b7cbd79931a6cdd}} 
+\index{test.cpp@{test.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}Test Addition\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6                            \{}
+\DoxyCodeLine{7     \mbox{\hyperlink{classSensorReading}{SensorReading}} Test;}
+\DoxyCodeLine{8     REQUIRE(Test.\mbox{\hyperlink{classSensorReading_a82a6e5940be93656bb5c687482631c09}{Addition}}(4,5) == 9);}
+\DoxyCodeLine{9 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classSensorReading_a82a6e5940be93656bb5c687482631c09}{Sensor\+Reading\+::\+Addition()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{test_8cpp_ac6b3336a148db4a6ee362dbea6320b80}\label{test_8cpp_ac6b3336a148db4a6ee362dbea6320b80}} 
+\index{test.cpp@{test.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!test.cpp@{test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{\char`\"{}Test Multiplication\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11                                  \{}
+\DoxyCodeLine{12     \mbox{\hyperlink{classSensorReading}{SensorReading}} Test;}
+\DoxyCodeLine{13     REQUIRE(Test.\mbox{\hyperlink{classSensorReading_a7b352efe225dac022f10da38f04b3815}{Multiply}}(1,2) == 2);}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classSensorReading_a7b352efe225dac022f10da38f04b3815}{Sensor\+Reading\+::\+Multiply()}}.
+
+Here is the call graph for this function\+:
+% FIG 2

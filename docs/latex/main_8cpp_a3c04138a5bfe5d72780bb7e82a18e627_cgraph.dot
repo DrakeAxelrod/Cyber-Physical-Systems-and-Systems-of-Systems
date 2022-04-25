@@ -1,0 +1,14 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="SensorReading::Addition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSensorReading.html#a82a6e5940be93656bb5c687482631c09",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="hello",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cyphy_8cpp.html#adb2f6086d2190981b28ee65efc291c71",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="SensorReading::Multiply",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSensorReading.html#a7b352efe225dac022f10da38f04b3815",tooltip=" "];
+}

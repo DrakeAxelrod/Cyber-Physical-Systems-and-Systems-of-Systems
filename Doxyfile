@@ -1,0 +1,53 @@
+PROJECT_NAME = "Cyphy"
+OUTPUT_DIRECTORY = ./docs/
+BUILTIN_STL_SUPPORT = YES
+EXTRACT_ALL = YES
+INPUT = ./src
+RECURSIVE = YES
+HIDE_UNDOC_RELATIONS = NO
+HAVE_DOT = YES
+UML_LOOK = YES
+CALL_GRAPH = YES
+CALLER_GRAPH = YES
+EXCLUDE =  ./src/cluon-complete-v0.0.127.hpp ./src/catch.hpp ./src/opendlv-standard-message-set-v0.9.6.odvd
+
+BUILTIN_STL_SUPPORT = YES
+
+# Show private members of class
+EXTRACT_PRIVATE = YES
+
+# Show static members of class
+EXTRACT_STATIC = YES
+
+# Show members of anonymous namespace
+EXTRACT_ANON_NSPACES = YES
+
+# Show which header file to include to use this class or member
+SHOW_GROUPED_MEMB_INC  = YES
+
+# Add all the header and source file extensions used
+FILE_PATTERNS = *.cpp *.h *.hpp
+
+# Function source code shown inline
+INLINE_SOURCES = YES
+
+# Show all functions that reference current function
+REFERENCED_BY_RELATION = YES
+
+# Show all functions referenced by current function
+REFERENCES_RELATION = YES
+
+# Generate class diagrams for base class
+CLASS_DIAGRAMS = YES
+
+# Number of threads to use for DOT
+DOT_NUM_THREADS = 4
+
+# Use UML notation for class diagrams
+UML_LOOK = YES
+
+# Show all members in UML class
+UML_LIMIT_NUM_FIELDS = 0
+
+# Show relationship for templates in graphs
+TEMPLATE_RELATIONS = YES
