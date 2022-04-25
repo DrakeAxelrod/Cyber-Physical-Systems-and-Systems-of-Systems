@@ -47,15 +47,15 @@ build-and-test:
     - $CI_COMMIT_TAG  
   allow_failure: false
 
-pages:
-  image: ruby:2.7
-  script:
-    - gem install bundler
-    - bundle install
-    - bundle exec jekyll build -d public/html
-  artifacts:
-    paths:
-      - public
+# pages:
+#   image: ruby:2.7
+#   script:
+#     - gem install bundler
+#     - bundle install
+#     - bundle exec jekyll build -d public/html
+#   artifacts:
+#     paths:
+#       - public
 
 # test:
 #   tags:
