@@ -27,6 +27,12 @@ function run_lcov() {
     output "$(genhtml $file -o /opt/sources/build)"
 }
 
+function run_pmccabe() {
+    local dir="/opt/sources/src"
+    local file="SensorReading.cpp" #to change during sprint 2 #apt-get install -y pmccabe
+    output "cd $dir && pmccabe -vc $file 2>/dev/null > $dir/complexity.details.csv"
+}
+
 declare_section "Running build.sh"
 
 run_code &> /dev/null
@@ -36,5 +42,9 @@ declare_section "Generating Code Coverage"
 run_lcov &> /dev/null
 
 lcov --list /opt/sources/build/coverage.info 2>/dev/null
+
+declare_section "Generating Complexity"
+
+run_pmccabe &> /dev/null
 
 declare_section "Finished Running"
