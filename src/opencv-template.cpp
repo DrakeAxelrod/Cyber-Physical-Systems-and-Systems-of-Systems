@@ -49,16 +49,13 @@ int32_t main(int32_t argc, char **argv)
   else
   {
     // Extract the values from the command line parameters
-    const std::string NAME{commandlineArguments["name"]};
-    const uint32_t WIDTH{
-        static_cast<uint32_t>(std::stoi(commandlineArguments["width"]))};
-    const uint32_t HEIGHT{
-        static_cast<uint32_t>(std::stoi(commandlineArguments["height"]))};
+    const std::string NAME{ commandlineArguments["name"] };
+    const uint32_t WIDTH{ static_cast<uint32_t>(std::stoi(commandlineArguments["width"])) };
+    const uint32_t HEIGHT{ static_cast<uint32_t>(std::stoi(commandlineArguments["height"])) };
     const bool VERBOSE{commandlineArguments.count("verbose") != 0};
 
     // Attach to the shared memory.
-    std::unique_ptr<cluon::SharedMemory> sharedMemory{
-        new cluon::SharedMemory{NAME}};
+    std::unique_ptr<cluon::SharedMemory> sharedMemory{new cluon::SharedMemory{NAME}};
     if (sharedMemory && sharedMemory->valid())
     {
       std::clog << argv[0] << ": Attached to shared memory '"
@@ -67,72 +64,159 @@ int32_t main(int32_t argc, char **argv)
 
       // Interface to a running OpenDaVINCI session where network messages are
       // exchanged. The instance od4 allows you to send and receive messages.
-      cluon::OD4Session od4{
-          static_cast<uint16_t>(std::stoi(commandlineArguments["cid"]))};
+      cluon::OD4Session od4{ static_cast<uint16_t>(std::stoi(commandlineArguments["cid"])) };
 
+
+      // Get the steering angle request
       opendlv::proxy::GroundSteeringRequest gsr;
       std::mutex gsrMutex;
-      auto onGroundSteeringRequest = [&gsr,
-                                      &gsrMutex](cluon::data::Envelope &&env)
+      auto onGroundSteeringRequest = [&gsr, &gsrMutex](cluon::data::Envelope &&env)
       {
-        // The envelope data structure provide further details, such as
-        // sampleTimePoint as shown in this test case:
-        // https://github.com/chrberger/libcluon/blob/master/libcluon/testsuites/TestEnvelopeConverter.cpp#L31-L40
         std::lock_guard<std::mutex> lck(gsrMutex);
-        gsr = cluon::extractMessage<opendlv::proxy::GroundSteeringRequest>(
-            std::move(env));
-        std::cout << "lambda: groundSteering = " << gsr.groundSteering()
-                  << std::endl;
+        gsr = cluon::extractMessage<opendlv::proxy::GroundSteeringRequest>(std::move(env));
+        std::cout << "lambda: groundSteering = " << gsr.groundSteering() << std::endl;
       };
+      od4.dataTrigger(opendlv::proxy::GroundSteeringRequest::ID(), onGroundSteeringRequest);
 
-      od4.dataTrigger(opendlv::proxy::GroundSteeringRequest::ID(),
-                      onGroundSteeringRequest);
+      // get magnetic field
+      opendlv::proxy::MagneticFieldReading mfr;
+      std::mutex mfrMutex;
+      auto getMagnetFieldReading = [&mfr, &mfrMutex](cluon::data::Envelope &&env)
+      {
+        std::lock_guard<std::mutex> lck(mfrMutex);
+        mfr = cluon::extractMessage<opendlv::proxy::MagneticFieldReading>(std::move(env));
+      };
+      od4.dataTrigger(opendlv::proxy::MagneticFieldReading::ID(), getMagnetFieldReading);
+
+      // get distance reading
+      opendlv::proxy::DistanceReading dr;
+      std::mutex drMutex;
+      auto getDistanceReading = [&dr, &drMutex](cluon::data::Envelope &&env)
+      {
+        std::lock_guard<std::mutex> lck(drMutex);
+        dr = cluon::extractMessage<opendlv::proxy::DistanceReading>(std::move(env));
+      };
+      od4.dataTrigger(opendlv::proxy::DistanceReading::ID(), getDistanceReading);
+
+      // // direction perception
+      // opendlv::logic::perception::ObjectDirection od;
+      // std::mutex odMutex;
+      // auto getObjectDirection = [&od, &odMutex](cluon::data::Envelope &&env)
+      // {
+      //   std::lock_guard<std::mutex> lck(odMutex);
+      //   od = cluon::extractMessage<opendlv::logic::perception::ObjectDirection>(std::move(env));
+      // };
+      // od4.dataTrigger(opendlv::logic::perception::ObjectDirection::ID(), getObjectDirection);
+
+      // // get angle reading
+      // opendlv::proxy::AngleReading ar;
+      // std::mutex arMutex;
+      // auto getAngleReading = [&ar, &arMutex](cluon::data::Envelope &&env)
+      // {
+      //   std::lock_guard<std::mutex> lck(arMutex);
+      //   ar = cluon::extractMessage<opendlv::proxy::AngleReading>(std::move(env));
+      // };
+      // od4.dataTrigger(opendlv::proxy::AngleReading::ID(), getAngleReading);
+      
+      // opendlv::logic::sensation::Geolocation gl;
+      // std::mutex glMutex;
+      // auto getGeolocation = [&gl, &glMutex](cluon::data::Envelope &&env)
+      // {
+      //   std::lock_guard<std::mutex> lck(glMutex);
+      //   gl = cluon::extractMessage<opendlv::logic::sensation::Geolocation>(std::move(env));
+      // };
+      // od4.dataTrigger(opendlv::logic::sensation::Geolocation::ID(), getGeolocation);
+
+
+      // opendlv::logic::sensation::Equilibrioception ee;
+      // std::mutex eeMutex;
+      // auto getEquilibrioception = [&ee, &eeMutex](cluon::data::Envelope &&env)
+      // {
+      //   std::lock_guard<std::mutex> lck(eeMutex);
+      //   ee = cluon::extractMessage<opendlv::logic::sensation::Equilibrioception>(std::move(env));
+      // };
+      // od4.dataTrigger(opendlv::logic::sensation::Equilibrioception::ID(), getEquilibrioception);
+
+      // opendlv::proxy::PulseWidthModulationRequest pwm;
+      // std::mutex pwmMutex;
+      // auto getPulseWidthModulationRequest = [&pwm, &pwmMutex](cluon::data::Envelope &&env)
+      // {
+      //   std::lock_guard<std::mutex> lck(pwmMutex);
+      //   pwm = cluon::extractMessage<opendlv::proxy::PulseWidthModulationRequest>(std::move(env));
+      // };
+      // od4.dataTrigger(opendlv::proxy::PulseWidthModulationRequest::ID(), getPulseWidthModulationRequest);
 
       // Endless loop; end the program by pressing Ctrl-C.
       while (od4.isRunning())
       {
-        /**************************************************************
-        *********************** Code Goes Here ************************
-        **************************************************************/
         // OpenCV data structure to hold an image.
         cv::Mat img;
+        // buffer for timestamp string
+        char buffer[60];
+        // miscroseconds timestamp (utc)
+        uint64 thistime;
+        std::stringstream ss;
         // Lock the shared memory.
         sharedMemory->lock();
-        {
-          // Copy the pixels from the shared memory into our own data structure.
-          cv::Mat wrapped(HEIGHT, WIDTH, CV_8UC4, sharedMemory->data());
-          img = wrapped.clone();
+        {   // Copy the pixels from the shared memory into our own data structure.
+            cv::Mat wrapped(HEIGHT, WIDTH, CV_8UC4, sharedMemory->data());
+            img = wrapped.clone();
+            // Code to show the current timestamp
+            time_t epoch = (cluon::time::now()).seconds();
+            strftime(buffer, 60, "%Y-%m-%dT%H:%M:%SZ", gmtime(&epoch));
+            thistime = cluon::time::toMicroseconds((sharedMemory->getTimeStamp()).second);
         }
-        // Code to show the current timestamp
-        cluon::data::TimeStamp utctime{cluon::time::now()};
-        time_t epoch = utctime.seconds();
-        struct tm *timeutc;
-        char buffer[60];
-        timeutc = gmtime(&epoch);
-        const char *fmt = "%Y-%m-%dT%H:%M:%SZ";
-        strftime(buffer, 60, fmt, timeutc);
-
-        std::pair<bool, cluon::data::TimeStamp> timestamp = sharedMemory->getTimeStamp();
-        const cluon::data::TimeStamp timeNow = timestamp.second;
-        const uint64 thistime = cluon::time::toMicroseconds(timeNow);
-
-        auto timeframe = std::to_string(thistime);
-        char output[100];
-        // lock mutex in order to read from the gsr
-        std::lock_guard<std::mutex> lck(gsrMutex);
-        sprintf(output, "timestamp: %lu; steering angle: %f", thistime, gsr.groundSteering());
-
         sharedMemory->unlock();
+        ss << "TimeStamp: " << thistime;
+        cv::putText(img, ss.str(), cv::Point(10, 15), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
+        ss.str("");
+        ss.clear();
 
-        cv::putText(img,
-                    output, // text
-                    cv::Point(10, 15),
-                    cv::FONT_HERSHEY_SIMPLEX,
-                    0.5,
-                    CV_RGB(255, 255, 255), // font color
-                    1);
+        ss << "GroundSteering: " << gsr.groundSteering();
+        cv::putText(img, ss.str(), cv::Point(10, 31), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
+        ss.str("");
+        ss.clear();
 
-        // Display image on your screen.
+        ss << "MagneticField (x,y,z): " << "("
+           << mfr.magneticFieldX() << ", "
+           << mfr.magneticFieldY() << ", "
+           << mfr.magneticFieldZ() << ")";
+        cv::putText(img, ss.str(), cv::Point(10, 47), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
+        ss.str("");
+        ss.clear();
+
+        ss << "DistanceReading: " << dr.distance();
+        cv::putText(img, ss.str(), cv::Point(10, 63), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
+        ss.str("");
+        ss.clear();
+
+        // ss << "ObjectDirection: azimuth:" << od.azimuthAngle() << ", zenith:" << od.zenithAngle();
+        // cv::putText(img, ss.str(), cv::Point(10, 79), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
+        // ss.str("");
+        // ss.clear();
+
+        // ss << "AngleReading: " << ar.angle();
+        // cv::putText(img, ss.str(), cv::Point(10, 95), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
+        // ss.str("");
+        // ss.clear();
+
+        // ss << "Geolocation: lon:" << gl.latitude() << ", lat:" << gl.longitude();
+        // cv::putText(img, ss.str(), cv::Point(10, 111), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
+        // ss.str("");
+        // ss.clear();
+
+        // ss << "Equilibrioception: pitch:" << ee.pitchRate() 
+        //    << ", yaw:" << ee.yawRate() << ", roll:" << ee.rollRate()
+        //    << ", vx:" << ee.vx() << ", vy:" << ee.vy() << ", vz:" << ee.vz();
+        // cv::putText(img, ss.str(), cv::Point(10, 127), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
+        // ss.str("");
+        // ss.clear();
+
+        // ss << "PWM(duty cycles): " << pwm.dutyCycleNs() << " ns";
+        // cv::putText(img, ss.str(), cv::Point(10, 143), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
+        // ss.str("");
+        // ss.clear();
+
         if (VERBOSE)
         {
           cv::imshow(sharedMemory->name().c_str(), img);
@@ -140,9 +224,6 @@ int32_t main(int32_t argc, char **argv)
         }
       }
     }
-    /**************************************************************
-    *********************** Code Ends Here ************************
-    **************************************************************/
     retCode = 0;
   }
   return retCode;

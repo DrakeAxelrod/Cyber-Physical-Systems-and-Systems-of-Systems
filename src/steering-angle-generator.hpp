@@ -11,6 +11,7 @@
 // Include the GUI and image processing header files from OpenCV
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+#include <sstream>
 #include <chrono>
 #include <string>
 #include <time.h>

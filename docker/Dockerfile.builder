@@ -34,4 +34,5 @@ RUN apt-get install -y --no-install-recommends \
         build-essential \
         libopencv-dev \
         lcov \
-        clang-tidy
+        clang-tidy \
+        pmccabe
