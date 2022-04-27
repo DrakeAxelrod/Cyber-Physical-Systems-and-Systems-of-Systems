@@ -1,0 +1,14 @@
+digraph "peg::Ignore::parse"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="peg::Ignore::parse",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="peg::make_scope_exit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacepeg.html#ac2158f086910efbd32f003dbb2ea3e65",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="peg::Context::pop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpeg_1_1Context.html#ac35d91467ae20e6b13a39ace7d853eb4",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="peg::Context::push",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpeg_1_1Context.html#acf1bfdc49e3ea328c8cacb78b712cb0b",tooltip=" "];
+}

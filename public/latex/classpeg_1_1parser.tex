@@ -1,0 +1,572 @@
+\hypertarget{classpeg_1_1parser}{}\doxysection{peg\+::parser Class Reference}
+\label{classpeg_1_1parser}\index{peg::parser@{peg::parser}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for peg\+::parser\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpeg_1_1parser_a8570343b6e075893f55962aaa4ae0481}{parser}} ()=default
+\item 
+\mbox{\hyperlink{classpeg_1_1parser_a6e26256bc5117f1cd4debfba51f96bf3}{parser}} (const char $\ast$s, size\+\_\+t n, const \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}} \&rules)
+\item 
+\mbox{\hyperlink{classpeg_1_1parser_a82a48ddebd4a785fc5feb8a745f78be0}{parser}} (const char $\ast$s, const \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}} \&rules)
+\item 
+\mbox{\hyperlink{classpeg_1_1parser_aa74935dd441262569696c9513604d6bf}{parser}} (const char $\ast$s, size\+\_\+t n)
+\item 
+\mbox{\hyperlink{classpeg_1_1parser_a4507cb6658f973a75ecf1c291801c3ea}{parser}} (const char $\ast$s)
+\item 
+\mbox{\hyperlink{classpeg_1_1parser_aa12bbce068477c00f6b2ad6b42806076}{operator bool}} ()
+\item 
+bool \mbox{\hyperlink{classpeg_1_1parser_a62d51f3c7721699e97cb7fb584634785}{load\+\_\+grammar}} (const char $\ast$s, size\+\_\+t n, const \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}} \&rules)
+\item 
+bool \mbox{\hyperlink{classpeg_1_1parser_a8bb55180faf9bb937c94b8fde63ddccb}{load\+\_\+grammar}} (const char $\ast$s, size\+\_\+t n)
+\item 
+bool \mbox{\hyperlink{classpeg_1_1parser_aa70aaade27356ca49a5ac2461bdcf260}{load\+\_\+grammar}} (const char $\ast$s, const \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}} \&rules)
+\item 
+bool \mbox{\hyperlink{classpeg_1_1parser_a69afe1cc6d289e4952490fad56d9641e}{load\+\_\+grammar}} (const char $\ast$s)
+\item 
+bool \mbox{\hyperlink{classpeg_1_1parser_aecf69400627989cb4c080479471f8d7c}{parse\+\_\+n}} (const char $\ast$s, size\+\_\+t n, const char $\ast$path=nullptr) const
+\item 
+bool \mbox{\hyperlink{classpeg_1_1parser_ac85840eb6bda0b4af0b22c4b6c228fd3}{parse}} (const char $\ast$s, const char $\ast$path=nullptr) const
+\item 
+bool \mbox{\hyperlink{classpeg_1_1parser_a02716221ecb3074e0baa071162cdb03a}{parse\+\_\+n}} (const char $\ast$s, size\+\_\+t n, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt, const char $\ast$path=nullptr) const
+\item 
+bool \mbox{\hyperlink{classpeg_1_1parser_a15e2c9022fdbda9d2e7569cb7153cece}{parse}} (const char $\ast$s, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt, const char $\ast$path=nullptr) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classpeg_1_1parser_a8c1fbb31c7b3c9f402ce77f38876ecfd}{parse\+\_\+n}} (const char $\ast$s, size\+\_\+t n, T \&val, const char $\ast$path=nullptr) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classpeg_1_1parser_ae645d555943d3ad68333cbd09f7cb2bc}{parse}} (const char $\ast$s, T \&val, const char $\ast$path=nullptr) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classpeg_1_1parser_a339d787f093ad0048c230839fa58f7d1}{parse\+\_\+n}} (const char $\ast$s, size\+\_\+t n, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt, T \&val, const char $\ast$path=nullptr) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classpeg_1_1parser_aad7282332836b1953e23471a159746a3}{parse}} (const char $\ast$s, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt, T \&val, const char $\ast$=nullptr) const
+\item 
+bool \mbox{\hyperlink{classpeg_1_1parser_a811ac281be0bca63b44d2b60793e21b8}{search}} (const char $\ast$s, size\+\_\+t n, size\+\_\+t \&mpos, size\+\_\+t \&mlen) const
+\item 
+bool \mbox{\hyperlink{classpeg_1_1parser_aa88b2fee525918e9a307951112a4b21f}{search}} (const char $\ast$s, size\+\_\+t \&mpos, size\+\_\+t \&mlen) const
+\item 
+\mbox{\hyperlink{classpeg_1_1Definition}{Definition}} \& \mbox{\hyperlink{classpeg_1_1parser_ae5c7e4912b52a9a1d97c1ebf0b11023d}{operator\mbox{[}$\,$\mbox{]}}} (const char $\ast$s)
+\item 
+const \mbox{\hyperlink{classpeg_1_1Definition}{Definition}} \& \mbox{\hyperlink{classpeg_1_1parser_a8bd0f852476b19eb5a38f94ab7cc21e6}{operator\mbox{[}$\,$\mbox{]}}} (const char $\ast$s) const
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classpeg_1_1parser_a6af10b5e994e66dc4d7b99cc5838e79a}{get\+\_\+rule\+\_\+names}} ()
+\item 
+void \mbox{\hyperlink{classpeg_1_1parser_a4561ef1443b30462c76d6c16d9bb7ebc}{enable\+\_\+packrat\+\_\+parsing}} ()
+\item 
+{\footnotesize template$<$typename T  = Ast$>$ }\\\mbox{\hyperlink{classpeg_1_1parser}{parser}} \& \mbox{\hyperlink{classpeg_1_1parser_a49ac16263b0f402446dcb8d0e31caeb7}{enable\+\_\+ast}} ()
+\item 
+void \mbox{\hyperlink{classpeg_1_1parser_a4b2ff439f07749b31acb0d9a2df810d6}{enable\+\_\+trace}} (\mbox{\hyperlink{namespacepeg_ae1819caa967994d958b2c275b5c4c723}{Tracer}} tracer)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepeg_a26a30ebb776ee513a118326c06f36da0}{Log}} \mbox{\hyperlink{classpeg_1_1parser_a9ed044dc9dafd4f85d6aa7913743000a}{log}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classpeg_1_1parser_a524ecb2a54b882ba6171d0e158dee630}{output\+\_\+log}} (const char $\ast$s, size\+\_\+t n, const \mbox{\hyperlink{structpeg_1_1Definition_1_1Result}{Definition\+::\+Result}} \&r) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} $>$ \mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classpeg_1_1parser_a22451099cbd85a11948f21bc4bb7d870}{start\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpeg_1_1parser_a8570343b6e075893f55962aaa4ae0481}\label{classpeg_1_1parser_a8570343b6e075893f55962aaa4ae0481}} 
+\index{peg::parser@{peg::parser}!parser@{parser}}
+\index{parser@{parser}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily peg\+::parser\+::parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classpeg_1_1parser_a6e26256bc5117f1cd4debfba51f96bf3}\label{classpeg_1_1parser_a6e26256bc5117f1cd4debfba51f96bf3}} 
+\index{peg::parser@{peg::parser}!parser@{parser}}
+\index{parser@{parser}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily peg\+::parser\+::parser (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{const \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}} \&}]{rules }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3648                                                         \{}
+\DoxyCodeLine{3649         \mbox{\hyperlink{classpeg_1_1parser_a62d51f3c7721699e97cb7fb584634785}{load\_grammar}}(s, n, rules);}
+\DoxyCodeLine{3650     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_a82a48ddebd4a785fc5feb8a745f78be0}\label{classpeg_1_1parser_a82a48ddebd4a785fc5feb8a745f78be0}} 
+\index{peg::parser@{peg::parser}!parser@{parser}}
+\index{parser@{parser}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily peg\+::parser\+::parser (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{const \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}} \&}]{rules }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3653         : \mbox{\hyperlink{classpeg_1_1parser_a8570343b6e075893f55962aaa4ae0481}{parser}}(s, strlen(s), rules) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_aa74935dd441262569696c9513604d6bf}\label{classpeg_1_1parser_aa74935dd441262569696c9513604d6bf}} 
+\index{peg::parser@{peg::parser}!parser@{parser}}
+\index{parser@{parser}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily peg\+::parser\+::parser (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3656         : \mbox{\hyperlink{classpeg_1_1parser_a8570343b6e075893f55962aaa4ae0481}{parser}}(s, n, \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}}()) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_a4507cb6658f973a75ecf1c291801c3ea}\label{classpeg_1_1parser_a4507cb6658f973a75ecf1c291801c3ea}} 
+\index{peg::parser@{peg::parser}!parser@{parser}}
+\index{parser@{parser}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily peg\+::parser\+::parser (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3659         : \mbox{\hyperlink{classpeg_1_1parser_a8570343b6e075893f55962aaa4ae0481}{parser}}(s, strlen(s), \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}}()) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpeg_1_1parser_a49ac16263b0f402446dcb8d0e31caeb7}\label{classpeg_1_1parser_a49ac16263b0f402446dcb8d0e31caeb7}} 
+\index{peg::parser@{peg::parser}!enable\_ast@{enable\_ast}}
+\index{enable\_ast@{enable\_ast}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{enable\_ast()}{enable\_ast()}}
+{\footnotesize\ttfamily template$<$typename T  = Ast$>$ \\
+\mbox{\hyperlink{classpeg_1_1parser}{parser}} \& peg\+::parser\+::enable\+\_\+ast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3798                          \{}
+\DoxyCodeLine{3799         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& x: *\mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}}) \{}
+\DoxyCodeLine{3800             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& name = x.first;}
+\DoxyCodeLine{3801             \textcolor{keyword}{auto}\& rule = x.second;}
+\DoxyCodeLine{3802 }
+\DoxyCodeLine{3803             \textcolor{keywordflow}{if} (!rule.action) \{}
+\DoxyCodeLine{3804                 rule.action = [\&](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3805                     \textcolor{keyword}{auto} line = \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{line\_info}}(sv.ss, sv.c\_str());}
+\DoxyCodeLine{3806 }
+\DoxyCodeLine{3807                     \textcolor{keywordflow}{if} (rule.is\_token()) \{}
+\DoxyCodeLine{3808                         \textcolor{keywordflow}{return} std::make\_shared<T>(}
+\DoxyCodeLine{3809                             sv.path, line.first, line.second,}
+\DoxyCodeLine{3810                             name.c\_str(), std::distance(sv.ss, sv.c\_str()), sv.length(), sv.choice\_count(), sv.choice(),}
+\DoxyCodeLine{3811                             sv.token());}
+\DoxyCodeLine{3812                     \}}
+\DoxyCodeLine{3813 }
+\DoxyCodeLine{3814                     \textcolor{keyword}{auto} \mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}} = std::make\_shared<T>(}
+\DoxyCodeLine{3815                         sv.path, line.first, line.second,}
+\DoxyCodeLine{3816                         name.c\_str(), std::distance(sv.ss, sv.c\_str()), sv.length(), sv.choice\_count(), sv.choice(),}
+\DoxyCodeLine{3817                         sv.transform<std::shared\_ptr<T>>());}
+\DoxyCodeLine{3818 }
+\DoxyCodeLine{3819                     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} node: \mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}}-\/>nodes) \{}
+\DoxyCodeLine{3820                         node-\/>parent = \mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}};}
+\DoxyCodeLine{3821                     \}}
+\DoxyCodeLine{3822                     \textcolor{keywordflow}{return} \mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}};}
+\DoxyCodeLine{3823                 \};}
+\DoxyCodeLine{3824             \}}
+\DoxyCodeLine{3825         \}}
+\DoxyCodeLine{3826         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{3827     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}}, and \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{peg\+::line\+\_\+info()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classpeg_1_1parser_a4561ef1443b30462c76d6c16d9bb7ebc}\label{classpeg_1_1parser_a4561ef1443b30462c76d6c16d9bb7ebc}} 
+\index{peg::parser@{peg::parser}!enable\_packrat\_parsing@{enable\_packrat\_parsing}}
+\index{enable\_packrat\_parsing@{enable\_packrat\_parsing}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{enable\_packrat\_parsing()}{enable\_packrat\_parsing()}}
+{\footnotesize\ttfamily void peg\+::parser\+::enable\+\_\+packrat\+\_\+parsing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3790                                   \{}
+\DoxyCodeLine{3791         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}} != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{3792             \textcolor{keyword}{auto}\& rule = (*grammar\_)[\mbox{\hyperlink{classpeg_1_1parser_a22451099cbd85a11948f21bc4bb7d870}{start\_}}];}
+\DoxyCodeLine{3793             rule.enablePackratParsing = \textcolor{keyword}{true};}
+\DoxyCodeLine{3794         \}}
+\DoxyCodeLine{3795     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_a4b2ff439f07749b31acb0d9a2df810d6}\label{classpeg_1_1parser_a4b2ff439f07749b31acb0d9a2df810d6}} 
+\index{peg::parser@{peg::parser}!enable\_trace@{enable\_trace}}
+\index{enable\_trace@{enable\_trace}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{enable\_trace()}{enable\_trace()}}
+{\footnotesize\ttfamily void peg\+::parser\+::enable\+\_\+trace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepeg_ae1819caa967994d958b2c275b5c4c723}{Tracer}}}]{tracer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3829                                      \{}
+\DoxyCodeLine{3830         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}} != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{3831             \textcolor{keyword}{auto}\& rule = (*grammar\_)[\mbox{\hyperlink{classpeg_1_1parser_a22451099cbd85a11948f21bc4bb7d870}{start\_}}];}
+\DoxyCodeLine{3832             rule.tracer = tracer;}
+\DoxyCodeLine{3833         \}}
+\DoxyCodeLine{3834     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_a6af10b5e994e66dc4d7b99cc5838e79a}\label{classpeg_1_1parser_a6af10b5e994e66dc4d7b99cc5838e79a}} 
+\index{peg::parser@{peg::parser}!get\_rule\_names@{get\_rule\_names}}
+\index{get\_rule\_names@{get\_rule\_names}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{get\_rule\_names()}{get\_rule\_names()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ peg\+::parser\+::get\+\_\+rule\+\_\+names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3781                                          \{}
+\DoxyCodeLine{3782         std::vector<std::string> rules;}
+\DoxyCodeLine{3783         rules.reserve(\mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}}-\/>size());}
+\DoxyCodeLine{3784         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \textcolor{keyword}{const}\& r : *\mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}}) \{}
+\DoxyCodeLine{3785             rules.emplace\_back(r.first);}
+\DoxyCodeLine{3786         \}}
+\DoxyCodeLine{3787         \textcolor{keywordflow}{return} rules;}
+\DoxyCodeLine{3788     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_a69afe1cc6d289e4952490fad56d9641e}\label{classpeg_1_1parser_a69afe1cc6d289e4952490fad56d9641e}} 
+\index{peg::parser@{peg::parser}!load\_grammar@{load\_grammar}}
+\index{load\_grammar@{load\_grammar}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{load\_grammar()}{load\_grammar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool peg\+::parser\+::load\+\_\+grammar (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3679                                      \{}
+\DoxyCodeLine{3680         \textcolor{keyword}{auto} n = strlen(s);}
+\DoxyCodeLine{3681         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1parser_a62d51f3c7721699e97cb7fb584634785}{load\_grammar}}(s, n);}
+\DoxyCodeLine{3682     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_aa70aaade27356ca49a5ac2461bdcf260}\label{classpeg_1_1parser_aa70aaade27356ca49a5ac2461bdcf260}} 
+\index{peg::parser@{peg::parser}!load\_grammar@{load\_grammar}}
+\index{load\_grammar@{load\_grammar}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{load\_grammar()}{load\_grammar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool peg\+::parser\+::load\+\_\+grammar (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{const \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}} \&}]{rules }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3674                                                          \{}
+\DoxyCodeLine{3675         \textcolor{keyword}{auto} n = strlen(s);}
+\DoxyCodeLine{3676         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1parser_a62d51f3c7721699e97cb7fb584634785}{load\_grammar}}(s, n, rules);}
+\DoxyCodeLine{3677     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_a8bb55180faf9bb937c94b8fde63ddccb}\label{classpeg_1_1parser_a8bb55180faf9bb937c94b8fde63ddccb}} 
+\index{peg::parser@{peg::parser}!load\_grammar@{load\_grammar}}
+\index{load\_grammar@{load\_grammar}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{load\_grammar()}{load\_grammar()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool peg\+::parser\+::load\+\_\+grammar (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3670                                                \{}
+\DoxyCodeLine{3671         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1parser_a62d51f3c7721699e97cb7fb584634785}{load\_grammar}}(s, n, \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}}());}
+\DoxyCodeLine{3672     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_a62d51f3c7721699e97cb7fb584634785}\label{classpeg_1_1parser_a62d51f3c7721699e97cb7fb584634785}} 
+\index{peg::parser@{peg::parser}!load\_grammar@{load\_grammar}}
+\index{load\_grammar@{load\_grammar}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{load\_grammar()}{load\_grammar()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool peg\+::parser\+::load\+\_\+grammar (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{const \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}} \&}]{rules }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3665                                                                    \{}
+\DoxyCodeLine{3666         \mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}} = \mbox{\hyperlink{classpeg_1_1ParserGenerator_a40ae3460cddd778c01ec5d36e123b87d}{ParserGenerator::parse}}(s, n, rules, \mbox{\hyperlink{classpeg_1_1parser_a22451099cbd85a11948f21bc4bb7d870}{start\_}}, \mbox{\hyperlink{classpeg_1_1parser_a9ed044dc9dafd4f85d6aa7913743000a}{log}});}
+\DoxyCodeLine{3667         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}} != \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{3668     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}.
+
+\mbox{\Hypertarget{classpeg_1_1parser_aa12bbce068477c00f6b2ad6b42806076}\label{classpeg_1_1parser_aa12bbce068477c00f6b2ad6b42806076}} 
+\index{peg::parser@{peg::parser}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily peg\+::parser\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3661                     \{}
+\DoxyCodeLine{3662         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}} != \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{3663     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_ae5c7e4912b52a9a1d97c1ebf0b11023d}\label{classpeg_1_1parser_ae5c7e4912b52a9a1d97c1ebf0b11023d}} 
+\index{peg::parser@{peg::parser}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpeg_1_1Definition}{Definition}} \& peg\+::parser\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3773                                           \{}
+\DoxyCodeLine{3774         \textcolor{keywordflow}{return} (*\mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}})[s];}
+\DoxyCodeLine{3775     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_a8bd0f852476b19eb5a38f94ab7cc21e6}\label{classpeg_1_1parser_a8bd0f852476b19eb5a38f94ab7cc21e6}} 
+\index{peg::parser@{peg::parser}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classpeg_1_1Definition}{Definition}} \& peg\+::parser\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3777                                                       \{}
+\DoxyCodeLine{3778         \textcolor{keywordflow}{return} (*\mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}})[s];}
+\DoxyCodeLine{3779     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_a524ecb2a54b882ba6171d0e158dee630}\label{classpeg_1_1parser_a524ecb2a54b882ba6171d0e158dee630}} 
+\index{peg::parser@{peg::parser}!output\_log@{output\_log}}
+\index{output\_log@{output\_log}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{output\_log()}{output\_log()}}
+{\footnotesize\ttfamily void peg\+::parser\+::output\+\_\+log (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{const \mbox{\hyperlink{structpeg_1_1Definition_1_1Result}{Definition\+::\+Result}} \&}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3839                                                                               \{}
+\DoxyCodeLine{3840         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1parser_a9ed044dc9dafd4f85d6aa7913743000a}{log}}) \{}
+\DoxyCodeLine{3841             \textcolor{keywordflow}{if} (!r.ret) \{}
+\DoxyCodeLine{3842                 \textcolor{keywordflow}{if} (r.message\_pos) \{}
+\DoxyCodeLine{3843                     \textcolor{keyword}{auto} line = \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{line\_info}}(s, r.message\_pos);}
+\DoxyCodeLine{3844                     \mbox{\hyperlink{classpeg_1_1parser_a9ed044dc9dafd4f85d6aa7913743000a}{log}}(line.first, line.second, r.message);}
+\DoxyCodeLine{3845                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{3846                     \textcolor{keyword}{auto} line = \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{line\_info}}(s, r.error\_pos);}
+\DoxyCodeLine{3847                     \mbox{\hyperlink{classpeg_1_1parser_a9ed044dc9dafd4f85d6aa7913743000a}{log}}(line.first, line.second, \textcolor{stringliteral}{"{}syntax error"{}});}
+\DoxyCodeLine{3848                 \}}
+\DoxyCodeLine{3849             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (r.len != n) \{}
+\DoxyCodeLine{3850                 \textcolor{keyword}{auto} line = \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{line\_info}}(s, s + r.len);}
+\DoxyCodeLine{3851                 \mbox{\hyperlink{classpeg_1_1parser_a9ed044dc9dafd4f85d6aa7913743000a}{log}}(line.first, line.second, \textcolor{stringliteral}{"{}syntax error"{}});}
+\DoxyCodeLine{3852             \}}
+\DoxyCodeLine{3853         \}}
+\DoxyCodeLine{3854     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structpeg_1_1Definition_1_1Result_a009287431a199c835e2dabe43aa9aa19}{peg\+::\+Definition\+::\+Result\+::error\+\_\+pos}}, \mbox{\hyperlink{structpeg_1_1Definition_1_1Result_a902bbfbfd0f1bf05d8d000ea20a283f7}{peg\+::\+Definition\+::\+Result\+::len}}, \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{peg\+::line\+\_\+info()}}, \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}, \mbox{\hyperlink{structpeg_1_1Definition_1_1Result_a978a72d1370cd7b8335e3b8c5335b5f4}{peg\+::\+Definition\+::\+Result\+::message}}, \mbox{\hyperlink{structpeg_1_1Definition_1_1Result_ab3c90c742ddb613aae272c5f8a00b445}{peg\+::\+Definition\+::\+Result\+::message\+\_\+pos}}, and \mbox{\hyperlink{structpeg_1_1Definition_1_1Result_a47f65af8ce1afa9f447739cf61445275}{peg\+::\+Definition\+::\+Result\+::ret}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classpeg_1_1parser_a15e2c9022fdbda9d2e7569cb7153cece}\label{classpeg_1_1parser_a15e2c9022fdbda9d2e7569cb7153cece}} 
+\index{peg::parser@{peg::parser}!parse@{parse}}
+\index{parse@{parse}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool peg\+::parser\+::parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{dt,  }\item[{const char $\ast$}]{path = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3709                                                                          \{}
+\DoxyCodeLine{3710         \textcolor{keyword}{auto} n = strlen(s);}
+\DoxyCodeLine{3711         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1parser_aecf69400627989cb4c080479471f8d7c}{parse\_n}}(s, n, dt, path);}
+\DoxyCodeLine{3712     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_aad7282332836b1953e23471a159746a3}\label{classpeg_1_1parser_aad7282332836b1953e23471a159746a3}} 
+\index{peg::parser@{peg::parser}!parse@{parse}}
+\index{parse@{parse}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool peg\+::parser\+::parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{dt,  }\item[{T \&}]{val,  }\item[{const char $\ast$}]{ = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3743                                                                               \{}
+\DoxyCodeLine{3744         \textcolor{keyword}{auto} n = strlen(s);}
+\DoxyCodeLine{3745         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1parser_aecf69400627989cb4c080479471f8d7c}{parse\_n}}(s, n, dt, val);}
+\DoxyCodeLine{3746     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_ac85840eb6bda0b4af0b22c4b6c228fd3}\label{classpeg_1_1parser_ac85840eb6bda0b4af0b22c4b6c228fd3}} 
+\index{peg::parser@{peg::parser}!parse@{parse}}
+\index{parse@{parse}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool peg\+::parser\+::parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{const char $\ast$}]{path = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3694                                                                 \{}
+\DoxyCodeLine{3695         \textcolor{keyword}{auto} n = strlen(s);}
+\DoxyCodeLine{3696         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1parser_aecf69400627989cb4c080479471f8d7c}{parse\_n}}(s, n, path);}
+\DoxyCodeLine{3697     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_ae645d555943d3ad68333cbd09f7cb2bc}\label{classpeg_1_1parser_ae645d555943d3ad68333cbd09f7cb2bc}} 
+\index{peg::parser@{peg::parser}!parse@{parse}}
+\index{parse@{parse}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool peg\+::parser\+::parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{T \&}]{val,  }\item[{const char $\ast$}]{path = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3726                                                                         \{}
+\DoxyCodeLine{3727         \textcolor{keyword}{auto} n = strlen(s);}
+\DoxyCodeLine{3728         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1parser_aecf69400627989cb4c080479471f8d7c}{parse\_n}}(s, n, val, path);}
+\DoxyCodeLine{3729     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_a02716221ecb3074e0baa071162cdb03a}\label{classpeg_1_1parser_a02716221ecb3074e0baa071162cdb03a}} 
+\index{peg::parser@{peg::parser}!parse\_n@{parse\_n}}
+\index{parse\_n@{parse\_n}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{parse\_n()}{parse\_n()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool peg\+::parser\+::parse\+\_\+n (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{dt,  }\item[{const char $\ast$}]{path = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3699                                                                                      \{}
+\DoxyCodeLine{3700         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}} != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{3701             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& rule = (*grammar\_)[\mbox{\hyperlink{classpeg_1_1parser_a22451099cbd85a11948f21bc4bb7d870}{start\_}}];}
+\DoxyCodeLine{3702             \textcolor{keyword}{auto} r = rule.parse(s, n, dt, path);}
+\DoxyCodeLine{3703             \mbox{\hyperlink{classpeg_1_1parser_a524ecb2a54b882ba6171d0e158dee630}{output\_log}}(s, n, r);}
+\DoxyCodeLine{3704             \textcolor{keywordflow}{return} r.ret \&\& r.len == n;}
+\DoxyCodeLine{3705         \}}
+\DoxyCodeLine{3706         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{3707     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_a339d787f093ad0048c230839fa58f7d1}\label{classpeg_1_1parser_a339d787f093ad0048c230839fa58f7d1}} 
+\index{peg::parser@{peg::parser}!parse\_n@{parse\_n}}
+\index{parse\_n@{parse\_n}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{parse\_n()}{parse\_n()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool peg\+::parser\+::parse\+\_\+n (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{dt,  }\item[{T \&}]{val,  }\item[{const char $\ast$}]{path = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3732                                                                                              \{}
+\DoxyCodeLine{3733         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}} != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{3734             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& rule = (*grammar\_)[\mbox{\hyperlink{classpeg_1_1parser_a22451099cbd85a11948f21bc4bb7d870}{start\_}}];}
+\DoxyCodeLine{3735             \textcolor{keyword}{auto} r = rule.parse\_and\_get\_value(s, n, dt, val, path);}
+\DoxyCodeLine{3736             \mbox{\hyperlink{classpeg_1_1parser_a524ecb2a54b882ba6171d0e158dee630}{output\_log}}(s, n, r);}
+\DoxyCodeLine{3737             \textcolor{keywordflow}{return} r.ret \&\& r.len == n;}
+\DoxyCodeLine{3738         \}}
+\DoxyCodeLine{3739         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{3740     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_aecf69400627989cb4c080479471f8d7c}\label{classpeg_1_1parser_aecf69400627989cb4c080479471f8d7c}} 
+\index{peg::parser@{peg::parser}!parse\_n@{parse\_n}}
+\index{parse\_n@{parse\_n}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{parse\_n()}{parse\_n()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool peg\+::parser\+::parse\+\_\+n (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{const char $\ast$}]{path = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3684                                                                             \{}
+\DoxyCodeLine{3685         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}} != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{3686             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& rule = (*grammar\_)[\mbox{\hyperlink{classpeg_1_1parser_a22451099cbd85a11948f21bc4bb7d870}{start\_}}];}
+\DoxyCodeLine{3687             \textcolor{keyword}{auto} r = rule.parse(s, n, path);}
+\DoxyCodeLine{3688             \mbox{\hyperlink{classpeg_1_1parser_a524ecb2a54b882ba6171d0e158dee630}{output\_log}}(s, n, r);}
+\DoxyCodeLine{3689             \textcolor{keywordflow}{return} r.ret \&\& r.len == n;}
+\DoxyCodeLine{3690         \}}
+\DoxyCodeLine{3691         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{3692     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_a8c1fbb31c7b3c9f402ce77f38876ecfd}\label{classpeg_1_1parser_a8c1fbb31c7b3c9f402ce77f38876ecfd}} 
+\index{peg::parser@{peg::parser}!parse\_n@{parse\_n}}
+\index{parse\_n@{parse\_n}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{parse\_n()}{parse\_n()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool peg\+::parser\+::parse\+\_\+n (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{T \&}]{val,  }\item[{const char $\ast$}]{path = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3715                                                                                     \{}
+\DoxyCodeLine{3716         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}} != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{3717             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& rule = (*grammar\_)[\mbox{\hyperlink{classpeg_1_1parser_a22451099cbd85a11948f21bc4bb7d870}{start\_}}];}
+\DoxyCodeLine{3718             \textcolor{keyword}{auto} r = rule.parse\_and\_get\_value(s, n, val, path);}
+\DoxyCodeLine{3719             \mbox{\hyperlink{classpeg_1_1parser_a524ecb2a54b882ba6171d0e158dee630}{output\_log}}(s, n, r);}
+\DoxyCodeLine{3720             \textcolor{keywordflow}{return} r.ret \&\& r.len == n;}
+\DoxyCodeLine{3721         \}}
+\DoxyCodeLine{3722         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{3723     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_aa88b2fee525918e9a307951112a4b21f}\label{classpeg_1_1parser_aa88b2fee525918e9a307951112a4b21f}} 
+\index{peg::parser@{peg::parser}!search@{search}}
+\index{search@{search}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool peg\+::parser\+::search (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t \&}]{mpos,  }\item[{size\+\_\+t \&}]{mlen }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3768                                                                  \{}
+\DoxyCodeLine{3769         \textcolor{keyword}{auto} n = strlen(s);}
+\DoxyCodeLine{3770         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1parser_a811ac281be0bca63b44d2b60793e21b8}{search}}(s, n, mpos, mlen);}
+\DoxyCodeLine{3771     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1parser_a811ac281be0bca63b44d2b60793e21b8}\label{classpeg_1_1parser_a811ac281be0bca63b44d2b60793e21b8}} 
+\index{peg::parser@{peg::parser}!search@{search}}
+\index{search@{search}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool peg\+::parser\+::search (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{size\+\_\+t \&}]{mpos,  }\item[{size\+\_\+t \&}]{mlen }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3748                                                                            \{}
+\DoxyCodeLine{3749         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& rule = (*grammar\_)[\mbox{\hyperlink{classpeg_1_1parser_a22451099cbd85a11948f21bc4bb7d870}{start\_}}];}
+\DoxyCodeLine{3750         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}{grammar\_}} != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{3751             \textcolor{keywordtype}{size\_t} pos = 0;}
+\DoxyCodeLine{3752             \textcolor{keywordflow}{while} (pos < n) \{}
+\DoxyCodeLine{3753                 \textcolor{keywordtype}{size\_t} len = n -\/ pos;}
+\DoxyCodeLine{3754                 \textcolor{keyword}{auto} r = rule.parse(s + pos, len);}
+\DoxyCodeLine{3755                 \textcolor{keywordflow}{if} (r.ret) \{}
+\DoxyCodeLine{3756                     mpos = pos;}
+\DoxyCodeLine{3757                     mlen = len;}
+\DoxyCodeLine{3758                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{3759                 \}}
+\DoxyCodeLine{3760                 pos++;}
+\DoxyCodeLine{3761             \}}
+\DoxyCodeLine{3762         \}}
+\DoxyCodeLine{3763         mpos = 0;}
+\DoxyCodeLine{3764         mlen = 0;}
+\DoxyCodeLine{3765         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{3766     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}\label{classpeg_1_1parser_a343c34f7ebd147b0428fe1437bda3af8}} 
+\index{peg::parser@{peg::parser}!grammar\_@{grammar\_}}
+\index{grammar\_@{grammar\_}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{grammar\_}{grammar\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}}$>$ peg\+::parser\+::grammar\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpeg_1_1parser_a9ed044dc9dafd4f85d6aa7913743000a}\label{classpeg_1_1parser_a9ed044dc9dafd4f85d6aa7913743000a}} 
+\index{peg::parser@{peg::parser}!log@{log}}
+\index{log@{log}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepeg_a26a30ebb776ee513a118326c06f36da0}{Log}} peg\+::parser\+::log}
+
+\mbox{\Hypertarget{classpeg_1_1parser_a22451099cbd85a11948f21bc4bb7d870}\label{classpeg_1_1parser_a22451099cbd85a11948f21bc4bb7d870}} 
+\index{peg::parser@{peg::parser}!start\_@{start\_}}
+\index{start\_@{start\_}!peg::parser@{peg::parser}}
+\doxysubsubsection{\texorpdfstring{start\_}{start\_}}
+{\footnotesize\ttfamily std\+::string peg\+::parser\+::start\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,20 @@
+digraph "cluon::LCMToGenericMessage::setMessageSpecification"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="cluon::LCMToGenericMessage\l::setMessageSpecification",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="cluon::MessageParser\l::parse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1MessageParser.html#a6ba94f0f1b6a790d8fe436ffa2512892",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="fieldIdentifier",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cluon-complete_8hpp.html#afab98cfce6f426b1a7deea4ca827a245",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="fieldName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cluon-complete_8hpp.html#a802637a7125c84855ce97b387f786538",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="stringtoolbox::trim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacestringtoolbox.html#a96eeb4e50ddaab510b51a18071deb6f4",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="stringtoolbox::ltrim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacestringtoolbox.html#ac4fb758abe5b36c36e5129bf59d11371",tooltip=" "];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="stringtoolbox::rtrim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacestringtoolbox.html#a69b30d131a6703970471128f8eb80e01",tooltip=" "];
+}

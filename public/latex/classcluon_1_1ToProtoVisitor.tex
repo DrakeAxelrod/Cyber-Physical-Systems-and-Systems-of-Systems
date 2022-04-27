@@ -1,0 +1,796 @@
+\hypertarget{classcluon_1_1ToProtoVisitor}{}\doxysection{cluon\+::To\+Proto\+Visitor Class Reference}
+\label{classcluon_1_1ToProtoVisitor}\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for cluon\+::To\+Proto\+Visitor\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a8d6de2d9231908a39d28a9d3e5ab43cf}{To\+Proto\+Visitor}} ()=default
+\item 
+\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a8001ac8131035c704cd2c846cc4b81d6}{$\sim$\+To\+Proto\+Visitor}} ()=default
+\item 
+std\+::string \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a20841380c5c8e865f30f92d164477e81}{encoded\+Data}} () const noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a78ab6b3215a3dcc34d2b018cac2b6dbd}{pre\+Visit}} (int32\+\_\+t id, const std\+::string \&short\+Name, const std\+::string \&long\+Name) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a481f53aca25f2130df80c6e9468b4c00}{post\+Visit}} () noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a97e4a581c7f0094008f3438ce92f9e79}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, bool \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_af16fd5255910120c80fd0facefa80e7e}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, char \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_ac61f3efb63bba7bff5d89a991d5096a0}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int8\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_ae6c94a1ced19230bdd7c2b18059bfdd5}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint8\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a041a15f8bc5c265c3272c60c7c68b2e6}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int16\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_aac40ee1f312ee7db7981e6fb35b95c3b}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint16\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_aa52da3da32cf691e0e7c38cccf66a615}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int32\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_ac982a83924d53161b4f480538b0e143f}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint32\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a73170664d19586e419b65d22b7d6f3fc}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int64\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a929113744aefa3739dd4354a9e28666a}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint64\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_ade5fb9a0b59a4444766009a216fca863}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, float \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a725a4dc537658cc149bc07f8041ec88b}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, double \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_af8c7671e5bc6f711cd3f24ecce5e4275}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, std\+::string \&v) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_ac7f4b4576cdd6356892da79ada853604}{visit}} (uint32\+\_\+t \&id, std\+::string \&\&type\+Name, std\+::string \&\&name, T \&value) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_aea15317f13450007655a6e77ad14d319}{To\+Proto\+Visitor}} (const \mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{To\+Proto\+Visitor}} \&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb4f7826f1f679e60170844b3adb898e}{To\+Proto\+Visitor}} (\mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{To\+Proto\+Visitor}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{To\+Proto\+Visitor}} \& \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a0fe2ca2c3c5eb100babcaee3aca892fb}{operator=}} (const \mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{To\+Proto\+Visitor}} \&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{To\+Proto\+Visitor}} \& \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_ab1cff5e2caac4a3c2a6fa687c7bffd69}{operator=}} (\mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{To\+Proto\+Visitor}} \&\&)=delete
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a6cd37824680b0d55db21f414ae6a525a}{encode}} (std\+::ostream \&o, bool \&v) noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a82927f65e6a518555a60eadc0d33de9b}{encode}} (std\+::ostream \&o, int8\+\_\+t \&v) noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a680b4401ceedd08bea9f9027ad5cb6a9}{encode}} (std\+::ostream \&o, uint8\+\_\+t \&v) noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_ab91fbe8af6d26e12d33d6e2e01dfd7c8}{encode}} (std\+::ostream \&o, int16\+\_\+t \&v) noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a9c9ffa5165116bdd28f71392d58c1501}{encode}} (std\+::ostream \&o, uint16\+\_\+t \&v) noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a8bcdda5544cdcc54799ee247e2dfad16}{encode}} (std\+::ostream \&o, int32\+\_\+t \&v) noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_ae26ea0b82e283aca54a42883566d8c28}{encode}} (std\+::ostream \&o, uint32\+\_\+t \&v) noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a0115b3835fecfeae32ec533d3dfca39a}{encode}} (std\+::ostream \&o, int64\+\_\+t \&v) noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a45c3f42864e5b621726423b4efb1ce78}{encode}} (std\+::ostream \&o, uint64\+\_\+t \&v) noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a30a9bd442417619fd873c86676e9cb17}{encode}} (std\+::ostream \&o, float \&v) noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a1d9fec3b68c1005f1bee7eb1a56c61dc}{encode}} (std\+::ostream \&o, double \&v) noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_aeadd811083463d299b52e37a367f438c}{encode}} (std\+::ostream \&o, const std\+::string \&v) noexcept
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_ae9d1630f38e0c3088f4debd1b2c268cc}{to\+Zig\+Zag8}} (int8\+\_\+t v) noexcept
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a247dc1602f05828c3cf54e8ed6aa87b3}{to\+Zig\+Zag16}} (int16\+\_\+t v) noexcept
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a5fcfa6099ff4e2a468d837b88e5d601a}{to\+Zig\+Zag32}} (int32\+\_\+t v) noexcept
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a2a630307eb83d83e850ab146745e97eb}{to\+Zig\+Zag64}} (int64\+\_\+t v) noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{to\+Var\+Int}} (std\+::ostream \&out, uint64\+\_\+t v) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::size\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_ac3a8edcf8094fa557f2d83dcbdd23981}{to\+Key\+Value}} (uint32\+\_\+t \mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{field\+Identifier}}, T \&v) noexcept
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a75b3ce4de31de889c92c901c57bac662}{encode\+Key}} (uint32\+\_\+t \mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{field\+Identifier}}, uint8\+\_\+t proto\+Type) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::stringstream \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}{m\+\_\+buffer}} \{\char`\"{}\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class encodes a given message in Proto format. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_aea15317f13450007655a6e77ad14d319}\label{classcluon_1_1ToProtoVisitor_aea15317f13450007655a6e77ad14d319}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!ToProtoVisitor@{ToProtoVisitor}}
+\index{ToProtoVisitor@{ToProtoVisitor}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{ToProtoVisitor()}{ToProtoVisitor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily cluon\+::\+To\+Proto\+Visitor\+::\+To\+Proto\+Visitor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{To\+Proto\+Visitor}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_adb4f7826f1f679e60170844b3adb898e}\label{classcluon_1_1ToProtoVisitor_adb4f7826f1f679e60170844b3adb898e}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!ToProtoVisitor@{ToProtoVisitor}}
+\index{ToProtoVisitor@{ToProtoVisitor}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{ToProtoVisitor()}{ToProtoVisitor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily cluon\+::\+To\+Proto\+Visitor\+::\+To\+Proto\+Visitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{To\+Proto\+Visitor}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a8d6de2d9231908a39d28a9d3e5ab43cf}\label{classcluon_1_1ToProtoVisitor_a8d6de2d9231908a39d28a9d3e5ab43cf}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!ToProtoVisitor@{ToProtoVisitor}}
+\index{ToProtoVisitor@{ToProtoVisitor}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{ToProtoVisitor()}{ToProtoVisitor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily cluon\+::\+To\+Proto\+Visitor\+::\+To\+Proto\+Visitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a8001ac8131035c704cd2c846cc4b81d6}\label{classcluon_1_1ToProtoVisitor_a8001ac8131035c704cd2c846cc4b81d6}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!````~ToProtoVisitor@{$\sim$ToProtoVisitor}}
+\index{````~ToProtoVisitor@{$\sim$ToProtoVisitor}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{$\sim$ToProtoVisitor()}{~ToProtoVisitor()}}
+{\footnotesize\ttfamily cluon\+::\+To\+Proto\+Visitor\+::$\sim$\+To\+Proto\+Visitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a6cd37824680b0d55db21f414ae6a525a}\label{classcluon_1_1ToProtoVisitor_a6cd37824680b0d55db21f414ae6a525a}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encode@{encode}}
+\index{encode@{encode}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::encode (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{bool \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11155                                                                        \{}
+\DoxyCodeLine{11156     uint64\_t \_v\{(v ? 1u : 0u)\};}
+\DoxyCodeLine{11157     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(o, \_v);}
+\DoxyCodeLine{11158 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_aeadd811083463d299b52e37a367f438c}\label{classcluon_1_1ToProtoVisitor_aeadd811083463d299b52e37a367f438c}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encode@{encode}}
+\index{encode@{encode}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::encode (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{const std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11217                                                                                   \{}
+\DoxyCodeLine{11218     \textcolor{keyword}{const} std::size\_t LENGTH = v.length();}
+\DoxyCodeLine{11219     std::size\_t size         = \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(o, LENGTH);}
+\DoxyCodeLine{11220     o.write(v.c\_str(), \textcolor{keyword}{static\_cast<}std::streamsize\textcolor{keyword}{>}(LENGTH)); \textcolor{comment}{// LENGTH won't be negative.}}
+\DoxyCodeLine{11221     \textcolor{keywordflow}{return} size + LENGTH;}
+\DoxyCodeLine{11222 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a1d9fec3b68c1005f1bee7eb1a56c61dc}\label{classcluon_1_1ToProtoVisitor_a1d9fec3b68c1005f1bee7eb1a56c61dc}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encode@{encode}}
+\index{encode@{encode}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::encode (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{double \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11208                                                                          \{}
+\DoxyCodeLine{11209     \textcolor{comment}{// Store 8 bytes as little endian encoding.}}
+\DoxyCodeLine{11210     uint64\_t \_v\{0\};}
+\DoxyCodeLine{11211     std::memmove(\&\_v, \&v, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{11212     \_v = htole64(\_v);}
+\DoxyCodeLine{11213     o.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char} *\textcolor{keyword}{>}(\&\_v), \textcolor{keyword}{sizeof}(uint64\_t)); \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{11214     \textcolor{keywordflow}{return} \textcolor{keyword}{sizeof}(uint64\_t);}
+\DoxyCodeLine{11215 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a30a9bd442417619fd873c86676e9cb17}\label{classcluon_1_1ToProtoVisitor_a30a9bd442417619fd873c86676e9cb17}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encode@{encode}}
+\index{encode@{encode}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::encode (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{float \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11199                                                                         \{}
+\DoxyCodeLine{11200     \textcolor{comment}{// Store 4 bytes as little endian encoding.}}
+\DoxyCodeLine{11201     uint32\_t \_v\{0\};}
+\DoxyCodeLine{11202     std::memmove(\&\_v, \&v, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{11203     \_v = htole32(\_v);}
+\DoxyCodeLine{11204     o.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char} *\textcolor{keyword}{>}(\&\_v), \textcolor{keyword}{sizeof}(uint32\_t)); \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{11205     \textcolor{keywordflow}{return} \textcolor{keyword}{sizeof}(uint32\_t);}
+\DoxyCodeLine{11206 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_ab91fbe8af6d26e12d33d6e2e01dfd7c8}\label{classcluon_1_1ToProtoVisitor_ab91fbe8af6d26e12d33d6e2e01dfd7c8}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encode@{encode}}
+\index{encode@{encode}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::encode (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{int16\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11170                                                                           \{}
+\DoxyCodeLine{11171     uint64\_t \_v = \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a247dc1602f05828c3cf54e8ed6aa87b3}{toZigZag16}}(v);}
+\DoxyCodeLine{11172     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(o, \_v);}
+\DoxyCodeLine{11173 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a8bcdda5544cdcc54799ee247e2dfad16}\label{classcluon_1_1ToProtoVisitor_a8bcdda5544cdcc54799ee247e2dfad16}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encode@{encode}}
+\index{encode@{encode}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::encode (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{int32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11180                                                                           \{}
+\DoxyCodeLine{11181     uint64\_t \_v = \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a5fcfa6099ff4e2a468d837b88e5d601a}{toZigZag32}}(v);}
+\DoxyCodeLine{11182     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(o, \_v);}
+\DoxyCodeLine{11183 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a0115b3835fecfeae32ec533d3dfca39a}\label{classcluon_1_1ToProtoVisitor_a0115b3835fecfeae32ec533d3dfca39a}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encode@{encode}}
+\index{encode@{encode}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::encode (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{int64\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11190                                                                           \{}
+\DoxyCodeLine{11191     uint64\_t \_v = \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a2a630307eb83d83e850ab146745e97eb}{toZigZag64}}(v);}
+\DoxyCodeLine{11192     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(o, \_v);}
+\DoxyCodeLine{11193 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a82927f65e6a518555a60eadc0d33de9b}\label{classcluon_1_1ToProtoVisitor_a82927f65e6a518555a60eadc0d33de9b}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encode@{encode}}
+\index{encode@{encode}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::encode (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{int8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11160                                                                          \{}
+\DoxyCodeLine{11161     uint64\_t \_v = \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_ae9d1630f38e0c3088f4debd1b2c268cc}{toZigZag8}}(v);}
+\DoxyCodeLine{11162     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(o, \_v);}
+\DoxyCodeLine{11163 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a9c9ffa5165116bdd28f71392d58c1501}\label{classcluon_1_1ToProtoVisitor_a9c9ffa5165116bdd28f71392d58c1501}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encode@{encode}}
+\index{encode@{encode}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::encode (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{uint16\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11175                                                                            \{}
+\DoxyCodeLine{11176     uint64\_t \_v = v;}
+\DoxyCodeLine{11177     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(o, \_v);}
+\DoxyCodeLine{11178 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_ae26ea0b82e283aca54a42883566d8c28}\label{classcluon_1_1ToProtoVisitor_ae26ea0b82e283aca54a42883566d8c28}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encode@{encode}}
+\index{encode@{encode}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::encode (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{uint32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11185                                                                            \{}
+\DoxyCodeLine{11186     uint64\_t \_v = v;}
+\DoxyCodeLine{11187     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(o, \_v);}
+\DoxyCodeLine{11188 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a45c3f42864e5b621726423b4efb1ce78}\label{classcluon_1_1ToProtoVisitor_a45c3f42864e5b621726423b4efb1ce78}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encode@{encode}}
+\index{encode@{encode}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::encode (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{uint64\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11195                                                                            \{}
+\DoxyCodeLine{11196     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(o, v);}
+\DoxyCodeLine{11197 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a680b4401ceedd08bea9f9027ad5cb6a9}\label{classcluon_1_1ToProtoVisitor_a680b4401ceedd08bea9f9027ad5cb6a9}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encode@{encode}}
+\index{encode@{encode}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::encode (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{uint8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11165                                                                           \{}
+\DoxyCodeLine{11166     uint64\_t \_v = v;}
+\DoxyCodeLine{11167     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(o, \_v);}
+\DoxyCodeLine{11168 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a20841380c5c8e865f30f92d164477e81}\label{classcluon_1_1ToProtoVisitor_a20841380c5c8e865f30f92d164477e81}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encodedData@{encodedData}}
+\index{encodedData@{encodedData}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encodedData()}{encodedData()}}
+{\footnotesize\ttfamily std\+::string cluon\+::\+To\+Proto\+Visitor\+::encoded\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Encoded data in Proto format. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11055                                                             \{}
+\DoxyCodeLine{11056     std::string s\{\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}{m\_buffer}}.str()\};}
+\DoxyCodeLine{11057     \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{11058 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}{m\+\_\+buffer}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1EnvelopeConverter_ac046a7e7de1fec61f44ca2ece7df11bc}{cluon\+::\+Envelope\+Converter\+::get\+Proto\+Encoded\+Envelope\+From\+JSON()}}, \mbox{\hyperlink{classcluon_1_1OD4Session_a01745bfed160ac4fd16c71828672e7e8}{cluon\+::\+OD4\+Session\+::send()}}, \mbox{\hyperlink{namespacecluon_a8ff42dcd356aa1d0ef8e41a8aa2bead2}{cluon\+::serialize\+Envelope()}}, and \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_ac7f4b4576cdd6356892da79ada853604}{visit()}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a75b3ce4de31de889c92c901c57bac662}\label{classcluon_1_1ToProtoVisitor_a75b3ce4de31de889c92c901c57bac662}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!encodeKey@{encodeKey}}
+\index{encodeKey@{encodeKey}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{encodeKey()}{encodeKey()}}
+{\footnotesize\ttfamily uint64\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::encode\+Key (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Identifier,  }\item[{uint8\+\_\+t}]{proto\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+This method creates the key for the key/value pair in Protobuf format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field\+Identifier} & Field identifier. \\
+\hline
+{\em proto\+Type} & Protobuf type identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Protobuf field\+Identifier/key pair. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11240                                                                                               \{}
+\DoxyCodeLine{11241     \textcolor{keywordflow}{return} (\mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{fieldIdentifier}} << 0x3) | protoType;}
+\DoxyCodeLine{11242 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{field\+Identifier()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a0fe2ca2c3c5eb100babcaee3aca892fb}\label{classcluon_1_1ToProtoVisitor_a0fe2ca2c3c5eb100babcaee3aca892fb}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{To\+Proto\+Visitor}} \& cluon\+::\+To\+Proto\+Visitor\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{To\+Proto\+Visitor}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_ab1cff5e2caac4a3c2a6fa687c7bffd69}\label{classcluon_1_1ToProtoVisitor_ab1cff5e2caac4a3c2a6fa687c7bffd69}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{To\+Proto\+Visitor}} \& cluon\+::\+To\+Proto\+Visitor\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{To\+Proto\+Visitor}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a481f53aca25f2130df80c6e9468b4c00}\label{classcluon_1_1ToProtoVisitor_a481f53aca25f2130df80c6e9468b4c00}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!postVisit@{postVisit}}
+\index{postVisit@{postVisit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{postVisit()}{postVisit()}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::post\+Visit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11066 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a78ab6b3215a3dcc34d2b018cac2b6dbd}\label{classcluon_1_1ToProtoVisitor_a78ab6b3215a3dcc34d2b018cac2b6dbd}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!preVisit@{preVisit}}
+\index{preVisit@{preVisit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{preVisit()}{preVisit()}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::pre\+Visit (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{id,  }\item[{const std\+::string \&}]{short\+Name,  }\item[{const std\+::string \&}]{long\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11060                                                                                                                \{}
+\DoxyCodeLine{11061     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{11062     (void)shortName;}
+\DoxyCodeLine{11063     (void)longName;}
+\DoxyCodeLine{11064 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_ac3a8edcf8094fa557f2d83dcbdd23981}\label{classcluon_1_1ToProtoVisitor_ac3a8edcf8094fa557f2d83dcbdd23981}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!toKeyValue@{toKeyValue}}
+\index{toKeyValue@{toKeyValue}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{toKeyValue()}{toKeyValue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::to\+Key\+Value (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Identifier,  }\item[{T \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+This method creates a key/value pair encoded in Proto format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field\+Identifier} & Field identifier. \\
+\hline
+{\em v} & Value to encode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bytes written. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6862                                                                   \{}
+\DoxyCodeLine{6863         std::size\_t size\{0\};}
+\DoxyCodeLine{6864         uint64\_t key = \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a75b3ce4de31de889c92c901c57bac662}{encodeKey}}(\mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{fieldIdentifier}}, \textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(\mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3ad1441bc7cefd4cf4dc1282282ae5c529}{ProtoConstants::VARINT}}));}
+\DoxyCodeLine{6865         size += \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}{m\_buffer}}, key);}
+\DoxyCodeLine{6866         size += \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a6cd37824680b0d55db21f414ae6a525a}{encode}}(\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}{m\_buffer}}, v);}
+\DoxyCodeLine{6867         \textcolor{keywordflow}{return} size;}
+\DoxyCodeLine{6868     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{field\+Identifier()}}, and \mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3ad1441bc7cefd4cf4dc1282282ae5c529}{cluon\+::\+VARINT}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}\label{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!toVarInt@{toVarInt}}
+\index{toVarInt@{toVarInt}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{toVarInt()}{toVarInt()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::to\+Var\+Int (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{uint64\+\_\+t}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+This method encodes a given value in Var\+Int.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & std\+::ostream to encode to. \\
+\hline
+{\em v} & Value to encode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bytes written. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11244                                                                               \{}
+\DoxyCodeLine{11245     \textcolor{comment}{// Minimum size is of the encoded data.}}
+\DoxyCodeLine{11246     std::size\_t size\{1\};}
+\DoxyCodeLine{11247     uint8\_t b\{0\};}
+\DoxyCodeLine{11248     \textcolor{keywordflow}{while} (0x7f < v) \{}
+\DoxyCodeLine{11249         \textcolor{comment}{// Use the MSB to indicate value overflow for more bytes to come.}}
+\DoxyCodeLine{11250         b = (\textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(v \& 0x7f)) | 0x80;}
+\DoxyCodeLine{11251         out.put(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(b));}
+\DoxyCodeLine{11252         v >>= 7;}
+\DoxyCodeLine{11253         size++;}
+\DoxyCodeLine{11254     \}}
+\DoxyCodeLine{11255     \textcolor{comment}{// Write final byte.}}
+\DoxyCodeLine{11256     b = (\textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(v)) \& 0x7f;}
+\DoxyCodeLine{11257     out.put(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(b));}
+\DoxyCodeLine{11258 }
+\DoxyCodeLine{11259     \textcolor{keywordflow}{return} size;}
+\DoxyCodeLine{11260 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a247dc1602f05828c3cf54e8ed6aa87b3}\label{classcluon_1_1ToProtoVisitor_a247dc1602f05828c3cf54e8ed6aa87b3}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!toZigZag16@{toZigZag16}}
+\index{toZigZag16@{toZigZag16}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{toZigZag16()}{toZigZag16()}}
+{\footnotesize\ttfamily uint16\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::to\+Zig\+Zag16 (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11228                                                              \{}
+\DoxyCodeLine{11229     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}uint16\_t\textcolor{keyword}{>}((v << 1) \string^ (v >> ((\textcolor{keyword}{sizeof}(v) * 8) -\/ 1)));}
+\DoxyCodeLine{11230 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a5fcfa6099ff4e2a468d837b88e5d601a}\label{classcluon_1_1ToProtoVisitor_a5fcfa6099ff4e2a468d837b88e5d601a}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!toZigZag32@{toZigZag32}}
+\index{toZigZag32@{toZigZag32}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{toZigZag32()}{toZigZag32()}}
+{\footnotesize\ttfamily uint32\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::to\+Zig\+Zag32 (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11232                                                              \{}
+\DoxyCodeLine{11233     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}((v << 1) \string^ (v >> ((\textcolor{keyword}{sizeof}(v) * 8) -\/ 1)));}
+\DoxyCodeLine{11234 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a2a630307eb83d83e850ab146745e97eb}\label{classcluon_1_1ToProtoVisitor_a2a630307eb83d83e850ab146745e97eb}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!toZigZag64@{toZigZag64}}
+\index{toZigZag64@{toZigZag64}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{toZigZag64()}{toZigZag64()}}
+{\footnotesize\ttfamily uint64\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::to\+Zig\+Zag64 (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11236                                                              \{}
+\DoxyCodeLine{11237     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}uint64\_t\textcolor{keyword}{>}((v << 1) \string^ (v >> ((\textcolor{keyword}{sizeof}(v) * 8) -\/ 1)));}
+\DoxyCodeLine{11238 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_ae9d1630f38e0c3088f4debd1b2c268cc}\label{classcluon_1_1ToProtoVisitor_ae9d1630f38e0c3088f4debd1b2c268cc}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!toZigZag8@{toZigZag8}}
+\index{toZigZag8@{toZigZag8}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{toZigZag8()}{toZigZag8()}}
+{\footnotesize\ttfamily uint8\+\_\+t cluon\+::\+To\+Proto\+Visitor\+::to\+Zig\+Zag8 (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11224                                                           \{}
+\DoxyCodeLine{11225     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}((v << 1) \string^ (v >> ((\textcolor{keyword}{sizeof}(v) * 8) -\/ 1)));}
+\DoxyCodeLine{11226 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_ac7f4b4576cdd6356892da79ada853604}\label{classcluon_1_1ToProtoVisitor_ac7f4b4576cdd6356892da79ada853604}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/14]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \&}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6815                                                                                         \{}
+\DoxyCodeLine{6816         (void)typeName;}
+\DoxyCodeLine{6817         (void)name;}
+\DoxyCodeLine{6818 }
+\DoxyCodeLine{6819         \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}{m\_buffer}}, std::move(\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a75b3ce4de31de889c92c901c57bac662}{encodeKey}}(\textcolor{keywordtype}{id}, \textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(\mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3ae531c39d69190463103ef1bba9085614}{ProtoConstants::LENGTH\_DELIMITED}}))));}
+\DoxyCodeLine{6820         \mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{cluon::ToProtoVisitor}} nestedProtoEncoder;}
+\DoxyCodeLine{6821         value.accept(nestedProtoEncoder);}
+\DoxyCodeLine{6822         \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a6cd37824680b0d55db21f414ae6a525a}{encode}}(\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}{m\_buffer}}, std::move(nestedProtoEncoder.\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a20841380c5c8e865f30f92d164477e81}{encodedData}}()));}
+\DoxyCodeLine{6823     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a20841380c5c8e865f30f92d164477e81}{encoded\+Data()}}, and \mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3ae531c39d69190463103ef1bba9085614}{cluon\+::\+LENGTH\+\_\+\+DELIMITED}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a97e4a581c7f0094008f3438ce92f9e79}\label{classcluon_1_1ToProtoVisitor_a97e4a581c7f0094008f3438ce92f9e79}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{bool \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11068                                                                                                        \{}
+\DoxyCodeLine{11069     (void)typeName;}
+\DoxyCodeLine{11070     (void)name;}
+\DoxyCodeLine{11071     toKeyValue<bool>(\textcolor{keywordtype}{id}, v);}
+\DoxyCodeLine{11072 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_af16fd5255910120c80fd0facefa80e7e}\label{classcluon_1_1ToProtoVisitor_af16fd5255910120c80fd0facefa80e7e}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{char \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11074                                                                                                        \{}
+\DoxyCodeLine{11075     (void)typeName;}
+\DoxyCodeLine{11076     (void)name;}
+\DoxyCodeLine{11077     uint8\_t \_v = \textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(v); \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{11078     toKeyValue<uint8\_t>(\textcolor{keywordtype}{id}, \_v);}
+\DoxyCodeLine{11079 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a725a4dc537658cc149bc07f8041ec88b}\label{classcluon_1_1ToProtoVisitor_a725a4dc537658cc149bc07f8041ec88b}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{double \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11137                                                                                                          \{}
+\DoxyCodeLine{11138     (void)typeName;}
+\DoxyCodeLine{11139     (void)name;}
+\DoxyCodeLine{11140     uint64\_t key = \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a75b3ce4de31de889c92c901c57bac662}{encodeKey}}(\textcolor{keywordtype}{id}, \textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(\mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3af0a9f7a988579d6eb0c767da729e578c}{ProtoConstants::EIGHT\_BYTES}}));}
+\DoxyCodeLine{11141     \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}{m\_buffer}}, key);}
+\DoxyCodeLine{11142     \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a6cd37824680b0d55db21f414ae6a525a}{encode}}(\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}{m\_buffer}}, v);}
+\DoxyCodeLine{11143 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3af0a9f7a988579d6eb0c767da729e578c}{cluon\+::\+EIGHT\+\_\+\+BYTES}}.
+
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_ade5fb9a0b59a4444766009a216fca863}\label{classcluon_1_1ToProtoVisitor_ade5fb9a0b59a4444766009a216fca863}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [5/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{float \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11129                                                                                                         \{}
+\DoxyCodeLine{11130     (void)typeName;}
+\DoxyCodeLine{11131     (void)name;}
+\DoxyCodeLine{11132     uint64\_t key = \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a75b3ce4de31de889c92c901c57bac662}{encodeKey}}(\textcolor{keywordtype}{id}, \textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(\mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3aece10bb19544946080220406b51cd56b}{ProtoConstants::FOUR\_BYTES}}));}
+\DoxyCodeLine{11133     \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}{m\_buffer}}, key);}
+\DoxyCodeLine{11134     \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a6cd37824680b0d55db21f414ae6a525a}{encode}}(\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}{m\_buffer}}, v);}
+\DoxyCodeLine{11135 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3aece10bb19544946080220406b51cd56b}{cluon\+::\+FOUR\+\_\+\+BYTES}}.
+
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a041a15f8bc5c265c3272c60c7c68b2e6}\label{classcluon_1_1ToProtoVisitor_a041a15f8bc5c265c3272c60c7c68b2e6}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [6/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int16\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11093                                                                                                           \{}
+\DoxyCodeLine{11094     (void)typeName;}
+\DoxyCodeLine{11095     (void)name;}
+\DoxyCodeLine{11096     toKeyValue<int16\_t>(\textcolor{keywordtype}{id}, v);}
+\DoxyCodeLine{11097 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_aa52da3da32cf691e0e7c38cccf66a615}\label{classcluon_1_1ToProtoVisitor_aa52da3da32cf691e0e7c38cccf66a615}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [7/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11105                                                                                                           \{}
+\DoxyCodeLine{11106     (void)typeName;}
+\DoxyCodeLine{11107     (void)name;}
+\DoxyCodeLine{11108     toKeyValue<int32\_t>(\textcolor{keywordtype}{id}, v);}
+\DoxyCodeLine{11109 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a73170664d19586e419b65d22b7d6f3fc}\label{classcluon_1_1ToProtoVisitor_a73170664d19586e419b65d22b7d6f3fc}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [8/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int64\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11117                                                                                                           \{}
+\DoxyCodeLine{11118     (void)typeName;}
+\DoxyCodeLine{11119     (void)name;}
+\DoxyCodeLine{11120     toKeyValue<int64\_t>(\textcolor{keywordtype}{id}, v);}
+\DoxyCodeLine{11121 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_ac61f3efb63bba7bff5d89a991d5096a0}\label{classcluon_1_1ToProtoVisitor_ac61f3efb63bba7bff5d89a991d5096a0}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [9/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11081                                                                                                          \{}
+\DoxyCodeLine{11082     (void)typeName;}
+\DoxyCodeLine{11083     (void)name;}
+\DoxyCodeLine{11084     toKeyValue<int8\_t>(\textcolor{keywordtype}{id}, v);}
+\DoxyCodeLine{11085 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_af8c7671e5bc6f711cd3f24ecce5e4275}\label{classcluon_1_1ToProtoVisitor_af8c7671e5bc6f711cd3f24ecce5e4275}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [10/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11145                                                                                                             \{}
+\DoxyCodeLine{11146     (void)typeName;}
+\DoxyCodeLine{11147     (void)name;}
+\DoxyCodeLine{11148     uint64\_t key = \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a75b3ce4de31de889c92c901c57bac662}{encodeKey}}(\textcolor{keywordtype}{id}, \textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(\mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3ae531c39d69190463103ef1bba9085614}{ProtoConstants::LENGTH\_DELIMITED}}));}
+\DoxyCodeLine{11149     \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a581e4b399b1c678db4b12abfd7c50465}{toVarInt}}(\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}{m\_buffer}}, key);}
+\DoxyCodeLine{11150     \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a6cd37824680b0d55db21f414ae6a525a}{encode}}(\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}{m\_buffer}}, v);}
+\DoxyCodeLine{11151 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3ae531c39d69190463103ef1bba9085614}{cluon\+::\+LENGTH\+\_\+\+DELIMITED}}.
+
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_aac40ee1f312ee7db7981e6fb35b95c3b}\label{classcluon_1_1ToProtoVisitor_aac40ee1f312ee7db7981e6fb35b95c3b}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [11/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint16\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11099                                                                                                            \{}
+\DoxyCodeLine{11100     (void)typeName;}
+\DoxyCodeLine{11101     (void)name;}
+\DoxyCodeLine{11102     toKeyValue<uint16\_t>(\textcolor{keywordtype}{id}, v);}
+\DoxyCodeLine{11103 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_ac982a83924d53161b4f480538b0e143f}\label{classcluon_1_1ToProtoVisitor_ac982a83924d53161b4f480538b0e143f}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [12/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11111                                                                                                            \{}
+\DoxyCodeLine{11112     (void)typeName;}
+\DoxyCodeLine{11113     (void)name;}
+\DoxyCodeLine{11114     toKeyValue<uint32\_t>(\textcolor{keywordtype}{id}, v);}
+\DoxyCodeLine{11115 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_a929113744aefa3739dd4354a9e28666a}\label{classcluon_1_1ToProtoVisitor_a929113744aefa3739dd4354a9e28666a}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [13/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint64\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11123                                                                                                            \{}
+\DoxyCodeLine{11124     (void)typeName;}
+\DoxyCodeLine{11125     (void)name;}
+\DoxyCodeLine{11126     toKeyValue<uint64\_t>(\textcolor{keywordtype}{id}, v);}
+\DoxyCodeLine{11127 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_ae6c94a1ced19230bdd7c2b18059bfdd5}\label{classcluon_1_1ToProtoVisitor_ae6c94a1ced19230bdd7c2b18059bfdd5}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [14/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+Proto\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11087                                                                                                           \{}
+\DoxyCodeLine{11088     (void)typeName;}
+\DoxyCodeLine{11089     (void)name;}
+\DoxyCodeLine{11090     toKeyValue<uint8\_t>(\textcolor{keywordtype}{id}, v);}
+\DoxyCodeLine{11091 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}\label{classcluon_1_1ToProtoVisitor_adb72bae93276a3ad1a65cb3e3a9a96fc}} 
+\index{cluon::ToProtoVisitor@{cluon::ToProtoVisitor}!m\_buffer@{m\_buffer}}
+\index{m\_buffer@{m\_buffer}!cluon::ToProtoVisitor@{cluon::ToProtoVisitor}}
+\doxysubsubsection{\texorpdfstring{m\_buffer}{m\_buffer}}
+{\footnotesize\ttfamily std\+::stringstream cluon\+::\+To\+Proto\+Visitor\+::m\+\_\+buffer \{\char`\"{}\char`\"{}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a20841380c5c8e865f30f92d164477e81}{encoded\+Data()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

@@ -1,6 +1,6 @@
 SHELL := /usr/bin/env bash
 
-all: build lint doc
+all: build lint doc clean
 
 build:
 	@echo Building
@@ -20,5 +20,14 @@ doc:
 	@echo Generate Documentation
 	rm -rf docs
 	doxygen
+
+clean:
+	@echo Cleaning up the project :D
+	rm -rf build
+	rm -rf public
+
+secret:
+	@echo Secret
+	echo "Secret command :D"
 
 .PHONY: all build lint doc

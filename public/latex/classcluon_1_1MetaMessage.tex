@@ -1,0 +1,393 @@
+\hypertarget{classcluon_1_1MetaMessage}{}\doxysection{cluon\+::Meta\+Message Class Reference}
+\label{classcluon_1_1MetaMessage}\index{cluon::MetaMessage@{cluon::MetaMessage}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for cluon\+::Meta\+Message\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField}{Meta\+Field}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1MetaMessage_a1d44f90b65777497b71f06d0f622de33}{Meta\+Message}} () noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1MetaMessage_a89791c2e1d4a3efeafb331b6d151aa06}{Meta\+Message}} (const \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1MetaMessage_a8f68803c089df0b798fa1c8234b37e59}{Meta\+Message}} (\mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \&\&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \& \mbox{\hyperlink{classcluon_1_1MetaMessage_ae9447fee11cd755b258ba768cd6eed88}{operator=}} (const \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \& \mbox{\hyperlink{classcluon_1_1MetaMessage_a5e9982951de85233bc0f557ce4f2595d}{operator=}} (\mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \&\&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \& \mbox{\hyperlink{classcluon_1_1MetaMessage_acbbeec104676e02af5d82bbd2943e3db}{add}} (\mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField}{Meta\+Field}} \&\&\mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}}) noexcept
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField}{Meta\+Field}} $>$ \& \mbox{\hyperlink{classcluon_1_1MetaMessage_a467f2abd1fc7b3fe5ace1725ef146b8b}{list\+Of\+Meta\+Fields}} () const noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1MetaMessage_ae7f73c23dc09d9c5bba6c471221d8db0}{accept}} (const std\+::function$<$ void(const \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \&)$>$ \&visit)
+\item 
+std\+::string \mbox{\hyperlink{classcluon_1_1MetaMessage_a34fff8503321e4308a8bf1fc14dcca83}{package\+Name}} () const noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \& \mbox{\hyperlink{classcluon_1_1MetaMessage_a3a3aa3f7504e9317ba3b5d0fb432df62}{package\+Name}} (const std\+::string \&v) noexcept
+\item 
+std\+::string \mbox{\hyperlink{classcluon_1_1MetaMessage_ab9872e0f141089b30d4dcc0b67232336}{message\+Name}} () const noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \& \mbox{\hyperlink{classcluon_1_1MetaMessage_a353d53151a59cb025ec75494140319e6}{message\+Name}} (const std\+::string \&v) noexcept
+\item 
+int32\+\_\+t \mbox{\hyperlink{classcluon_1_1MetaMessage_a5457e4f86695b8704f7494ca57e99603}{message\+Identifier}} () const noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \& \mbox{\hyperlink{classcluon_1_1MetaMessage_aea5817859e5d6bef394cabeef4be6ec0}{message\+Identifier}} (int32\+\_\+t v) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classcluon_1_1MetaMessage_a105066f105344864e2db9b22bf7b9cb8}{m\+\_\+package\+Name}} \{\char`\"{}\char`\"{}\}
+\item 
+std\+::string \mbox{\hyperlink{classcluon_1_1MetaMessage_aab25668420104a5a3d675cd9c8c00852}{m\+\_\+message\+Name}} \{\char`\"{}\char`\"{}\}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classcluon_1_1MetaMessage_ab1ddfda727bb683ef2329e40157180ee}{m\+\_\+message\+Identifier}} \{0\}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField}{Meta\+Field}} $>$ \mbox{\hyperlink{classcluon_1_1MetaMessage_a2c61aaeed2883c1165b4f8df32ad7ead}{m\+\_\+list\+Of\+Meta\+Fields}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class provides a generic description for a message. It is internally used during the processing of message specifications to generate targets like C++ or .proto files. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_a1d44f90b65777497b71f06d0f622de33}\label{classcluon_1_1MetaMessage_a1d44f90b65777497b71f06d0f622de33}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!MetaMessage@{MetaMessage}}
+\index{MetaMessage@{MetaMessage}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{MetaMessage()}{MetaMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily cluon\+::\+Meta\+Message\+::\+Meta\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9507 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_a89791c2e1d4a3efeafb331b6d151aa06}\label{classcluon_1_1MetaMessage_a89791c2e1d4a3efeafb331b6d151aa06}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!MetaMessage@{MetaMessage}}
+\index{MetaMessage@{MetaMessage}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{MetaMessage()}{MetaMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily cluon\+::\+Meta\+Message\+::\+Meta\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_a8f68803c089df0b798fa1c8234b37e59}\label{classcluon_1_1MetaMessage_a8f68803c089df0b798fa1c8234b37e59}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!MetaMessage@{MetaMessage}}
+\index{MetaMessage@{MetaMessage}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{MetaMessage()}{MetaMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily cluon\+::\+Meta\+Message\+::\+Meta\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_ae7f73c23dc09d9c5bba6c471221d8db0}\label{classcluon_1_1MetaMessage_ae7f73c23dc09d9c5bba6c471221d8db0}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!accept@{accept}}
+\index{accept@{accept}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void cluon\+::\+Meta\+Message\+::accept (\begin{DoxyParamCaption}\item[{const std\+::function$<$ void(const \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \&)$>$ \&}]{visit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method can be used to visit this instance and propagate information details about the contained fields.
+
+
+\begin{DoxyParams}{Parameters}
+{\em visit} & std\+::function object to be called to visit this \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9545                                                                                    \{}
+\DoxyCodeLine{9546     visit(*\textcolor{keyword}{this});}
+\DoxyCodeLine{9547 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_acbbeec104676e02af5d82bbd2943e3db}\label{classcluon_1_1MetaMessage_acbbeec104676e02af5d82bbd2943e3db}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!add@{add}}
+\index{add@{add}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \& cluon\+::\+Meta\+Message\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField}{Meta\+Message\+::\+Meta\+Field}} \&\&}]{mf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+This method adds a metafield to this meta message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mf} & Meta field to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to this instance. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9536                                                                        \{}
+\DoxyCodeLine{9537     \mbox{\hyperlink{classcluon_1_1MetaMessage_a2c61aaeed2883c1165b4f8df32ad7ead}{m\_listOfMetaFields}}.emplace\_back(std::move(\mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}}));}
+\DoxyCodeLine{9538     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{9539 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1MetaMessage_a2c61aaeed2883c1165b4f8df32ad7ead}{m\+\_\+list\+Of\+Meta\+Fields}}, and \mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_1_1GenericMessageVisitor_a789540328901fe0a40e055d4136cdfff}{cluon\+::\+Generic\+Message\+::\+Generic\+Message\+Visitor\+::visit()}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_a467f2abd1fc7b3fe5ace1725ef146b8b}\label{classcluon_1_1MetaMessage_a467f2abd1fc7b3fe5ace1725ef146b8b}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!listOfMetaFields@{listOfMetaFields}}
+\index{listOfMetaFields@{listOfMetaFields}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{listOfMetaFields()}{listOfMetaFields()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField}{Meta\+Message\+::\+Meta\+Field}} $>$ \& cluon\+::\+Meta\+Message\+::list\+Of\+Meta\+Fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+This method returns a vector of current meta fields.
+
+\begin{DoxyReturn}{Returns}
+Meta fields from this meta message. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9541                                                                                            \{}
+\DoxyCodeLine{9542     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1MetaMessage_a2c61aaeed2883c1165b4f8df32ad7ead}{m\_listOfMetaFields}};}
+\DoxyCodeLine{9543 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1MetaMessage_a2c61aaeed2883c1165b4f8df32ad7ead}{m\+\_\+list\+Of\+Meta\+Fields}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_a261bd0896ad80644d6718697cd70669c}{cluon\+::\+Generic\+Message\+::create\+From()}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_a5457e4f86695b8704f7494ca57e99603}\label{classcluon_1_1MetaMessage_a5457e4f86695b8704f7494ca57e99603}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!messageIdentifier@{messageIdentifier}}
+\index{messageIdentifier@{messageIdentifier}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{messageIdentifier()}{messageIdentifier()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int32\+\_\+t cluon\+::\+Meta\+Message\+::message\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Message identifier. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9527                                                              \{}
+\DoxyCodeLine{9528     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1MetaMessage_ab1ddfda727bb683ef2329e40157180ee}{m\_messageIdentifier}};}
+\DoxyCodeLine{9529 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1MetaMessage_ab1ddfda727bb683ef2329e40157180ee}{m\+\_\+message\+Identifier}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_a70d3eae04b7cebae85b770c2dc850df2}{cluon\+::\+Generic\+Message\+::\+ID()}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_aea5817859e5d6bef394cabeef4be6ec0}\label{classcluon_1_1MetaMessage_aea5817859e5d6bef394cabeef4be6ec0}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!messageIdentifier@{messageIdentifier}}
+\index{messageIdentifier@{messageIdentifier}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{messageIdentifier()}{messageIdentifier()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \& cluon\+::\+Meta\+Message\+::message\+Identifier (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+This method sets the message identifier.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Message identifier for this message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to this instance. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9531                                                                      \{}
+\DoxyCodeLine{9532     \mbox{\hyperlink{classcluon_1_1MetaMessage_ab1ddfda727bb683ef2329e40157180ee}{m\_messageIdentifier}} = v;}
+\DoxyCodeLine{9533     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{9534 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1MetaMessage_ab1ddfda727bb683ef2329e40157180ee}{m\+\_\+message\+Identifier}}.
+
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_ab9872e0f141089b30d4dcc0b67232336}\label{classcluon_1_1MetaMessage_ab9872e0f141089b30d4dcc0b67232336}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!messageName@{messageName}}
+\index{messageName@{messageName}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{messageName()}{messageName()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string cluon\+::\+Meta\+Message\+::message\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Message name. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9513                                                          \{}
+\DoxyCodeLine{9514     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1MetaMessage_aab25668420104a5a3d675cd9c8c00852}{m\_messageName}};}
+\DoxyCodeLine{9515 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1MetaMessage_aab25668420104a5a3d675cd9c8c00852}{m\+\_\+message\+Name}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_a261bd0896ad80644d6718697cd70669c}{cluon\+::\+Generic\+Message\+::create\+From()}}, and \mbox{\hyperlink{classcluon_1_1GenericMessage_ad4e19890e7f752d11bf513c71d05a1ba}{cluon\+::\+Generic\+Message\+::\+Long\+Name()}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_a353d53151a59cb025ec75494140319e6}\label{classcluon_1_1MetaMessage_a353d53151a59cb025ec75494140319e6}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!messageName@{messageName}}
+\index{messageName@{messageName}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{messageName()}{messageName()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \& cluon\+::\+Meta\+Message\+::message\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+This method sets the message name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Message name for this message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to this instance. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9522                                                                         \{}
+\DoxyCodeLine{9523     \mbox{\hyperlink{classcluon_1_1MetaMessage_aab25668420104a5a3d675cd9c8c00852}{m\_messageName}} = v;}
+\DoxyCodeLine{9524     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{9525 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1MetaMessage_aab25668420104a5a3d675cd9c8c00852}{m\+\_\+message\+Name}}.
+
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_ae9447fee11cd755b258ba768cd6eed88}\label{classcluon_1_1MetaMessage_ae9447fee11cd755b258ba768cd6eed88}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \& cluon\+::\+Meta\+Message\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_a5e9982951de85233bc0f557ce4f2595d}\label{classcluon_1_1MetaMessage_a5e9982951de85233bc0f557ce4f2595d}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \& cluon\+::\+Meta\+Message\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_a34fff8503321e4308a8bf1fc14dcca83}\label{classcluon_1_1MetaMessage_a34fff8503321e4308a8bf1fc14dcca83}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!packageName@{packageName}}
+\index{packageName@{packageName}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{packageName()}{packageName()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string cluon\+::\+Meta\+Message\+::package\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Package name. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9509                                                          \{}
+\DoxyCodeLine{9510     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1MetaMessage_a105066f105344864e2db9b22bf7b9cb8}{m\_packageName}};}
+\DoxyCodeLine{9511 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1MetaMessage_a105066f105344864e2db9b22bf7b9cb8}{m\+\_\+package\+Name}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_ad4e19890e7f752d11bf513c71d05a1ba}{cluon\+::\+Generic\+Message\+::\+Long\+Name()}}.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_a3a3aa3f7504e9317ba3b5d0fb432df62}\label{classcluon_1_1MetaMessage_a3a3aa3f7504e9317ba3b5d0fb432df62}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!packageName@{packageName}}
+\index{packageName@{packageName}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{packageName()}{packageName()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \& cluon\+::\+Meta\+Message\+::package\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+This method sets the package name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Package name for this message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to this instance. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9517                                                                         \{}
+\DoxyCodeLine{9518     \mbox{\hyperlink{classcluon_1_1MetaMessage_a105066f105344864e2db9b22bf7b9cb8}{m\_packageName}} = v;}
+\DoxyCodeLine{9519     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{9520 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1MetaMessage_a105066f105344864e2db9b22bf7b9cb8}{m\+\_\+package\+Name}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_a2c61aaeed2883c1165b4f8df32ad7ead}\label{classcluon_1_1MetaMessage_a2c61aaeed2883c1165b4f8df32ad7ead}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!m\_listOfMetaFields@{m\_listOfMetaFields}}
+\index{m\_listOfMetaFields@{m\_listOfMetaFields}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{m\_listOfMetaFields}{m\_listOfMetaFields}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField}{Meta\+Field}}$>$ cluon\+::\+Meta\+Message\+::m\+\_\+list\+Of\+Meta\+Fields \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1MetaMessage_acbbeec104676e02af5d82bbd2943e3db}{add()}}, and \mbox{\hyperlink{classcluon_1_1MetaMessage_a467f2abd1fc7b3fe5ace1725ef146b8b}{list\+Of\+Meta\+Fields()}}.
+
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_ab1ddfda727bb683ef2329e40157180ee}\label{classcluon_1_1MetaMessage_ab1ddfda727bb683ef2329e40157180ee}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!m\_messageIdentifier@{m\_messageIdentifier}}
+\index{m\_messageIdentifier@{m\_messageIdentifier}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{m\_messageIdentifier}{m\_messageIdentifier}}
+{\footnotesize\ttfamily int32\+\_\+t cluon\+::\+Meta\+Message\+::m\+\_\+message\+Identifier \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1MetaMessage_a5457e4f86695b8704f7494ca57e99603}{message\+Identifier()}}.
+
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_aab25668420104a5a3d675cd9c8c00852}\label{classcluon_1_1MetaMessage_aab25668420104a5a3d675cd9c8c00852}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!m\_messageName@{m\_messageName}}
+\index{m\_messageName@{m\_messageName}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{m\_messageName}{m\_messageName}}
+{\footnotesize\ttfamily std\+::string cluon\+::\+Meta\+Message\+::m\+\_\+message\+Name \{\char`\"{}\char`\"{}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1MetaMessage_ab9872e0f141089b30d4dcc0b67232336}{message\+Name()}}.
+
+\mbox{\Hypertarget{classcluon_1_1MetaMessage_a105066f105344864e2db9b22bf7b9cb8}\label{classcluon_1_1MetaMessage_a105066f105344864e2db9b22bf7b9cb8}} 
+\index{cluon::MetaMessage@{cluon::MetaMessage}!m\_packageName@{m\_packageName}}
+\index{m\_packageName@{m\_packageName}!cluon::MetaMessage@{cluon::MetaMessage}}
+\doxysubsubsection{\texorpdfstring{m\_packageName}{m\_packageName}}
+{\footnotesize\ttfamily std\+::string cluon\+::\+Meta\+Message\+::m\+\_\+package\+Name \{\char`\"{}\char`\"{}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1MetaMessage_a34fff8503321e4308a8bf1fc14dcca83}{package\+Name()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

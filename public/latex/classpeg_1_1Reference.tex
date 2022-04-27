@@ -1,0 +1,223 @@
+\hypertarget{classpeg_1_1Reference}{}\doxysection{peg\+::Reference Class Reference}
+\label{classpeg_1_1Reference}\index{peg::Reference@{peg::Reference}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Inheritance diagram for peg\+::Reference\+:
+% FIG 0
+
+
+Collaboration diagram for peg\+::Reference\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpeg_1_1Reference_aff84855759cdfac0c38e7641d6cfa84a}{Reference}} (const \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} \&grammar, const std\+::string \&name, const char $\ast$s, bool is\+\_\+macro, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ $>$ \&args)
+\item 
+size\+\_\+t \mbox{\hyperlink{classpeg_1_1Reference_a07e8337bc334a005ffbd1e044c59ab23}{parse}} (const char $\ast$s, size\+\_\+t n, \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1Context}{Context}} \&c, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt) const override
+\item 
+void \mbox{\hyperlink{classpeg_1_1Reference_a99bf2797d01549345af1dbbbd6ca6f77}{accept}} (\mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor}{Visitor}} \&v) override
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ \mbox{\hyperlink{classpeg_1_1Reference_a46c580e82e2c69090811126fff8834c6}{get\+\_\+core\+\_\+operator}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} \& \mbox{\hyperlink{classpeg_1_1Reference_ae3ebff70997b36e0d877b38d86b3af63}{grammar\+\_\+}}
+\item 
+const std\+::string \mbox{\hyperlink{classpeg_1_1Reference_a03403b774fb8cc24850061f5f43597a3}{name\+\_\+}}
+\item 
+const char $\ast$ \mbox{\hyperlink{classpeg_1_1Reference_a964de977c1b363e6a93173ae734e602f}{s\+\_\+}}
+\item 
+const bool \mbox{\hyperlink{classpeg_1_1Reference_abf8d4719eb04e81fb5619db6e1bc646c}{is\+\_\+macro\+\_\+}}
+\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ $>$ \mbox{\hyperlink{classpeg_1_1Reference_ac39926abb36e9701e2bf0fafc2cac7f2}{args\+\_\+}}
+\item 
+\mbox{\hyperlink{classpeg_1_1Definition}{Definition}} $\ast$ \mbox{\hyperlink{classpeg_1_1Reference_a16664b1efba080f60f23c413b3197f54}{rule\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classpeg_1_1Reference_acab88ab031c4adde748ab6289d791ab0}{iarg\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpeg_1_1Reference_aff84855759cdfac0c38e7641d6cfa84a}\label{classpeg_1_1Reference_aff84855759cdfac0c38e7641d6cfa84a}} 
+\index{peg::Reference@{peg::Reference}!Reference@{Reference}}
+\index{Reference@{Reference}!peg::Reference@{peg::Reference}}
+\doxysubsubsection{\texorpdfstring{Reference()}{Reference()}}
+{\footnotesize\ttfamily peg\+::\+Reference\+::\+Reference (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} \&}]{grammar,  }\item[{const std\+::string \&}]{name,  }\item[{const char $\ast$}]{s,  }\item[{bool}]{is\+\_\+macro,  }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1982         : \mbox{\hyperlink{classpeg_1_1Reference_ae3ebff70997b36e0d877b38d86b3af63}{grammar\_}}(grammar)}
+\DoxyCodeLine{1983         , \mbox{\hyperlink{classpeg_1_1Reference_a03403b774fb8cc24850061f5f43597a3}{name\_}}(name)}
+\DoxyCodeLine{1984         , \mbox{\hyperlink{classpeg_1_1Reference_a964de977c1b363e6a93173ae734e602f}{s\_}}(s)}
+\DoxyCodeLine{1985         , \mbox{\hyperlink{classpeg_1_1Reference_abf8d4719eb04e81fb5619db6e1bc646c}{is\_macro\_}}(is\_macro)}
+\DoxyCodeLine{1986         , \mbox{\hyperlink{classpeg_1_1Reference_ac39926abb36e9701e2bf0fafc2cac7f2}{args\_}}(args)}
+\DoxyCodeLine{1987         , \mbox{\hyperlink{classpeg_1_1Reference_a16664b1efba080f60f23c413b3197f54}{rule\_}}(\textcolor{keyword}{nullptr})}
+\DoxyCodeLine{1988         , \mbox{\hyperlink{classpeg_1_1Reference_acab88ab031c4adde748ab6289d791ab0}{iarg\_}}(0)}
+\DoxyCodeLine{1989         \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpeg_1_1Reference_a99bf2797d01549345af1dbbbd6ca6f77}\label{classpeg_1_1Reference_a99bf2797d01549345af1dbbbd6ca6f77}} 
+\index{peg::Reference@{peg::Reference}!accept@{accept}}
+\index{accept@{accept}!peg::Reference@{peg::Reference}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void peg\+::\+Reference\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor}{Visitor}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpeg_1_1Ope_af57615cfe8938c0f4c9a0dd6df9da560}{peg\+::\+Ope}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2877 \{ v.visit(*\textcolor{keyword}{this}); \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor_ade8440f9ed92da93693329208ba10381}{peg\+::\+Ope\+::\+Visitor\+::visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classpeg_1_1Reference_a46c580e82e2c69090811126fff8834c6}\label{classpeg_1_1Reference_a46c580e82e2c69090811126fff8834c6}} 
+\index{peg::Reference@{peg::Reference}!get\_core\_operator@{get\_core\_operator}}
+\index{get\_core\_operator@{get\_core\_operator}!peg::Reference@{peg::Reference}}
+\doxysubsubsection{\texorpdfstring{get\_core\_operator()}{get\_core\_operator()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ peg\+::\+Reference\+::get\+\_\+core\+\_\+operator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2839                                                              \{}
+\DoxyCodeLine{2840     \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1Reference_a16664b1efba080f60f23c413b3197f54}{rule\_}}-\/>\mbox{\hyperlink{classpeg_1_1Definition_adfc48dc9cdb762169ab2c42f8f34d494}{holder\_}};}
+\DoxyCodeLine{2841 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Reference_a07e8337bc334a005ffbd1e044c59ab23}\label{classpeg_1_1Reference_a07e8337bc334a005ffbd1e044c59ab23}} 
+\index{peg::Reference@{peg::Reference}!parse@{parse}}
+\index{parse@{parse}!peg::Reference@{peg::Reference}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily size\+\_\+t peg\+::\+Reference\+::parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&}]{sv,  }\item[{\mbox{\hyperlink{classpeg_1_1Context}{Context}} \&}]{c,  }\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{dt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpeg_1_1Ope_a431b9481130d91a0d51e97cffd8ace80}{peg\+::\+Ope}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2809                                                                             \{}
+\DoxyCodeLine{2810     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1Reference_a16664b1efba080f60f23c413b3197f54}{rule\_}}) \{}
+\DoxyCodeLine{2811         \textcolor{comment}{// Reference rule}}
+\DoxyCodeLine{2812         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1Reference_a16664b1efba080f60f23c413b3197f54}{rule\_}}-\/>\mbox{\hyperlink{classpeg_1_1Definition_a02e53a5eb79f60733965bcb2c2599580}{is\_macro}}) \{}
+\DoxyCodeLine{2813             \textcolor{comment}{// Macro}}
+\DoxyCodeLine{2814             FindReference vis(c.top\_args(), \mbox{\hyperlink{classpeg_1_1Reference_a16664b1efba080f60f23c413b3197f54}{rule\_}}-\/>\mbox{\hyperlink{classpeg_1_1Definition_a25831431faa29fdd2cef23bb04453bae}{params}});}
+\DoxyCodeLine{2815 }
+\DoxyCodeLine{2816             \textcolor{comment}{// Collect arguments}}
+\DoxyCodeLine{2817             std::vector<std::shared\_ptr<Ope>> args;}
+\DoxyCodeLine{2818             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} arg: \mbox{\hyperlink{classpeg_1_1Reference_ac39926abb36e9701e2bf0fafc2cac7f2}{args\_}}) \{}
+\DoxyCodeLine{2819                 arg-\/>accept(vis);}
+\DoxyCodeLine{2820                 args.push\_back(vis.found\_ope);}
+\DoxyCodeLine{2821             \}}
+\DoxyCodeLine{2822 }
+\DoxyCodeLine{2823             c.push\_args(args);}
+\DoxyCodeLine{2824             \textcolor{keyword}{auto} se = \mbox{\hyperlink{namespacepeg_ac2158f086910efbd32f003dbb2ea3e65}{make\_scope\_exit}}([\&]() \{ c.pop\_args(); \});}
+\DoxyCodeLine{2825             \textcolor{keyword}{auto} ope = \mbox{\hyperlink{classpeg_1_1Reference_a46c580e82e2c69090811126fff8834c6}{get\_core\_operator}}();}
+\DoxyCodeLine{2826             \textcolor{keywordflow}{return} ope-\/>parse(s, n, sv, c, dt);}
+\DoxyCodeLine{2827         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{2828             \textcolor{comment}{// Definition}}
+\DoxyCodeLine{2829             \textcolor{keyword}{auto} ope = \mbox{\hyperlink{classpeg_1_1Reference_a46c580e82e2c69090811126fff8834c6}{get\_core\_operator}}();}
+\DoxyCodeLine{2830             \textcolor{keywordflow}{return} ope-\/>parse(s, n, sv, c, dt);}
+\DoxyCodeLine{2831         \}}
+\DoxyCodeLine{2832     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{2833         \textcolor{comment}{// Reference parameter in macro}}
+\DoxyCodeLine{2834         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& args = c.top\_args();}
+\DoxyCodeLine{2835         \textcolor{keywordflow}{return} args[\mbox{\hyperlink{classpeg_1_1Reference_acab88ab031c4adde748ab6289d791ab0}{iarg\_}}]-\/>parse(s, n, sv, c, dt);}
+\DoxyCodeLine{2836     \}}
+\DoxyCodeLine{2837 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structpeg_1_1FindReference_a9338346dd3fd4636a3b21d09b4074884}{peg\+::\+Find\+Reference\+::found\+\_\+ope}}, \mbox{\hyperlink{namespacepeg_ac2158f086910efbd32f003dbb2ea3e65}{peg\+::make\+\_\+scope\+\_\+exit()}}, \mbox{\hyperlink{classpeg_1_1Context_aa6bb839d0f72c434bf79006a0d375374}{peg\+::\+Context\+::pop\+\_\+args()}}, \mbox{\hyperlink{classpeg_1_1Context_ac162f8bb86ca5e33d76afc10c2bd274c}{peg\+::\+Context\+::push\+\_\+args()}}, and \mbox{\hyperlink{classpeg_1_1Context_a31cb285b1d929ca774bdebb4c6d1b758}{peg\+::\+Context\+::top\+\_\+args()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpeg_1_1Reference_ac39926abb36e9701e2bf0fafc2cac7f2}\label{classpeg_1_1Reference_ac39926abb36e9701e2bf0fafc2cac7f2}} 
+\index{peg::Reference@{peg::Reference}!args\_@{args\_}}
+\index{args\_@{args\_}!peg::Reference@{peg::Reference}}
+\doxysubsubsection{\texorpdfstring{args\_}{args\_}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classpeg_1_1Ope}{Ope}}$>$ $>$ peg\+::\+Reference\+::args\+\_\+}
+
+
+
+Referenced by \mbox{\hyperlink{structpeg_1_1AssignIDToDefinition_a718fcbe10c49cde9ebf9158e157f38a4}{peg\+::\+Assign\+IDTo\+Definition\+::visit()}}, \mbox{\hyperlink{structpeg_1_1TokenChecker_a236dd74d320c8cdf68c11a86452760f6}{peg\+::\+Token\+Checker\+::visit()}}, \mbox{\hyperlink{structpeg_1_1ReferenceChecker_afc6c8d678c3cdbb3cd4c8f5db5a4fce9}{peg\+::\+Reference\+Checker\+::visit()}}, and \mbox{\hyperlink{structpeg_1_1LinkReferences_ab020f037ba18746d5a557d6ac1177fb1}{peg\+::\+Link\+References\+::visit()}}.
+
+\mbox{\Hypertarget{classpeg_1_1Reference_ae3ebff70997b36e0d877b38d86b3af63}\label{classpeg_1_1Reference_ae3ebff70997b36e0d877b38d86b3af63}} 
+\index{peg::Reference@{peg::Reference}!grammar\_@{grammar\_}}
+\index{grammar\_@{grammar\_}!peg::Reference@{peg::Reference}}
+\doxysubsubsection{\texorpdfstring{grammar\_}{grammar\_}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}}\& peg\+::\+Reference\+::grammar\+\_\+}
+
+\mbox{\Hypertarget{classpeg_1_1Reference_acab88ab031c4adde748ab6289d791ab0}\label{classpeg_1_1Reference_acab88ab031c4adde748ab6289d791ab0}} 
+\index{peg::Reference@{peg::Reference}!iarg\_@{iarg\_}}
+\index{iarg\_@{iarg\_}!peg::Reference@{peg::Reference}}
+\doxysubsubsection{\texorpdfstring{iarg\_}{iarg\_}}
+{\footnotesize\ttfamily size\+\_\+t peg\+::\+Reference\+::iarg\+\_\+}
+
+
+
+Referenced by \mbox{\hyperlink{structpeg_1_1LinkReferences_ab020f037ba18746d5a557d6ac1177fb1}{peg\+::\+Link\+References\+::visit()}}.
+
+\mbox{\Hypertarget{classpeg_1_1Reference_abf8d4719eb04e81fb5619db6e1bc646c}\label{classpeg_1_1Reference_abf8d4719eb04e81fb5619db6e1bc646c}} 
+\index{peg::Reference@{peg::Reference}!is\_macro\_@{is\_macro\_}}
+\index{is\_macro\_@{is\_macro\_}!peg::Reference@{peg::Reference}}
+\doxysubsubsection{\texorpdfstring{is\_macro\_}{is\_macro\_}}
+{\footnotesize\ttfamily const bool peg\+::\+Reference\+::is\+\_\+macro\+\_\+}
+
+
+
+Referenced by \mbox{\hyperlink{structpeg_1_1TokenChecker_a236dd74d320c8cdf68c11a86452760f6}{peg\+::\+Token\+Checker\+::visit()}}, and \mbox{\hyperlink{structpeg_1_1ReferenceChecker_afc6c8d678c3cdbb3cd4c8f5db5a4fce9}{peg\+::\+Reference\+Checker\+::visit()}}.
+
+\mbox{\Hypertarget{classpeg_1_1Reference_a03403b774fb8cc24850061f5f43597a3}\label{classpeg_1_1Reference_a03403b774fb8cc24850061f5f43597a3}} 
+\index{peg::Reference@{peg::Reference}!name\_@{name\_}}
+\index{name\_@{name\_}!peg::Reference@{peg::Reference}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily const std\+::string peg\+::\+Reference\+::name\+\_\+}
+
+
+
+Referenced by \mbox{\hyperlink{structpeg_1_1DetectLeftRecursion_a0e60758a243fda1fe21448a97f964c2d}{peg\+::\+Detect\+Left\+Recursion\+::visit()}}, \mbox{\hyperlink{structpeg_1_1ReferenceChecker_afc6c8d678c3cdbb3cd4c8f5db5a4fce9}{peg\+::\+Reference\+Checker\+::visit()}}, \mbox{\hyperlink{structpeg_1_1LinkReferences_ab020f037ba18746d5a557d6ac1177fb1}{peg\+::\+Link\+References\+::visit()}}, and \mbox{\hyperlink{structpeg_1_1FindReference_a3d789263d919673418865b9d80968b0d}{peg\+::\+Find\+Reference\+::visit()}}.
+
+\mbox{\Hypertarget{classpeg_1_1Reference_a16664b1efba080f60f23c413b3197f54}\label{classpeg_1_1Reference_a16664b1efba080f60f23c413b3197f54}} 
+\index{peg::Reference@{peg::Reference}!rule\_@{rule\_}}
+\index{rule\_@{rule\_}!peg::Reference@{peg::Reference}}
+\doxysubsubsection{\texorpdfstring{rule\_}{rule\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpeg_1_1Definition}{Definition}}$\ast$ peg\+::\+Reference\+::rule\+\_\+}
+
+
+
+Referenced by \mbox{\hyperlink{structpeg_1_1AssignIDToDefinition_a718fcbe10c49cde9ebf9158e157f38a4}{peg\+::\+Assign\+IDTo\+Definition\+::visit()}}, \mbox{\hyperlink{structpeg_1_1TokenChecker_a236dd74d320c8cdf68c11a86452760f6}{peg\+::\+Token\+Checker\+::visit()}}, \mbox{\hyperlink{structpeg_1_1DetectLeftRecursion_a0e60758a243fda1fe21448a97f964c2d}{peg\+::\+Detect\+Left\+Recursion\+::visit()}}, and \mbox{\hyperlink{structpeg_1_1LinkReferences_ab020f037ba18746d5a557d6ac1177fb1}{peg\+::\+Link\+References\+::visit()}}.
+
+\mbox{\Hypertarget{classpeg_1_1Reference_a964de977c1b363e6a93173ae734e602f}\label{classpeg_1_1Reference_a964de977c1b363e6a93173ae734e602f}} 
+\index{peg::Reference@{peg::Reference}!s\_@{s\_}}
+\index{s\_@{s\_}!peg::Reference@{peg::Reference}}
+\doxysubsubsection{\texorpdfstring{s\_}{s\_}}
+{\footnotesize\ttfamily const char$\ast$ peg\+::\+Reference\+::s\+\_\+}
+
+
+
+Referenced by \mbox{\hyperlink{structpeg_1_1DetectLeftRecursion_a0e60758a243fda1fe21448a97f964c2d}{peg\+::\+Detect\+Left\+Recursion\+::visit()}}, and \mbox{\hyperlink{structpeg_1_1ReferenceChecker_afc6c8d678c3cdbb3cd4c8f5db5a4fce9}{peg\+::\+Reference\+Checker\+::visit()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

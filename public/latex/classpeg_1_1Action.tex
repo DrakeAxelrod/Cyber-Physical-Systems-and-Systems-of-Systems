@@ -1,0 +1,405 @@
+\hypertarget{classpeg_1_1Action}{}\doxysection{peg\+::Action Class Reference}
+\label{classpeg_1_1Action}\index{peg::Action@{peg::Action}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for peg\+::Action\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__csv}{Type\+Adaptor\+\_\+csv}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__csv__dt}{Type\+Adaptor\+\_\+csv\+\_\+dt}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__sv}{Type\+Adaptor\+\_\+sv}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__sv__dt}{Type\+Adaptor\+\_\+sv\+\_\+dt}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpeg_1_1Action_a1960be3a912f0da68ff32f4895a36ea7}{Action}} ()=default
+\item 
+\mbox{\hyperlink{classpeg_1_1Action_ae6842436ac3bfb6db5b2ce09b7ce7f22}{Action}} (const \mbox{\hyperlink{classpeg_1_1Action}{Action}} \&rhs)
+\item 
+{\footnotesize template$<$typename F , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+pointer$<$ F $>$\+::value \&\&!std\+::is\+\_\+same$<$ F, std\+::nullptr\+\_\+t $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a28ed9f19545ca639e925233f20310b30}{Action}} (F fn)
+\item 
+{\footnotesize template$<$typename F , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+pointer$<$ F $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a28ed9f19545ca639e925233f20310b30}{Action}} (F fn)
+\item 
+{\footnotesize template$<$typename F , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ F, std\+::nullptr\+\_\+t $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a202a18508394ae6c25d62b2ec7f2a9c4}{Action}} (F)
+\item 
+{\footnotesize template$<$typename F , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+pointer$<$ F $>$\+::value \&\&!std\+::is\+\_\+same$<$ F, std\+::nullptr\+\_\+t $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ }\\void \mbox{\hyperlink{classpeg_1_1Action_a9073a9d0732845ffa5d79644101b869a}{operator=}} (F fn)
+\item 
+{\footnotesize template$<$typename F , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+pointer$<$ F $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ }\\void \mbox{\hyperlink{classpeg_1_1Action_a9073a9d0732845ffa5d79644101b869a}{operator=}} (F fn)
+\item 
+{\footnotesize template$<$typename F , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ F, std\+::nullptr\+\_\+t $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ }\\void \mbox{\hyperlink{classpeg_1_1Action_a9b30df67c01e86898a40122234caafb6}{operator=}} (F)
+\item 
+\mbox{\hyperlink{classpeg_1_1Action}{Action}} \& \mbox{\hyperlink{classpeg_1_1Action_af688d0eb3181796f6636bfee05e635d5}{operator=}} (const \mbox{\hyperlink{classpeg_1_1Action}{Action}} \&rhs)=default
+\item 
+\mbox{\hyperlink{classpeg_1_1Action_a29c705897216f53e051a4d2ebb8fea3d}{operator bool}} () const
+\item 
+\mbox{\hyperlink{classpeg_1_1any}{any}} \mbox{\hyperlink{classpeg_1_1Action_a1c9a71ebe5c0c5d4a505c6b0f1883e5d}{operator()}} (\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ \mbox{\hyperlink{classpeg_1_1any}{any}}(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt)$>$ \mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename F , typename R $>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} \mbox{\hyperlink{classpeg_1_1Action_a7ba3699a400ee16224a33bf6c2652815}{make\+\_\+adaptor}} (F fn, R(F\+::$\ast$)(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv) const)
+\item 
+{\footnotesize template$<$typename F , typename R $>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} \mbox{\hyperlink{classpeg_1_1Action_a959e4f3b6d8209076138041489faca05}{make\+\_\+adaptor}} (F fn, R(F\+::$\ast$)(const \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv) const)
+\item 
+{\footnotesize template$<$typename F , typename R $>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} \mbox{\hyperlink{classpeg_1_1Action_ada8d2c41530dd8db6d490f5f1bc646d5}{make\+\_\+adaptor}} (F fn, R(F\+::$\ast$)(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv))
+\item 
+{\footnotesize template$<$typename F , typename R $>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} \mbox{\hyperlink{classpeg_1_1Action_a86fb2445b404e4b11dff064fc7f1fa9d}{make\+\_\+adaptor}} (F fn, R(F\+::$\ast$)(const \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv))
+\item 
+{\footnotesize template$<$typename F , typename R $>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} \mbox{\hyperlink{classpeg_1_1Action_a0908ca8b0a16aa691096a754f89476c7}{make\+\_\+adaptor}} (F fn, R($\ast$)(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv))
+\item 
+{\footnotesize template$<$typename F , typename R $>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} \mbox{\hyperlink{classpeg_1_1Action_a1ffafd397ac102a3107a9d1561f5355f}{make\+\_\+adaptor}} (F fn, R($\ast$)(const \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv))
+\item 
+{\footnotesize template$<$typename F , typename R $>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} \mbox{\hyperlink{classpeg_1_1Action_a717c717cf457590802f358e765cdaecd}{make\+\_\+adaptor}} (F fn, R(F\+::$\ast$)(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt) const)
+\item 
+{\footnotesize template$<$typename F , typename R $>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} \mbox{\hyperlink{classpeg_1_1Action_a72c3e82f1bc424a6e0a5171b3ecda2fd}{make\+\_\+adaptor}} (F fn, R(F\+::$\ast$)(const \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt) const)
+\item 
+{\footnotesize template$<$typename F , typename R $>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} \mbox{\hyperlink{classpeg_1_1Action_aee02d61f96e6fb26ed6335bf045ee70f}{make\+\_\+adaptor}} (F fn, R(F\+::$\ast$)(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt))
+\item 
+{\footnotesize template$<$typename F , typename R $>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} \mbox{\hyperlink{classpeg_1_1Action_af844c2379100659ae77b8493eb2456a6}{make\+\_\+adaptor}} (F fn, R(F\+::$\ast$)(const \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt))
+\item 
+{\footnotesize template$<$typename F , typename R $>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} \mbox{\hyperlink{classpeg_1_1Action_ac4e1d2d4fdb4db8b785aefa357824997}{make\+\_\+adaptor}} (F fn, R($\ast$)(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt))
+\item 
+{\footnotesize template$<$typename F , typename R $>$ }\\\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} \mbox{\hyperlink{classpeg_1_1Action_a77501ee44d587d53d73ee538f2b5c365}{make\+\_\+adaptor}} (F fn, R($\ast$)(const \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt))
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} \mbox{\hyperlink{classpeg_1_1Action_ac5e72eb10d9282caba2d61cfbc57fe07}{fn\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}\label{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}} 
+\index{peg::Action@{peg::Action}!Fty@{Fty}}
+\index{Fty@{Fty}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{Fty}{Fty}}
+{\footnotesize\ttfamily typedef std\+::function$<$\mbox{\hyperlink{classpeg_1_1any}{any}} (\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}}\& sv, \mbox{\hyperlink{classpeg_1_1any}{any}}\& dt)$>$ \mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{peg\+::\+Action\+::\+Fty}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpeg_1_1Action_a1960be3a912f0da68ff32f4895a36ea7}\label{classpeg_1_1Action_a1960be3a912f0da68ff32f4895a36ea7}} 
+\index{peg::Action@{peg::Action}!Action@{Action}}
+\index{Action@{Action}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{Action()}{Action()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily peg\+::\+Action\+::\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classpeg_1_1Action_ae6842436ac3bfb6db5b2ce09b7ce7f22}\label{classpeg_1_1Action_ae6842436ac3bfb6db5b2ce09b7ce7f22}} 
+\index{peg::Action@{peg::Action}!Action@{Action}}
+\index{Action@{Action}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{Action()}{Action()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily peg\+::\+Action\+::\+Action (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpeg_1_1Action}{Action}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1084 : \mbox{\hyperlink{classpeg_1_1Action_ac5e72eb10d9282caba2d61cfbc57fe07}{fn\_}}(rhs.fn\_) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a28ed9f19545ca639e925233f20310b30}\label{classpeg_1_1Action_a28ed9f19545ca639e925233f20310b30}} 
+\index{peg::Action@{peg::Action}!Action@{Action}}
+\index{Action@{Action}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{Action()}{Action()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename F , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+pointer$<$ F $>$\+::value \&\&!std\+::is\+\_\+same$<$ F, std\+::nullptr\+\_\+t $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ \\
+peg\+::\+Action\+::\+Action (\begin{DoxyParamCaption}\item[{F}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1087 : \mbox{\hyperlink{classpeg_1_1Action_ac5e72eb10d9282caba2d61cfbc57fe07}{fn\_}}(\mbox{\hyperlink{classpeg_1_1Action_a7ba3699a400ee16224a33bf6c2652815}{make\_adaptor}}(fn, \&F::operator())) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a28ed9f19545ca639e925233f20310b30}\label{classpeg_1_1Action_a28ed9f19545ca639e925233f20310b30}} 
+\index{peg::Action@{peg::Action}!Action@{Action}}
+\index{Action@{Action}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{Action()}{Action()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename F , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+pointer$<$ F $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ \\
+peg\+::\+Action\+::\+Action (\begin{DoxyParamCaption}\item[{F}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1090 : \mbox{\hyperlink{classpeg_1_1Action_ac5e72eb10d9282caba2d61cfbc57fe07}{fn\_}}(\mbox{\hyperlink{classpeg_1_1Action_a7ba3699a400ee16224a33bf6c2652815}{make\_adaptor}}(fn, fn)) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a202a18508394ae6c25d62b2ec7f2a9c4}\label{classpeg_1_1Action_a202a18508394ae6c25d62b2ec7f2a9c4}} 
+\index{peg::Action@{peg::Action}!Action@{Action}}
+\index{Action@{Action}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{Action()}{Action()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename F , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ F, std\+::nullptr\+\_\+t $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ \\
+peg\+::\+Action\+::\+Action (\begin{DoxyParamCaption}\item[{F}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1093 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpeg_1_1Action_a1ffafd397ac102a3107a9d1561f5355f}\label{classpeg_1_1Action_a1ffafd397ac102a3107a9d1561f5355f}} 
+\index{peg::Action@{peg::Action}!make\_adaptor@{make\_adaptor}}
+\index{make\_adaptor@{make\_adaptor}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{make\_adaptor()}{make\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily template$<$typename F , typename R $>$ \\
+\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} peg\+::\+Action\+::make\+\_\+adaptor (\begin{DoxyParamCaption}\item[{F}]{fn,  }\item[{R($\ast$)(const \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1187                                                               \{}
+\DoxyCodeLine{1188         \textcolor{keywordflow}{return} TypeAdaptor\_csv<R>(fn);}
+\DoxyCodeLine{1189     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a77501ee44d587d53d73ee538f2b5c365}\label{classpeg_1_1Action_a77501ee44d587d53d73ee538f2b5c365}} 
+\index{peg::Action@{peg::Action}!make\_adaptor@{make\_adaptor}}
+\index{make\_adaptor@{make\_adaptor}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{make\_adaptor()}{make\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily template$<$typename F , typename R $>$ \\
+\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} peg\+::\+Action\+::make\+\_\+adaptor (\begin{DoxyParamCaption}\item[{F}]{fn,  }\item[{R($\ast$)(const \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1217                                                                       \{}
+\DoxyCodeLine{1218         \textcolor{keywordflow}{return} TypeAdaptor\_csv\_dt<R>(fn);}
+\DoxyCodeLine{1219     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a0908ca8b0a16aa691096a754f89476c7}\label{classpeg_1_1Action_a0908ca8b0a16aa691096a754f89476c7}} 
+\index{peg::Action@{peg::Action}!make\_adaptor@{make\_adaptor}}
+\index{make\_adaptor@{make\_adaptor}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{make\_adaptor()}{make\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily template$<$typename F , typename R $>$ \\
+\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} peg\+::\+Action\+::make\+\_\+adaptor (\begin{DoxyParamCaption}\item[{F}]{fn,  }\item[{R($\ast$)(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1182                                                         \{}
+\DoxyCodeLine{1183         \textcolor{keywordflow}{return} TypeAdaptor\_sv<R>(fn);}
+\DoxyCodeLine{1184     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_ac4e1d2d4fdb4db8b785aefa357824997}\label{classpeg_1_1Action_ac4e1d2d4fdb4db8b785aefa357824997}} 
+\index{peg::Action@{peg::Action}!make\_adaptor@{make\_adaptor}}
+\index{make\_adaptor@{make\_adaptor}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{make\_adaptor()}{make\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily template$<$typename F , typename R $>$ \\
+\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} peg\+::\+Action\+::make\+\_\+adaptor (\begin{DoxyParamCaption}\item[{F}]{fn,  }\item[{R($\ast$)(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1212                                                                 \{}
+\DoxyCodeLine{1213         \textcolor{keywordflow}{return} TypeAdaptor\_sv\_dt<R>(fn);}
+\DoxyCodeLine{1214     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a959e4f3b6d8209076138041489faca05}\label{classpeg_1_1Action_a959e4f3b6d8209076138041489faca05}} 
+\index{peg::Action@{peg::Action}!make\_adaptor@{make\_adaptor}}
+\index{make\_adaptor@{make\_adaptor}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{make\_adaptor()}{make\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily template$<$typename F , typename R $>$ \\
+\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} peg\+::\+Action\+::make\+\_\+adaptor (\begin{DoxyParamCaption}\item[{F}]{fn,  }\item[{R(F\+::$\ast$)(const \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv) const}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1167                                                                      \{}
+\DoxyCodeLine{1168         \textcolor{keywordflow}{return} TypeAdaptor\_csv<R>(fn);}
+\DoxyCodeLine{1169     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a86fb2445b404e4b11dff064fc7f1fa9d}\label{classpeg_1_1Action_a86fb2445b404e4b11dff064fc7f1fa9d}} 
+\index{peg::Action@{peg::Action}!make\_adaptor@{make\_adaptor}}
+\index{make\_adaptor@{make\_adaptor}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{make\_adaptor()}{make\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily template$<$typename F , typename R $>$ \\
+\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} peg\+::\+Action\+::make\+\_\+adaptor (\begin{DoxyParamCaption}\item[{F}]{fn,  }\item[{R(F\+::$\ast$)(const \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1177                                                                \{}
+\DoxyCodeLine{1178         \textcolor{keywordflow}{return} TypeAdaptor\_csv<R>(fn);}
+\DoxyCodeLine{1179     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a72c3e82f1bc424a6e0a5171b3ecda2fd}\label{classpeg_1_1Action_a72c3e82f1bc424a6e0a5171b3ecda2fd}} 
+\index{peg::Action@{peg::Action}!make\_adaptor@{make\_adaptor}}
+\index{make\_adaptor@{make\_adaptor}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{make\_adaptor()}{make\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily template$<$typename F , typename R $>$ \\
+\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} peg\+::\+Action\+::make\+\_\+adaptor (\begin{DoxyParamCaption}\item[{F}]{fn,  }\item[{R(F\+::$\ast$)(const \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt) const}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1197                                                                               \{}
+\DoxyCodeLine{1198         \textcolor{keywordflow}{return} TypeAdaptor\_csv\_dt<R>(fn);}
+\DoxyCodeLine{1199     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_af844c2379100659ae77b8493eb2456a6}\label{classpeg_1_1Action_af844c2379100659ae77b8493eb2456a6}} 
+\index{peg::Action@{peg::Action}!make\_adaptor@{make\_adaptor}}
+\index{make\_adaptor@{make\_adaptor}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{make\_adaptor()}{make\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily template$<$typename F , typename R $>$ \\
+\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} peg\+::\+Action\+::make\+\_\+adaptor (\begin{DoxyParamCaption}\item[{F}]{fn,  }\item[{R(F\+::$\ast$)(const \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1207                                                                         \{}
+\DoxyCodeLine{1208         \textcolor{keywordflow}{return} TypeAdaptor\_csv\_dt<R>(fn);}
+\DoxyCodeLine{1209     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a7ba3699a400ee16224a33bf6c2652815}\label{classpeg_1_1Action_a7ba3699a400ee16224a33bf6c2652815}} 
+\index{peg::Action@{peg::Action}!make\_adaptor@{make\_adaptor}}
+\index{make\_adaptor@{make\_adaptor}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{make\_adaptor()}{make\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily template$<$typename F , typename R $>$ \\
+\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} peg\+::\+Action\+::make\+\_\+adaptor (\begin{DoxyParamCaption}\item[{F}]{fn,  }\item[{R(F\+::$\ast$)(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv) const}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1162                                                                \{}
+\DoxyCodeLine{1163         \textcolor{keywordflow}{return} TypeAdaptor\_sv<R>(fn);}
+\DoxyCodeLine{1164     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_ada8d2c41530dd8db6d490f5f1bc646d5}\label{classpeg_1_1Action_ada8d2c41530dd8db6d490f5f1bc646d5}} 
+\index{peg::Action@{peg::Action}!make\_adaptor@{make\_adaptor}}
+\index{make\_adaptor@{make\_adaptor}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{make\_adaptor()}{make\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily template$<$typename F , typename R $>$ \\
+\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} peg\+::\+Action\+::make\+\_\+adaptor (\begin{DoxyParamCaption}\item[{F}]{fn,  }\item[{R(F\+::$\ast$)(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1172                                                          \{}
+\DoxyCodeLine{1173         \textcolor{keywordflow}{return} TypeAdaptor\_sv<R>(fn);}
+\DoxyCodeLine{1174     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a717c717cf457590802f358e765cdaecd}\label{classpeg_1_1Action_a717c717cf457590802f358e765cdaecd}} 
+\index{peg::Action@{peg::Action}!make\_adaptor@{make\_adaptor}}
+\index{make\_adaptor@{make\_adaptor}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{make\_adaptor()}{make\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily template$<$typename F , typename R $>$ \\
+\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} peg\+::\+Action\+::make\+\_\+adaptor (\begin{DoxyParamCaption}\item[{F}]{fn,  }\item[{R(F\+::$\ast$)(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt) const}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1192                                                                         \{}
+\DoxyCodeLine{1193         \textcolor{keywordflow}{return} TypeAdaptor\_sv\_dt<R>(fn);}
+\DoxyCodeLine{1194     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_aee02d61f96e6fb26ed6335bf045ee70f}\label{classpeg_1_1Action_aee02d61f96e6fb26ed6335bf045ee70f}} 
+\index{peg::Action@{peg::Action}!make\_adaptor@{make\_adaptor}}
+\index{make\_adaptor@{make\_adaptor}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{make\_adaptor()}{make\_adaptor()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily template$<$typename F , typename R $>$ \\
+\mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} peg\+::\+Action\+::make\+\_\+adaptor (\begin{DoxyParamCaption}\item[{F}]{fn,  }\item[{R(F\+::$\ast$)(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1202                                                                   \{}
+\DoxyCodeLine{1203         \textcolor{keywordflow}{return} TypeAdaptor\_sv\_dt<R>(fn);}
+\DoxyCodeLine{1204     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a29c705897216f53e051a4d2ebb8fea3d}\label{classpeg_1_1Action_a29c705897216f53e051a4d2ebb8fea3d}} 
+\index{peg::Action@{peg::Action}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily peg\+::\+Action\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1110                           \{}
+\DoxyCodeLine{1111         \textcolor{keywordflow}{return} bool(\mbox{\hyperlink{classpeg_1_1Action_ac5e72eb10d9282caba2d61cfbc57fe07}{fn\_}});}
+\DoxyCodeLine{1112     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a1c9a71ebe5c0c5d4a505c6b0f1883e5d}\label{classpeg_1_1Action_a1c9a71ebe5c0c5d4a505c6b0f1883e5d}} 
+\index{peg::Action@{peg::Action}!operator()@{operator()}}
+\index{operator()@{operator()}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpeg_1_1any}{any}} peg\+::\+Action\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&}]{sv,  }\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{dt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1114                                                       \{}
+\DoxyCodeLine{1115         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1Action_ac5e72eb10d9282caba2d61cfbc57fe07}{fn\_}}(sv, dt);}
+\DoxyCodeLine{1116     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_af688d0eb3181796f6636bfee05e635d5}\label{classpeg_1_1Action_af688d0eb3181796f6636bfee05e635d5}} 
+\index{peg::Action@{peg::Action}!operator=@{operator=}}
+\index{operator=@{operator=}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpeg_1_1Action}{Action}} \& peg\+::\+Action\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpeg_1_1Action}{Action}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classpeg_1_1Action_a9073a9d0732845ffa5d79644101b869a}\label{classpeg_1_1Action_a9073a9d0732845ffa5d79644101b869a}} 
+\index{peg::Action@{peg::Action}!operator=@{operator=}}
+\index{operator=@{operator=}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename F , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+pointer$<$ F $>$\+::value \&\&!std\+::is\+\_\+same$<$ F, std\+::nullptr\+\_\+t $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ \\
+void peg\+::\+Action\+::operator= (\begin{DoxyParamCaption}\item[{F}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1096                          \{}
+\DoxyCodeLine{1097         \mbox{\hyperlink{classpeg_1_1Action_ac5e72eb10d9282caba2d61cfbc57fe07}{fn\_}} = \mbox{\hyperlink{classpeg_1_1Action_a7ba3699a400ee16224a33bf6c2652815}{make\_adaptor}}(fn, \&F::operator());}
+\DoxyCodeLine{1098     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a9073a9d0732845ffa5d79644101b869a}\label{classpeg_1_1Action_a9073a9d0732845ffa5d79644101b869a}} 
+\index{peg::Action@{peg::Action}!operator=@{operator=}}
+\index{operator=@{operator=}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename F , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+pointer$<$ F $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ \\
+void peg\+::\+Action\+::operator= (\begin{DoxyParamCaption}\item[{F}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1101                          \{}
+\DoxyCodeLine{1102         \mbox{\hyperlink{classpeg_1_1Action_ac5e72eb10d9282caba2d61cfbc57fe07}{fn\_}} = \mbox{\hyperlink{classpeg_1_1Action_a7ba3699a400ee16224a33bf6c2652815}{make\_adaptor}}(fn, fn);}
+\DoxyCodeLine{1103     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1Action_a9b30df67c01e86898a40122234caafb6}\label{classpeg_1_1Action_a9b30df67c01e86898a40122234caafb6}} 
+\index{peg::Action@{peg::Action}!operator=@{operator=}}
+\index{operator=@{operator=}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename F , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ F, std\+::nullptr\+\_\+t $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ \\
+void peg\+::\+Action\+::operator= (\begin{DoxyParamCaption}\item[{F}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1106 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpeg_1_1Action_ac5e72eb10d9282caba2d61cfbc57fe07}\label{classpeg_1_1Action_ac5e72eb10d9282caba2d61cfbc57fe07}} 
+\index{peg::Action@{peg::Action}!fn\_@{fn\_}}
+\index{fn\_@{fn\_}!peg::Action@{peg::Action}}
+\doxysubsubsection{\texorpdfstring{fn\_}{fn\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpeg_1_1Action_a19ffa0595e4a7ecd3ea0cc2d9e142d7e}{Fty}} peg\+::\+Action\+::fn\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

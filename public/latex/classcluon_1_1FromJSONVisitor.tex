@@ -1,0 +1,746 @@
+\hypertarget{classcluon_1_1FromJSONVisitor}{}\doxysection{cluon\+::From\+JSONVisitor Class Reference}
+\label{classcluon_1_1FromJSONVisitor}\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for cluon\+::From\+JSONVisitor\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_1_1JSONKeyValue}{JSONKey\+Value}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afca0d58203151d8e8fe30f3056499cdc}{From\+JSONVisitor}} () noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a5a151774d6cadcbc3561aa5fe130fb57}{$\sim$\+From\+JSONVisitor}} ()=default
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a3ed257ce39404ce76c9b9471ff7f6b46}{decode\+From}} (std\+::istream \&in) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ad71c03e95123f0eccee20a249e0c0ad3}{pre\+Visit}} (int32\+\_\+t id, const std\+::string \&short\+Name, const std\+::string \&long\+Name) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a32a6e7423b9fbf558e2a999b0962dbbf}{post\+Visit}} () noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ab53368f1e243e533a9d90f92dc725e70}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, bool \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a9dd66df96d4d5f40ac5c9e67e8388cb0}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, char \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a3bf300f00ff615d7ea42a7a6b40186e4}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int8\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a69e126327a2220c86478d01c3cb89aff}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint8\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a75feeb5e0917f8e4fe237f86e84d1d99}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int16\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ad9b18240a458e2aaa5748d4e02b8fa13}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint16\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a9ccd7ae2361b21d188fef96c4a7a304c}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int32\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ac87f3a4f7cfbfe13da08c61f1e70a8e8}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint32\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a0c679d931f7612efebb5c48ca2e81dab}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int64\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ac0e901f93554dfd28a012296edbec75b}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint64\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_aaa37a63289827599799bfdc186b98d6e}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, float \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ad7527edf2f5b05ff16ec807d6a357eb8}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, double \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ab1c3493a83a456ec14dfe99aea139d57}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, std\+::string \&v) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a57e4cdaa63d313d87c473f25937f1b7e}{visit}} (uint32\+\_\+t \&id, std\+::string \&\&type\+Name, std\+::string \&\&name, T \&value) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a2e8ed79e2fceafdf8c0b2535da303946}{decode\+Base64}} (const std\+::string \&input) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a3f40f79ddbe7060bf6ecd5487cd1d978}{From\+JSONVisitor}} (const \mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{From\+JSONVisitor}} \&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a287d74893b78e270386dc0d8b3996152}{From\+JSONVisitor}} (\mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{From\+JSONVisitor}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{From\+JSONVisitor}} \& \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a2946207c6b478f39d60d609f003b291e}{operator=}} (\mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{From\+JSONVisitor}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{From\+JSONVisitor}} \& \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ad0eed695b1a6ef348f848350558e267a}{operator=}} (const \mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{From\+JSONVisitor}} \&other)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a2105034b96d42711ce0e2daa827730ef}{From\+JSONVisitor}} (std\+::map$<$ std\+::string, \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_1_1JSONKeyValue}{From\+JSONVisitor\+::\+JSONKey\+Value}} $>$ \&preset) noexcept
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_1_1JSONKeyValue}{From\+JSONVisitor\+::\+JSONKey\+Value}} $>$ \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ac5de314a65fd9244c50713401111b8d4}{read\+Key\+Values}} (std\+::string \&input) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_1_1JSONKeyValue}{From\+JSONVisitor\+::\+JSONKey\+Value}} $>$ \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ac02f46c16d0d7055b3a1633a725e00f9}{m\+\_\+data}} \{\}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_1_1JSONKeyValue}{From\+JSONVisitor\+::\+JSONKey\+Value}} $>$ \& \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\+\_\+key\+Values}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class decodes a given message from JSON format. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a3f40f79ddbe7060bf6ecd5487cd1d978}\label{classcluon_1_1FromJSONVisitor_a3f40f79ddbe7060bf6ecd5487cd1d978}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!FromJSONVisitor@{FromJSONVisitor}}
+\index{FromJSONVisitor@{FromJSONVisitor}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{FromJSONVisitor()}{FromJSONVisitor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily cluon\+::\+From\+JSONVisitor\+::\+From\+JSONVisitor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{From\+JSONVisitor}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a287d74893b78e270386dc0d8b3996152}\label{classcluon_1_1FromJSONVisitor_a287d74893b78e270386dc0d8b3996152}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!FromJSONVisitor@{FromJSONVisitor}}
+\index{FromJSONVisitor@{FromJSONVisitor}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{FromJSONVisitor()}{FromJSONVisitor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily cluon\+::\+From\+JSONVisitor\+::\+From\+JSONVisitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{From\+JSONVisitor}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a2105034b96d42711ce0e2daa827730ef}\label{classcluon_1_1FromJSONVisitor_a2105034b96d42711ce0e2daa827730ef}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!FromJSONVisitor@{FromJSONVisitor}}
+\index{FromJSONVisitor@{FromJSONVisitor}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{FromJSONVisitor()}{FromJSONVisitor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily cluon\+::\+From\+JSONVisitor\+::\+From\+JSONVisitor (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_1_1JSONKeyValue}{From\+JSONVisitor\+::\+JSONKey\+Value}} $>$ \&}]{preset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+Internal constructor to pass reference to preset key/values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em preset} & Pre-\/filled key/value map to handle nested fields. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12295     : \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}\{preset\} \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_afca0d58203151d8e8fe30f3056499cdc}\label{classcluon_1_1FromJSONVisitor_afca0d58203151d8e8fe30f3056499cdc}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!FromJSONVisitor@{FromJSONVisitor}}
+\index{FromJSONVisitor@{FromJSONVisitor}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{FromJSONVisitor()}{FromJSONVisitor()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily cluon\+::\+From\+JSONVisitor\+::\+From\+JSONVisitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12292     : \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}\{\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ac02f46c16d0d7055b3a1633a725e00f9}{m\_data}}\} \{\}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ac02f46c16d0d7055b3a1633a725e00f9}{m\+\_\+data}}.
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a5a151774d6cadcbc3561aa5fe130fb57}\label{classcluon_1_1FromJSONVisitor_a5a151774d6cadcbc3561aa5fe130fb57}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!````~FromJSONVisitor@{$\sim$FromJSONVisitor}}
+\index{````~FromJSONVisitor@{$\sim$FromJSONVisitor}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{$\sim$FromJSONVisitor()}{~FromJSONVisitor()}}
+{\footnotesize\ttfamily cluon\+::\+From\+JSONVisitor\+::$\sim$\+From\+JSONVisitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a2e8ed79e2fceafdf8c0b2535da303946}\label{classcluon_1_1FromJSONVisitor_a2e8ed79e2fceafdf8c0b2535da303946}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!decodeBase64@{decodeBase64}}
+\index{decodeBase64@{decodeBase64}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{decodeBase64()}{decodeBase64()}}
+{\footnotesize\ttfamily std\+::string cluon\+::\+From\+JSONVisitor\+::decode\+Base64 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+This method returns the base64-\/decoded representation for the given input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & to decode from base64 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Decoded input. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12384                                                                               \{}
+\DoxyCodeLine{12385     \textcolor{keyword}{const} std::string ALPHABET\{\textcolor{stringliteral}{"{}ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"{}}\};}
+\DoxyCodeLine{12386     uint8\_t counter\{0\};}
+\DoxyCodeLine{12387     std::array<char, 4> buffer;}
+\DoxyCodeLine{12388     std::string decoded;}
+\DoxyCodeLine{12389     \textcolor{keywordflow}{for} (uint32\_t i\{0\}; i < input.size(); i++) \{}
+\DoxyCodeLine{12390         \textcolor{keywordtype}{char} c;}
+\DoxyCodeLine{12391         \textcolor{keywordflow}{for} (c = 0; c < 64 \&\& (ALPHABET.at(\textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(c)) != input.at(i)); c++) \{\}}
+\DoxyCodeLine{12392 }
+\DoxyCodeLine{12393         buffer[counter++] = c;}
+\DoxyCodeLine{12394         \textcolor{keywordflow}{if} (4 == counter) \{}
+\DoxyCodeLine{12395             decoded.push\_back(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}((buffer[0] << 2) + (buffer[1] >> 4)));}
+\DoxyCodeLine{12396             \textcolor{keywordflow}{if} (64 != buffer[2]) \{}
+\DoxyCodeLine{12397                 decoded.push\_back(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}((buffer[1] << 4) + (buffer[2] >> 2)));}
+\DoxyCodeLine{12398             \}}
+\DoxyCodeLine{12399             \textcolor{keywordflow}{if} (64 != buffer[3]) \{}
+\DoxyCodeLine{12400                 decoded.push\_back(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}((buffer[2] << 6) + buffer[3]));}
+\DoxyCodeLine{12401             \}}
+\DoxyCodeLine{12402             counter = 0;}
+\DoxyCodeLine{12403         \}}
+\DoxyCodeLine{12404     \}}
+\DoxyCodeLine{12405     \textcolor{keywordflow}{return} decoded;}
+\DoxyCodeLine{12406 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ab1c3493a83a456ec14dfe99aea139d57}{visit()}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a3ed257ce39404ce76c9b9471ff7f6b46}\label{classcluon_1_1FromJSONVisitor_a3ed257ce39404ce76c9b9471ff7f6b46}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!decodeFrom@{decodeFrom}}
+\index{decodeFrom@{decodeFrom}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{decodeFrom()}{decodeFrom()}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::decode\+From (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+This method decodes a given istream into an internal key/value representation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & istream to decode. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12370                                                                \{}
+\DoxyCodeLine{12371     \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.clear();}
+\DoxyCodeLine{12372 }
+\DoxyCodeLine{12373     std::string s;}
+\DoxyCodeLine{12374     std::istream\_iterator<char> it(in), it\_end;}
+\DoxyCodeLine{12375     std::copy(it, it\_end, std::insert\_iterator<std::string>(s, s.begin()));}
+\DoxyCodeLine{12376 }
+\DoxyCodeLine{12377     \textcolor{comment}{// Remove whitespace characters like newline, carriage return, or tab.}}
+\DoxyCodeLine{12378     s.erase(std::remove\_if(s.begin(), s.end(), [](\textcolor{keywordtype}{char} c) \{ return (c == \textcolor{stringliteral}{'\(\backslash\)r'} || c == \textcolor{stringliteral}{'\(\backslash\)t'} || c == \textcolor{stringliteral}{'\(\backslash\)n'}); \}), s.end());}
+\DoxyCodeLine{12379 }
+\DoxyCodeLine{12380     \textcolor{comment}{// Parse JSON from in.}}
+\DoxyCodeLine{12381     \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}} = \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ac5de314a65fd9244c50713401111b8d4}{readKeyValues}}(s);}
+\DoxyCodeLine{12382 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1EnvelopeConverter_ac046a7e7de1fec61f44ca2ece7df11bc}{cluon\+::\+Envelope\+Converter\+::get\+Proto\+Encoded\+Envelope\+From\+JSON()}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_ad0eed695b1a6ef348f848350558e267a}\label{classcluon_1_1FromJSONVisitor_ad0eed695b1a6ef348f848350558e267a}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{From\+JSONVisitor}} \& cluon\+::\+From\+JSONVisitor\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{From\+JSONVisitor}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a2946207c6b478f39d60d609f003b291e}\label{classcluon_1_1FromJSONVisitor_a2946207c6b478f39d60d609f003b291e}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{From\+JSONVisitor}} \& cluon\+::\+From\+JSONVisitor\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{From\+JSONVisitor}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a32a6e7423b9fbf558e2a999b0962dbbf}\label{classcluon_1_1FromJSONVisitor_a32a6e7423b9fbf558e2a999b0962dbbf}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!postVisit@{postVisit}}
+\index{postVisit@{postVisit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{postVisit()}{postVisit()}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::post\+Visit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12414 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_ad71c03e95123f0eccee20a249e0c0ad3}\label{classcluon_1_1FromJSONVisitor_ad71c03e95123f0eccee20a249e0c0ad3}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!preVisit@{preVisit}}
+\index{preVisit@{preVisit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{preVisit()}{preVisit()}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::pre\+Visit (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{id,  }\item[{const std\+::string \&}]{short\+Name,  }\item[{const std\+::string \&}]{long\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12408                                                                                                                 \{}
+\DoxyCodeLine{12409     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12410     (void)shortName;}
+\DoxyCodeLine{12411     (void)longName;}
+\DoxyCodeLine{12412 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_ac5de314a65fd9244c50713401111b8d4}\label{classcluon_1_1FromJSONVisitor_ac5de314a65fd9244c50713401111b8d4}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!readKeyValues@{readKeyValues}}
+\index{readKeyValues@{readKeyValues}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{readKeyValues()}{readKeyValues()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_1_1JSONKeyValue}{From\+JSONVisitor\+::\+JSONKey\+Value}} $>$ cluon\+::\+From\+JSONVisitor\+::read\+Key\+Values (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12297                                                                                                               \{}
+\DoxyCodeLine{12298     \textcolor{keyword}{const} std::string MATCH\_JSON}
+\DoxyCodeLine{12299         = R\textcolor{stringliteral}{"{}((?:\(\backslash\)"{}|\(\backslash\)')(?:[\string^"{}]*)(?:\(\backslash\)"{}|\(\backslash\)')(?=:)(?:\(\backslash\):\(\backslash\)s*)(?:\(\backslash\)"{}|\(\backslash\)')?(?:true|false|[\(\backslash\)-\/]\{0,1\}[0-\/9]+[\(\backslash\).][0-\/9]+|[\(\backslash\)-\/]\{0,1\}[0-\/9]+|[0-\/9a-\/zA-\/Z\(\backslash\)+\(\backslash\)-\/\(\backslash\),\(\backslash\).\(\backslash\)\$\(\backslash\) \(\backslash\)=]*)(?:\(\backslash\)"{}|\(\backslash\)')?)"{};}}
+\DoxyCodeLine{12300 \textcolor{stringliteral}{}}
+\DoxyCodeLine{12301 \textcolor{stringliteral}{    std::map<std::string, FromJSONVisitor::JSONKeyValue> result;}}
+\DoxyCodeLine{12302 \textcolor{stringliteral}{    std::string oldInput;}}
+\DoxyCodeLine{12303 \textcolor{stringliteral}{    }\textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12304         std::smatch m;}
+\DoxyCodeLine{12305         \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{12306             std::regex\_search(input, m, std::regex(MATCH\_JSON));}
+\DoxyCodeLine{12307 }
+\DoxyCodeLine{12308             \textcolor{keywordflow}{if} (m.size() > 0) \{}
+\DoxyCodeLine{12309                 std::string match\{m[0]\};}
+\DoxyCodeLine{12310                 std::vector<std::string> \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}} = \mbox{\hyperlink{namespacestringtoolbox_a76bd13481e3c53dd861442f0e9cbfb96}{stringtoolbox::split}}(match, \textcolor{charliteral}{':'});}
+\DoxyCodeLine{12311                 \textcolor{keywordflow}{if} ( (\mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}.size() == 2) \&\& (\mbox{\hyperlink{namespacestringtoolbox_a96eeb4e50ddaab510b51a18071deb6f4}{stringtoolbox::trim}}(\mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}[1]).size() == 0) ) \{}
+\DoxyCodeLine{12312                     std::string keyOfNestedObject\{\mbox{\hyperlink{namespacestringtoolbox_a96eeb4e50ddaab510b51a18071deb6f4}{stringtoolbox::trim}}(\mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}[0])\};}
+\DoxyCodeLine{12313                     keyOfNestedObject = \mbox{\hyperlink{namespacestringtoolbox_a76bd13481e3c53dd861442f0e9cbfb96}{stringtoolbox::split}}(keyOfNestedObject, \textcolor{charliteral}{'"{}'})[1];}
+\DoxyCodeLine{12314                     \{}
+\DoxyCodeLine{12315                         std::string suffix(m.suffix());}
+\DoxyCodeLine{12316                         suffix   = \mbox{\hyperlink{namespacestringtoolbox_a96eeb4e50ddaab510b51a18071deb6f4}{stringtoolbox::trim}}(suffix);}
+\DoxyCodeLine{12317                         oldInput = input;}
+\DoxyCodeLine{12318                         input    = suffix;}
+\DoxyCodeLine{12319                     \}}
+\DoxyCodeLine{12320 }
+\DoxyCodeLine{12321                     \textcolor{keyword}{auto} mapOfNestedValues = \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ac5de314a65fd9244c50713401111b8d4}{readKeyValues}}(input);}
+\DoxyCodeLine{12322 }
+\DoxyCodeLine{12323                     JSONKeyValue kv;}
+\DoxyCodeLine{12324                     kv.m\_key   = keyOfNestedObject;}
+\DoxyCodeLine{12325                     kv.m\_type  = \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a8eee8e217391199668cbac89472ace53}{JSONConstants::OBJECT}};}
+\DoxyCodeLine{12326                     kv.m\_value = mapOfNestedValues;}
+\DoxyCodeLine{12327 }
+\DoxyCodeLine{12328                     result[keyOfNestedObject] = kv;}
+\DoxyCodeLine{12329                 \}}
+\DoxyCodeLine{12330                 \textcolor{keywordflow}{if} ( (\mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}.size() == 2) \&\& (\mbox{\hyperlink{namespacestringtoolbox_a96eeb4e50ddaab510b51a18071deb6f4}{stringtoolbox::trim}}(\mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}[1]).size() > 0) ) \{}
+\DoxyCodeLine{12331                     \textcolor{keyword}{auto} e = std::make\_pair(\mbox{\hyperlink{namespacestringtoolbox_a96eeb4e50ddaab510b51a18071deb6f4}{stringtoolbox::trim}}(\mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}[0]), \mbox{\hyperlink{namespacestringtoolbox_a96eeb4e50ddaab510b51a18071deb6f4}{stringtoolbox::trim}}(\mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}[1]));}
+\DoxyCodeLine{12332 }
+\DoxyCodeLine{12333                     JSONKeyValue kv;}
+\DoxyCodeLine{12334                     kv.m\_key = \mbox{\hyperlink{namespacestringtoolbox_a76bd13481e3c53dd861442f0e9cbfb96}{stringtoolbox::split}}(e.first, \textcolor{charliteral}{'"{}'})[1];}
+\DoxyCodeLine{12335 }
+\DoxyCodeLine{12336                     \textcolor{keywordflow}{if} ((e.second.size() > 0) \&\& (e.second.at(0) == \textcolor{charliteral}{'"{}'})) \{}
+\DoxyCodeLine{12337                         kv.m\_type  = \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a63b588d5559f64f89a416e656880b949}{JSONConstants::STRING}};}
+\DoxyCodeLine{12338                         kv.m\_value = std::string(e.second).substr(1);}
+\DoxyCodeLine{12339                     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((e.second.size() > 0) \&\& ((e.second == \textcolor{stringliteral}{"{}false"{}}) || (e.second == \textcolor{stringliteral}{"{}true"{}}))) \{}
+\DoxyCodeLine{12340                         kv.m\_type  = (e.second == \textcolor{stringliteral}{"{}true"{}} ? \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a23cd5ba5c6eed3d82ba0c6c0526df429}{JSONConstants::IS\_TRUE}} : \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899adeab83d56dee7ab418359a59b4ff2eb0}{JSONConstants::IS\_FALSE}});}
+\DoxyCodeLine{12341                         kv.m\_value = e.second == \textcolor{stringliteral}{"{}true"{}};}
+\DoxyCodeLine{12342                     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{12343                         kv.m\_type = \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{JSONConstants::NUMBER}};}
+\DoxyCodeLine{12344                         std::stringstream tmp(e.second);}
+\DoxyCodeLine{12345                         \textcolor{keywordtype}{double} v;}
+\DoxyCodeLine{12346                         tmp >> v;}
+\DoxyCodeLine{12347                         kv.m\_value = v;}
+\DoxyCodeLine{12348                     \}}
+\DoxyCodeLine{12349 }
+\DoxyCodeLine{12350                     result[kv.m\_key] = kv;}
+\DoxyCodeLine{12351 }
+\DoxyCodeLine{12352                     \{}
+\DoxyCodeLine{12353                         std::string suffix(m.suffix());}
+\DoxyCodeLine{12354                         suffix   = \mbox{\hyperlink{namespacestringtoolbox_a96eeb4e50ddaab510b51a18071deb6f4}{stringtoolbox::trim}}(suffix);}
+\DoxyCodeLine{12355                         oldInput = input;}
+\DoxyCodeLine{12356                         input    = suffix;}
+\DoxyCodeLine{12357                         \textcolor{keywordflow}{if} (suffix.size() > 0 \&\& suffix.at(0) == \textcolor{charliteral}{'\}'}) \{}
+\DoxyCodeLine{12358                             \textcolor{keywordflow}{break}; \textcolor{comment}{// Nested payload complete; return.}}
+\DoxyCodeLine{12359                         \}}
+\DoxyCodeLine{12360                     \}}
+\DoxyCodeLine{12361                 \}}
+\DoxyCodeLine{12362             \}}
+\DoxyCodeLine{12363         \} \textcolor{keywordflow}{while} (!m.empty() \&\& (oldInput != input));}
+\DoxyCodeLine{12364     \} \textcolor{keywordflow}{catch} (std::regex\_error \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12365     \} \textcolor{keywordflow}{catch} (std::bad\_cast \&) \{\}   \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12366 }
+\DoxyCodeLine{12367     \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{12368 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899adeab83d56dee7ab418359a59b4ff2eb0}{cluon\+::\+IS\+\_\+\+FALSE}}, \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a23cd5ba5c6eed3d82ba0c6c0526df429}{cluon\+::\+IS\+\_\+\+TRUE}}, \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_1_1JSONKeyValue_a3f21e3f25ea4f7837f35972f183865f6}{cluon\+::\+From\+JSONVisitor\+::\+JSONKey\+Value\+::m\+\_\+key}}, \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_1_1JSONKeyValue_aeb6abbb2ff649c1a171338ee228ee97b}{cluon\+::\+From\+JSONVisitor\+::\+JSONKey\+Value\+::m\+\_\+type}}, \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_1_1JSONKeyValue_a162e624504b3a630f10d420fb3ad962e}{cluon\+::\+From\+JSONVisitor\+::\+JSONKey\+Value\+::m\+\_\+value}}, \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{cluon\+::\+NUMBER}}, \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a8eee8e217391199668cbac89472ace53}{cluon\+::\+OBJECT}}, \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{ret\+Val}}, \mbox{\hyperlink{namespacestringtoolbox_a76bd13481e3c53dd861442f0e9cbfb96}{stringtoolbox\+::split()}}, \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a63b588d5559f64f89a416e656880b949}{cluon\+::\+STRING}}, and \mbox{\hyperlink{namespacestringtoolbox_a96eeb4e50ddaab510b51a18071deb6f4}{stringtoolbox\+::trim()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a57e4cdaa63d313d87c473f25937f1b7e}\label{classcluon_1_1FromJSONVisitor_a57e4cdaa63d313d87c473f25937f1b7e}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/14]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \&}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7456                                                                                         \{}
+\DoxyCodeLine{7457         (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{7458         (void)typeName;}
+\DoxyCodeLine{7459 }
+\DoxyCodeLine{7460         \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{7461             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{7462                 std::map<std::string, FromJSONVisitor::JSONKeyValue> v}
+\DoxyCodeLine{7463                     = linb::any\_cast<std::map<std::string, FromJSONVisitor::JSONKeyValue>>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value);}
+\DoxyCodeLine{7464                 \mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{cluon::FromJSONVisitor}} nestedJSONDecoder(v);}
+\DoxyCodeLine{7465                 value.accept(nestedJSONDecoder);}
+\DoxyCodeLine{7466             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{7467             \}}
+\DoxyCodeLine{7468         \}}
+\DoxyCodeLine{7469     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_ab53368f1e243e533a9d90f92dc725e70}\label{classcluon_1_1FromJSONVisitor_ab53368f1e243e533a9d90f92dc725e70}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/14]}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{bool \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12416                                                                                                         \{}
+\DoxyCodeLine{12417     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12418     (void)typeName;}
+\DoxyCodeLine{12419     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{12420         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12421             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899adeab83d56dee7ab418359a59b4ff2eb0}{JSONConstants::IS\_FALSE}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12422                 v = \textcolor{keyword}{false};}
+\DoxyCodeLine{12423             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a23cd5ba5c6eed3d82ba0c6c0526df429}{JSONConstants::IS\_TRUE}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12424                 v = \textcolor{keyword}{true};}
+\DoxyCodeLine{12425             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{JSONConstants::NUMBER}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12426                 v = (1 == \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(linb::any\_cast<double>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value)));}
+\DoxyCodeLine{12427             \}}
+\DoxyCodeLine{12428         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12429         \}}
+\DoxyCodeLine{12430     \}}
+\DoxyCodeLine{12431 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899adeab83d56dee7ab418359a59b4ff2eb0}{cluon\+::\+IS\+\_\+\+FALSE}}, \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a23cd5ba5c6eed3d82ba0c6c0526df429}{cluon\+::\+IS\+\_\+\+TRUE}}, and \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{cluon\+::\+NUMBER}}.
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a9dd66df96d4d5f40ac5c9e67e8388cb0}\label{classcluon_1_1FromJSONVisitor_a9dd66df96d4d5f40ac5c9e67e8388cb0}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/14]}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{char \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12433                                                                                                         \{}
+\DoxyCodeLine{12434     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12435     (void)typeName;}
+\DoxyCodeLine{12436     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{12437         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12438             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a63b588d5559f64f89a416e656880b949}{JSONConstants::STRING}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12439                 v = linb::any\_cast<std::string>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value).at(0);}
+\DoxyCodeLine{12440             \}}
+\DoxyCodeLine{12441         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12442         \}}
+\DoxyCodeLine{12443     \}}
+\DoxyCodeLine{12444 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a63b588d5559f64f89a416e656880b949}{cluon\+::\+STRING}}.
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_ad7527edf2f5b05ff16ec807d6a357eb8}\label{classcluon_1_1FromJSONVisitor_ad7527edf2f5b05ff16ec807d6a357eb8}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/14]}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{double \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12563                                                                                                           \{}
+\DoxyCodeLine{12564     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12565     (void)typeName;}
+\DoxyCodeLine{12566     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{12567         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12568             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{JSONConstants::NUMBER}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12569                 v = linb::any\_cast<double>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value);}
+\DoxyCodeLine{12570             \}}
+\DoxyCodeLine{12571         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12572         \}}
+\DoxyCodeLine{12573     \}}
+\DoxyCodeLine{12574 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{cluon\+::\+NUMBER}}.
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_aaa37a63289827599799bfdc186b98d6e}\label{classcluon_1_1FromJSONVisitor_aaa37a63289827599799bfdc186b98d6e}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [5/14]}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{float \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12550                                                                                                          \{}
+\DoxyCodeLine{12551     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12552     (void)typeName;}
+\DoxyCodeLine{12553     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{12554         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12555             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{JSONConstants::NUMBER}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12556                 v = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(linb::any\_cast<double>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value));}
+\DoxyCodeLine{12557             \}}
+\DoxyCodeLine{12558         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12559         \}}
+\DoxyCodeLine{12560     \}}
+\DoxyCodeLine{12561 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{cluon\+::\+NUMBER}}.
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a75feeb5e0917f8e4fe237f86e84d1d99}\label{classcluon_1_1FromJSONVisitor_a75feeb5e0917f8e4fe237f86e84d1d99}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [6/14]}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int16\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12472                                                                                                            \{}
+\DoxyCodeLine{12473     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12474     (void)typeName;}
+\DoxyCodeLine{12475     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{12476         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12477             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{JSONConstants::NUMBER}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12478                 v = \textcolor{keyword}{static\_cast<}int16\_t\textcolor{keyword}{>}(linb::any\_cast<double>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value));}
+\DoxyCodeLine{12479             \}}
+\DoxyCodeLine{12480         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12481         \}}
+\DoxyCodeLine{12482     \}}
+\DoxyCodeLine{12483 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{cluon\+::\+NUMBER}}.
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a9ccd7ae2361b21d188fef96c4a7a304c}\label{classcluon_1_1FromJSONVisitor_a9ccd7ae2361b21d188fef96c4a7a304c}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [7/14]}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12498                                                                                                            \{}
+\DoxyCodeLine{12499     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12500     (void)typeName;}
+\DoxyCodeLine{12501     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{12502         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12503             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{JSONConstants::NUMBER}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12504                 v = \textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}(linb::any\_cast<double>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value));}
+\DoxyCodeLine{12505             \}}
+\DoxyCodeLine{12506         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12507         \}}
+\DoxyCodeLine{12508     \}}
+\DoxyCodeLine{12509 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{cluon\+::\+NUMBER}}.
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a0c679d931f7612efebb5c48ca2e81dab}\label{classcluon_1_1FromJSONVisitor_a0c679d931f7612efebb5c48ca2e81dab}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [8/14]}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int64\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12524                                                                                                            \{}
+\DoxyCodeLine{12525     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12526     (void)typeName;}
+\DoxyCodeLine{12527     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{12528         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12529             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{JSONConstants::NUMBER}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12530                 v = \textcolor{keyword}{static\_cast<}int64\_t\textcolor{keyword}{>}(linb::any\_cast<double>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value));}
+\DoxyCodeLine{12531             \}}
+\DoxyCodeLine{12532         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12533         \}}
+\DoxyCodeLine{12534     \}}
+\DoxyCodeLine{12535 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{cluon\+::\+NUMBER}}.
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a3bf300f00ff615d7ea42a7a6b40186e4}\label{classcluon_1_1FromJSONVisitor_a3bf300f00ff615d7ea42a7a6b40186e4}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [9/14]}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12446                                                                                                           \{}
+\DoxyCodeLine{12447     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12448     (void)typeName;}
+\DoxyCodeLine{12449     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{12450         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12451             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{JSONConstants::NUMBER}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12452                 v = \textcolor{keyword}{static\_cast<}int8\_t\textcolor{keyword}{>}(linb::any\_cast<double>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value));}
+\DoxyCodeLine{12453             \}}
+\DoxyCodeLine{12454         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12455         \}}
+\DoxyCodeLine{12456     \}}
+\DoxyCodeLine{12457 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{cluon\+::\+NUMBER}}.
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_ab1c3493a83a456ec14dfe99aea139d57}\label{classcluon_1_1FromJSONVisitor_ab1c3493a83a456ec14dfe99aea139d57}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [10/14]}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12576                                                                                                              \{}
+\DoxyCodeLine{12577     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12578     (void)typeName;}
+\DoxyCodeLine{12579     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{12580         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12581             std::string tmp\{linb::any\_cast<std::string>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value)\};}
+\DoxyCodeLine{12582             v = \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a2e8ed79e2fceafdf8c0b2535da303946}{FromJSONVisitor::decodeBase64}}(tmp);}
+\DoxyCodeLine{12583         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12584         \}}
+\DoxyCodeLine{12585     \}}
+\DoxyCodeLine{12586 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_a2e8ed79e2fceafdf8c0b2535da303946}{decode\+Base64()}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_ad9b18240a458e2aaa5748d4e02b8fa13}\label{classcluon_1_1FromJSONVisitor_ad9b18240a458e2aaa5748d4e02b8fa13}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [11/14]}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint16\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12485                                                                                                             \{}
+\DoxyCodeLine{12486     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12487     (void)typeName;}
+\DoxyCodeLine{12488     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{12489         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12490             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{JSONConstants::NUMBER}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12491                 v = \textcolor{keyword}{static\_cast<}uint16\_t\textcolor{keyword}{>}(linb::any\_cast<double>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value));}
+\DoxyCodeLine{12492             \}}
+\DoxyCodeLine{12493         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12494         \}}
+\DoxyCodeLine{12495     \}}
+\DoxyCodeLine{12496 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{cluon\+::\+NUMBER}}.
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_ac87f3a4f7cfbfe13da08c61f1e70a8e8}\label{classcluon_1_1FromJSONVisitor_ac87f3a4f7cfbfe13da08c61f1e70a8e8}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [12/14]}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12511                                                                                                             \{}
+\DoxyCodeLine{12512     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12513     (void)typeName;}
+\DoxyCodeLine{12514     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{12515         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12516             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{JSONConstants::NUMBER}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12517                 v = \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(linb::any\_cast<double>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value));}
+\DoxyCodeLine{12518             \}}
+\DoxyCodeLine{12519         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12520         \}}
+\DoxyCodeLine{12521     \}}
+\DoxyCodeLine{12522 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{cluon\+::\+NUMBER}}.
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_ac0e901f93554dfd28a012296edbec75b}\label{classcluon_1_1FromJSONVisitor_ac0e901f93554dfd28a012296edbec75b}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [13/14]}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint64\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12537                                                                                                             \{}
+\DoxyCodeLine{12538     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12539     (void)typeName;}
+\DoxyCodeLine{12540     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{12541         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12542             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{JSONConstants::NUMBER}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12543                 v = \textcolor{keyword}{static\_cast<}uint64\_t\textcolor{keyword}{>}(linb::any\_cast<double>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value));}
+\DoxyCodeLine{12544             \}}
+\DoxyCodeLine{12545         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12546         \}}
+\DoxyCodeLine{12547     \}}
+\DoxyCodeLine{12548 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{cluon\+::\+NUMBER}}.
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_a69e126327a2220c86478d01c3cb89aff}\label{classcluon_1_1FromJSONVisitor_a69e126327a2220c86478d01c3cb89aff}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [14/14]}}
+{\footnotesize\ttfamily void cluon\+::\+From\+JSONVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12459                                                                                                            \{}
+\DoxyCodeLine{12460     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12461     (void)typeName;}
+\DoxyCodeLine{12462     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}.count(name)) \{}
+\DoxyCodeLine{12463         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12464             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{JSONConstants::NUMBER}} == \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_type) \{}
+\DoxyCodeLine{12465                 v = \textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(linb::any\_cast<double>(\mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}{m\_keyValues}}[name].m\_value));}
+\DoxyCodeLine{12466             \}}
+\DoxyCodeLine{12467         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12468         \}}
+\DoxyCodeLine{12469     \}}
+\DoxyCodeLine{12470 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{cluon\+::\+NUMBER}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_ac02f46c16d0d7055b3a1633a725e00f9}\label{classcluon_1_1FromJSONVisitor_ac02f46c16d0d7055b3a1633a725e00f9}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_1_1JSONKeyValue}{From\+JSONVisitor\+::\+JSONKey\+Value}}$>$ cluon\+::\+From\+JSONVisitor\+::m\+\_\+data \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_afca0d58203151d8e8fe30f3056499cdc}{From\+JSONVisitor()}}.
+
+\mbox{\Hypertarget{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}\label{classcluon_1_1FromJSONVisitor_afd433e954a2b5ac496fdb89db65b6a1c}} 
+\index{cluon::FromJSONVisitor@{cluon::FromJSONVisitor}!m\_keyValues@{m\_keyValues}}
+\index{m\_keyValues@{m\_keyValues}!cluon::FromJSONVisitor@{cluon::FromJSONVisitor}}
+\doxysubsubsection{\texorpdfstring{m\_keyValues}{m\_keyValues}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_1_1JSONKeyValue}{From\+JSONVisitor\+::\+JSONKey\+Value}}$>$\& cluon\+::\+From\+JSONVisitor\+::m\+\_\+key\+Values\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

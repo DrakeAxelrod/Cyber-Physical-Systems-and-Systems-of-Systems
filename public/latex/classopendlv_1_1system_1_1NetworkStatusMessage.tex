@@ -1,0 +1,307 @@
+\hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage}{}\doxysection{opendlv\+::system\+::Network\+Status\+Message Class Reference}
+\label{classopendlv_1_1system_1_1NetworkStatusMessage}\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+
+
+{\ttfamily \#include $<$opendlv-\/standard-\/message-\/set.\+hpp$>$}
+
+
+
+Collaboration diagram for opendlv\+::system\+::Network\+Status\+Message\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a11f8cecf0db74dc2af257f8f49e30712}{Network\+Status\+Message}} ()=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a9ea7d36fe299e359f8f7345bb53b9703}{Network\+Status\+Message}} (const \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \& \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a6cbb71ef1f2fbc1891af5d8b2a3545e4}{operator=}} (const \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_af8b20f696305523ff65ad057e300ee3f}{Network\+Status\+Message}} (\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \&\&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \& \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a4c00c3f631e90146d23f5ea879a66f8f}{operator=}} (\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \&\&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a338e58f19fa9c0aaaace2823d38b57ca}{$\sim$\+Network\+Status\+Message}} ()=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \& \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a17e208ba0b538391c75c5d284176755b}{code}} (const int32\+\_\+t \&v) noexcept
+\item 
+int32\+\_\+t \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a7d0b9d193c3e5ddfa6aa6d8211f9f24a}{code}} () const noexcept
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \& \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a20fa37c74b15853ef822abe57cbaf5fc}{description}} (const std\+::string \&v) noexcept
+\item 
+std\+::string \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a13d368e17321b463e2fa48651ed0c683}{description}} () const noexcept
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a8b89b7663ff8101c293f4bc531ed17dd}{accept}} (uint32\+\_\+t field\+Id, Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a0aeb8573ee76a7d3a3d0b3cda2aa7f38}{accept}} (Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_ab9bb8b612f9c9c06bbe19a2251f5c4b3}{accept}} (Pre\+Visitor \&\&pre\+Visit, Visitor \&\&visit, Post\+Visitor \&\&post\+Visit)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int32\+\_\+t \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a1594adba3ba5bc54c9acf475850f520d}{ID}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a34e331edfdaa639cfbbaababf1c19b93}{Short\+Name}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_ac7c997da8068c65dc2c260f108252df0}{Long\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_ab34625ca952a067185ff31d45b698995}{m\+\_\+code}} \{ 0 \}
+\item 
+std\+::string \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a72a3e7a696a22bb0ab22ab9f864b9a90}{m\+\_\+description}} \{ \char`\"{}\char`\"{}s \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a577dd2c66260e57ae99ab4d704170c0d}{The\+Short\+Name}} = \char`\"{}Network\+Status\+Message\char`\"{}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a0aeab566c99f0f2213ca74bd9f7ffcf2}{The\+Long\+Name}} = \char`\"{}opendlv.\+system.\+Network\+Status\+Message\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a11f8cecf0db74dc2af257f8f49e30712}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a11f8cecf0db74dc2af257f8f49e30712}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!NetworkStatusMessage@{NetworkStatusMessage}}
+\index{NetworkStatusMessage@{NetworkStatusMessage}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{NetworkStatusMessage()}{NetworkStatusMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily opendlv\+::system\+::\+Network\+Status\+Message\+::\+Network\+Status\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a9ea7d36fe299e359f8f7345bb53b9703}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a9ea7d36fe299e359f8f7345bb53b9703}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!NetworkStatusMessage@{NetworkStatusMessage}}
+\index{NetworkStatusMessage@{NetworkStatusMessage}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{NetworkStatusMessage()}{NetworkStatusMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily opendlv\+::system\+::\+Network\+Status\+Message\+::\+Network\+Status\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_af8b20f696305523ff65ad057e300ee3f}\label{classopendlv_1_1system_1_1NetworkStatusMessage_af8b20f696305523ff65ad057e300ee3f}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!NetworkStatusMessage@{NetworkStatusMessage}}
+\index{NetworkStatusMessage@{NetworkStatusMessage}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{NetworkStatusMessage()}{NetworkStatusMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily opendlv\+::system\+::\+Network\+Status\+Message\+::\+Network\+Status\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a338e58f19fa9c0aaaace2823d38b57ca}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a338e58f19fa9c0aaaace2823d38b57ca}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!````~NetworkStatusMessage@{$\sim$NetworkStatusMessage}}
+\index{````~NetworkStatusMessage@{$\sim$NetworkStatusMessage}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{$\sim$NetworkStatusMessage()}{~NetworkStatusMessage()}}
+{\footnotesize\ttfamily opendlv\+::system\+::\+Network\+Status\+Message\+::$\sim$\+Network\+Status\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_ab9bb8b612f9c9c06bbe19a2251f5c4b3}\label{classopendlv_1_1system_1_1NetworkStatusMessage_ab9bb8b612f9c9c06bbe19a2251f5c4b3}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!accept@{accept}}
+\index{accept@{accept}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ \\
+void opendlv\+::system\+::\+Network\+Status\+Message\+::accept (\begin{DoxyParamCaption}\item[{Pre\+Visitor \&\&}]{pre\+Visit,  }\item[{Visitor \&\&}]{visit,  }\item[{Post\+Visitor \&\&}]{post\+Visit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8551                                                                                             \{}
+\DoxyCodeLine{8552             (void)visit; \textcolor{comment}{// Prevent warnings from empty messages.}}
+\DoxyCodeLine{8553             std::forward<PreVisitor>(preVisit)(\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a1594adba3ba5bc54c9acf475850f520d}{ID}}(), \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a34e331edfdaa639cfbbaababf1c19b93}{ShortName}}(), \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_ac7c997da8068c65dc2c260f108252df0}{LongName}}());}
+\DoxyCodeLine{8554             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(1, std::move(\textcolor{stringliteral}{"{}int32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}code"{}}s), \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_ab34625ca952a067185ff31d45b698995}{m\_code}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{8555             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(2, std::move(\textcolor{stringliteral}{"{}std::string"{}}s), std::move(\textcolor{stringliteral}{"{}description"{}}s), \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a72a3e7a696a22bb0ab22ab9f864b9a90}{m\_description}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{8556             std::forward<PostVisitor>(postVisit)();}
+\DoxyCodeLine{8557         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{do\+Triplet\+Forward\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a8b89b7663ff8101c293f4bc531ed17dd}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a8b89b7663ff8101c293f4bc531ed17dd}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!accept@{accept}}
+\index{accept@{accept}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void opendlv\+::system\+::\+Network\+Status\+Message\+::accept (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Id,  }\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8527                                                                \{}
+\DoxyCodeLine{8528             (void)fieldId;}
+\DoxyCodeLine{8529             (void)visitor;}
+\DoxyCodeLine{8530 \textcolor{comment}{//            visitor.preVisit(ID(), ShortName(), LongName());}}
+\DoxyCodeLine{8531             \textcolor{keywordflow}{if} (1 == fieldId) \{}
+\DoxyCodeLine{8532                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}int32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}code"{}}s), \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_ab34625ca952a067185ff31d45b698995}{m\_code}}, visitor);}
+\DoxyCodeLine{8533                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{8534             \}}
+\DoxyCodeLine{8535             \textcolor{keywordflow}{if} (2 == fieldId) \{}
+\DoxyCodeLine{8536                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(2, std::move(\textcolor{stringliteral}{"{}std::string"{}}s), std::move(\textcolor{stringliteral}{"{}description"{}}s), \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a72a3e7a696a22bb0ab22ab9f864b9a90}{m\_description}}, visitor);}
+\DoxyCodeLine{8537                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{8538             \}}
+\DoxyCodeLine{8539 \textcolor{comment}{//            visitor.postVisit();}}
+\DoxyCodeLine{8540         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a0aeb8573ee76a7d3a3d0b3cda2aa7f38}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a0aeb8573ee76a7d3a3d0b3cda2aa7f38}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!accept@{accept}}
+\index{accept@{accept}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void opendlv\+::system\+::\+Network\+Status\+Message\+::accept (\begin{DoxyParamCaption}\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8543                                              \{}
+\DoxyCodeLine{8544             visitor.preVisit(\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a1594adba3ba5bc54c9acf475850f520d}{ID}}(), \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a34e331edfdaa639cfbbaababf1c19b93}{ShortName}}(), \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_ac7c997da8068c65dc2c260f108252df0}{LongName}}());}
+\DoxyCodeLine{8545             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}int32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}code"{}}s), \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_ab34625ca952a067185ff31d45b698995}{m\_code}}, visitor);}
+\DoxyCodeLine{8546             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(2, std::move(\textcolor{stringliteral}{"{}std::string"{}}s), std::move(\textcolor{stringliteral}{"{}description"{}}s), \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a72a3e7a696a22bb0ab22ab9f864b9a90}{m\_description}}, visitor);}
+\DoxyCodeLine{8547             visitor.postVisit();}
+\DoxyCodeLine{8548         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a7d0b9d193c3e5ddfa6aa6d8211f9f24a}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a7d0b9d193c3e5ddfa6aa6d8211f9f24a}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!code@{code}}
+\index{code@{code}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{code()}{code()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int32\+\_\+t opendlv\+::system\+::\+Network\+Status\+Message\+::code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8514                                              \{}
+\DoxyCodeLine{8515             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_ab34625ca952a067185ff31d45b698995}{m\_code}};}
+\DoxyCodeLine{8516         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a17e208ba0b538391c75c5d284176755b}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a17e208ba0b538391c75c5d284176755b}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!code@{code}}
+\index{code@{code}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{code()}{code()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \& opendlv\+::system\+::\+Network\+Status\+Message\+::code (\begin{DoxyParamCaption}\item[{const int32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8510                                                                      \{}
+\DoxyCodeLine{8511             \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_ab34625ca952a067185ff31d45b698995}{m\_code}} = v;}
+\DoxyCodeLine{8512             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{8513         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a13d368e17321b463e2fa48651ed0c683}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a13d368e17321b463e2fa48651ed0c683}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!description@{description}}
+\index{description@{description}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{description()}{description()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string opendlv\+::system\+::\+Network\+Status\+Message\+::description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8521                                                       \{}
+\DoxyCodeLine{8522             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a72a3e7a696a22bb0ab22ab9f864b9a90}{m\_description}};}
+\DoxyCodeLine{8523         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a20fa37c74b15853ef822abe57cbaf5fc}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a20fa37c74b15853ef822abe57cbaf5fc}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!description@{description}}
+\index{description@{description}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{description()}{description()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \& opendlv\+::system\+::\+Network\+Status\+Message\+::description (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8517                                                                               \{}
+\DoxyCodeLine{8518             \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a72a3e7a696a22bb0ab22ab9f864b9a90}{m\_description}} = v;}
+\DoxyCodeLine{8519             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{8520         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a1594adba3ba5bc54c9acf475850f520d}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a1594adba3ba5bc54c9acf475850f520d}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!ID@{ID}}
+\index{ID@{ID}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{ID()}{ID()}}
+{\footnotesize\ttfamily static int32\+\_\+t opendlv\+::system\+::\+Network\+Status\+Message\+::\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8491                                    \{}
+\DoxyCodeLine{8492             \textcolor{keywordflow}{return} 1102;}
+\DoxyCodeLine{8493         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_ac7c997da8068c65dc2c260f108252df0}\label{classopendlv_1_1system_1_1NetworkStatusMessage_ac7c997da8068c65dc2c260f108252df0}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!LongName@{LongName}}
+\index{LongName@{LongName}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{LongName()}{LongName()}}
+{\footnotesize\ttfamily static const std\+::string opendlv\+::system\+::\+Network\+Status\+Message\+::\+Long\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8497                                                  \{}
+\DoxyCodeLine{8498             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a0aeab566c99f0f2213ca74bd9f7ffcf2}{TheLongName}};}
+\DoxyCodeLine{8499         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a6cbb71ef1f2fbc1891af5d8b2a3545e4}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a6cbb71ef1f2fbc1891af5d8b2a3545e4}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!operator=@{operator=}}
+\index{operator=@{operator=}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \& opendlv\+::system\+::\+Network\+Status\+Message\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a4c00c3f631e90146d23f5ea879a66f8f}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a4c00c3f631e90146d23f5ea879a66f8f}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!operator=@{operator=}}
+\index{operator=@{operator=}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \& opendlv\+::system\+::\+Network\+Status\+Message\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage}{Network\+Status\+Message}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a34e331edfdaa639cfbbaababf1c19b93}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a34e331edfdaa639cfbbaababf1c19b93}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!ShortName@{ShortName}}
+\index{ShortName@{ShortName}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{ShortName()}{ShortName()}}
+{\footnotesize\ttfamily static const std\+::string opendlv\+::system\+::\+Network\+Status\+Message\+::\+Short\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8494                                                   \{}
+\DoxyCodeLine{8495             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1system_1_1NetworkStatusMessage_a577dd2c66260e57ae99ab4d704170c0d}{TheShortName}};}
+\DoxyCodeLine{8496         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_ab34625ca952a067185ff31d45b698995}\label{classopendlv_1_1system_1_1NetworkStatusMessage_ab34625ca952a067185ff31d45b698995}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!m\_code@{m\_code}}
+\index{m\_code@{m\_code}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{m\_code}{m\_code}}
+{\footnotesize\ttfamily int32\+\_\+t opendlv\+::system\+::\+Network\+Status\+Message\+::m\+\_\+code \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a72a3e7a696a22bb0ab22ab9f864b9a90}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a72a3e7a696a22bb0ab22ab9f864b9a90}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!m\_description@{m\_description}}
+\index{m\_description@{m\_description}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{m\_description}{m\_description}}
+{\footnotesize\ttfamily std\+::string opendlv\+::system\+::\+Network\+Status\+Message\+::m\+\_\+description \{ \char`\"{}\char`\"{}s \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a0aeab566c99f0f2213ca74bd9f7ffcf2}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a0aeab566c99f0f2213ca74bd9f7ffcf2}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!TheLongName@{TheLongName}}
+\index{TheLongName@{TheLongName}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{TheLongName}{TheLongName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ opendlv\+::system\+::\+Network\+Status\+Message\+::\+The\+Long\+Name = \char`\"{}opendlv.\+system.\+Network\+Status\+Message\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1NetworkStatusMessage_a577dd2c66260e57ae99ab4d704170c0d}\label{classopendlv_1_1system_1_1NetworkStatusMessage_a577dd2c66260e57ae99ab4d704170c0d}} 
+\index{opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}!TheShortName@{TheShortName}}
+\index{TheShortName@{TheShortName}!opendlv::system::NetworkStatusMessage@{opendlv::system::NetworkStatusMessage}}
+\doxysubsubsection{\texorpdfstring{TheShortName}{TheShortName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ opendlv\+::system\+::\+Network\+Status\+Message\+::\+The\+Short\+Name = \char`\"{}Network\+Status\+Message\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{opendlv-standard-message-set_8hpp}{opendlv-\/standard-\/message-\/set.\+hpp}}\end{DoxyCompactItemize}
