@@ -1,0 +1,678 @@
+\hypertarget{classcluon_1_1UDPReceiver}{}\doxysection{cluon\+::UDPReceiver Class Reference}
+\label{classcluon_1_1UDPReceiver}\index{cluon::UDPReceiver@{cluon::UDPReceiver}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for cluon\+::UDPReceiver\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcluon_1_1UDPReceiver_1_1m__mreq}{m\+\_\+mreq}}
+\item 
+struct \mbox{\hyperlink{structcluon_1_1UDPReceiver_1_1m__receiveFromAddress}{m\+\_\+receive\+From\+Address}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1UDPReceiver_1_1PipelineEntry}{Pipeline\+Entry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1UDPReceiver_a067d67a9a40ebcd0d000969c1020706e}{UDPReceiver}} (const std\+::string \&receive\+From\+Address, uint16\+\_\+t receive\+From\+Port, std\+::function$<$ void(std\+::string \&\&, std\+::string \&\&, std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \&\&)$>$ delegate, uint16\+\_\+t local\+Send\+From\+Port=0) noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1UDPReceiver_a41f1994fda9cecd280f6160b8b9482f2}{$\sim$\+UDPReceiver}} () noexcept
+\item 
+bool \mbox{\hyperlink{classcluon_1_1UDPReceiver_a8f371c1a0bb9325bab53d3464eb3828e}{is\+Running}} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1UDPReceiver_a714a25dd69c654f71a6fa6c68a6e3531}{UDPReceiver}} (const \mbox{\hyperlink{classcluon_1_1UDPReceiver}{UDPReceiver}} \&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1UDPReceiver_a20c6c6342e0fe6bfcf02aa59a34edce2}{UDPReceiver}} (\mbox{\hyperlink{classcluon_1_1UDPReceiver}{UDPReceiver}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1UDPReceiver}{UDPReceiver}} \& \mbox{\hyperlink{classcluon_1_1UDPReceiver_a9343f31d7dca4cf4705ced9bb3dc9d4b}{operator=}} (const \mbox{\hyperlink{classcluon_1_1UDPReceiver}{UDPReceiver}} \&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1UDPReceiver}{UDPReceiver}} \& \mbox{\hyperlink{classcluon_1_1UDPReceiver_a8344d7f0c59b22afa77d7a1143683884}{operator=}} (\mbox{\hyperlink{classcluon_1_1UDPReceiver}{UDPReceiver}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{classcluon_1_1UDPReceiver_a16391f723a0de5ff3e74ac06a0995362}{close\+Socket}} (int error\+Code) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1UDPReceiver_abacf832ad3a811b596fe7eb6d88f92b7}{read\+From\+Socket}} () noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\+\_\+socket}} \{-\/1\}
+\item 
+bool \mbox{\hyperlink{classcluon_1_1UDPReceiver_afbd37e7b68e1d8121245a7082273bbcb}{m\+\_\+is\+Blocking\+Socket}} \{true\}
+\item 
+std\+::set$<$ unsigned long $>$ \mbox{\hyperlink{classcluon_1_1UDPReceiver_a8753dd650764bd6880778939b0334733}{m\+\_\+list\+Of\+Local\+IPAddresses}} \{\}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classcluon_1_1UDPReceiver_a76d00661dd3cc67b691e7a0111d8aaf0}{m\+\_\+local\+Send\+From\+Port}}
+\item 
+bool \mbox{\hyperlink{classcluon_1_1UDPReceiver_a838b64843d88ab88308915b63e4f3bcf}{m\+\_\+is\+Multicast}} \{false\}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classcluon_1_1UDPReceiver_acc1788b36b9e57b287a67704b44c43a5}{m\+\_\+read\+From\+Socket\+Thread\+Running}} \{false\}
+\item 
+std\+::thread \mbox{\hyperlink{classcluon_1_1UDPReceiver_a3fc3213696fc34aaac06dc8acb6ddf79}{m\+\_\+read\+From\+Socket\+Thread}} \{\}
+\item 
+std\+::function$<$ void(std\+::string \&\&, std\+::string \&\&, std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point)$>$ \mbox{\hyperlink{classcluon_1_1UDPReceiver_ab56a35a6ff23a513a40ca817042c9019}{m\+\_\+delegate}} \{\}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcluon_1_1NotifyingPipeline}{cluon\+::\+Notifying\+Pipeline}}$<$ \mbox{\hyperlink{classcluon_1_1UDPReceiver_1_1PipelineEntry}{Pipeline\+Entry}} $>$ $>$ \mbox{\hyperlink{classcluon_1_1UDPReceiver_afe2b9d6c68a9c40f860a08942fb0b846}{m\+\_\+pipeline}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+To receive data from a UDP socket, simply include the header {\ttfamily \#include \texorpdfstring{$<$}{<}cluon/\+UDPReceiver.\+hpp\texorpdfstring{$>$}{>}}.
+
+Next, create an instance of class {\ttfamily \mbox{\hyperlink{classcluon_1_1UDPReceiver}{cluon\+::\+UDPReceiver}}} as follows\+: {\ttfamily \mbox{\hyperlink{classcluon_1_1UDPReceiver}{cluon\+::\+UDPReceiver}} receiver(\char`\"{}127.\+0.\+0.\+1\char`\"{}, 1234, delegate);}. The first parameter is of type {\ttfamily std\+::string} expecting a numerical IPv4 address, the second parameter specifies the UDP port, from which data shall be received from, and the last parameter is of type {\ttfamily std\+::function} that is called whenever new bytes are available to be processed.
+
+The complete signature for the delegate function is {\ttfamily std\+::function\texorpdfstring{$<$}{<}void(std\+::string \&\&, std\+::string \&\&, std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \&\&) noexcept\texorpdfstring{$>$}{>}}\+: The first parameter contains the bytes that have been received, the second parameter containes the human-\/readable representation of the sender (X.\+Y.\+Z.\+W\+:ABCD), and the last parameter is the time stamp when the data has been received. An example using a C++ lambda expression would look as follows\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1UDPReceiver}{cluon::UDPReceiver}} receiver(\textcolor{stringliteral}{"{}127.0.0.1"{}}, 1234,}
+\DoxyCodeLine{    [](std::string \&\&data, std::string \&\&sender, std::chrono::system\_clock::time\_point \&\&ts) \textcolor{keyword}{noexcept} \{}
+\DoxyCodeLine{        \textcolor{keyword}{const} \textcolor{keyword}{auto} timestamp(std::chrono::system\_clock::to\_time\_t(ts));}
+\DoxyCodeLine{        std::cout << \textcolor{stringliteral}{"{}Received "{}} << data.size() << \textcolor{stringliteral}{"{} bytes"{}}}
+\DoxyCodeLine{                  << \textcolor{stringliteral}{"{} from "{}} << sender}
+\DoxyCodeLine{                  << \textcolor{stringliteral}{"{} at "{}} << std::put\_time(std::localtime(\&timestamp), \textcolor{stringliteral}{"{}\%Y-\/\%m-\/\%d \%X"{}})}
+\DoxyCodeLine{                  << \textcolor{stringliteral}{"{}, containing '"{}} << data << \textcolor{stringliteral}{"{}'."{}} << std::endl;}
+\DoxyCodeLine{    \});}
+
+\end{DoxyCode}
+
+
+After creating an instance of class {\ttfamily \mbox{\hyperlink{classcluon_1_1UDPReceiver}{cluon\+::\+UDPReceiver}}}, it is immediately activated and concurrently waiting for data in a separate thread. To check whether the instance was created successfully and running, the method {\ttfamily \mbox{\hyperlink{classcluon_1_1UDPReceiver_a8f371c1a0bb9325bab53d3464eb3828e}{is\+Running()}}} should be called.
+
+A complete example is available \href{https://github.com/chrberger/libcluon/blob/master/libcluon/examples/cluon-UDPReceiver.cpp}{\texttt{ here}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_a714a25dd69c654f71a6fa6c68a6e3531}\label{classcluon_1_1UDPReceiver_a714a25dd69c654f71a6fa6c68a6e3531}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!UDPReceiver@{UDPReceiver}}
+\index{UDPReceiver@{UDPReceiver}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{UDPReceiver()}{UDPReceiver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily cluon\+::\+UDPReceiver\+::\+UDPReceiver (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1UDPReceiver}{UDPReceiver}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_a20c6c6342e0fe6bfcf02aa59a34edce2}\label{classcluon_1_1UDPReceiver_a20c6c6342e0fe6bfcf02aa59a34edce2}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!UDPReceiver@{UDPReceiver}}
+\index{UDPReceiver@{UDPReceiver}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{UDPReceiver()}{UDPReceiver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily cluon\+::\+UDPReceiver\+::\+UDPReceiver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1UDPReceiver}{UDPReceiver}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_a067d67a9a40ebcd0d000969c1020706e}\label{classcluon_1_1UDPReceiver_a067d67a9a40ebcd0d000969c1020706e}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!UDPReceiver@{UDPReceiver}}
+\index{UDPReceiver@{UDPReceiver}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{UDPReceiver()}{UDPReceiver()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily cluon\+::\+UDPReceiver\+::\+UDPReceiver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{receive\+From\+Address,  }\item[{uint16\+\_\+t}]{receive\+From\+Port,  }\item[{std\+::function$<$ void(std\+::string \&\&, std\+::string \&\&, std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \&\&)$>$}]{delegate,  }\item[{uint16\+\_\+t}]{local\+Send\+From\+Port = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em receive\+From\+Address} & Numerical IPv4 address to receive UDP packets from. \\
+\hline
+{\em receive\+From\+Port} & Port to receive UDP packets from. \\
+\hline
+{\em delegate} & Functional (noexcept) to handle received bytes; parameters are received data, sender, timestamp. \\
+\hline
+{\em local\+Send\+From\+Port} & Port that an application is using to send data. This port (\texorpdfstring{$>$}{>} 0) is ignored when data is received. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10211     : \mbox{\hyperlink{classcluon_1_1UDPReceiver_a76d00661dd3cc67b691e7a0111d8aaf0}{m\_localSendFromPort}}(localSendFromPort)}
+\DoxyCodeLine{10212     , m\_receiveFromAddress()}
+\DoxyCodeLine{10213     , m\_mreq()}
+\DoxyCodeLine{10214     , \mbox{\hyperlink{classcluon_1_1UDPReceiver_a3fc3213696fc34aaac06dc8acb6ddf79}{m\_readFromSocketThread}}()}
+\DoxyCodeLine{10215     , \mbox{\hyperlink{classcluon_1_1UDPReceiver_ab56a35a6ff23a513a40ca817042c9019}{m\_delegate}}(std::move(delegate)) \{}
+\DoxyCodeLine{10216     \textcolor{comment}{// Decompose given address string to check validity with numerical IPv4 address.}}
+\DoxyCodeLine{10217     std::string tmp\{\mbox{\hyperlink{namespacecluon_ad2106ef443cf03fcc23de2e75016d79e}{cluon::getIPv4FromHostname}}(receiveFromAddress)\};}
+\DoxyCodeLine{10218     std::replace(tmp.begin(), tmp.end(), \textcolor{charliteral}{'.'}, \textcolor{charliteral}{' '});}
+\DoxyCodeLine{10219     std::istringstream sstr\{tmp\};}
+\DoxyCodeLine{10220     std::vector<int> receiveFromAddressTokens\{std::istream\_iterator<int>(sstr), std::istream\_iterator<int>()\};}
+\DoxyCodeLine{10221 }
+\DoxyCodeLine{10222     \textcolor{keywordflow}{if} ((!receiveFromAddress.empty()) \&\& (4 == receiveFromAddressTokens.size())}
+\DoxyCodeLine{10223         \&\& !(std::end(receiveFromAddressTokens)}
+\DoxyCodeLine{10224              != std::find\_if(receiveFromAddressTokens.begin(), receiveFromAddressTokens.end(), [](\textcolor{keywordtype}{int} a) \{ return (a < 0) || (a > 255); \}))}
+\DoxyCodeLine{10225         \&\& (0 < receiveFromPort)) \{}
+\DoxyCodeLine{10226         \textcolor{comment}{// Check for valid IP address.}}
+\DoxyCodeLine{10227         \textcolor{keyword}{struct }sockaddr\_in tmpSocketAddress \{\};}
+\DoxyCodeLine{10228         \textcolor{keyword}{const} \textcolor{keywordtype}{bool} isValid = (0 < ::inet\_pton(AF\_INET, receiveFromAddress.c\_str(), \&(tmpSocketAddress.sin\_addr))) \&\& (224 > receiveFromAddressTokens[0]);}
+\DoxyCodeLine{10229 }
+\DoxyCodeLine{10230         \textcolor{comment}{// Check for UDP multicast, i.e., IP address range [225.0.0.1 -\/ 239.255.255.255].}}
+\DoxyCodeLine{10231         \mbox{\hyperlink{classcluon_1_1UDPReceiver_a838b64843d88ab88308915b63e4f3bcf}{m\_isMulticast}} = (((224 < receiveFromAddressTokens[0]) \&\& (receiveFromAddressTokens[0] <= 239))}
+\DoxyCodeLine{10232                          \&\& ((0 <= receiveFromAddressTokens[1]) \&\& (receiveFromAddressTokens[1] <= 255))}
+\DoxyCodeLine{10233                          \&\& ((0 <= receiveFromAddressTokens[2]) \&\& (receiveFromAddressTokens[2] <= 255))}
+\DoxyCodeLine{10234                          \&\& ((1 <= receiveFromAddressTokens[3]) \&\& (receiveFromAddressTokens[3] <= 255)));}
+\DoxyCodeLine{10235 }
+\DoxyCodeLine{10236         std::memset(\&m\_receiveFromAddress, 0, \textcolor{keyword}{sizeof}(m\_receiveFromAddress));}
+\DoxyCodeLine{10237 \textcolor{preprocessor}{\#ifdef WIN32}}
+\DoxyCodeLine{10238         \textcolor{comment}{// According to http://www.sockets.com/err\_lst1.htm, the binding is}}
+\DoxyCodeLine{10239         \textcolor{comment}{// different on Windows opposed to POSIX when using the real address}}
+\DoxyCodeLine{10240         \textcolor{comment}{// here; thus, we need to use INADDR\_ANY.}}
+\DoxyCodeLine{10241         m\_receiveFromAddress.sin\_addr.s\_addr = (\mbox{\hyperlink{classcluon_1_1UDPReceiver_a838b64843d88ab88308915b63e4f3bcf}{m\_isMulticast}} ? htonl(INADDR\_ANY) : ::inet\_addr(receiveFromAddress.c\_str()));}
+\DoxyCodeLine{10242 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10243         m\_receiveFromAddress.sin\_addr.s\_addr = ::inet\_addr(receiveFromAddress.c\_str());}
+\DoxyCodeLine{10244 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10245         m\_receiveFromAddress.sin\_family = AF\_INET;}
+\DoxyCodeLine{10246         m\_receiveFromAddress.sin\_port   = htons(receiveFromPort);}
+\DoxyCodeLine{10247 }
+\DoxyCodeLine{10248 \textcolor{preprocessor}{\#ifdef WIN32}}
+\DoxyCodeLine{10249         \textcolor{comment}{// Load Winsock 2.2 DLL.}}
+\DoxyCodeLine{10250         WSADATA wsaData;}
+\DoxyCodeLine{10251         \textcolor{keywordflow}{if} (WSAStartup(MAKEWORD(2, 2), \&wsaData) != 0) \{}
+\DoxyCodeLine{10252             std::cerr << \textcolor{stringliteral}{"{}[cluon::UDPReceiver] Error while calling WSAStartUp: "{}} << WSAGetLastError() << std::endl;}
+\DoxyCodeLine{10253         \}}
+\DoxyCodeLine{10254 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10255 }
+\DoxyCodeLine{10256         \mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}} = ::socket(PF\_INET, SOCK\_DGRAM, IPPROTO\_UDP);}
+\DoxyCodeLine{10257 }
+\DoxyCodeLine{10258 \textcolor{preprocessor}{\#ifdef WIN32}}
+\DoxyCodeLine{10259         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}} < 0) \{}
+\DoxyCodeLine{10260             std::cerr << \textcolor{stringliteral}{"{}[cluon::UDPReceiver] Error while creating socket: "{}} << WSAGetLastError() << std::endl;}
+\DoxyCodeLine{10261             WSACleanup();}
+\DoxyCodeLine{10262         \}}
+\DoxyCodeLine{10263 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10264 }
+\DoxyCodeLine{10265         \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}} < 0)) \{}
+\DoxyCodeLine{10266             \textcolor{comment}{// Allow reusing of ports by multiple calls with same address/port.}}
+\DoxyCodeLine{10267             uint32\_t YES = 1;}
+\DoxyCodeLine{10268             \textcolor{comment}{// clang-\/format off}}
+\DoxyCodeLine{10269             \textcolor{keyword}{auto} \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}} = ::setsockopt(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, SOL\_SOCKET, SO\_REUSEADDR, \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char} *\textcolor{keyword}{>}(\&YES), \textcolor{keyword}{sizeof}(YES)); \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10270             \textcolor{comment}{// clang-\/format on}}
+\DoxyCodeLine{10271             \textcolor{keywordflow}{if} (0 > \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}) \{}
+\DoxyCodeLine{10272 \textcolor{preprocessor}{\#ifdef WIN32 }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10273                 \textcolor{keyword}{auto} errorCode = WSAGetLastError();}
+\DoxyCodeLine{10274 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10275                 \textcolor{keyword}{auto} errorCode = errno; \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10276 \textcolor{preprocessor}{\#endif                                  }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10277                 \mbox{\hyperlink{classcluon_1_1UDPReceiver_a16391f723a0de5ff3e74ac06a0995362}{closeSocket}}(errorCode); \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10278             \}}
+\DoxyCodeLine{10279         \}}
+\DoxyCodeLine{10280 }
+\DoxyCodeLine{10281         \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}} < 0)) \{}
+\DoxyCodeLine{10282             \textcolor{comment}{// Trying to enable non\_blocking mode.}}
+\DoxyCodeLine{10283 \textcolor{preprocessor}{\#ifdef WIN32 }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10284             u\_long nonBlocking = 1;}
+\DoxyCodeLine{10285             \mbox{\hyperlink{classcluon_1_1UDPReceiver_afbd37e7b68e1d8121245a7082273bbcb}{m\_isBlockingSocket}} = !(NO\_ERROR == ::ioctlsocket(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, FIONBIO, \&nonBlocking));}
+\DoxyCodeLine{10286 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10287             \textcolor{keyword}{const} \textcolor{keywordtype}{int} FLAGS    = ::fcntl(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, F\_GETFL, 0);}
+\DoxyCodeLine{10288             \mbox{\hyperlink{classcluon_1_1UDPReceiver_afbd37e7b68e1d8121245a7082273bbcb}{m\_isBlockingSocket}} = !(0 == ::fcntl(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, F\_SETFL, FLAGS | O\_NONBLOCK));}
+\DoxyCodeLine{10289 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10290         \}}
+\DoxyCodeLine{10291 }
+\DoxyCodeLine{10292         \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}} < 0)) \{}
+\DoxyCodeLine{10293             \textcolor{comment}{// Trying to enable non\_blocking mode.}}
+\DoxyCodeLine{10294 \textcolor{preprocessor}{\#ifdef WIN32 }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10295             u\_long nonBlocking = 1;}
+\DoxyCodeLine{10296             \mbox{\hyperlink{classcluon_1_1UDPReceiver_afbd37e7b68e1d8121245a7082273bbcb}{m\_isBlockingSocket}} = !(NO\_ERROR == ::ioctlsocket(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, FIONBIO, \&nonBlocking));}
+\DoxyCodeLine{10297 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10298             \textcolor{keyword}{const} \textcolor{keywordtype}{int} FLAGS    = ::fcntl(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, F\_GETFL, 0);}
+\DoxyCodeLine{10299             \mbox{\hyperlink{classcluon_1_1UDPReceiver_afbd37e7b68e1d8121245a7082273bbcb}{m\_isBlockingSocket}} = !(0 == ::fcntl(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, F\_SETFL, FLAGS | O\_NONBLOCK));}
+\DoxyCodeLine{10300 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10301         \}}
+\DoxyCodeLine{10302 }
+\DoxyCodeLine{10303         \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}} < 0)) \{}
+\DoxyCodeLine{10304             \textcolor{comment}{// Try setting receiving buffer.}}
+\DoxyCodeLine{10305             \textcolor{keywordtype}{int} recvBuffer\{26214400\};}
+\DoxyCodeLine{10306             \textcolor{keyword}{auto} \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}} = ::setsockopt(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, SOL\_SOCKET, SO\_RCVBUF, \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char} *\textcolor{keyword}{>}(\&recvBuffer), \textcolor{keyword}{sizeof}(recvBuffer));}
+\DoxyCodeLine{10307             \textcolor{keywordflow}{if} (\mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}} < 0) \{}
+\DoxyCodeLine{10308 \textcolor{preprocessor}{\#ifdef WIN32 }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10309                 \textcolor{keyword}{auto} errorCode = WSAGetLastError();}
+\DoxyCodeLine{10310 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10311                 \textcolor{keyword}{auto} errorCode = errno; \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10312 \textcolor{preprocessor}{\#endif                                                                                                                                       }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10313                 std::cerr << \textcolor{stringliteral}{"{}[cluon::UDPReceiver] Error while trying to set SO\_RCVBUF to "{}} << recvBuffer << \textcolor{stringliteral}{"{}: "{}} << errorCode << std::endl; \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10314             \}}
+\DoxyCodeLine{10315         \}}
+\DoxyCodeLine{10316 }
+\DoxyCodeLine{10317         \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}} < 0)) \{}
+\DoxyCodeLine{10318             \textcolor{comment}{// Bind to receive address/port.}}
+\DoxyCodeLine{10319             \textcolor{comment}{// clang-\/format off}}
+\DoxyCodeLine{10320             \textcolor{keyword}{auto} \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}} = ::bind(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, \textcolor{keyword}{reinterpret\_cast<}struct sockaddr *\textcolor{keyword}{>}(\&m\_receiveFromAddress), \textcolor{keyword}{sizeof}(m\_receiveFromAddress)); \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10321             \textcolor{comment}{// clang-\/format on}}
+\DoxyCodeLine{10322             \textcolor{keywordflow}{if} (0 > \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}) \{}
+\DoxyCodeLine{10323 \textcolor{preprocessor}{\#ifdef WIN32 }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10324                 \textcolor{keyword}{auto} errorCode = WSAGetLastError();}
+\DoxyCodeLine{10325 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10326                 \textcolor{keyword}{auto} errorCode = errno; \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10327 \textcolor{preprocessor}{\#endif                                  }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10328                 \mbox{\hyperlink{classcluon_1_1UDPReceiver_a16391f723a0de5ff3e74ac06a0995362}{closeSocket}}(errorCode); \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10329             \}}
+\DoxyCodeLine{10330         \}}
+\DoxyCodeLine{10331 }
+\DoxyCodeLine{10332         \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}} < 0)) \{}
+\DoxyCodeLine{10333             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1UDPReceiver_a838b64843d88ab88308915b63e4f3bcf}{m\_isMulticast}}) \{}
+\DoxyCodeLine{10334                 \textcolor{comment}{// Join the multicast group.}}
+\DoxyCodeLine{10335                 m\_mreq.imr\_multiaddr.s\_addr = ::inet\_addr(receiveFromAddress.c\_str());}
+\DoxyCodeLine{10336                 m\_mreq.imr\_interface.s\_addr = htonl(INADDR\_ANY);}
+\DoxyCodeLine{10337                 \textcolor{comment}{// clang-\/format off}}
+\DoxyCodeLine{10338                 \textcolor{keyword}{auto} retval                 = ::setsockopt(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, IPPROTO\_IP, IP\_ADD\_MEMBERSHIP, \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char} *\textcolor{keyword}{>}(\&m\_mreq), \textcolor{keyword}{sizeof}(m\_mreq)); \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10339                 \textcolor{comment}{// clang-\/format on}}
+\DoxyCodeLine{10340                 \textcolor{keywordflow}{if} (0 > retval) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10341 \textcolor{preprocessor}{\#ifdef WIN32                      }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10342                     \mbox{\hyperlink{classcluon_1_1UDPReceiver_a16391f723a0de5ff3e74ac06a0995362}{closeSocket}}(WSAGetLastError());}
+\DoxyCodeLine{10343 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10344                     \mbox{\hyperlink{classcluon_1_1UDPReceiver_a16391f723a0de5ff3e74ac06a0995362}{closeSocket}}(errno); \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10345 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10346                 \}}
+\DoxyCodeLine{10347             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!isValid) \{}
+\DoxyCodeLine{10348                 \mbox{\hyperlink{classcluon_1_1UDPReceiver_a16391f723a0de5ff3e74ac06a0995362}{closeSocket}}(EBADF);}
+\DoxyCodeLine{10349             \}}
+\DoxyCodeLine{10350         \}}
+\DoxyCodeLine{10351 }
+\DoxyCodeLine{10352         \textcolor{comment}{// Fill list of local IP address to avoid sending data to ourselves.}}
+\DoxyCodeLine{10353         \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}} < 0)) \{}
+\DoxyCodeLine{10354 \textcolor{preprocessor}{\#ifdef WIN32}}
+\DoxyCodeLine{10355             DWORD size\{0\};}
+\DoxyCodeLine{10356             \textcolor{keywordflow}{if} (ERROR\_BUFFER\_OVERFLOW == GetAdaptersAddresses(AF\_UNSPEC, GAA\_FLAG\_INCLUDE\_PREFIX, NULL, NULL, \&size)) \{}
+\DoxyCodeLine{10357                 PIP\_ADAPTER\_ADDRESSES adapters = \textcolor{keyword}{reinterpret\_cast<}PIP\_ADAPTER\_ADDRESSES\textcolor{keyword}{>}(malloc(size));}
+\DoxyCodeLine{10358                 \textcolor{keywordflow}{if} (ERROR\_SUCCESS == GetAdaptersAddresses(AF\_UNSPEC, GAA\_FLAG\_INCLUDE\_PREFIX, NULL, adapters, \&size)) \{}
+\DoxyCodeLine{10359                     \textcolor{keywordflow}{for} (PIP\_ADAPTER\_ADDRESSES adapter = adapters; \textcolor{keyword}{nullptr} != adapter; adapter = adapter-\/>Next) \{}
+\DoxyCodeLine{10360                         \textcolor{keywordflow}{for} (PIP\_ADAPTER\_UNICAST\_ADDRESS unicastAddress = adapter-\/>FirstUnicastAddress; unicastAddress != NULL;}
+\DoxyCodeLine{10361                              unicastAddress                             = unicastAddress-\/>Next) \{}
+\DoxyCodeLine{10362                             \textcolor{keywordflow}{if} (AF\_INET == unicastAddress-\/>Address.lpSockaddr-\/>sa\_family) \{}
+\DoxyCodeLine{10363                                 ::getnameinfo(unicastAddress-\/>Address.lpSockaddr, unicastAddress-\/>Address.iSockaddrLength, \textcolor{keyword}{nullptr}, 0, NULL, 0, NI\_NUMERICHOST);}
+\DoxyCodeLine{10364                                 std::memcpy(\&tmpSocketAddress, unicastAddress-\/>Address.lpSockaddr, \textcolor{keyword}{sizeof}(tmpSocketAddress)); \textcolor{comment}{/* Flawfinder: ignore */} \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10365                                 \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} LOCAL\_IP = tmpSocketAddress.sin\_addr.s\_addr;}
+\DoxyCodeLine{10366                                 \mbox{\hyperlink{classcluon_1_1UDPReceiver_a8753dd650764bd6880778939b0334733}{m\_listOfLocalIPAddresses}}.insert(LOCAL\_IP);}
+\DoxyCodeLine{10367                             \}}
+\DoxyCodeLine{10368                         \}}
+\DoxyCodeLine{10369                     \}}
+\DoxyCodeLine{10370                 \}}
+\DoxyCodeLine{10371                 free(adapters);}
+\DoxyCodeLine{10372             \}}
+\DoxyCodeLine{10373 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10374             \textcolor{keyword}{struct }ifaddrs *interfaceAddress;}
+\DoxyCodeLine{10375             \textcolor{keywordflow}{if} (0 == ::getifaddrs(\&interfaceAddress)) \{}
+\DoxyCodeLine{10376                 \textcolor{keywordflow}{for} (\textcolor{keyword}{struct} ifaddrs *it = interfaceAddress; \textcolor{keyword}{nullptr} != it; it = it-\/>ifa\_next) \{}
+\DoxyCodeLine{10377                     \textcolor{keywordflow}{if} ((\textcolor{keyword}{nullptr} != it-\/>ifa\_addr) \&\& (it-\/>ifa\_addr-\/>sa\_family == AF\_INET)) \{}
+\DoxyCodeLine{10378                         \textcolor{keywordflow}{if} (0 == ::getnameinfo(it-\/>ifa\_addr, \textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} sockaddr\_in), \textcolor{keyword}{nullptr}, 0, \textcolor{keyword}{nullptr}, 0, NI\_NUMERICHOST)) \{}
+\DoxyCodeLine{10379                             std::memcpy(\&tmpSocketAddress, it-\/>ifa\_addr, \textcolor{keyword}{sizeof}(tmpSocketAddress)); \textcolor{comment}{/* Flawfinder: ignore */} \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10380                             \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} LOCAL\_IP = tmpSocketAddress.sin\_addr.s\_addr;}
+\DoxyCodeLine{10381                             \mbox{\hyperlink{classcluon_1_1UDPReceiver_a8753dd650764bd6880778939b0334733}{m\_listOfLocalIPAddresses}}.insert(LOCAL\_IP);}
+\DoxyCodeLine{10382                         \}}
+\DoxyCodeLine{10383                     \}}
+\DoxyCodeLine{10384                 \}}
+\DoxyCodeLine{10385                 ::freeifaddrs(interfaceAddress);}
+\DoxyCodeLine{10386             \}}
+\DoxyCodeLine{10387 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10388         \}}
+\DoxyCodeLine{10389 }
+\DoxyCodeLine{10390         \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}} < 0)) \{}
+\DoxyCodeLine{10391             \textcolor{comment}{// Constructing the receiving thread could fail.}}
+\DoxyCodeLine{10392             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{10393                 \mbox{\hyperlink{classcluon_1_1UDPReceiver_a3fc3213696fc34aaac06dc8acb6ddf79}{m\_readFromSocketThread}} = std::thread(\&\mbox{\hyperlink{classcluon_1_1UDPReceiver_abacf832ad3a811b596fe7eb6d88f92b7}{UDPReceiver::readFromSocket}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{10394 }
+\DoxyCodeLine{10395                 \textcolor{comment}{// Let the operating system spawn the thread.}}
+\DoxyCodeLine{10396                 \textcolor{keyword}{using namespace }std::literals::chrono\_literals; \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10397                 \textcolor{keywordflow}{do} \{ std::this\_thread::sleep\_for(1ms); \} \textcolor{keywordflow}{while} (!\mbox{\hyperlink{classcluon_1_1UDPReceiver_acc1788b36b9e57b287a67704b44c43a5}{m\_readFromSocketThreadRunning}}.load());}
+\DoxyCodeLine{10398             \} \textcolor{keywordflow}{catch} (...) \{ \mbox{\hyperlink{classcluon_1_1UDPReceiver_a16391f723a0de5ff3e74ac06a0995362}{closeSocket}}(ECHILD); \} \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10399 }
+\DoxyCodeLine{10400             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{10401                 \mbox{\hyperlink{classcluon_1_1UDPReceiver_afe2b9d6c68a9c40f860a08942fb0b846}{m\_pipeline}} = std::make\_shared<cluon::NotifyingPipeline<PipelineEntry>>(}
+\DoxyCodeLine{10402                     [\textcolor{keyword}{this}](PipelineEntry \&\&entry) \{ this-\/>\mbox{\hyperlink{classcluon_1_1UDPReceiver_ab56a35a6ff23a513a40ca817042c9019}{m\_delegate}}(std::move(entry.m\_data), std::move(entry.m\_from), std::move(entry.m\_sampleTime)); \});}
+\DoxyCodeLine{10403                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1UDPReceiver_afe2b9d6c68a9c40f860a08942fb0b846}{m\_pipeline}}) \{}
+\DoxyCodeLine{10404                     \textcolor{comment}{// Let the operating system spawn the thread.}}
+\DoxyCodeLine{10405                     \textcolor{keyword}{using namespace }std::literals::chrono\_literals; \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10406                     \textcolor{keywordflow}{do} \{ std::this\_thread::sleep\_for(1ms); \} \textcolor{keywordflow}{while} (!\mbox{\hyperlink{classcluon_1_1UDPReceiver_afe2b9d6c68a9c40f860a08942fb0b846}{m\_pipeline}}-\/>isRunning());}
+\DoxyCodeLine{10407                 \}}
+\DoxyCodeLine{10408             \} \textcolor{keywordflow}{catch} (...) \{ \mbox{\hyperlink{classcluon_1_1UDPReceiver_a16391f723a0de5ff3e74ac06a0995362}{closeSocket}}(ECHILD); \} \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10409         \}}
+\DoxyCodeLine{10410     \}}
+\DoxyCodeLine{10411 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_ad2106ef443cf03fcc23de2e75016d79e}{cluon\+::get\+IPv4\+From\+Hostname()}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_abacf832ad3a811b596fe7eb6d88f92b7}{read\+From\+Socket()}}, and \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{ret\+Val}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_a41f1994fda9cecd280f6160b8b9482f2}\label{classcluon_1_1UDPReceiver_a41f1994fda9cecd280f6160b8b9482f2}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!````~UDPReceiver@{$\sim$UDPReceiver}}
+\index{````~UDPReceiver@{$\sim$UDPReceiver}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{$\sim$UDPReceiver()}{~UDPReceiver()}}
+{\footnotesize\ttfamily cluon\+::\+UDPReceiver\+::$\sim$\+UDPReceiver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10413                                           \{}
+\DoxyCodeLine{10414     \{}
+\DoxyCodeLine{10415         \mbox{\hyperlink{classcluon_1_1UDPReceiver_acc1788b36b9e57b287a67704b44c43a5}{m\_readFromSocketThreadRunning}}.store(\textcolor{keyword}{false});}
+\DoxyCodeLine{10416 }
+\DoxyCodeLine{10417         \textcolor{comment}{// Joining the thread could fail.}}
+\DoxyCodeLine{10418         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{10419             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1UDPReceiver_a3fc3213696fc34aaac06dc8acb6ddf79}{m\_readFromSocketThread}}.joinable()) \{}
+\DoxyCodeLine{10420                 \mbox{\hyperlink{classcluon_1_1UDPReceiver_a3fc3213696fc34aaac06dc8acb6ddf79}{m\_readFromSocketThread}}.join();}
+\DoxyCodeLine{10421             \}}
+\DoxyCodeLine{10422         \} \textcolor{keywordflow}{catch} (...) \{\} \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10423     \}}
+\DoxyCodeLine{10424 }
+\DoxyCodeLine{10425     \mbox{\hyperlink{classcluon_1_1UDPReceiver_afe2b9d6c68a9c40f860a08942fb0b846}{m\_pipeline}}.reset();}
+\DoxyCodeLine{10426 }
+\DoxyCodeLine{10427     \mbox{\hyperlink{classcluon_1_1UDPReceiver_a16391f723a0de5ff3e74ac06a0995362}{closeSocket}}(0);}
+\DoxyCodeLine{10428 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1UDPReceiver_a16391f723a0de5ff3e74ac06a0995362}{close\+Socket()}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_afe2b9d6c68a9c40f860a08942fb0b846}{m\+\_\+pipeline}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_a3fc3213696fc34aaac06dc8acb6ddf79}{m\+\_\+read\+From\+Socket\+Thread}}, and \mbox{\hyperlink{classcluon_1_1UDPReceiver_acc1788b36b9e57b287a67704b44c43a5}{m\+\_\+read\+From\+Socket\+Thread\+Running}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_a16391f723a0de5ff3e74ac06a0995362}\label{classcluon_1_1UDPReceiver_a16391f723a0de5ff3e74ac06a0995362}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!closeSocket@{closeSocket}}
+\index{closeSocket@{closeSocket}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{closeSocket()}{closeSocket()}}
+{\footnotesize\ttfamily void cluon\+::\+UDPReceiver\+::close\+Socket (\begin{DoxyParamCaption}\item[{int}]{error\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+This method closes the socket.
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+Code} & Error code that caused this closing. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10430                                                            \{}
+\DoxyCodeLine{10431     \textcolor{keywordflow}{if} (0 != errorCode) \{}
+\DoxyCodeLine{10432         std::cerr << \textcolor{stringliteral}{"{}[cluon::UDPReceiver] Failed to perform socket operation: "{}};}
+\DoxyCodeLine{10433 \textcolor{preprocessor}{\#ifdef WIN32}}
+\DoxyCodeLine{10434         std::cerr << errorCode << std::endl;}
+\DoxyCodeLine{10435 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10436         std::cerr << ::strerror(errorCode) << \textcolor{stringliteral}{"{} ("{}} << errorCode << \textcolor{stringliteral}{"{})"{}} << std::endl;}
+\DoxyCodeLine{10437 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10438     \}}
+\DoxyCodeLine{10439 }
+\DoxyCodeLine{10440     \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}} < 0)) \{}
+\DoxyCodeLine{10441         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1UDPReceiver_a838b64843d88ab88308915b63e4f3bcf}{m\_isMulticast}}) \{}
+\DoxyCodeLine{10442             \textcolor{comment}{// clang-\/format off}}
+\DoxyCodeLine{10443             \textcolor{keyword}{auto} \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}} = ::setsockopt(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, IPPROTO\_IP, IP\_DROP\_MEMBERSHIP, \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char} *\textcolor{keyword}{>}(\&m\_mreq), \textcolor{keyword}{sizeof}(m\_mreq)); \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10444             \textcolor{comment}{// clang-\/format on}}
+\DoxyCodeLine{10445             \textcolor{keywordflow}{if} (0 > \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}) \{                                                                         \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10446                 std::cerr << \textcolor{stringliteral}{"{}[cluon::UDPReceiver] Failed to drop multicast membership"{}} << std::endl; \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10447             \}}
+\DoxyCodeLine{10448         \}}
+\DoxyCodeLine{10449 }
+\DoxyCodeLine{10450 \textcolor{preprocessor}{\#ifdef WIN32}}
+\DoxyCodeLine{10451         ::shutdown(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, SD\_BOTH);}
+\DoxyCodeLine{10452         ::closesocket(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}});}
+\DoxyCodeLine{10453         WSACleanup();}
+\DoxyCodeLine{10454 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10455         ::shutdown(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, SHUT\_RDWR); \textcolor{comment}{// Disallow further read/write operations.}}
+\DoxyCodeLine{10456         ::close(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}});}
+\DoxyCodeLine{10457 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10458     \}}
+\DoxyCodeLine{10459     \mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}} = -\/1;}
+\DoxyCodeLine{10460 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{ret\+Val}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1UDPReceiver_a41f1994fda9cecd280f6160b8b9482f2}{$\sim$\+UDPReceiver()}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_a8f371c1a0bb9325bab53d3464eb3828e}\label{classcluon_1_1UDPReceiver_a8f371c1a0bb9325bab53d3464eb3828e}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{isRunning()}{isRunning()}}
+{\footnotesize\ttfamily bool cluon\+::\+UDPReceiver\+::is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+true if the \mbox{\hyperlink{classcluon_1_1UDPReceiver}{UDPReceiver}} could successfully be created and is able to receive data. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10462                                                   \{}
+\DoxyCodeLine{10463     \textcolor{keywordflow}{return} (\mbox{\hyperlink{classcluon_1_1UDPReceiver_acc1788b36b9e57b287a67704b44c43a5}{m\_readFromSocketThreadRunning}}.load() \&\& !\mbox{\hyperlink{classcluon_1_1TerminateHandler_a14570735df2bf9965520a022879b2a56}{TerminateHandler::instance}}().\mbox{\hyperlink{classcluon_1_1TerminateHandler_a81d8eacbcfc121e0cf4a2d303b84ab8a}{isTerminated}}.load());}
+\DoxyCodeLine{10464 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1TerminateHandler_a14570735df2bf9965520a022879b2a56}{cluon\+::\+Terminate\+Handler\+::instance()}}, \mbox{\hyperlink{classcluon_1_1TerminateHandler_a81d8eacbcfc121e0cf4a2d303b84ab8a}{cluon\+::\+Terminate\+Handler\+::is\+Terminated}}, and \mbox{\hyperlink{classcluon_1_1UDPReceiver_acc1788b36b9e57b287a67704b44c43a5}{m\+\_\+read\+From\+Socket\+Thread\+Running}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_a9343f31d7dca4cf4705ced9bb3dc9d4b}\label{classcluon_1_1UDPReceiver_a9343f31d7dca4cf4705ced9bb3dc9d4b}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1UDPReceiver}{UDPReceiver}} \& cluon\+::\+UDPReceiver\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1UDPReceiver}{UDPReceiver}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_a8344d7f0c59b22afa77d7a1143683884}\label{classcluon_1_1UDPReceiver_a8344d7f0c59b22afa77d7a1143683884}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1UDPReceiver}{UDPReceiver}} \& cluon\+::\+UDPReceiver\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1UDPReceiver}{UDPReceiver}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_abacf832ad3a811b596fe7eb6d88f92b7}\label{classcluon_1_1UDPReceiver_abacf832ad3a811b596fe7eb6d88f92b7}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!readFromSocket@{readFromSocket}}
+\index{readFromSocket@{readFromSocket}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{readFromSocket()}{readFromSocket()}}
+{\footnotesize\ttfamily void cluon\+::\+UDPReceiver\+::read\+From\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10466                                                  \{}
+\DoxyCodeLine{10467     \textcolor{comment}{// Create buffer to store data from socket.}}
+\DoxyCodeLine{10468     \textcolor{keyword}{constexpr} uint16\_t MAX\_LENGTH = \textcolor{keyword}{static\_cast<}uint16\_t\textcolor{keyword}{>}(\mbox{\hyperlink{namespacecluon_ae13fc5af4d0565408b5487cf0d6c0910a624f828bf1caf71cb881443a02f3379e}{UDPPacketSizeConstraints::MAX\_SIZE\_UDP\_PACKET}})}
+\DoxyCodeLine{10469                                     -\/ \textcolor{keyword}{static\_cast<}uint16\_t\textcolor{keyword}{>}(\mbox{\hyperlink{namespacecluon_ae13fc5af4d0565408b5487cf0d6c0910ad2a234bb6faedeef2be5adfc03f195a4}{UDPPacketSizeConstraints::SIZE\_IPv4\_HEADER}})}
+\DoxyCodeLine{10470                                     -\/ \textcolor{keyword}{static\_cast<}uint16\_t\textcolor{keyword}{>}(\mbox{\hyperlink{namespacecluon_ae13fc5af4d0565408b5487cf0d6c0910a840a6d5ecacba6823a0523c7c27182db}{UDPPacketSizeConstraints::SIZE\_UDP\_HEADER}});}
+\DoxyCodeLine{10471     std::array<char, MAX\_LENGTH> buffer\{\};}
+\DoxyCodeLine{10472 }
+\DoxyCodeLine{10473     \textcolor{keyword}{struct }timeval timeout \{\};}
+\DoxyCodeLine{10474 }
+\DoxyCodeLine{10475     \textcolor{comment}{// Define file descriptor set to watch for read operations.}}
+\DoxyCodeLine{10476     fd\_set setOfFiledescriptorsToReadFrom\{\};}
+\DoxyCodeLine{10477 }
+\DoxyCodeLine{10478     \textcolor{comment}{// Sender address and port.}}
+\DoxyCodeLine{10479     \textcolor{keyword}{constexpr} uint16\_t MAX\_ADDR\_SIZE\{1024\};}
+\DoxyCodeLine{10480     std::array<char, MAX\_ADDR\_SIZE> remoteAddress\{\};}
+\DoxyCodeLine{10481 }
+\DoxyCodeLine{10482     \textcolor{keyword}{struct }sockaddr\_storage remote \{\};}
+\DoxyCodeLine{10483     socklen\_t addrLength\{\textcolor{keyword}{sizeof}(remote)\};}
+\DoxyCodeLine{10484 }
+\DoxyCodeLine{10485     \textcolor{comment}{// Indicate to main thread that we are ready.}}
+\DoxyCodeLine{10486     \mbox{\hyperlink{classcluon_1_1UDPReceiver_acc1788b36b9e57b287a67704b44c43a5}{m\_readFromSocketThreadRunning}}.store(\textcolor{keyword}{true});}
+\DoxyCodeLine{10487 }
+\DoxyCodeLine{10488     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classcluon_1_1UDPReceiver_acc1788b36b9e57b287a67704b44c43a5}{m\_readFromSocketThreadRunning}}.load()) \{}
+\DoxyCodeLine{10489         \textcolor{comment}{// Define timeout for select system call. The timeval struct must be}}
+\DoxyCodeLine{10490         \textcolor{comment}{// reinitialized for every select call as it might be modified containing}}
+\DoxyCodeLine{10491         \textcolor{comment}{// the actual time slept.}}
+\DoxyCodeLine{10492         timeout.tv\_sec  = 0;}
+\DoxyCodeLine{10493         timeout.tv\_usec = 20 * 1000; \textcolor{comment}{// Check for new data with 50Hz.}}
+\DoxyCodeLine{10494 }
+\DoxyCodeLine{10495         FD\_ZERO(\&setOfFiledescriptorsToReadFrom);          \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10496         FD\_SET(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, \&setOfFiledescriptorsToReadFrom); \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10497         ::select(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}} + 1, \&setOfFiledescriptorsToReadFrom, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, \&timeout);}
+\DoxyCodeLine{10498 }
+\DoxyCodeLine{10499         ssize\_t totalBytesRead\{0\};}
+\DoxyCodeLine{10500         \textcolor{keywordflow}{if} (FD\_ISSET(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, \&setOfFiledescriptorsToReadFrom)) \{ \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10501             ssize\_t bytesRead\{0\};}
+\DoxyCodeLine{10502             \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{10503                 bytesRead = ::recvfrom(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}},}
+\DoxyCodeLine{10504                                        buffer.data(),}
+\DoxyCodeLine{10505                                        buffer.max\_size(),}
+\DoxyCodeLine{10506                                        0,}
+\DoxyCodeLine{10507                                        \textcolor{keyword}{reinterpret\_cast<}struct sockaddr *\textcolor{keyword}{>}(\&remote), \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10508                                        \textcolor{keyword}{reinterpret\_cast<}socklen\_t *\textcolor{keyword}{>}(\&addrLength));  \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10509 }
+\DoxyCodeLine{10510                 \textcolor{keywordflow}{if} ((0 < bytesRead) \&\& (\textcolor{keyword}{nullptr} != \mbox{\hyperlink{classcluon_1_1UDPReceiver_ab56a35a6ff23a513a40ca817042c9019}{m\_delegate}})) \{}
+\DoxyCodeLine{10511 \textcolor{preprocessor}{\#ifdef \_\_linux\_\_}}
+\DoxyCodeLine{10512                     std::chrono::system\_clock::time\_point timestamp;}
+\DoxyCodeLine{10513                     \textcolor{keyword}{struct }timeval receivedTimeStamp \{\};}
+\DoxyCodeLine{10514                     \textcolor{keywordflow}{if} (0 == ::ioctl(\mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\_socket}}, SIOCGSTAMP, \&receivedTimeStamp)) \{ \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10515                         \textcolor{comment}{// Transform struct timeval to C++ chrono.}}
+\DoxyCodeLine{10516                         std::chrono::time\_point<std::chrono::system\_clock, std::chrono::microseconds> transformedTimePoint(}
+\DoxyCodeLine{10517                             std::chrono::microseconds(receivedTimeStamp.tv\_sec * 1000000L + receivedTimeStamp.tv\_usec));}
+\DoxyCodeLine{10518                         timestamp = std::chrono::time\_point\_cast<std::chrono::system\_clock::duration>(transformedTimePoint);}
+\DoxyCodeLine{10519                     \} \textcolor{keywordflow}{else} \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10520                         \textcolor{comment}{// In case the ioctl failed, fall back to chrono. // LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10521                         timestamp = \mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{std::chrono::system\_clock::now}}(); \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10522                     \}}
+\DoxyCodeLine{10523 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10524                     std::chrono::system\_clock::time\_point timestamp = \mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{std::chrono::system\_clock::now}}();}
+\DoxyCodeLine{10525 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10526 }
+\DoxyCodeLine{10527                     \textcolor{comment}{// Transform sender address to C-\/string.}}
+\DoxyCodeLine{10528                     ::inet\_ntop(remote.ss\_family,}
+\DoxyCodeLine{10529                                 \&((\textcolor{keyword}{reinterpret\_cast<}struct sockaddr\_in *\textcolor{keyword}{>}(\&remote))-\/>sin\_addr), \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10530                                 remoteAddress.data(),}
+\DoxyCodeLine{10531                                 remoteAddress.max\_size());}
+\DoxyCodeLine{10532                     \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} RECVFROM\_IP\{\textcolor{keyword}{reinterpret\_cast<}struct sockaddr\_in *\textcolor{keyword}{>}(\&remote)-\/>sin\_addr.s\_addr\}; \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10533                     \textcolor{keyword}{const} uint16\_t RECVFROM\_PORT\{ntohs(\textcolor{keyword}{reinterpret\_cast<}struct sockaddr\_in *\textcolor{keyword}{>}(\&remote)-\/>sin\_port)\};    \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10534 }
+\DoxyCodeLine{10535                     \textcolor{comment}{// Check if the bytes actually came from us.}}
+\DoxyCodeLine{10536                     \textcolor{keywordtype}{bool} sentFromUs\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{10537                     \{}
+\DoxyCodeLine{10538                         \textcolor{keyword}{auto} pos                   = \mbox{\hyperlink{classcluon_1_1UDPReceiver_a8753dd650764bd6880778939b0334733}{m\_listOfLocalIPAddresses}}.find(RECVFROM\_IP);}
+\DoxyCodeLine{10539                         \textcolor{keyword}{const} \textcolor{keywordtype}{bool} sentFromLocalIP = (pos != \mbox{\hyperlink{classcluon_1_1UDPReceiver_a8753dd650764bd6880778939b0334733}{m\_listOfLocalIPAddresses}}.end() \&\& (*pos == RECVFROM\_IP));}
+\DoxyCodeLine{10540                         sentFromUs                 = sentFromLocalIP \&\& (\mbox{\hyperlink{classcluon_1_1UDPReceiver_a76d00661dd3cc67b691e7a0111d8aaf0}{m\_localSendFromPort}} == RECVFROM\_PORT);}
+\DoxyCodeLine{10541                     \}}
+\DoxyCodeLine{10542 }
+\DoxyCodeLine{10543                     \textcolor{comment}{// Create a pipeline entry to be processed concurrently.}}
+\DoxyCodeLine{10544                     \textcolor{keywordflow}{if} (!sentFromUs) \{}
+\DoxyCodeLine{10545                         PipelineEntry pe;}
+\DoxyCodeLine{10546                         pe.m\_data       = std::string(buffer.data(), \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(bytesRead));}
+\DoxyCodeLine{10547                         pe.m\_from       = std::string(remoteAddress.data()) + \textcolor{charliteral}{':'} + std::to\_string(RECVFROM\_PORT);}
+\DoxyCodeLine{10548                         pe.m\_sampleTime = timestamp;}
+\DoxyCodeLine{10549 }
+\DoxyCodeLine{10550                         \textcolor{comment}{// Store entry in queue.}}
+\DoxyCodeLine{10551                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1UDPReceiver_afe2b9d6c68a9c40f860a08942fb0b846}{m\_pipeline}}) \{}
+\DoxyCodeLine{10552                             \mbox{\hyperlink{classcluon_1_1UDPReceiver_afe2b9d6c68a9c40f860a08942fb0b846}{m\_pipeline}}-\/>add(std::move(pe));}
+\DoxyCodeLine{10553                         \}}
+\DoxyCodeLine{10554                     \}}
+\DoxyCodeLine{10555                     totalBytesRead += bytesRead;}
+\DoxyCodeLine{10556                 \}}
+\DoxyCodeLine{10557             \} \textcolor{keywordflow}{while} (!\mbox{\hyperlink{classcluon_1_1UDPReceiver_afbd37e7b68e1d8121245a7082273bbcb}{m\_isBlockingSocket}} \&\& (bytesRead > 0));}
+\DoxyCodeLine{10558         \}}
+\DoxyCodeLine{10559 }
+\DoxyCodeLine{10560         \textcolor{keywordflow}{if} (\textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}(totalBytesRead) > 0) \{}
+\DoxyCodeLine{10561             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1UDPReceiver_afe2b9d6c68a9c40f860a08942fb0b846}{m\_pipeline}}) \{}
+\DoxyCodeLine{10562                 \mbox{\hyperlink{classcluon_1_1UDPReceiver_afe2b9d6c68a9c40f860a08942fb0b846}{m\_pipeline}}-\/>notifyAll();}
+\DoxyCodeLine{10563             \}}
+\DoxyCodeLine{10564         \}}
+\DoxyCodeLine{10565     \}}
+\DoxyCodeLine{10566 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1UDPReceiver_1_1PipelineEntry_a0df4bb749d4cc0cefe08706dc9c8db18}{cluon\+::\+UDPReceiver\+::\+Pipeline\+Entry\+::m\+\_\+data}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_ab56a35a6ff23a513a40ca817042c9019}{m\+\_\+delegate}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_1_1PipelineEntry_ac821dfaf418c436d3b8438b9d19ab171}{cluon\+::\+UDPReceiver\+::\+Pipeline\+Entry\+::m\+\_\+from}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_afbd37e7b68e1d8121245a7082273bbcb}{m\+\_\+is\+Blocking\+Socket}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_a8753dd650764bd6880778939b0334733}{m\+\_\+list\+Of\+Local\+IPAddresses}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_a76d00661dd3cc67b691e7a0111d8aaf0}{m\+\_\+local\+Send\+From\+Port}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_afe2b9d6c68a9c40f860a08942fb0b846}{m\+\_\+pipeline}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_acc1788b36b9e57b287a67704b44c43a5}{m\+\_\+read\+From\+Socket\+Thread\+Running}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_1_1PipelineEntry_a6cb3e1b4f2d63b82b037bc9051734144}{cluon\+::\+UDPReceiver\+::\+Pipeline\+Entry\+::m\+\_\+sample\+Time}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}{m\+\_\+socket}}, \mbox{\hyperlink{namespacecluon_ae13fc5af4d0565408b5487cf0d6c0910a624f828bf1caf71cb881443a02f3379e}{cluon\+::\+MAX\+\_\+\+SIZE\+\_\+\+UDP\+\_\+\+PACKET}}, \mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{cluon\+::time\+::now()}}, \mbox{\hyperlink{namespacecluon_ae13fc5af4d0565408b5487cf0d6c0910ad2a234bb6faedeef2be5adfc03f195a4}{cluon\+::\+SIZE\+\_\+\+IPv4\+\_\+\+HEADER}}, and \mbox{\hyperlink{namespacecluon_ae13fc5af4d0565408b5487cf0d6c0910a840a6d5ecacba6823a0523c7c27182db}{cluon\+::\+SIZE\+\_\+\+UDP\+\_\+\+HEADER}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1UDPReceiver_a067d67a9a40ebcd0d000969c1020706e}{UDPReceiver()}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_ab56a35a6ff23a513a40ca817042c9019}\label{classcluon_1_1UDPReceiver_ab56a35a6ff23a513a40ca817042c9019}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!m\_delegate@{m\_delegate}}
+\index{m\_delegate@{m\_delegate}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{m\_delegate}{m\_delegate}}
+{\footnotesize\ttfamily std\+::function$<$void(std\+::string \&\&, std\+::string \&\&, std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point)$>$ cluon\+::\+UDPReceiver\+::m\+\_\+delegate \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1UDPReceiver_abacf832ad3a811b596fe7eb6d88f92b7}{read\+From\+Socket()}}.
+
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_afbd37e7b68e1d8121245a7082273bbcb}\label{classcluon_1_1UDPReceiver_afbd37e7b68e1d8121245a7082273bbcb}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!m\_isBlockingSocket@{m\_isBlockingSocket}}
+\index{m\_isBlockingSocket@{m\_isBlockingSocket}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{m\_isBlockingSocket}{m\_isBlockingSocket}}
+{\footnotesize\ttfamily bool cluon\+::\+UDPReceiver\+::m\+\_\+is\+Blocking\+Socket \{true\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1UDPReceiver_abacf832ad3a811b596fe7eb6d88f92b7}{read\+From\+Socket()}}.
+
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_a838b64843d88ab88308915b63e4f3bcf}\label{classcluon_1_1UDPReceiver_a838b64843d88ab88308915b63e4f3bcf}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!m\_isMulticast@{m\_isMulticast}}
+\index{m\_isMulticast@{m\_isMulticast}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{m\_isMulticast}{m\_isMulticast}}
+{\footnotesize\ttfamily bool cluon\+::\+UDPReceiver\+::m\+\_\+is\+Multicast \{false\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_a8753dd650764bd6880778939b0334733}\label{classcluon_1_1UDPReceiver_a8753dd650764bd6880778939b0334733}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!m\_listOfLocalIPAddresses@{m\_listOfLocalIPAddresses}}
+\index{m\_listOfLocalIPAddresses@{m\_listOfLocalIPAddresses}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{m\_listOfLocalIPAddresses}{m\_listOfLocalIPAddresses}}
+{\footnotesize\ttfamily std\+::set$<$unsigned long$>$ cluon\+::\+UDPReceiver\+::m\+\_\+list\+Of\+Local\+IPAddresses \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1UDPReceiver_abacf832ad3a811b596fe7eb6d88f92b7}{read\+From\+Socket()}}.
+
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_a76d00661dd3cc67b691e7a0111d8aaf0}\label{classcluon_1_1UDPReceiver_a76d00661dd3cc67b691e7a0111d8aaf0}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!m\_localSendFromPort@{m\_localSendFromPort}}
+\index{m\_localSendFromPort@{m\_localSendFromPort}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{m\_localSendFromPort}{m\_localSendFromPort}}
+{\footnotesize\ttfamily uint16\+\_\+t cluon\+::\+UDPReceiver\+::m\+\_\+local\+Send\+From\+Port\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1UDPReceiver_abacf832ad3a811b596fe7eb6d88f92b7}{read\+From\+Socket()}}.
+
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_afe2b9d6c68a9c40f860a08942fb0b846}\label{classcluon_1_1UDPReceiver_afe2b9d6c68a9c40f860a08942fb0b846}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!m\_pipeline@{m\_pipeline}}
+\index{m\_pipeline@{m\_pipeline}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{m\_pipeline}{m\_pipeline}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classcluon_1_1NotifyingPipeline}{cluon\+::\+Notifying\+Pipeline}}$<$\mbox{\hyperlink{classcluon_1_1UDPReceiver_1_1PipelineEntry}{Pipeline\+Entry}}$>$ $>$ cluon\+::\+UDPReceiver\+::m\+\_\+pipeline \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1UDPReceiver_abacf832ad3a811b596fe7eb6d88f92b7}{read\+From\+Socket()}}, and \mbox{\hyperlink{classcluon_1_1UDPReceiver_a41f1994fda9cecd280f6160b8b9482f2}{$\sim$\+UDPReceiver()}}.
+
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_a3fc3213696fc34aaac06dc8acb6ddf79}\label{classcluon_1_1UDPReceiver_a3fc3213696fc34aaac06dc8acb6ddf79}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!m\_readFromSocketThread@{m\_readFromSocketThread}}
+\index{m\_readFromSocketThread@{m\_readFromSocketThread}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{m\_readFromSocketThread}{m\_readFromSocketThread}}
+{\footnotesize\ttfamily std\+::thread cluon\+::\+UDPReceiver\+::m\+\_\+read\+From\+Socket\+Thread \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1UDPReceiver_a41f1994fda9cecd280f6160b8b9482f2}{$\sim$\+UDPReceiver()}}.
+
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_acc1788b36b9e57b287a67704b44c43a5}\label{classcluon_1_1UDPReceiver_acc1788b36b9e57b287a67704b44c43a5}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!m\_readFromSocketThreadRunning@{m\_readFromSocketThreadRunning}}
+\index{m\_readFromSocketThreadRunning@{m\_readFromSocketThreadRunning}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{m\_readFromSocketThreadRunning}{m\_readFromSocketThreadRunning}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ cluon\+::\+UDPReceiver\+::m\+\_\+read\+From\+Socket\+Thread\+Running \{false\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1UDPReceiver_a8f371c1a0bb9325bab53d3464eb3828e}{is\+Running()}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_abacf832ad3a811b596fe7eb6d88f92b7}{read\+From\+Socket()}}, and \mbox{\hyperlink{classcluon_1_1UDPReceiver_a41f1994fda9cecd280f6160b8b9482f2}{$\sim$\+UDPReceiver()}}.
+
+\mbox{\Hypertarget{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}\label{classcluon_1_1UDPReceiver_aa674bb61ad9aa2a2ddf61c7899b54393}} 
+\index{cluon::UDPReceiver@{cluon::UDPReceiver}!m\_socket@{m\_socket}}
+\index{m\_socket@{m\_socket}!cluon::UDPReceiver@{cluon::UDPReceiver}}
+\doxysubsubsection{\texorpdfstring{m\_socket}{m\_socket}}
+{\footnotesize\ttfamily int32\+\_\+t cluon\+::\+UDPReceiver\+::m\+\_\+socket \{-\/1\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1UDPReceiver_abacf832ad3a811b596fe7eb6d88f92b7}{read\+From\+Socket()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

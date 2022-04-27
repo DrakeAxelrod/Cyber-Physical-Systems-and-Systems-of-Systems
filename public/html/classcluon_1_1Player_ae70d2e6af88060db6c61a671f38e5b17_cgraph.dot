@@ -1,0 +1,18 @@
+digraph "cluon::Player::computeInitialCacheLevelAndFillCache"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="cluon::Player::computeInitial\lCacheLevelAndFillCache",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="cluon::Player::fillEnvelope\lCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1Player.html#a58b55ea3d36351378016e58766d11f03",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="cluon::extractEnvelope",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacecluon.html#abbf469eea6cc8400c8a0689a7414a570",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="cluon::FromProtoVisitor\l::decodeFrom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1FromProtoVisitor.html#a40200331aef897bc2ec90d5cf9c20519",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="cluon::Player::resetCaches",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1Player.html#ab9bcc496a58377d58d43ba914b09969c",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="cluon::Player::resetIterators",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1Player.html#a46ad07d47183478613614e751694a776",tooltip=" "];
+}

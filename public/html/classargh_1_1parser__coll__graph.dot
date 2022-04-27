@@ -1,0 +1,38 @@
+digraph "argh::parser"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{argh::parser\n||+ parser()\l+ parser()\l+ parser()\l+ parser()\l+ add_param()\l+ add_params()\l+ parse()\l+ parse()\l+ flags()\l+ params()\l+ pos_args()\l+ begin()\l+ end()\l+ size()\l+ operator[]()\l+ operator[]()\l+ operator[]()\l+ operator()()\l+ operator()()\l+ operator()()\l+ operator()()\l+ operator()()\l+ operator()()\l- bad_stream()\l- trim_leading_dashes()\l- is_number()\l- is_option()\l- got_flag()\l- is_param()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -args_\n-pos_args_" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{std::vector\< std::string \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +elements" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{std::string\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{std::basic_string\<\l Char \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="orange",fontsize="10",style="solid",label=" \< std::string \>" ,fontname="Helvetica"];
+  Node5 [label="{std::vector\< T \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node5 [color="grey25",fontsize="10",style="solid",label=" +elements" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node6 [label="{T\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -params_" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node7 [label="{std::map\< std::string,\l std::string \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node7 [color="grey25",fontsize="10",style="solid",label=" +elements\n+keys" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node8 -> Node7 [dir="back",color="orange",fontsize="10",style="solid",label=" \< std::string, std\l::string \>" ,fontname="Helvetica"];
+  Node8 [label="{std::map\< K, T \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node9 -> Node8 [color="grey25",fontsize="10",style="solid",label=" +keys" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node9 [label="{K\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node8 [color="grey25",fontsize="10",style="solid",label=" +elements" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node10 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -flags_" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node10 [label="{std::multiset\< std\l::string \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node10 [color="grey25",fontsize="10",style="solid",label=" +keys" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node11 -> Node10 [dir="back",color="orange",fontsize="10",style="solid",label=" \< std::string \>" ,fontname="Helvetica"];
+  Node11 [label="{std::multiset\< K \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node9 -> Node11 [color="grey25",fontsize="10",style="solid",label=" +keys" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node12 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -registeredParams_" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node12 [label="{std::set\< std::string \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node12 [color="grey25",fontsize="10",style="solid",label=" +keys" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node13 -> Node12 [dir="back",color="orange",fontsize="10",style="solid",label=" \< std::string \>" ,fontname="Helvetica"];
+  Node13 [label="{std::set\< K \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node9 -> Node13 [color="grey25",fontsize="10",style="solid",label=" +keys" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -empty_" ,arrowhead="odiamond",fontname="Helvetica"];
+}

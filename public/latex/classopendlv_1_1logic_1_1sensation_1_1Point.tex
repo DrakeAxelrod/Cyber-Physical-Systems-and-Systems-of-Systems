@@ -1,0 +1,352 @@
+\hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point}{}\doxysection{opendlv\+::logic\+::sensation\+::Point Class Reference}
+\label{classopendlv_1_1logic_1_1sensation_1_1Point}\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+
+
+{\ttfamily \#include $<$opendlv-\/standard-\/message-\/set.\+hpp$>$}
+
+
+
+Collaboration diagram for opendlv\+::logic\+::sensation\+::Point\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a90103d41e1c45cea5d6c5467e7c79abc}{Point}} ()=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_aaa733d289ead615f78cd29692f88133c}{Point}} (const \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \& \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_afa45b9d9a914a001d8fd47af18819e1b}{operator=}} (const \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ab4f0f4cf13b44a96c05008a4eee35acb}{Point}} (\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \&\&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \& \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ac4c025b9f39c44bc33faff7a1a011da7}{operator=}} (\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \&\&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a69b90a92caa86dbc727cb3676eb2d53b}{$\sim$\+Point}} ()=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \& \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_aeee351c347339fd41de6561209ada246}{azimuth\+Angle}} (const float \&v) noexcept
+\item 
+float \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_af6dff1c30dec688a3bdca5d3bf21410c}{azimuth\+Angle}} () const noexcept
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \& \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a4e19f1307b60bfe28cca7d3e9d41d517}{zenith\+Angle}} (const float \&v) noexcept
+\item 
+float \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a5c956a406665819692704657fd0670a4}{zenith\+Angle}} () const noexcept
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \& \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a318f83671743cdc6cff5b0fb6c95c069}{distance}} (const float \&v) noexcept
+\item 
+float \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a2ae08d5d199436e0e683706bf1d7f568}{distance}} () const noexcept
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ac368a874d8761cb8e5e15e5ab99e6390}{accept}} (uint32\+\_\+t field\+Id, Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ad47663be7a74c608d8f40643c6802971}{accept}} (Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a3eed7f032a9ca2e8c7e28c735e7d8ede}{accept}} (Pre\+Visitor \&\&pre\+Visit, Visitor \&\&visit, Post\+Visitor \&\&post\+Visit)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int32\+\_\+t \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a7373ae48b87beb0183dc8c7e0404b8ff}{ID}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a123b72cae5bf7fab9969bbea92418e74}{Short\+Name}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a65dcabcda60dc248f4fd475270ad92c3}{Long\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ac56e9324f8a5640108f7360f6c52411a}{m\+\_\+azimuth\+Angle}} \{ 0.\+0f \}
+\item 
+float \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ad37a69878de80747dcf11c9f768402a7}{m\+\_\+zenith\+Angle}} \{ 0.\+0f \}
+\item 
+float \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a0d5657ad5243a80664b249a3df6851d3}{m\+\_\+distance}} \{ 0.\+0f \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_aa09ae9d2e37bbe46741b7c5a3e5a071c}{The\+Short\+Name}} = \char`\"{}Point\char`\"{}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ab8b5ba4c40fa0b140a70bbe848d47191}{The\+Long\+Name}} = \char`\"{}opendlv.\+logic.\+sensation.\+Point\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_a90103d41e1c45cea5d6c5467e7c79abc}\label{classopendlv_1_1logic_1_1sensation_1_1Point_a90103d41e1c45cea5d6c5467e7c79abc}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!Point@{Point}}
+\index{Point@{Point}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily opendlv\+::logic\+::sensation\+::\+Point\+::\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_aaa733d289ead615f78cd29692f88133c}\label{classopendlv_1_1logic_1_1sensation_1_1Point_aaa733d289ead615f78cd29692f88133c}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!Point@{Point}}
+\index{Point@{Point}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily opendlv\+::logic\+::sensation\+::\+Point\+::\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_ab4f0f4cf13b44a96c05008a4eee35acb}\label{classopendlv_1_1logic_1_1sensation_1_1Point_ab4f0f4cf13b44a96c05008a4eee35acb}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!Point@{Point}}
+\index{Point@{Point}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily opendlv\+::logic\+::sensation\+::\+Point\+::\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_a69b90a92caa86dbc727cb3676eb2d53b}\label{classopendlv_1_1logic_1_1sensation_1_1Point_a69b90a92caa86dbc727cb3676eb2d53b}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!````~Point@{$\sim$Point}}
+\index{````~Point@{$\sim$Point}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{$\sim$Point()}{~Point()}}
+{\footnotesize\ttfamily opendlv\+::logic\+::sensation\+::\+Point\+::$\sim$\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_a3eed7f032a9ca2e8c7e28c735e7d8ede}\label{classopendlv_1_1logic_1_1sensation_1_1Point_a3eed7f032a9ca2e8c7e28c735e7d8ede}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!accept@{accept}}
+\index{accept@{accept}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ \\
+void opendlv\+::logic\+::sensation\+::\+Point\+::accept (\begin{DoxyParamCaption}\item[{Pre\+Visitor \&\&}]{pre\+Visit,  }\item[{Visitor \&\&}]{visit,  }\item[{Post\+Visitor \&\&}]{post\+Visit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8947                                                                                             \{}
+\DoxyCodeLine{8948             (void)visit; \textcolor{comment}{// Prevent warnings from empty messages.}}
+\DoxyCodeLine{8949             std::forward<PreVisitor>(preVisit)(\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a7373ae48b87beb0183dc8c7e0404b8ff}{ID}}(), \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a123b72cae5bf7fab9969bbea92418e74}{ShortName}}(), \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a65dcabcda60dc248f4fd475270ad92c3}{LongName}}());}
+\DoxyCodeLine{8950             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(1, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}azimuthAngle"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ac56e9324f8a5640108f7360f6c52411a}{m\_azimuthAngle}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{8951             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(2, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}zenithAngle"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ad37a69878de80747dcf11c9f768402a7}{m\_zenithAngle}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{8952             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(3, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}distance"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a0d5657ad5243a80664b249a3df6851d3}{m\_distance}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{8953             std::forward<PostVisitor>(postVisit)();}
+\DoxyCodeLine{8954         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{do\+Triplet\+Forward\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_ac368a874d8761cb8e5e15e5ab99e6390}\label{classopendlv_1_1logic_1_1sensation_1_1Point_ac368a874d8761cb8e5e15e5ab99e6390}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!accept@{accept}}
+\index{accept@{accept}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void opendlv\+::logic\+::sensation\+::\+Point\+::accept (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Id,  }\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8918                                                                \{}
+\DoxyCodeLine{8919             (void)fieldId;}
+\DoxyCodeLine{8920             (void)visitor;}
+\DoxyCodeLine{8921 \textcolor{comment}{//            visitor.preVisit(ID(), ShortName(), LongName());}}
+\DoxyCodeLine{8922             \textcolor{keywordflow}{if} (1 == fieldId) \{}
+\DoxyCodeLine{8923                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}azimuthAngle"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ac56e9324f8a5640108f7360f6c52411a}{m\_azimuthAngle}}, visitor);}
+\DoxyCodeLine{8924                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{8925             \}}
+\DoxyCodeLine{8926             \textcolor{keywordflow}{if} (2 == fieldId) \{}
+\DoxyCodeLine{8927                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(2, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}zenithAngle"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ad37a69878de80747dcf11c9f768402a7}{m\_zenithAngle}}, visitor);}
+\DoxyCodeLine{8928                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{8929             \}}
+\DoxyCodeLine{8930             \textcolor{keywordflow}{if} (3 == fieldId) \{}
+\DoxyCodeLine{8931                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(3, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}distance"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a0d5657ad5243a80664b249a3df6851d3}{m\_distance}}, visitor);}
+\DoxyCodeLine{8932                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{8933             \}}
+\DoxyCodeLine{8934 \textcolor{comment}{//            visitor.postVisit();}}
+\DoxyCodeLine{8935         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_ad47663be7a74c608d8f40643c6802971}\label{classopendlv_1_1logic_1_1sensation_1_1Point_ad47663be7a74c608d8f40643c6802971}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!accept@{accept}}
+\index{accept@{accept}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void opendlv\+::logic\+::sensation\+::\+Point\+::accept (\begin{DoxyParamCaption}\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8938                                              \{}
+\DoxyCodeLine{8939             visitor.preVisit(\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a7373ae48b87beb0183dc8c7e0404b8ff}{ID}}(), \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a123b72cae5bf7fab9969bbea92418e74}{ShortName}}(), \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a65dcabcda60dc248f4fd475270ad92c3}{LongName}}());}
+\DoxyCodeLine{8940             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}azimuthAngle"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ac56e9324f8a5640108f7360f6c52411a}{m\_azimuthAngle}}, visitor);}
+\DoxyCodeLine{8941             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(2, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}zenithAngle"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ad37a69878de80747dcf11c9f768402a7}{m\_zenithAngle}}, visitor);}
+\DoxyCodeLine{8942             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(3, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}distance"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a0d5657ad5243a80664b249a3df6851d3}{m\_distance}}, visitor);}
+\DoxyCodeLine{8943             visitor.postVisit();}
+\DoxyCodeLine{8944         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_af6dff1c30dec688a3bdca5d3bf21410c}\label{classopendlv_1_1logic_1_1sensation_1_1Point_af6dff1c30dec688a3bdca5d3bf21410c}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!azimuthAngle@{azimuthAngle}}
+\index{azimuthAngle@{azimuthAngle}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{azimuthAngle()}{azimuthAngle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float opendlv\+::logic\+::sensation\+::\+Point\+::azimuth\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8898                                                    \{}
+\DoxyCodeLine{8899             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ac56e9324f8a5640108f7360f6c52411a}{m\_azimuthAngle}};}
+\DoxyCodeLine{8900         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_aeee351c347339fd41de6561209ada246}\label{classopendlv_1_1logic_1_1sensation_1_1Point_aeee351c347339fd41de6561209ada246}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!azimuthAngle@{azimuthAngle}}
+\index{azimuthAngle@{azimuthAngle}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{azimuthAngle()}{azimuthAngle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \& opendlv\+::logic\+::sensation\+::\+Point\+::azimuth\+Angle (\begin{DoxyParamCaption}\item[{const float \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8894                                                             \{}
+\DoxyCodeLine{8895             \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ac56e9324f8a5640108f7360f6c52411a}{m\_azimuthAngle}} = v;}
+\DoxyCodeLine{8896             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{8897         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_a2ae08d5d199436e0e683706bf1d7f568}\label{classopendlv_1_1logic_1_1sensation_1_1Point_a2ae08d5d199436e0e683706bf1d7f568}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!distance@{distance}}
+\index{distance@{distance}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{distance()}{distance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float opendlv\+::logic\+::sensation\+::\+Point\+::distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8912                                                \{}
+\DoxyCodeLine{8913             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a0d5657ad5243a80664b249a3df6851d3}{m\_distance}};}
+\DoxyCodeLine{8914         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_a318f83671743cdc6cff5b0fb6c95c069}\label{classopendlv_1_1logic_1_1sensation_1_1Point_a318f83671743cdc6cff5b0fb6c95c069}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!distance@{distance}}
+\index{distance@{distance}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{distance()}{distance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \& opendlv\+::logic\+::sensation\+::\+Point\+::distance (\begin{DoxyParamCaption}\item[{const float \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8908                                                         \{}
+\DoxyCodeLine{8909             \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_a0d5657ad5243a80664b249a3df6851d3}{m\_distance}} = v;}
+\DoxyCodeLine{8910             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{8911         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_a7373ae48b87beb0183dc8c7e0404b8ff}\label{classopendlv_1_1logic_1_1sensation_1_1Point_a7373ae48b87beb0183dc8c7e0404b8ff}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!ID@{ID}}
+\index{ID@{ID}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{ID()}{ID()}}
+{\footnotesize\ttfamily static int32\+\_\+t opendlv\+::logic\+::sensation\+::\+Point\+::\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8875                                    \{}
+\DoxyCodeLine{8876             \textcolor{keywordflow}{return} 1111;}
+\DoxyCodeLine{8877         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_a65dcabcda60dc248f4fd475270ad92c3}\label{classopendlv_1_1logic_1_1sensation_1_1Point_a65dcabcda60dc248f4fd475270ad92c3}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!LongName@{LongName}}
+\index{LongName@{LongName}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{LongName()}{LongName()}}
+{\footnotesize\ttfamily static const std\+::string opendlv\+::logic\+::sensation\+::\+Point\+::\+Long\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8881                                                  \{}
+\DoxyCodeLine{8882             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ab8b5ba4c40fa0b140a70bbe848d47191}{TheLongName}};}
+\DoxyCodeLine{8883         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_afa45b9d9a914a001d8fd47af18819e1b}\label{classopendlv_1_1logic_1_1sensation_1_1Point_afa45b9d9a914a001d8fd47af18819e1b}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!operator=@{operator=}}
+\index{operator=@{operator=}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \& opendlv\+::logic\+::sensation\+::\+Point\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_ac4c025b9f39c44bc33faff7a1a011da7}\label{classopendlv_1_1logic_1_1sensation_1_1Point_ac4c025b9f39c44bc33faff7a1a011da7}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!operator=@{operator=}}
+\index{operator=@{operator=}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \& opendlv\+::logic\+::sensation\+::\+Point\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_a123b72cae5bf7fab9969bbea92418e74}\label{classopendlv_1_1logic_1_1sensation_1_1Point_a123b72cae5bf7fab9969bbea92418e74}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!ShortName@{ShortName}}
+\index{ShortName@{ShortName}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{ShortName()}{ShortName()}}
+{\footnotesize\ttfamily static const std\+::string opendlv\+::logic\+::sensation\+::\+Point\+::\+Short\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8878                                                   \{}
+\DoxyCodeLine{8879             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_aa09ae9d2e37bbe46741b7c5a3e5a071c}{TheShortName}};}
+\DoxyCodeLine{8880         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_a5c956a406665819692704657fd0670a4}\label{classopendlv_1_1logic_1_1sensation_1_1Point_a5c956a406665819692704657fd0670a4}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!zenithAngle@{zenithAngle}}
+\index{zenithAngle@{zenithAngle}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{zenithAngle()}{zenithAngle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float opendlv\+::logic\+::sensation\+::\+Point\+::zenith\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8905                                                   \{}
+\DoxyCodeLine{8906             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ad37a69878de80747dcf11c9f768402a7}{m\_zenithAngle}};}
+\DoxyCodeLine{8907         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_a4e19f1307b60bfe28cca7d3e9d41d517}\label{classopendlv_1_1logic_1_1sensation_1_1Point_a4e19f1307b60bfe28cca7d3e9d41d517}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!zenithAngle@{zenithAngle}}
+\index{zenithAngle@{zenithAngle}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{zenithAngle()}{zenithAngle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point}{Point}} \& opendlv\+::logic\+::sensation\+::\+Point\+::zenith\+Angle (\begin{DoxyParamCaption}\item[{const float \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8901                                                            \{}
+\DoxyCodeLine{8902             \mbox{\hyperlink{classopendlv_1_1logic_1_1sensation_1_1Point_ad37a69878de80747dcf11c9f768402a7}{m\_zenithAngle}} = v;}
+\DoxyCodeLine{8903             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{8904         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_ac56e9324f8a5640108f7360f6c52411a}\label{classopendlv_1_1logic_1_1sensation_1_1Point_ac56e9324f8a5640108f7360f6c52411a}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!m\_azimuthAngle@{m\_azimuthAngle}}
+\index{m\_azimuthAngle@{m\_azimuthAngle}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{m\_azimuthAngle}{m\_azimuthAngle}}
+{\footnotesize\ttfamily float opendlv\+::logic\+::sensation\+::\+Point\+::m\+\_\+azimuth\+Angle \{ 0.\+0f \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_a0d5657ad5243a80664b249a3df6851d3}\label{classopendlv_1_1logic_1_1sensation_1_1Point_a0d5657ad5243a80664b249a3df6851d3}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!m\_distance@{m\_distance}}
+\index{m\_distance@{m\_distance}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{m\_distance}{m\_distance}}
+{\footnotesize\ttfamily float opendlv\+::logic\+::sensation\+::\+Point\+::m\+\_\+distance \{ 0.\+0f \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_ad37a69878de80747dcf11c9f768402a7}\label{classopendlv_1_1logic_1_1sensation_1_1Point_ad37a69878de80747dcf11c9f768402a7}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!m\_zenithAngle@{m\_zenithAngle}}
+\index{m\_zenithAngle@{m\_zenithAngle}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{m\_zenithAngle}{m\_zenithAngle}}
+{\footnotesize\ttfamily float opendlv\+::logic\+::sensation\+::\+Point\+::m\+\_\+zenith\+Angle \{ 0.\+0f \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_ab8b5ba4c40fa0b140a70bbe848d47191}\label{classopendlv_1_1logic_1_1sensation_1_1Point_ab8b5ba4c40fa0b140a70bbe848d47191}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!TheLongName@{TheLongName}}
+\index{TheLongName@{TheLongName}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{TheLongName}{TheLongName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ opendlv\+::logic\+::sensation\+::\+Point\+::\+The\+Long\+Name = \char`\"{}opendlv.\+logic.\+sensation.\+Point\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1sensation_1_1Point_aa09ae9d2e37bbe46741b7c5a3e5a071c}\label{classopendlv_1_1logic_1_1sensation_1_1Point_aa09ae9d2e37bbe46741b7c5a3e5a071c}} 
+\index{opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}!TheShortName@{TheShortName}}
+\index{TheShortName@{TheShortName}!opendlv::logic::sensation::Point@{opendlv::logic::sensation::Point}}
+\doxysubsubsection{\texorpdfstring{TheShortName}{TheShortName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ opendlv\+::logic\+::sensation\+::\+Point\+::\+The\+Short\+Name = \char`\"{}Point\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{opendlv-standard-message-set_8hpp}{opendlv-\/standard-\/message-\/set.\+hpp}}\end{DoxyCompactItemize}

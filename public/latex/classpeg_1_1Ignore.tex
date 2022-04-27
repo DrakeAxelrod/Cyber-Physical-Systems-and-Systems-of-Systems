@@ -1,0 +1,112 @@
+\hypertarget{classpeg_1_1Ignore}{}\doxysection{peg\+::Ignore Class Reference}
+\label{classpeg_1_1Ignore}\index{peg::Ignore@{peg::Ignore}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Inheritance diagram for peg\+::Ignore\+:
+% FIG 0
+
+
+Collaboration diagram for peg\+::Ignore\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpeg_1_1Ignore_a499558ec2d80575d1f63c9e20647907a}{Ignore}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ \&ope)
+\item 
+size\+\_\+t \mbox{\hyperlink{classpeg_1_1Ignore_acf9ba5ee1c1cc1c37df716eb643c88fd}{parse}} (const char $\ast$s, size\+\_\+t n, \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&, \mbox{\hyperlink{classpeg_1_1Context}{Context}} \&c, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt) const override
+\item 
+void \mbox{\hyperlink{classpeg_1_1Ignore_a46943df1dc90bee41a489986195805e5}{accept}} (\mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor}{Visitor}} \&v) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ \mbox{\hyperlink{classpeg_1_1Ignore_acac395f34d6436bf170bb77bbbad3d55}{ope\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpeg_1_1Ignore_a499558ec2d80575d1f63c9e20647907a}\label{classpeg_1_1Ignore_a499558ec2d80575d1f63c9e20647907a}} 
+\index{peg::Ignore@{peg::Ignore}!Ignore@{Ignore}}
+\index{Ignore@{Ignore}!peg::Ignore@{peg::Ignore}}
+\doxysubsubsection{\texorpdfstring{Ignore()}{Ignore()}}
+{\footnotesize\ttfamily peg\+::\+Ignore\+::\+Ignore (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ \&}]{ope }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1904 : \mbox{\hyperlink{classpeg_1_1Ignore_acac395f34d6436bf170bb77bbbad3d55}{ope\_}}(ope) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpeg_1_1Ignore_a46943df1dc90bee41a489986195805e5}\label{classpeg_1_1Ignore_a46943df1dc90bee41a489986195805e5}} 
+\index{peg::Ignore@{peg::Ignore}!accept@{accept}}
+\index{accept@{accept}!peg::Ignore@{peg::Ignore}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void peg\+::\+Ignore\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor}{Visitor}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpeg_1_1Ope_af57615cfe8938c0f4c9a0dd6df9da560}{peg\+::\+Ope}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2873 \{ v.visit(*\textcolor{keyword}{this}); \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor_ade8440f9ed92da93693329208ba10381}{peg\+::\+Ope\+::\+Visitor\+::visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classpeg_1_1Ignore_acf9ba5ee1c1cc1c37df716eb643c88fd}\label{classpeg_1_1Ignore_acf9ba5ee1c1cc1c37df716eb643c88fd}} 
+\index{peg::Ignore@{peg::Ignore}!parse@{parse}}
+\index{parse@{parse}!peg::Ignore@{peg::Ignore}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily size\+\_\+t peg\+::\+Ignore\+::parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&}]{,  }\item[{\mbox{\hyperlink{classpeg_1_1Context}{Context}} \&}]{c,  }\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{dt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpeg_1_1Ope_a431b9481130d91a0d51e97cffd8ace80}{peg\+::\+Ope}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1906                                                                                                  \{}
+\DoxyCodeLine{1907         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& rule = *\mbox{\hyperlink{classpeg_1_1Ignore_acac395f34d6436bf170bb77bbbad3d55}{ope\_}};}
+\DoxyCodeLine{1908         \textcolor{keyword}{auto}\& chldsv = c.push();}
+\DoxyCodeLine{1909         \textcolor{keyword}{auto} se = \mbox{\hyperlink{namespacepeg_ac2158f086910efbd32f003dbb2ea3e65}{make\_scope\_exit}}([\&]() \{}
+\DoxyCodeLine{1910             c.pop();}
+\DoxyCodeLine{1911         \});}
+\DoxyCodeLine{1912         \textcolor{keywordflow}{return} rule.parse(s, n, chldsv, c, dt);}
+\DoxyCodeLine{1913     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacepeg_ac2158f086910efbd32f003dbb2ea3e65}{peg\+::make\+\_\+scope\+\_\+exit()}}, \mbox{\hyperlink{classpeg_1_1Context_ac35d91467ae20e6b13a39ace7d853eb4}{peg\+::\+Context\+::pop()}}, and \mbox{\hyperlink{classpeg_1_1Context_acf1bfdc49e3ea328c8cacb78b712cb0b}{peg\+::\+Context\+::push()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpeg_1_1Ignore_acac395f34d6436bf170bb77bbbad3d55}\label{classpeg_1_1Ignore_acac395f34d6436bf170bb77bbbad3d55}} 
+\index{peg::Ignore@{peg::Ignore}!ope\_@{ope\_}}
+\index{ope\_@{ope\_}!peg::Ignore@{peg::Ignore}}
+\doxysubsubsection{\texorpdfstring{ope\_}{ope\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classpeg_1_1Ope}{Ope}}$>$ peg\+::\+Ignore\+::ope\+\_\+}
+
+
+
+Referenced by \mbox{\hyperlink{structpeg_1_1AssignIDToDefinition_a06e8cc34e6b0c8f5d15fa207a92189fa}{peg\+::\+Assign\+IDTo\+Definition\+::visit()}}, \mbox{\hyperlink{structpeg_1_1TokenChecker_a05191056ee1aa5e290dc9f8bcecc50ee}{peg\+::\+Token\+Checker\+::visit()}}, \mbox{\hyperlink{structpeg_1_1DetectLeftRecursion_a4f9c5fa98d34b62c5665977a9b83fa13}{peg\+::\+Detect\+Left\+Recursion\+::visit()}}, \mbox{\hyperlink{structpeg_1_1ReferenceChecker_abff439d28b8023683680764f386c2ed3}{peg\+::\+Reference\+Checker\+::visit()}}, \mbox{\hyperlink{structpeg_1_1LinkReferences_a04f797d44d557082b982f6c3f0230dc5}{peg\+::\+Link\+References\+::visit()}}, and \mbox{\hyperlink{structpeg_1_1FindReference_a1d741e52191bdd037ec640d49b0604b2}{peg\+::\+Find\+Reference\+::visit()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

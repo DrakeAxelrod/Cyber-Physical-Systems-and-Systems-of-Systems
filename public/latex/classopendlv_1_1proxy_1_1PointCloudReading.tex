@@ -1,0 +1,442 @@
+\hypertarget{classopendlv_1_1proxy_1_1PointCloudReading}{}\doxysection{opendlv\+::proxy\+::Point\+Cloud\+Reading Class Reference}
+\label{classopendlv_1_1proxy_1_1PointCloudReading}\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+
+
+{\ttfamily \#include $<$opendlv-\/standard-\/message-\/set.\+hpp$>$}
+
+
+
+Collaboration diagram for opendlv\+::proxy\+::Point\+Cloud\+Reading\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_aeafa66c1ad313e2d04374cffffa986a9}{Point\+Cloud\+Reading}} ()=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a2b003823da0608e6a5bb2ffd9f5359ba}{Point\+Cloud\+Reading}} (const \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_ad0ce9425287ba5f42322ec99fd34ca1f}{operator=}} (const \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a79aa62ee7cf277ba99fca2707f37fad8}{Point\+Cloud\+Reading}} (\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \&\&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_adec0c48cf4ac8f7b97f2e29c26eb15bb}{operator=}} (\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \&\&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_aeef25388775212cea7869c4e9dd27890}{$\sim$\+Point\+Cloud\+Reading}} ()=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_ae3028aec1d68912afdd1bc18cbb68dfe}{start\+Azimuth}} (const float \&v) noexcept
+\item 
+float \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a900ad268e8616f6862dfb82af0a302f5}{start\+Azimuth}} () const noexcept
+\item 
+\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a6a05be8f2ce2538c8f8012db3f5a999d}{end\+Azimuth}} (const float \&v) noexcept
+\item 
+float \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_ac496ced7afc4ed6f3dd34193449a655c}{end\+Azimuth}} () const noexcept
+\item 
+\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a0c935ea9b6d2e8288fe0902f72de5210}{entries\+Per\+Azimuth}} (const uint8\+\_\+t \&v) noexcept
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a2b923c6230151036332aed37530e08f0}{entries\+Per\+Azimuth}} () const noexcept
+\item 
+\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a62b4aa0033d5415afc13873cbda3bd08}{distances}} (const std\+::string \&v) noexcept
+\item 
+std\+::string \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_afd63a6580183c61647f83a2318c9b794}{distances}} () const noexcept
+\item 
+\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a3c482a20ccf93679121d6d2963d4e0ce}{number\+Of\+Bits\+For\+Intensity}} (const uint8\+\_\+t \&v) noexcept
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a609a6c78c1dc0e871f98bd3e6e5919fe}{number\+Of\+Bits\+For\+Intensity}} () const noexcept
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_aea08fc4354b5aa1ea034faef8a2a7d2a}{accept}} (uint32\+\_\+t field\+Id, Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a7be3695178eb32e343d75aac629bbf30}{accept}} (Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a67f6fdd924cba0dd48fc135553fce3c7}{accept}} (Pre\+Visitor \&\&pre\+Visit, Visitor \&\&visit, Post\+Visitor \&\&post\+Visit)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int32\+\_\+t \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a152c8ee21a1e8c9468fceb6e458c3fba}{ID}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a6dc0011fe141211a101ae5f283fbcf70}{Short\+Name}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_ae94ddd8e47bde1c149fc4dca832f71ee}{Long\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_ad37a88262fd00917d8c3596a561e06e9}{m\+\_\+start\+Azimuth}} \{ 0.\+0f \}
+\item 
+float \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a52d3d09dfa7dad43f515bf9c47c9f8b1}{m\+\_\+end\+Azimuth}} \{ 0.\+0f \}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a0e30010c6907b8f5957c7c7e2b719661}{m\+\_\+entries\+Per\+Azimuth}} \{ 0 \}
+\item 
+std\+::string \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a63196146eecf0a115b1795e7a8e10712}{m\+\_\+distances}} \{ \char`\"{}\char`\"{}s \}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a35479380f61b0d33c1e7141d961990ab}{m\+\_\+number\+Of\+Bits\+For\+Intensity}} \{ 0 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a79851b7689a903a55cac4aa7f27ff3db}{The\+Short\+Name}} = \char`\"{}Point\+Cloud\+Reading\char`\"{}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_afd5ff5873ff5337aa3d80da400d626d1}{The\+Long\+Name}} = \char`\"{}opendlv.\+proxy.\+Point\+Cloud\+Reading\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_aeafa66c1ad313e2d04374cffffa986a9}\label{classopendlv_1_1proxy_1_1PointCloudReading_aeafa66c1ad313e2d04374cffffa986a9}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!PointCloudReading@{PointCloudReading}}
+\index{PointCloudReading@{PointCloudReading}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{PointCloudReading()}{PointCloudReading()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::\+Point\+Cloud\+Reading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a2b003823da0608e6a5bb2ffd9f5359ba}\label{classopendlv_1_1proxy_1_1PointCloudReading_a2b003823da0608e6a5bb2ffd9f5359ba}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!PointCloudReading@{PointCloudReading}}
+\index{PointCloudReading@{PointCloudReading}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{PointCloudReading()}{PointCloudReading()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::\+Point\+Cloud\+Reading (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a79aa62ee7cf277ba99fca2707f37fad8}\label{classopendlv_1_1proxy_1_1PointCloudReading_a79aa62ee7cf277ba99fca2707f37fad8}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!PointCloudReading@{PointCloudReading}}
+\index{PointCloudReading@{PointCloudReading}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{PointCloudReading()}{PointCloudReading()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::\+Point\+Cloud\+Reading (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_aeef25388775212cea7869c4e9dd27890}\label{classopendlv_1_1proxy_1_1PointCloudReading_aeef25388775212cea7869c4e9dd27890}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!````~PointCloudReading@{$\sim$PointCloudReading}}
+\index{````~PointCloudReading@{$\sim$PointCloudReading}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{$\sim$PointCloudReading()}{~PointCloudReading()}}
+{\footnotesize\ttfamily opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::$\sim$\+Point\+Cloud\+Reading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a67f6fdd924cba0dd48fc135553fce3c7}\label{classopendlv_1_1proxy_1_1PointCloudReading_a67f6fdd924cba0dd48fc135553fce3c7}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!accept@{accept}}
+\index{accept@{accept}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ \\
+void opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::accept (\begin{DoxyParamCaption}\item[{Pre\+Visitor \&\&}]{pre\+Visit,  }\item[{Visitor \&\&}]{visit,  }\item[{Post\+Visitor \&\&}]{post\+Visit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5421                                                                                             \{}
+\DoxyCodeLine{5422             (void)visit; \textcolor{comment}{// Prevent warnings from empty messages.}}
+\DoxyCodeLine{5423             std::forward<PreVisitor>(preVisit)(\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a152c8ee21a1e8c9468fceb6e458c3fba}{ID}}(), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a6dc0011fe141211a101ae5f283fbcf70}{ShortName}}(), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_ae94ddd8e47bde1c149fc4dca832f71ee}{LongName}}());}
+\DoxyCodeLine{5424             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(1, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}startAzimuth"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_ad37a88262fd00917d8c3596a561e06e9}{m\_startAzimuth}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{5425             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(2, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}endAzimuth"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a52d3d09dfa7dad43f515bf9c47c9f8b1}{m\_endAzimuth}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{5426             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(3, std::move(\textcolor{stringliteral}{"{}uint8\_t"{}}s), std::move(\textcolor{stringliteral}{"{}entriesPerAzimuth"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a0e30010c6907b8f5957c7c7e2b719661}{m\_entriesPerAzimuth}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{5427             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(4, std::move(\textcolor{stringliteral}{"{}std::string"{}}s), std::move(\textcolor{stringliteral}{"{}distances"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a63196146eecf0a115b1795e7a8e10712}{m\_distances}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{5428             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(5, std::move(\textcolor{stringliteral}{"{}uint8\_t"{}}s), std::move(\textcolor{stringliteral}{"{}numberOfBitsForIntensity"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a35479380f61b0d33c1e7141d961990ab}{m\_numberOfBitsForIntensity}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{5429             std::forward<PostVisitor>(postVisit)();}
+\DoxyCodeLine{5430         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{do\+Triplet\+Forward\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_aea08fc4354b5aa1ea034faef8a2a7d2a}\label{classopendlv_1_1proxy_1_1PointCloudReading_aea08fc4354b5aa1ea034faef8a2a7d2a}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!accept@{accept}}
+\index{accept@{accept}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::accept (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Id,  }\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5382                                                                \{}
+\DoxyCodeLine{5383             (void)fieldId;}
+\DoxyCodeLine{5384             (void)visitor;}
+\DoxyCodeLine{5385 \textcolor{comment}{//            visitor.preVisit(ID(), ShortName(), LongName());}}
+\DoxyCodeLine{5386             \textcolor{keywordflow}{if} (1 == fieldId) \{}
+\DoxyCodeLine{5387                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}startAzimuth"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_ad37a88262fd00917d8c3596a561e06e9}{m\_startAzimuth}}, visitor);}
+\DoxyCodeLine{5388                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{5389             \}}
+\DoxyCodeLine{5390             \textcolor{keywordflow}{if} (2 == fieldId) \{}
+\DoxyCodeLine{5391                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(2, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}endAzimuth"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a52d3d09dfa7dad43f515bf9c47c9f8b1}{m\_endAzimuth}}, visitor);}
+\DoxyCodeLine{5392                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{5393             \}}
+\DoxyCodeLine{5394             \textcolor{keywordflow}{if} (3 == fieldId) \{}
+\DoxyCodeLine{5395                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(3, std::move(\textcolor{stringliteral}{"{}uint8\_t"{}}s), std::move(\textcolor{stringliteral}{"{}entriesPerAzimuth"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a0e30010c6907b8f5957c7c7e2b719661}{m\_entriesPerAzimuth}}, visitor);}
+\DoxyCodeLine{5396                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{5397             \}}
+\DoxyCodeLine{5398             \textcolor{keywordflow}{if} (4 == fieldId) \{}
+\DoxyCodeLine{5399                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(4, std::move(\textcolor{stringliteral}{"{}std::string"{}}s), std::move(\textcolor{stringliteral}{"{}distances"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a63196146eecf0a115b1795e7a8e10712}{m\_distances}}, visitor);}
+\DoxyCodeLine{5400                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{5401             \}}
+\DoxyCodeLine{5402             \textcolor{keywordflow}{if} (5 == fieldId) \{}
+\DoxyCodeLine{5403                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(5, std::move(\textcolor{stringliteral}{"{}uint8\_t"{}}s), std::move(\textcolor{stringliteral}{"{}numberOfBitsForIntensity"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a35479380f61b0d33c1e7141d961990ab}{m\_numberOfBitsForIntensity}}, visitor);}
+\DoxyCodeLine{5404                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{5405             \}}
+\DoxyCodeLine{5406 \textcolor{comment}{//            visitor.postVisit();}}
+\DoxyCodeLine{5407         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a7be3695178eb32e343d75aac629bbf30}\label{classopendlv_1_1proxy_1_1PointCloudReading_a7be3695178eb32e343d75aac629bbf30}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!accept@{accept}}
+\index{accept@{accept}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::accept (\begin{DoxyParamCaption}\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5410                                              \{}
+\DoxyCodeLine{5411             visitor.preVisit(\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a152c8ee21a1e8c9468fceb6e458c3fba}{ID}}(), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a6dc0011fe141211a101ae5f283fbcf70}{ShortName}}(), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_ae94ddd8e47bde1c149fc4dca832f71ee}{LongName}}());}
+\DoxyCodeLine{5412             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}startAzimuth"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_ad37a88262fd00917d8c3596a561e06e9}{m\_startAzimuth}}, visitor);}
+\DoxyCodeLine{5413             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(2, std::move(\textcolor{stringliteral}{"{}float"{}}s), std::move(\textcolor{stringliteral}{"{}endAzimuth"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a52d3d09dfa7dad43f515bf9c47c9f8b1}{m\_endAzimuth}}, visitor);}
+\DoxyCodeLine{5414             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(3, std::move(\textcolor{stringliteral}{"{}uint8\_t"{}}s), std::move(\textcolor{stringliteral}{"{}entriesPerAzimuth"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a0e30010c6907b8f5957c7c7e2b719661}{m\_entriesPerAzimuth}}, visitor);}
+\DoxyCodeLine{5415             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(4, std::move(\textcolor{stringliteral}{"{}std::string"{}}s), std::move(\textcolor{stringliteral}{"{}distances"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a63196146eecf0a115b1795e7a8e10712}{m\_distances}}, visitor);}
+\DoxyCodeLine{5416             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(5, std::move(\textcolor{stringliteral}{"{}uint8\_t"{}}s), std::move(\textcolor{stringliteral}{"{}numberOfBitsForIntensity"{}}s), \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a35479380f61b0d33c1e7141d961990ab}{m\_numberOfBitsForIntensity}}, visitor);}
+\DoxyCodeLine{5417             visitor.postVisit();}
+\DoxyCodeLine{5418         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_afd63a6580183c61647f83a2318c9b794}\label{classopendlv_1_1proxy_1_1PointCloudReading_afd63a6580183c61647f83a2318c9b794}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!distances@{distances}}
+\index{distances@{distances}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{distances()}{distances()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::distances (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5369                                                     \{}
+\DoxyCodeLine{5370             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a63196146eecf0a115b1795e7a8e10712}{m\_distances}};}
+\DoxyCodeLine{5371         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a62b4aa0033d5415afc13873cbda3bd08}\label{classopendlv_1_1proxy_1_1PointCloudReading_a62b4aa0033d5415afc13873cbda3bd08}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!distances@{distances}}
+\index{distances@{distances}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{distances()}{distances()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::distances (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5365                                                                          \{}
+\DoxyCodeLine{5366             \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a63196146eecf0a115b1795e7a8e10712}{m\_distances}} = v;}
+\DoxyCodeLine{5367             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{5368         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_ac496ced7afc4ed6f3dd34193449a655c}\label{classopendlv_1_1proxy_1_1PointCloudReading_ac496ced7afc4ed6f3dd34193449a655c}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!endAzimuth@{endAzimuth}}
+\index{endAzimuth@{endAzimuth}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{endAzimuth()}{endAzimuth()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::end\+Azimuth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5355                                                  \{}
+\DoxyCodeLine{5356             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a52d3d09dfa7dad43f515bf9c47c9f8b1}{m\_endAzimuth}};}
+\DoxyCodeLine{5357         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a6a05be8f2ce2538c8f8012db3f5a999d}\label{classopendlv_1_1proxy_1_1PointCloudReading_a6a05be8f2ce2538c8f8012db3f5a999d}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!endAzimuth@{endAzimuth}}
+\index{endAzimuth@{endAzimuth}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{endAzimuth()}{endAzimuth()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::end\+Azimuth (\begin{DoxyParamCaption}\item[{const float \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5351                                                                       \{}
+\DoxyCodeLine{5352             \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a52d3d09dfa7dad43f515bf9c47c9f8b1}{m\_endAzimuth}} = v;}
+\DoxyCodeLine{5353             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{5354         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a2b923c6230151036332aed37530e08f0}\label{classopendlv_1_1proxy_1_1PointCloudReading_a2b923c6230151036332aed37530e08f0}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!entriesPerAzimuth@{entriesPerAzimuth}}
+\index{entriesPerAzimuth@{entriesPerAzimuth}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{entriesPerAzimuth()}{entriesPerAzimuth()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::entries\+Per\+Azimuth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5362                                                           \{}
+\DoxyCodeLine{5363             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a0e30010c6907b8f5957c7c7e2b719661}{m\_entriesPerAzimuth}};}
+\DoxyCodeLine{5364         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a0c935ea9b6d2e8288fe0902f72de5210}\label{classopendlv_1_1proxy_1_1PointCloudReading_a0c935ea9b6d2e8288fe0902f72de5210}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!entriesPerAzimuth@{entriesPerAzimuth}}
+\index{entriesPerAzimuth@{entriesPerAzimuth}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{entriesPerAzimuth()}{entriesPerAzimuth()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::entries\+Per\+Azimuth (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5358                                                                                \{}
+\DoxyCodeLine{5359             \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a0e30010c6907b8f5957c7c7e2b719661}{m\_entriesPerAzimuth}} = v;}
+\DoxyCodeLine{5360             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{5361         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a152c8ee21a1e8c9468fceb6e458c3fba}\label{classopendlv_1_1proxy_1_1PointCloudReading_a152c8ee21a1e8c9468fceb6e458c3fba}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!ID@{ID}}
+\index{ID@{ID}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{ID()}{ID()}}
+{\footnotesize\ttfamily static int32\+\_\+t opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5325                                    \{}
+\DoxyCodeLine{5326             \textcolor{keywordflow}{return} 49;}
+\DoxyCodeLine{5327         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_ae94ddd8e47bde1c149fc4dca832f71ee}\label{classopendlv_1_1proxy_1_1PointCloudReading_ae94ddd8e47bde1c149fc4dca832f71ee}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!LongName@{LongName}}
+\index{LongName@{LongName}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{LongName()}{LongName()}}
+{\footnotesize\ttfamily static const std\+::string opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::\+Long\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5331                                                  \{}
+\DoxyCodeLine{5332             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_afd5ff5873ff5337aa3d80da400d626d1}{TheLongName}};}
+\DoxyCodeLine{5333         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a609a6c78c1dc0e871f98bd3e6e5919fe}\label{classopendlv_1_1proxy_1_1PointCloudReading_a609a6c78c1dc0e871f98bd3e6e5919fe}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!numberOfBitsForIntensity@{numberOfBitsForIntensity}}
+\index{numberOfBitsForIntensity@{numberOfBitsForIntensity}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{numberOfBitsForIntensity()}{numberOfBitsForIntensity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::number\+Of\+Bits\+For\+Intensity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5376                                                                  \{}
+\DoxyCodeLine{5377             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a35479380f61b0d33c1e7141d961990ab}{m\_numberOfBitsForIntensity}};}
+\DoxyCodeLine{5378         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a3c482a20ccf93679121d6d2963d4e0ce}\label{classopendlv_1_1proxy_1_1PointCloudReading_a3c482a20ccf93679121d6d2963d4e0ce}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!numberOfBitsForIntensity@{numberOfBitsForIntensity}}
+\index{numberOfBitsForIntensity@{numberOfBitsForIntensity}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{numberOfBitsForIntensity()}{numberOfBitsForIntensity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::number\+Of\+Bits\+For\+Intensity (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5372                                                                                       \{}
+\DoxyCodeLine{5373             \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a35479380f61b0d33c1e7141d961990ab}{m\_numberOfBitsForIntensity}} = v;}
+\DoxyCodeLine{5374             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{5375         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_ad0ce9425287ba5f42322ec99fd34ca1f}\label{classopendlv_1_1proxy_1_1PointCloudReading_ad0ce9425287ba5f42322ec99fd34ca1f}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!operator=@{operator=}}
+\index{operator=@{operator=}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_adec0c48cf4ac8f7b97f2e29c26eb15bb}\label{classopendlv_1_1proxy_1_1PointCloudReading_adec0c48cf4ac8f7b97f2e29c26eb15bb}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!operator=@{operator=}}
+\index{operator=@{operator=}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a6dc0011fe141211a101ae5f283fbcf70}\label{classopendlv_1_1proxy_1_1PointCloudReading_a6dc0011fe141211a101ae5f283fbcf70}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!ShortName@{ShortName}}
+\index{ShortName@{ShortName}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{ShortName()}{ShortName()}}
+{\footnotesize\ttfamily static const std\+::string opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::\+Short\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5328                                                   \{}
+\DoxyCodeLine{5329             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_a79851b7689a903a55cac4aa7f27ff3db}{TheShortName}};}
+\DoxyCodeLine{5330         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a900ad268e8616f6862dfb82af0a302f5}\label{classopendlv_1_1proxy_1_1PointCloudReading_a900ad268e8616f6862dfb82af0a302f5}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!startAzimuth@{startAzimuth}}
+\index{startAzimuth@{startAzimuth}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{startAzimuth()}{startAzimuth()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::start\+Azimuth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5348                                                    \{}
+\DoxyCodeLine{5349             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_ad37a88262fd00917d8c3596a561e06e9}{m\_startAzimuth}};}
+\DoxyCodeLine{5350         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_ae3028aec1d68912afdd1bc18cbb68dfe}\label{classopendlv_1_1proxy_1_1PointCloudReading_ae3028aec1d68912afdd1bc18cbb68dfe}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!startAzimuth@{startAzimuth}}
+\index{startAzimuth@{startAzimuth}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{startAzimuth()}{startAzimuth()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading}{Point\+Cloud\+Reading}} \& opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::start\+Azimuth (\begin{DoxyParamCaption}\item[{const float \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5344                                                                         \{}
+\DoxyCodeLine{5345             \mbox{\hyperlink{classopendlv_1_1proxy_1_1PointCloudReading_ad37a88262fd00917d8c3596a561e06e9}{m\_startAzimuth}} = v;}
+\DoxyCodeLine{5346             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{5347         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a63196146eecf0a115b1795e7a8e10712}\label{classopendlv_1_1proxy_1_1PointCloudReading_a63196146eecf0a115b1795e7a8e10712}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!m\_distances@{m\_distances}}
+\index{m\_distances@{m\_distances}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{m\_distances}{m\_distances}}
+{\footnotesize\ttfamily std\+::string opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::m\+\_\+distances \{ \char`\"{}\char`\"{}s \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a52d3d09dfa7dad43f515bf9c47c9f8b1}\label{classopendlv_1_1proxy_1_1PointCloudReading_a52d3d09dfa7dad43f515bf9c47c9f8b1}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!m\_endAzimuth@{m\_endAzimuth}}
+\index{m\_endAzimuth@{m\_endAzimuth}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{m\_endAzimuth}{m\_endAzimuth}}
+{\footnotesize\ttfamily float opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::m\+\_\+end\+Azimuth \{ 0.\+0f \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a0e30010c6907b8f5957c7c7e2b719661}\label{classopendlv_1_1proxy_1_1PointCloudReading_a0e30010c6907b8f5957c7c7e2b719661}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!m\_entriesPerAzimuth@{m\_entriesPerAzimuth}}
+\index{m\_entriesPerAzimuth@{m\_entriesPerAzimuth}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{m\_entriesPerAzimuth}{m\_entriesPerAzimuth}}
+{\footnotesize\ttfamily uint8\+\_\+t opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::m\+\_\+entries\+Per\+Azimuth \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a35479380f61b0d33c1e7141d961990ab}\label{classopendlv_1_1proxy_1_1PointCloudReading_a35479380f61b0d33c1e7141d961990ab}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!m\_numberOfBitsForIntensity@{m\_numberOfBitsForIntensity}}
+\index{m\_numberOfBitsForIntensity@{m\_numberOfBitsForIntensity}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{m\_numberOfBitsForIntensity}{m\_numberOfBitsForIntensity}}
+{\footnotesize\ttfamily uint8\+\_\+t opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::m\+\_\+number\+Of\+Bits\+For\+Intensity \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_ad37a88262fd00917d8c3596a561e06e9}\label{classopendlv_1_1proxy_1_1PointCloudReading_ad37a88262fd00917d8c3596a561e06e9}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!m\_startAzimuth@{m\_startAzimuth}}
+\index{m\_startAzimuth@{m\_startAzimuth}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{m\_startAzimuth}{m\_startAzimuth}}
+{\footnotesize\ttfamily float opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::m\+\_\+start\+Azimuth \{ 0.\+0f \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_afd5ff5873ff5337aa3d80da400d626d1}\label{classopendlv_1_1proxy_1_1PointCloudReading_afd5ff5873ff5337aa3d80da400d626d1}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!TheLongName@{TheLongName}}
+\index{TheLongName@{TheLongName}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{TheLongName}{TheLongName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::\+The\+Long\+Name = \char`\"{}opendlv.\+proxy.\+Point\+Cloud\+Reading\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1proxy_1_1PointCloudReading_a79851b7689a903a55cac4aa7f27ff3db}\label{classopendlv_1_1proxy_1_1PointCloudReading_a79851b7689a903a55cac4aa7f27ff3db}} 
+\index{opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}!TheShortName@{TheShortName}}
+\index{TheShortName@{TheShortName}!opendlv::proxy::PointCloudReading@{opendlv::proxy::PointCloudReading}}
+\doxysubsubsection{\texorpdfstring{TheShortName}{TheShortName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ opendlv\+::proxy\+::\+Point\+Cloud\+Reading\+::\+The\+Short\+Name = \char`\"{}Point\+Cloud\+Reading\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{opendlv-standard-message-set_8hpp}{opendlv-\/standard-\/message-\/set.\+hpp}}\end{DoxyCompactItemize}
