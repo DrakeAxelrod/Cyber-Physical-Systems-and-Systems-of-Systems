@@ -33,8 +33,8 @@ stages:
 # Display information before we start the build.
 before_script:
   - docker info
-  # - docker login -u $DOCKER_REG_CID -p $DOCKER_REG_TOKEN $CI_REGISTRY
-  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  - docker login -u $DOCKER_REG_CID -p $DOCKER_REG_TOKEN $CI_REGISTRY
+  # - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
 
 # This section describes what shall be done to build and test the project.
 build-and-test:
