@@ -1,0 +1,429 @@
+\hypertarget{structpeg_1_1SemanticValues}{}\doxysection{peg\+::Semantic\+Values Struct Reference}
+\label{structpeg_1_1SemanticValues}\index{peg::SemanticValues@{peg::SemanticValues}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Inheritance diagram for peg\+::Semantic\+Values\+:
+% FIG 0
+
+
+Collaboration diagram for peg\+::Semantic\+Values\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{structpeg_1_1SemanticValues_a221e404f3f0d1b0fb528ff3e747ddac1}{c\+\_\+str}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{structpeg_1_1SemanticValues_a3f4b8543dbac3e605c18d81d005e5c3d}{length}} () const
+\item 
+std\+::string \mbox{\hyperlink{structpeg_1_1SemanticValues_a322df3d4c63c6d8970af062b46a62081}{str}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{structpeg_1_1SemanticValues_a83be04ad273680f06c8e8280b0a4995a}{name}} () const
+\item 
+std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \mbox{\hyperlink{structpeg_1_1SemanticValues_a02e5b0ba9db61ad2f8c23dff4a928337}{line\+\_\+info}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{structpeg_1_1SemanticValues_a63af4b2e71834b85c6cb5caa5bff8050}{choice\+\_\+count}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{structpeg_1_1SemanticValues_a431b5752198cf04df62b721943dc6c2e}{choice}} () const
+\item 
+std\+::string \mbox{\hyperlink{structpeg_1_1SemanticValues_aa2b880931ff1237c7af9a14fa0197044}{token}} (size\+\_\+t id=0) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{structpeg_1_1SemanticValues_ab67736e20427be239008aaaafd33247a}{transform}} (size\+\_\+t beg=0, size\+\_\+t end=static\+\_\+cast$<$ size\+\_\+t $>$(-\/1)) const -\/$>$ vector$<$ T $>$
+\item 
+\mbox{\hyperlink{structpeg_1_1SemanticValues_ab410e5e2e188da1365000f9e83370067}{Semantic\+Values}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{structpeg_1_1SemanticValues_a6a889e866b6f537ea647fd9bb5eb6fa0}{path}}
+\item 
+const char $\ast$ \mbox{\hyperlink{structpeg_1_1SemanticValues_a4d930b83cc3559c23b5960ccf69a34c2}{ss}}
+\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{structpeg_1_1SemanticValues_a81c9461f32161826326fb14e2e999b7f}{tags}}
+\item 
+std\+::vector$<$ std\+::pair$<$ const char $\ast$, size\+\_\+t $>$ $>$ \mbox{\hyperlink{structpeg_1_1SemanticValues_acb64227e5b71c2a63ed58553af80905e}{tokens}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename F $>$ }\\auto \mbox{\hyperlink{structpeg_1_1SemanticValues_a60647e8d53113e2b7cb6ef0b33d61097}{transform}} (F f) const -\/$>$ vector$<$ typename std\+::remove\+\_\+const$<$ decltype(f(\mbox{\hyperlink{classpeg_1_1any}{any}}()))$>$\+::type $>$
+\item 
+{\footnotesize template$<$typename F $>$ }\\auto \mbox{\hyperlink{structpeg_1_1SemanticValues_a5123cc7ee90f12f9d9970db0bfc2ca87}{transform}} (size\+\_\+t beg, size\+\_\+t end, F f) const -\/$>$ vector$<$ typename std\+::remove\+\_\+const$<$ decltype(f(\mbox{\hyperlink{classpeg_1_1any}{any}}()))$>$\+::type $>$
+\item 
+void \mbox{\hyperlink{structpeg_1_1SemanticValues_aabd2b20356f550e0a88faa7b79a6c3e7}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{structpeg_1_1SemanticValues_adb448675d1c1c49e35a93bb74231ff59}{s\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structpeg_1_1SemanticValues_a91bb7e3839b27f37e4fc4f780c918652}{n\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structpeg_1_1SemanticValues_a605b959ca9eadf11dfe1b72095d2c703}{choice\+\_\+count\+\_\+}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structpeg_1_1SemanticValues_a0d13a0c3ba9124e9eb8d15ca4a55a73e}{choice\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{structpeg_1_1SemanticValues_a1701b4510ed4167af61c9efebff367ff}{name\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structpeg_1_1SemanticValues_ac26c806e60ca4a0547680edb68f6e39b}{Context}}
+\item 
+class \mbox{\hyperlink{structpeg_1_1SemanticValues_a26271d5afaff6e6d3f00c055c63d0b24}{Sequence}}
+\item 
+class \mbox{\hyperlink{structpeg_1_1SemanticValues_ad6fe0c2f1bf7f39297c25f310870b1f2}{Prioritized\+Choice}}
+\item 
+class \mbox{\hyperlink{structpeg_1_1SemanticValues_a25b1b4be3f62edc85ed2ae5540f827c0}{Holder}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_ab410e5e2e188da1365000f9e83370067}\label{structpeg_1_1SemanticValues_ab410e5e2e188da1365000f9e83370067}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!SemanticValues@{SemanticValues}}
+\index{SemanticValues@{SemanticValues}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{SemanticValues()}{SemanticValues()}}
+{\footnotesize\ttfamily peg\+::\+Semantic\+Values\+::\+Semantic\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{981 : \mbox{\hyperlink{structpeg_1_1SemanticValues_adb448675d1c1c49e35a93bb74231ff59}{s\_}}(\textcolor{keyword}{nullptr}), \mbox{\hyperlink{structpeg_1_1SemanticValues_a91bb7e3839b27f37e4fc4f780c918652}{n\_}}(0), \mbox{\hyperlink{structpeg_1_1SemanticValues_a605b959ca9eadf11dfe1b72095d2c703}{choice\_count\_}}(0), \mbox{\hyperlink{structpeg_1_1SemanticValues_a0d13a0c3ba9124e9eb8d15ca4a55a73e}{choice\_}}(0) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a221e404f3f0d1b0fb528ff3e747ddac1}\label{structpeg_1_1SemanticValues_a221e404f3f0d1b0fb528ff3e747ddac1}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!c\_str@{c\_str}}
+\index{c\_str@{c\_str}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{c\_str()}{c\_str()}}
+{\footnotesize\ttfamily const char $\ast$ peg\+::\+Semantic\+Values\+::c\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{938 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{structpeg_1_1SemanticValues_adb448675d1c1c49e35a93bb74231ff59}{s\_}}; \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1ParserGenerator_afa7a9efe83e831fd48692dc871c5f3f9}{peg\+::\+Parser\+Generator\+::setup\+\_\+actions()}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a431b5752198cf04df62b721943dc6c2e}\label{structpeg_1_1SemanticValues_a431b5752198cf04df62b721943dc6c2e}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!choice@{choice}}
+\index{choice@{choice}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{choice()}{choice()}}
+{\footnotesize\ttfamily size\+\_\+t peg\+::\+Semantic\+Values\+::choice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{961 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{structpeg_1_1SemanticValues_a0d13a0c3ba9124e9eb8d15ca4a55a73e}{choice\_}}; \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1ParserGenerator_afa7a9efe83e831fd48692dc871c5f3f9}{peg\+::\+Parser\+Generator\+::setup\+\_\+actions()}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a63af4b2e71834b85c6cb5caa5bff8050}\label{structpeg_1_1SemanticValues_a63af4b2e71834b85c6cb5caa5bff8050}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!choice\_count@{choice\_count}}
+\index{choice\_count@{choice\_count}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{choice\_count()}{choice\_count()}}
+{\footnotesize\ttfamily size\+\_\+t peg\+::\+Semantic\+Values\+::choice\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{958 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{structpeg_1_1SemanticValues_a605b959ca9eadf11dfe1b72095d2c703}{choice\_count\_}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a3f4b8543dbac3e605c18d81d005e5c3d}\label{structpeg_1_1SemanticValues_a3f4b8543dbac3e605c18d81d005e5c3d}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!length@{length}}
+\index{length@{length}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily size\+\_\+t peg\+::\+Semantic\+Values\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{939 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{structpeg_1_1SemanticValues_a91bb7e3839b27f37e4fc4f780c918652}{n\_}}; \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1ParserGenerator_afa7a9efe83e831fd48692dc871c5f3f9}{peg\+::\+Parser\+Generator\+::setup\+\_\+actions()}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a02e5b0ba9db61ad2f8c23dff4a928337}\label{structpeg_1_1SemanticValues_a02e5b0ba9db61ad2f8c23dff4a928337}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!line\_info@{line\_info}}
+\index{line\_info@{line\_info}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{line\_info()}{line\_info()}}
+{\footnotesize\ttfamily std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ peg\+::\+Semantic\+Values\+::line\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{953                                               \{}
+\DoxyCodeLine{954         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{peg::line\_info}}(\mbox{\hyperlink{structpeg_1_1SemanticValues_a4d930b83cc3559c23b5960ccf69a34c2}{ss}}, \mbox{\hyperlink{structpeg_1_1SemanticValues_adb448675d1c1c49e35a93bb74231ff59}{s\_}});}
+\DoxyCodeLine{955     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{peg\+::line\+\_\+info()}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a83be04ad273680f06c8e8280b0a4995a}\label{structpeg_1_1SemanticValues_a83be04ad273680f06c8e8280b0a4995a}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!name@{name}}
+\index{name@{name}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string \& peg\+::\+Semantic\+Values\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{946 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{structpeg_1_1SemanticValues_a1701b4510ed4167af61c9efebff367ff}{name\_}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_aabd2b20356f550e0a88faa7b79a6c3e7}\label{structpeg_1_1SemanticValues_aabd2b20356f550e0a88faa7b79a6c3e7}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!reset@{reset}}
+\index{reset@{reset}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void peg\+::\+Semantic\+Values\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1037                  \{}
+\DoxyCodeLine{1038         \mbox{\hyperlink{structpeg_1_1SemanticValues_a6a889e866b6f537ea647fd9bb5eb6fa0}{path}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{1039         \mbox{\hyperlink{structpeg_1_1SemanticValues_a4d930b83cc3559c23b5960ccf69a34c2}{ss}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{1040         \mbox{\hyperlink{structpeg_1_1SemanticValues_acb64227e5b71c2a63ed58553af80905e}{tokens}}.clear();}
+\DoxyCodeLine{1041 }
+\DoxyCodeLine{1042         \mbox{\hyperlink{structpeg_1_1SemanticValues_adb448675d1c1c49e35a93bb74231ff59}{s\_}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{1043         \mbox{\hyperlink{structpeg_1_1SemanticValues_a91bb7e3839b27f37e4fc4f780c918652}{n\_}} = 0;}
+\DoxyCodeLine{1044         \mbox{\hyperlink{structpeg_1_1SemanticValues_a605b959ca9eadf11dfe1b72095d2c703}{choice\_count\_}} = 0;}
+\DoxyCodeLine{1045         \mbox{\hyperlink{structpeg_1_1SemanticValues_a0d13a0c3ba9124e9eb8d15ca4a55a73e}{choice\_}} = 0;}
+\DoxyCodeLine{1046     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a322df3d4c63c6d8970af062b46a62081}\label{structpeg_1_1SemanticValues_a322df3d4c63c6d8970af062b46a62081}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!str@{str}}
+\index{str@{str}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{str()}{str()}}
+{\footnotesize\ttfamily std\+::string peg\+::\+Semantic\+Values\+::str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{941                           \{}
+\DoxyCodeLine{942         \textcolor{keywordflow}{return} std::string(\mbox{\hyperlink{structpeg_1_1SemanticValues_adb448675d1c1c49e35a93bb74231ff59}{s\_}}, \mbox{\hyperlink{structpeg_1_1SemanticValues_a91bb7e3839b27f37e4fc4f780c918652}{n\_}});}
+\DoxyCodeLine{943     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_aa2b880931ff1237c7af9a14fa0197044}\label{structpeg_1_1SemanticValues_aa2b880931ff1237c7af9a14fa0197044}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!token@{token}}
+\index{token@{token}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{token()}{token()}}
+{\footnotesize\ttfamily std\+::string peg\+::\+Semantic\+Values\+::token (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{id = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{966                                          \{}
+\DoxyCodeLine{967         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{structpeg_1_1SemanticValues_acb64227e5b71c2a63ed58553af80905e}{tokens}}.empty()) \{}
+\DoxyCodeLine{968             assert(\textcolor{keywordtype}{id} < \mbox{\hyperlink{structpeg_1_1SemanticValues_acb64227e5b71c2a63ed58553af80905e}{tokens}}.size());}
+\DoxyCodeLine{969             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}} = \mbox{\hyperlink{structpeg_1_1SemanticValues_acb64227e5b71c2a63ed58553af80905e}{tokens}}[id];}
+\DoxyCodeLine{970             \textcolor{keywordflow}{return} std::string(\mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}.first, \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}.second);}
+\DoxyCodeLine{971         \}}
+\DoxyCodeLine{972         \textcolor{keywordflow}{return} std::string(\mbox{\hyperlink{structpeg_1_1SemanticValues_adb448675d1c1c49e35a93bb74231ff59}{s\_}}, \mbox{\hyperlink{structpeg_1_1SemanticValues_a91bb7e3839b27f37e4fc4f780c918652}{n\_}});}
+\DoxyCodeLine{973     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{peg\+::tok()}}.
+
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1ParserGenerator_afa7a9efe83e831fd48692dc871c5f3f9}{peg\+::\+Parser\+Generator\+::setup\+\_\+actions()}}.
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a60647e8d53113e2b7cb6ef0b33d61097}\label{structpeg_1_1SemanticValues_a60647e8d53113e2b7cb6ef0b33d61097}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!transform@{transform}}
+\index{transform@{transform}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{transform()}{transform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename F $>$ \\
+auto peg\+::\+Semantic\+Values\+::transform (\begin{DoxyParamCaption}\item[{F}]{f }\end{DoxyParamCaption}) const -\/$>$ vector$<$typename std\+::remove\+\_\+const$<$decltype(f(\mbox{\hyperlink{classpeg_1_1any}{any}}()))$>$\+::type$>$ \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1019                                                                                           \{}
+\DoxyCodeLine{1020         vector<\textcolor{keyword}{typename} std::remove\_const<\textcolor{keyword}{decltype}(f(any()))>::type> r;}
+\DoxyCodeLine{1021         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& v: *\textcolor{keyword}{this}) \{}
+\DoxyCodeLine{1022             r.emplace\_back(f(v));}
+\DoxyCodeLine{1023         \}}
+\DoxyCodeLine{1024         \textcolor{keywordflow}{return} r;}
+\DoxyCodeLine{1025     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a5123cc7ee90f12f9d9970db0bfc2ca87}\label{structpeg_1_1SemanticValues_a5123cc7ee90f12f9d9970db0bfc2ca87}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!transform@{transform}}
+\index{transform@{transform}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{transform()}{transform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename F $>$ \\
+auto peg\+::\+Semantic\+Values\+::transform (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{beg,  }\item[{size\+\_\+t}]{end,  }\item[{F}]{f }\end{DoxyParamCaption}) const -\/$>$ vector$<$typename std\+::remove\+\_\+const$<$decltype(f(\mbox{\hyperlink{classpeg_1_1any}{any}}()))$>$\+::type$>$ \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1028                                                                                                                   \{}
+\DoxyCodeLine{1029         vector<\textcolor{keyword}{typename} std::remove\_const<\textcolor{keyword}{decltype}(f(any()))>::type> r;}
+\DoxyCodeLine{1030         end = (std::min)(end, size());}
+\DoxyCodeLine{1031         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = beg; i < end; i++) \{}
+\DoxyCodeLine{1032             r.emplace\_back(f((*\textcolor{keyword}{this})[i]));}
+\DoxyCodeLine{1033         \}}
+\DoxyCodeLine{1034         \textcolor{keywordflow}{return} r;}
+\DoxyCodeLine{1035     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_ab67736e20427be239008aaaafd33247a}\label{structpeg_1_1SemanticValues_ab67736e20427be239008aaaafd33247a}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!transform@{transform}}
+\index{transform@{transform}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{transform()}{transform()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto peg\+::\+Semantic\+Values\+::transform (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{beg = {\ttfamily 0},  }\item[{size\+\_\+t}]{end = {\ttfamily static\+\_\+cast$<$size\+\_\+t$>$(-\/1)} }\end{DoxyParamCaption}) const -\/$>$ vector$<$T$>$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{977                                                                                             \{}
+\DoxyCodeLine{978         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{structpeg_1_1SemanticValues_ab67736e20427be239008aaaafd33247a}{transform}}(beg, end, [](\textcolor{keyword}{const} any\& v) \{ \textcolor{keywordflow}{return} v.get<T>(); \});}
+\DoxyCodeLine{979     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classpeg_1_1any_a3c739d692a9b39839cd42842361b9754}{peg\+::any\+::get()}}.
+
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1ParserGenerator_afa7a9efe83e831fd48692dc871c5f3f9}{peg\+::\+Parser\+Generator\+::setup\+\_\+actions()}}.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_ac26c806e60ca4a0547680edb68f6e39b}\label{structpeg_1_1SemanticValues_ac26c806e60ca4a0547680edb68f6e39b}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!Context@{Context}}
+\index{Context@{Context}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{Context}{Context}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classpeg_1_1Context}{Context}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a25b1b4be3f62edc85ed2ae5540f827c0}\label{structpeg_1_1SemanticValues_a25b1b4be3f62edc85ed2ae5540f827c0}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!Holder@{Holder}}
+\index{Holder@{Holder}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{Holder}{Holder}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classpeg_1_1Holder}{Holder}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_ad6fe0c2f1bf7f39297c25f310870b1f2}\label{structpeg_1_1SemanticValues_ad6fe0c2f1bf7f39297c25f310870b1f2}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!PrioritizedChoice@{PrioritizedChoice}}
+\index{PrioritizedChoice@{PrioritizedChoice}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{PrioritizedChoice}{PrioritizedChoice}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classpeg_1_1PrioritizedChoice}{Prioritized\+Choice}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a26271d5afaff6e6d3f00c055c63d0b24}\label{structpeg_1_1SemanticValues_a26271d5afaff6e6d3f00c055c63d0b24}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{Sequence}{Sequence}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classpeg_1_1Sequence}{Sequence}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a0d13a0c3ba9124e9eb8d15ca4a55a73e}\label{structpeg_1_1SemanticValues_a0d13a0c3ba9124e9eb8d15ca4a55a73e}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!choice\_@{choice\_}}
+\index{choice\_@{choice\_}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{choice\_}{choice\_}}
+{\footnotesize\ttfamily size\+\_\+t peg\+::\+Semantic\+Values\+::choice\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1PrioritizedChoice_a84be0241258e9fcfcef75d8ca9bedcf3}{peg\+::\+Prioritized\+Choice\+::parse()}}.
+
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a605b959ca9eadf11dfe1b72095d2c703}\label{structpeg_1_1SemanticValues_a605b959ca9eadf11dfe1b72095d2c703}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!choice\_count\_@{choice\_count\_}}
+\index{choice\_count\_@{choice\_count\_}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{choice\_count\_}{choice\_count\_}}
+{\footnotesize\ttfamily size\+\_\+t peg\+::\+Semantic\+Values\+::choice\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1PrioritizedChoice_a84be0241258e9fcfcef75d8ca9bedcf3}{peg\+::\+Prioritized\+Choice\+::parse()}}.
+
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a91bb7e3839b27f37e4fc4f780c918652}\label{structpeg_1_1SemanticValues_a91bb7e3839b27f37e4fc4f780c918652}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!n\_@{n\_}}
+\index{n\_@{n\_}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{n\_}{n\_}}
+{\footnotesize\ttfamily size\+\_\+t peg\+::\+Semantic\+Values\+::n\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1Sequence_a86597545ce8be45e20383874c4a0a9bf}{peg\+::\+Sequence\+::parse()}}, and \mbox{\hyperlink{classpeg_1_1PrioritizedChoice_a84be0241258e9fcfcef75d8ca9bedcf3}{peg\+::\+Prioritized\+Choice\+::parse()}}.
+
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a1701b4510ed4167af61c9efebff367ff}\label{structpeg_1_1SemanticValues_a1701b4510ed4167af61c9efebff367ff}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!name\_@{name\_}}
+\index{name\_@{name\_}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string peg\+::\+Semantic\+Values\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a6a889e866b6f537ea647fd9bb5eb6fa0}\label{structpeg_1_1SemanticValues_a6a889e866b6f537ea647fd9bb5eb6fa0}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!path@{path}}
+\index{path@{path}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily const char$\ast$ peg\+::\+Semantic\+Values\+::path}
+
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_adb448675d1c1c49e35a93bb74231ff59}\label{structpeg_1_1SemanticValues_adb448675d1c1c49e35a93bb74231ff59}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!s\_@{s\_}}
+\index{s\_@{s\_}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{s\_}{s\_}}
+{\footnotesize\ttfamily const char$\ast$ peg\+::\+Semantic\+Values\+::s\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1Sequence_a86597545ce8be45e20383874c4a0a9bf}{peg\+::\+Sequence\+::parse()}}, \mbox{\hyperlink{classpeg_1_1PrioritizedChoice_a84be0241258e9fcfcef75d8ca9bedcf3}{peg\+::\+Prioritized\+Choice\+::parse()}}, and \mbox{\hyperlink{classpeg_1_1Holder_a42fb3248506eaafd28fc349455675466}{peg\+::\+Holder\+::parse()}}.
+
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a4d930b83cc3559c23b5960ccf69a34c2}\label{structpeg_1_1SemanticValues_a4d930b83cc3559c23b5960ccf69a34c2}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!ss@{ss}}
+\index{ss@{ss}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{ss}{ss}}
+{\footnotesize\ttfamily const char$\ast$ peg\+::\+Semantic\+Values\+::ss}
+
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_a81c9461f32161826326fb14e2e999b7f}\label{structpeg_1_1SemanticValues_a81c9461f32161826326fb14e2e999b7f}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!tags@{tags}}
+\index{tags@{tags}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{tags}{tags}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned int$>$ peg\+::\+Semantic\+Values\+::tags}
+
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1Sequence_a86597545ce8be45e20383874c4a0a9bf}{peg\+::\+Sequence\+::parse()}}, \mbox{\hyperlink{classpeg_1_1PrioritizedChoice_a84be0241258e9fcfcef75d8ca9bedcf3}{peg\+::\+Prioritized\+Choice\+::parse()}}, \mbox{\hyperlink{classpeg_1_1ZeroOrMore_af6e8b9aec8dacb3a264d53096950583c}{peg\+::\+Zero\+Or\+More\+::parse()}}, \mbox{\hyperlink{classpeg_1_1OneOrMore_acf39bcd7e1ad59c5c49f9aa8d664eea9}{peg\+::\+One\+Or\+More\+::parse()}}, and \mbox{\hyperlink{classpeg_1_1Option_a5225ab0a9849d0772037dc60cf9ed134}{peg\+::\+Option\+::parse()}}.
+
+\mbox{\Hypertarget{structpeg_1_1SemanticValues_acb64227e5b71c2a63ed58553af80905e}\label{structpeg_1_1SemanticValues_acb64227e5b71c2a63ed58553af80905e}} 
+\index{peg::SemanticValues@{peg::SemanticValues}!tokens@{tokens}}
+\index{tokens@{tokens}!peg::SemanticValues@{peg::SemanticValues}}
+\doxysubsubsection{\texorpdfstring{tokens}{tokens}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$const char$\ast$, size\+\_\+t$>$ $>$ peg\+::\+Semantic\+Values\+::tokens}
+
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1Sequence_a86597545ce8be45e20383874c4a0a9bf}{peg\+::\+Sequence\+::parse()}}, \mbox{\hyperlink{classpeg_1_1PrioritizedChoice_a84be0241258e9fcfcef75d8ca9bedcf3}{peg\+::\+Prioritized\+Choice\+::parse()}}, \mbox{\hyperlink{classpeg_1_1ZeroOrMore_af6e8b9aec8dacb3a264d53096950583c}{peg\+::\+Zero\+Or\+More\+::parse()}}, \mbox{\hyperlink{classpeg_1_1OneOrMore_acf39bcd7e1ad59c5c49f9aa8d664eea9}{peg\+::\+One\+Or\+More\+::parse()}}, \mbox{\hyperlink{classpeg_1_1Option_a5225ab0a9849d0772037dc60cf9ed134}{peg\+::\+Option\+::parse()}}, \mbox{\hyperlink{classpeg_1_1TokenBoundary_acf07987217a00b32783cc8c58e95ef4d}{peg\+::\+Token\+Boundary\+::parse()}}, and \mbox{\hyperlink{classpeg_1_1ParserGenerator_afa7a9efe83e831fd48692dc871c5f3f9}{peg\+::\+Parser\+Generator\+::setup\+\_\+actions()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

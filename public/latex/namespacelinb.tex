@@ -1,0 +1,134 @@
+\hypertarget{namespacelinb}{}\doxysection{linb Namespace Reference}
+\label{namespacelinb}\index{linb@{linb}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelinb_1_1detail}{detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlinb_1_1any}{any}}
+\item 
+class \mbox{\hyperlink{classlinb_1_1bad__any__cast}{bad\+\_\+any\+\_\+cast}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \mbox{\hyperlink{namespacelinb_ac68a68d2d324bed5e39c1359e55412e2}{any\+\_\+cast}} (const \mbox{\hyperlink{classlinb_1_1any}{any}} \&operand)
+\begin{DoxyCompactList}\small\item\em Performs $\ast$any\+\_\+cast\texorpdfstring{$<$}{<}add\+\_\+const\+\_\+t$<$remove\+\_\+reference\+\_\+t$<$\+Value\+Type$>$$>$\texorpdfstring{$>$}{>}(\&operand), or throws \mbox{\hyperlink{classlinb_1_1bad__any__cast}{bad\+\_\+any\+\_\+cast}} on failure. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \mbox{\hyperlink{namespacelinb_a3d4d00eec877876cde8681f5e14e252c}{any\+\_\+cast}} (\mbox{\hyperlink{classlinb_1_1any}{any}} \&operand)
+\begin{DoxyCompactList}\small\item\em Performs $\ast$any\+\_\+cast\texorpdfstring{$<$}{<}remove\+\_\+reference\+\_\+t$<$\+Value\+Type$>$\texorpdfstring{$>$}{>}(\&operand), or throws \mbox{\hyperlink{classlinb_1_1bad__any__cast}{bad\+\_\+any\+\_\+cast}} on failure. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \mbox{\hyperlink{namespacelinb_a0c4efb247037b0ceee3a7d8983b6cbc3}{any\+\_\+cast}} (\mbox{\hyperlink{classlinb_1_1any}{any}} \&\&operand)
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\const Value\+Type $\ast$ \mbox{\hyperlink{namespacelinb_af6abb0519d8ee997c1d0575922b278f2}{any\+\_\+cast}} (const \mbox{\hyperlink{classlinb_1_1any}{any}} $\ast$operand) noexcept
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type $\ast$ \mbox{\hyperlink{namespacelinb_a359287c62dc33136c80d2b1e6e58cb8d}{any\+\_\+cast}} (\mbox{\hyperlink{classlinb_1_1any}{any}} $\ast$operand) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacelinb_a0c4efb247037b0ceee3a7d8983b6cbc3}\label{namespacelinb_a0c4efb247037b0ceee3a7d8983b6cbc3}} 
+\index{linb@{linb}!any\_cast@{any\_cast}}
+\index{any\_cast@{any\_cast}!linb@{linb}}
+\doxysubsubsection{\texorpdfstring{any\_cast()}{any\_cast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type $>$ \\
+Value\+Type linb\+::any\+\_\+cast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlinb_1_1any}{any}} \&\&}]{operand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+If Value\+Type is Move\+Constructible and isn\textquotesingle{}t a lvalue reference, performs std\+::move($\ast$any\+\_\+cast$<$remove\+\_\+reference\+\_\+t$<$\+Value\+Type$>$$>$(\&operand)), otherwise $\ast$any\+\_\+cast\texorpdfstring{$<$}{<}remove\+\_\+reference\+\_\+t$<$\+Value\+Type$>$\texorpdfstring{$>$}{>}(\&operand). Throws \mbox{\hyperlink{classlinb_1_1bad__any__cast}{bad\+\_\+any\+\_\+cast}} on failure. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{428 \{}
+\DoxyCodeLine{429     \textcolor{keyword}{using} can\_move = std::integral\_constant<bool,}
+\DoxyCodeLine{430         std::is\_move\_constructible<ValueType>::value}
+\DoxyCodeLine{431         \&\& !std::is\_lvalue\_reference<ValueType>::value>;}
+\DoxyCodeLine{432 }
+\DoxyCodeLine{433     \textcolor{keyword}{auto} \mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}} = any\_cast<typename std::remove\_reference<ValueType>::type>(\&operand);}
+\DoxyCodeLine{434 \textcolor{preprocessor}{\#ifndef ANY\_IMPL\_NO\_EXCEPTIONS}}
+\DoxyCodeLine{435     \textcolor{keywordflow}{if}(\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}} == \textcolor{keyword}{nullptr}) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{bad\_any\_cast}}();}
+\DoxyCodeLine{436 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{437     \textcolor{keywordflow}{return} detail::any\_cast\_move\_if\_true<ValueType>(\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}}, can\_move());}
+\DoxyCodeLine{438 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacelinb_a3d4d00eec877876cde8681f5e14e252c}\label{namespacelinb_a3d4d00eec877876cde8681f5e14e252c}} 
+\index{linb@{linb}!any\_cast@{any\_cast}}
+\index{any\_cast@{any\_cast}!linb@{linb}}
+\doxysubsubsection{\texorpdfstring{any\_cast()}{any\_cast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type $>$ \\
+Value\+Type linb\+::any\+\_\+cast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlinb_1_1any}{any}} \&}]{operand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs $\ast$any\+\_\+cast\texorpdfstring{$<$}{<}remove\+\_\+reference\+\_\+t$<$\+Value\+Type$>$\texorpdfstring{$>$}{>}(\&operand), or throws \mbox{\hyperlink{classlinb_1_1bad__any__cast}{bad\+\_\+any\+\_\+cast}} on failure. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{413 \{}
+\DoxyCodeLine{414     \textcolor{keyword}{auto} \mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}} = any\_cast<typename std::remove\_reference<ValueType>::type>(\&operand);}
+\DoxyCodeLine{415 \textcolor{preprocessor}{\#ifndef ANY\_IMPL\_NO\_EXCEPTIONS}}
+\DoxyCodeLine{416     \textcolor{keywordflow}{if}(\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}} == \textcolor{keyword}{nullptr}) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{bad\_any\_cast}}();}
+\DoxyCodeLine{417 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{418     \textcolor{keywordflow}{return} *\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}};}
+\DoxyCodeLine{419 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacelinb_a359287c62dc33136c80d2b1e6e58cb8d}\label{namespacelinb_a359287c62dc33136c80d2b1e6e58cb8d}} 
+\index{linb@{linb}!any\_cast@{any\_cast}}
+\index{any\_cast@{any\_cast}!linb@{linb}}
+\doxysubsubsection{\texorpdfstring{any\_cast()}{any\_cast()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type $>$ \\
+Value\+Type $\ast$ linb\+::any\+\_\+cast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlinb_1_1any}{any}} $\ast$}]{operand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+If operand != nullptr \&\& operand-\/\texorpdfstring{$>$}{>}type() == typeid(\+Value\+Type), a pointer to the object contained by operand, otherwise nullptr. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{457 \{}
+\DoxyCodeLine{458     \textcolor{keyword}{using} T = \textcolor{keyword}{typename} std::decay<ValueType>::type;}
+\DoxyCodeLine{459 }
+\DoxyCodeLine{460     \textcolor{keywordflow}{if} (operand \&\& operand-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}} == any::vtable\_for\_type<T>())}
+\DoxyCodeLine{461         \textcolor{keywordflow}{return} operand-\/>\mbox{\hyperlink{classlinb_1_1any_af0449384684f4bfa5624d09ce463a51d}{cast}}<ValueType>();}
+\DoxyCodeLine{462     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{463         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{464 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacelinb_ac68a68d2d324bed5e39c1359e55412e2}\label{namespacelinb_ac68a68d2d324bed5e39c1359e55412e2}} 
+\index{linb@{linb}!any\_cast@{any\_cast}}
+\index{any\_cast@{any\_cast}!linb@{linb}}
+\doxysubsubsection{\texorpdfstring{any\_cast()}{any\_cast()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type $>$ \\
+Value\+Type linb\+::any\+\_\+cast (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlinb_1_1any}{any}} \&}]{operand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs $\ast$any\+\_\+cast\texorpdfstring{$<$}{<}add\+\_\+const\+\_\+t$<$remove\+\_\+reference\+\_\+t$<$\+Value\+Type$>$$>$\texorpdfstring{$>$}{>}(\&operand), or throws \mbox{\hyperlink{classlinb_1_1bad__any__cast}{bad\+\_\+any\+\_\+cast}} on failure. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{402 \{}
+\DoxyCodeLine{403     \textcolor{keyword}{auto} \mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}} = any\_cast<typename std::add\_const<typename std::remove\_reference<ValueType>::type>::type>(\&operand);}
+\DoxyCodeLine{404 \textcolor{preprocessor}{\#ifndef ANY\_IMPL\_NO\_EXCEPTIONS}}
+\DoxyCodeLine{405     \textcolor{keywordflow}{if}(\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}} == \textcolor{keyword}{nullptr}) \textcolor{keywordflow}{throw} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{bad\_any\_cast}}();}
+\DoxyCodeLine{406 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{407     \textcolor{keywordflow}{return} *\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}};}
+\DoxyCodeLine{408 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacelinb_af6abb0519d8ee997c1d0575922b278f2}\label{namespacelinb_af6abb0519d8ee997c1d0575922b278f2}} 
+\index{linb@{linb}!any\_cast@{any\_cast}}
+\index{any\_cast@{any\_cast}!linb@{linb}}
+\doxysubsubsection{\texorpdfstring{any\_cast()}{any\_cast()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type $>$ \\
+const Value\+Type $\ast$ linb\+::any\+\_\+cast (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlinb_1_1any}{any}} $\ast$}]{operand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+If operand != nullptr \&\& operand-\/\texorpdfstring{$>$}{>}type() == typeid(\+Value\+Type), a pointer to the object contained by operand, otherwise nullptr. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{444 \{}
+\DoxyCodeLine{445     \textcolor{keyword}{using} T = \textcolor{keyword}{typename} std::decay<ValueType>::type;}
+\DoxyCodeLine{446 }
+\DoxyCodeLine{447     \textcolor{keywordflow}{if} (operand \&\& operand-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}} == any::vtable\_for\_type<T>())}
+\DoxyCodeLine{448         \textcolor{keywordflow}{return} operand-\/>\mbox{\hyperlink{classlinb_1_1any_af0449384684f4bfa5624d09ce463a51d}{cast}}<ValueType>();}
+\DoxyCodeLine{449     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{450         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{451 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,10 @@
+digraph "stringtoolbox::split"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="stringtoolbox::split",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="cluon::FromJSONVisitor\l::readKeyValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1FromJSONVisitor.html#ac5de314a65fd9244c50713401111b8d4",tooltip=" "];
+}

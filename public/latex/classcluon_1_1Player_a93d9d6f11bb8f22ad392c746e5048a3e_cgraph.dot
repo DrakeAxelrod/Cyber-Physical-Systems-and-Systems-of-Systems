@@ -1,0 +1,26 @@
+digraph "cluon::Player::initializeIndex"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="cluon::Player::initialize\lIndex",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="cluon::time::deltaInMicroseconds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacecluon_1_1time.html#aa5df8cf81744594280e72ccd68641a61",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="cluon::time::toMicroseconds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacecluon_1_1time.html#ad7e0afa86b32cbb3e78b392664d0793a",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="cluon::extractEnvelope",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacecluon.html#abbf469eea6cc8400c8a0689a7414a570",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="cluon::FromProtoVisitor\l::decodeFrom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1FromProtoVisitor.html#a40200331aef897bc2ec90d5cf9c20519",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="cluon::time::now",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacecluon_1_1time.html#a4265a23bd4bd2b5ed37abff8dffddd25",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="cluon::time::convert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacecluon_1_1time.html#ae2df73301f037b992abdb8b66c5e35b3",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="cluon::data::TimeStamp\l::microseconds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1data_1_1TimeStamp.html#a6330ea6b06cdce2b2a30098f3ec87a9a",tooltip=" "];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="cluon::data::TimeStamp\l::seconds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1data_1_1TimeStamp.html#ac8c0f1d9f06177d7dd8568261fe14dac",tooltip=" "];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+}

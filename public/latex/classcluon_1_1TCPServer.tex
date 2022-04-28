@@ -1,0 +1,394 @@
+\hypertarget{classcluon_1_1TCPServer}{}\doxysection{cluon\+::TCPServer Class Reference}
+\label{classcluon_1_1TCPServer}\index{cluon::TCPServer@{cluon::TCPServer}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for cluon\+::TCPServer\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1TCPServer_ab4687285c5779ff7135f388f81d90f50}{TCPServer}} (uint16\+\_\+t port, std\+::function$<$ void(std\+::string \&\&from, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcluon_1_1TCPConnection}{cluon\+::\+TCPConnection}} $>$ connection)$>$ new\+Connection\+Delegate) noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1TCPServer_a33d7e1eeb83b39fa4db9533a25de817c}{$\sim$\+TCPServer}} () noexcept
+\item 
+bool \mbox{\hyperlink{classcluon_1_1TCPServer_a8a984878e7f1c210b101fca0caa1ee3e}{is\+Running}} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1TCPServer_adc6bf24287c819b5472bff52e85d99fb}{TCPServer}} (const \mbox{\hyperlink{classcluon_1_1TCPServer}{TCPServer}} \&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1TCPServer_aff56542134616262a7d437e524639485}{TCPServer}} (\mbox{\hyperlink{classcluon_1_1TCPServer}{TCPServer}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1TCPServer}{TCPServer}} \& \mbox{\hyperlink{classcluon_1_1TCPServer_af28b4fd8278d63140c9dec4b4d8ff0cd}{operator=}} (const \mbox{\hyperlink{classcluon_1_1TCPServer}{TCPServer}} \&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1TCPServer}{TCPServer}} \& \mbox{\hyperlink{classcluon_1_1TCPServer_aa3740e3710f2d1e7e79fdc62f133103b}{operator=}} (\mbox{\hyperlink{classcluon_1_1TCPServer}{TCPServer}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{classcluon_1_1TCPServer_a7947d2b56d8d4b19bf44c7459e419767}{close\+Socket}} (int error\+Code) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1TCPServer_a3383d05f6a75e4298e5b1076161f3043}{read\+From\+Socket}} () noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{classcluon_1_1TCPServer_a1fbc120d25335332e65fbe53c34ea620}{m\+\_\+socket\+Mutex}} \{\}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\+\_\+socket}} \{-\/1\}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classcluon_1_1TCPServer_a8ccb65f323775330a184a261f222829e}{m\+\_\+read\+From\+Socket\+Thread\+Running}} \{false\}
+\item 
+std\+::thread \mbox{\hyperlink{classcluon_1_1TCPServer_afd91d5419d724787369636ac3272aa2c}{m\+\_\+read\+From\+Socket\+Thread}} \{\}
+\item 
+std\+::mutex \mbox{\hyperlink{classcluon_1_1TCPServer_a88dfa2b0cf7c50dc6320c6d7e756b3ad}{m\+\_\+new\+Connection\+Delegate\+Mutex}} \{\}
+\item 
+std\+::function$<$ void(std\+::string \&\&from, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcluon_1_1TCPConnection}{cluon\+::\+TCPConnection}} $>$ connection)$>$ \mbox{\hyperlink{classcluon_1_1TCPServer_a46fec487d263545db1b4834f55efa4c6}{m\+\_\+new\+Connection\+Delegate}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcluon_1_1TCPServer_adc6bf24287c819b5472bff52e85d99fb}\label{classcluon_1_1TCPServer_adc6bf24287c819b5472bff52e85d99fb}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!TCPServer@{TCPServer}}
+\index{TCPServer@{TCPServer}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{TCPServer()}{TCPServer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily cluon\+::\+TCPServer\+::\+TCPServer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1TCPServer}{TCPServer}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1TCPServer_aff56542134616262a7d437e524639485}\label{classcluon_1_1TCPServer_aff56542134616262a7d437e524639485}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!TCPServer@{TCPServer}}
+\index{TCPServer@{TCPServer}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{TCPServer()}{TCPServer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily cluon\+::\+TCPServer\+::\+TCPServer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1TCPServer}{TCPServer}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1TCPServer_ab4687285c5779ff7135f388f81d90f50}\label{classcluon_1_1TCPServer_ab4687285c5779ff7135f388f81d90f50}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!TCPServer@{TCPServer}}
+\index{TCPServer@{TCPServer}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{TCPServer()}{TCPServer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily cluon\+::\+TCPServer\+::\+TCPServer (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port,  }\item[{std\+::function$<$ void(std\+::string \&\&from, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcluon_1_1TCPConnection}{cluon\+::\+TCPConnection}} $>$ connection)$>$}]{new\+Connection\+Delegate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Constructor to create a TCP server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port to receive UDP packets from. \\
+\hline
+{\em new\+Connection\+Delegate} & Functional to handle incoming TCP connections. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10884     : \mbox{\hyperlink{classcluon_1_1TCPServer_a46fec487d263545db1b4834f55efa4c6}{m\_newConnectionDelegate}}(newConnectionDelegate) \{}
+\DoxyCodeLine{10885     \textcolor{keywordflow}{if} (0 < port) \{}
+\DoxyCodeLine{10886 \textcolor{preprocessor}{\#ifdef WIN32}}
+\DoxyCodeLine{10887         \textcolor{comment}{// Load Winsock 2.2 DLL.}}
+\DoxyCodeLine{10888         WSADATA wsaData;}
+\DoxyCodeLine{10889         \textcolor{keywordflow}{if} (WSAStartup(MAKEWORD(2, 2), \&wsaData) != 0) \{}
+\DoxyCodeLine{10890             std::cerr << \textcolor{stringliteral}{"{}[cluon::TCPServer] Error while calling WSAStartUp: "{}} << WSAGetLastError() << std::endl;}
+\DoxyCodeLine{10891         \}}
+\DoxyCodeLine{10892 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10893         \mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}} = ::socket(AF\_INET, SOCK\_STREAM, IPPROTO\_TCP);}
+\DoxyCodeLine{10894 }
+\DoxyCodeLine{10895 \textcolor{preprocessor}{\#ifdef WIN32}}
+\DoxyCodeLine{10896         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}} < 0) \{}
+\DoxyCodeLine{10897             std::cerr << \textcolor{stringliteral}{"{}[cluon::TCPServer] Error while creating socket: "{}} << WSAGetLastError() << std::endl;}
+\DoxyCodeLine{10898             WSACleanup();}
+\DoxyCodeLine{10899         \}}
+\DoxyCodeLine{10900 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10901 }
+\DoxyCodeLine{10902         \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}} < 0)) \{}
+\DoxyCodeLine{10903             \textcolor{comment}{// Allow reusing of ports by multiple calls with same address/port.}}
+\DoxyCodeLine{10904             uint32\_t YES = 1;}
+\DoxyCodeLine{10905             \textcolor{comment}{// clang-\/format off}}
+\DoxyCodeLine{10906             \textcolor{keyword}{auto} \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}} = ::setsockopt(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}}, SOL\_SOCKET, SO\_REUSEADDR, \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char} *\textcolor{keyword}{>}(\&YES), \textcolor{keyword}{sizeof}(YES)); \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{10907             \textcolor{comment}{// clang-\/format on}}
+\DoxyCodeLine{10908             \textcolor{keywordflow}{if} (0 > \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}) \{}
+\DoxyCodeLine{10909 \textcolor{preprocessor}{\#ifdef WIN32 }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10910                 \textcolor{keyword}{auto} errorCode = WSAGetLastError();}
+\DoxyCodeLine{10911 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10912                 \textcolor{keyword}{auto} errorCode = errno;                                              \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10913 \textcolor{preprocessor}{\#endif                                  }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10914                 \mbox{\hyperlink{classcluon_1_1TCPServer_a7947d2b56d8d4b19bf44c7459e419767}{closeSocket}}(errorCode); \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10915             \}}
+\DoxyCodeLine{10916         \}}
+\DoxyCodeLine{10917 }
+\DoxyCodeLine{10918         \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}} < 0)) \{}
+\DoxyCodeLine{10919             \textcolor{comment}{// Setup address and port.}}
+\DoxyCodeLine{10920             \textcolor{keyword}{struct }sockaddr\_in address;}
+\DoxyCodeLine{10921             ::memset(\&address, 0, \textcolor{keyword}{sizeof}(address));}
+\DoxyCodeLine{10922             address.sin\_family      = AF\_INET;}
+\DoxyCodeLine{10923             address.sin\_addr.s\_addr = htonl(INADDR\_ANY);}
+\DoxyCodeLine{10924             address.sin\_port        = htons(port);}
+\DoxyCodeLine{10925 }
+\DoxyCodeLine{10926             \textcolor{keyword}{auto} \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}} = ::bind(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}}, \textcolor{keyword}{reinterpret\_cast<}struct sockaddr *\textcolor{keyword}{>}(\&address), \textcolor{keyword}{sizeof}(address));}
+\DoxyCodeLine{10927             \textcolor{keywordflow}{if} (-\/1 != \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}) \{}
+\DoxyCodeLine{10928                 \textcolor{keyword}{constexpr} int32\_t MAX\_PENDING\_CONNECTIONS\{100\};}
+\DoxyCodeLine{10929                 \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}} = ::listen(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}}, MAX\_PENDING\_CONNECTIONS);}
+\DoxyCodeLine{10930                 \textcolor{keywordflow}{if} (-\/1 != \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}) \{}
+\DoxyCodeLine{10931                     \textcolor{comment}{// Constructing a thread could fail.}}
+\DoxyCodeLine{10932                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{10933                         \mbox{\hyperlink{classcluon_1_1TCPServer_afd91d5419d724787369636ac3272aa2c}{m\_readFromSocketThread}} = std::thread(\&\mbox{\hyperlink{classcluon_1_1TCPServer_a3383d05f6a75e4298e5b1076161f3043}{TCPServer::readFromSocket}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{10934 }
+\DoxyCodeLine{10935                         \textcolor{comment}{// Let the operating system spawn the thread.}}
+\DoxyCodeLine{10936                         \textcolor{keyword}{using namespace }std::literals::chrono\_literals;}
+\DoxyCodeLine{10937                         \textcolor{keywordflow}{do} \{ std::this\_thread::sleep\_for(1ms); \} \textcolor{keywordflow}{while} (!\mbox{\hyperlink{classcluon_1_1TCPServer_a8ccb65f323775330a184a261f222829e}{m\_readFromSocketThreadRunning}}.load());}
+\DoxyCodeLine{10938                     \} \textcolor{keywordflow}{catch} (...) \{          \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10939                         \mbox{\hyperlink{classcluon_1_1TCPServer_a7947d2b56d8d4b19bf44c7459e419767}{closeSocket}}(ECHILD); \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10940                     \}}
+\DoxyCodeLine{10941                 \} \textcolor{keywordflow}{else} \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10942 \textcolor{preprocessor}{\#ifdef WIN32             }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10943                     \textcolor{keyword}{auto} errorCode = WSAGetLastError();}
+\DoxyCodeLine{10944 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10945                     \textcolor{keyword}{auto} errorCode = errno;                                          \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10946 \textcolor{preprocessor}{\#endif                                      }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10947                     \mbox{\hyperlink{classcluon_1_1TCPServer_a7947d2b56d8d4b19bf44c7459e419767}{closeSocket}}(errorCode); \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10948                 \}}
+\DoxyCodeLine{10949             \} \textcolor{keywordflow}{else} \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10950 \textcolor{preprocessor}{\#ifdef WIN32         }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10951                 \textcolor{keyword}{auto} errorCode = WSAGetLastError();}
+\DoxyCodeLine{10952 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10953                 \textcolor{keyword}{auto} errorCode = errno;                                              \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10954 \textcolor{preprocessor}{\#endif                                  }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10955                 \mbox{\hyperlink{classcluon_1_1TCPServer_a7947d2b56d8d4b19bf44c7459e419767}{closeSocket}}(errorCode); \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10956             \}}
+\DoxyCodeLine{10957         \}}
+\DoxyCodeLine{10958     \}}
+\DoxyCodeLine{10959 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1TCPServer_a3383d05f6a75e4298e5b1076161f3043}{read\+From\+Socket()}}, and \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{ret\+Val}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classcluon_1_1TCPServer_a33d7e1eeb83b39fa4db9533a25de817c}\label{classcluon_1_1TCPServer_a33d7e1eeb83b39fa4db9533a25de817c}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!````~TCPServer@{$\sim$TCPServer}}
+\index{````~TCPServer@{$\sim$TCPServer}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{$\sim$TCPServer()}{~TCPServer()}}
+{\footnotesize\ttfamily cluon\+::\+TCPServer\+::$\sim$\+TCPServer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10961                                       \{}
+\DoxyCodeLine{10962     \mbox{\hyperlink{classcluon_1_1TCPServer_a8ccb65f323775330a184a261f222829e}{m\_readFromSocketThreadRunning}}.store(\textcolor{keyword}{false});}
+\DoxyCodeLine{10963 }
+\DoxyCodeLine{10964     \textcolor{comment}{// Joining the thread could fail.}}
+\DoxyCodeLine{10965     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{10966         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1TCPServer_afd91d5419d724787369636ac3272aa2c}{m\_readFromSocketThread}}.joinable()) \{}
+\DoxyCodeLine{10967             \mbox{\hyperlink{classcluon_1_1TCPServer_afd91d5419d724787369636ac3272aa2c}{m\_readFromSocketThread}}.join();}
+\DoxyCodeLine{10968         \}}
+\DoxyCodeLine{10969     \} \textcolor{keywordflow}{catch} (...) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10970     \}}
+\DoxyCodeLine{10971 }
+\DoxyCodeLine{10972     \mbox{\hyperlink{classcluon_1_1TCPServer_a7947d2b56d8d4b19bf44c7459e419767}{closeSocket}}(0);}
+\DoxyCodeLine{10973 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1TCPServer_a7947d2b56d8d4b19bf44c7459e419767}{close\+Socket()}}, \mbox{\hyperlink{classcluon_1_1TCPServer_afd91d5419d724787369636ac3272aa2c}{m\+\_\+read\+From\+Socket\+Thread}}, and \mbox{\hyperlink{classcluon_1_1TCPServer_a8ccb65f323775330a184a261f222829e}{m\+\_\+read\+From\+Socket\+Thread\+Running}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcluon_1_1TCPServer_a7947d2b56d8d4b19bf44c7459e419767}\label{classcluon_1_1TCPServer_a7947d2b56d8d4b19bf44c7459e419767}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!closeSocket@{closeSocket}}
+\index{closeSocket@{closeSocket}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{closeSocket()}{closeSocket()}}
+{\footnotesize\ttfamily void cluon\+::\+TCPServer\+::close\+Socket (\begin{DoxyParamCaption}\item[{int}]{error\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+This method closes the socket.
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+Code} & Error code that caused this closing. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10975                                                          \{}
+\DoxyCodeLine{10976     \textcolor{keywordflow}{if} (0 != errorCode) \{}
+\DoxyCodeLine{10977         std::cerr << \textcolor{stringliteral}{"{}[cluon::TCPServer] Failed to perform socket operation: "{}}; \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10978 \textcolor{preprocessor}{\#ifdef WIN32                                                                    }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10979         std::cerr << errorCode << std::endl;}
+\DoxyCodeLine{10980 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10981         std::cerr << ::strerror(errorCode) << \textcolor{stringliteral}{"{} ("{}} << errorCode << \textcolor{stringliteral}{"{})"{}} << std::endl; \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10982 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{10983     \}}
+\DoxyCodeLine{10984 }
+\DoxyCodeLine{10985     \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}} < 0)) \{}
+\DoxyCodeLine{10986 \textcolor{preprocessor}{\#ifdef WIN32}}
+\DoxyCodeLine{10987         ::shutdown(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}}, SD\_BOTH);}
+\DoxyCodeLine{10988         ::closesocket(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}});}
+\DoxyCodeLine{10989         WSACleanup();}
+\DoxyCodeLine{10990 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10991         ::shutdown(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}}, SHUT\_RDWR);                                             \textcolor{comment}{// Disallow further read/write operations.}}
+\DoxyCodeLine{10992         ::close(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}});}
+\DoxyCodeLine{10993 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10994     \}}
+\DoxyCodeLine{10995     \mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}} = -\/1;}
+\DoxyCodeLine{10996 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1TCPServer_a33d7e1eeb83b39fa4db9533a25de817c}{$\sim$\+TCPServer()}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classcluon_1_1TCPServer_a8a984878e7f1c210b101fca0caa1ee3e}\label{classcluon_1_1TCPServer_a8a984878e7f1c210b101fca0caa1ee3e}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{isRunning()}{isRunning()}}
+{\footnotesize\ttfamily bool cluon\+::\+TCPServer\+::is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+true if the \mbox{\hyperlink{classcluon_1_1TCPServer}{TCPServer}} could successfully be created and is able to receive data. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10998                                                 \{}
+\DoxyCodeLine{10999     \textcolor{keywordflow}{return} (\mbox{\hyperlink{classcluon_1_1TCPServer_a8ccb65f323775330a184a261f222829e}{m\_readFromSocketThreadRunning}}.load() \&\& !\mbox{\hyperlink{classcluon_1_1TerminateHandler_a14570735df2bf9965520a022879b2a56}{TerminateHandler::instance}}().\mbox{\hyperlink{classcluon_1_1TerminateHandler_a81d8eacbcfc121e0cf4a2d303b84ab8a}{isTerminated}}.load());}
+\DoxyCodeLine{11000 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1TerminateHandler_a14570735df2bf9965520a022879b2a56}{cluon\+::\+Terminate\+Handler\+::instance()}}, \mbox{\hyperlink{classcluon_1_1TerminateHandler_a81d8eacbcfc121e0cf4a2d303b84ab8a}{cluon\+::\+Terminate\+Handler\+::is\+Terminated}}, and \mbox{\hyperlink{classcluon_1_1TCPServer_a8ccb65f323775330a184a261f222829e}{m\+\_\+read\+From\+Socket\+Thread\+Running}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classcluon_1_1TCPServer_af28b4fd8278d63140c9dec4b4d8ff0cd}\label{classcluon_1_1TCPServer_af28b4fd8278d63140c9dec4b4d8ff0cd}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1TCPServer}{TCPServer}} \& cluon\+::\+TCPServer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1TCPServer}{TCPServer}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1TCPServer_aa3740e3710f2d1e7e79fdc62f133103b}\label{classcluon_1_1TCPServer_aa3740e3710f2d1e7e79fdc62f133103b}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1TCPServer}{TCPServer}} \& cluon\+::\+TCPServer\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1TCPServer}{TCPServer}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1TCPServer_a3383d05f6a75e4298e5b1076161f3043}\label{classcluon_1_1TCPServer_a3383d05f6a75e4298e5b1076161f3043}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!readFromSocket@{readFromSocket}}
+\index{readFromSocket@{readFromSocket}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{readFromSocket()}{readFromSocket()}}
+{\footnotesize\ttfamily void cluon\+::\+TCPServer\+::read\+From\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11002                                                \{}
+\DoxyCodeLine{11003     \textcolor{keyword}{struct }timeval timeout \{\};}
+\DoxyCodeLine{11004 }
+\DoxyCodeLine{11005     \textcolor{comment}{// Define file descriptor set to watch for read operations.}}
+\DoxyCodeLine{11006     fd\_set setOfFiledescriptorsToReadFrom\{\};}
+\DoxyCodeLine{11007 }
+\DoxyCodeLine{11008     \textcolor{comment}{// Indicate to main thread that we are ready.}}
+\DoxyCodeLine{11009     \mbox{\hyperlink{classcluon_1_1TCPServer_a8ccb65f323775330a184a261f222829e}{m\_readFromSocketThreadRunning}}.store(\textcolor{keyword}{true});}
+\DoxyCodeLine{11010 }
+\DoxyCodeLine{11011     \textcolor{keyword}{constexpr} uint16\_t MAX\_ADDR\_SIZE\{1024\};}
+\DoxyCodeLine{11012     std::array<char, MAX\_ADDR\_SIZE> remoteAddress\{\};}
+\DoxyCodeLine{11013 }
+\DoxyCodeLine{11014     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classcluon_1_1TCPServer_a8ccb65f323775330a184a261f222829e}{m\_readFromSocketThreadRunning}}.load()) \{}
+\DoxyCodeLine{11015         \textcolor{comment}{// Define timeout for select system call. The timeval struct must be}}
+\DoxyCodeLine{11016         \textcolor{comment}{// reinitialized for every select call as it might be modified containing}}
+\DoxyCodeLine{11017         \textcolor{comment}{// the actual time slept.}}
+\DoxyCodeLine{11018         timeout.tv\_sec  = 0;}
+\DoxyCodeLine{11019         timeout.tv\_usec = 20 * 1000; \textcolor{comment}{// Check for new data with 50Hz.}}
+\DoxyCodeLine{11020 }
+\DoxyCodeLine{11021         FD\_ZERO(\&setOfFiledescriptorsToReadFrom);}
+\DoxyCodeLine{11022         FD\_SET(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}}, \&setOfFiledescriptorsToReadFrom);}
+\DoxyCodeLine{11023         ::select(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}} + 1, \&setOfFiledescriptorsToReadFrom, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, \&timeout);}
+\DoxyCodeLine{11024         \textcolor{keywordflow}{if} (FD\_ISSET(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}}, \&setOfFiledescriptorsToReadFrom)) \{}
+\DoxyCodeLine{11025             \textcolor{keyword}{struct }sockaddr\_storage remote;}
+\DoxyCodeLine{11026             socklen\_t addrLength     = \textcolor{keyword}{sizeof}(remote);}
+\DoxyCodeLine{11027             int32\_t connectingClient = ::accept(\mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\_socket}}, \textcolor{keyword}{reinterpret\_cast<}struct sockaddr *\textcolor{keyword}{>}(\&remote), \&addrLength);}
+\DoxyCodeLine{11028             \textcolor{keywordflow}{if} ((0 <= connectingClient) \&\& (\textcolor{keyword}{nullptr} != \mbox{\hyperlink{classcluon_1_1TCPServer_a46fec487d263545db1b4834f55efa4c6}{m\_newConnectionDelegate}})) \{}
+\DoxyCodeLine{11029                 ::inet\_ntop(remote.ss\_family,}
+\DoxyCodeLine{11030                             \&((\textcolor{keyword}{reinterpret\_cast<}struct sockaddr\_in *\textcolor{keyword}{>}(\&remote))-\/>sin\_addr), \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{11031                             remoteAddress.data(),}
+\DoxyCodeLine{11032                             remoteAddress.max\_size());}
+\DoxyCodeLine{11033                 \textcolor{keyword}{const} uint16\_t RECVFROM\_PORT\{ntohs(\textcolor{keyword}{reinterpret\_cast<}struct sockaddr\_in *\textcolor{keyword}{>}(\&remote)-\/>sin\_port)\}; \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{11034                 \mbox{\hyperlink{classcluon_1_1TCPServer_a46fec487d263545db1b4834f55efa4c6}{m\_newConnectionDelegate}}(std::string(remoteAddress.data()) + \textcolor{charliteral}{':'} + std::to\_string(RECVFROM\_PORT),}
+\DoxyCodeLine{11035                                         std::shared\_ptr<cluon::TCPConnection>(\textcolor{keyword}{new} \mbox{\hyperlink{classcluon_1_1TCPConnection}{cluon::TCPConnection}}(connectingClient)));}
+\DoxyCodeLine{11036             \}}
+\DoxyCodeLine{11037         \}}
+\DoxyCodeLine{11038     \}}
+\DoxyCodeLine{11039 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1TCPServer_a46fec487d263545db1b4834f55efa4c6}{m\+\_\+new\+Connection\+Delegate}}, \mbox{\hyperlink{classcluon_1_1TCPServer_a8ccb65f323775330a184a261f222829e}{m\+\_\+read\+From\+Socket\+Thread\+Running}}, and \mbox{\hyperlink{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}{m\+\_\+socket}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1TCPServer_ab4687285c5779ff7135f388f81d90f50}{TCPServer()}}.
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcluon_1_1TCPServer_a46fec487d263545db1b4834f55efa4c6}\label{classcluon_1_1TCPServer_a46fec487d263545db1b4834f55efa4c6}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!m\_newConnectionDelegate@{m\_newConnectionDelegate}}
+\index{m\_newConnectionDelegate@{m\_newConnectionDelegate}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{m\_newConnectionDelegate}{m\_newConnectionDelegate}}
+{\footnotesize\ttfamily std\+::function$<$void(std\+::string \&\&from, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classcluon_1_1TCPConnection}{cluon\+::\+TCPConnection}}$>$ connection)$>$ cluon\+::\+TCPServer\+::m\+\_\+new\+Connection\+Delegate \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1TCPServer_a3383d05f6a75e4298e5b1076161f3043}{read\+From\+Socket()}}.
+
+\mbox{\Hypertarget{classcluon_1_1TCPServer_a88dfa2b0cf7c50dc6320c6d7e756b3ad}\label{classcluon_1_1TCPServer_a88dfa2b0cf7c50dc6320c6d7e756b3ad}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!m\_newConnectionDelegateMutex@{m\_newConnectionDelegateMutex}}
+\index{m\_newConnectionDelegateMutex@{m\_newConnectionDelegateMutex}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{m\_newConnectionDelegateMutex}{m\_newConnectionDelegateMutex}}
+{\footnotesize\ttfamily std\+::mutex cluon\+::\+TCPServer\+::m\+\_\+new\+Connection\+Delegate\+Mutex \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1TCPServer_afd91d5419d724787369636ac3272aa2c}\label{classcluon_1_1TCPServer_afd91d5419d724787369636ac3272aa2c}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!m\_readFromSocketThread@{m\_readFromSocketThread}}
+\index{m\_readFromSocketThread@{m\_readFromSocketThread}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{m\_readFromSocketThread}{m\_readFromSocketThread}}
+{\footnotesize\ttfamily std\+::thread cluon\+::\+TCPServer\+::m\+\_\+read\+From\+Socket\+Thread \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1TCPServer_a33d7e1eeb83b39fa4db9533a25de817c}{$\sim$\+TCPServer()}}.
+
+\mbox{\Hypertarget{classcluon_1_1TCPServer_a8ccb65f323775330a184a261f222829e}\label{classcluon_1_1TCPServer_a8ccb65f323775330a184a261f222829e}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!m\_readFromSocketThreadRunning@{m\_readFromSocketThreadRunning}}
+\index{m\_readFromSocketThreadRunning@{m\_readFromSocketThreadRunning}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{m\_readFromSocketThreadRunning}{m\_readFromSocketThreadRunning}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ cluon\+::\+TCPServer\+::m\+\_\+read\+From\+Socket\+Thread\+Running \{false\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1TCPServer_a8a984878e7f1c210b101fca0caa1ee3e}{is\+Running()}}, \mbox{\hyperlink{classcluon_1_1TCPServer_a3383d05f6a75e4298e5b1076161f3043}{read\+From\+Socket()}}, and \mbox{\hyperlink{classcluon_1_1TCPServer_a33d7e1eeb83b39fa4db9533a25de817c}{$\sim$\+TCPServer()}}.
+
+\mbox{\Hypertarget{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}\label{classcluon_1_1TCPServer_aa4a251600ef878a961a88035468164fb}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!m\_socket@{m\_socket}}
+\index{m\_socket@{m\_socket}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{m\_socket}{m\_socket}}
+{\footnotesize\ttfamily int32\+\_\+t cluon\+::\+TCPServer\+::m\+\_\+socket \{-\/1\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1TCPServer_a3383d05f6a75e4298e5b1076161f3043}{read\+From\+Socket()}}.
+
+\mbox{\Hypertarget{classcluon_1_1TCPServer_a1fbc120d25335332e65fbe53c34ea620}\label{classcluon_1_1TCPServer_a1fbc120d25335332e65fbe53c34ea620}} 
+\index{cluon::TCPServer@{cluon::TCPServer}!m\_socketMutex@{m\_socketMutex}}
+\index{m\_socketMutex@{m\_socketMutex}!cluon::TCPServer@{cluon::TCPServer}}
+\doxysubsubsection{\texorpdfstring{m\_socketMutex}{m\_socketMutex}}
+{\footnotesize\ttfamily std\+::mutex cluon\+::\+TCPServer\+::m\+\_\+socket\+Mutex \{\}\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

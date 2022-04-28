@@ -1,0 +1,1213 @@
+\hypertarget{classcluon_1_1GenericMessage}{}\doxysection{cluon\+::Generic\+Message Class Reference}
+\label{classcluon_1_1GenericMessage}\index{cluon::GenericMessage@{cluon::GenericMessage}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for cluon\+::Generic\+Message\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcluon_1_1GenericMessage_1_1GenericMessageVisitor}{Generic\+Message\+Visitor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1GenericMessage_a8f19dc27bcf57cef004880aebd7029e4}{Generic\+Message}} ()=default
+\item 
+\mbox{\hyperlink{classcluon_1_1GenericMessage_adeb150560c55739f31e76c89016c52ed}{Generic\+Message}} (\mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} \&\&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1GenericMessage_ad60c907d8712c82aa9916a2033b77a6f}{Generic\+Message}} (const \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} \&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} \& \mbox{\hyperlink{classcluon_1_1GenericMessage_a3dd95b5ea286663c388a5675a6ecb77c}{operator=}} (const \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} \&)=default
+\item 
+int32\+\_\+t \mbox{\hyperlink{classcluon_1_1GenericMessage_a70d3eae04b7cebae85b770c2dc850df2}{ID}} ()
+\item 
+const std\+::string \mbox{\hyperlink{classcluon_1_1GenericMessage_aef23882b50e64430bff8e49a8529080f}{Short\+Name}} ()
+\item 
+const std\+::string \mbox{\hyperlink{classcluon_1_1GenericMessage_ad4e19890e7f752d11bf513c71d05a1ba}{Long\+Name}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classcluon_1_1GenericMessage_ad38acdbfe2d5ca936268d48d38fc7f6b}{create\+From}} (T \&msg)
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_a261bd0896ad80644d6718697cd70669c}{create\+From}} (const \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \&\mbox{\hyperlink{cluon-complete_8hpp_ac99d9adcdaabb55efe224341cde96631}{mm}}, const std\+::vector$<$ \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} $>$ \&mms) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_a816bc30ef517437a369277efc1212dbf}{pre\+Visit}} (int32\+\_\+t id, const std\+::string \&short\+Name, const std\+::string \&long\+Name) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_ac5b43123fd14a90336455d5fd5caf568}{post\+Visit}} () noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_ac7fe8cb3d067fcdcc739ebdd0789dcf3}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, bool \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_ad194962c62e274d2d26a327f7abcc0a1}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, char \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_a3d791c76046301b21dd0b09f8156bf68}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int8\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_a3486237bf4803f8455d18fbde90aa9f3}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint8\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_abce3accb249cf8b2ad3b7bdafdb19f87}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int16\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_aaa7fd7ba19793d75700f2b83b434d979}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint16\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_aa4355688528612b6b954f268c28688d3}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int32\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_aa043508f971f900240d213a4c81d1bb3}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint32\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_ab85199095ecd7a848133eefea1616150}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int64\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_a6010225551dcb93db1e6936d576523ae}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint64\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_ac2302f5cd458d034c402c98349e09a6d}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, float \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_a04a1f722cc2455dc36abfa13f3d0770a}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, double \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1GenericMessage_a86d360cac39438106dd743144b1a8d8d}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, std\+::string \&v) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classcluon_1_1GenericMessage_a8ac5cb3a512f9fee6c306f11d4af287e}{visit}} (uint32\+\_\+t \&id, std\+::string \&\&type\+Name, std\+::string \&\&name, T \&value) noexcept
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classcluon_1_1GenericMessage_af29d39495dde7f0ef332fcf5df8cb22b}{accept}} (uint32\+\_\+t field\+Id, Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classcluon_1_1GenericMessage_a504ed40e4265fff90673730e9e388cdc}{accept}} (Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ }\\void \mbox{\hyperlink{classcluon_1_1GenericMessage_a2947c7a70f98323da87aa8375d853a56}{accept}} (Pre\+Visitor \&\&\+\_\+pre\+Visit, Visitor \&\&\+\_\+visit, Post\+Visitor \&\&\+\_\+post\+Visit)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} \& \mbox{\hyperlink{classcluon_1_1GenericMessage_ac87a3f98c3c42c06702fd2d242cf50ce}{operator=}} (\mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} \&\&)=delete
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classcluon_1_1GenericMessage_a161e9fcd68d9ac34004ecfa6cd34c889}{accept}} (uint32\+\_\+t field\+Id, Visitor \&visitor, bool visit\+All)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\+\_\+meta\+Message}} \{\}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} $>$ \mbox{\hyperlink{classcluon_1_1GenericMessage_aee7aab32a474f93346f60a1c1b66ee90}{m\+\_\+scope\+Of\+Meta\+Messages}} \{\}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} $>$ \mbox{\hyperlink{classcluon_1_1GenericMessage_ac7ebf694b7667748674b279c393a664b}{m\+\_\+map\+For\+Scope\+Of\+Meta\+Messages}} \{\}
+\item 
+std\+::string \mbox{\hyperlink{classcluon_1_1GenericMessage_a251040337445a8f24cbe00a7cb56f9d8}{m\+\_\+long\+Name}} \{\char`\"{}\char`\"{}\}
+\item 
+std\+::unordered\+\_\+map$<$ uint32\+\_\+t, \mbox{\hyperlink{classlinb_1_1any}{linb\+::any}}, \mbox{\hyperlink{classcluon_1_1UseUInt32ValueAsHashKey}{Use\+UInt32\+Value\+As\+Hash\+Key}} $>$ \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} is providing an abstraction level to work with concrete messages. Therefore, it is acting as both, a Visitor to turn concrete messages into Generic\+Messages or as Visitable to access the contained data. \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} would use C++\textquotesingle{}s std\+::any type; to allow C++14 compilers, we use the backport from \mbox{\hyperlink{classlinb_1_1any}{linb\+::any}}.
+
+Creating a \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}}\+: There are several ways to create a \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}}. The first option is to provide a message specification in ODVD format as result from \mbox{\hyperlink{classcluon_1_1MessageParser}{Message\+Parser}}, from which a \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} is created. This instance can then be visited afterwards by, for instance, an instance of Proto\+Decoder to set the \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}}\textquotesingle{}s actual values.
+
+1) This example demonstrates how to process a given message specification to decode a Proto-\/encoded byte sequence (in proto\+Encoded\+Data). The message specification is given in message\+Specification that is parsed from \mbox{\hyperlink{classcluon_1_1MessageParser}{Message\+Parser}}. On success, it is tried to decode the Proto-\/encoded data into a Generic\+Messsage representing an instance of \char`\"{}\+My\+Message\char`\"{}.
+
+Using a message specification that does not match the serialized Proto data might result in unexpected behavior.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// protoEncodedData is provided from somewhere, i.e., via network for example}}
+\DoxyCodeLine{std::string protoEncodedData = <...>}
+\DoxyCodeLine{std::stringstream sstr\{protoEncodedData\};}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1FromProtoVisitor}{cluon::FromProtoVisitor}} protoDecoder;}
+\DoxyCodeLine{protoDecoder.\mbox{\hyperlink{classcluon_1_1FromProtoVisitor_a40200331aef897bc2ec90d5cf9c20519}{decodeFrom}}(sstr);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{const} \textcolor{keywordtype}{char} *messageSpecification = R\textcolor{stringliteral}{"{}(}}
+\DoxyCodeLine{\textcolor{stringliteral}{message MyMessage [id = 123] \{}}
+\DoxyCodeLine{\textcolor{stringliteral}{   int32 field1 [id = 1];}}
+\DoxyCodeLine{\textcolor{stringliteral}{   int32 field2 [id = 2];}}
+\DoxyCodeLine{\textcolor{stringliteral}{\}}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{cluon::MessageParser mp;}}
+\DoxyCodeLine{\textcolor{stringliteral}{auto retVal = mp.parse(std::string(messageSpecification));}}
+\DoxyCodeLine{\textcolor{stringliteral}{if (cluon::MessageParser::MessageParserErrorCodes::NO\_MESSAGEPARSER\_ERROR == retVal.second) \{}}
+\DoxyCodeLine{\textcolor{stringliteral}{    cluon::GenericMessage gm;}}
+\DoxyCodeLine{\textcolor{stringliteral}{    auto listOfMetaMessages = retVal.first;}}
+\DoxyCodeLine{\textcolor{stringliteral}{    gm.createFrom(listOfMetaMessages[0], listOfMetaMessages);}}
+\DoxyCodeLine{\textcolor{stringliteral}{    // Set values in GenericMessage from protoDecoder.}}
+\DoxyCodeLine{\textcolor{stringliteral}{    gm.accept(protoDecoder);}}
+\DoxyCodeLine{\textcolor{stringliteral}{\}}}
+
+\end{DoxyCode}
+
+
+2) This example demonstrates how to turn a given concrete message into a \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}}. Afterwards, the \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} can be post-\/processed with Visitors.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{MyMessage msg;}
+\DoxyCodeLine{\textcolor{comment}{// set some fields in msg.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1GenericMessage}{cluon::GenericMessage}} gm;}
+\DoxyCodeLine{gm.\mbox{\hyperlink{classcluon_1_1GenericMessage_ad38acdbfe2d5ca936268d48d38fc7f6b}{createFrom}}<MyMessage>(msg);}
+
+\end{DoxyCode}
+
+
+After an instance of \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} is available, it can be post-\/processed into various representations\+:
+
+1) Printing the contained data (\char`\"{}to\+String\char`\"{}; \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} is being visited)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1GenericMessage_a8f19dc27bcf57cef004880aebd7029e4}{GenericMessage}} gm;}
+\DoxyCodeLine{\textcolor{comment}{// gm is created using one of the aforementioned options.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{std::stringstream buffer;}
+\DoxyCodeLine{gm.\mbox{\hyperlink{classcluon_1_1GenericMessage_af29d39495dde7f0ef332fcf5df8cb22b}{accept}}([](uint32\_t, \textcolor{keyword}{const} std::string \&, \textcolor{keyword}{const} std::string \&) \{\},}
+\DoxyCodeLine{          [\&buffer](uint32\_t, std::string \&\&, std::string \&\&n, \textcolor{keyword}{auto} v) \{ buffer << n << \textcolor{stringliteral}{"{} = "{}} << v << std::endl; \},}
+\DoxyCodeLine{          []() \{\});}
+\DoxyCodeLine{std::cout << buffer.str() << std::endl;}
+
+\end{DoxyCode}
+
+
+2) Filling the values of another concrete message (\mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} is acting as Visitor to another message)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1GenericMessage_a8f19dc27bcf57cef004880aebd7029e4}{GenericMessage}} gm;}
+\DoxyCodeLine{\textcolor{comment}{// gm is created using one of the aforementioned options.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Message msg;}
+\DoxyCodeLine{msg.\mbox{\hyperlink{classcluon_1_1GenericMessage_af29d39495dde7f0ef332fcf5df8cb22b}{accept}}(gm);}
+
+\end{DoxyCode}
+
+
+3) Serialize the \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} gm into a Proto-\/format\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1GenericMessage_a8f19dc27bcf57cef004880aebd7029e4}{GenericMessage}} gm;}
+\DoxyCodeLine{\textcolor{comment}{// gm is created using one of the aforementioned options.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{cluon::ToProtoVisitor}} protoEncoder;}
+\DoxyCodeLine{gm.accept(protoEncoder);}
+\DoxyCodeLine{\textcolor{keyword}{const} std::string\{protoEncoder.\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a20841380c5c8e865f30f92d164477e81}{encodedData}}()\};}
+
+\end{DoxyCode}
+
+
+4) Serialize the \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} gm into JSON\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1GenericMessage_a8f19dc27bcf57cef004880aebd7029e4}{GenericMessage}} gm;}
+\DoxyCodeLine{\textcolor{comment}{// gm is created using one of the aforementioned options.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1ToJSONVisitor}{cluon::ToJSONVisitor}} j;}
+\DoxyCodeLine{gm.accept(j);}
+\DoxyCodeLine{std::cout << j.\mbox{\hyperlink{classcluon_1_1ToJSONVisitor_aafec5e48f036cc0695f3ddf1195be429}{json}}();}
+
+\end{DoxyCode}
+
+
+4) Dynamically transforming a given Proto-\/encoded byte sequence into JSON at runtime\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// protoEncodedData is provided from somewhere, i.e., via network for example}}
+\DoxyCodeLine{std::string protoEncodedData = <...>}
+\DoxyCodeLine{std::stringstream sstr\{protoEncodedData\};}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1FromProtoVisitor}{cluon::FromProtoVisitor}} protoDecoder;}
+\DoxyCodeLine{protoDecoder.\mbox{\hyperlink{classcluon_1_1FromProtoVisitor_a40200331aef897bc2ec90d5cf9c20519}{decodeFrom}}(sstr);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{const} \textcolor{keywordtype}{char} *messageSpecification = R\textcolor{stringliteral}{"{}(}}
+\DoxyCodeLine{\textcolor{stringliteral}{message MyMessage [id = 123] \{}}
+\DoxyCodeLine{\textcolor{stringliteral}{   int32 field1 [id = 1];}}
+\DoxyCodeLine{\textcolor{stringliteral}{   int32 field2 [id = 2];}}
+\DoxyCodeLine{\textcolor{stringliteral}{\}}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{cluon::MessageParser mp;}}
+\DoxyCodeLine{\textcolor{stringliteral}{auto retVal = mp.parse(std::string(messageSpecification));}}
+\DoxyCodeLine{\textcolor{stringliteral}{if (cluon::MessageParser::MessageParserErrorCodes::NO\_MESSAGEPARSER\_ERROR == retVal.second) \{}}
+\DoxyCodeLine{\textcolor{stringliteral}{    cluon::GenericMessage gm;}}
+\DoxyCodeLine{\textcolor{stringliteral}{    auto listOfMetaMessages = retVal.first;}}
+\DoxyCodeLine{\textcolor{stringliteral}{    gm.createFrom(listOfMetaMessages[0], listOfMetaMessages);}}
+\DoxyCodeLine{\textcolor{stringliteral}{    // Set values in GenericMessage from protoDecoder.}}
+\DoxyCodeLine{\textcolor{stringliteral}{    gm.accept(protoDecoder);}}
+\DoxyCodeLine{\textcolor{stringliteral}{\}}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{cluon::ToJSONVisitor j;}}
+\DoxyCodeLine{\textcolor{stringliteral}{gm.accept(j);}}
+\DoxyCodeLine{\textcolor{stringliteral}{std::cout << j.json();}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a8f19dc27bcf57cef004880aebd7029e4}\label{classcluon_1_1GenericMessage_a8f19dc27bcf57cef004880aebd7029e4}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!GenericMessage@{GenericMessage}}
+\index{GenericMessage@{GenericMessage}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{GenericMessage()}{GenericMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily cluon\+::\+Generic\+Message\+::\+Generic\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_adeb150560c55739f31e76c89016c52ed}\label{classcluon_1_1GenericMessage_adeb150560c55739f31e76c89016c52ed}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!GenericMessage@{GenericMessage}}
+\index{GenericMessage@{GenericMessage}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{GenericMessage()}{GenericMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily cluon\+::\+Generic\+Message\+::\+Generic\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_ad60c907d8712c82aa9916a2033b77a6f}\label{classcluon_1_1GenericMessage_ad60c907d8712c82aa9916a2033b77a6f}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!GenericMessage@{GenericMessage}}
+\index{GenericMessage@{GenericMessage}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{GenericMessage()}{GenericMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily cluon\+::\+Generic\+Message\+::\+Generic\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a2947c7a70f98323da87aa8375d853a56}\label{classcluon_1_1GenericMessage_a2947c7a70f98323da87aa8375d853a56}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!accept@{accept}}
+\index{accept@{accept}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ \\
+void cluon\+::\+Generic\+Message\+::accept (\begin{DoxyParamCaption}\item[{Pre\+Visitor \&\&}]{\+\_\+pre\+Visit,  }\item[{Visitor \&\&}]{\+\_\+visit,  }\item[{Post\+Visitor \&\&}]{\+\_\+post\+Visit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method allows other instances to visit this \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} for post-\/processing the contained data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+pre\+Visit} & Instance of the visitor pre-\/visiting this \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}}. \\
+\hline
+{\em \+\_\+visit} & Instance of the visitor visiting this \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}}. \\
+\hline
+{\em \+\_\+post\+Visit} & Instance of the visitor post-\/visiting this \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8574                                                                                     \{}
+\DoxyCodeLine{8575         std::forward<PreVisitor>(\_preVisit)(\mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\_metaMessage}}.\mbox{\hyperlink{classcluon_1_1MetaMessage_a5457e4f86695b8704f7494ca57e99603}{messageIdentifier}}(), \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\_metaMessage}}.\mbox{\hyperlink{classcluon_1_1MetaMessage_ab9872e0f141089b30d4dcc0b67232336}{messageName}}(), \mbox{\hyperlink{classcluon_1_1GenericMessage_a251040337445a8f24cbe00a7cb56f9d8}{m\_longName}});}
+\DoxyCodeLine{8576 }
+\DoxyCodeLine{8577         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&f : \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\_metaMessage}}.\mbox{\hyperlink{classcluon_1_1MetaMessage_a467f2abd1fc7b3fe5ace1725ef146b8b}{listOfMetaFields}}()) \{}
+\DoxyCodeLine{8578             \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a8cc81be2e201862e568354646b9bb03b}{MetaMessage::MetaField::BOOL\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8579                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8580                     \textcolor{keyword}{auto} \&v = linb::any\_cast<bool \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8581                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8582                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8583                 \}}
+\DoxyCodeLine{8584             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616aad8bf05da58bfa5415b138a0409831d5}{MetaMessage::MetaField::CHAR\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8585                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8586                     \textcolor{keyword}{auto} \&v = linb::any\_cast<char \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8587                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8588                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8589                 \}}
+\DoxyCodeLine{8590             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616ae244d4a19a2e2d8d78f9b129452210bc}{MetaMessage::MetaField::UINT8\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8591                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8592                     \textcolor{keyword}{auto} \&v = linb::any\_cast<uint8\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8593                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8594                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8595                 \}}
+\DoxyCodeLine{8596             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a599003b129498771c0a873fd294ef2dc}{MetaMessage::MetaField::INT8\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8597                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8598                     \textcolor{keyword}{auto} \&v = linb::any\_cast<int8\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8599                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8600                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8601                 \}}
+\DoxyCodeLine{8602             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a157fd1dec17057c7b8bb21e513be81c2}{MetaMessage::MetaField::UINT16\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8603                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8604                     \textcolor{keyword}{auto} \&v = linb::any\_cast<uint16\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8605                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8606                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8607                 \}}
+\DoxyCodeLine{8608             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a205d5c6f9f9c58e195b746839871ea19}{MetaMessage::MetaField::INT16\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8609                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8610                     \textcolor{keyword}{auto} \&v = linb::any\_cast<int16\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8611                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8612                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8613                 \}}
+\DoxyCodeLine{8614             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a72cb40c6fc12f575606ea7ceec8b7b4b}{MetaMessage::MetaField::UINT32\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8615                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8616                     \textcolor{keyword}{auto} \&v = linb::any\_cast<uint32\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8617                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8618                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8619                 \}}
+\DoxyCodeLine{8620             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616ac79881ab4b918b57fd0dc7f69a1fce35}{MetaMessage::MetaField::INT32\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8621                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8622                     \textcolor{keyword}{auto} \&v = linb::any\_cast<int32\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8623                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8624                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8625                 \}}
+\DoxyCodeLine{8626             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a037baffa7ce0bf337146e3e5893d7b94}{MetaMessage::MetaField::UINT64\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8627                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8628                     \textcolor{keyword}{auto} \&v = linb::any\_cast<uint64\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8629                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8630                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8631                 \}}
+\DoxyCodeLine{8632             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616adf27a06d2f3ed4b42d3aa64c6a6c73d8}{MetaMessage::MetaField::INT64\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8633                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8634                     \textcolor{keyword}{auto} \&v = linb::any\_cast<int64\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8635                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8636                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8637                 \}}
+\DoxyCodeLine{8638             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a9522de5ad9927fff4b8779224da05afe}{MetaMessage::MetaField::FLOAT\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8639                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8640                     \textcolor{keyword}{auto} \&v = linb::any\_cast<float \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8641                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8642                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8643                 \}}
+\DoxyCodeLine{8644             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a427077d354776ff17eecdf88adb422c0}{MetaMessage::MetaField::DOUBLE\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8645                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8646                     \textcolor{keyword}{auto} \&v = linb::any\_cast<double \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8647                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8648                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8649                 \}}
+\DoxyCodeLine{8650             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (((f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616af84da990a8c6988560f8b1ac829f4c84}{MetaMessage::MetaField::STRING\_T}}) || (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a18194c6a01e051cdfdb0d69ea71866da}{MetaMessage::MetaField::BYTES\_T}}))}
+\DoxyCodeLine{8651                        \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8652                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8653                     \textcolor{keyword}{auto} \&v = linb::any\_cast<std::string \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8654                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8655                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8656                 \}}
+\DoxyCodeLine{8657             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a881ae529e9c0b564a596c2129ddf27fd}{MetaMessage::MetaField::MESSAGE\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8658                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8659                     \textcolor{keyword}{auto} \&v = linb::any\_cast<cluon::GenericMessage \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8660                     \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, \_preVisit, \_visit, \_postVisit);}
+\DoxyCodeLine{8661                 \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8662                 \}}
+\DoxyCodeLine{8663             \}}
+\DoxyCodeLine{8664         \}}
+\DoxyCodeLine{8665 }
+\DoxyCodeLine{8666         std::forward<PostVisitor>(\_postVisit)();}
+\DoxyCodeLine{8667     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a8cc81be2e201862e568354646b9bb03b}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+BOOL\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a18194c6a01e051cdfdb0d69ea71866da}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+BYTES\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616aad8bf05da58bfa5415b138a0409831d5}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+CHAR\+\_\+T}}, \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{do\+Triplet\+Forward\+Visit()}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a427077d354776ff17eecdf88adb422c0}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+DOUBLE\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a9522de5ad9927fff4b8779224da05afe}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+FLOAT\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a205d5c6f9f9c58e195b746839871ea19}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+INT16\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616ac79881ab4b918b57fd0dc7f69a1fce35}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+INT32\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616adf27a06d2f3ed4b42d3aa64c6a6c73d8}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+INT64\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a599003b129498771c0a873fd294ef2dc}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+INT8\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a881ae529e9c0b564a596c2129ddf27fd}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+MESSAGE\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616af84da990a8c6988560f8b1ac829f4c84}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+STRING\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a157fd1dec17057c7b8bb21e513be81c2}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+UINT16\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a72cb40c6fc12f575606ea7ceec8b7b4b}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+UINT32\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a037baffa7ce0bf337146e3e5893d7b94}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+UINT64\+\_\+T}}, and \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616ae244d4a19a2e2d8d78f9b129452210bc}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+UINT8\+\_\+T}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_af29d39495dde7f0ef332fcf5df8cb22b}\label{classcluon_1_1GenericMessage_af29d39495dde7f0ef332fcf5df8cb22b}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!accept@{accept}}
+\index{accept@{accept}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void cluon\+::\+Generic\+Message\+::accept (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Id,  }\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method allows other instances to visit this \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} for post-\/processing the contained data on an individual field basis.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field\+Id} & Identifier for the field to visit. \\
+\hline
+{\em visitor} & Instance of the visitor visiting this \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8547                                                            \{}
+\DoxyCodeLine{8548         \textcolor{keyword}{const} \textcolor{keywordtype}{bool} VISIT\_ALL\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{8549         accept<Visitor>(fieldId, visitor, VISIT\_ALL);}
+\DoxyCodeLine{8550     \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1LCMToGenericMessage_a026150a18a731e43a9c364f2da49d21a}{cluon\+::\+LCMTo\+Generic\+Message\+::get\+Generic\+Message()}}, \mbox{\hyperlink{classcluon_1_1EnvelopeConverter_a8d7438e6f54c7d4034688634a19ece83}{cluon\+::\+Envelope\+Converter\+::get\+JSONFrom\+Envelope()}}, and \mbox{\hyperlink{classcluon_1_1EnvelopeConverter_ac046a7e7de1fec61f44ca2ece7df11bc}{cluon\+::\+Envelope\+Converter\+::get\+Proto\+Encoded\+Envelope\+From\+JSON()}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a161e9fcd68d9ac34004ecfa6cd34c889}\label{classcluon_1_1GenericMessage_a161e9fcd68d9ac34004ecfa6cd34c889}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!accept@{accept}}
+\index{accept@{accept}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void cluon\+::\+Generic\+Message\+::accept (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Id,  }\item[{Visitor \&}]{visitor,  }\item[{bool}]{visit\+All }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8671                                                                           \{}
+\DoxyCodeLine{8672         visitor.preVisit(\mbox{\hyperlink{classcluon_1_1GenericMessage_a70d3eae04b7cebae85b770c2dc850df2}{ID}}(), \mbox{\hyperlink{classcluon_1_1GenericMessage_aef23882b50e64430bff8e49a8529080f}{ShortName}}(), \mbox{\hyperlink{classcluon_1_1GenericMessage_ad4e19890e7f752d11bf513c71d05a1ba}{LongName}}());}
+\DoxyCodeLine{8673 }
+\DoxyCodeLine{8674         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&f : \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\_metaMessage}}.\mbox{\hyperlink{classcluon_1_1MetaMessage_a467f2abd1fc7b3fe5ace1725ef146b8b}{listOfMetaFields}}()) \{}
+\DoxyCodeLine{8675             \textcolor{keywordflow}{if} (visitAll || (fieldId == f.fieldIdentifier())) \{}
+\DoxyCodeLine{8676                 \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a8cc81be2e201862e568354646b9bb03b}{MetaMessage::MetaField::BOOL\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8677                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8678                         \textcolor{keyword}{auto} \&v = linb::any\_cast<bool \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8679                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8680                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8681                     \}}
+\DoxyCodeLine{8682                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616aad8bf05da58bfa5415b138a0409831d5}{MetaMessage::MetaField::CHAR\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8683                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8684                         \textcolor{keyword}{auto} \&v = linb::any\_cast<char \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8685                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8686                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8687                     \}}
+\DoxyCodeLine{8688                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616ae244d4a19a2e2d8d78f9b129452210bc}{MetaMessage::MetaField::UINT8\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8689                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8690                         \textcolor{keyword}{auto} \&v = linb::any\_cast<uint8\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8691                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8692                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8693                     \}}
+\DoxyCodeLine{8694                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a599003b129498771c0a873fd294ef2dc}{MetaMessage::MetaField::INT8\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8695                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8696                         \textcolor{keyword}{auto} \&v = linb::any\_cast<int8\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8697                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8698                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8699                     \}}
+\DoxyCodeLine{8700                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a157fd1dec17057c7b8bb21e513be81c2}{MetaMessage::MetaField::UINT16\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8701                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8702                         \textcolor{keyword}{auto} \&v = linb::any\_cast<uint16\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8703                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8704                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8705                     \}}
+\DoxyCodeLine{8706                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a205d5c6f9f9c58e195b746839871ea19}{MetaMessage::MetaField::INT16\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8707                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8708                         \textcolor{keyword}{auto} \&v = linb::any\_cast<int16\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8709                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8710                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8711                     \}}
+\DoxyCodeLine{8712                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a72cb40c6fc12f575606ea7ceec8b7b4b}{MetaMessage::MetaField::UINT32\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8713                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8714                         \textcolor{keyword}{auto} \&v = linb::any\_cast<uint32\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8715                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8716                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8717                     \}}
+\DoxyCodeLine{8718                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616ac79881ab4b918b57fd0dc7f69a1fce35}{MetaMessage::MetaField::INT32\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8719                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8720                         \textcolor{keyword}{auto} \&v = linb::any\_cast<int32\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8721                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8722                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8723                     \}}
+\DoxyCodeLine{8724                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a037baffa7ce0bf337146e3e5893d7b94}{MetaMessage::MetaField::UINT64\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8725                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8726                         \textcolor{keyword}{auto} \&v = linb::any\_cast<uint64\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8727                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8728                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8729                     \}}
+\DoxyCodeLine{8730                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616adf27a06d2f3ed4b42d3aa64c6a6c73d8}{MetaMessage::MetaField::INT64\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8731                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8732                         \textcolor{keyword}{auto} \&v = linb::any\_cast<int64\_t \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8733                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8734                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8735                     \}}
+\DoxyCodeLine{8736                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a9522de5ad9927fff4b8779224da05afe}{MetaMessage::MetaField::FLOAT\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8737                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8738                         \textcolor{keyword}{auto} \&v = linb::any\_cast<float \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8739                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8740                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8741                     \}}
+\DoxyCodeLine{8742                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a427077d354776ff17eecdf88adb422c0}{MetaMessage::MetaField::DOUBLE\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8743                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8744                         \textcolor{keyword}{auto} \&v = linb::any\_cast<double \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8745                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8746                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8747                     \}}
+\DoxyCodeLine{8748                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (((f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616af84da990a8c6988560f8b1ac829f4c84}{MetaMessage::MetaField::STRING\_T}}) || (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a18194c6a01e051cdfdb0d69ea71866da}{MetaMessage::MetaField::BYTES\_T}}))}
+\DoxyCodeLine{8749                            \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8750                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8751                         \textcolor{keyword}{auto} \&v = linb::any\_cast<std::string \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8752                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8753                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8754                     \}}
+\DoxyCodeLine{8755                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a881ae529e9c0b564a596c2129ddf27fd}{MetaMessage::MetaField::MESSAGE\_T}} \&\& (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(f.fieldIdentifier()))) \{}
+\DoxyCodeLine{8756                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8757                         \textcolor{keyword}{auto} \&v = linb::any\_cast<cluon::GenericMessage \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()]);}
+\DoxyCodeLine{8758                         \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(f.fieldIdentifier(), std::move(f.fieldDataTypeName()), std::move(f.fieldName()), v, visitor);}
+\DoxyCodeLine{8759                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8760                     \}}
+\DoxyCodeLine{8761                 \}}
+\DoxyCodeLine{8762                 \textcolor{comment}{// End processing in case of visiting specific fields.}}
+\DoxyCodeLine{8763                 \textcolor{keywordflow}{if} (!visitAll \&\& (fieldId == f.fieldIdentifier())) \{}
+\DoxyCodeLine{8764                   \textcolor{keywordflow}{break};}
+\DoxyCodeLine{8765                 \}}
+\DoxyCodeLine{8766             \}}
+\DoxyCodeLine{8767         \}}
+\DoxyCodeLine{8768 }
+\DoxyCodeLine{8769         visitor.postVisit();}
+\DoxyCodeLine{8770     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a8cc81be2e201862e568354646b9bb03b}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+BOOL\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a18194c6a01e051cdfdb0d69ea71866da}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+BYTES\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616aad8bf05da58bfa5415b138a0409831d5}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+CHAR\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a427077d354776ff17eecdf88adb422c0}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+DOUBLE\+\_\+T}}, \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a9522de5ad9927fff4b8779224da05afe}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+FLOAT\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a205d5c6f9f9c58e195b746839871ea19}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+INT16\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616ac79881ab4b918b57fd0dc7f69a1fce35}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+INT32\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616adf27a06d2f3ed4b42d3aa64c6a6c73d8}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+INT64\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a599003b129498771c0a873fd294ef2dc}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+INT8\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a881ae529e9c0b564a596c2129ddf27fd}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+MESSAGE\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616af84da990a8c6988560f8b1ac829f4c84}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+STRING\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a157fd1dec17057c7b8bb21e513be81c2}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+UINT16\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a72cb40c6fc12f575606ea7ceec8b7b4b}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+UINT32\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a037baffa7ce0bf337146e3e5893d7b94}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+UINT64\+\_\+T}}, and \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616ae244d4a19a2e2d8d78f9b129452210bc}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+UINT8\+\_\+T}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a504ed40e4265fff90673730e9e388cdc}\label{classcluon_1_1GenericMessage_a504ed40e4265fff90673730e9e388cdc}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!accept@{accept}}
+\index{accept@{accept}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void cluon\+::\+Generic\+Message\+::accept (\begin{DoxyParamCaption}\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method allows other instances to visit this \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} for post-\/processing the contained data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em visitor} & Instance of the visitor visiting this \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8559                                   \{}
+\DoxyCodeLine{8560         \textcolor{keyword}{const} uint32\_t FIELD\_ID\{0\};}
+\DoxyCodeLine{8561         \textcolor{keyword}{const} \textcolor{keywordtype}{bool} VISIT\_ALL\{\textcolor{keyword}{true}\};}
+\DoxyCodeLine{8562         accept<Visitor>(FIELD\_ID, visitor, VISIT\_ALL);}
+\DoxyCodeLine{8563     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a261bd0896ad80644d6718697cd70669c}\label{classcluon_1_1GenericMessage_a261bd0896ad80644d6718697cd70669c}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!createFrom@{createFrom}}
+\index{createFrom@{createFrom}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{createFrom()}{createFrom()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::create\+From (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} \&}]{mm,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} $>$ \&}]{mms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+This method creates an empty \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} from a given message specification parsed from \mbox{\hyperlink{classcluon_1_1MessageParser}{Message\+Parser}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mm} & \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} describing the fields for the message to be resolved. \\
+\hline
+{\em mms} & List of Meta\+Messages that are known (used for resolving nested message). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12889                                                                                                         \{}
+\DoxyCodeLine{12890     \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\_metaMessage}} = \mbox{\hyperlink{cluon-complete_8hpp_ac99d9adcdaabb55efe224341cde96631}{mm}};}
+\DoxyCodeLine{12891     \mbox{\hyperlink{classcluon_1_1GenericMessage_a251040337445a8f24cbe00a7cb56f9d8}{m\_longName}}    = \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\_metaMessage}}.\mbox{\hyperlink{classcluon_1_1MetaMessage_ab9872e0f141089b30d4dcc0b67232336}{messageName}}();}
+\DoxyCodeLine{12892 }
+\DoxyCodeLine{12893     \mbox{\hyperlink{classcluon_1_1GenericMessage_aee7aab32a474f93346f60a1c1b66ee90}{m\_scopeOfMetaMessages}}.clear();}
+\DoxyCodeLine{12894     \mbox{\hyperlink{classcluon_1_1GenericMessage_aee7aab32a474f93346f60a1c1b66ee90}{m\_scopeOfMetaMessages}} = mms;}
+\DoxyCodeLine{12895 }
+\DoxyCodeLine{12896     \mbox{\hyperlink{classcluon_1_1GenericMessage_ac7ebf694b7667748674b279c393a664b}{m\_mapForScopeOfMetaMessages}}.clear();}
+\DoxyCodeLine{12897     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&e : \mbox{\hyperlink{classcluon_1_1GenericMessage_aee7aab32a474f93346f60a1c1b66ee90}{m\_scopeOfMetaMessages}}) \{ \mbox{\hyperlink{classcluon_1_1GenericMessage_ac7ebf694b7667748674b279c393a664b}{m\_mapForScopeOfMetaMessages}}[e.messageName()] = e; \}}
+\DoxyCodeLine{12898 }
+\DoxyCodeLine{12899     \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.clear();}
+\DoxyCodeLine{12900     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&f : \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\_metaMessage}}.\mbox{\hyperlink{classcluon_1_1MetaMessage_a467f2abd1fc7b3fe5ace1725ef146b8b}{listOfMetaFields}}()) \{}
+\DoxyCodeLine{12901         \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a8cc81be2e201862e568354646b9bb03b}{MetaMessage::MetaField::BOOL\_T}}) \{}
+\DoxyCodeLine{12902             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12903                 \mbox{\hyperlink{classlinb_1_1any}{linb::any}} \_v\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{12904                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \_v;}
+\DoxyCodeLine{12905             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12906             \}}
+\DoxyCodeLine{12907         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616aad8bf05da58bfa5415b138a0409831d5}{MetaMessage::MetaField::CHAR\_T}}) \{}
+\DoxyCodeLine{12908             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12909                 \mbox{\hyperlink{classlinb_1_1any}{linb::any}} \_v\{\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}\textcolor{keyword}{>}(\textcolor{charliteral}{'\(\backslash\)0'})\};}
+\DoxyCodeLine{12910                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \_v;}
+\DoxyCodeLine{12911             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12912             \}}
+\DoxyCodeLine{12913         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616ae244d4a19a2e2d8d78f9b129452210bc}{MetaMessage::MetaField::UINT8\_T}}) \{}
+\DoxyCodeLine{12914             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12915                 \mbox{\hyperlink{classlinb_1_1any}{linb::any}} \_v\{\textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(0)\};}
+\DoxyCodeLine{12916                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \_v;}
+\DoxyCodeLine{12917             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12918             \}}
+\DoxyCodeLine{12919         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a599003b129498771c0a873fd294ef2dc}{MetaMessage::MetaField::INT8\_T}}) \{}
+\DoxyCodeLine{12920             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12921                 \mbox{\hyperlink{classlinb_1_1any}{linb::any}} \_v\{\textcolor{keyword}{static\_cast<}int8\_t\textcolor{keyword}{>}(0)\};}
+\DoxyCodeLine{12922                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \_v;}
+\DoxyCodeLine{12923             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12924             \}}
+\DoxyCodeLine{12925         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a157fd1dec17057c7b8bb21e513be81c2}{MetaMessage::MetaField::UINT16\_T}}) \{}
+\DoxyCodeLine{12926             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12927                 \mbox{\hyperlink{classlinb_1_1any}{linb::any}} \_v\{\textcolor{keyword}{static\_cast<}uint16\_t\textcolor{keyword}{>}(0)\};}
+\DoxyCodeLine{12928                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \_v;}
+\DoxyCodeLine{12929             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12930             \}}
+\DoxyCodeLine{12931         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a205d5c6f9f9c58e195b746839871ea19}{MetaMessage::MetaField::INT16\_T}}) \{}
+\DoxyCodeLine{12932             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12933                 \mbox{\hyperlink{classlinb_1_1any}{linb::any}} \_v\{\textcolor{keyword}{static\_cast<}int16\_t\textcolor{keyword}{>}(0)\};}
+\DoxyCodeLine{12934                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \_v;}
+\DoxyCodeLine{12935             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12936             \}}
+\DoxyCodeLine{12937         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a72cb40c6fc12f575606ea7ceec8b7b4b}{MetaMessage::MetaField::UINT32\_T}}) \{}
+\DoxyCodeLine{12938             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12939                 \mbox{\hyperlink{classlinb_1_1any}{linb::any}} \_v\{\textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(0)\};}
+\DoxyCodeLine{12940                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \_v;}
+\DoxyCodeLine{12941             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12942             \}}
+\DoxyCodeLine{12943         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616ac79881ab4b918b57fd0dc7f69a1fce35}{MetaMessage::MetaField::INT32\_T}}) \{}
+\DoxyCodeLine{12944             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12945                 \mbox{\hyperlink{classlinb_1_1any}{linb::any}} \_v\{\textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}(0)\};}
+\DoxyCodeLine{12946                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \_v;}
+\DoxyCodeLine{12947             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12948             \}}
+\DoxyCodeLine{12949         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a037baffa7ce0bf337146e3e5893d7b94}{MetaMessage::MetaField::UINT64\_T}}) \{}
+\DoxyCodeLine{12950             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12951                 \mbox{\hyperlink{classlinb_1_1any}{linb::any}} \_v\{\textcolor{keyword}{static\_cast<}uint64\_t\textcolor{keyword}{>}(0)\};}
+\DoxyCodeLine{12952                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \_v;}
+\DoxyCodeLine{12953             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12954             \}}
+\DoxyCodeLine{12955         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616adf27a06d2f3ed4b42d3aa64c6a6c73d8}{MetaMessage::MetaField::INT64\_T}}) \{}
+\DoxyCodeLine{12956             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12957                 \mbox{\hyperlink{classlinb_1_1any}{linb::any}} \_v\{\textcolor{keyword}{static\_cast<}int64\_t\textcolor{keyword}{>}(0)\};}
+\DoxyCodeLine{12958                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \_v;}
+\DoxyCodeLine{12959             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12960             \}}
+\DoxyCodeLine{12961         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a9522de5ad9927fff4b8779224da05afe}{MetaMessage::MetaField::FLOAT\_T}}) \{}
+\DoxyCodeLine{12962             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12963                 \mbox{\hyperlink{classlinb_1_1any}{linb::any}} \_v\{\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(0.0f)\};}
+\DoxyCodeLine{12964                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \_v;}
+\DoxyCodeLine{12965             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12966             \}}
+\DoxyCodeLine{12967         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a427077d354776ff17eecdf88adb422c0}{MetaMessage::MetaField::DOUBLE\_T}}) \{}
+\DoxyCodeLine{12968             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12969                 \mbox{\hyperlink{classlinb_1_1any}{linb::any}} \_v\{\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(0.0)\};}
+\DoxyCodeLine{12970                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \_v;}
+\DoxyCodeLine{12971             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12972             \}}
+\DoxyCodeLine{12973         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616af84da990a8c6988560f8b1ac829f4c84}{MetaMessage::MetaField::STRING\_T}}) || (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a18194c6a01e051cdfdb0d69ea71866da}{MetaMessage::MetaField::BYTES\_T}})) \{}
+\DoxyCodeLine{12974             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12975                 \mbox{\hyperlink{classlinb_1_1any}{linb::any}} \_v                                          = std::string\{\};}
+\DoxyCodeLine{12976                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \_v;}
+\DoxyCodeLine{12977             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12978             \}}
+\DoxyCodeLine{12979         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (f.fieldDataType() == \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a881ae529e9c0b564a596c2129ddf27fd}{MetaMessage::MetaField::MESSAGE\_T}}) \{}
+\DoxyCodeLine{12980             \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_ac7ebf694b7667748674b279c393a664b}{m\_mapForScopeOfMetaMessages}}.count(f.fieldDataTypeName())) \{}
+\DoxyCodeLine{12981                 \textcolor{comment}{// Create a GenericMessage from the decoded Proto-\/data.}}
+\DoxyCodeLine{12982                 \mbox{\hyperlink{classcluon_1_1GenericMessage}{cluon::GenericMessage}} gm;}
+\DoxyCodeLine{12983                 gm.\mbox{\hyperlink{classcluon_1_1GenericMessage_ad38acdbfe2d5ca936268d48d38fc7f6b}{createFrom}}(\mbox{\hyperlink{classcluon_1_1GenericMessage_ac7ebf694b7667748674b279c393a664b}{m\_mapForScopeOfMetaMessages}}[f.fieldDataTypeName()], \mbox{\hyperlink{classcluon_1_1GenericMessage_aee7aab32a474f93346f60a1c1b66ee90}{m\_scopeOfMetaMessages}});}
+\DoxyCodeLine{12984 }
+\DoxyCodeLine{12985                 \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[f.fieldIdentifier()] = \mbox{\hyperlink{classlinb_1_1any}{linb::any}}\{gm\};}
+\DoxyCodeLine{12986             \}}
+\DoxyCodeLine{12987         \}}
+\DoxyCodeLine{12988     \}}
+\DoxyCodeLine{12989 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a8cc81be2e201862e568354646b9bb03b}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+BOOL\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a18194c6a01e051cdfdb0d69ea71866da}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+BYTES\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616aad8bf05da58bfa5415b138a0409831d5}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+CHAR\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1GenericMessage_ad38acdbfe2d5ca936268d48d38fc7f6b}{create\+From()}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a427077d354776ff17eecdf88adb422c0}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+DOUBLE\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a9522de5ad9927fff4b8779224da05afe}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+FLOAT\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a205d5c6f9f9c58e195b746839871ea19}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+INT16\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616ac79881ab4b918b57fd0dc7f69a1fce35}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+INT32\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616adf27a06d2f3ed4b42d3aa64c6a6c73d8}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+INT64\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a599003b129498771c0a873fd294ef2dc}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+INT8\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_a467f2abd1fc7b3fe5ace1725ef146b8b}{cluon\+::\+Meta\+Message\+::list\+Of\+Meta\+Fields()}}, \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}, \mbox{\hyperlink{classcluon_1_1GenericMessage_a251040337445a8f24cbe00a7cb56f9d8}{m\+\_\+long\+Name}}, \mbox{\hyperlink{classcluon_1_1GenericMessage_ac7ebf694b7667748674b279c393a664b}{m\+\_\+map\+For\+Scope\+Of\+Meta\+Messages}}, \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\+\_\+meta\+Message}}, \mbox{\hyperlink{classcluon_1_1GenericMessage_aee7aab32a474f93346f60a1c1b66ee90}{m\+\_\+scope\+Of\+Meta\+Messages}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a881ae529e9c0b564a596c2129ddf27fd}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+MESSAGE\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_ab9872e0f141089b30d4dcc0b67232336}{cluon\+::\+Meta\+Message\+::message\+Name()}}, \mbox{\hyperlink{cluon-complete_8hpp_ac99d9adcdaabb55efe224341cde96631}{mm}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616af84da990a8c6988560f8b1ac829f4c84}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+STRING\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a157fd1dec17057c7b8bb21e513be81c2}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+UINT16\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a72cb40c6fc12f575606ea7ceec8b7b4b}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+UINT32\+\_\+T}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616a037baffa7ce0bf337146e3e5893d7b94}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+UINT64\+\_\+T}}, and \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField_a4b3e8d440148d2fe42dad98d8cd98616ae244d4a19a2e2d8d78f9b129452210bc}{cluon\+::\+Meta\+Message\+::\+Meta\+Field\+::\+UINT8\+\_\+T}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_ad38acdbfe2d5ca936268d48d38fc7f6b}\label{classcluon_1_1GenericMessage_ad38acdbfe2d5ca936268d48d38fc7f6b}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!createFrom@{createFrom}}
+\index{createFrom@{createFrom}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{createFrom()}{createFrom()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void cluon\+::\+Generic\+Message\+::create\+From (\begin{DoxyParamCaption}\item[{T \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This methods creates this \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} from a given concrete message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Concrete message used to derive this \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} from. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8487                             \{}
+\DoxyCodeLine{8488         GenericMessageVisitor gmv;}
+\DoxyCodeLine{8489         msg.accept(gmv);}
+\DoxyCodeLine{8490 }
+\DoxyCodeLine{8491         \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\_metaMessage}} = gmv.metaMessage();}
+\DoxyCodeLine{8492         \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.clear();}
+\DoxyCodeLine{8493         \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}} = gmv.intermediateDataRepresentation();}
+\DoxyCodeLine{8494     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_1_1GenericMessageVisitor_a52f5b715720ccab26df02b1c27e16420}{cluon\+::\+Generic\+Message\+::\+Generic\+Message\+Visitor\+::intermediate\+Data\+Representation()}}, and \mbox{\hyperlink{classcluon_1_1GenericMessage_1_1GenericMessageVisitor_a2645f4a94302b81ad756513889cf312a}{cluon\+::\+Generic\+Message\+::\+Generic\+Message\+Visitor\+::meta\+Message()}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_a261bd0896ad80644d6718697cd70669c}{create\+From()}}, \mbox{\hyperlink{classcluon_1_1LCMToGenericMessage_a026150a18a731e43a9c364f2da49d21a}{cluon\+::\+LCMTo\+Generic\+Message\+::get\+Generic\+Message()}}, \mbox{\hyperlink{classcluon_1_1EnvelopeConverter_a8d7438e6f54c7d4034688634a19ece83}{cluon\+::\+Envelope\+Converter\+::get\+JSONFrom\+Envelope()}}, \mbox{\hyperlink{classcluon_1_1EnvelopeConverter_ac046a7e7de1fec61f44ca2ece7df11bc}{cluon\+::\+Envelope\+Converter\+::get\+Proto\+Encoded\+Envelope\+From\+JSON()}}, and \mbox{\hyperlink{classcluon_1_1GenericMessage_1_1GenericMessageVisitor_a7cb671223f9bd993f5723d08a03e21a2}{cluon\+::\+Generic\+Message\+::\+Generic\+Message\+Visitor\+::visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a70d3eae04b7cebae85b770c2dc850df2}\label{classcluon_1_1GenericMessage_a70d3eae04b7cebae85b770c2dc850df2}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!ID@{ID}}
+\index{ID@{ID}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{ID()}{ID()}}
+{\footnotesize\ttfamily int32\+\_\+t cluon\+::\+Generic\+Message\+::\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12719                                   \{}
+\DoxyCodeLine{12720     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\_metaMessage}}.\mbox{\hyperlink{classcluon_1_1MetaMessage_a5457e4f86695b8704f7494ca57e99603}{messageIdentifier}}();}
+\DoxyCodeLine{12721 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\+\_\+meta\+Message}}, and \mbox{\hyperlink{classcluon_1_1MetaMessage_a5457e4f86695b8704f7494ca57e99603}{cluon\+::\+Meta\+Message\+::message\+Identifier()}}.
+
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_ad4e19890e7f752d11bf513c71d05a1ba}\label{classcluon_1_1GenericMessage_ad4e19890e7f752d11bf513c71d05a1ba}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!LongName@{LongName}}
+\index{LongName@{LongName}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{LongName()}{LongName()}}
+{\footnotesize\ttfamily const std\+::string cluon\+::\+Generic\+Message\+::\+Long\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12732                                                 \{}
+\DoxyCodeLine{12733     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\_metaMessage}}.\mbox{\hyperlink{classcluon_1_1MetaMessage_a34fff8503321e4308a8bf1fc14dcca83}{packageName}}() + (!\mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\_metaMessage}}.\mbox{\hyperlink{classcluon_1_1MetaMessage_a34fff8503321e4308a8bf1fc14dcca83}{packageName}}().empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) + \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\_metaMessage}}.\mbox{\hyperlink{classcluon_1_1MetaMessage_ab9872e0f141089b30d4dcc0b67232336}{messageName}}();}
+\DoxyCodeLine{12734 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}{m\+\_\+meta\+Message}}, \mbox{\hyperlink{classcluon_1_1MetaMessage_ab9872e0f141089b30d4dcc0b67232336}{cluon\+::\+Meta\+Message\+::message\+Name()}}, and \mbox{\hyperlink{classcluon_1_1MetaMessage_a34fff8503321e4308a8bf1fc14dcca83}{cluon\+::\+Meta\+Message\+::package\+Name()}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_aef23882b50e64430bff8e49a8529080f}{Short\+Name()}}.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a3dd95b5ea286663c388a5675a6ecb77c}\label{classcluon_1_1GenericMessage_a3dd95b5ea286663c388a5675a6ecb77c}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} \& cluon\+::\+Generic\+Message\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_ac87a3f98c3c42c06702fd2d242cf50ce}\label{classcluon_1_1GenericMessage_ac87a3f98c3c42c06702fd2d242cf50ce}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} \& cluon\+::\+Generic\+Message\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1GenericMessage}{Generic\+Message}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_ac5b43123fd14a90336455d5fd5caf568}\label{classcluon_1_1GenericMessage_ac5b43123fd14a90336455d5fd5caf568}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!postVisit@{postVisit}}
+\index{postVisit@{postVisit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{postVisit()}{postVisit()}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::post\+Visit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12742 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a816bc30ef517437a369277efc1212dbf}\label{classcluon_1_1GenericMessage_a816bc30ef517437a369277efc1212dbf}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!preVisit@{preVisit}}
+\index{preVisit@{preVisit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{preVisit()}{preVisit()}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::pre\+Visit (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{id,  }\item[{const std\+::string \&}]{short\+Name,  }\item[{const std\+::string \&}]{long\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12736                                                                                                                \{}
+\DoxyCodeLine{12737     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{12738     (void)shortName;}
+\DoxyCodeLine{12739     (void)longName;}
+\DoxyCodeLine{12740 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_aef23882b50e64430bff8e49a8529080f}\label{classcluon_1_1GenericMessage_aef23882b50e64430bff8e49a8529080f}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!ShortName@{ShortName}}
+\index{ShortName@{ShortName}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{ShortName()}{ShortName()}}
+{\footnotesize\ttfamily const std\+::string cluon\+::\+Generic\+Message\+::\+Short\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12723                                                  \{}
+\DoxyCodeLine{12724     std::string tmp\{\mbox{\hyperlink{classcluon_1_1GenericMessage_ad4e19890e7f752d11bf513c71d05a1ba}{LongName}}()\};}
+\DoxyCodeLine{12725     std::replace(tmp.begin(), tmp.end(), \textcolor{charliteral}{'.'}, \textcolor{charliteral}{' '});}
+\DoxyCodeLine{12726     std::istringstream sstr\{tmp\};}
+\DoxyCodeLine{12727     std::vector<std::string> tokens\{std::istream\_iterator<std::string>(sstr), std::istream\_iterator<std::string>()\};}
+\DoxyCodeLine{12728 }
+\DoxyCodeLine{12729     \textcolor{keywordflow}{return} tokens.back();}
+\DoxyCodeLine{12730 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_ad4e19890e7f752d11bf513c71d05a1ba}{Long\+Name()}}.
+
+Here is the call graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a8ac5cb3a512f9fee6c306f11d4af287e}\label{classcluon_1_1GenericMessage_a8ac5cb3a512f9fee6c306f11d4af287e}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/14]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \&}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8526                                                                                         \{}
+\DoxyCodeLine{8527         (void)typeName;}
+\DoxyCodeLine{8528         (void)name;}
+\DoxyCodeLine{8529         \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{8530             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8531                 \textcolor{keyword}{auto} \&v = linb::any\_cast<cluon::GenericMessage \&>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{8532                 value.accept(v);}
+\DoxyCodeLine{8533             \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8534             \}}
+\DoxyCodeLine{8535         \}}
+\DoxyCodeLine{8536     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_ac7fe8cb3d067fcdcc739ebdd0789dcf3}\label{classcluon_1_1GenericMessage_ac7fe8cb3d067fcdcc739ebdd0789dcf3}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/14]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{bool \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12744                                                                                                        \{}
+\DoxyCodeLine{12745     (void)typeName;}
+\DoxyCodeLine{12746     (void)name;}
+\DoxyCodeLine{12747     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{12748         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12749             v = linb::any\_cast<bool>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{12750         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12751         \}}
+\DoxyCodeLine{12752     \}}
+\DoxyCodeLine{12753 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_ad194962c62e274d2d26a327f7abcc0a1}\label{classcluon_1_1GenericMessage_ad194962c62e274d2d26a327f7abcc0a1}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/14]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{char \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12755                                                                                                        \{}
+\DoxyCodeLine{12756     (void)typeName;}
+\DoxyCodeLine{12757     (void)name;}
+\DoxyCodeLine{12758     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{12759         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12760             v = linb::any\_cast<char>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{12761         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12762         \}}
+\DoxyCodeLine{12763     \}}
+\DoxyCodeLine{12764 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a04a1f722cc2455dc36abfa13f3d0770a}\label{classcluon_1_1GenericMessage_a04a1f722cc2455dc36abfa13f3d0770a}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/14]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{double \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12865                                                                                                          \{}
+\DoxyCodeLine{12866     (void)typeName;}
+\DoxyCodeLine{12867     (void)name;}
+\DoxyCodeLine{12868     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{12869         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12870             v = linb::any\_cast<double>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{12871         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12872         \}}
+\DoxyCodeLine{12873     \}}
+\DoxyCodeLine{12874 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_ac2302f5cd458d034c402c98349e09a6d}\label{classcluon_1_1GenericMessage_ac2302f5cd458d034c402c98349e09a6d}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [5/14]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{float \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12854                                                                                                         \{}
+\DoxyCodeLine{12855     (void)typeName;}
+\DoxyCodeLine{12856     (void)name;}
+\DoxyCodeLine{12857     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{12858         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12859             v = linb::any\_cast<float>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{12860         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12861         \}}
+\DoxyCodeLine{12862     \}}
+\DoxyCodeLine{12863 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_abce3accb249cf8b2ad3b7bdafdb19f87}\label{classcluon_1_1GenericMessage_abce3accb249cf8b2ad3b7bdafdb19f87}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [6/14]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int16\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12788                                                                                                           \{}
+\DoxyCodeLine{12789     (void)typeName;}
+\DoxyCodeLine{12790     (void)name;}
+\DoxyCodeLine{12791     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{12792         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12793             v = linb::any\_cast<int16\_t>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{12794         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12795         \}}
+\DoxyCodeLine{12796     \}}
+\DoxyCodeLine{12797 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_aa4355688528612b6b954f268c28688d3}\label{classcluon_1_1GenericMessage_aa4355688528612b6b954f268c28688d3}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [7/14]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12810                                                                                                           \{}
+\DoxyCodeLine{12811     (void)typeName;}
+\DoxyCodeLine{12812     (void)name;}
+\DoxyCodeLine{12813     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{12814         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12815             v = linb::any\_cast<int32\_t>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{12816         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12817         \}}
+\DoxyCodeLine{12818     \}}
+\DoxyCodeLine{12819 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_ab85199095ecd7a848133eefea1616150}\label{classcluon_1_1GenericMessage_ab85199095ecd7a848133eefea1616150}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [8/14]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int64\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12832                                                                                                           \{}
+\DoxyCodeLine{12833     (void)typeName;}
+\DoxyCodeLine{12834     (void)name;}
+\DoxyCodeLine{12835     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{12836         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12837             v = linb::any\_cast<int64\_t>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{12838         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12839         \}}
+\DoxyCodeLine{12840     \}}
+\DoxyCodeLine{12841 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a3d791c76046301b21dd0b09f8156bf68}\label{classcluon_1_1GenericMessage_a3d791c76046301b21dd0b09f8156bf68}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [9/14]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12766                                                                                                          \{}
+\DoxyCodeLine{12767     (void)typeName;}
+\DoxyCodeLine{12768     (void)name;}
+\DoxyCodeLine{12769     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{12770         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12771             v = linb::any\_cast<int8\_t>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{12772         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12773         \}}
+\DoxyCodeLine{12774     \}}
+\DoxyCodeLine{12775 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a86d360cac39438106dd743144b1a8d8d}\label{classcluon_1_1GenericMessage_a86d360cac39438106dd743144b1a8d8d}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [10/14]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12876                                                                                                             \{}
+\DoxyCodeLine{12877     (void)typeName;}
+\DoxyCodeLine{12878     (void)name;}
+\DoxyCodeLine{12879     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{12880         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12881             v = linb::any\_cast<std::string>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{12882         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12883         \}}
+\DoxyCodeLine{12884     \}}
+\DoxyCodeLine{12885 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_aaa7fd7ba19793d75700f2b83b434d979}\label{classcluon_1_1GenericMessage_aaa7fd7ba19793d75700f2b83b434d979}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [11/14]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint16\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12799                                                                                                            \{}
+\DoxyCodeLine{12800     (void)typeName;}
+\DoxyCodeLine{12801     (void)name;}
+\DoxyCodeLine{12802     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{12803         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12804             v = linb::any\_cast<uint16\_t>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{12805         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12806         \}}
+\DoxyCodeLine{12807     \}}
+\DoxyCodeLine{12808 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_aa043508f971f900240d213a4c81d1bb3}\label{classcluon_1_1GenericMessage_aa043508f971f900240d213a4c81d1bb3}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [12/14]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12821                                                                                                            \{}
+\DoxyCodeLine{12822     (void)typeName;}
+\DoxyCodeLine{12823     (void)name;}
+\DoxyCodeLine{12824     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{12825         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12826             v = linb::any\_cast<uint32\_t>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{12827         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12828         \}}
+\DoxyCodeLine{12829     \}}
+\DoxyCodeLine{12830 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a6010225551dcb93db1e6936d576523ae}\label{classcluon_1_1GenericMessage_a6010225551dcb93db1e6936d576523ae}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [13/14]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint64\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12843                                                                                                            \{}
+\DoxyCodeLine{12844     (void)typeName;}
+\DoxyCodeLine{12845     (void)name;}
+\DoxyCodeLine{12846     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{12847         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12848             v = linb::any\_cast<uint64\_t>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{12849         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12850         \}}
+\DoxyCodeLine{12851     \}}
+\DoxyCodeLine{12852 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a3486237bf4803f8455d18fbde90aa9f3}\label{classcluon_1_1GenericMessage_a3486237bf4803f8455d18fbde90aa9f3}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!visit@{visit}}
+\index{visit@{visit}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [14/14]}}
+{\footnotesize\ttfamily void cluon\+::\+Generic\+Message\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12777                                                                                                           \{}
+\DoxyCodeLine{12778     (void)typeName;}
+\DoxyCodeLine{12779     (void)name;}
+\DoxyCodeLine{12780     \textcolor{keywordflow}{if} (0 < \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}.count(\textcolor{keywordtype}{id})) \{}
+\DoxyCodeLine{12781         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{12782             v = linb::any\_cast<uint8\_t>(\mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\_intermediateDataRepresentation}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{12783         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb::bad\_any\_cast}} \&) \{ \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{12784         \}}
+\DoxyCodeLine{12785     \}}
+\DoxyCodeLine{12786 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}{m\+\_\+intermediate\+Data\+Representation}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}\label{classcluon_1_1GenericMessage_a9efa3aacc5eaf8761f4f8605d7609dcf}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!m\_intermediateDataRepresentation@{m\_intermediateDataRepresentation}}
+\index{m\_intermediateDataRepresentation@{m\_intermediateDataRepresentation}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{m\_intermediateDataRepresentation}{m\_intermediateDataRepresentation}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$uint32\+\_\+t, \mbox{\hyperlink{classlinb_1_1any}{linb\+::any}}, \mbox{\hyperlink{classcluon_1_1UseUInt32ValueAsHashKey}{Use\+UInt32\+Value\+As\+Hash\+Key}}$>$ cluon\+::\+Generic\+Message\+::m\+\_\+intermediate\+Data\+Representation\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_a261bd0896ad80644d6718697cd70669c}{create\+From()}}, \mbox{\hyperlink{classcluon_1_1GenericMessage_1_1GenericMessageVisitor_a52f5b715720ccab26df02b1c27e16420}{cluon\+::\+Generic\+Message\+::\+Generic\+Message\+Visitor\+::intermediate\+Data\+Representation()}}, \mbox{\hyperlink{classcluon_1_1GenericMessage_1_1GenericMessageVisitor_a789540328901fe0a40e055d4136cdfff}{cluon\+::\+Generic\+Message\+::\+Generic\+Message\+Visitor\+::visit()}}, and \mbox{\hyperlink{classcluon_1_1GenericMessage_ac7fe8cb3d067fcdcc739ebdd0789dcf3}{visit()}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_a251040337445a8f24cbe00a7cb56f9d8}\label{classcluon_1_1GenericMessage_a251040337445a8f24cbe00a7cb56f9d8}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!m\_longName@{m\_longName}}
+\index{m\_longName@{m\_longName}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{m\_longName}{m\_longName}}
+{\footnotesize\ttfamily std\+::string cluon\+::\+Generic\+Message\+::m\+\_\+long\+Name \{\char`\"{}\char`\"{}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_a261bd0896ad80644d6718697cd70669c}{create\+From()}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_ac7ebf694b7667748674b279c393a664b}\label{classcluon_1_1GenericMessage_ac7ebf694b7667748674b279c393a664b}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!m\_mapForScopeOfMetaMessages@{m\_mapForScopeOfMetaMessages}}
+\index{m\_mapForScopeOfMetaMessages@{m\_mapForScopeOfMetaMessages}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{m\_mapForScopeOfMetaMessages}{m\_mapForScopeOfMetaMessages}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}}$>$ cluon\+::\+Generic\+Message\+::m\+\_\+map\+For\+Scope\+Of\+Meta\+Messages \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_a261bd0896ad80644d6718697cd70669c}{create\+From()}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}\label{classcluon_1_1GenericMessage_aa313e7831612ddd27342d2175d707b99}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!m\_metaMessage@{m\_metaMessage}}
+\index{m\_metaMessage@{m\_metaMessage}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{m\_metaMessage}{m\_metaMessage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}} cluon\+::\+Generic\+Message\+::m\+\_\+meta\+Message \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_a261bd0896ad80644d6718697cd70669c}{create\+From()}}, \mbox{\hyperlink{classcluon_1_1GenericMessage_a70d3eae04b7cebae85b770c2dc850df2}{ID()}}, \mbox{\hyperlink{classcluon_1_1GenericMessage_ad4e19890e7f752d11bf513c71d05a1ba}{Long\+Name()}}, \mbox{\hyperlink{classcluon_1_1GenericMessage_1_1GenericMessageVisitor_a2645f4a94302b81ad756513889cf312a}{cluon\+::\+Generic\+Message\+::\+Generic\+Message\+Visitor\+::meta\+Message()}}, and \mbox{\hyperlink{classcluon_1_1GenericMessage_1_1GenericMessageVisitor_a789540328901fe0a40e055d4136cdfff}{cluon\+::\+Generic\+Message\+::\+Generic\+Message\+Visitor\+::visit()}}.
+
+\mbox{\Hypertarget{classcluon_1_1GenericMessage_aee7aab32a474f93346f60a1c1b66ee90}\label{classcluon_1_1GenericMessage_aee7aab32a474f93346f60a1c1b66ee90}} 
+\index{cluon::GenericMessage@{cluon::GenericMessage}!m\_scopeOfMetaMessages@{m\_scopeOfMetaMessages}}
+\index{m\_scopeOfMetaMessages@{m\_scopeOfMetaMessages}!cluon::GenericMessage@{cluon::GenericMessage}}
+\doxysubsubsection{\texorpdfstring{m\_scopeOfMetaMessages}{m\_scopeOfMetaMessages}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classcluon_1_1MetaMessage}{Meta\+Message}}$>$ cluon\+::\+Generic\+Message\+::m\+\_\+scope\+Of\+Meta\+Messages \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_a261bd0896ad80644d6718697cd70669c}{create\+From()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

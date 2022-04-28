@@ -1,0 +1,132 @@
+\hypertarget{structpeg_1_1IsLiteralToken}{}\doxysection{peg\+::Is\+Literal\+Token Struct Reference}
+\label{structpeg_1_1IsLiteralToken}\index{peg::IsLiteralToken@{peg::IsLiteralToken}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Inheritance diagram for peg\+::Is\+Literal\+Token\+:
+% FIG 0
+
+
+Collaboration diagram for peg\+::Is\+Literal\+Token\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpeg_1_1IsLiteralToken_a2c30f2481dc865cbaa5bf515d5e2e350}{Is\+Literal\+Token}} ()
+\item 
+void \mbox{\hyperlink{structpeg_1_1IsLiteralToken_a7673048d4c7fada80554bb015c714436}{visit}} (\mbox{\hyperlink{classpeg_1_1PrioritizedChoice}{Prioritized\+Choice}} \&ope) override
+\item 
+void \mbox{\hyperlink{structpeg_1_1IsLiteralToken_a3a1dcb4eca93947aeff88154144f93d8}{visit}} (\mbox{\hyperlink{classpeg_1_1LiteralString}{Literal\+String}} \&) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{structpeg_1_1IsLiteralToken_ae68025d2c11e7c9815c8d07333ba8ba3}{check}} (\mbox{\hyperlink{classpeg_1_1Ope}{Ope}} \&ope)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structpeg_1_1IsLiteralToken_a6231e5d371de524b57fadb21de7dd539}{result\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structpeg_1_1IsLiteralToken_a2c30f2481dc865cbaa5bf515d5e2e350}\label{structpeg_1_1IsLiteralToken_a2c30f2481dc865cbaa5bf515d5e2e350}} 
+\index{peg::IsLiteralToken@{peg::IsLiteralToken}!IsLiteralToken@{IsLiteralToken}}
+\index{IsLiteralToken@{IsLiteralToken}!peg::IsLiteralToken@{peg::IsLiteralToken}}
+\doxysubsubsection{\texorpdfstring{IsLiteralToken()}{IsLiteralToken()}}
+{\footnotesize\ttfamily peg\+::\+Is\+Literal\+Token\+::\+Is\+Literal\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2189 : \mbox{\hyperlink{structpeg_1_1IsLiteralToken_a6231e5d371de524b57fadb21de7dd539}{result\_}}(\textcolor{keyword}{false}) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpeg_1_1IsLiteralToken_ae68025d2c11e7c9815c8d07333ba8ba3}\label{structpeg_1_1IsLiteralToken_ae68025d2c11e7c9815c8d07333ba8ba3}} 
+\index{peg::IsLiteralToken@{peg::IsLiteralToken}!check@{check}}
+\index{check@{check}!peg::IsLiteralToken@{peg::IsLiteralToken}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily static bool peg\+::\+Is\+Literal\+Token\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpeg_1_1Ope}{Ope}} \&}]{ope }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2204                                 \{}
+\DoxyCodeLine{2205         \mbox{\hyperlink{structpeg_1_1IsLiteralToken_a2c30f2481dc865cbaa5bf515d5e2e350}{IsLiteralToken}} vis;}
+\DoxyCodeLine{2206         ope.accept(vis);}
+\DoxyCodeLine{2207         \textcolor{keywordflow}{return} vis.result\_;}
+\DoxyCodeLine{2208     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classpeg_1_1Ope_af57615cfe8938c0f4c9a0dd6df9da560}{peg\+::\+Ope\+::accept()}}, and \mbox{\hyperlink{structpeg_1_1IsLiteralToken_a6231e5d371de524b57fadb21de7dd539}{result\+\_\+}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{structpeg_1_1IsLiteralToken_a3a1dcb4eca93947aeff88154144f93d8}\label{structpeg_1_1IsLiteralToken_a3a1dcb4eca93947aeff88154144f93d8}} 
+\index{peg::IsLiteralToken@{peg::IsLiteralToken}!visit@{visit}}
+\index{visit@{visit}!peg::IsLiteralToken@{peg::IsLiteralToken}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void peg\+::\+Is\+Literal\+Token\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpeg_1_1LiteralString}{Literal\+String}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor_a4d256311ac54faa26de95bab9a620195}{peg\+::\+Ope\+::\+Visitor}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2200                                           \{}
+\DoxyCodeLine{2201         \mbox{\hyperlink{structpeg_1_1IsLiteralToken_a6231e5d371de524b57fadb21de7dd539}{result\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{2202     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structpeg_1_1IsLiteralToken_a7673048d4c7fada80554bb015c714436}\label{structpeg_1_1IsLiteralToken_a7673048d4c7fada80554bb015c714436}} 
+\index{peg::IsLiteralToken@{peg::IsLiteralToken}!visit@{visit}}
+\index{visit@{visit}!peg::IsLiteralToken@{peg::IsLiteralToken}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void peg\+::\+Is\+Literal\+Token\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpeg_1_1PrioritizedChoice}{Prioritized\+Choice}} \&}]{ope }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor_ac188b39d616714cd2e6d954c05344b4e}{peg\+::\+Ope\+::\+Visitor}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2191                                                 \{}
+\DoxyCodeLine{2192         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} op: ope.opes\_) \{}
+\DoxyCodeLine{2193             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{structpeg_1_1IsLiteralToken_ae68025d2c11e7c9815c8d07333ba8ba3}{IsLiteralToken::check}}(*op)) \{}
+\DoxyCodeLine{2194                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{2195             \}}
+\DoxyCodeLine{2196         \}}
+\DoxyCodeLine{2197         \mbox{\hyperlink{structpeg_1_1IsLiteralToken_a6231e5d371de524b57fadb21de7dd539}{result\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{2198     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classpeg_1_1PrioritizedChoice_ad00b448cc2ab6826b5cab72c8d8158ea}{peg\+::\+Prioritized\+Choice\+::opes\+\_\+}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpeg_1_1IsLiteralToken_a6231e5d371de524b57fadb21de7dd539}\label{structpeg_1_1IsLiteralToken_a6231e5d371de524b57fadb21de7dd539}} 
+\index{peg::IsLiteralToken@{peg::IsLiteralToken}!result\_@{result\_}}
+\index{result\_@{result\_}!peg::IsLiteralToken@{peg::IsLiteralToken}}
+\doxysubsubsection{\texorpdfstring{result\_}{result\_}}
+{\footnotesize\ttfamily bool peg\+::\+Is\+Literal\+Token\+::result\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{structpeg_1_1IsLiteralToken_ae68025d2c11e7c9815c8d07333ba8ba3}{check()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,93 @@
+\hypertarget{structlinb_1_1any_1_1vtable__type}{}\doxysection{linb\+::any\+::vtable\+\_\+type Struct Reference}
+\label{structlinb_1_1any_1_1vtable__type}\index{linb::any::vtable\_type@{linb::any::vtable\_type}}
+
+
+Base VTable specification.  
+
+
+
+
+Collaboration diagram for linb\+::any\+::vtable\+\_\+type\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::type\+\_\+info \&($\ast$ \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_afec6f0cdf01ae24deaa532facbf4970a}{type}} )() noexcept
+\begin{DoxyCompactList}\small\item\em The type of the object this vtable is for. \end{DoxyCompactList}\item 
+void($\ast$ \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_af938d9c1bd6d8f608daf58aa1ddc635a}{destroy}} )(\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&) noexcept
+\item 
+void($\ast$ \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_a30a6d14d0a8652e6364e1b3195e30133}{copy}} )(const \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&src, \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&dest)
+\item 
+void($\ast$ \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_aa539551c552458e9d08951abb7055630}{move}} )(\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&src, \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&dest) noexcept
+\item 
+void($\ast$ \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_a1079c06f487353b51e5d4371e3aa3e81}{swap}} )(\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&lhs, \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em Exchanges the storage between lhs and rhs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base VTable specification. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structlinb_1_1any_1_1vtable__type_a30a6d14d0a8652e6364e1b3195e30133}\label{structlinb_1_1any_1_1vtable__type_a30a6d14d0a8652e6364e1b3195e30133}} 
+\index{linb::any::vtable\_type@{linb::any::vtable\_type}!copy@{copy}}
+\index{copy@{copy}!linb::any::vtable\_type@{linb::any::vtable\_type}}
+\doxysubsubsection{\texorpdfstring{copy}{copy}}
+{\footnotesize\ttfamily void($\ast$ linb\+::any\+::vtable\+\_\+type\+::copy) (const \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&src, \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&dest)}
+
+Copies the {\bfseries{inner}} content of the src union into the yet unitialized dest union. As such, both inner objects will have the same state, but on separate memory locations. 
+
+Referenced by \mbox{\hyperlink{classlinb_1_1any_a56847f22e44c42dfe1b74633cf81d083}{linb\+::any\+::any()}}.
+
+\mbox{\Hypertarget{structlinb_1_1any_1_1vtable__type_af938d9c1bd6d8f608daf58aa1ddc635a}\label{structlinb_1_1any_1_1vtable__type_af938d9c1bd6d8f608daf58aa1ddc635a}} 
+\index{linb::any::vtable\_type@{linb::any::vtable\_type}!destroy@{destroy}}
+\index{destroy@{destroy}!linb::any::vtable\_type@{linb::any::vtable\_type}}
+\doxysubsubsection{\texorpdfstring{destroy}{destroy}}
+{\footnotesize\ttfamily void($\ast$ linb\+::any\+::vtable\+\_\+type\+::destroy) (\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&) noexcept\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Destroys the object in the union. The state of the union after this call is unspecified, caller must ensure not to use src anymore. 
+
+Referenced by \mbox{\hyperlink{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}{linb\+::any\+::clear()}}.
+
+\mbox{\Hypertarget{structlinb_1_1any_1_1vtable__type_aa539551c552458e9d08951abb7055630}\label{structlinb_1_1any_1_1vtable__type_aa539551c552458e9d08951abb7055630}} 
+\index{linb::any::vtable\_type@{linb::any::vtable\_type}!move@{move}}
+\index{move@{move}!linb::any::vtable\_type@{linb::any::vtable\_type}}
+\doxysubsubsection{\texorpdfstring{move}{move}}
+{\footnotesize\ttfamily void($\ast$ linb\+::any\+::vtable\+\_\+type\+::move) (\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&src, \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&dest) noexcept\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Moves the storage from src to the yet unitialized dest union. The state of src after this call is unspecified, caller must ensure not to use src anymore. 
+
+Referenced by \mbox{\hyperlink{classlinb_1_1any_a50ccd807f1ded03ca732c5450d6f8117}{linb\+::any\+::any()}}, and \mbox{\hyperlink{classlinb_1_1any_a6bd50f2fd178deacf049be223f73646e}{linb\+::any\+::swap()}}.
+
+\mbox{\Hypertarget{structlinb_1_1any_1_1vtable__type_a1079c06f487353b51e5d4371e3aa3e81}\label{structlinb_1_1any_1_1vtable__type_a1079c06f487353b51e5d4371e3aa3e81}} 
+\index{linb::any::vtable\_type@{linb::any::vtable\_type}!swap@{swap}}
+\index{swap@{swap}!linb::any::vtable\_type@{linb::any::vtable\_type}}
+\doxysubsubsection{\texorpdfstring{swap}{swap}}
+{\footnotesize\ttfamily void($\ast$ linb\+::any\+::vtable\+\_\+type\+::swap) (\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&lhs, \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&rhs) noexcept\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Exchanges the storage between lhs and rhs. 
+
+
+
+Referenced by \mbox{\hyperlink{classlinb_1_1any_a6bd50f2fd178deacf049be223f73646e}{linb\+::any\+::swap()}}.
+
+\mbox{\Hypertarget{structlinb_1_1any_1_1vtable__type_afec6f0cdf01ae24deaa532facbf4970a}\label{structlinb_1_1any_1_1vtable__type_afec6f0cdf01ae24deaa532facbf4970a}} 
+\index{linb::any::vtable\_type@{linb::any::vtable\_type}!type@{type}}
+\index{type@{type}!linb::any::vtable\_type@{linb::any::vtable\_type}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily const std\+::type\+\_\+info \&($\ast$ linb\+::any\+::vtable\+\_\+type\+::type) () noexcept\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+The type of the object this vtable is for. 
+
+
+
+Referenced by \mbox{\hyperlink{classlinb_1_1any_a418dda0f87b24c4eb127f42f760cde25}{linb\+::any\+::type()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

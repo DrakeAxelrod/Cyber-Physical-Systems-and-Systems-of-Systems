@@ -1,0 +1,309 @@
+\hypertarget{classpeg_1_1any}{}\doxysection{peg\+::any Class Reference}
+\label{classpeg_1_1any}\index{peg::any@{peg::any}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for peg\+::any\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1any_1_1holder}{holder}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1any_1_1placeholder}{placeholder}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpeg_1_1any_ae4f248efe2b9033369df4b52c52bdc57}{any}} ()
+\item 
+\mbox{\hyperlink{classpeg_1_1any_ae47ddefcbd855a4c31199d8b54f20c55}{any}} (const \mbox{\hyperlink{classpeg_1_1any}{any}} \&rhs)
+\item 
+\mbox{\hyperlink{classpeg_1_1any_a179351c16137d309aae2c0bc7b552021}{any}} (\mbox{\hyperlink{classpeg_1_1any}{any}} \&\&rhs)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classpeg_1_1any_a76d1fd40ddc8fc332257dbc0d3d98e31}{any}} (const T \&value)
+\item 
+\mbox{\hyperlink{classpeg_1_1any}{any}} \& \mbox{\hyperlink{classpeg_1_1any_abfed6c1f1ebd24fafa8b0c5a88ef618b}{operator=}} (const \mbox{\hyperlink{classpeg_1_1any}{any}} \&rhs)
+\item 
+\mbox{\hyperlink{classpeg_1_1any}{any}} \& \mbox{\hyperlink{classpeg_1_1any_a5b6d97a3421f59871b55b815bb17a515}{operator=}} (\mbox{\hyperlink{classpeg_1_1any}{any}} \&\&rhs)
+\item 
+\mbox{\hyperlink{classpeg_1_1any_a2f8c67d3d2b5cf62716935c8f6717f81}{$\sim$any}} ()
+\item 
+bool \mbox{\hyperlink{classpeg_1_1any_af6249b7698d4d97625d1cc792d1cd0e2}{is\+\_\+undefined}} () const
+\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T, \mbox{\hyperlink{classpeg_1_1any}{any}} $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ }\\T \& \mbox{\hyperlink{classpeg_1_1any_a3c739d692a9b39839cd42842361b9754}{get}} ()
+\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T, \mbox{\hyperlink{classpeg_1_1any}{any}} $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ }\\T \& \mbox{\hyperlink{classpeg_1_1any_a3c739d692a9b39839cd42842361b9754}{get}} ()
+\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T, \mbox{\hyperlink{classpeg_1_1any}{any}} $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ }\\const T \& \mbox{\hyperlink{classpeg_1_1any_a8116c98cdd2f99d1e90ba3b6c1b4e128}{get}} () const
+\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T, \mbox{\hyperlink{classpeg_1_1any}{any}} $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ }\\const \mbox{\hyperlink{classpeg_1_1any}{any}} \& \mbox{\hyperlink{classpeg_1_1any_af99daaa00a9d0f409ef9e80b92febbff}{get}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpeg_1_1any_1_1placeholder}{placeholder}} $\ast$ \mbox{\hyperlink{classpeg_1_1any_a95432eef87cf5f64baefc0ff2dbc0054}{clone}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpeg_1_1any_1_1placeholder}{placeholder}} $\ast$ \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpeg_1_1any_ae4f248efe2b9033369df4b52c52bdc57}\label{classpeg_1_1any_ae4f248efe2b9033369df4b52c52bdc57}} 
+\index{peg::any@{peg::any}!any@{any}}
+\index{any@{any}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{any()}{any()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily peg\+::any\+::any (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{528 : \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}}(\textcolor{keyword}{nullptr}) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1any_ae47ddefcbd855a4c31199d8b54f20c55}\label{classpeg_1_1any_ae47ddefcbd855a4c31199d8b54f20c55}} 
+\index{peg::any@{peg::any}!any@{any}}
+\index{any@{any}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{any()}{any()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily peg\+::any\+::any (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{530 : \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}}(rhs.clone()) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1any_a179351c16137d309aae2c0bc7b552021}\label{classpeg_1_1any_a179351c16137d309aae2c0bc7b552021}} 
+\index{peg::any@{peg::any}!any@{any}}
+\index{any@{any}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{any()}{any()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily peg\+::any\+::any (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{532                    : \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}}(rhs.content\_) \{}
+\DoxyCodeLine{533         rhs.content\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{534     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1any_a76d1fd40ddc8fc332257dbc0d3d98e31}\label{classpeg_1_1any_a76d1fd40ddc8fc332257dbc0d3d98e31}} 
+\index{peg::any@{peg::any}!any@{any}}
+\index{any@{any}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{any()}{any()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+peg\+::any\+::any (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{537 : \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}}(\textcolor{keyword}{new} holder<T>(value)) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1any_a2f8c67d3d2b5cf62716935c8f6717f81}\label{classpeg_1_1any_a2f8c67d3d2b5cf62716935c8f6717f81}} 
+\index{peg::any@{peg::any}!````~any@{$\sim$any}}
+\index{````~any@{$\sim$any}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{$\sim$any()}{~any()}}
+{\footnotesize\ttfamily peg\+::any\+::$\sim$any (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{560            \{}
+\DoxyCodeLine{561         \textcolor{keyword}{delete} \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}};}
+\DoxyCodeLine{562     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpeg_1_1any_a95432eef87cf5f64baefc0ff2dbc0054}\label{classpeg_1_1any_a95432eef87cf5f64baefc0ff2dbc0054}} 
+\index{peg::any@{peg::any}!clone@{clone}}
+\index{clone@{clone}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpeg_1_1any_1_1placeholder}{placeholder}} $\ast$ peg\+::any\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{629                                \{}
+\DoxyCodeLine{630         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}} ? \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}}-\/>\mbox{\hyperlink{structpeg_1_1any_1_1placeholder_ace9d32e9458ddf316a2a19132dd6ecd9}{clone}}() : \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{631     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structpeg_1_1any_1_1placeholder_ace9d32e9458ddf316a2a19132dd6ecd9}{peg\+::any\+::placeholder\+::clone()}}.
+
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1any_abfed6c1f1ebd24fafa8b0c5a88ef618b}{operator=()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classpeg_1_1any_a3c739d692a9b39839cd42842361b9754}\label{classpeg_1_1any_a3c739d692a9b39839cd42842361b9754}} 
+\index{peg::any@{peg::any}!get@{get}}
+\index{get@{get}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T, \mbox{\hyperlink{classpeg_1_1any}{any}} $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ \\
+T \& peg\+::any\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{572              \{}
+\DoxyCodeLine{573         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}}) \{}
+\DoxyCodeLine{574             \textcolor{keywordflow}{throw} std::bad\_cast();}
+\DoxyCodeLine{575         \}}
+\DoxyCodeLine{576         \textcolor{keyword}{auto} \mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}} = \textcolor{keyword}{dynamic\_cast<}holder<T>*\textcolor{keyword}{>}(\mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}});}
+\DoxyCodeLine{577         assert(\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}});}
+\DoxyCodeLine{578         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}}) \{}
+\DoxyCodeLine{579             \textcolor{keywordflow}{throw} std::bad\_cast();}
+\DoxyCodeLine{580         \}}
+\DoxyCodeLine{581         \textcolor{keywordflow}{return} \mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}}-\/>value\_;}
+\DoxyCodeLine{582     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}}.
+
+
+
+Referenced by \mbox{\hyperlink{structpeg_1_1SemanticValues_ab67736e20427be239008aaaafd33247a}{peg\+::\+Semantic\+Values\+::transform()}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classpeg_1_1any_a3c739d692a9b39839cd42842361b9754}\label{classpeg_1_1any_a3c739d692a9b39839cd42842361b9754}} 
+\index{peg::any@{peg::any}!get@{get}}
+\index{get@{get}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T, \mbox{\hyperlink{classpeg_1_1any}{any}} $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ \\
+T \& peg\+::any\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{588              \{}
+\DoxyCodeLine{589         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{590     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1any_a8116c98cdd2f99d1e90ba3b6c1b4e128}\label{classpeg_1_1any_a8116c98cdd2f99d1e90ba3b6c1b4e128}} 
+\index{peg::any@{peg::any}!get@{get}}
+\index{get@{get}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T, \mbox{\hyperlink{classpeg_1_1any}{any}} $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ \\
+const T \& peg\+::any\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{596                          \{}
+\DoxyCodeLine{597         assert(\mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}});}
+\DoxyCodeLine{598         \textcolor{keyword}{auto} \mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}} = \textcolor{keyword}{dynamic\_cast<}holder<T>*\textcolor{keyword}{>}(\mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}});}
+\DoxyCodeLine{599         assert(\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}});}
+\DoxyCodeLine{600         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}}) \{}
+\DoxyCodeLine{601             \textcolor{keywordflow}{throw} std::bad\_cast();}
+\DoxyCodeLine{602         \}}
+\DoxyCodeLine{603         \textcolor{keywordflow}{return} \mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}}-\/>value\_;}
+\DoxyCodeLine{604     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}}.
+
+\mbox{\Hypertarget{classpeg_1_1any_af99daaa00a9d0f409ef9e80b92febbff}\label{classpeg_1_1any_af99daaa00a9d0f409ef9e80b92febbff}} 
+\index{peg::any@{peg::any}!get@{get}}
+\index{get@{get}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T, \mbox{\hyperlink{classpeg_1_1any}{any}} $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr$>$ \\
+const \mbox{\hyperlink{classpeg_1_1any}{any}} \& peg\+::any\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{610                            \{}
+\DoxyCodeLine{611         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{612     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1any_af6249b7698d4d97625d1cc792d1cd0e2}\label{classpeg_1_1any_af6249b7698d4d97625d1cc792d1cd0e2}} 
+\index{peg::any@{peg::any}!is\_undefined@{is\_undefined}}
+\index{is\_undefined@{is\_undefined}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{is\_undefined()}{is\_undefined()}}
+{\footnotesize\ttfamily bool peg\+::any\+::is\+\_\+undefined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{564                               \{}
+\DoxyCodeLine{565         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}} == \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{566     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1any_a5b6d97a3421f59871b55b815bb17a515}\label{classpeg_1_1any_a5b6d97a3421f59871b55b815bb17a515}} 
+\index{peg::any@{peg::any}!operator=@{operator=}}
+\index{operator=@{operator=}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpeg_1_1any}{any}} \& peg\+::any\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{549                               \{}
+\DoxyCodeLine{550         \textcolor{keywordflow}{if} (\textcolor{keyword}{this} != \&rhs) \{}
+\DoxyCodeLine{551             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}}) \{}
+\DoxyCodeLine{552                 \textcolor{keyword}{delete} \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}};}
+\DoxyCodeLine{553             \}}
+\DoxyCodeLine{554             \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}} = rhs.content\_;}
+\DoxyCodeLine{555             rhs.content\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{556         \}}
+\DoxyCodeLine{557         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{558     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\+\_\+}}.
+
+\mbox{\Hypertarget{classpeg_1_1any_abfed6c1f1ebd24fafa8b0c5a88ef618b}\label{classpeg_1_1any_abfed6c1f1ebd24fafa8b0c5a88ef618b}} 
+\index{peg::any@{peg::any}!operator=@{operator=}}
+\index{operator=@{operator=}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpeg_1_1any}{any}} \& peg\+::any\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{539                                    \{}
+\DoxyCodeLine{540         \textcolor{keywordflow}{if} (\textcolor{keyword}{this} != \&rhs) \{}
+\DoxyCodeLine{541             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}}) \{}
+\DoxyCodeLine{542                 \textcolor{keyword}{delete} \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}};}
+\DoxyCodeLine{543             \}}
+\DoxyCodeLine{544             \mbox{\hyperlink{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}{content\_}} = rhs.\mbox{\hyperlink{structpeg_1_1any_1_1placeholder_ace9d32e9458ddf316a2a19132dd6ecd9}{clone}}();}
+\DoxyCodeLine{545         \}}
+\DoxyCodeLine{546         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{547     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classpeg_1_1any_a95432eef87cf5f64baefc0ff2dbc0054}{clone()}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}\label{classpeg_1_1any_afce55fb221c933ae1c616b3642c7c19c}} 
+\index{peg::any@{peg::any}!content\_@{content\_}}
+\index{content\_@{content\_}!peg::any@{peg::any}}
+\doxysubsubsection{\texorpdfstring{content\_}{content\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpeg_1_1any_1_1placeholder}{placeholder}}$\ast$ peg\+::any\+::content\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1any_a5b6d97a3421f59871b55b815bb17a515}{operator=()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

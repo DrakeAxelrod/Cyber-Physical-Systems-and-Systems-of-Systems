@@ -1,0 +1,307 @@
+\hypertarget{classopendlv_1_1system_1_1SignalStatusMessage}{}\doxysection{opendlv\+::system\+::Signal\+Status\+Message Class Reference}
+\label{classopendlv_1_1system_1_1SignalStatusMessage}\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+
+
+{\ttfamily \#include $<$opendlv-\/standard-\/message-\/set.\+hpp$>$}
+
+
+
+Collaboration diagram for opendlv\+::system\+::Signal\+Status\+Message\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a0a04be6ce33335015fa5041138cef246}{Signal\+Status\+Message}} ()=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a5dc0316137e5c5c7ab58a5111d823203}{Signal\+Status\+Message}} (const \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \& \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a2bcf93f159dd1c23e4282cee56a53bea}{operator=}} (const \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a0523c35639d307df3545fdd8a7f41e26}{Signal\+Status\+Message}} (\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \&\&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \& \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a1f1983fd785ab453e25be6e5f716dbd6}{operator=}} (\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \&\&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a6cdb56c6585a2b44a7509fc9e7bbdd94}{$\sim$\+Signal\+Status\+Message}} ()=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \& \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a79e67779c4da7a1771ef0de10309154e}{code}} (const int32\+\_\+t \&v) noexcept
+\item 
+int32\+\_\+t \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_af7a9ff322050e1f682cd33b458029cb0}{code}} () const noexcept
+\item 
+\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \& \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_aae7402ba74c0da629993eeacd7c5f673}{description}} (const std\+::string \&v) noexcept
+\item 
+std\+::string \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a0080a87faa2c7c00568727efcabeb1da}{description}} () const noexcept
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a179cfb2765eb32a8b577b479e564aab7}{accept}} (uint32\+\_\+t field\+Id, Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a04edccdbc03eb33a10df73f65571c390}{accept}} (Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a6b78abe8ac3372a90ed54cf477f70775}{accept}} (Pre\+Visitor \&\&pre\+Visit, Visitor \&\&visit, Post\+Visitor \&\&post\+Visit)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int32\+\_\+t \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a6616e723769225c99959b6cc010162ab}{ID}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a25caa28eafc3e614e1b9245d5f2f4572}{Short\+Name}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_ada856ca9f12dc3145147d1cc6ec2c48b}{Long\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a5498f93d4191ace27cf49e808c2ec973}{m\+\_\+code}} \{ 0 \}
+\item 
+std\+::string \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a77d092828e605ca30d916c642308da83}{m\+\_\+description}} \{ \char`\"{}\char`\"{}s \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a71e84a11f73a323773d85d734ec4d0de}{The\+Short\+Name}} = \char`\"{}Signal\+Status\+Message\char`\"{}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_af228a26c5f41ddb4e48bcbe07c45e07c}{The\+Long\+Name}} = \char`\"{}opendlv.\+system.\+Signal\+Status\+Message\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a0a04be6ce33335015fa5041138cef246}\label{classopendlv_1_1system_1_1SignalStatusMessage_a0a04be6ce33335015fa5041138cef246}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!SignalStatusMessage@{SignalStatusMessage}}
+\index{SignalStatusMessage@{SignalStatusMessage}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{SignalStatusMessage()}{SignalStatusMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily opendlv\+::system\+::\+Signal\+Status\+Message\+::\+Signal\+Status\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a5dc0316137e5c5c7ab58a5111d823203}\label{classopendlv_1_1system_1_1SignalStatusMessage_a5dc0316137e5c5c7ab58a5111d823203}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!SignalStatusMessage@{SignalStatusMessage}}
+\index{SignalStatusMessage@{SignalStatusMessage}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{SignalStatusMessage()}{SignalStatusMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily opendlv\+::system\+::\+Signal\+Status\+Message\+::\+Signal\+Status\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a0523c35639d307df3545fdd8a7f41e26}\label{classopendlv_1_1system_1_1SignalStatusMessage_a0523c35639d307df3545fdd8a7f41e26}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!SignalStatusMessage@{SignalStatusMessage}}
+\index{SignalStatusMessage@{SignalStatusMessage}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{SignalStatusMessage()}{SignalStatusMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily opendlv\+::system\+::\+Signal\+Status\+Message\+::\+Signal\+Status\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a6cdb56c6585a2b44a7509fc9e7bbdd94}\label{classopendlv_1_1system_1_1SignalStatusMessage_a6cdb56c6585a2b44a7509fc9e7bbdd94}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!````~SignalStatusMessage@{$\sim$SignalStatusMessage}}
+\index{````~SignalStatusMessage@{$\sim$SignalStatusMessage}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{$\sim$SignalStatusMessage()}{~SignalStatusMessage()}}
+{\footnotesize\ttfamily opendlv\+::system\+::\+Signal\+Status\+Message\+::$\sim$\+Signal\+Status\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a6b78abe8ac3372a90ed54cf477f70775}\label{classopendlv_1_1system_1_1SignalStatusMessage_a6b78abe8ac3372a90ed54cf477f70775}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!accept@{accept}}
+\index{accept@{accept}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ \\
+void opendlv\+::system\+::\+Signal\+Status\+Message\+::accept (\begin{DoxyParamCaption}\item[{Pre\+Visitor \&\&}]{pre\+Visit,  }\item[{Visitor \&\&}]{visit,  }\item[{Post\+Visitor \&\&}]{post\+Visit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8167                                                                                             \{}
+\DoxyCodeLine{8168             (void)visit; \textcolor{comment}{// Prevent warnings from empty messages.}}
+\DoxyCodeLine{8169             std::forward<PreVisitor>(preVisit)(\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a6616e723769225c99959b6cc010162ab}{ID}}(), \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a25caa28eafc3e614e1b9245d5f2f4572}{ShortName}}(), \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_ada856ca9f12dc3145147d1cc6ec2c48b}{LongName}}());}
+\DoxyCodeLine{8170             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(1, std::move(\textcolor{stringliteral}{"{}int32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}code"{}}s), \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a5498f93d4191ace27cf49e808c2ec973}{m\_code}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{8171             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(2, std::move(\textcolor{stringliteral}{"{}std::string"{}}s), std::move(\textcolor{stringliteral}{"{}description"{}}s), \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a77d092828e605ca30d916c642308da83}{m\_description}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{8172             std::forward<PostVisitor>(postVisit)();}
+\DoxyCodeLine{8173         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{do\+Triplet\+Forward\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a179cfb2765eb32a8b577b479e564aab7}\label{classopendlv_1_1system_1_1SignalStatusMessage_a179cfb2765eb32a8b577b479e564aab7}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!accept@{accept}}
+\index{accept@{accept}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void opendlv\+::system\+::\+Signal\+Status\+Message\+::accept (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Id,  }\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8143                                                                \{}
+\DoxyCodeLine{8144             (void)fieldId;}
+\DoxyCodeLine{8145             (void)visitor;}
+\DoxyCodeLine{8146 \textcolor{comment}{//            visitor.preVisit(ID(), ShortName(), LongName());}}
+\DoxyCodeLine{8147             \textcolor{keywordflow}{if} (1 == fieldId) \{}
+\DoxyCodeLine{8148                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}int32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}code"{}}s), \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a5498f93d4191ace27cf49e808c2ec973}{m\_code}}, visitor);}
+\DoxyCodeLine{8149                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{8150             \}}
+\DoxyCodeLine{8151             \textcolor{keywordflow}{if} (2 == fieldId) \{}
+\DoxyCodeLine{8152                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(2, std::move(\textcolor{stringliteral}{"{}std::string"{}}s), std::move(\textcolor{stringliteral}{"{}description"{}}s), \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a77d092828e605ca30d916c642308da83}{m\_description}}, visitor);}
+\DoxyCodeLine{8153                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{8154             \}}
+\DoxyCodeLine{8155 \textcolor{comment}{//            visitor.postVisit();}}
+\DoxyCodeLine{8156         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a04edccdbc03eb33a10df73f65571c390}\label{classopendlv_1_1system_1_1SignalStatusMessage_a04edccdbc03eb33a10df73f65571c390}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!accept@{accept}}
+\index{accept@{accept}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void opendlv\+::system\+::\+Signal\+Status\+Message\+::accept (\begin{DoxyParamCaption}\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8159                                              \{}
+\DoxyCodeLine{8160             visitor.preVisit(\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a6616e723769225c99959b6cc010162ab}{ID}}(), \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a25caa28eafc3e614e1b9245d5f2f4572}{ShortName}}(), \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_ada856ca9f12dc3145147d1cc6ec2c48b}{LongName}}());}
+\DoxyCodeLine{8161             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}int32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}code"{}}s), \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a5498f93d4191ace27cf49e808c2ec973}{m\_code}}, visitor);}
+\DoxyCodeLine{8162             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(2, std::move(\textcolor{stringliteral}{"{}std::string"{}}s), std::move(\textcolor{stringliteral}{"{}description"{}}s), \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a77d092828e605ca30d916c642308da83}{m\_description}}, visitor);}
+\DoxyCodeLine{8163             visitor.postVisit();}
+\DoxyCodeLine{8164         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_af7a9ff322050e1f682cd33b458029cb0}\label{classopendlv_1_1system_1_1SignalStatusMessage_af7a9ff322050e1f682cd33b458029cb0}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!code@{code}}
+\index{code@{code}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{code()}{code()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int32\+\_\+t opendlv\+::system\+::\+Signal\+Status\+Message\+::code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8130                                              \{}
+\DoxyCodeLine{8131             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a5498f93d4191ace27cf49e808c2ec973}{m\_code}};}
+\DoxyCodeLine{8132         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a79e67779c4da7a1771ef0de10309154e}\label{classopendlv_1_1system_1_1SignalStatusMessage_a79e67779c4da7a1771ef0de10309154e}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!code@{code}}
+\index{code@{code}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{code()}{code()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \& opendlv\+::system\+::\+Signal\+Status\+Message\+::code (\begin{DoxyParamCaption}\item[{const int32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8126                                                                     \{}
+\DoxyCodeLine{8127             \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a5498f93d4191ace27cf49e808c2ec973}{m\_code}} = v;}
+\DoxyCodeLine{8128             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{8129         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a0080a87faa2c7c00568727efcabeb1da}\label{classopendlv_1_1system_1_1SignalStatusMessage_a0080a87faa2c7c00568727efcabeb1da}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!description@{description}}
+\index{description@{description}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{description()}{description()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string opendlv\+::system\+::\+Signal\+Status\+Message\+::description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8137                                                       \{}
+\DoxyCodeLine{8138             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a77d092828e605ca30d916c642308da83}{m\_description}};}
+\DoxyCodeLine{8139         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_aae7402ba74c0da629993eeacd7c5f673}\label{classopendlv_1_1system_1_1SignalStatusMessage_aae7402ba74c0da629993eeacd7c5f673}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!description@{description}}
+\index{description@{description}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{description()}{description()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \& opendlv\+::system\+::\+Signal\+Status\+Message\+::description (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8133                                                                              \{}
+\DoxyCodeLine{8134             \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a77d092828e605ca30d916c642308da83}{m\_description}} = v;}
+\DoxyCodeLine{8135             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{8136         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a6616e723769225c99959b6cc010162ab}\label{classopendlv_1_1system_1_1SignalStatusMessage_a6616e723769225c99959b6cc010162ab}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!ID@{ID}}
+\index{ID@{ID}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{ID()}{ID()}}
+{\footnotesize\ttfamily static int32\+\_\+t opendlv\+::system\+::\+Signal\+Status\+Message\+::\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8107                                    \{}
+\DoxyCodeLine{8108             \textcolor{keywordflow}{return} 1100;}
+\DoxyCodeLine{8109         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_ada856ca9f12dc3145147d1cc6ec2c48b}\label{classopendlv_1_1system_1_1SignalStatusMessage_ada856ca9f12dc3145147d1cc6ec2c48b}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!LongName@{LongName}}
+\index{LongName@{LongName}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{LongName()}{LongName()}}
+{\footnotesize\ttfamily static const std\+::string opendlv\+::system\+::\+Signal\+Status\+Message\+::\+Long\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8113                                                  \{}
+\DoxyCodeLine{8114             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_af228a26c5f41ddb4e48bcbe07c45e07c}{TheLongName}};}
+\DoxyCodeLine{8115         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a2bcf93f159dd1c23e4282cee56a53bea}\label{classopendlv_1_1system_1_1SignalStatusMessage_a2bcf93f159dd1c23e4282cee56a53bea}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!operator=@{operator=}}
+\index{operator=@{operator=}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \& opendlv\+::system\+::\+Signal\+Status\+Message\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a1f1983fd785ab453e25be6e5f716dbd6}\label{classopendlv_1_1system_1_1SignalStatusMessage_a1f1983fd785ab453e25be6e5f716dbd6}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!operator=@{operator=}}
+\index{operator=@{operator=}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \& opendlv\+::system\+::\+Signal\+Status\+Message\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage}{Signal\+Status\+Message}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a25caa28eafc3e614e1b9245d5f2f4572}\label{classopendlv_1_1system_1_1SignalStatusMessage_a25caa28eafc3e614e1b9245d5f2f4572}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!ShortName@{ShortName}}
+\index{ShortName@{ShortName}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{ShortName()}{ShortName()}}
+{\footnotesize\ttfamily static const std\+::string opendlv\+::system\+::\+Signal\+Status\+Message\+::\+Short\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8110                                                   \{}
+\DoxyCodeLine{8111             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1system_1_1SignalStatusMessage_a71e84a11f73a323773d85d734ec4d0de}{TheShortName}};}
+\DoxyCodeLine{8112         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a5498f93d4191ace27cf49e808c2ec973}\label{classopendlv_1_1system_1_1SignalStatusMessage_a5498f93d4191ace27cf49e808c2ec973}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!m\_code@{m\_code}}
+\index{m\_code@{m\_code}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{m\_code}{m\_code}}
+{\footnotesize\ttfamily int32\+\_\+t opendlv\+::system\+::\+Signal\+Status\+Message\+::m\+\_\+code \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a77d092828e605ca30d916c642308da83}\label{classopendlv_1_1system_1_1SignalStatusMessage_a77d092828e605ca30d916c642308da83}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!m\_description@{m\_description}}
+\index{m\_description@{m\_description}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{m\_description}{m\_description}}
+{\footnotesize\ttfamily std\+::string opendlv\+::system\+::\+Signal\+Status\+Message\+::m\+\_\+description \{ \char`\"{}\char`\"{}s \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_af228a26c5f41ddb4e48bcbe07c45e07c}\label{classopendlv_1_1system_1_1SignalStatusMessage_af228a26c5f41ddb4e48bcbe07c45e07c}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!TheLongName@{TheLongName}}
+\index{TheLongName@{TheLongName}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{TheLongName}{TheLongName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ opendlv\+::system\+::\+Signal\+Status\+Message\+::\+The\+Long\+Name = \char`\"{}opendlv.\+system.\+Signal\+Status\+Message\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1system_1_1SignalStatusMessage_a71e84a11f73a323773d85d734ec4d0de}\label{classopendlv_1_1system_1_1SignalStatusMessage_a71e84a11f73a323773d85d734ec4d0de}} 
+\index{opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}!TheShortName@{TheShortName}}
+\index{TheShortName@{TheShortName}!opendlv::system::SignalStatusMessage@{opendlv::system::SignalStatusMessage}}
+\doxysubsubsection{\texorpdfstring{TheShortName}{TheShortName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ opendlv\+::system\+::\+Signal\+Status\+Message\+::\+The\+Short\+Name = \char`\"{}Signal\+Status\+Message\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{opendlv-standard-message-set_8hpp}{opendlv-\/standard-\/message-\/set.\+hpp}}\end{DoxyCompactItemize}

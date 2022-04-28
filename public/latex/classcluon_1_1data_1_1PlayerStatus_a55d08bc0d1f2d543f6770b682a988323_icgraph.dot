@@ -1,0 +1,18 @@
+digraph "cluon::data::PlayerStatus::state"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="cluon::data::PlayerStatus\l::state",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="cluon::Player::manageCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1Player.html#ac3ebe3e6290f4f0b46708f008a1e65a3",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="cluon::Player::Player",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1Player.html#a8d1bdbed62ad11eedc1962ea136def69",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="cluon::Player::rewind",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1Player.html#ad90a5653fa321958ecd740e7cff06cfa",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="cluon::Player::getNextEnvelope\lToBeReplayed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1Player.html#ad67d2152a3febb6ca11b23e116756dd3",tooltip=" "];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="cluon::Player::seekTo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1Player.html#af69486732eff5488498259b394c47ef4",tooltip=" "];
+}

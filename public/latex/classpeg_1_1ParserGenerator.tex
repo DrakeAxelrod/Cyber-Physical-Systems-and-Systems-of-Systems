@@ -1,0 +1,604 @@
+\hypertarget{classpeg_1_1ParserGenerator}{}\doxysection{peg\+::Parser\+Generator Class Reference}
+\label{classpeg_1_1ParserGenerator}\index{peg::ParserGenerator@{peg::ParserGenerator}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for peg\+::Parser\+Generator\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1ParserGenerator_1_1Data}{Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} $>$ \mbox{\hyperlink{classpeg_1_1ParserGenerator_a40ae3460cddd778c01ec5d36e123b87d}{parse}} (const char $\ast$s, size\+\_\+t n, const \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}} \&rules, std\+::string \&start, \mbox{\hyperlink{namespacepeg_a26a30ebb776ee513a118326c06f36da0}{Log}} \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}})
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} $>$ \mbox{\hyperlink{classpeg_1_1ParserGenerator_a8c0beca87a02424158a3d653eec362c8}{parse}} (const char $\ast$s, size\+\_\+t n, std\+::string \&start, \mbox{\hyperlink{namespacepeg_a26a30ebb776ee513a118326c06f36da0}{Log}} \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}})
+\item 
+static \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} \& \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}{grammar}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6d5a546be5e34286b2d5d06d6e2ce02d}{Parser\+Generator}} ()
+\item 
+void \mbox{\hyperlink{classpeg_1_1ParserGenerator_a543f2d8a9a40794cb4b82321774792a0}{make\+\_\+grammar}} ()
+\item 
+void \mbox{\hyperlink{classpeg_1_1ParserGenerator_afa7a9efe83e831fd48692dc871c5f3f9}{setup\+\_\+actions}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} $>$ \mbox{\hyperlink{classpeg_1_1ParserGenerator_a25d93dede0c55cca77a4fe8c33abecc5}{perform\+\_\+core}} (const char $\ast$s, size\+\_\+t n, const \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}} \&rules, std\+::string \&start, \mbox{\hyperlink{namespacepeg_a26a30ebb776ee513a118326c06f36da0}{Log}} \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classpeg_1_1ParserGenerator}{Parser\+Generator}} \& \mbox{\hyperlink{classpeg_1_1ParserGenerator_ae751606ec06e949cd1656b35a4c15057}{get\+\_\+instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpeg_1_1ParserGenerator_a6d5a546be5e34286b2d5d06d6e2ce02d}\label{classpeg_1_1ParserGenerator_a6d5a546be5e34286b2d5d06d6e2ce02d}} 
+\index{peg::ParserGenerator@{peg::ParserGenerator}!ParserGenerator@{ParserGenerator}}
+\index{ParserGenerator@{ParserGenerator}!peg::ParserGenerator@{peg::ParserGenerator}}
+\doxysubsubsection{\texorpdfstring{ParserGenerator()}{ParserGenerator()}}
+{\footnotesize\ttfamily peg\+::\+Parser\+Generator\+::\+Parser\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3020                       \{}
+\DoxyCodeLine{3021         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a543f2d8a9a40794cb4b82321774792a0}{make\_grammar}}();}
+\DoxyCodeLine{3022         \mbox{\hyperlink{classpeg_1_1ParserGenerator_afa7a9efe83e831fd48692dc871c5f3f9}{setup\_actions}}();}
+\DoxyCodeLine{3023     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpeg_1_1ParserGenerator_ae751606ec06e949cd1656b35a4c15057}\label{classpeg_1_1ParserGenerator_ae751606ec06e949cd1656b35a4c15057}} 
+\index{peg::ParserGenerator@{peg::ParserGenerator}!get\_instance@{get\_instance}}
+\index{get\_instance@{get\_instance}!peg::ParserGenerator@{peg::ParserGenerator}}
+\doxysubsubsection{\texorpdfstring{get\_instance()}{get\_instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classpeg_1_1ParserGenerator}{Parser\+Generator}} \& peg\+::\+Parser\+Generator\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3015                                            \{}
+\DoxyCodeLine{3016         \textcolor{keyword}{static} \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6d5a546be5e34286b2d5d06d6e2ce02d}{ParserGenerator}} instance;}
+\DoxyCodeLine{3017         \textcolor{keywordflow}{return} instance;}
+\DoxyCodeLine{3018     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}\label{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}} 
+\index{peg::ParserGenerator@{peg::ParserGenerator}!grammar@{grammar}}
+\index{grammar@{grammar}!peg::ParserGenerator@{peg::ParserGenerator}}
+\doxysubsubsection{\texorpdfstring{grammar()}{grammar()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} \& peg\+::\+Parser\+Generator\+::grammar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3010                               \{}
+\DoxyCodeLine{3011         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1ParserGenerator_ae751606ec06e949cd1656b35a4c15057}{get\_instance}}().\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}};}
+\DoxyCodeLine{3012     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classpeg_1_1ParserGenerator_a543f2d8a9a40794cb4b82321774792a0}\label{classpeg_1_1ParserGenerator_a543f2d8a9a40794cb4b82321774792a0}} 
+\index{peg::ParserGenerator@{peg::ParserGenerator}!make\_grammar@{make\_grammar}}
+\index{make\_grammar@{make\_grammar}!peg::ParserGenerator@{peg::ParserGenerator}}
+\doxysubsubsection{\texorpdfstring{make\_grammar()}{make\_grammar()}}
+{\footnotesize\ttfamily void peg\+::\+Parser\+Generator\+::make\+\_\+grammar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3033                         \{}
+\DoxyCodeLine{3034         \textcolor{comment}{// Setup PEG syntax parser}}
+\DoxyCodeLine{3035         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Grammar"{}}]    <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}], \mbox{\hyperlink{namespacepeg_a8ebc7c5678a9063f189796ff872193a2}{oom}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Definition"{}}]), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}EndOfFile"{}}]);}
+\DoxyCodeLine{3036         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Definition"{}}] <= \mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Ignore"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentCont"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Parameters"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}LEFTARROW"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Expression"{}}]),}
+\DoxyCodeLine{3037                                \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Ignore"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Identifier"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}LEFTARROW"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Expression"{}}]));}
+\DoxyCodeLine{3038 }
+\DoxyCodeLine{3039         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Expression"{}}] <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Sequence"{}}], \mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{zom}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}SLASH"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Sequence"{}}])));}
+\DoxyCodeLine{3040         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Sequence"{}}]   <= \mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{zom}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Prefix"{}}]);}
+\DoxyCodeLine{3041         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Prefix"{}}]     <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a864655bd71746d397f495ba0f791ef8b}{opt}}(\mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}AND"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}NOT"{}}])), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Suffix"{}}]);}
+\DoxyCodeLine{3042         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Suffix"{}}]     <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Primary"{}}], \mbox{\hyperlink{namespacepeg_a864655bd71746d397f495ba0f791ef8b}{opt}}(\mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}QUESTION"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}STAR"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}PLUS"{}}])));}
+\DoxyCodeLine{3043         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Primary"{}}]    <= \mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Ignore"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentCont"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Arguments"{}}], \mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{npd}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}LEFTARROW"{}}])),}
+\DoxyCodeLine{3044                                \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Ignore"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Identifier"{}}], \mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{npd}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a864655bd71746d397f495ba0f791ef8b}{opt}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Parameters"{}}]), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}LEFTARROW"{}}]))),}
+\DoxyCodeLine{3045                                \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}OPEN"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Expression"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}CLOSE"{}}]),}
+\DoxyCodeLine{3046                                \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}BeginTok"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Expression"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}EndTok"{}}]),}
+\DoxyCodeLine{3047                                \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}BeginCapScope"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Expression"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}EndCapScope"{}}]),}
+\DoxyCodeLine{3048                                \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}BeginCap"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Expression"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}EndCap"{}}]),}
+\DoxyCodeLine{3049                                \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}BackRef"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}LiteralI"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Literal"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Class"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}DOT"{}}]);}
+\DoxyCodeLine{3050 }
+\DoxyCodeLine{3051         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Identifier"{}}] <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentCont"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3052         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentCont"{}}]  <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentStart"{}}], \mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{zom}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentRest"{}}]));}
+\DoxyCodeLine{3053 }
+\DoxyCodeLine{3054         \textcolor{keyword}{const} \textcolor{keyword}{static} std::vector<std::pair<char32\_t, char32\_t>> range = \{\{ 0x0080, 0xFFFF \}\};}
+\DoxyCodeLine{3055         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentStart"{}}] <= \mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}a-\/zA-\/Z\_\%"{}}), \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(range));}
+\DoxyCodeLine{3056 }
+\DoxyCodeLine{3057         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentRest"{}}]  <= \mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentStart"{}}], \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}0-\/9"{}}));}
+\DoxyCodeLine{3058 }
+\DoxyCodeLine{3059         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}LiteralI"{}}]   <= \mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}'"{}}), \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}(\mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{zom}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{npd}}(\mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}'"{}})), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Char"{}}]))), \mbox{\hyperlink{namespacepeg_a3516b1cb4146d4f6c011711a27fcbee5}{lit}}(\textcolor{stringliteral}{"{}'i"{}}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]),}
+\DoxyCodeLine{3060                                \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}\(\backslash\)"{}"{}}), \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}(\mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{zom}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{npd}}(\mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}\(\backslash\)"{}"{}})), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Char"{}}]))), \mbox{\hyperlink{namespacepeg_a3516b1cb4146d4f6c011711a27fcbee5}{lit}}(\textcolor{stringliteral}{"{}\(\backslash\)"{}i"{}}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]));}
+\DoxyCodeLine{3061 }
+\DoxyCodeLine{3062         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Literal"{}}]    <= \mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}'"{}}), \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}(\mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{zom}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{npd}}(\mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}'"{}})), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Char"{}}]))), \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}'"{}}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]),}
+\DoxyCodeLine{3063                                \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}\(\backslash\)"{}"{}}), \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}(\mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{zom}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{npd}}(\mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}\(\backslash\)"{}"{}})), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Char"{}}]))), \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}\(\backslash\)"{}"{}}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]));}
+\DoxyCodeLine{3064 }
+\DoxyCodeLine{3065         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Class"{}}]      <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'['}), \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}(\mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{zom}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{npd}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{']'})), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Range"{}}]))), \mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{']'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3066 }
+\DoxyCodeLine{3067         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Range"{}}]      <= \mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Char"{}}], \mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'-\/'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Char"{}}]), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Char"{}}]);}
+\DoxyCodeLine{3068         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Char"{}}]       <= \mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}), \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}nrt'\(\backslash\)"{}[]\(\backslash\)\(\backslash\)"{}})),}
+\DoxyCodeLine{3069                                \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}), \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}0-\/3"{}}), \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}0-\/7"{}}), \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}0-\/7"{}})),}
+\DoxyCodeLine{3070                                \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}), \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}0-\/7"{}}), \mbox{\hyperlink{namespacepeg_a864655bd71746d397f495ba0f791ef8b}{opt}}(\mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}0-\/7"{}}))),}
+\DoxyCodeLine{3071                                \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a3516b1cb4146d4f6c011711a27fcbee5}{lit}}(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)x"{}}), \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}0-\/9a-\/fA-\/F"{}}), \mbox{\hyperlink{namespacepeg_a864655bd71746d397f495ba0f791ef8b}{opt}}(\mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}0-\/9a-\/fA-\/F"{}}))),}
+\DoxyCodeLine{3072                                \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a3516b1cb4146d4f6c011711a27fcbee5}{lit}}(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)u"{}}), \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}0-\/9a-\/fA-\/F"{}}), \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}0-\/9a-\/fA-\/F"{}}), \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}0-\/9a-\/fA-\/F"{}}), \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(\textcolor{stringliteral}{"{}0-\/9a-\/fA-\/F"{}})),}
+\DoxyCodeLine{3073                                \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{npd}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'\(\backslash\)\(\backslash\)'})), \mbox{\hyperlink{namespacepeg_a7108dfb0448e74232e3ef7a348c2cd09}{dot}}()));}
+\DoxyCodeLine{3074 }
+\DoxyCodeLine{3075 \textcolor{preprocessor}{\#if defined(PEGLIB\_NO\_UNICODE\_CHARS)}}
+\DoxyCodeLine{3076         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}LEFTARROW"{}}]  <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a3516b1cb4146d4f6c011711a27fcbee5}{lit}}(\textcolor{stringliteral}{"{}<-\/"{}}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3077 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{3078         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}LEFTARROW"{}}]  <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{namespacepeg_a3516b1cb4146d4f6c011711a27fcbee5}{lit}}(\textcolor{stringliteral}{"{}<-\/"{}}), \mbox{\hyperlink{namespacepeg_a3516b1cb4146d4f6c011711a27fcbee5}{lit}}(u8\textcolor{stringliteral}{"{}←"{}})), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3079 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{3080         \string~g[\textcolor{stringliteral}{"{}SLASH"{}}]     <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'/'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3081         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}AND"{}}]        <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'\&'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3082         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}NOT"{}}]        <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'!'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3083         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}QUESTION"{}}]   <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'?'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3084         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}STAR"{}}]       <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'*'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3085         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}PLUS"{}}]       <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'+'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3086         \string~g[\textcolor{stringliteral}{"{}OPEN"{}}]      <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'('}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3087         \string~g[\textcolor{stringliteral}{"{}CLOSE"{}}]     <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{')'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3088         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}DOT"{}}]        <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'.'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3089 }
+\DoxyCodeLine{3090         \string~g[\textcolor{stringliteral}{"{}Spacing"{}}]   <= \mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{zom}}(\mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Space"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Comment"{}}]));}
+\DoxyCodeLine{3091         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Comment"{}}]    <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'\#'}), \mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{zom}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{npd}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}EndOfLine"{}}]), \mbox{\hyperlink{namespacepeg_a7108dfb0448e74232e3ef7a348c2cd09}{dot}}())), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}EndOfLine"{}}]);}
+\DoxyCodeLine{3092         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Space"{}}]      <= \mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{' '}), \mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'\(\backslash\)t'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}EndOfLine"{}}]);}
+\DoxyCodeLine{3093         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}EndOfLine"{}}]  <= \mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{cho}}(\mbox{\hyperlink{namespacepeg_a3516b1cb4146d4f6c011711a27fcbee5}{lit}}(\textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}}), \mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'\(\backslash\)n'}), \mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'\(\backslash\)r'}));}
+\DoxyCodeLine{3094         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}EndOfFile"{}}]  <= \mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{npd}}(\mbox{\hyperlink{namespacepeg_a7108dfb0448e74232e3ef7a348c2cd09}{dot}}());}
+\DoxyCodeLine{3095 }
+\DoxyCodeLine{3096         \string~g[\textcolor{stringliteral}{"{}BeginTok"{}}]  <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'<'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3097         \string~g[\textcolor{stringliteral}{"{}EndTok"{}}]    <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'>'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3098 }
+\DoxyCodeLine{3099         \string~g[\textcolor{stringliteral}{"{}BeginCapScope"{}}] <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'\$'}), \mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'('}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3100         \string~g[\textcolor{stringliteral}{"{}EndCapScope"{}}]   <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{')'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3101 }
+\DoxyCodeLine{3102         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}BeginCap"{}}]   <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'\$'}), \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentCont"{}}]), \mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'<'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3103         \string~g[\textcolor{stringliteral}{"{}EndCap"{}}]    <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'>'}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3104 }
+\DoxyCodeLine{3105         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}BackRef"{}}]    <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'\$'}), \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentCont"{}}]), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3106 }
+\DoxyCodeLine{3107         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IGNORE"{}}]     <= \mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{'\string~'});}
+\DoxyCodeLine{3108 }
+\DoxyCodeLine{3109         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Ignore"{}}]     <= \mbox{\hyperlink{namespacepeg_a864655bd71746d397f495ba0f791ef8b}{opt}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IGNORE"{}}]);}
+\DoxyCodeLine{3110         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Parameters"{}}] <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}OPEN"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Identifier"{}}], \mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{zom}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}COMMA"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Identifier"{}}])), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}CLOSE"{}}]);}
+\DoxyCodeLine{3111         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Arguments"{}}]  <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}OPEN"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Expression"{}}], \mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{zom}}(\mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}COMMA"{}}], \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Expression"{}}])), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}CLOSE"{}}]);}
+\DoxyCodeLine{3112         \string~g[\textcolor{stringliteral}{"{}COMMA"{}}]     <= \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{seq}}(\mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{chr}}(\textcolor{charliteral}{','}), \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Spacing"{}}]);}
+\DoxyCodeLine{3113 }
+\DoxyCodeLine{3114 }
+\DoxyCodeLine{3115         \textcolor{comment}{// Set definition names}}
+\DoxyCodeLine{3116         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& x: \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}) \{}
+\DoxyCodeLine{3117             x.second.name = x.first;}
+\DoxyCodeLine{3118         \}}
+\DoxyCodeLine{3119     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{peg\+::cho()}}, \mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{peg\+::chr()}}, \mbox{\hyperlink{namespacepeg_a524348ca73e1cb69d78d1884782fa4df}{peg\+::cls()}}, \mbox{\hyperlink{namespacepeg_a7108dfb0448e74232e3ef7a348c2cd09}{peg\+::dot()}}, \mbox{\hyperlink{namespacepeg_a3516b1cb4146d4f6c011711a27fcbee5}{peg\+::lit()}}, \mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{peg\+::npd()}}, \mbox{\hyperlink{namespacepeg_a8ebc7c5678a9063f189796ff872193a2}{peg\+::oom()}}, \mbox{\hyperlink{namespacepeg_a864655bd71746d397f495ba0f791ef8b}{peg\+::opt()}}, \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{peg\+::seq()}}, \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{peg\+::tok()}}, and \mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{peg\+::zom()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classpeg_1_1ParserGenerator_a40ae3460cddd778c01ec5d36e123b87d}\label{classpeg_1_1ParserGenerator_a40ae3460cddd778c01ec5d36e123b87d}} 
+\index{peg::ParserGenerator@{peg::ParserGenerator}!parse@{parse}}
+\index{parse@{parse}!peg::ParserGenerator@{peg::ParserGenerator}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} $>$ peg\+::\+Parser\+Generator\+::parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{const \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}} \&}]{rules,  }\item[{std\+::string \&}]{start,  }\item[{\mbox{\hyperlink{namespacepeg_a26a30ebb776ee513a118326c06f36da0}{Log}}}]{log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2995     \{}
+\DoxyCodeLine{2996         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1ParserGenerator_ae751606ec06e949cd1656b35a4c15057}{get\_instance}}().\mbox{\hyperlink{classpeg_1_1ParserGenerator_a25d93dede0c55cca77a4fe8c33abecc5}{perform\_core}}(s, n, rules, start, \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}});}
+\DoxyCodeLine{2997     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}.
+
+\mbox{\Hypertarget{classpeg_1_1ParserGenerator_a8c0beca87a02424158a3d653eec362c8}\label{classpeg_1_1ParserGenerator_a8c0beca87a02424158a3d653eec362c8}} 
+\index{peg::ParserGenerator@{peg::ParserGenerator}!parse@{parse}}
+\index{parse@{parse}!peg::ParserGenerator@{peg::ParserGenerator}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} $>$ peg\+::\+Parser\+Generator\+::parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{std\+::string \&}]{start,  }\item[{\mbox{\hyperlink{namespacepeg_a26a30ebb776ee513a118326c06f36da0}{Log}}}]{log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3004     \{}
+\DoxyCodeLine{3005         \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}} dummy;}
+\DoxyCodeLine{3006         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1ParserGenerator_a40ae3460cddd778c01ec5d36e123b87d}{parse}}(s, n, dummy, start, \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}});}
+\DoxyCodeLine{3007     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}.
+
+\mbox{\Hypertarget{classpeg_1_1ParserGenerator_a25d93dede0c55cca77a4fe8c33abecc5}\label{classpeg_1_1ParserGenerator_a25d93dede0c55cca77a4fe8c33abecc5}} 
+\index{peg::ParserGenerator@{peg::ParserGenerator}!perform\_core@{perform\_core}}
+\index{perform\_core@{perform\_core}!peg::ParserGenerator@{peg::ParserGenerator}}
+\doxysubsubsection{\texorpdfstring{perform\_core()}{perform\_core()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} $>$ peg\+::\+Parser\+Generator\+::perform\+\_\+core (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{const \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{Rules}} \&}]{rules,  }\item[{std\+::string \&}]{start,  }\item[{\mbox{\hyperlink{namespacepeg_a26a30ebb776ee513a118326c06f36da0}{Log}}}]{log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3333     \{}
+\DoxyCodeLine{3334         Data data;}
+\DoxyCodeLine{3335         any dt = \&data;}
+\DoxyCodeLine{3336         \textcolor{keyword}{auto} r = \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Grammar"{}}].parse(s, n, dt);}
+\DoxyCodeLine{3337 }
+\DoxyCodeLine{3338         \textcolor{keywordflow}{if} (!r.ret) \{}
+\DoxyCodeLine{3339             \textcolor{keywordflow}{if} (\mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}) \{}
+\DoxyCodeLine{3340                 \textcolor{keywordflow}{if} (r.message\_pos) \{}
+\DoxyCodeLine{3341                     \textcolor{keyword}{auto} line = \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{line\_info}}(s, r.message\_pos);}
+\DoxyCodeLine{3342                     \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}(line.first, line.second, r.message);}
+\DoxyCodeLine{3343                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{3344                     \textcolor{keyword}{auto} line = \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{line\_info}}(s, r.error\_pos);}
+\DoxyCodeLine{3345                     \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}(line.first, line.second, \textcolor{stringliteral}{"{}syntax error"{}});}
+\DoxyCodeLine{3346                 \}}
+\DoxyCodeLine{3347             \}}
+\DoxyCodeLine{3348             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{3349         \}}
+\DoxyCodeLine{3350 }
+\DoxyCodeLine{3351         \textcolor{keyword}{auto}\& \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}{grammar}} = *data.grammar;}
+\DoxyCodeLine{3352 }
+\DoxyCodeLine{3353         \textcolor{comment}{// User provided rules}}
+\DoxyCodeLine{3354         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& x: rules) \{}
+\DoxyCodeLine{3355             \textcolor{keyword}{auto} name = x.first;}
+\DoxyCodeLine{3356             \textcolor{keywordtype}{bool} ignore = \textcolor{keyword}{false};}
+\DoxyCodeLine{3357             \textcolor{keywordflow}{if} (!name.empty() \&\& name[0] == \textcolor{charliteral}{'\string~'}) \{}
+\DoxyCodeLine{3358                 ignore = \textcolor{keyword}{true};}
+\DoxyCodeLine{3359                 name.erase(0, 1);}
+\DoxyCodeLine{3360             \}}
+\DoxyCodeLine{3361             \textcolor{keywordflow}{if} (!name.empty()) \{}
+\DoxyCodeLine{3362                 \textcolor{keyword}{auto}\& rule = \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}{grammar}}[name];}
+\DoxyCodeLine{3363                 rule <= x.second;}
+\DoxyCodeLine{3364                 rule.name = name;}
+\DoxyCodeLine{3365                 rule.ignoreSemanticValue = ignore;}
+\DoxyCodeLine{3366             \}}
+\DoxyCodeLine{3367         \}}
+\DoxyCodeLine{3368 }
+\DoxyCodeLine{3369         \textcolor{comment}{// Check duplicated definitions}}
+\DoxyCodeLine{3370         \textcolor{keywordtype}{bool} ret = data.duplicates.empty();}
+\DoxyCodeLine{3371 }
+\DoxyCodeLine{3372         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& x: data.duplicates) \{}
+\DoxyCodeLine{3373             \textcolor{keywordflow}{if} (\mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}) \{}
+\DoxyCodeLine{3374                 \textcolor{keyword}{const} \textcolor{keyword}{auto}\& name = x.first;}
+\DoxyCodeLine{3375                 \textcolor{keyword}{auto} ptr = x.second;}
+\DoxyCodeLine{3376                 \textcolor{keyword}{auto} line = \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{line\_info}}(s, ptr);}
+\DoxyCodeLine{3377                 \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}(line.first, line.second, \textcolor{stringliteral}{"{}'"{}} + name + \textcolor{stringliteral}{"{}' is already defined."{}});}
+\DoxyCodeLine{3378             \}}
+\DoxyCodeLine{3379         \}}
+\DoxyCodeLine{3380 }
+\DoxyCodeLine{3381         \textcolor{comment}{// Check missing definitions}}
+\DoxyCodeLine{3382         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& x: \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}{grammar}}) \{}
+\DoxyCodeLine{3383             \textcolor{keyword}{auto}\& rule = x.second;}
+\DoxyCodeLine{3384 }
+\DoxyCodeLine{3385             ReferenceChecker vis(*data.grammar, rule.params);}
+\DoxyCodeLine{3386             rule.accept(vis);}
+\DoxyCodeLine{3387             \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& y: vis.error\_s) \{}
+\DoxyCodeLine{3388                 \textcolor{keyword}{const} \textcolor{keyword}{auto}\& name = y.first;}
+\DoxyCodeLine{3389                 \textcolor{keyword}{const} \textcolor{keyword}{auto} ptr = y.second;}
+\DoxyCodeLine{3390                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}) \{}
+\DoxyCodeLine{3391                     \textcolor{keyword}{auto} line = \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{line\_info}}(s, ptr);}
+\DoxyCodeLine{3392                     \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}(line.first, line.second, vis.error\_message[name]);}
+\DoxyCodeLine{3393                 \}}
+\DoxyCodeLine{3394                 ret = \textcolor{keyword}{false};}
+\DoxyCodeLine{3395             \}}
+\DoxyCodeLine{3396         \}}
+\DoxyCodeLine{3397 }
+\DoxyCodeLine{3398         \textcolor{keywordflow}{if} (!ret) \{}
+\DoxyCodeLine{3399             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{3400         \}}
+\DoxyCodeLine{3401 }
+\DoxyCodeLine{3402         \textcolor{comment}{// Link references}}
+\DoxyCodeLine{3403         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& x: \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}{grammar}}) \{}
+\DoxyCodeLine{3404             \textcolor{keyword}{auto}\& rule = x.second;}
+\DoxyCodeLine{3405             LinkReferences vis(*data.grammar, rule.params);}
+\DoxyCodeLine{3406             rule.accept(vis);}
+\DoxyCodeLine{3407         \}}
+\DoxyCodeLine{3408 }
+\DoxyCodeLine{3409         \textcolor{comment}{// Check left recursion}}
+\DoxyCodeLine{3410         ret = \textcolor{keyword}{true};}
+\DoxyCodeLine{3411 }
+\DoxyCodeLine{3412         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& x: \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}{grammar}}) \{}
+\DoxyCodeLine{3413             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& name = x.first;}
+\DoxyCodeLine{3414             \textcolor{keyword}{auto}\& rule = x.second;}
+\DoxyCodeLine{3415 }
+\DoxyCodeLine{3416             DetectLeftRecursion vis(name);}
+\DoxyCodeLine{3417             rule.accept(vis);}
+\DoxyCodeLine{3418             \textcolor{keywordflow}{if} (vis.error\_s) \{}
+\DoxyCodeLine{3419                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}) \{}
+\DoxyCodeLine{3420                     \textcolor{keyword}{auto} line = \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{line\_info}}(s, vis.error\_s);}
+\DoxyCodeLine{3421                     \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}(line.first, line.second, \textcolor{stringliteral}{"{}'"{}} + name + \textcolor{stringliteral}{"{}' is left recursive."{}});}
+\DoxyCodeLine{3422                 \}}
+\DoxyCodeLine{3423                 ret = \textcolor{keyword}{false};;}
+\DoxyCodeLine{3424             \}}
+\DoxyCodeLine{3425         \}}
+\DoxyCodeLine{3426 }
+\DoxyCodeLine{3427         \textcolor{keywordflow}{if} (!ret) \{}
+\DoxyCodeLine{3428             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{3429         \}}
+\DoxyCodeLine{3430 }
+\DoxyCodeLine{3431         \textcolor{comment}{// Set root definition}}
+\DoxyCodeLine{3432         start = data.start;}
+\DoxyCodeLine{3433 }
+\DoxyCodeLine{3434         \textcolor{comment}{// Automatic whitespace skipping}}
+\DoxyCodeLine{3435         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}{grammar}}.count(\mbox{\hyperlink{namespacepeg_a5ffccf4db0cc93c828358908146917c2}{WHITESPACE\_DEFINITION\_NAME}})) \{}
+\DoxyCodeLine{3436             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& x: \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}{grammar}}) \{}
+\DoxyCodeLine{3437                 \textcolor{keyword}{auto}\& rule = x.second;}
+\DoxyCodeLine{3438                 \textcolor{keyword}{auto} ope = rule.get\_core\_operator();}
+\DoxyCodeLine{3439                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{structpeg_1_1IsLiteralToken_ae68025d2c11e7c9815c8d07333ba8ba3}{IsLiteralToken::check}}(*ope)) \{}
+\DoxyCodeLine{3440                     rule <= \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}(ope);}
+\DoxyCodeLine{3441                 \}}
+\DoxyCodeLine{3442             \}}
+\DoxyCodeLine{3443 }
+\DoxyCodeLine{3444             \textcolor{keyword}{auto}\& rule = (*data.grammar)[start];}
+\DoxyCodeLine{3445             rule.whitespaceOpe = \mbox{\hyperlink{namespacepeg_a36efa719a391921ca76025dde8a3e6a4}{wsp}}((*data.grammar)[\mbox{\hyperlink{namespacepeg_a5ffccf4db0cc93c828358908146917c2}{WHITESPACE\_DEFINITION\_NAME}}].get\_core\_operator());}
+\DoxyCodeLine{3446         \}}
+\DoxyCodeLine{3447 }
+\DoxyCodeLine{3448         \textcolor{comment}{// Word expression}}
+\DoxyCodeLine{3449         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}{grammar}}.count(\mbox{\hyperlink{namespacepeg_a05fef7118467bf5732c5a658a41bb2aa}{WORD\_DEFINITION\_NAME}})) \{}
+\DoxyCodeLine{3450             \textcolor{keyword}{auto}\& rule = (*data.grammar)[start];}
+\DoxyCodeLine{3451             rule.wordOpe = (*data.grammar)[\mbox{\hyperlink{namespacepeg_a05fef7118467bf5732c5a658a41bb2aa}{WORD\_DEFINITION\_NAME}}].get\_core\_operator();}
+\DoxyCodeLine{3452         \}}
+\DoxyCodeLine{3453 }
+\DoxyCodeLine{3454         \textcolor{keywordflow}{return} data.grammar;}
+\DoxyCodeLine{3455     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structpeg_1_1ParserGenerator_1_1Data_a2eb2b7ddb4329955f935434548c0033c}{peg\+::\+Parser\+Generator\+::\+Data\+::duplicates}}, \mbox{\hyperlink{structpeg_1_1ReferenceChecker_a95ee13f45741e1e4fbf219c42d81020b}{peg\+::\+Reference\+Checker\+::error\+\_\+message}}, \mbox{\hyperlink{structpeg_1_1DetectLeftRecursion_a4ae53f4b56984c63fa746000154fd02f}{peg\+::\+Detect\+Left\+Recursion\+::error\+\_\+s}}, \mbox{\hyperlink{structpeg_1_1ReferenceChecker_a67985b8727ed2d04091fe1a17a02ab27}{peg\+::\+Reference\+Checker\+::error\+\_\+s}}, \mbox{\hyperlink{structpeg_1_1ParserGenerator_1_1Data_ad8b0cc6c62f963243da4319e542e1266}{peg\+::\+Parser\+Generator\+::\+Data\+::grammar}}, \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{peg\+::line\+\_\+info()}}, \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}, \mbox{\hyperlink{structpeg_1_1ParserGenerator_1_1Data_a33c554bdbd4fd9c7f6a9d10c95139cef}{peg\+::\+Parser\+Generator\+::\+Data\+::start}}, \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{peg\+::tok()}}, \mbox{\hyperlink{namespacepeg_a5ffccf4db0cc93c828358908146917c2}{peg\+::\+WHITESPACE\+\_\+\+DEFINITION\+\_\+\+NAME}}, \mbox{\hyperlink{namespacepeg_a05fef7118467bf5732c5a658a41bb2aa}{peg\+::\+WORD\+\_\+\+DEFINITION\+\_\+\+NAME}}, and \mbox{\hyperlink{namespacepeg_a36efa719a391921ca76025dde8a3e6a4}{peg\+::wsp()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classpeg_1_1ParserGenerator_afa7a9efe83e831fd48692dc871c5f3f9}\label{classpeg_1_1ParserGenerator_afa7a9efe83e831fd48692dc871c5f3f9}} 
+\index{peg::ParserGenerator@{peg::ParserGenerator}!setup\_actions@{setup\_actions}}
+\index{setup\_actions@{setup\_actions}!peg::ParserGenerator@{peg::ParserGenerator}}
+\doxysubsubsection{\texorpdfstring{setup\_actions()}{setup\_actions()}}
+{\footnotesize\ttfamily void peg\+::\+Parser\+Generator\+::setup\+\_\+actions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3121                          \{}
+\DoxyCodeLine{3122         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Definition"{}}] = [\&](\textcolor{keyword}{const} SemanticValues\& sv, any\& dt) \{}
+\DoxyCodeLine{3123             \textcolor{keyword}{auto} is\_macro = sv.choice() == 0;}
+\DoxyCodeLine{3124             \textcolor{keyword}{auto} ignore = sv[0].get<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{3125             \textcolor{keyword}{auto} name = sv[1].get<std::string>();}
+\DoxyCodeLine{3126 }
+\DoxyCodeLine{3127             std::vector<std::string> params;}
+\DoxyCodeLine{3128             std::shared\_ptr<Ope> ope;}
+\DoxyCodeLine{3129             \textcolor{keywordflow}{if} (is\_macro) \{}
+\DoxyCodeLine{3130                 params = sv[2].get<std::vector<std::string>>();}
+\DoxyCodeLine{3131                 ope = sv[4].get<std::shared\_ptr<Ope>>();}
+\DoxyCodeLine{3132             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{3133                 ope = sv[3].get<std::shared\_ptr<Ope>>();}
+\DoxyCodeLine{3134             \}}
+\DoxyCodeLine{3135 }
+\DoxyCodeLine{3136             Data\& data = *dt.get<Data*>();}
+\DoxyCodeLine{3137 }
+\DoxyCodeLine{3138             \textcolor{keyword}{auto}\& \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}{grammar}} = *data.grammar;}
+\DoxyCodeLine{3139             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}{grammar}}.count(name)) \{}
+\DoxyCodeLine{3140                 \textcolor{keyword}{auto}\& rule = \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6e48b743ffb4d9d3d67d47ae0874d09f}{grammar}}[name];}
+\DoxyCodeLine{3141                 rule <= ope;}
+\DoxyCodeLine{3142                 rule.name = name;}
+\DoxyCodeLine{3143                 rule.ignoreSemanticValue = ignore;}
+\DoxyCodeLine{3144                 rule.is\_macro = is\_macro;}
+\DoxyCodeLine{3145                 rule.params = params;}
+\DoxyCodeLine{3146 }
+\DoxyCodeLine{3147                 \textcolor{keywordflow}{if} (data.start.empty()) \{}
+\DoxyCodeLine{3148                     data.start = name;}
+\DoxyCodeLine{3149                 \}}
+\DoxyCodeLine{3150             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{3151                 data.duplicates.emplace\_back(name, sv.c\_str());}
+\DoxyCodeLine{3152             \}}
+\DoxyCodeLine{3153         \};}
+\DoxyCodeLine{3154 }
+\DoxyCodeLine{3155         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Expression"{}}] = [\&](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3156             \textcolor{keywordflow}{if} (sv.size() == 1) \{}
+\DoxyCodeLine{3157                 \textcolor{keywordflow}{return} sv[0].get<std::shared\_ptr<Ope>>();}
+\DoxyCodeLine{3158             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{3159                 std::vector<std::shared\_ptr<Ope>> opes;}
+\DoxyCodeLine{3160                 \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i = 0u; i < sv.size(); i++) \{}
+\DoxyCodeLine{3161                     opes.emplace\_back(sv[i].get<std::shared\_ptr<Ope>>());}
+\DoxyCodeLine{3162                 \}}
+\DoxyCodeLine{3163                 \textcolor{keyword}{const} std::shared\_ptr<Ope> ope = std::make\_shared<PrioritizedChoice>(opes);}
+\DoxyCodeLine{3164                 \textcolor{keywordflow}{return} ope;}
+\DoxyCodeLine{3165             \}}
+\DoxyCodeLine{3166         \};}
+\DoxyCodeLine{3167 }
+\DoxyCodeLine{3168         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Sequence"{}}] = [\&](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3169             \textcolor{keywordflow}{if} (sv.size() == 1) \{}
+\DoxyCodeLine{3170                 \textcolor{keywordflow}{return} sv[0].get<std::shared\_ptr<Ope>>();}
+\DoxyCodeLine{3171             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{3172                 std::vector<std::shared\_ptr<Ope>> opes;}
+\DoxyCodeLine{3173                 \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& x: sv) \{}
+\DoxyCodeLine{3174                     opes.emplace\_back(x.get<std::shared\_ptr<Ope>>());}
+\DoxyCodeLine{3175                 \}}
+\DoxyCodeLine{3176                 \textcolor{keyword}{const} std::shared\_ptr<Ope> ope = std::make\_shared<Sequence>(opes);}
+\DoxyCodeLine{3177                 \textcolor{keywordflow}{return} ope;}
+\DoxyCodeLine{3178             \}}
+\DoxyCodeLine{3179         \};}
+\DoxyCodeLine{3180 }
+\DoxyCodeLine{3181         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Prefix"{}}] = [\&](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3182             std::shared\_ptr<Ope> ope;}
+\DoxyCodeLine{3183             \textcolor{keywordflow}{if} (sv.size() == 1) \{}
+\DoxyCodeLine{3184                 ope = sv[0].get<std::shared\_ptr<Ope>>();}
+\DoxyCodeLine{3185             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{3186                 assert(sv.size() == 2);}
+\DoxyCodeLine{3187                 \textcolor{keyword}{auto} \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}} = sv[0].get<\textcolor{keywordtype}{char}>();}
+\DoxyCodeLine{3188                 ope = sv[1].get<std::shared\_ptr<Ope>>();}
+\DoxyCodeLine{3189                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}} == \textcolor{charliteral}{'\&'}) \{}
+\DoxyCodeLine{3190                     ope = \mbox{\hyperlink{namespacepeg_a2016cefb7bbdd7c841190f710328041a}{apd}}(ope);}
+\DoxyCodeLine{3191                 \} \textcolor{keywordflow}{else} \{ \textcolor{comment}{// '!'}}
+\DoxyCodeLine{3192                     ope = \mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{npd}}(ope);}
+\DoxyCodeLine{3193                 \}}
+\DoxyCodeLine{3194             \}}
+\DoxyCodeLine{3195             \textcolor{keywordflow}{return} ope;}
+\DoxyCodeLine{3196         \};}
+\DoxyCodeLine{3197 }
+\DoxyCodeLine{3198         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Suffix"{}}] = [\&](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3199             \textcolor{keyword}{auto} ope = sv[0].get<std::shared\_ptr<Ope>>();}
+\DoxyCodeLine{3200             \textcolor{keywordflow}{if} (sv.size() == 1) \{}
+\DoxyCodeLine{3201                 \textcolor{keywordflow}{return} ope;}
+\DoxyCodeLine{3202             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{3203                 assert(sv.size() == 2);}
+\DoxyCodeLine{3204                 \textcolor{keyword}{auto} \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}} = sv[1].get<\textcolor{keywordtype}{char}>();}
+\DoxyCodeLine{3205                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}} == \textcolor{charliteral}{'?'}) \{}
+\DoxyCodeLine{3206                     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_a864655bd71746d397f495ba0f791ef8b}{opt}}(ope);}
+\DoxyCodeLine{3207                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}} == \textcolor{charliteral}{'*'}) \{}
+\DoxyCodeLine{3208                     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{zom}}(ope);}
+\DoxyCodeLine{3209                 \} \textcolor{keywordflow}{else} \{ \textcolor{comment}{// '+'}}
+\DoxyCodeLine{3210                     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_a8ebc7c5678a9063f189796ff872193a2}{oom}}(ope);}
+\DoxyCodeLine{3211                 \}}
+\DoxyCodeLine{3212             \}}
+\DoxyCodeLine{3213         \};}
+\DoxyCodeLine{3214 }
+\DoxyCodeLine{3215         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Primary"{}}] = [\&](\textcolor{keyword}{const} SemanticValues\& sv, any\& dt) -\/> std::shared\_ptr<Ope> \{}
+\DoxyCodeLine{3216             Data\& data = *dt.get<Data*>();}
+\DoxyCodeLine{3217 }
+\DoxyCodeLine{3218             \textcolor{keywordflow}{switch} (sv.choice()) \{}
+\DoxyCodeLine{3219                 \textcolor{keywordflow}{case} 0:   \textcolor{comment}{// Macro Reference}}
+\DoxyCodeLine{3220                 \textcolor{keywordflow}{case} 1: \{ \textcolor{comment}{// Reference}}
+\DoxyCodeLine{3221                     \textcolor{keyword}{auto} is\_macro = sv.choice() == 0;}
+\DoxyCodeLine{3222                     \textcolor{keyword}{auto} ignore = sv[0].get<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{3223                     \textcolor{keyword}{const} \textcolor{keyword}{auto}\& ident = sv[1].get<std::string>();}
+\DoxyCodeLine{3224 }
+\DoxyCodeLine{3225                     std::vector<std::shared\_ptr<Ope>> args;}
+\DoxyCodeLine{3226                     \textcolor{keywordflow}{if} (is\_macro) \{}
+\DoxyCodeLine{3227                         args = sv[2].get<std::vector<std::shared\_ptr<Ope>>>();}
+\DoxyCodeLine{3228                     \}}
+\DoxyCodeLine{3229 }
+\DoxyCodeLine{3230                     \textcolor{keywordflow}{if} (ignore) \{}
+\DoxyCodeLine{3231                         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_a52a875f28dfa6a7d338e50f366cf0d1f}{ign}}(\mbox{\hyperlink{namespacepeg_a0732a7c9cff98a072f59196f73b96a75}{ref}}(*data.grammar, ident, sv.c\_str(), is\_macro, args));}
+\DoxyCodeLine{3232                     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{3233                         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_a0732a7c9cff98a072f59196f73b96a75}{ref}}(*data.grammar, ident, sv.c\_str(), is\_macro, args);}
+\DoxyCodeLine{3234                     \}}
+\DoxyCodeLine{3235                 \}}
+\DoxyCodeLine{3236                 \textcolor{keywordflow}{case} 2: \{ \textcolor{comment}{// (Expression)}}
+\DoxyCodeLine{3237                     \textcolor{keywordflow}{return} sv[0].get<std::shared\_ptr<Ope>>();}
+\DoxyCodeLine{3238                 \}}
+\DoxyCodeLine{3239                 \textcolor{keywordflow}{case} 3: \{ \textcolor{comment}{// TokenBoundary}}
+\DoxyCodeLine{3240                     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}(sv[0].get<std::shared\_ptr<Ope>>());}
+\DoxyCodeLine{3241                 \}}
+\DoxyCodeLine{3242                 \textcolor{keywordflow}{case} 4: \{ \textcolor{comment}{// CaptureScope}}
+\DoxyCodeLine{3243                     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_a134f4d0a2034b7f922afd53bd7d56bb6}{csc}}(sv[0].get<std::shared\_ptr<Ope>>());}
+\DoxyCodeLine{3244                 \}}
+\DoxyCodeLine{3245                 \textcolor{keywordflow}{case} 5: \{ \textcolor{comment}{// Capture}}
+\DoxyCodeLine{3246                     \textcolor{keyword}{const} \textcolor{keyword}{auto}\& name = sv[0].get<std::string>();}
+\DoxyCodeLine{3247                     \textcolor{keyword}{auto} ope = sv[1].get<std::shared\_ptr<Ope>>();}
+\DoxyCodeLine{3248                     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_acbcf7406c547b0558e37365e719342e2}{cap}}(ope, [name](\textcolor{keyword}{const} \textcolor{keywordtype}{char}* a\_s, \textcolor{keywordtype}{size\_t} a\_n, Context\& c) \{}
+\DoxyCodeLine{3249                         c.capture\_scope\_stack.back()[name] = std::string(a\_s, a\_n);}
+\DoxyCodeLine{3250                     \});}
+\DoxyCodeLine{3251                 \}}
+\DoxyCodeLine{3252                 \textcolor{keywordflow}{default}: \{}
+\DoxyCodeLine{3253                     \textcolor{keywordflow}{return} sv[0].get<std::shared\_ptr<Ope>>();}
+\DoxyCodeLine{3254                 \}}
+\DoxyCodeLine{3255             \}}
+\DoxyCodeLine{3256         \};}
+\DoxyCodeLine{3257 }
+\DoxyCodeLine{3258         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentCont"{}}] = [](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3259             \textcolor{keywordflow}{return} std::string(sv.c\_str(), sv.length());}
+\DoxyCodeLine{3260         \};}
+\DoxyCodeLine{3261         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentStart"{}}] = [](\textcolor{keyword}{const} SemanticValues\& \textcolor{comment}{/*sv*/}) \{}
+\DoxyCodeLine{3262             \textcolor{keywordflow}{return} std::string();}
+\DoxyCodeLine{3263         \};}
+\DoxyCodeLine{3264         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}IdentRest"{}}] = [](\textcolor{keyword}{const} SemanticValues\& \textcolor{comment}{/*sv*/}) \{}
+\DoxyCodeLine{3265             \textcolor{keywordflow}{return} std::string();}
+\DoxyCodeLine{3266         \};}
+\DoxyCodeLine{3267 }
+\DoxyCodeLine{3268         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}LiteralI"{}}] = [](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3269             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}} = sv.tokens.front();}
+\DoxyCodeLine{3270             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_a6c7c8822d1073264e60466449f05702d}{liti}}(\mbox{\hyperlink{namespacepeg_a6467f8636691f3591157c71a18c15e79}{resolve\_escape\_sequence}}(\mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}.first, \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}.second));}
+\DoxyCodeLine{3271         \};}
+\DoxyCodeLine{3272         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Literal"{}}] = [](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3273             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}} = sv.tokens.front();}
+\DoxyCodeLine{3274             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_a3516b1cb4146d4f6c011711a27fcbee5}{lit}}(\mbox{\hyperlink{namespacepeg_a6467f8636691f3591157c71a18c15e79}{resolve\_escape\_sequence}}(\mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}.first, \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{tok}}.second));}
+\DoxyCodeLine{3275         \};}
+\DoxyCodeLine{3276 }
+\DoxyCodeLine{3277         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Class"{}}] = [](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3278             \textcolor{keyword}{auto} ranges = sv.transform<std::pair<char32\_t, char32\_t>>();}
+\DoxyCodeLine{3279             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{cls}}(ranges);}
+\DoxyCodeLine{3280         \};}
+\DoxyCodeLine{3281         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Range"{}}] = [](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3282             \textcolor{keywordflow}{switch} (sv.choice()) \{}
+\DoxyCodeLine{3283                 \textcolor{keywordflow}{case} 0: \{}
+\DoxyCodeLine{3284                     \textcolor{keyword}{auto} s1 = sv[0].get<std::string>();}
+\DoxyCodeLine{3285                     \textcolor{keyword}{auto} s2 = sv[1].get<std::string>();}
+\DoxyCodeLine{3286                     \textcolor{keyword}{auto} cp1 = \mbox{\hyperlink{namespacepeg_a138e496119eb188eeb6f8fbd12b8f038}{decode\_codepoint}}(s1.c\_str(), s1.length());}
+\DoxyCodeLine{3287                     \textcolor{keyword}{auto} cp2 = \mbox{\hyperlink{namespacepeg_a138e496119eb188eeb6f8fbd12b8f038}{decode\_codepoint}}(s2.c\_str(), s2.length());}
+\DoxyCodeLine{3288                     \textcolor{keywordflow}{return} std::make\_pair(cp1, cp2);}
+\DoxyCodeLine{3289                 \}}
+\DoxyCodeLine{3290                 \textcolor{keywordflow}{case} 1: \{}
+\DoxyCodeLine{3291                     \textcolor{keyword}{auto} s = sv[0].get<std::string>();}
+\DoxyCodeLine{3292                     \textcolor{keyword}{auto} cp = \mbox{\hyperlink{namespacepeg_a138e496119eb188eeb6f8fbd12b8f038}{decode\_codepoint}}(s.c\_str(), s.length());}
+\DoxyCodeLine{3293                     \textcolor{keywordflow}{return} std::make\_pair(cp, cp);}
+\DoxyCodeLine{3294                 \}}
+\DoxyCodeLine{3295             \}}
+\DoxyCodeLine{3296             \textcolor{keywordflow}{return} std::make\_pair<char32\_t, char32\_t>(0, 0);}
+\DoxyCodeLine{3297         \};}
+\DoxyCodeLine{3298         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Char"{}}] = [](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3299             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_a6467f8636691f3591157c71a18c15e79}{resolve\_escape\_sequence}}(sv.c\_str(), sv.length());}
+\DoxyCodeLine{3300         \};}
+\DoxyCodeLine{3301 }
+\DoxyCodeLine{3302         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}AND"{}}]      = [](\textcolor{keyword}{const} SemanticValues\& sv) \{ \textcolor{keywordflow}{return} *sv.c\_str(); \};}
+\DoxyCodeLine{3303         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}NOT"{}}]      = [](\textcolor{keyword}{const} SemanticValues\& sv) \{ \textcolor{keywordflow}{return} *sv.c\_str(); \};}
+\DoxyCodeLine{3304         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}QUESTION"{}}] = [](\textcolor{keyword}{const} SemanticValues\& sv) \{ \textcolor{keywordflow}{return} *sv.c\_str(); \};}
+\DoxyCodeLine{3305         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}STAR"{}}]     = [](\textcolor{keyword}{const} SemanticValues\& sv) \{ \textcolor{keywordflow}{return} *sv.c\_str(); \};}
+\DoxyCodeLine{3306         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}PLUS"{}}]     = [](\textcolor{keyword}{const} SemanticValues\& sv) \{ \textcolor{keywordflow}{return} *sv.c\_str(); \};}
+\DoxyCodeLine{3307 }
+\DoxyCodeLine{3308         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}DOT"{}}] = [](\textcolor{keyword}{const} SemanticValues\& \textcolor{comment}{/*sv*/}) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_a7108dfb0448e74232e3ef7a348c2cd09}{dot}}(); \};}
+\DoxyCodeLine{3309 }
+\DoxyCodeLine{3310         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}BeginCap"{}}] = [](\textcolor{keyword}{const} SemanticValues\& sv) \{ \textcolor{keywordflow}{return} sv.token(); \};}
+\DoxyCodeLine{3311 }
+\DoxyCodeLine{3312         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}BackRef"{}}] = [\&](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3313             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_ab7fe194d9e2d7d85e26ba20a0b94d819}{bkr}}(sv.token());}
+\DoxyCodeLine{3314         \};}
+\DoxyCodeLine{3315 }
+\DoxyCodeLine{3316         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Ignore"{}}] = [](\textcolor{keyword}{const} SemanticValues\& sv) \{ \textcolor{keywordflow}{return} sv.size() > 0; \};}
+\DoxyCodeLine{3317 }
+\DoxyCodeLine{3318         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Parameters"{}}] = [](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3319             \textcolor{keywordflow}{return} sv.transform<std::string>();}
+\DoxyCodeLine{3320         \};}
+\DoxyCodeLine{3321 }
+\DoxyCodeLine{3322         \mbox{\hyperlink{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}{g}}[\textcolor{stringliteral}{"{}Arguments"{}}] = [](\textcolor{keyword}{const} SemanticValues\& sv) \{}
+\DoxyCodeLine{3323             \textcolor{keywordflow}{return} sv.transform<std::shared\_ptr<Ope>>();}
+\DoxyCodeLine{3324         \};}
+\DoxyCodeLine{3325     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacepeg_a2016cefb7bbdd7c841190f710328041a}{peg\+::apd()}}, \mbox{\hyperlink{namespacepeg_ab7fe194d9e2d7d85e26ba20a0b94d819}{peg\+::bkr()}}, \mbox{\hyperlink{structpeg_1_1SemanticValues_a221e404f3f0d1b0fb528ff3e747ddac1}{peg\+::\+Semantic\+Values\+::c\+\_\+str()}}, \mbox{\hyperlink{namespacepeg_acbcf7406c547b0558e37365e719342e2}{peg\+::cap()}}, \mbox{\hyperlink{classpeg_1_1Context_acf530e267e53aaefe8f67eccb46bbeb9}{peg\+::\+Context\+::capture\+\_\+scope\+\_\+stack}}, \mbox{\hyperlink{structpeg_1_1SemanticValues_a431b5752198cf04df62b721943dc6c2e}{peg\+::\+Semantic\+Values\+::choice()}}, \mbox{\hyperlink{namespacepeg_a524348ca73e1cb69d78d1884782fa4df}{peg\+::cls()}}, \mbox{\hyperlink{namespacepeg_a134f4d0a2034b7f922afd53bd7d56bb6}{peg\+::csc()}}, \mbox{\hyperlink{namespacepeg_a518d115123aa154d505afa7841577ebf}{peg\+::decode\+\_\+codepoint()}}, \mbox{\hyperlink{namespacepeg_a7108dfb0448e74232e3ef7a348c2cd09}{peg\+::dot()}}, \mbox{\hyperlink{structpeg_1_1ParserGenerator_1_1Data_a2eb2b7ddb4329955f935434548c0033c}{peg\+::\+Parser\+Generator\+::\+Data\+::duplicates}}, \mbox{\hyperlink{structpeg_1_1ParserGenerator_1_1Data_ad8b0cc6c62f963243da4319e542e1266}{peg\+::\+Parser\+Generator\+::\+Data\+::grammar}}, \mbox{\hyperlink{namespacepeg_a52a875f28dfa6a7d338e50f366cf0d1f}{peg\+::ign()}}, \mbox{\hyperlink{structpeg_1_1SemanticValues_a3f4b8543dbac3e605c18d81d005e5c3d}{peg\+::\+Semantic\+Values\+::length()}}, \mbox{\hyperlink{namespacepeg_a3516b1cb4146d4f6c011711a27fcbee5}{peg\+::lit()}}, \mbox{\hyperlink{namespacepeg_a6c7c8822d1073264e60466449f05702d}{peg\+::liti()}}, \mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{peg\+::npd()}}, \mbox{\hyperlink{namespacepeg_a8ebc7c5678a9063f189796ff872193a2}{peg\+::oom()}}, \mbox{\hyperlink{namespacepeg_a864655bd71746d397f495ba0f791ef8b}{peg\+::opt()}}, \mbox{\hyperlink{namespacepeg_a0732a7c9cff98a072f59196f73b96a75}{peg\+::ref()}}, \mbox{\hyperlink{namespacepeg_a6467f8636691f3591157c71a18c15e79}{peg\+::resolve\+\_\+escape\+\_\+sequence()}}, \mbox{\hyperlink{structpeg_1_1ParserGenerator_1_1Data_a33c554bdbd4fd9c7f6a9d10c95139cef}{peg\+::\+Parser\+Generator\+::\+Data\+::start}}, \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{peg\+::tok()}}, \mbox{\hyperlink{structpeg_1_1SemanticValues_aa2b880931ff1237c7af9a14fa0197044}{peg\+::\+Semantic\+Values\+::token()}}, \mbox{\hyperlink{structpeg_1_1SemanticValues_acb64227e5b71c2a63ed58553af80905e}{peg\+::\+Semantic\+Values\+::tokens}}, \mbox{\hyperlink{structpeg_1_1SemanticValues_ab67736e20427be239008aaaafd33247a}{peg\+::\+Semantic\+Values\+::transform()}}, and \mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{peg\+::zom()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}\label{classpeg_1_1ParserGenerator_a6c5211aeaee23309ccca0f1fcd68c004}} 
+\index{peg::ParserGenerator@{peg::ParserGenerator}!g@{g}}
+\index{g@{g}!peg::ParserGenerator@{peg::ParserGenerator}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{Grammar}} peg\+::\+Parser\+Generator\+::g\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

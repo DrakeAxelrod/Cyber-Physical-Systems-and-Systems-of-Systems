@@ -1,0 +1,20 @@
+digraph "doTripletForwardVisit"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="doTripletForwardVisit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="cluon::GenericMessage\l::accept",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1GenericMessage.html#a2947c7a70f98323da87aa8375d853a56",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="cluon::data::TimeStamp\l::accept",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1data_1_1TimeStamp.html#a003db6934dc963e4a6af77c62620692a",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="cluon::data::Envelope\l::accept",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1data_1_1Envelope.html#a2058267d5624cffb2dcd8b47d2c83429",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="cluon::data::PlayerCommand\l::accept",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1data_1_1PlayerCommand.html#a1fc3c073fe0af185c3dd9447c03554e1",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="cluon::data::PlayerStatus\l::accept",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1data_1_1PlayerStatus.html#af117cac7a9e737c12b5a885a152135d5",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="cluon::data::RecorderCommand\l::accept",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1data_1_1RecorderCommand.html#a2d055410532eab810ee17f54ab220342",tooltip=" "];
+}
