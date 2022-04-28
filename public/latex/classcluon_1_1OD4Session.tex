@@ -1,0 +1,462 @@
+\hypertarget{classcluon_1_1OD4Session}{}\doxysection{cluon\+::OD4\+Session Class Reference}
+\label{classcluon_1_1OD4Session}\index{cluon::OD4Session@{cluon::OD4Session}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for cluon\+::OD4\+Session\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1OD4Session_ad9d26426cf2714e105c27a23ce4a0f7a}{OD4\+Session}} (uint16\+\_\+t CID, std\+::function$<$ void(\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}} \&\&envelope)$>$ delegate=nullptr) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1OD4Session_a8d9843ae35fa1a0fbe130877aa959025}{send}} (\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}} \&\&envelope) noexcept
+\item 
+bool \mbox{\hyperlink{classcluon_1_1OD4Session_a5d79b313afe89bc3a8622d1801c0037c}{data\+Trigger}} (int32\+\_\+t message\+Identifier, std\+::function$<$ void(\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}} \&\&envelope)$>$ delegate) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1OD4Session_a2bd324b893072614ba917e5f1fd1cdc2}{time\+Trigger}} (float freq, std\+::function$<$ bool()$>$ delegate) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classcluon_1_1OD4Session_a01745bfed160ac4fd16c71828672e7e8}{send}} (T \&message, const \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \&sample\+Time\+Stamp=\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}}(), uint32\+\_\+t sender\+Stamp=0) noexcept
+\item 
+bool \mbox{\hyperlink{classcluon_1_1OD4Session_a1381dc975919e3ef0592e9bfa032c8df}{is\+Running}} () noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1OD4Session_a33747e0b67227a3389f3836473efacb4}{OD4\+Session}} (const \mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} \&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1OD4Session_af43490a00ab19943c9db9e92fcfd165c}{OD4\+Session}} (\mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} \& \mbox{\hyperlink{classcluon_1_1OD4Session_a4163df57ec46012c2d2fbadfea31e2cf}{operator=}} (const \mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} \&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} \& \mbox{\hyperlink{classcluon_1_1OD4Session_abfb9a574da4b9fc7e8dd6ffb26fafc6c}{operator=}} (\mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{classcluon_1_1OD4Session_a18f8a4c5d912a6749402df490e4a9b6a}{callback}} (std\+::string \&\&data, std\+::string \&\&from, std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \&\&timepoint) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1OD4Session_a5be4ee41c5143ef5749a0d16b8478694}{send\+Internal}} (std\+::string \&\&data\+To\+Send) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classcluon_1_1UDPReceiver}{cluon\+::\+UDPReceiver}} $>$ \mbox{\hyperlink{classcluon_1_1OD4Session_a6655d1950ffc90eda2ef61b77d31b4cd}{m\+\_\+receiver}}
+\item 
+\mbox{\hyperlink{classcluon_1_1UDPSender}{cluon\+::\+UDPSender}} \mbox{\hyperlink{classcluon_1_1OD4Session_a707e74c3040627ba7f702999676ebe8c}{m\+\_\+sender}}
+\item 
+std\+::mutex \mbox{\hyperlink{classcluon_1_1OD4Session_a89c4e8e79af6b03d9992f41f63caf25d}{m\+\_\+sender\+Mutex}} \{\}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}} \&\&envelope)$>$ \mbox{\hyperlink{classcluon_1_1OD4Session_a4438401d130f6d54eedeb2257a40c86f}{m\+\_\+delegate}} \{nullptr\}
+\item 
+std\+::mutex \mbox{\hyperlink{classcluon_1_1OD4Session_a8789563080b497bf313d846db952563e}{m\+\_\+map\+Of\+Data\+Triggered\+Delegates\+Mutex}} \{\}
+\item 
+std\+::unordered\+\_\+map$<$ int32\+\_\+t, std\+::function$<$ void(\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}} \&\&envelope)$>$, \mbox{\hyperlink{classcluon_1_1UseUInt32ValueAsHashKey}{Use\+UInt32\+Value\+As\+Hash\+Key}} $>$ \mbox{\hyperlink{classcluon_1_1OD4Session_a84ef78569d68637a8513204115d30b7f}{m\+\_\+map\+Of\+Data\+Triggered\+Delegates}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class provides an interface to an Open\+Da\+VINCI v4 session. An Open\+Da\+VINCI v4 session allows the automatic exchange of time-\/stamped Envelopes carrying user-\/defined messages usually using UDP multicast. A running \mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} will not receive the bytes that itself has sent to other microservices.
+
+There are two ways to participate in an Open\+Da\+VINCI session. Variant A is simply calling a user-\/supplied lambda whenever a new Envelope is received\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1OD4Session}{cluon::OD4Session}} od4\{111, [](\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon::data::Envelope}} \&\&envelope)\{ std::cout << \textcolor{stringliteral}{"{}Received cluon::Envelope"{}} << std::endl;\}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Do something in parallel.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{MyMessage msg;}
+\DoxyCodeLine{od4.\mbox{\hyperlink{classcluon_1_1OD4Session_a8d9843ae35fa1a0fbe130877aa959025}{send}}(msg);}
+
+\end{DoxyCode}
+
+
+Variant B allows a more fine-\/grained setup where you specify the Envelopes of interest\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1OD4Session}{cluon::OD4Session}} od4\{111\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{od4.\mbox{\hyperlink{classcluon_1_1OD4Session_a5d79b313afe89bc3a8622d1801c0037c}{dataTrigger}}(\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_a4cb85766f8fb26426a7dc7bfdcf4ba60}{cluon::data::TimeStamp::ID}}(), [](\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon::data::Envelope}} \&\&envelope)\{ std::cout << \textcolor{stringliteral}{"{}Received cluon::data::TimeStamp"{}} << std::endl;\});}
+\DoxyCodeLine{od4.dataTrigger(MyMessage::ID(), [](\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon::data::Envelope}} \&\&envelope)\{ std::cout << \textcolor{stringliteral}{"{}Received MyMessage"{}} << std::endl;\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Do something in parallel.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{MyMessage msg;}
+\DoxyCodeLine{od4.send(msg);}
+
+\end{DoxyCode}
+
+
+Next to receive Envelopes, \mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} can call a user-\/supplied lambda in a time-\/triggered way. The lambda is executed as long as it does not return false or throws an exception that is then caught in the method time\+Trigger and the method is exited\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1OD4Session}{cluon::OD4Session}} od4\{111\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{const} \textcolor{keywordtype}{float} FREQ\{10\}; \textcolor{comment}{// 10 Hz.}}
+\DoxyCodeLine{od4.\mbox{\hyperlink{classcluon_1_1OD4Session_a2bd324b893072614ba917e5f1fd1cdc2}{timeTrigger}}(FREQ, []()\{}
+\DoxyCodeLine{  \textcolor{comment}{// Do something time-\/triggered.}}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\}); \textcolor{comment}{// This call blocks until the lambda returns false.}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a33747e0b67227a3389f3836473efacb4}\label{classcluon_1_1OD4Session_a33747e0b67227a3389f3836473efacb4}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!OD4Session@{OD4Session}}
+\index{OD4Session@{OD4Session}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{OD4Session()}{OD4Session()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily cluon\+::\+OD4\+Session\+::\+OD4\+Session (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1OD4Session_af43490a00ab19943c9db9e92fcfd165c}\label{classcluon_1_1OD4Session_af43490a00ab19943c9db9e92fcfd165c}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!OD4Session@{OD4Session}}
+\index{OD4Session@{OD4Session}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{OD4Session()}{OD4Session()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily cluon\+::\+OD4\+Session\+::\+OD4\+Session (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1OD4Session_ad9d26426cf2714e105c27a23ce4a0f7a}\label{classcluon_1_1OD4Session_ad9d26426cf2714e105c27a23ce4a0f7a}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!OD4Session@{OD4Session}}
+\index{OD4Session@{OD4Session}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{OD4Session()}{OD4Session()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily cluon\+::\+OD4\+Session\+::\+OD4\+Session (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{CID,  }\item[{std\+::function$<$ void(\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}} \&\&envelope)$>$}]{delegate = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em CID} & Open\+Da\+VINCI v4 session identifier \mbox{[}1 .. 254\mbox{]} \\
+\hline
+{\em delegate} & Function to call on newly arriving Envelopes (\char`\"{}catch-\/all\char`\"{}); if a nullptr is passed, the method data\+Trigger can be used to set message specific delegates. Please note that it is NOT possible to have both\+: a delegate for \char`\"{}catch-\/all\char`\"{} and the data-\/triggered ones. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13944     : \mbox{\hyperlink{classcluon_1_1OD4Session_a6655d1950ffc90eda2ef61b77d31b4cd}{m\_receiver}}\{\textcolor{keyword}{nullptr}\}}
+\DoxyCodeLine{13945     , \mbox{\hyperlink{classcluon_1_1OD4Session_a707e74c3040627ba7f702999676ebe8c}{m\_sender}}\{\textcolor{stringliteral}{"{}225.0.0."{}} + std::to\_string(CID), 12175\}}
+\DoxyCodeLine{13946     , \mbox{\hyperlink{classcluon_1_1OD4Session_a4438401d130f6d54eedeb2257a40c86f}{m\_delegate}}(std::move(delegate))}
+\DoxyCodeLine{13947     , \mbox{\hyperlink{classcluon_1_1OD4Session_a8789563080b497bf313d846db952563e}{m\_mapOfDataTriggeredDelegatesMutex}}\{\}}
+\DoxyCodeLine{13948     , \mbox{\hyperlink{classcluon_1_1OD4Session_a84ef78569d68637a8513204115d30b7f}{m\_mapOfDataTriggeredDelegates}}\{\} \{}
+\DoxyCodeLine{13949     \mbox{\hyperlink{classcluon_1_1OD4Session_a6655d1950ffc90eda2ef61b77d31b4cd}{m\_receiver}} = std::make\_unique<cluon::UDPReceiver>(}
+\DoxyCodeLine{13950         \textcolor{stringliteral}{"{}225.0.0."{}} + std::to\_string(CID),}
+\DoxyCodeLine{13951         12175,}
+\DoxyCodeLine{13952         [\textcolor{keyword}{this}](std::string \&\&data, std::string \&\&from, std::chrono::system\_clock::time\_point \&\&timepoint) \{}
+\DoxyCodeLine{13953             this-\/>\mbox{\hyperlink{classcluon_1_1OD4Session_a18f8a4c5d912a6749402df490e4a9b6a}{callback}}(std::move(data), std::move(from), std::move(timepoint));}
+\DoxyCodeLine{13954         \},}
+\DoxyCodeLine{13955         \mbox{\hyperlink{classcluon_1_1OD4Session_a707e74c3040627ba7f702999676ebe8c}{m\_sender}}.\mbox{\hyperlink{classcluon_1_1UDPSender_a769652a66b5394452956678ca34df018}{getSendFromPort}}() \textcolor{comment}{/* passing our local send from port to the UDPReceiver to filter out our own bytes */});}
+\DoxyCodeLine{13956 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a18f8a4c5d912a6749402df490e4a9b6a}\label{classcluon_1_1OD4Session_a18f8a4c5d912a6749402df490e4a9b6a}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!callback@{callback}}
+\index{callback@{callback}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}}
+{\footnotesize\ttfamily void cluon\+::\+OD4\+Session\+::callback (\begin{DoxyParamCaption}\item[{std\+::string \&\&}]{data,  }\item[{std\+::string \&\&}]{from,  }\item[{std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \&\&}]{timepoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14006                                                                                                                        \{}
+\DoxyCodeLine{14007     \textcolor{keywordtype}{size\_t} numberOfDataTriggeredDelegates\{0\};}
+\DoxyCodeLine{14008     \{}
+\DoxyCodeLine{14009         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{14010             std::lock\_guard<std::mutex> lck\{\mbox{\hyperlink{classcluon_1_1OD4Session_a8789563080b497bf313d846db952563e}{m\_mapOfDataTriggeredDelegatesMutex}}\};}
+\DoxyCodeLine{14011             numberOfDataTriggeredDelegates = \mbox{\hyperlink{classcluon_1_1OD4Session_a84ef78569d68637a8513204115d30b7f}{m\_mapOfDataTriggeredDelegates}}.size();}
+\DoxyCodeLine{14012         \} \textcolor{keywordflow}{catch} (...) \{\} \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{14013     \}}
+\DoxyCodeLine{14014     \textcolor{comment}{// Only unpack the envelope when it needs to be post-\/processed.}}
+\DoxyCodeLine{14015     \textcolor{keywordflow}{if} ((\textcolor{keyword}{nullptr} != \mbox{\hyperlink{classcluon_1_1OD4Session_a4438401d130f6d54eedeb2257a40c86f}{m\_delegate}}) || (0 < numberOfDataTriggeredDelegates)) \{}
+\DoxyCodeLine{14016         std::stringstream sstr(data);}
+\DoxyCodeLine{14017         \textcolor{keyword}{auto} \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}} = \mbox{\hyperlink{namespacecluon_abbf469eea6cc8400c8a0689a7414a570}{extractEnvelope}}(sstr);}
+\DoxyCodeLine{14018 }
+\DoxyCodeLine{14019         \textcolor{keywordflow}{if} (\mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}.first) \{}
+\DoxyCodeLine{14020             \mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon::data::Envelope}} env\{\mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}.second\};}
+\DoxyCodeLine{14021             env.received(\mbox{\hyperlink{namespacecluon_1_1time_ae2df73301f037b992abdb8b66c5e35b3}{cluon::time::convert}}(timepoint));}
+\DoxyCodeLine{14022 }
+\DoxyCodeLine{14023             \textcolor{comment}{// "{}Catch all"{}-\/delegate.}}
+\DoxyCodeLine{14024             \textcolor{keywordflow}{if} (\textcolor{keyword}{nullptr} != \mbox{\hyperlink{classcluon_1_1OD4Session_a4438401d130f6d54eedeb2257a40c86f}{m\_delegate}}) \{}
+\DoxyCodeLine{14025                 \mbox{\hyperlink{classcluon_1_1OD4Session_a4438401d130f6d54eedeb2257a40c86f}{m\_delegate}}(std::move(env));}
+\DoxyCodeLine{14026             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{14027                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{14028                     \textcolor{comment}{// Data triggered-\/delegates.}}
+\DoxyCodeLine{14029                     std::lock\_guard<std::mutex> lck\{\mbox{\hyperlink{classcluon_1_1OD4Session_a8789563080b497bf313d846db952563e}{m\_mapOfDataTriggeredDelegatesMutex}}\};}
+\DoxyCodeLine{14030                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1OD4Session_a84ef78569d68637a8513204115d30b7f}{m\_mapOfDataTriggeredDelegates}}.count(env.dataType()) > 0) \{}
+\DoxyCodeLine{14031                         \mbox{\hyperlink{classcluon_1_1OD4Session_a84ef78569d68637a8513204115d30b7f}{m\_mapOfDataTriggeredDelegates}}[env.dataType()](std::move(env));}
+\DoxyCodeLine{14032                     \}}
+\DoxyCodeLine{14033                 \} \textcolor{keywordflow}{catch} (...) \{\} \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{14034             \}}
+\DoxyCodeLine{14035         \}}
+\DoxyCodeLine{14036     \}}
+\DoxyCodeLine{14037 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_1_1time_ae2df73301f037b992abdb8b66c5e35b3}{cluon\+::time\+::convert()}}, \mbox{\hyperlink{namespacecluon_abbf469eea6cc8400c8a0689a7414a570}{cluon\+::extract\+Envelope()}}, and \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{ret\+Val}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a5d79b313afe89bc3a8622d1801c0037c}\label{classcluon_1_1OD4Session_a5d79b313afe89bc3a8622d1801c0037c}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!dataTrigger@{dataTrigger}}
+\index{dataTrigger@{dataTrigger}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{dataTrigger()}{dataTrigger()}}
+{\footnotesize\ttfamily bool cluon\+::\+OD4\+Session\+::data\+Trigger (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{message\+Identifier,  }\item[{std\+::function$<$ void(\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}} \&\&envelope)$>$}]{delegate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+This method sets a delegate to be called data-\/triggered on arrival of a new Envelope for a given message identifier.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+Identifier} & Message identifier to assign a delegate. \\
+\hline
+{\em delegate} & Function to call on newly arriving Envelopes; setting it to nullptr will erase it. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the given delegate could be successfully set or unset. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13987                                                                                                                                 \{}
+\DoxyCodeLine{13988     \textcolor{keywordtype}{bool} \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{13989     \textcolor{keywordflow}{if} (\textcolor{keyword}{nullptr} == \mbox{\hyperlink{classcluon_1_1OD4Session_a4438401d130f6d54eedeb2257a40c86f}{m\_delegate}}) \{}
+\DoxyCodeLine{13990         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{13991             std::lock\_guard<std::mutex> lck\{\mbox{\hyperlink{classcluon_1_1OD4Session_a8789563080b497bf313d846db952563e}{m\_mapOfDataTriggeredDelegatesMutex}}\};}
+\DoxyCodeLine{13992             \textcolor{keywordflow}{if} ((\textcolor{keyword}{nullptr} == delegate) \&\& (\mbox{\hyperlink{classcluon_1_1OD4Session_a84ef78569d68637a8513204115d30b7f}{m\_mapOfDataTriggeredDelegates}}.count(messageIdentifier) > 0)) \{}
+\DoxyCodeLine{13993                 \textcolor{keyword}{auto} element = \mbox{\hyperlink{classcluon_1_1OD4Session_a84ef78569d68637a8513204115d30b7f}{m\_mapOfDataTriggeredDelegates}}.find(messageIdentifier);}
+\DoxyCodeLine{13994                 \textcolor{keywordflow}{if} (element != \mbox{\hyperlink{classcluon_1_1OD4Session_a84ef78569d68637a8513204115d30b7f}{m\_mapOfDataTriggeredDelegates}}.end()) \{}
+\DoxyCodeLine{13995                     \mbox{\hyperlink{classcluon_1_1OD4Session_a84ef78569d68637a8513204115d30b7f}{m\_mapOfDataTriggeredDelegates}}.erase(element);}
+\DoxyCodeLine{13996                 \}}
+\DoxyCodeLine{13997             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{13998                 \mbox{\hyperlink{classcluon_1_1OD4Session_a84ef78569d68637a8513204115d30b7f}{m\_mapOfDataTriggeredDelegates}}[messageIdentifier] = delegate;}
+\DoxyCodeLine{13999             \}}
+\DoxyCodeLine{14000             \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{14001         \} \textcolor{keywordflow}{catch} (...) \{\} \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{14002     \}}
+\DoxyCodeLine{14003     \textcolor{keywordflow}{return} \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}};}
+\DoxyCodeLine{14004 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{ret\+Val}}.
+
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a1381dc975919e3ef0592e9bfa032c8df}\label{classcluon_1_1OD4Session_a1381dc975919e3ef0592e9bfa032c8df}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{isRunning()}{isRunning()}}
+{\footnotesize\ttfamily bool cluon\+::\+OD4\+Session\+::is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14047                                            \{}
+\DoxyCodeLine{14048     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1OD4Session_a6655d1950ffc90eda2ef61b77d31b4cd}{m\_receiver}}-\/>isRunning();}
+\DoxyCodeLine{14049 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1OD4Session_a6655d1950ffc90eda2ef61b77d31b4cd}{m\+\_\+receiver}}.
+
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a4163df57ec46012c2d2fbadfea31e2cf}\label{classcluon_1_1OD4Session_a4163df57ec46012c2d2fbadfea31e2cf}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} \& cluon\+::\+OD4\+Session\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1OD4Session_abfb9a574da4b9fc7e8dd6ffb26fafc6c}\label{classcluon_1_1OD4Session_abfb9a574da4b9fc7e8dd6ffb26fafc6c}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} \& cluon\+::\+OD4\+Session\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1OD4Session}{OD4\+Session}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a8d9843ae35fa1a0fbe130877aa959025}\label{classcluon_1_1OD4Session_a8d9843ae35fa1a0fbe130877aa959025}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!send@{send}}
+\index{send@{send}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void cluon\+::\+OD4\+Session\+::send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}} \&\&}]{envelope }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+This method will send a given Envelope to this Open\+Da\+VINCI v4 session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em envelope} & to be sent. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14039                                                                   \{}
+\DoxyCodeLine{14040     \mbox{\hyperlink{classcluon_1_1OD4Session_a5be4ee41c5143ef5749a0d16b8478694}{sendInternal}}(\mbox{\hyperlink{namespacecluon_a8ff42dcd356aa1d0ef8e41a8aa2bead2}{cluon::serializeEnvelope}}(std::move(envelope)));}
+\DoxyCodeLine{14041 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a8ff42dcd356aa1d0ef8e41a8aa2bead2}{cluon\+::serialize\+Envelope()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a01745bfed160ac4fd16c71828672e7e8}\label{classcluon_1_1OD4Session_a01745bfed160ac4fd16c71828672e7e8}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!send@{send}}
+\index{send@{send}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void cluon\+::\+OD4\+Session\+::send (\begin{DoxyParamCaption}\item[{T \&}]{message,  }\item[{const \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \&}]{sample\+Time\+Stamp = {\ttfamily \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}}()},  }\item[{uint32\+\_\+t}]{sender\+Stamp = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+This method will send a given message to this Open\+Da\+VINCI v4 session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to be sent. \\
+\hline
+{\em sample\+Time\+Stamp} & Time point when this sample to be sent was captured (default = sent time point). \\
+\hline
+{\em sender\+Stamp} & Optional sender stamp (default = 0). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8979                                                                                                                                \{}
+\DoxyCodeLine{8980         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{8981             std::lock\_guard<std::mutex> lck(\mbox{\hyperlink{classcluon_1_1OD4Session_a89c4e8e79af6b03d9992f41f63caf25d}{m\_senderMutex}});}
+\DoxyCodeLine{8982             \mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{cluon::ToProtoVisitor}} protoEncoder;}
+\DoxyCodeLine{8983 }
+\DoxyCodeLine{8984             \mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon::data::Envelope}} envelope;}
+\DoxyCodeLine{8985             \{}
+\DoxyCodeLine{8986                 envelope.\mbox{\hyperlink{classcluon_1_1data_1_1Envelope_abc59b3c43fef22b8d12bbce309a1504c}{dataType}}(\textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}(message.ID()));}
+\DoxyCodeLine{8987                 message.\mbox{\hyperlink{classcluon_1_1data_1_1Envelope_afb1dfa6ca6a92b9c5eba3a1201b16dbd}{accept}}(protoEncoder);}
+\DoxyCodeLine{8988                 envelope.\mbox{\hyperlink{classcluon_1_1data_1_1Envelope_a9b33bb1e804140e808a61a995278f82b}{serializedData}}(protoEncoder.\mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a20841380c5c8e865f30f92d164477e81}{encodedData}}());}
+\DoxyCodeLine{8989                 envelope.\mbox{\hyperlink{classcluon_1_1data_1_1Envelope_accef53188ac7af51b42fc7507fd1cbac}{sent}}(\mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{cluon::time::now}}());}
+\DoxyCodeLine{8990                 envelope.\mbox{\hyperlink{classcluon_1_1data_1_1Envelope_a6ca4f2516600faae6a166d109578c977}{sampleTimeStamp}}((0 == (sampleTimeStamp.\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_ac8c0f1d9f06177d7dd8568261fe14dac}{seconds}}() + sampleTimeStamp.\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_a6330ea6b06cdce2b2a30098f3ec87a9a}{microseconds}}())) ? envelope.\mbox{\hyperlink{classcluon_1_1data_1_1Envelope_accef53188ac7af51b42fc7507fd1cbac}{sent}}() : sampleTimeStamp);}
+\DoxyCodeLine{8991                 envelope.\mbox{\hyperlink{classcluon_1_1data_1_1Envelope_a1f544425b7a692e748ea90abe54642e2}{senderStamp}}(senderStamp);}
+\DoxyCodeLine{8992             \}}
+\DoxyCodeLine{8993 }
+\DoxyCodeLine{8994             \mbox{\hyperlink{classcluon_1_1OD4Session_a8d9843ae35fa1a0fbe130877aa959025}{send}}(std::move(envelope));}
+\DoxyCodeLine{8995         \} \textcolor{keywordflow}{catch} (...) \{\} \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{8996     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1data_1_1Envelope_afb1dfa6ca6a92b9c5eba3a1201b16dbd}{cluon\+::data\+::\+Envelope\+::accept()}}, \mbox{\hyperlink{classcluon_1_1data_1_1Envelope_abc59b3c43fef22b8d12bbce309a1504c}{cluon\+::data\+::\+Envelope\+::data\+Type()}}, \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a20841380c5c8e865f30f92d164477e81}{cluon\+::\+To\+Proto\+Visitor\+::encoded\+Data()}}, \mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{cluon\+::time\+::now()}}, \mbox{\hyperlink{classcluon_1_1data_1_1Envelope_a6ca4f2516600faae6a166d109578c977}{cluon\+::data\+::\+Envelope\+::sample\+Time\+Stamp()}}, \mbox{\hyperlink{classcluon_1_1data_1_1Envelope_a1f544425b7a692e748ea90abe54642e2}{cluon\+::data\+::\+Envelope\+::sender\+Stamp()}}, \mbox{\hyperlink{classcluon_1_1data_1_1Envelope_accef53188ac7af51b42fc7507fd1cbac}{cluon\+::data\+::\+Envelope\+::sent()}}, and \mbox{\hyperlink{classcluon_1_1data_1_1Envelope_a9b33bb1e804140e808a61a995278f82b}{cluon\+::data\+::\+Envelope\+::serialized\+Data()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a5be4ee41c5143ef5749a0d16b8478694}\label{classcluon_1_1OD4Session_a5be4ee41c5143ef5749a0d16b8478694}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!sendInternal@{sendInternal}}
+\index{sendInternal@{sendInternal}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{sendInternal()}{sendInternal()}}
+{\footnotesize\ttfamily void cluon\+::\+OD4\+Session\+::send\+Internal (\begin{DoxyParamCaption}\item[{std\+::string \&\&}]{data\+To\+Send }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14043                                                                     \{}
+\DoxyCodeLine{14044     \mbox{\hyperlink{classcluon_1_1OD4Session_a707e74c3040627ba7f702999676ebe8c}{m\_sender}}.\mbox{\hyperlink{classcluon_1_1UDPSender_ab3bf8ad9ac686a3b5bea5ecc74e7e8e1}{send}}(std::move(dataToSend));}
+\DoxyCodeLine{14045 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a2bd324b893072614ba917e5f1fd1cdc2}\label{classcluon_1_1OD4Session_a2bd324b893072614ba917e5f1fd1cdc2}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!timeTrigger@{timeTrigger}}
+\index{timeTrigger@{timeTrigger}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{timeTrigger()}{timeTrigger()}}
+{\footnotesize\ttfamily void cluon\+::\+OD4\+Session\+::time\+Trigger (\begin{DoxyParamCaption}\item[{float}]{freq,  }\item[{std\+::function$<$ bool()$>$}]{delegate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+This method sets a delegate to be called time-\/triggered using the specified frequency until the delegate returns false. This method blocks until the delegate has returned false or threw an exception. Thus, this method is typically called as last statement in a main function of a program.
+
+
+\begin{DoxyParams}{Parameters}
+{\em freq} & Frequency in Hertz to run the given delegate. \\
+\hline
+{\em delegate} & Function to call according to the given frequency. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13958                                                                                      \{}
+\DoxyCodeLine{13959     \textcolor{keywordflow}{if} (\textcolor{keyword}{nullptr} != delegate) \{}
+\DoxyCodeLine{13960         \textcolor{keywordtype}{bool} delegateIsRunning\{\textcolor{keyword}{true}\};}
+\DoxyCodeLine{13961         \textcolor{keyword}{const} int64\_t TIME\_SLICE\_IN\_MILLISECONDS\{\textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(1000 / ((freq > 0) ? freq : 1.0f))\};}
+\DoxyCodeLine{13962         \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{13963             \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon::data::TimeStamp}} before\{\mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{cluon::time::now}}()\};}
+\DoxyCodeLine{13964             \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{13965                 delegateIsRunning = delegate();}
+\DoxyCodeLine{13966             \} \textcolor{keywordflow}{catch} (...) \{}
+\DoxyCodeLine{13967                 delegateIsRunning = \textcolor{keyword}{false}; \textcolor{comment}{// delegate threw exception.}}
+\DoxyCodeLine{13968             \}}
+\DoxyCodeLine{13969             \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon::data::TimeStamp}} after\{\mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{cluon::time::now}}()\};}
+\DoxyCodeLine{13970 }
+\DoxyCodeLine{13971             \textcolor{keyword}{const} int64\_t beforeInMicroseconds\{\mbox{\hyperlink{namespacecluon_1_1time_ad7e0afa86b32cbb3e78b392664d0793a}{cluon::time::toMicroseconds}}(before)\};}
+\DoxyCodeLine{13972             \textcolor{keyword}{const} int64\_t afterInMicroseconds\{\mbox{\hyperlink{namespacecluon_1_1time_ad7e0afa86b32cbb3e78b392664d0793a}{cluon::time::toMicroseconds}}(after)\};}
+\DoxyCodeLine{13973 }
+\DoxyCodeLine{13974             \textcolor{keyword}{const} int64\_t timeSpent\{(afterInMicroseconds > beforeInMicroseconds) ? (afterInMicroseconds -\/ beforeInMicroseconds) / 1000 : 0\};}
+\DoxyCodeLine{13975             \textcolor{keyword}{const} int64\_t timeToSleepInMilliseconds\{TIME\_SLICE\_IN\_MILLISECONDS -\/ timeSpent\};}
+\DoxyCodeLine{13976 }
+\DoxyCodeLine{13977             \textcolor{comment}{// Sleep the remaining time.}}
+\DoxyCodeLine{13978             \textcolor{keywordflow}{if} ((timeToSleepInMilliseconds > 0) \&\& (timeToSleepInMilliseconds <= TIME\_SLICE\_IN\_MILLISECONDS)) \{}
+\DoxyCodeLine{13979                 std::this\_thread::sleep\_for(std::chrono::duration<int64\_t, std::milli>(timeToSleepInMilliseconds));}
+\DoxyCodeLine{13980             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{13981                 std::cerr << \textcolor{stringliteral}{"{}[cluon::OD4Session]: time-\/triggered delegate violated allocated time slice."{}} << std::endl;}
+\DoxyCodeLine{13982             \}}
+\DoxyCodeLine{13983         \} \textcolor{keywordflow}{while} (delegateIsRunning \&\& !\mbox{\hyperlink{classcluon_1_1TerminateHandler_a14570735df2bf9965520a022879b2a56}{TerminateHandler::instance}}().isTerminated.load());}
+\DoxyCodeLine{13984     \}}
+\DoxyCodeLine{13985 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1TerminateHandler_a14570735df2bf9965520a022879b2a56}{cluon\+::\+Terminate\+Handler\+::instance()}}, \mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{cluon\+::time\+::now()}}, and \mbox{\hyperlink{namespacecluon_1_1time_ad7e0afa86b32cbb3e78b392664d0793a}{cluon\+::time\+::to\+Microseconds()}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a4438401d130f6d54eedeb2257a40c86f}\label{classcluon_1_1OD4Session_a4438401d130f6d54eedeb2257a40c86f}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!m\_delegate@{m\_delegate}}
+\index{m\_delegate@{m\_delegate}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{m\_delegate}{m\_delegate}}
+{\footnotesize\ttfamily std\+::function$<$void(\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}} \&\&envelope)$>$ cluon\+::\+OD4\+Session\+::m\+\_\+delegate \{nullptr\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a84ef78569d68637a8513204115d30b7f}\label{classcluon_1_1OD4Session_a84ef78569d68637a8513204115d30b7f}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!m\_mapOfDataTriggeredDelegates@{m\_mapOfDataTriggeredDelegates}}
+\index{m\_mapOfDataTriggeredDelegates@{m\_mapOfDataTriggeredDelegates}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{m\_mapOfDataTriggeredDelegates}{m\_mapOfDataTriggeredDelegates}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$int32\+\_\+t, std\+::function$<$void(\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}} \&\&envelope)$>$, \mbox{\hyperlink{classcluon_1_1UseUInt32ValueAsHashKey}{Use\+UInt32\+Value\+As\+Hash\+Key}}$>$ cluon\+::\+OD4\+Session\+::m\+\_\+map\+Of\+Data\+Triggered\+Delegates \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a8789563080b497bf313d846db952563e}\label{classcluon_1_1OD4Session_a8789563080b497bf313d846db952563e}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!m\_mapOfDataTriggeredDelegatesMutex@{m\_mapOfDataTriggeredDelegatesMutex}}
+\index{m\_mapOfDataTriggeredDelegatesMutex@{m\_mapOfDataTriggeredDelegatesMutex}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{m\_mapOfDataTriggeredDelegatesMutex}{m\_mapOfDataTriggeredDelegatesMutex}}
+{\footnotesize\ttfamily std\+::mutex cluon\+::\+OD4\+Session\+::m\+\_\+map\+Of\+Data\+Triggered\+Delegates\+Mutex \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a6655d1950ffc90eda2ef61b77d31b4cd}\label{classcluon_1_1OD4Session_a6655d1950ffc90eda2ef61b77d31b4cd}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!m\_receiver@{m\_receiver}}
+\index{m\_receiver@{m\_receiver}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{m\_receiver}{m\_receiver}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classcluon_1_1UDPReceiver}{cluon\+::\+UDPReceiver}}$>$ cluon\+::\+OD4\+Session\+::m\+\_\+receiver\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1OD4Session_a1381dc975919e3ef0592e9bfa032c8df}{is\+Running()}}.
+
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a707e74c3040627ba7f702999676ebe8c}\label{classcluon_1_1OD4Session_a707e74c3040627ba7f702999676ebe8c}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!m\_sender@{m\_sender}}
+\index{m\_sender@{m\_sender}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{m\_sender}{m\_sender}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1UDPSender}{cluon\+::\+UDPSender}} cluon\+::\+OD4\+Session\+::m\+\_\+sender\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1OD4Session_a89c4e8e79af6b03d9992f41f63caf25d}\label{classcluon_1_1OD4Session_a89c4e8e79af6b03d9992f41f63caf25d}} 
+\index{cluon::OD4Session@{cluon::OD4Session}!m\_senderMutex@{m\_senderMutex}}
+\index{m\_senderMutex@{m\_senderMutex}!cluon::OD4Session@{cluon::OD4Session}}
+\doxysubsubsection{\texorpdfstring{m\_senderMutex}{m\_senderMutex}}
+{\footnotesize\ttfamily std\+::mutex cluon\+::\+OD4\+Session\+::m\+\_\+sender\+Mutex \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

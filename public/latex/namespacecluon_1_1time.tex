@@ -1,0 +1,183 @@
+\hypertarget{namespacecluon_1_1time}{}\doxysection{cluon\+::time Namespace Reference}
+\label{namespacecluon_1_1time}\index{cluon::time@{cluon::time}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \mbox{\hyperlink{namespacecluon_1_1time_aaaaf69a9fdcb95852e49500b879d192e}{from\+Microseconds}} (int64\+\_\+t tp) noexcept
+\item 
+int64\+\_\+t \mbox{\hyperlink{namespacecluon_1_1time_ad7e0afa86b32cbb3e78b392664d0793a}{to\+Microseconds}} (const \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \&tp) noexcept
+\item 
+int64\+\_\+t \mbox{\hyperlink{namespacecluon_1_1time_aa5df8cf81744594280e72ccd68641a61}{delta\+In\+Microseconds}} (const \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \&AFTER, const \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \&BEFORE) noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \mbox{\hyperlink{namespacecluon_1_1time_ae2df73301f037b992abdb8b66c5e35b3}{convert}} (const std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \&tp) noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{now}} () noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecluon_1_1time_ae2df73301f037b992abdb8b66c5e35b3}\label{namespacecluon_1_1time_ae2df73301f037b992abdb8b66c5e35b3}} 
+\index{cluon::time@{cluon::time}!convert@{convert}}
+\index{convert@{convert}!cluon::time@{cluon::time}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} cluon\+::time\+::convert (\begin{DoxyParamCaption}\item[{const std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \&}]{tp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tp} & to be converted to microseconds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Time\+Stamp of converted chrono\+::time\+\_\+point. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5556                                                                                       \{}
+\DoxyCodeLine{5557     \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon::data::TimeStamp}} timeStamp;}
+\DoxyCodeLine{5558 }
+\DoxyCodeLine{5559     \textcolor{comment}{// Transform chrono time representation to same behavior as gettimeofday.}}
+\DoxyCodeLine{5560     \textcolor{keyword}{typedef} std::chrono::duration<int32\_t> seconds\_type;}
+\DoxyCodeLine{5561     \textcolor{keyword}{typedef} std::chrono::duration<int64\_t, std::micro> microseconds\_type;}
+\DoxyCodeLine{5562 }
+\DoxyCodeLine{5563     \textcolor{keyword}{auto} duration                = tp.time\_since\_epoch();}
+\DoxyCodeLine{5564     seconds\_type s               = std::chrono::duration\_cast<seconds\_type>(duration);}
+\DoxyCodeLine{5565     microseconds\_type us         = std::chrono::duration\_cast<microseconds\_type>(duration);}
+\DoxyCodeLine{5566     microseconds\_type partial\_us = us -\/ std::chrono::duration\_cast<microseconds\_type>(s);}
+\DoxyCodeLine{5567 }
+\DoxyCodeLine{5568     timeStamp.\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_ac8c0f1d9f06177d7dd8568261fe14dac}{seconds}}(s.count()).\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_a6330ea6b06cdce2b2a30098f3ec87a9a}{microseconds}}(\textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}(partial\_us.count()));}
+\DoxyCodeLine{5569 }
+\DoxyCodeLine{5570     \textcolor{keywordflow}{return} timeStamp;}
+\DoxyCodeLine{5571 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_a6330ea6b06cdce2b2a30098f3ec87a9a}{cluon\+::data\+::\+Time\+Stamp\+::microseconds()}}, and \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_ac8c0f1d9f06177d7dd8568261fe14dac}{cluon\+::data\+::\+Time\+Stamp\+::seconds()}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1OD4Session_a18f8a4c5d912a6749402df490e4a9b6a}{cluon\+::\+OD4\+Session\+::callback()}}, and \mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{now()}}.
+
+Here is the call graph for this function\+:
+% FIG 0
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{namespacecluon_1_1time_aa5df8cf81744594280e72ccd68641a61}\label{namespacecluon_1_1time_aa5df8cf81744594280e72ccd68641a61}} 
+\index{cluon::time@{cluon::time}!deltaInMicroseconds@{deltaInMicroseconds}}
+\index{deltaInMicroseconds@{deltaInMicroseconds}!cluon::time@{cluon::time}}
+\doxysubsubsection{\texorpdfstring{deltaInMicroseconds()}{deltaInMicroseconds()}}
+{\footnotesize\ttfamily int64\+\_\+t cluon\+::time\+::delta\+In\+Microseconds (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \&}]{AFTER,  }\item[{const \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \&}]{BEFORE }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em AFTER} & First time stamp. \\
+\hline
+{\em BEFORE} & Second time stamp. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Delta (BEFORE -\/ AFTER) between two Time\+Stamps in microseconds. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5548                                                                                                                \{}
+\DoxyCodeLine{5549     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacecluon_1_1time_ad7e0afa86b32cbb3e78b392664d0793a}{toMicroseconds}}(AFTER) -\/ \mbox{\hyperlink{namespacecluon_1_1time_ad7e0afa86b32cbb3e78b392664d0793a}{toMicroseconds}}(BEFORE);}
+\DoxyCodeLine{5550 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_1_1time_ad7e0afa86b32cbb3e78b392664d0793a}{to\+Microseconds()}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1Player_a93d9d6f11bb8f22ad392c746e5048a3e}{cluon\+::\+Player\+::initialize\+Index()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{namespacecluon_1_1time_aaaaf69a9fdcb95852e49500b879d192e}\label{namespacecluon_1_1time_aaaaf69a9fdcb95852e49500b879d192e}} 
+\index{cluon::time@{cluon::time}!fromMicroseconds@{fromMicroseconds}}
+\index{fromMicroseconds@{fromMicroseconds}!cluon::time@{cluon::time}}
+\doxysubsubsection{\texorpdfstring{fromMicroseconds()}{fromMicroseconds()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} cluon\+::time\+::from\+Microseconds (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{tp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tp} & to be converted to Time\+Stamp. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Time\+Stamp converted from microseconds. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5529                                                                 \{}
+\DoxyCodeLine{5530     \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon::data::TimeStamp}} ts;}
+\DoxyCodeLine{5531     ts.\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_ac8c0f1d9f06177d7dd8568261fe14dac}{seconds}}(\textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}(tp / \textcolor{keyword}{static\_cast<}int64\_t\textcolor{keyword}{>}(1000 * 1000))).\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_a6330ea6b06cdce2b2a30098f3ec87a9a}{microseconds}}(\textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}(tp \% \textcolor{keyword}{static\_cast<}int64\_t\textcolor{keyword}{>}(1000 * 1000)));}
+\DoxyCodeLine{5532     \textcolor{keywordflow}{return} ts;}
+\DoxyCodeLine{5533 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_a6330ea6b06cdce2b2a30098f3ec87a9a}{cluon\+::data\+::\+Time\+Stamp\+::microseconds()}}, and \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_ac8c0f1d9f06177d7dd8568261fe14dac}{cluon\+::data\+::\+Time\+Stamp\+::seconds()}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}\label{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}} 
+\index{cluon::time@{cluon::time}!now@{now}}
+\index{now@{now}!cluon::time@{cluon::time}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} cluon\+::time\+::now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Time\+Stamp of now from std\+::chrono\+::system\+\_\+clock. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5576                                          \{}
+\DoxyCodeLine{5577     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacecluon_1_1time_ae2df73301f037b992abdb8b66c5e35b3}{convert}}(\mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{std::chrono::system\_clock::now}}());}
+\DoxyCodeLine{5578 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_1_1time_ae2df73301f037b992abdb8b66c5e35b3}{convert()}}, and \mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{now()}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1EnvelopeConverter_a8416ac700d2c3c656260e2ea4b002397}{cluon\+::\+Envelope\+Converter\+::get\+Proto\+Encoded\+Envelope\+From\+JSON()}}, \mbox{\hyperlink{classcluon_1_1Player_a93d9d6f11bb8f22ad392c746e5048a3e}{cluon\+::\+Player\+::initialize\+Index()}}, \mbox{\hyperlink{opencv-template_8cpp_af19ddca125f05a2090dd132045573ee4}{main()}}, \mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{now()}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_abacf832ad3a811b596fe7eb6d88f92b7}{cluon\+::\+UDPReceiver\+::read\+From\+Socket()}}, \mbox{\hyperlink{classcluon_1_1TCPConnection_a9f721a3fc2aa7c3c49859c2d2895953b}{cluon\+::\+TCPConnection\+::read\+From\+Socket()}}, \mbox{\hyperlink{classcluon_1_1OD4Session_a01745bfed160ac4fd16c71828672e7e8}{cluon\+::\+OD4\+Session\+::send()}}, and \mbox{\hyperlink{classcluon_1_1OD4Session_a2bd324b893072614ba917e5f1fd1cdc2}{cluon\+::\+OD4\+Session\+::time\+Trigger()}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{namespacecluon_1_1time_ad7e0afa86b32cbb3e78b392664d0793a}\label{namespacecluon_1_1time_ad7e0afa86b32cbb3e78b392664d0793a}} 
+\index{cluon::time@{cluon::time}!toMicroseconds@{toMicroseconds}}
+\index{toMicroseconds@{toMicroseconds}!cluon::time@{cluon::time}}
+\doxysubsubsection{\texorpdfstring{toMicroseconds()}{toMicroseconds()}}
+{\footnotesize\ttfamily int64\+\_\+t cluon\+::time\+::to\+Microseconds (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \&}]{tp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tp} & to be converted to microseconds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Time\+Stamp converted to microseconds. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5539                                                                      \{}
+\DoxyCodeLine{5540     \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}int64\_t\textcolor{keyword}{>}(tp.\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_ac8c0f1d9f06177d7dd8568261fe14dac}{seconds}}()) * \textcolor{keyword}{static\_cast<}int64\_t\textcolor{keyword}{>}(1000 * 1000) + \textcolor{keyword}{static\_cast<}int64\_t\textcolor{keyword}{>}(tp.\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_a6330ea6b06cdce2b2a30098f3ec87a9a}{microseconds}}());}
+\DoxyCodeLine{5541 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{namespacecluon_1_1time_aa5df8cf81744594280e72ccd68641a61}{delta\+In\+Microseconds()}}, \mbox{\hyperlink{classcluon_1_1Player_a93d9d6f11bb8f22ad392c746e5048a3e}{cluon\+::\+Player\+::initialize\+Index()}}, \mbox{\hyperlink{opencv-template_8cpp_af19ddca125f05a2090dd132045573ee4}{main()}}, and \mbox{\hyperlink{classcluon_1_1OD4Session_a2bd324b893072614ba917e5f1fd1cdc2}{cluon\+::\+OD4\+Session\+::time\+Trigger()}}.
+
+Here is the caller graph for this function\+:
+% FIG 7

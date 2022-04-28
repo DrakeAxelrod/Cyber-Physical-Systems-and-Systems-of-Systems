@@ -1,0 +1,262 @@
+\hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{}\doxysection{opendlv\+::logic\+::perception\+::Ground\+Surface Class Reference}
+\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface}\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+
+
+{\ttfamily \#include $<$opendlv-\/standard-\/message-\/set.\+hpp$>$}
+
+
+
+Collaboration diagram for opendlv\+::logic\+::perception\+::Ground\+Surface\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a2868a454599a7a44bb4f6321656a1c27}{Ground\+Surface}} ()=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a22ead0a6c4311c0c1a7f1548be935cb6}{Ground\+Surface}} (const \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \& \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a3c5f673df023e73628f0ecc921cdd76d}{operator=}} (const \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_abe7a712f395a0443e7222e597e61bee9}{Ground\+Surface}} (\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \&\&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \& \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_affbdfd979268a2bd018c3d32510cdf49}{operator=}} (\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \&\&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a72fc6f4c0ead83d504e3defdafca7b2b}{$\sim$\+Ground\+Surface}} ()=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \& \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_ae1b2276f696a011025a178d4a29f1e45}{surface\+Id}} (const uint32\+\_\+t \&v) noexcept
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_aac094f8cfcf0d8ce85c0ebaae0369fe8}{surface\+Id}} () const noexcept
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_af5eb261d2a77f6f00c4bbfefe9dd857a}{accept}} (uint32\+\_\+t field\+Id, Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a9dc0c4828400e2c9b728c48d8470620a}{accept}} (Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a81c55a437ba04060dc9497f59a56f62b}{accept}} (Pre\+Visitor \&\&pre\+Visit, Visitor \&\&visit, Post\+Visitor \&\&post\+Visit)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int32\+\_\+t \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a6037921263e2a39bf906305fd5894519}{ID}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_ae6ad8c03dc89a286440540c1e30399f3}{Short\+Name}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a7c2df30890dc3ab2869cd7ae12a73587}{Long\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a334e40f8b4d0675eec954b9bf1326fb1}{m\+\_\+surface\+Id}} \{ 0 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a67f5a6a4fac59ace5d6399c83e81f1f5}{The\+Short\+Name}} = \char`\"{}Ground\+Surface\char`\"{}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a7b709e07ec11f0208ae7b69dd960f1f7}{The\+Long\+Name}} = \char`\"{}opendlv.\+logic.\+perception.\+Ground\+Surface\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a2868a454599a7a44bb4f6321656a1c27}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a2868a454599a7a44bb4f6321656a1c27}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!GroundSurface@{GroundSurface}}
+\index{GroundSurface@{GroundSurface}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{GroundSurface()}{GroundSurface()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::\+Ground\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a22ead0a6c4311c0c1a7f1548be935cb6}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a22ead0a6c4311c0c1a7f1548be935cb6}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!GroundSurface@{GroundSurface}}
+\index{GroundSurface@{GroundSurface}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{GroundSurface()}{GroundSurface()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::\+Ground\+Surface (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_abe7a712f395a0443e7222e597e61bee9}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_abe7a712f395a0443e7222e597e61bee9}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!GroundSurface@{GroundSurface}}
+\index{GroundSurface@{GroundSurface}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{GroundSurface()}{GroundSurface()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::\+Ground\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a72fc6f4c0ead83d504e3defdafca7b2b}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a72fc6f4c0ead83d504e3defdafca7b2b}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!````~GroundSurface@{$\sim$GroundSurface}}
+\index{````~GroundSurface@{$\sim$GroundSurface}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{$\sim$GroundSurface()}{~GroundSurface()}}
+{\footnotesize\ttfamily opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::$\sim$\+Ground\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a81c55a437ba04060dc9497f59a56f62b}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a81c55a437ba04060dc9497f59a56f62b}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!accept@{accept}}
+\index{accept@{accept}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ \\
+void opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::accept (\begin{DoxyParamCaption}\item[{Pre\+Visitor \&\&}]{pre\+Visit,  }\item[{Visitor \&\&}]{visit,  }\item[{Post\+Visitor \&\&}]{post\+Visit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10763                                                                                             \{}
+\DoxyCodeLine{10764             (void)visit; \textcolor{comment}{// Prevent warnings from empty messages.}}
+\DoxyCodeLine{10765             std::forward<PreVisitor>(preVisit)(\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a6037921263e2a39bf906305fd5894519}{ID}}(), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_ae6ad8c03dc89a286440540c1e30399f3}{ShortName}}(), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a7c2df30890dc3ab2869cd7ae12a73587}{LongName}}());}
+\DoxyCodeLine{10766             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(1, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}surfaceId"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a334e40f8b4d0675eec954b9bf1326fb1}{m\_surfaceId}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{10767             std::forward<PostVisitor>(postVisit)();}
+\DoxyCodeLine{10768         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{do\+Triplet\+Forward\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_af5eb261d2a77f6f00c4bbfefe9dd857a}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_af5eb261d2a77f6f00c4bbfefe9dd857a}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!accept@{accept}}
+\index{accept@{accept}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::accept (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Id,  }\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10744                                                                \{}
+\DoxyCodeLine{10745             (void)fieldId;}
+\DoxyCodeLine{10746             (void)visitor;}
+\DoxyCodeLine{10747 \textcolor{comment}{//            visitor.preVisit(ID(), ShortName(), LongName());}}
+\DoxyCodeLine{10748             \textcolor{keywordflow}{if} (1 == fieldId) \{}
+\DoxyCodeLine{10749                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}surfaceId"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a334e40f8b4d0675eec954b9bf1326fb1}{m\_surfaceId}}, visitor);}
+\DoxyCodeLine{10750                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{10751             \}}
+\DoxyCodeLine{10752 \textcolor{comment}{//            visitor.postVisit();}}
+\DoxyCodeLine{10753         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a9dc0c4828400e2c9b728c48d8470620a}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a9dc0c4828400e2c9b728c48d8470620a}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!accept@{accept}}
+\index{accept@{accept}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::accept (\begin{DoxyParamCaption}\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10756                                              \{}
+\DoxyCodeLine{10757             visitor.preVisit(\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a6037921263e2a39bf906305fd5894519}{ID}}(), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_ae6ad8c03dc89a286440540c1e30399f3}{ShortName}}(), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a7c2df30890dc3ab2869cd7ae12a73587}{LongName}}());}
+\DoxyCodeLine{10758             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}surfaceId"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a334e40f8b4d0675eec954b9bf1326fb1}{m\_surfaceId}}, visitor);}
+\DoxyCodeLine{10759             visitor.postVisit();}
+\DoxyCodeLine{10760         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a6037921263e2a39bf906305fd5894519}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a6037921263e2a39bf906305fd5894519}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!ID@{ID}}
+\index{ID@{ID}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{ID()}{ID()}}
+{\footnotesize\ttfamily static int32\+\_\+t opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10715                                    \{}
+\DoxyCodeLine{10716             \textcolor{keywordflow}{return} 1140;}
+\DoxyCodeLine{10717         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a7c2df30890dc3ab2869cd7ae12a73587}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a7c2df30890dc3ab2869cd7ae12a73587}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!LongName@{LongName}}
+\index{LongName@{LongName}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{LongName()}{LongName()}}
+{\footnotesize\ttfamily static const std\+::string opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::\+Long\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10721                                                  \{}
+\DoxyCodeLine{10722             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a7b709e07ec11f0208ae7b69dd960f1f7}{TheLongName}};}
+\DoxyCodeLine{10723         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a3c5f673df023e73628f0ecc921cdd76d}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a3c5f673df023e73628f0ecc921cdd76d}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!operator=@{operator=}}
+\index{operator=@{operator=}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \& opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_affbdfd979268a2bd018c3d32510cdf49}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_affbdfd979268a2bd018c3d32510cdf49}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!operator=@{operator=}}
+\index{operator=@{operator=}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \& opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_ae6ad8c03dc89a286440540c1e30399f3}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_ae6ad8c03dc89a286440540c1e30399f3}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!ShortName@{ShortName}}
+\index{ShortName@{ShortName}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{ShortName()}{ShortName()}}
+{\footnotesize\ttfamily static const std\+::string opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::\+Short\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10718                                                   \{}
+\DoxyCodeLine{10719             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a67f5a6a4fac59ace5d6399c83e81f1f5}{TheShortName}};}
+\DoxyCodeLine{10720         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_aac094f8cfcf0d8ce85c0ebaae0369fe8}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_aac094f8cfcf0d8ce85c0ebaae0369fe8}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!surfaceId@{surfaceId}}
+\index{surfaceId@{surfaceId}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{surfaceId()}{surfaceId()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::surface\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10738                                                    \{}
+\DoxyCodeLine{10739             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a334e40f8b4d0675eec954b9bf1326fb1}{m\_surfaceId}};}
+\DoxyCodeLine{10740         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_ae1b2276f696a011025a178d4a29f1e45}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_ae1b2276f696a011025a178d4a29f1e45}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!surfaceId@{surfaceId}}
+\index{surfaceId@{surfaceId}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{surfaceId()}{surfaceId()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface}{Ground\+Surface}} \& opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::surface\+Id (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10734                                                                     \{}
+\DoxyCodeLine{10735             \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a334e40f8b4d0675eec954b9bf1326fb1}{m\_surfaceId}} = v;}
+\DoxyCodeLine{10736             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{10737         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a334e40f8b4d0675eec954b9bf1326fb1}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a334e40f8b4d0675eec954b9bf1326fb1}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!m\_surfaceId@{m\_surfaceId}}
+\index{m\_surfaceId@{m\_surfaceId}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{m\_surfaceId}{m\_surfaceId}}
+{\footnotesize\ttfamily uint32\+\_\+t opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::m\+\_\+surface\+Id \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a7b709e07ec11f0208ae7b69dd960f1f7}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a7b709e07ec11f0208ae7b69dd960f1f7}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!TheLongName@{TheLongName}}
+\index{TheLongName@{TheLongName}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{TheLongName}{TheLongName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::\+The\+Long\+Name = \char`\"{}opendlv.\+logic.\+perception.\+Ground\+Surface\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a67f5a6a4fac59ace5d6399c83e81f1f5}\label{classopendlv_1_1logic_1_1perception_1_1GroundSurface_a67f5a6a4fac59ace5d6399c83e81f1f5}} 
+\index{opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}!TheShortName@{TheShortName}}
+\index{TheShortName@{TheShortName}!opendlv::logic::perception::GroundSurface@{opendlv::logic::perception::GroundSurface}}
+\doxysubsubsection{\texorpdfstring{TheShortName}{TheShortName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ opendlv\+::logic\+::perception\+::\+Ground\+Surface\+::\+The\+Short\+Name = \char`\"{}Ground\+Surface\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{opendlv-standard-message-set_8hpp}{opendlv-\/standard-\/message-\/set.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,624 @@
+\hypertarget{classcluon_1_1ToCSVVisitor}{}\doxysection{cluon\+::To\+CSVVisitor Class Reference}
+\label{classcluon_1_1ToCSVVisitor}\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for cluon\+::To\+CSVVisitor\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ab6f89da15ddfaaeddf3244f91999dd40}{To\+CSVVisitor}} (char delimiter=\textquotesingle{};\textquotesingle{}, bool with\+Header=true, const std\+::map$<$ uint32\+\_\+t, bool $>$ \&mask=\{\}) noexcept
+\item 
+std\+::string \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a47ad4c1e54208767ce93f469754f73a3}{csv}} () const noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a34b6ff04e86a80f58ae5b9e23fb25e41}{clear}} () noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ae346e9fa2a056a2a25ed5d9e35d1dbbf}{pre\+Visit}} (int32\+\_\+t id, const std\+::string \&short\+Name, const std\+::string \&long\+Name) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a05634b78ee4bbf93ddf37342b2f9e24f}{post\+Visit}} () noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_afddbb674286862c70c1ffac6677ccee9}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, bool \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a643c972a344ef08ab651bbdd1674e325}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, char \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a747cfc63e34a4984de0415615f3e745a}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int8\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_acc06ca8bbb79dc25ef635a5c6bfbeb06}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint8\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a13f1067f1fa7ef557ba0f1383b25135c}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int16\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ae0a93d40b9a8eecd477f5b2a1ac9bf58}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint16\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a450c0fd24395567932f66d8b4ad2113d}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int32\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a7735315c4bcfe579c7b1be3f385e338a}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint32\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a7dfaa7f93db34a8e8cd9d0a2b4dbeeef}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, int64\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_adca6a128ea7ba8b276b51be75217bebe}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, uint64\+\_\+t \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ab2b7bbffe822debbb20c7927fe1e68c8}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, float \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a3c39515d56226318e9498d53dce038f8}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, double \&v) noexcept
+\item 
+void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a8cbc1ffd005d536db7cb346636887491}{visit}} (uint32\+\_\+t id, std\+::string \&\&type\+Name, std\+::string \&\&name, std\+::string \&v) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ab227010d60409d97c6c3aa0af836e66e}{visit}} (uint32\+\_\+t \&id, std\+::string \&\&type\+Name, std\+::string \&\&name, T \&value) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af24a84c3b3de7774d8de8f6e6ad1f34e}{To\+CSVVisitor}} (const std\+::string \&prefix, char delimiter, bool with\+Header, bool is\+Nested) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a09ceef94928a36e3d29fd44c42a91b19}{To\+CSVVisitor}} (const \mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{To\+CSVVisitor}} \&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_acfb158c08c2edfc9be1b54774b11d646}{To\+CSVVisitor}} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{To\+CSVVisitor}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{To\+CSVVisitor}} \& \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af7493e6f6c3ca2acdcd5cff1b8e5d571}{operator=}} (const \mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{To\+CSVVisitor}} \&)=delete
+\item 
+\mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{To\+CSVVisitor}} \& \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_add78c7a65808a88aa81c874233a5e803}{operator=}} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{To\+CSVVisitor}} \&\&)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ uint32\+\_\+t, bool $>$ \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\+\_\+mask}} \{\}
+\item 
+std\+::string \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\+\_\+prefix}} \{\}
+\item 
+char \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\+\_\+delimiter}} \{\textquotesingle{};\textquotesingle{}\}
+\item 
+bool \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a0af883ed43ed5f9b4e3fc69799d44735}{m\+\_\+with\+Header}} \{true\}
+\item 
+bool \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ab1f45d998e7e3c184047a880bdf0b9a0}{m\+\_\+is\+Nested}} \{false\}
+\item 
+bool \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\+\_\+fill\+Header}} \{true\}
+\item 
+std\+::stringstream \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\+\_\+buffer\+Header}} \{\}
+\item 
+std\+::stringstream \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\+\_\+buffer\+Values}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class provides a visitor to transform a message into CSV with user-\/specified delimiters and optional column headers\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{MyMessage msg;}
+\DoxyCodeLine{\textcolor{comment}{// Set some values in msg.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{cluon::ToCSVVisitor}} \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a47ad4c1e54208767ce93f469754f73a3}{csv}}\{\textcolor{charliteral}{','}, \textcolor{keyword}{true}\};}
+\DoxyCodeLine{msg.accept(\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a47ad4c1e54208767ce93f469754f73a3}{csv}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{std::cout << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a47ad4c1e54208767ce93f469754f73a3}{csv}}.csv() << std::endl;}
+
+\end{DoxyCode}
+
+
+Subsequent use of this visitor will append the data (please keep in mind to not change the visited messages in between as the generated CSV data will be messed up otherwise). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a09ceef94928a36e3d29fd44c42a91b19}\label{classcluon_1_1ToCSVVisitor_a09ceef94928a36e3d29fd44c42a91b19}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!ToCSVVisitor@{ToCSVVisitor}}
+\index{ToCSVVisitor@{ToCSVVisitor}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{ToCSVVisitor()}{ToCSVVisitor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily cluon\+::\+To\+CSVVisitor\+::\+To\+CSVVisitor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{To\+CSVVisitor}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_acfb158c08c2edfc9be1b54774b11d646}\label{classcluon_1_1ToCSVVisitor_acfb158c08c2edfc9be1b54774b11d646}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!ToCSVVisitor@{ToCSVVisitor}}
+\index{ToCSVVisitor@{ToCSVVisitor}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{ToCSVVisitor()}{ToCSVVisitor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily cluon\+::\+To\+CSVVisitor\+::\+To\+CSVVisitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{To\+CSVVisitor}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_ab6f89da15ddfaaeddf3244f91999dd40}\label{classcluon_1_1ToCSVVisitor_ab6f89da15ddfaaeddf3244f91999dd40}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!ToCSVVisitor@{ToCSVVisitor}}
+\index{ToCSVVisitor@{ToCSVVisitor}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{ToCSVVisitor()}{ToCSVVisitor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily cluon\+::\+To\+CSVVisitor\+::\+To\+CSVVisitor (\begin{DoxyParamCaption}\item[{char}]{delimiter = {\ttfamily \textquotesingle{};\textquotesingle{}},  }\item[{bool}]{with\+Header = {\ttfamily true},  }\item[{const std\+::map$<$ uint32\+\_\+t, bool $>$ \&}]{mask = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delimiter} & Delimiter character. \\
+\hline
+{\em with\+Header} & If true, the first line in the output contains the column headers. \\
+\hline
+{\em mask} & Map describing which fields to render. If empty, all fields will be emitted; individual field identifiers can be masked setting them to false. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13172     : \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}(mask)}
+\DoxyCodeLine{13173     , \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}(\textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{13174     , \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}}(delimiter)}
+\DoxyCodeLine{13175     , \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a0af883ed43ed5f9b4e3fc69799d44735}{m\_withHeader}}(withHeader)}
+\DoxyCodeLine{13176     , \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ab1f45d998e7e3c184047a880bdf0b9a0}{m\_isNested}}(\textcolor{keyword}{false}) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_af24a84c3b3de7774d8de8f6e6ad1f34e}\label{classcluon_1_1ToCSVVisitor_af24a84c3b3de7774d8de8f6e6ad1f34e}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!ToCSVVisitor@{ToCSVVisitor}}
+\index{ToCSVVisitor@{ToCSVVisitor}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{ToCSVVisitor()}{ToCSVVisitor()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily cluon\+::\+To\+CSVVisitor\+::\+To\+CSVVisitor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{prefix,  }\item[{char}]{delimiter,  }\item[{bool}]{with\+Header,  }\item[{bool}]{is\+Nested }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [noexcept]}}
+
+Constructor for internal use.
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & Prefix to prepend per column header. \\
+\hline
+{\em delimiter} & Delimiter character. \\
+\hline
+{\em with\+Header} & If true, the first line in the output contains the column headers. \\
+\hline
+{\em is\+Nested} & If true, the returned CSV values do not have a trailing new line. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13179     : \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}(prefix)}
+\DoxyCodeLine{13180     , \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}}(delimiter)}
+\DoxyCodeLine{13181     , \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a0af883ed43ed5f9b4e3fc69799d44735}{m\_withHeader}}(withHeader)}
+\DoxyCodeLine{13182     , \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ab1f45d998e7e3c184047a880bdf0b9a0}{m\_isNested}}(isNested) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a34b6ff04e86a80f58ae5b9e23fb25e41}\label{classcluon_1_1ToCSVVisitor_a34b6ff04e86a80f58ae5b9e23fb25e41}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!clear@{clear}}
+\index{clear@{clear}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+This method clears the containing CSV data. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13184                                          \{}
+\DoxyCodeLine{13185     \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}}.str(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{13186     \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}}.str(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{13187     \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{13188 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\+\_\+buffer\+Header}}, \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\+\_\+buffer\+Values}}, and \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\+\_\+fill\+Header}}.
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a47ad4c1e54208767ce93f469754f73a3}\label{classcluon_1_1ToCSVVisitor_a47ad4c1e54208767ce93f469754f73a3}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!csv@{csv}}
+\index{csv@{csv}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{csv()}{csv()}}
+{\footnotesize\ttfamily std\+::string cluon\+::\+To\+CSVVisitor\+::csv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+CSV-\/encoded data. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13190                                                   \{}
+\DoxyCodeLine{13191     std::stringstream tmp;}
+\DoxyCodeLine{13192     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a0af883ed43ed5f9b4e3fc69799d44735}{m\_withHeader}}) \{}
+\DoxyCodeLine{13193         tmp << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}}.str();}
+\DoxyCodeLine{13194     \}}
+\DoxyCodeLine{13195     tmp << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}}.str();}
+\DoxyCodeLine{13196     \textcolor{keyword}{const} std::string \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}}\{tmp.str()\};}
+\DoxyCodeLine{13197     \textcolor{keywordflow}{return} \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}};}
+\DoxyCodeLine{13198 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\+\_\+buffer\+Header}}, \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\+\_\+buffer\+Values}}, \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a0af883ed43ed5f9b4e3fc69799d44735}{m\+\_\+with\+Header}}, and \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{ret\+Val}}.
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_af7493e6f6c3ca2acdcd5cff1b8e5d571}\label{classcluon_1_1ToCSVVisitor_af7493e6f6c3ca2acdcd5cff1b8e5d571}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{To\+CSVVisitor}} \& cluon\+::\+To\+CSVVisitor\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{To\+CSVVisitor}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_add78c7a65808a88aa81c874233a5e803}\label{classcluon_1_1ToCSVVisitor_add78c7a65808a88aa81c874233a5e803}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{To\+CSVVisitor}} \& cluon\+::\+To\+CSVVisitor\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{To\+CSVVisitor}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a05634b78ee4bbf93ddf37342b2f9e24f}\label{classcluon_1_1ToCSVVisitor_a05634b78ee4bbf93ddf37342b2f9e24f}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!postVisit@{postVisit}}
+\index{postVisit@{postVisit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{postVisit()}{postVisit()}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::post\+Visit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13206                                              \{}
+\DoxyCodeLine{13207     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13208         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ab1f45d998e7e3c184047a880bdf0b9a0}{m\_isNested}} ? \textcolor{stringliteral}{"{}"{}} : \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{13209     \}}
+\DoxyCodeLine{13210     \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{13211     \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ab1f45d998e7e3c184047a880bdf0b9a0}{m\_isNested}} ? \textcolor{stringliteral}{"{}"{}} : \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{13212 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\+\_\+buffer\+Header}}, \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\+\_\+buffer\+Values}}, \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\+\_\+fill\+Header}}, and \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ab1f45d998e7e3c184047a880bdf0b9a0}{m\+\_\+is\+Nested}}.
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_ae346e9fa2a056a2a25ed5d9e35d1dbbf}\label{classcluon_1_1ToCSVVisitor_ae346e9fa2a056a2a25ed5d9e35d1dbbf}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!preVisit@{preVisit}}
+\index{preVisit@{preVisit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{preVisit()}{preVisit()}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::pre\+Visit (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{id,  }\item[{const std\+::string \&}]{short\+Name,  }\item[{const std\+::string \&}]{long\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13200                                                                                                              \{}
+\DoxyCodeLine{13201     (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{13202     (void)shortName;}
+\DoxyCodeLine{13203     (void)longName;}
+\DoxyCodeLine{13204 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_ab227010d60409d97c6c3aa0af836e66e}\label{classcluon_1_1ToCSVVisitor_ab227010d60409d97c6c3aa0af836e66e}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/14]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \&}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7699                                                                                         \{}
+\DoxyCodeLine{7700         (void)\textcolor{keywordtype}{id};}
+\DoxyCodeLine{7701         (void)typeName;}
+\DoxyCodeLine{7702         \textcolor{keyword}{constexpr} \textcolor{keywordtype}{bool} IS\_NESTED\{\textcolor{keyword}{true}\};}
+\DoxyCodeLine{7703         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a09ceef94928a36e3d29fd44c42a91b19}{ToCSVVisitor}} csvVisitor(name, \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}}, \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a0af883ed43ed5f9b4e3fc69799d44735}{m\_withHeader}}, IS\_NESTED);}
+\DoxyCodeLine{7704         value.accept(csvVisitor);}
+\DoxyCodeLine{7705 }
+\DoxyCodeLine{7706         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{7707             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << csvVisitor.m\_bufferHeader.str();}
+\DoxyCodeLine{7708         \}}
+\DoxyCodeLine{7709         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << csvVisitor.m\_bufferValues.str();}
+\DoxyCodeLine{7710     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\+\_\+buffer\+Header}}, and \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\+\_\+buffer\+Values}}.
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_afddbb674286862c70c1ffac6677ccee9}\label{classcluon_1_1ToCSVVisitor_afddbb674286862c70c1ffac6677ccee9}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{bool \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13214                                                                                                      \{}
+\DoxyCodeLine{13215     (void)typeName;}
+\DoxyCodeLine{13216     \textcolor{keywordflow}{if} ((0 == \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}.count(\textcolor{keywordtype}{id})) || \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}[id]) \{}
+\DoxyCodeLine{13217         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13218             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}} << (!\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}.empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) << name << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13219         \}}
+\DoxyCodeLine{13220         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << v << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13221     \}}
+\DoxyCodeLine{13222 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a643c972a344ef08ab651bbdd1674e325}\label{classcluon_1_1ToCSVVisitor_a643c972a344ef08ab651bbdd1674e325}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{char \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13224                                                                                                      \{}
+\DoxyCodeLine{13225     (void)typeName;}
+\DoxyCodeLine{13226     \textcolor{keywordflow}{if} ((0 == \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}.count(\textcolor{keywordtype}{id})) || \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}[id]) \{}
+\DoxyCodeLine{13227         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13228             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}} << (!\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}.empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) << name << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13229         \}}
+\DoxyCodeLine{13230         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << v << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13231     \}}
+\DoxyCodeLine{13232 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a3c39515d56226318e9498d53dce038f8}\label{classcluon_1_1ToCSVVisitor_a3c39515d56226318e9498d53dce038f8}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{double \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13324                                                                                                        \{}
+\DoxyCodeLine{13325     (void)typeName;}
+\DoxyCodeLine{13326     \textcolor{keywordflow}{if} ((0 == \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}.count(\textcolor{keywordtype}{id})) || \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}[id]) \{}
+\DoxyCodeLine{13327         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13328             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}} << (!\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}.empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) << name << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13329         \}}
+\DoxyCodeLine{13330         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << std::setprecision(11) << v << std::setprecision(6) << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13331     \}}
+\DoxyCodeLine{13332 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_ab2b7bbffe822debbb20c7927fe1e68c8}\label{classcluon_1_1ToCSVVisitor_ab2b7bbffe822debbb20c7927fe1e68c8}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [5/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{float \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13314                                                                                                       \{}
+\DoxyCodeLine{13315     (void)typeName;}
+\DoxyCodeLine{13316     \textcolor{keywordflow}{if} ((0 == \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}.count(\textcolor{keywordtype}{id})) || \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}[id]) \{}
+\DoxyCodeLine{13317         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13318             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}} << (!\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}.empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) << name << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13319         \}}
+\DoxyCodeLine{13320         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << std::setprecision(7) << v << std::setprecision(6) << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13321     \}}
+\DoxyCodeLine{13322 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a13f1067f1fa7ef557ba0f1383b25135c}\label{classcluon_1_1ToCSVVisitor_a13f1067f1fa7ef557ba0f1383b25135c}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [6/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int16\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13254                                                                                                         \{}
+\DoxyCodeLine{13255     (void)typeName;}
+\DoxyCodeLine{13256     \textcolor{keywordflow}{if} ((0 == \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}.count(\textcolor{keywordtype}{id})) || \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}[id]) \{}
+\DoxyCodeLine{13257         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13258             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}} << (!\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}.empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) << name << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13259         \}}
+\DoxyCodeLine{13260         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << v << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13261     \}}
+\DoxyCodeLine{13262 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a450c0fd24395567932f66d8b4ad2113d}\label{classcluon_1_1ToCSVVisitor_a450c0fd24395567932f66d8b4ad2113d}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [7/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13274                                                                                                         \{}
+\DoxyCodeLine{13275     (void)typeName;}
+\DoxyCodeLine{13276     \textcolor{keywordflow}{if} ((0 == \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}.count(\textcolor{keywordtype}{id})) || \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}[id]) \{}
+\DoxyCodeLine{13277         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13278             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}} << (!\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}.empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) << name << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13279         \}}
+\DoxyCodeLine{13280         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << v << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13281     \}}
+\DoxyCodeLine{13282 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a7dfaa7f93db34a8e8cd9d0a2b4dbeeef}\label{classcluon_1_1ToCSVVisitor_a7dfaa7f93db34a8e8cd9d0a2b4dbeeef}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [8/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int64\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13294                                                                                                         \{}
+\DoxyCodeLine{13295     (void)typeName;}
+\DoxyCodeLine{13296     \textcolor{keywordflow}{if} ((0 == \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}.count(\textcolor{keywordtype}{id})) || \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}[id]) \{}
+\DoxyCodeLine{13297         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13298             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}} << (!\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}.empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) << name << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13299         \}}
+\DoxyCodeLine{13300         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << v << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13301     \}}
+\DoxyCodeLine{13302 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a747cfc63e34a4984de0415615f3e745a}\label{classcluon_1_1ToCSVVisitor_a747cfc63e34a4984de0415615f3e745a}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [9/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{int8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13234                                                                                                        \{}
+\DoxyCodeLine{13235     (void)typeName;}
+\DoxyCodeLine{13236     \textcolor{keywordflow}{if} ((0 == \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}.count(\textcolor{keywordtype}{id})) || \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}[id]) \{}
+\DoxyCodeLine{13237         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13238             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}} << (!\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}.empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) << name << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13239         \}}
+\DoxyCodeLine{13240         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << +v << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13241     \}}
+\DoxyCodeLine{13242 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a8cbc1ffd005d536db7cb346636887491}\label{classcluon_1_1ToCSVVisitor_a8cbc1ffd005d536db7cb346636887491}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [10/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13334                                                                                                           \{}
+\DoxyCodeLine{13335     (void)typeName;}
+\DoxyCodeLine{13336     \textcolor{keywordflow}{if} ((0 == \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}.count(\textcolor{keywordtype}{id})) || \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}[id]) \{}
+\DoxyCodeLine{13337         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13338             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}} << (!\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}.empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) << name << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13339         \}}
+\DoxyCodeLine{13340         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << \textcolor{charliteral}{'\(\backslash\)"{}'} << \mbox{\hyperlink{classcluon_1_1ToJSONVisitor_ac08e1291c4803adc8e53ba1887d64aed}{cluon::ToJSONVisitor::encodeBase64}}(v) << \textcolor{charliteral}{'\(\backslash\)"{}'} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13341     \}}
+\DoxyCodeLine{13342 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classcluon_1_1ToJSONVisitor_ac08e1291c4803adc8e53ba1887d64aed}{cluon\+::\+To\+JSONVisitor\+::encode\+Base64()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_ae0a93d40b9a8eecd477f5b2a1ac9bf58}\label{classcluon_1_1ToCSVVisitor_ae0a93d40b9a8eecd477f5b2a1ac9bf58}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [11/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint16\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13264                                                                                                          \{}
+\DoxyCodeLine{13265     (void)typeName;}
+\DoxyCodeLine{13266     \textcolor{keywordflow}{if} ((0 == \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}.count(\textcolor{keywordtype}{id})) || \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}[id]) \{}
+\DoxyCodeLine{13267         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13268             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}} << (!\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}.empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) << name << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13269         \}}
+\DoxyCodeLine{13270         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << v << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13271     \}}
+\DoxyCodeLine{13272 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a7735315c4bcfe579c7b1be3f385e338a}\label{classcluon_1_1ToCSVVisitor_a7735315c4bcfe579c7b1be3f385e338a}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [12/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13284                                                                                                          \{}
+\DoxyCodeLine{13285     (void)typeName;}
+\DoxyCodeLine{13286     \textcolor{keywordflow}{if} ((0 == \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}.count(\textcolor{keywordtype}{id})) || \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}[id]) \{}
+\DoxyCodeLine{13287         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13288             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}} << (!\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}.empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) << name << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13289         \}}
+\DoxyCodeLine{13290         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << v << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13291     \}}
+\DoxyCodeLine{13292 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_adca6a128ea7ba8b276b51be75217bebe}\label{classcluon_1_1ToCSVVisitor_adca6a128ea7ba8b276b51be75217bebe}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [13/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint64\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13304                                                                                                          \{}
+\DoxyCodeLine{13305     (void)typeName;}
+\DoxyCodeLine{13306     \textcolor{keywordflow}{if} ((0 == \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}.count(\textcolor{keywordtype}{id})) || \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}[id]) \{}
+\DoxyCodeLine{13307         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13308             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}} << (!\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}.empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) << name << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13309         \}}
+\DoxyCodeLine{13310         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << v << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13311     \}}
+\DoxyCodeLine{13312 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_acc06ca8bbb79dc25ef635a5c6bfbeb06}\label{classcluon_1_1ToCSVVisitor_acc06ca8bbb79dc25ef635a5c6bfbeb06}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!visit@{visit}}
+\index{visit@{visit}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [14/14]}}
+{\footnotesize\ttfamily void cluon\+::\+To\+CSVVisitor\+::visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{uint8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13244                                                                                                         \{}
+\DoxyCodeLine{13245     (void)typeName;}
+\DoxyCodeLine{13246     \textcolor{keywordflow}{if} ((0 == \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}.count(\textcolor{keywordtype}{id})) || \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}{m\_mask}}[id]) \{}
+\DoxyCodeLine{13247         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}{m\_fillHeader}}) \{}
+\DoxyCodeLine{13248             \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}{m\_bufferHeader}} << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}} << (!\mbox{\hyperlink{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}{m\_prefix}}.empty() ? \textcolor{stringliteral}{"{}."{}} : \textcolor{stringliteral}{"{}"{}}) << name << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13249         \}}
+\DoxyCodeLine{13250         \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}{m\_bufferValues}} << +v << \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}{m\_delimiter}};}
+\DoxyCodeLine{13251     \}}
+\DoxyCodeLine{13252 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}\label{classcluon_1_1ToCSVVisitor_a6c943eaf364f6a955de9a2be114d38db}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!m\_bufferHeader@{m\_bufferHeader}}
+\index{m\_bufferHeader@{m\_bufferHeader}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{m\_bufferHeader}{m\_bufferHeader}}
+{\footnotesize\ttfamily std\+::stringstream cluon\+::\+To\+CSVVisitor\+::m\+\_\+buffer\+Header \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a34b6ff04e86a80f58ae5b9e23fb25e41}{clear()}}, \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a47ad4c1e54208767ce93f469754f73a3}{csv()}}, \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a05634b78ee4bbf93ddf37342b2f9e24f}{post\+Visit()}}, and \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ab227010d60409d97c6c3aa0af836e66e}{visit()}}.
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}\label{classcluon_1_1ToCSVVisitor_a1531c55754a2c9d4bc68172dce70cb0b}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!m\_bufferValues@{m\_bufferValues}}
+\index{m\_bufferValues@{m\_bufferValues}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{m\_bufferValues}{m\_bufferValues}}
+{\footnotesize\ttfamily std\+::stringstream cluon\+::\+To\+CSVVisitor\+::m\+\_\+buffer\+Values \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a34b6ff04e86a80f58ae5b9e23fb25e41}{clear()}}, \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a47ad4c1e54208767ce93f469754f73a3}{csv()}}, \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a05634b78ee4bbf93ddf37342b2f9e24f}{post\+Visit()}}, and \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_ab227010d60409d97c6c3aa0af836e66e}{visit()}}.
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}\label{classcluon_1_1ToCSVVisitor_a6f636b93ac8456f046613c14ff2c39ca}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!m\_delimiter@{m\_delimiter}}
+\index{m\_delimiter@{m\_delimiter}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{m\_delimiter}{m\_delimiter}}
+{\footnotesize\ttfamily char cluon\+::\+To\+CSVVisitor\+::m\+\_\+delimiter \{\textquotesingle{};\textquotesingle{}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}\label{classcluon_1_1ToCSVVisitor_ac16277daf19a26c6060c6000f8039162}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!m\_fillHeader@{m\_fillHeader}}
+\index{m\_fillHeader@{m\_fillHeader}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{m\_fillHeader}{m\_fillHeader}}
+{\footnotesize\ttfamily bool cluon\+::\+To\+CSVVisitor\+::m\+\_\+fill\+Header \{true\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a34b6ff04e86a80f58ae5b9e23fb25e41}{clear()}}, and \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a05634b78ee4bbf93ddf37342b2f9e24f}{post\+Visit()}}.
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_ab1f45d998e7e3c184047a880bdf0b9a0}\label{classcluon_1_1ToCSVVisitor_ab1f45d998e7e3c184047a880bdf0b9a0}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!m\_isNested@{m\_isNested}}
+\index{m\_isNested@{m\_isNested}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{m\_isNested}{m\_isNested}}
+{\footnotesize\ttfamily bool cluon\+::\+To\+CSVVisitor\+::m\+\_\+is\+Nested \{false\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a05634b78ee4bbf93ddf37342b2f9e24f}{post\+Visit()}}.
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}\label{classcluon_1_1ToCSVVisitor_af98784abe1b4cc0d60e6627adcb82ff6}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!m\_mask@{m\_mask}}
+\index{m\_mask@{m\_mask}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{m\_mask}{m\_mask}}
+{\footnotesize\ttfamily std\+::map$<$uint32\+\_\+t, bool$>$ cluon\+::\+To\+CSVVisitor\+::m\+\_\+mask \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}\label{classcluon_1_1ToCSVVisitor_aa9b526f73708ea22df5b21a6a20ccf94}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!m\_prefix@{m\_prefix}}
+\index{m\_prefix@{m\_prefix}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{m\_prefix}{m\_prefix}}
+{\footnotesize\ttfamily std\+::string cluon\+::\+To\+CSVVisitor\+::m\+\_\+prefix \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1ToCSVVisitor_a0af883ed43ed5f9b4e3fc69799d44735}\label{classcluon_1_1ToCSVVisitor_a0af883ed43ed5f9b4e3fc69799d44735}} 
+\index{cluon::ToCSVVisitor@{cluon::ToCSVVisitor}!m\_withHeader@{m\_withHeader}}
+\index{m\_withHeader@{m\_withHeader}!cluon::ToCSVVisitor@{cluon::ToCSVVisitor}}
+\doxysubsubsection{\texorpdfstring{m\_withHeader}{m\_withHeader}}
+{\footnotesize\ttfamily bool cluon\+::\+To\+CSVVisitor\+::m\+\_\+with\+Header \{true\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a47ad4c1e54208767ce93f469754f73a3}{csv()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

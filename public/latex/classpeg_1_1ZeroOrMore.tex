@@ -1,0 +1,136 @@
+\hypertarget{classpeg_1_1ZeroOrMore}{}\doxysection{peg\+::Zero\+Or\+More Class Reference}
+\label{classpeg_1_1ZeroOrMore}\index{peg::ZeroOrMore@{peg::ZeroOrMore}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Inheritance diagram for peg\+::Zero\+Or\+More\+:
+% FIG 0
+
+
+Collaboration diagram for peg\+::Zero\+Or\+More\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpeg_1_1ZeroOrMore_a36254f8d048200dbbee16289a43bf2cf}{Zero\+Or\+More}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ \&ope)
+\item 
+size\+\_\+t \mbox{\hyperlink{classpeg_1_1ZeroOrMore_af6e8b9aec8dacb3a264d53096950583c}{parse}} (const char $\ast$s, size\+\_\+t n, \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1Context}{Context}} \&c, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt) const override
+\item 
+void \mbox{\hyperlink{classpeg_1_1ZeroOrMore_a824943894146a9d7c1f07e892ac088e5}{accept}} (\mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor}{Visitor}} \&v) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ \mbox{\hyperlink{classpeg_1_1ZeroOrMore_a0401401f3966efbceaeb7e33be2c4e03}{ope\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpeg_1_1ZeroOrMore_a36254f8d048200dbbee16289a43bf2cf}\label{classpeg_1_1ZeroOrMore_a36254f8d048200dbbee16289a43bf2cf}} 
+\index{peg::ZeroOrMore@{peg::ZeroOrMore}!ZeroOrMore@{ZeroOrMore}}
+\index{ZeroOrMore@{ZeroOrMore}!peg::ZeroOrMore@{peg::ZeroOrMore}}
+\doxysubsubsection{\texorpdfstring{ZeroOrMore()}{ZeroOrMore()}}
+{\footnotesize\ttfamily peg\+::\+Zero\+Or\+More\+::\+Zero\+Or\+More (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ \&}]{ope }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1537 : \mbox{\hyperlink{classpeg_1_1ZeroOrMore_a0401401f3966efbceaeb7e33be2c4e03}{ope\_}}(ope) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpeg_1_1ZeroOrMore_a824943894146a9d7c1f07e892ac088e5}\label{classpeg_1_1ZeroOrMore_a824943894146a9d7c1f07e892ac088e5}} 
+\index{peg::ZeroOrMore@{peg::ZeroOrMore}!accept@{accept}}
+\index{accept@{accept}!peg::ZeroOrMore@{peg::ZeroOrMore}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void peg\+::\+Zero\+Or\+More\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor}{Visitor}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpeg_1_1Ope_af57615cfe8938c0f4c9a0dd6df9da560}{peg\+::\+Ope}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2861 \{ v.visit(*\textcolor{keyword}{this}); \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor_ade8440f9ed92da93693329208ba10381}{peg\+::\+Ope\+::\+Visitor\+::visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classpeg_1_1ZeroOrMore_af6e8b9aec8dacb3a264d53096950583c}\label{classpeg_1_1ZeroOrMore_af6e8b9aec8dacb3a264d53096950583c}} 
+\index{peg::ZeroOrMore@{peg::ZeroOrMore}!parse@{parse}}
+\index{parse@{parse}!peg::ZeroOrMore@{peg::ZeroOrMore}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily size\+\_\+t peg\+::\+Zero\+Or\+More\+::parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&}]{sv,  }\item[{\mbox{\hyperlink{classpeg_1_1Context}{Context}} \&}]{c,  }\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{dt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpeg_1_1Ope_a431b9481130d91a0d51e97cffd8ace80}{peg\+::\+Ope}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1539                                                                                                   \{}
+\DoxyCodeLine{1540         c.trace(\textcolor{stringliteral}{"{}ZeroOrMore"{}}, s, n, sv, dt);}
+\DoxyCodeLine{1541         \textcolor{keyword}{auto} save\_error\_pos = c.error\_pos;}
+\DoxyCodeLine{1542         \textcolor{keywordtype}{size\_t} i = 0;}
+\DoxyCodeLine{1543         \textcolor{keywordflow}{while} (n -\/ i > 0) \{}
+\DoxyCodeLine{1544             c.nest\_level++;}
+\DoxyCodeLine{1545             c.push\_capture\_scope();}
+\DoxyCodeLine{1546             \textcolor{keyword}{auto} se = \mbox{\hyperlink{namespacepeg_ac2158f086910efbd32f003dbb2ea3e65}{make\_scope\_exit}}([\&]() \{}
+\DoxyCodeLine{1547                 c.nest\_level-\/-\/;}
+\DoxyCodeLine{1548                 c.pop\_capture\_scope();}
+\DoxyCodeLine{1549             \});}
+\DoxyCodeLine{1550             \textcolor{keyword}{auto} save\_sv\_size = sv.size();}
+\DoxyCodeLine{1551             \textcolor{keyword}{auto} save\_tok\_size = sv.tokens.size();}
+\DoxyCodeLine{1552             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& rule = *\mbox{\hyperlink{classpeg_1_1ZeroOrMore_a0401401f3966efbceaeb7e33be2c4e03}{ope\_}};}
+\DoxyCodeLine{1553             \textcolor{keyword}{auto} len = rule.parse(s + i, n -\/ i, sv, c, dt);}
+\DoxyCodeLine{1554             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacepeg_abb0779cb4c0b5f8e157e81bac9686c8a}{success}}(len)) \{}
+\DoxyCodeLine{1555                 c.shift\_capture\_values();}
+\DoxyCodeLine{1556             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{1557                 \textcolor{keywordflow}{if} (sv.size() != save\_sv\_size) \{}
+\DoxyCodeLine{1558                     sv.erase(sv.begin() + \textcolor{keyword}{static\_cast<}std::ptrdiff\_t\textcolor{keyword}{>}(save\_sv\_size));}
+\DoxyCodeLine{1559                     sv.tags.erase(sv.tags.begin() + \textcolor{keyword}{static\_cast<}std::ptrdiff\_t\textcolor{keyword}{>}(save\_sv\_size));}
+\DoxyCodeLine{1560                 \}}
+\DoxyCodeLine{1561                 \textcolor{keywordflow}{if} (sv.tokens.size() != save\_tok\_size) \{}
+\DoxyCodeLine{1562                     sv.tokens.erase(sv.tokens.begin() + \textcolor{keyword}{static\_cast<}std::ptrdiff\_t\textcolor{keyword}{>}(save\_tok\_size));}
+\DoxyCodeLine{1563                 \}}
+\DoxyCodeLine{1564                 c.error\_pos = save\_error\_pos;}
+\DoxyCodeLine{1565                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{1566             \}}
+\DoxyCodeLine{1567             i += len;}
+\DoxyCodeLine{1568         \}}
+\DoxyCodeLine{1569         \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{1570     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classpeg_1_1Context_aca181cfdb06f5e3d70b0cf61bc81062b}{peg\+::\+Context\+::error\+\_\+pos}}, \mbox{\hyperlink{namespacepeg_ac2158f086910efbd32f003dbb2ea3e65}{peg\+::make\+\_\+scope\+\_\+exit()}}, \mbox{\hyperlink{classpeg_1_1Context_a03a90936d615e6c2553f71456b3cd02e}{peg\+::\+Context\+::nest\+\_\+level}}, \mbox{\hyperlink{classpeg_1_1Context_ac3038d83aacd1c2992239eae43f9f120}{peg\+::\+Context\+::pop\+\_\+capture\+\_\+scope()}}, \mbox{\hyperlink{classpeg_1_1Context_a5be010190aa699d634fb3b552b417111}{peg\+::\+Context\+::push\+\_\+capture\+\_\+scope()}}, \mbox{\hyperlink{classpeg_1_1Context_a75468390e5904e6d71a375d913eac6a6}{peg\+::\+Context\+::shift\+\_\+capture\+\_\+values()}}, \mbox{\hyperlink{namespacepeg_abb0779cb4c0b5f8e157e81bac9686c8a}{peg\+::success()}}, \mbox{\hyperlink{structpeg_1_1SemanticValues_a81c9461f32161826326fb14e2e999b7f}{peg\+::\+Semantic\+Values\+::tags}}, \mbox{\hyperlink{structpeg_1_1SemanticValues_acb64227e5b71c2a63ed58553af80905e}{peg\+::\+Semantic\+Values\+::tokens}}, and \mbox{\hyperlink{classpeg_1_1Context_a62d90cb77e73de57eb6b51367f60d961}{peg\+::\+Context\+::trace()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpeg_1_1ZeroOrMore_a0401401f3966efbceaeb7e33be2c4e03}\label{classpeg_1_1ZeroOrMore_a0401401f3966efbceaeb7e33be2c4e03}} 
+\index{peg::ZeroOrMore@{peg::ZeroOrMore}!ope\_@{ope\_}}
+\index{ope\_@{ope\_}!peg::ZeroOrMore@{peg::ZeroOrMore}}
+\doxysubsubsection{\texorpdfstring{ope\_}{ope\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classpeg_1_1Ope}{Ope}}$>$ peg\+::\+Zero\+Or\+More\+::ope\+\_\+}
+
+
+
+Referenced by \mbox{\hyperlink{structpeg_1_1AssignIDToDefinition_a42f423cdfe0d8443ca243855f99bfc6f}{peg\+::\+Assign\+IDTo\+Definition\+::visit()}}, \mbox{\hyperlink{structpeg_1_1TokenChecker_a3eed2264956497efa1005d36d203b601}{peg\+::\+Token\+Checker\+::visit()}}, \mbox{\hyperlink{structpeg_1_1DetectLeftRecursion_a6afd89e26d22c5584ce5f5e43eca575f}{peg\+::\+Detect\+Left\+Recursion\+::visit()}}, \mbox{\hyperlink{structpeg_1_1ReferenceChecker_a123354dda5b76fde8b8510cc0e6e73b7}{peg\+::\+Reference\+Checker\+::visit()}}, \mbox{\hyperlink{structpeg_1_1LinkReferences_a16525ff1a546dc7dd31254fe97b5af11}{peg\+::\+Link\+References\+::visit()}}, and \mbox{\hyperlink{structpeg_1_1FindReference_a1ef59f3fad6a2619608e780ec3be3bab}{peg\+::\+Find\+Reference\+::visit()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

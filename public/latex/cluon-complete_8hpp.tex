@@ -1,0 +1,1347 @@
+\hypertarget{cluon-complete_8hpp}{}\doxysection{src/cluon-\/complete.hpp File Reference}
+\label{cluon-complete_8hpp}\index{src/cluon-\/complete.hpp@{src/cluon-\/complete.hpp}}
+{\ttfamily \#include $<$typeinfo$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$initializer\+\_\+list$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$csignal$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$istream$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$sys/ipc.\+h$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$netdb.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$cerrno$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$sys/ioctl.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$ifaddrs.\+h$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+{\ttfamily \#include $<$sys/sem.\+h$>$}\newline
+{\ttfamily \#include $<$sys/shm.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlinb_1_1bad__any__cast}{linb\+::bad\+\_\+any\+\_\+cast}}
+\item 
+class \mbox{\hyperlink{classlinb_1_1any}{linb\+::any}}
+\item 
+union \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{linb\+::any\+::storage\+\_\+union}}
+\item 
+struct \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type}{linb\+::any\+::vtable\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Base VTable specification. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlinb_1_1any_1_1vtable__dynamic}{linb\+::any\+::vtable\+\_\+dynamic$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em VTable for dynamically allocated storage. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack}{linb\+::any\+::vtable\+\_\+stack$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em VTable for stack allocated storage. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlinb_1_1any_1_1requires__allocation}{linb\+::any\+::requires\+\_\+allocation$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Whether the type T must be dynamically allocated or can be stored on the stack. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classpeg_1_1any}{peg\+::any}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1any_1_1placeholder}{peg\+::any\+::placeholder}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1any_1_1holder}{peg\+::any\+::holder$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1scope__exit}{peg\+::scope\+\_\+exit$<$ EF $>$}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1SemanticValues}{peg\+::\+Semantic\+Values}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1Action}{peg\+::\+Action}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__sv}{peg\+::\+Action\+::\+Type\+Adaptor\+\_\+sv$<$ R $>$}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__csv}{peg\+::\+Action\+::\+Type\+Adaptor\+\_\+csv$<$ R $>$}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__sv__dt}{peg\+::\+Action\+::\+Type\+Adaptor\+\_\+sv\+\_\+dt$<$ R $>$}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__csv__dt}{peg\+::\+Action\+::\+Type\+Adaptor\+\_\+csv\+\_\+dt$<$ R $>$}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1parse__error}{peg\+::parse\+\_\+error}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1Context}{peg\+::\+Context}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1Ope}{peg\+::\+Ope}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1Sequence}{peg\+::\+Sequence}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1PrioritizedChoice}{peg\+::\+Prioritized\+Choice}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1ZeroOrMore}{peg\+::\+Zero\+Or\+More}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1OneOrMore}{peg\+::\+One\+Or\+More}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1Option}{peg\+::\+Option}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1AndPredicate}{peg\+::\+And\+Predicate}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1NotPredicate}{peg\+::\+Not\+Predicate}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1LiteralString}{peg\+::\+Literal\+String}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1CharacterClass}{peg\+::\+Character\+Class}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1Character}{peg\+::\+Character}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1AnyCharacter}{peg\+::\+Any\+Character}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1CaptureScope}{peg\+::\+Capture\+Scope}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1Capture}{peg\+::\+Capture}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1TokenBoundary}{peg\+::\+Token\+Boundary}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1Ignore}{peg\+::\+Ignore}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1User}{peg\+::\+User}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1WeakHolder}{peg\+::\+Weak\+Holder}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1Holder}{peg\+::\+Holder}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1Reference}{peg\+::\+Reference}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1Whitespace}{peg\+::\+Whitespace}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1BackReference}{peg\+::\+Back\+Reference}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor}{peg\+::\+Ope\+::\+Visitor}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1AssignIDToDefinition}{peg\+::\+Assign\+IDTo\+Definition}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1IsLiteralToken}{peg\+::\+Is\+Literal\+Token}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1TokenChecker}{peg\+::\+Token\+Checker}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1DetectLeftRecursion}{peg\+::\+Detect\+Left\+Recursion}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1ReferenceChecker}{peg\+::\+Reference\+Checker}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1LinkReferences}{peg\+::\+Link\+References}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1FindReference}{peg\+::\+Find\+Reference}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1IsPrioritizedChoice}{peg\+::\+Is\+Prioritized\+Choice}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1Definition}{peg\+::\+Definition}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1Definition_1_1Result}{peg\+::\+Definition\+::\+Result}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1ParserGenerator}{peg\+::\+Parser\+Generator}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1ParserGenerator_1_1Data}{peg\+::\+Parser\+Generator\+::\+Data}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1AstBase}{peg\+::\+Ast\+Base$<$ Annotation $>$}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1AstOptimizer}{peg\+::\+Ast\+Optimizer}}
+\item 
+struct \mbox{\hyperlink{structpeg_1_1EmptyType}{peg\+::\+Empty\+Type}}
+\item 
+class \mbox{\hyperlink{classpeg_1_1parser}{peg\+::parser}}
+\item 
+class \mbox{\hyperlink{classargh_1_1parser}{argh\+::parser}}
+\item 
+struct \mbox{\hyperlink{structvisitorSelector}{visitor\+Selector$<$ b $>$}}
+\item 
+struct \mbox{\hyperlink{structvisitorSelector_3_01true_01_4}{visitor\+Selector$<$ true $>$}}
+\item 
+struct \mbox{\hyperlink{structisVisitable}{is\+Visitable$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structtripletForwardVisitorSelector}{triplet\+Forward\+Visitor\+Selector$<$ b $>$}}
+\item 
+struct \mbox{\hyperlink{structtripletForwardVisitorSelector_3_01true_01_4}{triplet\+Forward\+Visitor\+Selector$<$ true $>$}}
+\item 
+struct \mbox{\hyperlink{structisTripletForwardVisitable}{is\+Triplet\+Forward\+Visitable$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}}
+\item 
+struct \mbox{\hyperlink{structisVisitable_3_01cluon_1_1data_1_1TimeStamp_01_4}{is\+Visitable$<$ cluon\+::data\+::\+Time\+Stamp $>$}}
+\item 
+struct \mbox{\hyperlink{structisTripletForwardVisitable_3_01cluon_1_1data_1_1TimeStamp_01_4}{is\+Triplet\+Forward\+Visitable$<$ cluon\+::data\+::\+Time\+Stamp $>$}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}}
+\item 
+struct \mbox{\hyperlink{structisVisitable_3_01cluon_1_1data_1_1Envelope_01_4}{is\+Visitable$<$ cluon\+::data\+::\+Envelope $>$}}
+\item 
+struct \mbox{\hyperlink{structisTripletForwardVisitable_3_01cluon_1_1data_1_1Envelope_01_4}{is\+Triplet\+Forward\+Visitable$<$ cluon\+::data\+::\+Envelope $>$}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1data_1_1PlayerCommand}{cluon\+::data\+::\+Player\+Command}}
+\item 
+struct \mbox{\hyperlink{structisVisitable_3_01cluon_1_1data_1_1PlayerCommand_01_4}{is\+Visitable$<$ cluon\+::data\+::\+Player\+Command $>$}}
+\item 
+struct \mbox{\hyperlink{structisTripletForwardVisitable_3_01cluon_1_1data_1_1PlayerCommand_01_4}{is\+Triplet\+Forward\+Visitable$<$ cluon\+::data\+::\+Player\+Command $>$}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{cluon\+::data\+::\+Player\+Status}}
+\item 
+struct \mbox{\hyperlink{structisVisitable_3_01cluon_1_1data_1_1PlayerStatus_01_4}{is\+Visitable$<$ cluon\+::data\+::\+Player\+Status $>$}}
+\item 
+struct \mbox{\hyperlink{structisTripletForwardVisitable_3_01cluon_1_1data_1_1PlayerStatus_01_4}{is\+Triplet\+Forward\+Visitable$<$ cluon\+::data\+::\+Player\+Status $>$}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{cluon\+::data\+::\+Recorder\+Command}}
+\item 
+struct \mbox{\hyperlink{structisVisitable_3_01cluon_1_1data_1_1RecorderCommand_01_4}{is\+Visitable$<$ cluon\+::data\+::\+Recorder\+Command $>$}}
+\item 
+struct \mbox{\hyperlink{structisTripletForwardVisitable_3_01cluon_1_1data_1_1RecorderCommand_01_4}{is\+Triplet\+Forward\+Visitable$<$ cluon\+::data\+::\+Recorder\+Command $>$}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1UseUInt32ValueAsHashKey}{cluon\+::\+Use\+UInt32\+Value\+As\+Hash\+Key}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1MetaMessage}{cluon\+::\+Meta\+Message}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1MetaMessage_1_1MetaField}{cluon\+::\+Meta\+Message\+::\+Meta\+Field}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1MessageParser}{cluon\+::\+Message\+Parser}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1TerminateHandler}{cluon\+::\+Terminate\+Handler}}
+\item 
+struct \mbox{\hyperlink{structcluon_1_1TerminateHandler_1_1m__signalHandler}{cluon\+::\+Terminate\+Handler\+::m\+\_\+signal\+Handler}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1NotifyingPipeline}{cluon\+::\+Notifying\+Pipeline$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1UDPSender}{cluon\+::\+UDPSender}}
+\item 
+struct \mbox{\hyperlink{structcluon_1_1UDPSender_1_1m__sendToAddress}{cluon\+::\+UDPSender\+::m\+\_\+send\+To\+Address}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1UDPReceiver}{cluon\+::\+UDPReceiver}}
+\item 
+struct \mbox{\hyperlink{structcluon_1_1UDPReceiver_1_1m__receiveFromAddress}{cluon\+::\+UDPReceiver\+::m\+\_\+receive\+From\+Address}}
+\item 
+struct \mbox{\hyperlink{structcluon_1_1UDPReceiver_1_1m__mreq}{cluon\+::\+UDPReceiver\+::m\+\_\+mreq}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1UDPReceiver_1_1PipelineEntry}{cluon\+::\+UDPReceiver\+::\+Pipeline\+Entry}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1TCPConnection}{cluon\+::\+TCPConnection}}
+\item 
+struct \mbox{\hyperlink{structcluon_1_1TCPConnection_1_1m__address}{cluon\+::\+TCPConnection\+::m\+\_\+address}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1TCPConnection_1_1PipelineEntry}{cluon\+::\+TCPConnection\+::\+Pipeline\+Entry}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1TCPServer}{cluon\+::\+TCPServer}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1ToProtoVisitor}{cluon\+::\+To\+Proto\+Visitor}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1FromProtoVisitor}{cluon\+::\+From\+Proto\+Visitor}}
+\item 
+union \mbox{\hyperlink{unioncluon_1_1FromProtoVisitor_1_1DoubleValue}{cluon\+::\+From\+Proto\+Visitor\+::\+Double\+Value}}
+\item 
+union \mbox{\hyperlink{unioncluon_1_1FromProtoVisitor_1_1FloatValue}{cluon\+::\+From\+Proto\+Visitor\+::\+Float\+Value}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1FromLCMVisitor}{cluon\+::\+From\+LCMVisitor}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1FromMsgPackVisitor}{cluon\+::\+From\+Msg\+Pack\+Visitor}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1FromMsgPackVisitor_1_1MsgPackKeyValue}{cluon\+::\+From\+Msg\+Pack\+Visitor\+::\+Msg\+Pack\+Key\+Value}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1FromJSONVisitor}{cluon\+::\+From\+JSONVisitor}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_1_1JSONKeyValue}{cluon\+::\+From\+JSONVisitor\+::\+JSONKey\+Value}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1ToJSONVisitor}{cluon\+::\+To\+JSONVisitor}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1ToCSVVisitor}{cluon\+::\+To\+CSVVisitor}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1ToLCMVisitor}{cluon\+::\+To\+LCMVisitor}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1ToODVDVisitor}{cluon\+::\+To\+ODVDVisitor}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1ToMsgPackVisitor}{cluon\+::\+To\+Msg\+Pack\+Visitor}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1EnvelopeConverter}{cluon\+::\+Envelope\+Converter}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1GenericMessage}{cluon\+::\+Generic\+Message}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1GenericMessage_1_1GenericMessageVisitor}{cluon\+::\+Generic\+Message\+::\+Generic\+Message\+Visitor}}
+\item 
+struct \mbox{\hyperlink{structisVisitable_3_01cluon_1_1GenericMessage_01_4}{is\+Visitable$<$ cluon\+::\+Generic\+Message $>$}}
+\item 
+struct \mbox{\hyperlink{structisTripletForwardVisitable_3_01cluon_1_1GenericMessage_01_4}{is\+Triplet\+Forward\+Visitable$<$ cluon\+::\+Generic\+Message $>$}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1LCMToGenericMessage}{cluon\+::\+LCMTo\+Generic\+Message}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1OD4Session}{cluon\+::\+OD4\+Session}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1IndexEntry}{cluon\+::\+Index\+Entry}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1Player}{cluon\+::\+Player}}
+\item 
+class \mbox{\hyperlink{classcluon_1_1SharedMemory}{cluon\+::\+Shared\+Memory}}
+\item 
+struct \mbox{\hyperlink{structcluon_1_1SharedMemory_1_1SharedMemoryHeader}{cluon\+::\+Shared\+Memory\+::\+Shared\+Memory\+Header}}
+\item 
+union \mbox{\hyperlink{unionsemun}{semun}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacelinb}{linb}}
+\item 
+namespace \mbox{\hyperlink{namespacelinb_1_1detail}{linb\+::detail}}
+\item 
+namespace \mbox{\hyperlink{namespacestd}{std}}
+\begin{DoxyCompactList}\small\item\em STL namespace. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespacepeg}{peg}}
+\item 
+namespace \mbox{\hyperlink{namespacepeg_1_1udl}{peg\+::udl}}
+\item 
+namespace \mbox{\hyperlink{namespaceargh}{argh}}
+\item 
+namespace \mbox{\hyperlink{namespacecluon}{cluon}}
+\item 
+namespace \mbox{\hyperlink{namespacecluon_1_1data}{cluon\+::data}}
+\item 
+namespace \mbox{\hyperlink{namespacestringtoolbox}{stringtoolbox}}
+\item 
+namespace \mbox{\hyperlink{namespacecluon_1_1time}{cluon\+::time}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_ac8c8ddccdc13f81b1d3442f7ac8e6471}{CPPPEGLIB\+\_\+\+PEGLIB\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a683ce7491723d4e3c7b23d5be3eb5fff}{ARGH}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a12c0cb61720c6338b097956c962c0bff}{VISITABLE\+\_\+\+TYPE\+\_\+\+TRAIT}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a3dced3320394c8618a957b6109a2c668}{TRIPLET\+\_\+\+FORWARD\+\_\+\+VISITABLE\+\_\+\+TYPE\+\_\+\+TRAIT}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a12e5ae5d321c56754ffe3feeb010854b}{CLUON\+\_\+\+DATA\+\_\+\+TIMESTAMP\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}{LIB\+\_\+\+API}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a16b331d709798dfe65eb248f3a49404d}{CLUON\+\_\+\+DATA\+\_\+\+ENVELOPE\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}{LIB\+\_\+\+API}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a990d02cd7d702f6d700a3e0c11b280bb}{CLUON\+\_\+\+DATA\+\_\+\+PLAYERCOMMAND\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}{LIB\+\_\+\+API}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a4224d56ee700c78a69e212d1142999e9}{CLUON\+\_\+\+DATA\+\_\+\+PLAYERSTATUS\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}{LIB\+\_\+\+API}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a1e9fd48e5297e4613bad73d90a65d015}{CLUON\+\_\+\+DATA\+\_\+\+RECORDERCOMMAND\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}{LIB\+\_\+\+API}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_ae72b46c3d4287d5aade56dba045966ac}{STRINGTOOLBOX\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a1443408df793c60a6bdd74ec66697296}{CLUON\+\_\+\+TIME\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_aa785cc4bb8162b3f24d1e9f389f7a287}{CLUON\+\_\+\+PORTABLEENDIAN\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a31bd010f24145e0ea1a0c6502e1c46c0}{CLUON\+\_\+\+CLUON\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a450521e9bcf01c91d8d213ee91e9b4ff}{LIBCLUON\+\_\+\+API}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a1fc6cf989b28beb4f4fc3eacca454d59}{CLUON\+\_\+\+METAMESSAGE\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a2541e11532e50300224091f43ec73ffc}{CLUON\+\_\+\+MESSAGEPARSER\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_acee6e9119e4d8cfc21529c51227dfba3}{CLUON\+\_\+\+TERMINATEHANDLER\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a90f159a608dc9d47f49f2251281716bb}{CLUON\+\_\+\+NOTIFYINGPIPELINE\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_ab299a4b7c0b3a522882cf1dd876db21b}{CLUON\+\_\+\+IPV4\+TOOLS\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a59f6c6e56856934c68fe9efe679bb3e3}{CLUON\+\_\+\+UDPPACKETSIZECONSTRAINTS\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_aa0505185fd9dccb1cabc1ca22316445a}{CLUON\+\_\+\+UDPSENDER\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_ab189c7bbdceae0fe51dfdb4d57f68e2b}{CLUON\+\_\+\+UDPRECEIVER\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a09d38edf91e1767e2c4c2c84be99fdbd}{CLUON\+\_\+\+TCPCONNECTION\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_ac51d0f6b33aa66713e7d71af5cfda477}{CLUON\+\_\+\+TCPSERVER\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a532f3b46d960bdcf2ca345eb56e909f3}{CLUON\+\_\+\+PROTOCONSTANTS\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a87490a883322c4ac9d44ca4c4433f563}{CLUON\+\_\+\+TOPROTOVISITOR\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_afdb362e2df71a6ff7ffa0bd470e67336}{CLUON\+\_\+\+FROMPROTOVISITOR\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_aa41a41c3d0720fb04a700b9ed5734914}{CLUON\+\_\+\+FROMLCMVISITOR\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a4884f6719d92aa1b1ca17e72be1d8b72}{CLUON\+\_\+\+MSGPACKCONSTANTS\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_af0892c9e6bb75babfb567ce885966e8d}{CLUON\+\_\+\+FROMMSGPACKVISITOR\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a1ec23993f1464df5960d71276ae93bdb}{CLUON\+\_\+\+JSONCONSTANTS\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a65e91600cd40db1696bab04c58b89afa}{CLUON\+\_\+\+FROMJSONVISITOR\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_aecc22ae9d20a0e2c2ca3c809ad6b74ce}{CLUON\+\_\+\+TOJSONVISITOR\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a6a00bd9cdee38a7ddf197617c6c345ab}{CLUON\+\_\+\+TOCSVVISITOR\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a2f61173cbf00981f43098a847b882fec}{CLUON\+\_\+\+TOLCMVISITOR\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a74c566090baafa79dc39e46020da987e}{CLUON\+\_\+\+TOODVDVISITOR\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_ade01365962b632d94875802809a5269b}{CLUON\+\_\+\+TOMSGPACKVISITOR\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_ae7a465409130a8c7757c37ea4ad5d502}{CLUON\+\_\+\+ENVELOPE\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a03231cae30d81782f31e1a7cbb46220c}{CLUON\+\_\+\+ENVELOPECONVERTER\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a89673662108c9117b96187d82976297d}{CLUON\+\_\+\+GENERICMESSAGE\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a9bc5a09309c120f96886e8f945ba8513}{CLUON\+\_\+\+LCMTOGENERICMESSAGE\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a23548452e1882aa2f1837a5cbf614b19}{CLUON\+\_\+\+OD4\+SESSION\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_aec9a57a308c3703843b049b73d6297c3}{CLUON\+\_\+\+PLAYER\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_a8049f7a583991c58671a2640494e8767}{CLUON\+\_\+\+SHAREDMEMORY\+\_\+\+HPP}}
+\item 
+\#define \mbox{\hyperlink{cluon-complete_8hpp_accec14189a9adbe9da38a7842de5529d}{BEGIN\+\_\+\+HEADER\+\_\+\+ONLY\+\_\+\+IMPLEMENTATION}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ void(const char $\ast$name, const char $\ast$s, size\+\_\+t n, const Semantic\+Values \&sv, const Context \&c, const any \&dt)$>$ \mbox{\hyperlink{namespacepeg_ae1819caa967994d958b2c275b5c4c723}{peg\+::\+Tracer}}
+\item 
+typedef std\+::function$<$ size\+\_\+t(const char $\ast$s, size\+\_\+t n, Semantic\+Values \&sv, any \&dt)$>$ \mbox{\hyperlink{namespacepeg_ad6ce400709114a4985d8248bb782ebdf}{peg\+::\+Parser}}
+\item 
+typedef std\+::unordered\+\_\+map$<$ std\+::string, Definition $>$ \mbox{\hyperlink{namespacepeg_a6653f0b46063b881c69c9c983f56c5f3}{peg\+::\+Grammar}}
+\item 
+typedef std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ Ope $>$ $>$ \mbox{\hyperlink{namespacepeg_abfc587087d73f7a43135e4f1a2c76efd}{peg\+::\+Rules}}
+\item 
+typedef std\+::function$<$ void(size\+\_\+t, size\+\_\+t, const std\+::string \&)$>$ \mbox{\hyperlink{namespacepeg_a26a30ebb776ee513a118326c06f36da0}{peg\+::\+Log}}
+\item 
+typedef Ast\+Base$<$ Empty\+Type $>$ \mbox{\hyperlink{namespacepeg_a9150526ea12d04fabcb6af73f20366af}{peg\+::\+Ast}}
+\item 
+using \mbox{\hyperlink{namespaceargh_ab0792515b4cf40a0895afec7f59ee2b2}{argh\+::string\+\_\+stream}} = std\+::istringstream
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacecluon_ae13fc5af4d0565408b5487cf0d6c0910}{cluon\+::\+UDPPacket\+Size\+Constraints}} \+: uint16\+\_\+t \{ \mbox{\hyperlink{namespacecluon_ae13fc5af4d0565408b5487cf0d6c0910ad2a234bb6faedeef2be5adfc03f195a4}{cluon\+::\+SIZE\+\_\+\+IPv4\+\_\+\+HEADER}} = 20
+, \mbox{\hyperlink{namespacecluon_ae13fc5af4d0565408b5487cf0d6c0910a840a6d5ecacba6823a0523c7c27182db}{cluon\+::\+SIZE\+\_\+\+UDP\+\_\+\+HEADER}} = 8
+, \mbox{\hyperlink{namespacecluon_ae13fc5af4d0565408b5487cf0d6c0910a624f828bf1caf71cb881443a02f3379e}{cluon\+::\+MAX\+\_\+\+SIZE\+\_\+\+UDP\+\_\+\+PACKET}} = 0x\+FFFF
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3}{cluon\+::\+Proto\+Constants}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3ad1441bc7cefd4cf4dc1282282ae5c529}{cluon\+::\+VARINT}} = 0
+, \mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3af0a9f7a988579d6eb0c767da729e578c}{cluon\+::\+EIGHT\+\_\+\+BYTES}} = 1
+, \mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3ae531c39d69190463103ef1bba9085614}{cluon\+::\+LENGTH\+\_\+\+DELIMITED}} = 2
+, \mbox{\hyperlink{namespacecluon_adfd4830da53be3e410eb1520625f69d3aece10bb19544946080220406b51cd56b}{cluon\+::\+FOUR\+\_\+\+BYTES}} = 5
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9}{cluon\+::\+Msg\+Pack\+Constants}} \+: uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9adeab83d56dee7ab418359a59b4ff2eb0}{cluon\+::\+IS\+\_\+\+FALSE}} = 0x\+C2
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a23cd5ba5c6eed3d82ba0c6c0526df429}{cluon\+::\+IS\+\_\+\+TRUE}} = 0x\+C3
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9ae738c26bf4ce1037fa81b039a915cbf6}{cluon\+::\+FLOAT}} = 0x\+CA
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9afd3e4ece78a7d422280d5ed379482229}{cluon\+::\+DOUBLE}} = 0x\+CB
+, \newline
+\mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9aecfc091ed2a607335524c8389cfa41b5}{cluon\+::\+UINT8}} = 0x\+CC
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a48d8f1a723d44ff4a87db1bb6c551c62}{cluon\+::\+UINT16}} = 0x\+CD
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a17266551181f69a1b4a3ad5c9e270afc}{cluon\+::\+UINT32}} = 0x\+CE
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a6de7acf711860176ba606e9aa2b85d5f}{cluon\+::\+UINT64}} = 0x\+CF
+, \newline
+\mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a610e6980784ccb6d41634aee4feb7ec3}{cluon\+::\+NEGFIXINT}} = 0x\+E0
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9aee9d73311ff0658494edfff14c3ec1e3}{cluon\+::\+INT8}} = 0x\+D0
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a5f90af42814c0a419d715d43ae54fd7a}{cluon\+::\+INT16}} = 0x\+D1
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a6495adba09844fac8eeb0aba86e6f1bf}{cluon\+::\+INT32}} = 0x\+D2
+, \newline
+\mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a4e866b275c85fbb439f6484251cfb31c}{cluon\+::\+INT64}} = 0x\+D3
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9af067928414a1ce33be7789993386a957}{cluon\+::\+FIXSTR}} = 0x\+A0
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9aef1c4edd7275b95c223308bcdec85f01}{cluon\+::\+FIXSTR\+\_\+\+END}} = 0x\+BF
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a280e4e0df68aa4ff89ffb5804715dda5}{cluon\+::\+STR8}} = 0x\+D9
+, \newline
+\mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a882a20c2d17a568e363b91e799c33cd0}{cluon\+::\+STR16}} = 0x\+DA
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9ac79173a1a1aa5fef1ca6e7e5e63ad3a7}{cluon\+::\+STR32}} = 0x\+DB
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9ac32ebc9f5df14079f992ec26562a4af2}{cluon\+::\+FIXMAP}} = 0x80
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9ac03419de0449026bcfcf797df939ce0b}{cluon\+::\+FIXMAP\+\_\+\+END}} = 0x8F
+, \newline
+\mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9ae949e6bd251de9cfe0d756fddc8de973}{cluon\+::\+MAP16}} = 0x\+DE
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9afc8d23b73dc8ff4af5d234662b39df27}{cluon\+::\+MAP32}} = 0x\+DF
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a8448ef0db1fe896900faade98a796cea}{cluon\+::\+UNKNOWN\+\_\+\+FORMAT}} = 0x\+FF00
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a0e376187b6c2d73abfe5729e92299adf}{cluon\+::\+BOOL\+\_\+\+FORMAT}} = 0x\+FF01
+, \newline
+\mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a8a609e8bca58c9438ff26f00cf7b23f4}{cluon\+::\+UINT\+\_\+\+FORMAT}} = 0x\+FF02
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a223bae8c8fd326596a63a04de229f0fa}{cluon\+::\+INT\+\_\+\+FORMAT}} = 0x\+FF03
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a4282f5697ea25b212c76ea077a38336b}{cluon\+::\+FLOAT\+\_\+\+FORMAT}} = 0x\+FF04
+, \mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9a0a96101bed6500df263d2831cd3a1df2}{cluon\+::\+STR\+\_\+\+FORMAT}} = 0x\+FF05
+, \newline
+\mbox{\hyperlink{namespacecluon_ac662b4df4f03e5ebcd1940c9e82a19c9aa692cddd5df3f92017589ef8d28d4eb9}{cluon\+::\+MAP\+\_\+\+FORMAT}} = 0x\+FF06
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899}{cluon\+::\+JSONConstants}} \+: uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899adeab83d56dee7ab418359a59b4ff2eb0}{cluon\+::\+IS\+\_\+\+FALSE}} = 0
+, \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a23cd5ba5c6eed3d82ba0c6c0526df429}{cluon\+::\+IS\+\_\+\+TRUE}} = 1
+, \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a34f55eca38e0605a84f169ff61a2a396}{cluon\+::\+NUMBER}} = 2
+, \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a63b588d5559f64f89a416e656880b949}{cluon\+::\+STRING}} = 3
+, \newline
+\mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a8eee8e217391199668cbac89472ace53}{cluon\+::\+OBJECT}} = 4
+, \mbox{\hyperlink{namespacecluon_a2cd932e6cf509c818cfb58fbe9b46899a0db45d2a4141101bdfe48e3314cfbca3}{cluon\+::\+UNDEFINED}} = 99
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \mbox{\hyperlink{namespacelinb_1_1detail_a5ff385ed4c69f37fc3ae1bc334ff4316}{linb\+::detail\+::any\+\_\+cast\+\_\+move\+\_\+if\+\_\+true}} (typename std\+::remove\+\_\+reference$<$ Value\+Type $>$\+::type $\ast$\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}}, std\+::true\+\_\+type)
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \mbox{\hyperlink{namespacelinb_1_1detail_afc996de83b9190332d1bbaf0e3d7bfea}{linb\+::detail\+::any\+\_\+cast\+\_\+move\+\_\+if\+\_\+true}} (typename std\+::remove\+\_\+reference$<$ Value\+Type $>$\+::type $\ast$\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}}, std\+::false\+\_\+type)
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \mbox{\hyperlink{namespacelinb_ac68a68d2d324bed5e39c1359e55412e2}{linb\+::any\+\_\+cast}} (const any \&operand)
+\begin{DoxyCompactList}\small\item\em Performs $\ast$any\+\_\+cast\texorpdfstring{$<$}{<}add\+\_\+const\+\_\+t$<$remove\+\_\+reference\+\_\+t$<$\+Value\+Type$>$$>$\texorpdfstring{$>$}{>}(\&operand), or throws \mbox{\hyperlink{classlinb_1_1bad__any__cast}{bad\+\_\+any\+\_\+cast}} on failure. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \mbox{\hyperlink{namespacelinb_a3d4d00eec877876cde8681f5e14e252c}{linb\+::any\+\_\+cast}} (any \&operand)
+\begin{DoxyCompactList}\small\item\em Performs $\ast$any\+\_\+cast\texorpdfstring{$<$}{<}remove\+\_\+reference\+\_\+t$<$\+Value\+Type$>$\texorpdfstring{$>$}{>}(\&operand), or throws \mbox{\hyperlink{classlinb_1_1bad__any__cast}{bad\+\_\+any\+\_\+cast}} on failure. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type \mbox{\hyperlink{namespacelinb_a0c4efb247037b0ceee3a7d8983b6cbc3}{linb\+::any\+\_\+cast}} (any \&\&operand)
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\const Value\+Type $\ast$ \mbox{\hyperlink{namespacelinb_af6abb0519d8ee997c1d0575922b278f2}{linb\+::any\+\_\+cast}} (const any $\ast$operand) noexcept
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type $\ast$ \mbox{\hyperlink{namespacelinb_a359287c62dc33136c80d2b1e6e58cb8d}{linb\+::any\+\_\+cast}} (any $\ast$operand) noexcept
+\item 
+void \mbox{\hyperlink{namespacestd_a30688972b28e08f7ce5dc347344156d8}{std\+::swap}} (\mbox{\hyperlink{classlinb_1_1any}{linb\+::any}} \&lhs, \mbox{\hyperlink{classlinb_1_1any}{linb\+::any}} \&rhs) noexcept
+\item 
+{\footnotesize template$<$typename EF $>$ }\\auto \mbox{\hyperlink{namespacepeg_ac2158f086910efbd32f003dbb2ea3e65}{peg\+::make\+\_\+scope\+\_\+exit}} (EF \&\&exit\+\_\+function) -\/$>$ scope\+\_\+exit$<$ EF $>$
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacepeg_a5da61379c82a173a0c44ac7b0575323a}{peg\+::codepoint\+\_\+length}} (const char $\ast$s8, size\+\_\+t l)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacepeg_a088961884c57ecf70ecde46a6d197bd1}{peg\+::encode\+\_\+codepoint}} (char32\+\_\+t cp, char $\ast$buff)
+\item 
+std\+::string \mbox{\hyperlink{namespacepeg_af6f682aabf0601a956019fc6c3e8f6d7}{peg\+::encode\+\_\+codepoint}} (char32\+\_\+t cp)
+\item 
+bool \mbox{\hyperlink{namespacepeg_a138e496119eb188eeb6f8fbd12b8f038}{peg\+::decode\+\_\+codepoint}} (const char $\ast$s8, size\+\_\+t l, size\+\_\+t \&bytes, char32\+\_\+t \&cp)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacepeg_a2c75472758aaf7a9ef4f20b6852aec8f}{peg\+::decode\+\_\+codepoint}} (const char $\ast$s8, size\+\_\+t l, char32\+\_\+t \&out)
+\item 
+char32\+\_\+t \mbox{\hyperlink{namespacepeg_a518d115123aa154d505afa7841577ebf}{peg\+::decode\+\_\+codepoint}} (const char $\ast$s8, size\+\_\+t l)
+\item 
+std\+::u32string \mbox{\hyperlink{namespacepeg_a236facf0fc003e0605b5d21f608ce375}{peg\+::decode}} (const char $\ast$s8, size\+\_\+t l)
+\item 
+bool \mbox{\hyperlink{namespacepeg_a7d7fd3cd22e68ec6e062821490fa4eaf}{peg\+::is\+\_\+hex}} (char c, int \&v)
+\item 
+bool \mbox{\hyperlink{namespacepeg_a4648e4724ec72e5e15f7eb5c2dae68fb}{peg\+::is\+\_\+digit}} (char c, int \&v)
+\item 
+std\+::pair$<$ int, size\+\_\+t $>$ \mbox{\hyperlink{namespacepeg_abfdc109d929cf63840ab46be33b67ec1}{peg\+::parse\+\_\+hex\+\_\+number}} (const char $\ast$s, size\+\_\+t n, size\+\_\+t i)
+\item 
+std\+::pair$<$ int, size\+\_\+t $>$ \mbox{\hyperlink{namespacepeg_a2247d8faf36dfb0918d69c10bc32dae6}{peg\+::parse\+\_\+octal\+\_\+number}} (const char $\ast$s, size\+\_\+t n, size\+\_\+t i)
+\item 
+std\+::string \mbox{\hyperlink{namespacepeg_a6467f8636691f3591157c71a18c15e79}{peg\+::resolve\+\_\+escape\+\_\+sequence}} (const char $\ast$s, size\+\_\+t n)
+\item 
+std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{peg\+::line\+\_\+info}} (const char $\ast$start, const char $\ast$cur)
+\item 
+constexpr unsigned int \mbox{\hyperlink{namespacepeg_a4cd6c7b928858d178ccb7b07a92b86de}{peg\+::str2tag}} (const char $\ast$str, int h=0)
+\item 
+constexpr unsigned int \mbox{\hyperlink{namespacepeg_1_1udl_ad1cb07a0fe549459e60d3d95ceac4afd}{peg\+::udl\+::operator\char`\"{}\char`\"{}\+\_\+}} (const char $\ast$s, size\+\_\+t)
+\item 
+{\footnotesize template$<$typename R , typename F , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+void$<$ R $>$\+::value, std\+::nullptr\+\_\+t $>$\+::type  = nullptr, typename... Args$>$ }\\any \mbox{\hyperlink{namespacepeg_aaf4768eec7f3f3ca577d0f53a08f2ec9}{peg\+::call}} (F fn, Args \&\&... args)
+\item 
+bool \mbox{\hyperlink{namespacepeg_abb0779cb4c0b5f8e157e81bac9686c8a}{peg\+::success}} (size\+\_\+t len)
+\item 
+bool \mbox{\hyperlink{namespacepeg_a3cd828a67fc649f6f2d8aca875589a7f}{peg\+::fail}} (size\+\_\+t len)
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_ab1798dbf62bcb036155cd728c87e0203}{peg\+::seq}} (Args \&\&...args)
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a996fd0b498b177e2e1c4a2bfa4398fcc}{peg\+::cho}} (Args \&\&...args)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_ae35a429594b769a0e7da6431747374aa}{peg\+::zom}} (const std\+::shared\+\_\+ptr$<$ Ope $>$ \&ope)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a8ebc7c5678a9063f189796ff872193a2}{peg\+::oom}} (const std\+::shared\+\_\+ptr$<$ Ope $>$ \&ope)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a864655bd71746d397f495ba0f791ef8b}{peg\+::opt}} (const std\+::shared\+\_\+ptr$<$ Ope $>$ \&ope)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a2016cefb7bbdd7c841190f710328041a}{peg\+::apd}} (const std\+::shared\+\_\+ptr$<$ Ope $>$ \&ope)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_aa640011930cbd676512eb812ae4fbf17}{peg\+::npd}} (const std\+::shared\+\_\+ptr$<$ Ope $>$ \&ope)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a3516b1cb4146d4f6c011711a27fcbee5}{peg\+::lit}} (const std\+::string \&s)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a6c7c8822d1073264e60466449f05702d}{peg\+::liti}} (const std\+::string \&s)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a343369426645455cfcb4eaf882beaab9}{peg\+::cls}} (const std\+::string \&s)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a524348ca73e1cb69d78d1884782fa4df}{peg\+::cls}} (const std\+::vector$<$ std\+::pair$<$ char32\+\_\+t, char32\+\_\+t $>$ $>$ \&ranges)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a6b4775e446b2c75d995cc1ce15d2a6f6}{peg\+::chr}} (char dt)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a7108dfb0448e74232e3ef7a348c2cd09}{peg\+::dot}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a134f4d0a2034b7f922afd53bd7d56bb6}{peg\+::csc}} (const std\+::shared\+\_\+ptr$<$ Ope $>$ \&ope)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_acbcf7406c547b0558e37365e719342e2}{peg\+::cap}} (const std\+::shared\+\_\+ptr$<$ Ope $>$ \&ope, Capture\+::\+Match\+Action ma)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a11e5037e2db094a3ab3d3af322aed216}{peg\+::tok}} (const std\+::shared\+\_\+ptr$<$ Ope $>$ \&ope)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a52a875f28dfa6a7d338e50f366cf0d1f}{peg\+::ign}} (const std\+::shared\+\_\+ptr$<$ Ope $>$ \&ope)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_afcd06f5bcc896e18731e764eaf4a0468}{peg\+::usr}} (std\+::function$<$ size\+\_\+t(const char $\ast$s, size\+\_\+t n, Semantic\+Values \&sv, any \&dt)$>$ fn)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a0732a7c9cff98a072f59196f73b96a75}{peg\+::ref}} (const Grammar \&grammar, const std\+::string \&name, const char $\ast$s, bool is\+\_\+macro, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ Ope $>$ $>$ \&args)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_a36efa719a391921ca76025dde8a3e6a4}{peg\+::wsp}} (const std\+::shared\+\_\+ptr$<$ Ope $>$ \&ope)
+\item 
+std\+::shared\+\_\+ptr$<$ Ope $>$ \mbox{\hyperlink{namespacepeg_ab7fe194d9e2d7d85e26ba20a0b94d819}{peg\+::bkr}} (const std\+::string \&name)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacepeg_ad8f1730e05c5fc8603922a10b6a11d7a}{peg\+::parse\+\_\+literal}} (const char $\ast$s, size\+\_\+t n, Semantic\+Values \&sv, Context \&c, any \&dt, const std\+::string \&lit, bool \&init\+\_\+is\+\_\+word, bool \&is\+\_\+word, bool ignore\+\_\+case)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacepeg_aacf6410cf81246c2feb4044d090b1728}{peg\+::ast\+\_\+to\+\_\+s\+\_\+core}} (const std\+::shared\+\_\+ptr$<$ T $>$ \&ptr, std\+::string \&s, int level, std\+::function$<$ std\+::string(const T \&\mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}}, int level)$>$ fn)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespacepeg_a7f6978d7c5e338f14df7cf0b9711dd08}{peg\+::ast\+\_\+to\+\_\+s}} (const std\+::shared\+\_\+ptr$<$ T $>$ \&ptr, std\+::function$<$ std\+::string(const T \&\mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}}, int level)$>$ fn=nullptr)
+\item 
+{\footnotesize template$<$typename T , class Visitor $>$ }\\void \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit}} (uint32\+\_\+t \mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{field\+Identifier}}, std\+::string \&\&type\+Name, std\+::string \&\&name, T \&value, Visitor \&visitor)
+\item 
+{\footnotesize template$<$typename T , class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ }\\void \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{do\+Triplet\+Forward\+Visit}} (uint32\+\_\+t \mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{field\+Identifier}}, std\+::string \&\&type\+Name, std\+::string \&\&name, T \&value, Pre\+Visitor \&\&pre\+Visit, Visitor \&\&visit, Post\+Visitor \&\&post\+Visit)
+\item 
+std\+::string \& \mbox{\hyperlink{namespacestringtoolbox_a69b30d131a6703970471128f8eb80e01}{stringtoolbox\+::rtrim}} (std\+::string \&str) noexcept
+\item 
+std\+::string \& \mbox{\hyperlink{namespacestringtoolbox_ac4fb758abe5b36c36e5129bf59d11371}{stringtoolbox\+::ltrim}} (std\+::string \&str) noexcept
+\item 
+std\+::string \& \mbox{\hyperlink{namespacestringtoolbox_a96eeb4e50ddaab510b51a18071deb6f4}{stringtoolbox\+::trim}} (std\+::string \&str) noexcept
+\item 
+std\+::string \mbox{\hyperlink{namespacestringtoolbox_a3033e64f6b7ad7047ef241338446b879}{stringtoolbox\+::replace\+All}} (const std\+::string \&str, const char \&FROM, const char \&TO) noexcept
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespacestringtoolbox_a76bd13481e3c53dd861442f0e9cbfb96}{stringtoolbox\+::split}} (const std\+::string \&str, const char \&delimiter) noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \mbox{\hyperlink{namespacecluon_1_1time_aaaaf69a9fdcb95852e49500b879d192e}{cluon\+::time\+::from\+Microseconds}} (int64\+\_\+t tp) noexcept
+\item 
+int64\+\_\+t \mbox{\hyperlink{namespacecluon_1_1time_ad7e0afa86b32cbb3e78b392664d0793a}{cluon\+::time\+::to\+Microseconds}} (const \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \&tp) noexcept
+\item 
+int64\+\_\+t \mbox{\hyperlink{namespacecluon_1_1time_aa5df8cf81744594280e72ccd68641a61}{cluon\+::time\+::delta\+In\+Microseconds}} (const \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \&AFTER, const \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \&BEFORE) noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \mbox{\hyperlink{namespacecluon_1_1time_ae2df73301f037b992abdb8b66c5e35b3}{cluon\+::time\+::convert}} (const std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \&tp) noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon\+::data\+::\+Time\+Stamp}} \mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{cluon\+::time\+::now}} () noexcept
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{namespacecluon_a276317d2317901f48d8283de15bdd924}{cluon\+::get\+Commandline\+Arguments}} (int32\+\_\+t argc, char $\ast$$\ast$argv) noexcept
+\item 
+std\+::string \mbox{\hyperlink{namespacecluon_ad2106ef443cf03fcc23de2e75016d79e}{cluon\+::get\+IPv4\+From\+Hostname}} (const std\+::string \&hostname) noexcept
+\item 
+std\+::string \mbox{\hyperlink{namespacecluon_a8ff42dcd356aa1d0ef8e41a8aa2bead2}{cluon\+::serialize\+Envelope}} (\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}} \&\&envelope) noexcept
+\item 
+std\+::pair$<$ bool, \mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}} $>$ \mbox{\hyperlink{namespacecluon_abbf469eea6cc8400c8a0689a7414a570}{cluon\+::extract\+Envelope}} (std\+::istream \&in) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacecluon_a5bc1a93d827cb64aa1b353924222a7c9}{cluon\+::extract\+Message}} (\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon\+::data\+::\+Envelope}} \&\&envelope) noexcept
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_a0544c3fe466e421738dae463968b70ba}{else}} \mbox{\hyperlink{namespacecluon_a0233d66b623a3c1fa613d73e5422b4da}{cluon\+::if}} (\char`\"{}CHARACTER\char`\"{}==f-\/$>$name)
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_aff34bdca67de3a6f77d73006dad4e0fc}{if}} (0$<$ STRING\+\_\+\+TO\+\_\+\+DATATYPE\+\_\+\+MAP.\+count(\+\_\+field\+Data\+Type))
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}} \mbox{\hyperlink{cluon-complete_8hpp_a6b3635957db251f13f33bae3916b6153}{field\+Data\+Type\+Name}} (\+::stringtoolbox\+::trim(\+\_\+field\+Data\+Type))
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}} \mbox{\hyperlink{cluon-complete_8hpp_a802637a7125c84855ce97b387f786538}{field\+Name}} (\+::stringtoolbox\+::trim(\+\_\+field\+Name))
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}} \mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{field\+Identifier}} ((!\+\_\+field\+Identifier.\+empty() ? static\+\_\+cast$<$ uint32\+\_\+t $>$(std\+::stoi(\+::stringtoolbox\+::trim(\+\_\+field\+Identifier))) \+:field\+Identifier\+Counter))
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}} \mbox{\hyperlink{cluon-complete_8hpp_a8008aa242696830750ce2ed8737c7cea}{default\+Initialization\+Value}} (\+\_\+field\+Default\+Initializer\+Value)
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_ac99d9adcdaabb55efe224341cde96631}{mm}} \mbox{\hyperlink{cluon-complete_8hpp_ad9289e9a604e8499b2bd2ccd2fd2b554}{add}} (std\+::move(\mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}}))
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_ace67ff7d7f42c9c47dd688092d2d3610}{if}} (\char`\"{}MESSAGES\+\_\+\+SPECIFICATION\char`\"{}==ast.\+name)
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}} \mbox{\hyperlink{cluon-complete_8hpp_a5a66051511d961e717932cb0a3a0e700}{enable\+\_\+ast}} ()
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_a641189c7ea133fcb93eb5c9cdbd2fbcf}{catch}} (std\+::regex\+\_\+error \&)
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_aa9b0edb5108bbc91eddc7d510ba5373b}{catch}} (std\+::bad\+\_\+cast \&)
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_ab73f32d36cdefe0d26a217ecb3fd46b2}{if}} (p.\+parse(input\+Without\+Comments.\+c\+\_\+str(), \mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}}))
+\item 
+void \mbox{\hyperlink{namespacecluon_a5af169f11066223d295d7830911fd133}{cluon\+::cluon\+\_\+handle\+Exit}} ()
+\item 
+void \mbox{\hyperlink{namespacecluon_ada3629371549558f74bb89678696cd00}{cluon\+::cluon\+\_\+handle\+Signal}} (int32\+\_\+t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \mbox{\hyperlink{namespacepeg_a5ffccf4db0cc93c828358908146917c2}{peg\+::\+WHITESPACE\+\_\+\+DEFINITION\+\_\+\+NAME}} = \char`\"{}\%whitespace\char`\"{}
+\item 
+static const char $\ast$ \mbox{\hyperlink{namespacepeg_a05fef7118467bf5732c5a658a41bb2aa}{peg\+::\+WORD\+\_\+\+DEFINITION\+\_\+\+NAME}} = \char`\"{}\%word\char`\"{}
+\item 
+\mbox{\hyperlink{namespacecluon_abbbaf13d06feba355528dfaa1b4c9332}{cluon\+::else}}
+\item 
+std\+::map$<$ std\+::string, Meta\+Message\+::\+Meta\+Field\+::\+Meta\+Field\+Data\+Types $>$ \mbox{\hyperlink{cluon-complete_8hpp_a3c3ec6e5d04c71378a8094a882da7b54}{STRING\+\_\+\+TO\+\_\+\+DATATYPE\+\_\+\+MAP}}
+\item 
+Meta\+Message\+::\+Meta\+Field \mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}}
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_a0544c3fe466e421738dae463968b70ba}{else}}
+\item 
+return \mbox{\hyperlink{cluon-complete_8hpp_ac99d9adcdaabb55efe224341cde96631}{mm}}
+\item 
+\mbox{\hyperlink{classpeg_1_1parser}{peg\+::parser}} \mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}} (grammar\+Message\+Specification\+Language)
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}} \mbox{\hyperlink{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}{log}}
+\item 
+std\+::pair$<$ std\+::vector$<$ Meta\+Message $>$, Message\+Parser\+Error\+Codes $>$ \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{ret\+Val}} \{\}
+\item 
+std\+::string \mbox{\hyperlink{cluon-complete_8hpp_a332bbdc63307d87533b7be2e590a5b85}{input\+Without\+Comments}} \{input\}
+\item 
+\mbox{\hyperlink{cluon-complete_8hpp_abe4cc9788f52e49485473dc699537388}{try}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacepeg_a9150526ea12d04fabcb6af73f20366af}{peg\+::\+Ast}} $>$ \mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cluon-complete_8hpp_a683ce7491723d4e3c7b23d5be3eb5fff}\label{cluon-complete_8hpp_a683ce7491723d4e3c7b23d5be3eb5fff}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!ARGH@{ARGH}}
+\index{ARGH@{ARGH}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{ARGH}{ARGH}}
+{\footnotesize\ttfamily \#define ARGH}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_accec14189a9adbe9da38a7842de5529d}\label{cluon-complete_8hpp_accec14189a9adbe9da38a7842de5529d}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!BEGIN\_HEADER\_ONLY\_IMPLEMENTATION@{BEGIN\_HEADER\_ONLY\_IMPLEMENTATION}}
+\index{BEGIN\_HEADER\_ONLY\_IMPLEMENTATION@{BEGIN\_HEADER\_ONLY\_IMPLEMENTATION}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{BEGIN\_HEADER\_ONLY\_IMPLEMENTATION}{BEGIN\_HEADER\_ONLY\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#define BEGIN\+\_\+\+HEADER\+\_\+\+ONLY\+\_\+\+IMPLEMENTATION}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a31bd010f24145e0ea1a0c6502e1c46c0}\label{cluon-complete_8hpp_a31bd010f24145e0ea1a0c6502e1c46c0}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_CLUON\_HPP@{CLUON\_CLUON\_HPP}}
+\index{CLUON\_CLUON\_HPP@{CLUON\_CLUON\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_CLUON\_HPP}{CLUON\_CLUON\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+CLUON\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a16b331d709798dfe65eb248f3a49404d}\label{cluon-complete_8hpp_a16b331d709798dfe65eb248f3a49404d}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_DATA\_ENVELOPE\_HPP@{CLUON\_DATA\_ENVELOPE\_HPP}}
+\index{CLUON\_DATA\_ENVELOPE\_HPP@{CLUON\_DATA\_ENVELOPE\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_DATA\_ENVELOPE\_HPP}{CLUON\_DATA\_ENVELOPE\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+DATA\+\_\+\+ENVELOPE\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a990d02cd7d702f6d700a3e0c11b280bb}\label{cluon-complete_8hpp_a990d02cd7d702f6d700a3e0c11b280bb}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_DATA\_PLAYERCOMMAND\_HPP@{CLUON\_DATA\_PLAYERCOMMAND\_HPP}}
+\index{CLUON\_DATA\_PLAYERCOMMAND\_HPP@{CLUON\_DATA\_PLAYERCOMMAND\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_DATA\_PLAYERCOMMAND\_HPP}{CLUON\_DATA\_PLAYERCOMMAND\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+DATA\+\_\+\+PLAYERCOMMAND\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a4224d56ee700c78a69e212d1142999e9}\label{cluon-complete_8hpp_a4224d56ee700c78a69e212d1142999e9}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_DATA\_PLAYERSTATUS\_HPP@{CLUON\_DATA\_PLAYERSTATUS\_HPP}}
+\index{CLUON\_DATA\_PLAYERSTATUS\_HPP@{CLUON\_DATA\_PLAYERSTATUS\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_DATA\_PLAYERSTATUS\_HPP}{CLUON\_DATA\_PLAYERSTATUS\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+DATA\+\_\+\+PLAYERSTATUS\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a1e9fd48e5297e4613bad73d90a65d015}\label{cluon-complete_8hpp_a1e9fd48e5297e4613bad73d90a65d015}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_DATA\_RECORDERCOMMAND\_HPP@{CLUON\_DATA\_RECORDERCOMMAND\_HPP}}
+\index{CLUON\_DATA\_RECORDERCOMMAND\_HPP@{CLUON\_DATA\_RECORDERCOMMAND\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_DATA\_RECORDERCOMMAND\_HPP}{CLUON\_DATA\_RECORDERCOMMAND\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+DATA\+\_\+\+RECORDERCOMMAND\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a12e5ae5d321c56754ffe3feeb010854b}\label{cluon-complete_8hpp_a12e5ae5d321c56754ffe3feeb010854b}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_DATA\_TIMESTAMP\_HPP@{CLUON\_DATA\_TIMESTAMP\_HPP}}
+\index{CLUON\_DATA\_TIMESTAMP\_HPP@{CLUON\_DATA\_TIMESTAMP\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_DATA\_TIMESTAMP\_HPP}{CLUON\_DATA\_TIMESTAMP\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+DATA\+\_\+\+TIMESTAMP\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_ae7a465409130a8c7757c37ea4ad5d502}\label{cluon-complete_8hpp_ae7a465409130a8c7757c37ea4ad5d502}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_ENVELOPE\_HPP@{CLUON\_ENVELOPE\_HPP}}
+\index{CLUON\_ENVELOPE\_HPP@{CLUON\_ENVELOPE\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_ENVELOPE\_HPP}{CLUON\_ENVELOPE\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+ENVELOPE\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a03231cae30d81782f31e1a7cbb46220c}\label{cluon-complete_8hpp_a03231cae30d81782f31e1a7cbb46220c}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_ENVELOPECONVERTER\_HPP@{CLUON\_ENVELOPECONVERTER\_HPP}}
+\index{CLUON\_ENVELOPECONVERTER\_HPP@{CLUON\_ENVELOPECONVERTER\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_ENVELOPECONVERTER\_HPP}{CLUON\_ENVELOPECONVERTER\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+ENVELOPECONVERTER\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a65e91600cd40db1696bab04c58b89afa}\label{cluon-complete_8hpp_a65e91600cd40db1696bab04c58b89afa}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_FROMJSONVISITOR\_HPP@{CLUON\_FROMJSONVISITOR\_HPP}}
+\index{CLUON\_FROMJSONVISITOR\_HPP@{CLUON\_FROMJSONVISITOR\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_FROMJSONVISITOR\_HPP}{CLUON\_FROMJSONVISITOR\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+FROMJSONVISITOR\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_aa41a41c3d0720fb04a700b9ed5734914}\label{cluon-complete_8hpp_aa41a41c3d0720fb04a700b9ed5734914}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_FROMLCMVISITOR\_HPP@{CLUON\_FROMLCMVISITOR\_HPP}}
+\index{CLUON\_FROMLCMVISITOR\_HPP@{CLUON\_FROMLCMVISITOR\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_FROMLCMVISITOR\_HPP}{CLUON\_FROMLCMVISITOR\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+FROMLCMVISITOR\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_af0892c9e6bb75babfb567ce885966e8d}\label{cluon-complete_8hpp_af0892c9e6bb75babfb567ce885966e8d}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_FROMMSGPACKVISITOR\_HPP@{CLUON\_FROMMSGPACKVISITOR\_HPP}}
+\index{CLUON\_FROMMSGPACKVISITOR\_HPP@{CLUON\_FROMMSGPACKVISITOR\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_FROMMSGPACKVISITOR\_HPP}{CLUON\_FROMMSGPACKVISITOR\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+FROMMSGPACKVISITOR\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_afdb362e2df71a6ff7ffa0bd470e67336}\label{cluon-complete_8hpp_afdb362e2df71a6ff7ffa0bd470e67336}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_FROMPROTOVISITOR\_HPP@{CLUON\_FROMPROTOVISITOR\_HPP}}
+\index{CLUON\_FROMPROTOVISITOR\_HPP@{CLUON\_FROMPROTOVISITOR\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_FROMPROTOVISITOR\_HPP}{CLUON\_FROMPROTOVISITOR\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+FROMPROTOVISITOR\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a89673662108c9117b96187d82976297d}\label{cluon-complete_8hpp_a89673662108c9117b96187d82976297d}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_GENERICMESSAGE\_HPP@{CLUON\_GENERICMESSAGE\_HPP}}
+\index{CLUON\_GENERICMESSAGE\_HPP@{CLUON\_GENERICMESSAGE\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_GENERICMESSAGE\_HPP}{CLUON\_GENERICMESSAGE\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+GENERICMESSAGE\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_ab299a4b7c0b3a522882cf1dd876db21b}\label{cluon-complete_8hpp_ab299a4b7c0b3a522882cf1dd876db21b}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_IPV4TOOLS\_HPP@{CLUON\_IPV4TOOLS\_HPP}}
+\index{CLUON\_IPV4TOOLS\_HPP@{CLUON\_IPV4TOOLS\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_IPV4TOOLS\_HPP}{CLUON\_IPV4TOOLS\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+IPV4\+TOOLS\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a1ec23993f1464df5960d71276ae93bdb}\label{cluon-complete_8hpp_a1ec23993f1464df5960d71276ae93bdb}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_JSONCONSTANTS\_HPP@{CLUON\_JSONCONSTANTS\_HPP}}
+\index{CLUON\_JSONCONSTANTS\_HPP@{CLUON\_JSONCONSTANTS\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_JSONCONSTANTS\_HPP}{CLUON\_JSONCONSTANTS\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+JSONCONSTANTS\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a9bc5a09309c120f96886e8f945ba8513}\label{cluon-complete_8hpp_a9bc5a09309c120f96886e8f945ba8513}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_LCMTOGENERICMESSAGE\_HPP@{CLUON\_LCMTOGENERICMESSAGE\_HPP}}
+\index{CLUON\_LCMTOGENERICMESSAGE\_HPP@{CLUON\_LCMTOGENERICMESSAGE\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_LCMTOGENERICMESSAGE\_HPP}{CLUON\_LCMTOGENERICMESSAGE\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+LCMTOGENERICMESSAGE\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a2541e11532e50300224091f43ec73ffc}\label{cluon-complete_8hpp_a2541e11532e50300224091f43ec73ffc}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_MESSAGEPARSER\_HPP@{CLUON\_MESSAGEPARSER\_HPP}}
+\index{CLUON\_MESSAGEPARSER\_HPP@{CLUON\_MESSAGEPARSER\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_MESSAGEPARSER\_HPP}{CLUON\_MESSAGEPARSER\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+MESSAGEPARSER\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a1fc6cf989b28beb4f4fc3eacca454d59}\label{cluon-complete_8hpp_a1fc6cf989b28beb4f4fc3eacca454d59}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_METAMESSAGE\_HPP@{CLUON\_METAMESSAGE\_HPP}}
+\index{CLUON\_METAMESSAGE\_HPP@{CLUON\_METAMESSAGE\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_METAMESSAGE\_HPP}{CLUON\_METAMESSAGE\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+METAMESSAGE\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a4884f6719d92aa1b1ca17e72be1d8b72}\label{cluon-complete_8hpp_a4884f6719d92aa1b1ca17e72be1d8b72}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_MSGPACKCONSTANTS\_HPP@{CLUON\_MSGPACKCONSTANTS\_HPP}}
+\index{CLUON\_MSGPACKCONSTANTS\_HPP@{CLUON\_MSGPACKCONSTANTS\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_MSGPACKCONSTANTS\_HPP}{CLUON\_MSGPACKCONSTANTS\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+MSGPACKCONSTANTS\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a90f159a608dc9d47f49f2251281716bb}\label{cluon-complete_8hpp_a90f159a608dc9d47f49f2251281716bb}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_NOTIFYINGPIPELINE\_HPP@{CLUON\_NOTIFYINGPIPELINE\_HPP}}
+\index{CLUON\_NOTIFYINGPIPELINE\_HPP@{CLUON\_NOTIFYINGPIPELINE\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_NOTIFYINGPIPELINE\_HPP}{CLUON\_NOTIFYINGPIPELINE\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+NOTIFYINGPIPELINE\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a23548452e1882aa2f1837a5cbf614b19}\label{cluon-complete_8hpp_a23548452e1882aa2f1837a5cbf614b19}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_OD4SESSION\_HPP@{CLUON\_OD4SESSION\_HPP}}
+\index{CLUON\_OD4SESSION\_HPP@{CLUON\_OD4SESSION\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_OD4SESSION\_HPP}{CLUON\_OD4SESSION\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+OD4\+SESSION\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_aec9a57a308c3703843b049b73d6297c3}\label{cluon-complete_8hpp_aec9a57a308c3703843b049b73d6297c3}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_PLAYER\_HPP@{CLUON\_PLAYER\_HPP}}
+\index{CLUON\_PLAYER\_HPP@{CLUON\_PLAYER\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_PLAYER\_HPP}{CLUON\_PLAYER\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+PLAYER\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_aa785cc4bb8162b3f24d1e9f389f7a287}\label{cluon-complete_8hpp_aa785cc4bb8162b3f24d1e9f389f7a287}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_PORTABLEENDIAN\_HPP@{CLUON\_PORTABLEENDIAN\_HPP}}
+\index{CLUON\_PORTABLEENDIAN\_HPP@{CLUON\_PORTABLEENDIAN\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_PORTABLEENDIAN\_HPP}{CLUON\_PORTABLEENDIAN\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+PORTABLEENDIAN\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a532f3b46d960bdcf2ca345eb56e909f3}\label{cluon-complete_8hpp_a532f3b46d960bdcf2ca345eb56e909f3}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_PROTOCONSTANTS\_HPP@{CLUON\_PROTOCONSTANTS\_HPP}}
+\index{CLUON\_PROTOCONSTANTS\_HPP@{CLUON\_PROTOCONSTANTS\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_PROTOCONSTANTS\_HPP}{CLUON\_PROTOCONSTANTS\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+PROTOCONSTANTS\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a8049f7a583991c58671a2640494e8767}\label{cluon-complete_8hpp_a8049f7a583991c58671a2640494e8767}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_SHAREDMEMORY\_HPP@{CLUON\_SHAREDMEMORY\_HPP}}
+\index{CLUON\_SHAREDMEMORY\_HPP@{CLUON\_SHAREDMEMORY\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_SHAREDMEMORY\_HPP}{CLUON\_SHAREDMEMORY\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+SHAREDMEMORY\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a09d38edf91e1767e2c4c2c84be99fdbd}\label{cluon-complete_8hpp_a09d38edf91e1767e2c4c2c84be99fdbd}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_TCPCONNECTION\_HPP@{CLUON\_TCPCONNECTION\_HPP}}
+\index{CLUON\_TCPCONNECTION\_HPP@{CLUON\_TCPCONNECTION\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_TCPCONNECTION\_HPP}{CLUON\_TCPCONNECTION\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+TCPCONNECTION\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_ac51d0f6b33aa66713e7d71af5cfda477}\label{cluon-complete_8hpp_ac51d0f6b33aa66713e7d71af5cfda477}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_TCPSERVER\_HPP@{CLUON\_TCPSERVER\_HPP}}
+\index{CLUON\_TCPSERVER\_HPP@{CLUON\_TCPSERVER\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_TCPSERVER\_HPP}{CLUON\_TCPSERVER\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+TCPSERVER\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_acee6e9119e4d8cfc21529c51227dfba3}\label{cluon-complete_8hpp_acee6e9119e4d8cfc21529c51227dfba3}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_TERMINATEHANDLER\_HPP@{CLUON\_TERMINATEHANDLER\_HPP}}
+\index{CLUON\_TERMINATEHANDLER\_HPP@{CLUON\_TERMINATEHANDLER\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_TERMINATEHANDLER\_HPP}{CLUON\_TERMINATEHANDLER\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+TERMINATEHANDLER\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a1443408df793c60a6bdd74ec66697296}\label{cluon-complete_8hpp_a1443408df793c60a6bdd74ec66697296}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_TIME\_HPP@{CLUON\_TIME\_HPP}}
+\index{CLUON\_TIME\_HPP@{CLUON\_TIME\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_TIME\_HPP}{CLUON\_TIME\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+TIME\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a6a00bd9cdee38a7ddf197617c6c345ab}\label{cluon-complete_8hpp_a6a00bd9cdee38a7ddf197617c6c345ab}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_TOCSVVISITOR\_HPP@{CLUON\_TOCSVVISITOR\_HPP}}
+\index{CLUON\_TOCSVVISITOR\_HPP@{CLUON\_TOCSVVISITOR\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_TOCSVVISITOR\_HPP}{CLUON\_TOCSVVISITOR\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+TOCSVVISITOR\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_aecc22ae9d20a0e2c2ca3c809ad6b74ce}\label{cluon-complete_8hpp_aecc22ae9d20a0e2c2ca3c809ad6b74ce}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_TOJSONVISITOR\_HPP@{CLUON\_TOJSONVISITOR\_HPP}}
+\index{CLUON\_TOJSONVISITOR\_HPP@{CLUON\_TOJSONVISITOR\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_TOJSONVISITOR\_HPP}{CLUON\_TOJSONVISITOR\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+TOJSONVISITOR\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a2f61173cbf00981f43098a847b882fec}\label{cluon-complete_8hpp_a2f61173cbf00981f43098a847b882fec}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_TOLCMVISITOR\_HPP@{CLUON\_TOLCMVISITOR\_HPP}}
+\index{CLUON\_TOLCMVISITOR\_HPP@{CLUON\_TOLCMVISITOR\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_TOLCMVISITOR\_HPP}{CLUON\_TOLCMVISITOR\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+TOLCMVISITOR\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_ade01365962b632d94875802809a5269b}\label{cluon-complete_8hpp_ade01365962b632d94875802809a5269b}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_TOMSGPACKVISITOR\_HPP@{CLUON\_TOMSGPACKVISITOR\_HPP}}
+\index{CLUON\_TOMSGPACKVISITOR\_HPP@{CLUON\_TOMSGPACKVISITOR\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_TOMSGPACKVISITOR\_HPP}{CLUON\_TOMSGPACKVISITOR\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+TOMSGPACKVISITOR\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a74c566090baafa79dc39e46020da987e}\label{cluon-complete_8hpp_a74c566090baafa79dc39e46020da987e}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_TOODVDVISITOR\_HPP@{CLUON\_TOODVDVISITOR\_HPP}}
+\index{CLUON\_TOODVDVISITOR\_HPP@{CLUON\_TOODVDVISITOR\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_TOODVDVISITOR\_HPP}{CLUON\_TOODVDVISITOR\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+TOODVDVISITOR\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a87490a883322c4ac9d44ca4c4433f563}\label{cluon-complete_8hpp_a87490a883322c4ac9d44ca4c4433f563}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_TOPROTOVISITOR\_HPP@{CLUON\_TOPROTOVISITOR\_HPP}}
+\index{CLUON\_TOPROTOVISITOR\_HPP@{CLUON\_TOPROTOVISITOR\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_TOPROTOVISITOR\_HPP}{CLUON\_TOPROTOVISITOR\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+TOPROTOVISITOR\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a59f6c6e56856934c68fe9efe679bb3e3}\label{cluon-complete_8hpp_a59f6c6e56856934c68fe9efe679bb3e3}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_UDPPACKETSIZECONSTRAINTS\_H@{CLUON\_UDPPACKETSIZECONSTRAINTS\_H}}
+\index{CLUON\_UDPPACKETSIZECONSTRAINTS\_H@{CLUON\_UDPPACKETSIZECONSTRAINTS\_H}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_UDPPACKETSIZECONSTRAINTS\_H}{CLUON\_UDPPACKETSIZECONSTRAINTS\_H}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+UDPPACKETSIZECONSTRAINTS\+\_\+H}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_ab189c7bbdceae0fe51dfdb4d57f68e2b}\label{cluon-complete_8hpp_ab189c7bbdceae0fe51dfdb4d57f68e2b}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_UDPRECEIVER\_HPP@{CLUON\_UDPRECEIVER\_HPP}}
+\index{CLUON\_UDPRECEIVER\_HPP@{CLUON\_UDPRECEIVER\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_UDPRECEIVER\_HPP}{CLUON\_UDPRECEIVER\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+UDPRECEIVER\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_aa0505185fd9dccb1cabc1ca22316445a}\label{cluon-complete_8hpp_aa0505185fd9dccb1cabc1ca22316445a}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CLUON\_UDPSENDER\_HPP@{CLUON\_UDPSENDER\_HPP}}
+\index{CLUON\_UDPSENDER\_HPP@{CLUON\_UDPSENDER\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CLUON\_UDPSENDER\_HPP}{CLUON\_UDPSENDER\_HPP}}
+{\footnotesize\ttfamily \#define CLUON\+\_\+\+UDPSENDER\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_ac8c8ddccdc13f81b1d3442f7ac8e6471}\label{cluon-complete_8hpp_ac8c8ddccdc13f81b1d3442f7ac8e6471}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!CPPPEGLIB\_PEGLIB\_H@{CPPPEGLIB\_PEGLIB\_H}}
+\index{CPPPEGLIB\_PEGLIB\_H@{CPPPEGLIB\_PEGLIB\_H}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{CPPPEGLIB\_PEGLIB\_H}{CPPPEGLIB\_PEGLIB\_H}}
+{\footnotesize\ttfamily \#define CPPPEGLIB\+\_\+\+PEGLIB\+\_\+H}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}\label{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!LIB\_API@{LIB\_API}}
+\index{LIB\_API@{LIB\_API}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{LIB\_API}{LIB\_API}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \#define LIB\+\_\+\+API}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}\label{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!LIB\_API@{LIB\_API}}
+\index{LIB\_API@{LIB\_API}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{LIB\_API}{LIB\_API}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \#define LIB\+\_\+\+API}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}\label{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!LIB\_API@{LIB\_API}}
+\index{LIB\_API@{LIB\_API}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{LIB\_API}{LIB\_API}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \#define LIB\+\_\+\+API}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}\label{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!LIB\_API@{LIB\_API}}
+\index{LIB\_API@{LIB\_API}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{LIB\_API}{LIB\_API}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \#define LIB\+\_\+\+API}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}\label{cluon-complete_8hpp_a77278c8cc96e39fb27b5d0a347c8fb3d}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!LIB\_API@{LIB\_API}}
+\index{LIB\_API@{LIB\_API}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{LIB\_API}{LIB\_API}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \#define LIB\+\_\+\+API}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a450521e9bcf01c91d8d213ee91e9b4ff}\label{cluon-complete_8hpp_a450521e9bcf01c91d8d213ee91e9b4ff}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!LIBCLUON\_API@{LIBCLUON\_API}}
+\index{LIBCLUON\_API@{LIBCLUON\_API}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{LIBCLUON\_API}{LIBCLUON\_API}}
+{\footnotesize\ttfamily \#define LIBCLUON\+\_\+\+API}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_ae72b46c3d4287d5aade56dba045966ac}\label{cluon-complete_8hpp_ae72b46c3d4287d5aade56dba045966ac}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!STRINGTOOLBOX\_HPP@{STRINGTOOLBOX\_HPP}}
+\index{STRINGTOOLBOX\_HPP@{STRINGTOOLBOX\_HPP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{STRINGTOOLBOX\_HPP}{STRINGTOOLBOX\_HPP}}
+{\footnotesize\ttfamily \#define STRINGTOOLBOX\+\_\+\+HPP}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a3dced3320394c8618a957b6109a2c668}\label{cluon-complete_8hpp_a3dced3320394c8618a957b6109a2c668}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!TRIPLET\_FORWARD\_VISITABLE\_TYPE\_TRAIT@{TRIPLET\_FORWARD\_VISITABLE\_TYPE\_TRAIT}}
+\index{TRIPLET\_FORWARD\_VISITABLE\_TYPE\_TRAIT@{TRIPLET\_FORWARD\_VISITABLE\_TYPE\_TRAIT}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{TRIPLET\_FORWARD\_VISITABLE\_TYPE\_TRAIT}{TRIPLET\_FORWARD\_VISITABLE\_TYPE\_TRAIT}}
+{\footnotesize\ttfamily \#define TRIPLET\+\_\+\+FORWARD\+\_\+\+VISITABLE\+\_\+\+TYPE\+\_\+\+TRAIT}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a12c0cb61720c6338b097956c962c0bff}\label{cluon-complete_8hpp_a12c0cb61720c6338b097956c962c0bff}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!VISITABLE\_TYPE\_TRAIT@{VISITABLE\_TYPE\_TRAIT}}
+\index{VISITABLE\_TYPE\_TRAIT@{VISITABLE\_TYPE\_TRAIT}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{VISITABLE\_TYPE\_TRAIT}{VISITABLE\_TYPE\_TRAIT}}
+{\footnotesize\ttfamily \#define VISITABLE\+\_\+\+TYPE\+\_\+\+TRAIT}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cluon-complete_8hpp_ad9289e9a604e8499b2bd2ccd2fd2b554}\label{cluon-complete_8hpp_ad9289e9a604e8499b2bd2ccd2fd2b554}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!add@{add}}
+\index{add@{add}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cluon-complete_8hpp_ac99d9adcdaabb55efe224341cde96631}{mm}} add (\begin{DoxyParamCaption}\item[{std\+::move(\mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_aa9b0edb5108bbc91eddc7d510ba5373b}\label{cluon-complete_8hpp_aa9b0edb5108bbc91eddc7d510ba5373b}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!catch@{catch}}
+\index{catch@{catch}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{catch()}{catch()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily catch (\begin{DoxyParamCaption}\item[{std\+::bad\+\_\+cast \&}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9865                             \{                                                                                   \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{9866     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cluon-complete_8hpp_a641189c7ea133fcb93eb5c9cdbd2fbcf}\label{cluon-complete_8hpp_a641189c7ea133fcb93eb5c9cdbd2fbcf}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!catch@{catch}}
+\index{catch@{catch}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{catch()}{catch()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily catch (\begin{DoxyParamCaption}\item[{std\+::regex\+\_\+error \&}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9864                                \{                                                                                \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{9865     \} \textcolor{keywordflow}{catch} (std::bad\_cast \&) \{                                                                                   \textcolor{comment}{// LCOV\_EXCL\_LINE}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cluon-complete_8hpp_a8008aa242696830750ce2ed8737c7cea}\label{cluon-complete_8hpp_a8008aa242696830750ce2ed8737c7cea}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!defaultInitializationValue@{defaultInitializationValue}}
+\index{defaultInitializationValue@{defaultInitializationValue}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{defaultInitializationValue()}{defaultInitializationValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}} default\+Initialization\+Value (\begin{DoxyParamCaption}\item[{\+\_\+field\+Default\+Initializer\+Value}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}\label{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!doTripletForwardVisit@{doTripletForwardVisit}}
+\index{doTripletForwardVisit@{doTripletForwardVisit}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{doTripletForwardVisit()}{doTripletForwardVisit()}}
+{\footnotesize\ttfamily template$<$typename T , class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ \\
+void do\+Triplet\+Forward\+Visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Identifier,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{T \&}]{value,  }\item[{Pre\+Visitor \&\&}]{pre\+Visit,  }\item[{Visitor \&\&}]{visit,  }\item[{Post\+Visitor \&\&}]{post\+Visit }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4372                                                                                                                                                                         \{}
+\DoxyCodeLine{4373     \mbox{\hyperlink{structtripletForwardVisitorSelector}{tripletForwardVisitorSelector<isTripletForwardVisitable<T>::value}} >::impl(\mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{fieldIdentifier}}, std::move(typeName), std::move(name), value, std::move(preVisit), std::move(visit), std::move(postVisit)); \textcolor{comment}{// NOLINT}}
+\DoxyCodeLine{4374 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{field\+Identifier()}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_a2947c7a70f98323da87aa8375d853a56}{cluon\+::\+Generic\+Message\+::accept()}}, \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_a003db6934dc963e4a6af77c62620692a}{cluon\+::data\+::\+Time\+Stamp\+::accept()}}, \mbox{\hyperlink{classcluon_1_1data_1_1Envelope_a2058267d5624cffb2dcd8b47d2c83429}{cluon\+::data\+::\+Envelope\+::accept()}}, \mbox{\hyperlink{classcluon_1_1data_1_1PlayerCommand_a1fc3c073fe0af185c3dd9447c03554e1}{cluon\+::data\+::\+Player\+Command\+::accept()}}, \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_af117cac7a9e737c12b5a885a152135d5}{cluon\+::data\+::\+Player\+Status\+::accept()}}, and \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a2d055410532eab810ee17f54ab220342}{cluon\+::data\+::\+Recorder\+Command\+::accept()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}\label{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!doVisit@{doVisit}}
+\index{doVisit@{doVisit}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{doVisit()}{doVisit()}}
+{\footnotesize\ttfamily template$<$typename T , class Visitor $>$ \\
+void do\+Visit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Identifier,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{T \&}]{value,  }\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4333                                                                                                            \{}
+\DoxyCodeLine{4334     \mbox{\hyperlink{structvisitorSelector}{visitorSelector<isVisitable<T>::value}} >::impl(\mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{fieldIdentifier}}, std::move(typeName), std::move(name), value, visitor);}
+\DoxyCodeLine{4335 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{field\+Identifier()}}.
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_a252fb082934e4a62777c70f2f003a6d3}{cluon\+::data\+::\+Time\+Stamp\+::accept()}}, \mbox{\hyperlink{classcluon_1_1data_1_1Envelope_afb1dfa6ca6a92b9c5eba3a1201b16dbd}{cluon\+::data\+::\+Envelope\+::accept()}}, \mbox{\hyperlink{classcluon_1_1data_1_1PlayerCommand_aac2af35554748063be808bec1faf6dc6}{cluon\+::data\+::\+Player\+Command\+::accept()}}, \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a77a12c68a6d1a43072e70b1854c33582}{cluon\+::data\+::\+Player\+Status\+::accept()}}, \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a1ed97bd86d20a06214b3ed180f7d4db5}{cluon\+::data\+::\+Recorder\+Command\+::accept()}}, and \mbox{\hyperlink{classcluon_1_1GenericMessage_a161e9fcd68d9ac34004ecfa6cd34c889}{cluon\+::\+Generic\+Message\+::accept()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{cluon-complete_8hpp_a5a66051511d961e717932cb0a3a0e700}\label{cluon-complete_8hpp_a5a66051511d961e717932cb0a3a0e700}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!enable\_ast@{enable\_ast}}
+\index{enable\_ast@{enable\_ast}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{enable\_ast()}{enable\_ast()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}} enable\+\_\+ast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a6b3635957db251f13f33bae3916b6153}\label{cluon-complete_8hpp_a6b3635957db251f13f33bae3916b6153}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!fieldDataTypeName@{fieldDataTypeName}}
+\index{fieldDataTypeName@{fieldDataTypeName}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{fieldDataTypeName()}{fieldDataTypeName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}} field\+Data\+Type\+Name (\begin{DoxyParamCaption}\item[{\+::stringtoolbox\+::trim(\+\_\+field\+Data\+Type)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}\label{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!fieldIdentifier@{fieldIdentifier}}
+\index{fieldIdentifier@{fieldIdentifier}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{fieldIdentifier()}{fieldIdentifier()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}} field\+Identifier (\begin{DoxyParamCaption}\item[{(!\+\_\+field\+Identifier.\+empty() ? static\+\_\+cast$<$ uint32\+\_\+t $>$(std\+::stoi(\+::stringtoolbox\+::trim(\+\_\+field\+Identifier))) \+:field\+Identifier\+Counter)}]{ }\end{DoxyParamCaption})}
+
+
+
+Referenced by \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{do\+Triplet\+Forward\+Visit()}}, \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}, \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_a75b3ce4de31de889c92c901c57bac662}{cluon\+::\+To\+Proto\+Visitor\+::encode\+Key()}}, \mbox{\hyperlink{structtripletForwardVisitorSelector_ae8c2ff3ef4294528439c388ff261809a}{triplet\+Forward\+Visitor\+Selector$<$ b $>$\+::impl()}}, \mbox{\hyperlink{structtripletForwardVisitorSelector_3_01true_01_4_a0c57c163a3a11215833b103783f1c7bd}{triplet\+Forward\+Visitor\+Selector$<$ true $>$\+::impl()}}, \mbox{\hyperlink{structvisitorSelector_a3ebb6f3589f3f87350cc39fbc38c3063}{visitor\+Selector$<$ b $>$\+::impl()}}, \mbox{\hyperlink{structvisitorSelector_3_01true_01_4_a0b724d596073217e9b46ed7d1232baeb}{visitor\+Selector$<$ true $>$\+::impl()}}, \mbox{\hyperlink{classcluon_1_1MessageParser_a6ba94f0f1b6a790d8fe436ffa2512892}{cluon\+::\+Message\+Parser\+::parse()}}, and \mbox{\hyperlink{classcluon_1_1ToProtoVisitor_ac3a8edcf8094fa557f2d83dcbdd23981}{cluon\+::\+To\+Proto\+Visitor\+::to\+Key\+Value()}}.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{cluon-complete_8hpp_a802637a7125c84855ce97b387f786538}\label{cluon-complete_8hpp_a802637a7125c84855ce97b387f786538}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!fieldName@{fieldName}}
+\index{fieldName@{fieldName}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{fieldName()}{fieldName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}} field\+Name (\begin{DoxyParamCaption}\item[{\+::stringtoolbox\+::trim(\+\_\+field\+Name)}]{ }\end{DoxyParamCaption})}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1MessageParser_a6ba94f0f1b6a790d8fe436ffa2512892}{cluon\+::\+Message\+Parser\+::parse()}}.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{cluon-complete_8hpp_ace67ff7d7f42c9c47dd688092d2d3610}\label{cluon-complete_8hpp_ace67ff7d7f42c9c47dd688092d2d3610}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!if@{if}}
+\index{if@{if}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\char`\"{}MESSAGES\+\_\+\+SPECIFICATION\char`\"{}}]{ = {\ttfamily =~ast.name} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9831                                                         \{}
+\DoxyCodeLine{9832                   \textcolor{comment}{// Extract the value of entry "{}PACKAGE\_IDENTIFIER"{}.}}
+\DoxyCodeLine{9833                   \textcolor{keyword}{auto} nodeIdentifier = std::find\_if(std::begin(\mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}}.nodes), std::end(\mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}}.nodes), [](\textcolor{keyword}{auto} a) \{ return (a-\/>name == \textcolor{stringliteral}{"{}PACKAGE\_IDENTIFIER"{}}); \});}
+\DoxyCodeLine{9834                   std::string packageName;}
+\DoxyCodeLine{9835                   \textcolor{keywordflow}{if} (nodeIdentifier != std::end(\mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}}.nodes)) \{}
+\DoxyCodeLine{9836                       packageName = (*nodeIdentifier)-\/>token;}
+\DoxyCodeLine{9837                   \}}
+\DoxyCodeLine{9838 }
+\DoxyCodeLine{9839                   \textcolor{comment}{// Extract the value of entry "{}MESSAGE\_DECLARATION"{}.}}
+\DoxyCodeLine{9840                   \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&node : \mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}}.nodes) \{}
+\DoxyCodeLine{9841                       \textcolor{keywordflow}{if} (node-\/>name == \textcolor{stringliteral}{"{}MESSAGE\_DECLARATION"{}}) \{}
+\DoxyCodeLine{9842                           listOfMetaMessages.emplace\_back(createMetaMessage(*node, packageName));}
+\DoxyCodeLine{9843                       \}}
+\DoxyCodeLine{9844                   \}}
+\DoxyCodeLine{9845               \} \textcolor{keywordflow}{else} \{}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}}.
+
+\mbox{\Hypertarget{cluon-complete_8hpp_aff34bdca67de3a6f77d73006dad4e0fc}\label{cluon-complete_8hpp_aff34bdca67de3a6f77d73006dad4e0fc}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!if@{if}}
+\index{if@{if}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9812                                                                                 \{}
+\DoxyCodeLine{9813                               \mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}}.fieldDataType(\mbox{\hyperlink{cluon-complete_8hpp_a3c3ec6e5d04c71378a8094a882da7b54}{STRING\_TO\_DATATYPE\_MAP}}[\_fieldDataType]);}
+\DoxyCodeLine{9814                           \} \textcolor{keywordflow}{else} \{}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}}, and \mbox{\hyperlink{cluon-complete_8hpp_a3c3ec6e5d04c71378a8094a882da7b54}{STRING\+\_\+\+TO\+\_\+\+DATATYPE\+\_\+\+MAP}}.
+
+\mbox{\Hypertarget{cluon-complete_8hpp_ab73f32d36cdefe0d26a217ecb3fd46b2}\label{cluon-complete_8hpp_ab73f32d36cdefe0d26a217ecb3fd46b2}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!if@{if}}
+\index{if@{if}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{p.}]{parseinput\+Without\+Comments.\+c\+\_\+str(), ast }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9870                                                         \{}
+\DoxyCodeLine{9871             \mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}} = \mbox{\hyperlink{structpeg_1_1AstOptimizer}{peg::AstOptimizer}}(\textcolor{keyword}{true}).\mbox{\hyperlink{structpeg_1_1AstOptimizer_ab08f7e97a7820e086021dbd8c3bb5580}{optimize}}(\mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}});}
+\DoxyCodeLine{9872             \{}
+\DoxyCodeLine{9873                 std::string tmpPrefix;}
+\DoxyCodeLine{9874                 std::vector<std::string> tmpMessageNames\{\};}
+\DoxyCodeLine{9875                 std::vector<std::string> tmpFieldNames\{\};}
+\DoxyCodeLine{9876                 std::vector<int32\_t> tmpNumericalMessageIdentifiers\{\};}
+\DoxyCodeLine{9877                 std::vector<int32\_t> tmpNumericalFieldIdentifiers\{\};}
+\DoxyCodeLine{9878                 \textcolor{keywordflow}{if} (check4UniqueFieldNames(*\mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}}, tmpPrefix, tmpMessageNames, tmpFieldNames, tmpNumericalMessageIdentifiers, tmpNumericalFieldIdentifiers)) \{}
+\DoxyCodeLine{9879                     transform2MetaMessages(*\mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}}, listOfMetaMessages);}
+\DoxyCodeLine{9880                     \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}} = \{listOfMetaMessages, MessageParserErrorCodes::NO\_MESSAGEPARSER\_ERROR\};}
+\DoxyCodeLine{9881                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{9882                     \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{retVal}} = \{listOfMetaMessages, MessageParserErrorCodes::DUPLICATE\_IDENTIFIERS\};}
+\DoxyCodeLine{9883                 \}}
+\DoxyCodeLine{9884             \}}
+\DoxyCodeLine{9885         \} \textcolor{keywordflow}{else} \{}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}{ast}}, \mbox{\hyperlink{structpeg_1_1AstOptimizer_ab08f7e97a7820e086021dbd8c3bb5580}{peg\+::\+Ast\+Optimizer\+::optimize()}}, and \mbox{\hyperlink{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}{ret\+Val}}.
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}\label{cluon-complete_8hpp_a92e4261a46b1f5265ae122a3e8643667}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!ast@{ast}}
+\index{ast@{ast}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{ast}{ast}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacepeg_a9150526ea12d04fabcb6af73f20366af}{peg\+::\+Ast}}$>$ ast \{\}}
+
+
+
+Referenced by \mbox{\hyperlink{namespacepeg_aacf6410cf81246c2feb4044d090b1728}{peg\+::ast\+\_\+to\+\_\+s\+\_\+core()}}, \mbox{\hyperlink{classpeg_1_1parser_a49ac16263b0f402446dcb8d0e31caeb7}{peg\+::parser\+::enable\+\_\+ast()}}, \mbox{\hyperlink{cluon-complete_8hpp_ace67ff7d7f42c9c47dd688092d2d3610}{if()}}, \mbox{\hyperlink{structpeg_1_1AstOptimizer_ab08f7e97a7820e086021dbd8c3bb5580}{peg\+::\+Ast\+Optimizer\+::optimize()}}, and \mbox{\hyperlink{classcluon_1_1MessageParser_a6ba94f0f1b6a790d8fe436ffa2512892}{cluon\+::\+Message\+Parser\+::parse()}}.
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a0544c3fe466e421738dae463968b70ba}\label{cluon-complete_8hpp_a0544c3fe466e421738dae463968b70ba}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!else@{else}}
+\index{else@{else}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{                              \mbox{\hyperlink{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}{mf}}.fieldDataType(MetaMessage::MetaField::MESSAGE\_T)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cluon-complete_8hpp_a332bbdc63307d87533b7be2e590a5b85}\label{cluon-complete_8hpp_a332bbdc63307d87533b7be2e590a5b85}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!inputWithoutComments@{inputWithoutComments}}
+\index{inputWithoutComments@{inputWithoutComments}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{inputWithoutComments}{inputWithoutComments}}
+{\footnotesize\ttfamily input\+Without\+Comments \{input\}}
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}\label{cluon-complete_8hpp_a9b2aa5573c727d5a5372bf5b8c734c95}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!log@{log}}
+\index{log@{log}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}{p}} log}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [](\textcolor{keywordtype}{size\_t} row, \textcolor{keywordtype}{size\_t} col, \textcolor{keyword}{const} std::string \&msg) \{}
+\DoxyCodeLine{        std::cerr << \textcolor{stringliteral}{"{}[cluon::MessageParser] Parsing error:"{}} << row << \textcolor{stringliteral}{"{}:"{}} << col << \textcolor{stringliteral}{"{}: "{}} << msg << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1parser_a62d51f3c7721699e97cb7fb584634785}{peg\+::parser\+::load\+\_\+grammar()}}, \mbox{\hyperlink{classpeg_1_1parser_a524ecb2a54b882ba6171d0e158dee630}{peg\+::parser\+::output\+\_\+log()}}, \mbox{\hyperlink{classpeg_1_1ParserGenerator_a40ae3460cddd778c01ec5d36e123b87d}{peg\+::\+Parser\+Generator\+::parse()}}, and \mbox{\hyperlink{classpeg_1_1ParserGenerator_a25d93dede0c55cca77a4fe8c33abecc5}{peg\+::\+Parser\+Generator\+::perform\+\_\+core()}}.
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}\label{cluon-complete_8hpp_a6562cbb4b60800f5e70be45d210a1f1b}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!mf@{mf}}
+\index{mf@{mf}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{mf}{mf}}
+{\footnotesize\ttfamily Meta\+Message\+::\+Meta\+Field mf}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1MetaMessage_acbbeec104676e02af5d82bbd2943e3db}{cluon\+::\+Meta\+Message\+::add()}}, \mbox{\hyperlink{cluon-complete_8hpp_aff34bdca67de3a6f77d73006dad4e0fc}{if()}}, and \mbox{\hyperlink{classcluon_1_1GenericMessage_1_1GenericMessageVisitor_a7cb671223f9bd993f5723d08a03e21a2}{cluon\+::\+Generic\+Message\+::\+Generic\+Message\+Visitor\+::visit()}}.
+
+\mbox{\Hypertarget{cluon-complete_8hpp_ac99d9adcdaabb55efe224341cde96631}\label{cluon-complete_8hpp_ac99d9adcdaabb55efe224341cde96631}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!mm@{mm}}
+\index{mm@{mm}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{mm}{mm}}
+{\footnotesize\ttfamily return mm}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1GenericMessage_a261bd0896ad80644d6718697cd70669c}{cluon\+::\+Generic\+Message\+::create\+From()}}, \mbox{\hyperlink{classcluon_1_1MessageParser_a6ba94f0f1b6a790d8fe436ffa2512892}{cluon\+::\+Message\+Parser\+::parse()}}, \mbox{\hyperlink{classcluon_1_1EnvelopeConverter_af4879d33814e727df61273fdd4ed973b}{cluon\+::\+Envelope\+Converter\+::set\+Message\+Specification()}}, and \mbox{\hyperlink{classcluon_1_1LCMToGenericMessage_ae807e1b1dc231c340d8360a1297f0488}{cluon\+::\+LCMTo\+Generic\+Message\+::set\+Message\+Specification()}}.
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}\label{cluon-complete_8hpp_a410689d493f4b702c049c31c384429f3}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!p@{p}}
+\index{p@{p}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpeg_1_1parser}{peg\+::parser}} p(grammar\+Message\+Specification\+Language) (\begin{DoxyParamCaption}\item[{grammar\+Message\+Specification\+Language}]{ }\end{DoxyParamCaption})}
+
+
+
+Referenced by \mbox{\hyperlink{classpeg_1_1any_a3c739d692a9b39839cd42842361b9754}{peg\+::any\+::get()}}, \mbox{\hyperlink{namespacepeg_a271c917c846302e10267a6be78a28d49}{peg\+::line\+\_\+info()}}, and \mbox{\hyperlink{structpeg_1_1AssignIDToDefinition_a5853dc8b9e357e6b648f87159a6a0768}{peg\+::\+Assign\+IDTo\+Definition\+::visit()}}.
+
+\mbox{\Hypertarget{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}\label{cluon-complete_8hpp_ad4b02d239c8387bc0498b8a690ef5a16}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!retVal@{retVal}}
+\index{retVal@{retVal}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{retVal}{retVal}}
+{\footnotesize\ttfamily return ret\+Val \{\}}
+
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1OD4Session_a18f8a4c5d912a6749402df490e4a9b6a}{cluon\+::\+OD4\+Session\+::callback()}}, \mbox{\hyperlink{classcluon_1_1UDPReceiver_a16391f723a0de5ff3e74ac06a0995362}{cluon\+::\+UDPReceiver\+::close\+Socket()}}, \mbox{\hyperlink{classcluon_1_1ToCSVVisitor_a47ad4c1e54208767ce93f469754f73a3}{cluon\+::\+To\+CSVVisitor\+::csv()}}, \mbox{\hyperlink{classcluon_1_1OD4Session_a5d79b313afe89bc3a8622d1801c0037c}{cluon\+::\+OD4\+Session\+::data\+Trigger()}}, \mbox{\hyperlink{classcluon_1_1ToJSONVisitor_ac08e1291c4803adc8e53ba1887d64aed}{cluon\+::\+To\+JSONVisitor\+::encode\+Base64()}}, \mbox{\hyperlink{namespacecluon_abbf469eea6cc8400c8a0689a7414a570}{cluon\+::extract\+Envelope()}}, \mbox{\hyperlink{classcluon_1_1Player_a58b55ea3d36351378016e58766d11f03}{cluon\+::\+Player\+::fill\+Envelope\+Cache()}}, \mbox{\hyperlink{namespacecluon_a276317d2317901f48d8283de15bdd924}{cluon\+::get\+Commandline\+Arguments()}}, \mbox{\hyperlink{classcluon_1_1EnvelopeConverter_a8d7438e6f54c7d4034688634a19ece83}{cluon\+::\+Envelope\+Converter\+::get\+JSONFrom\+Envelope()}}, \mbox{\hyperlink{classcluon_1_1EnvelopeConverter_adb3484e4e1336792ffb51d870e0f8028}{cluon\+::\+Envelope\+Converter\+::get\+JSONFrom\+Proto\+Encoded\+Envelope()}}, \mbox{\hyperlink{classcluon_1_1EnvelopeConverter_ac046a7e7de1fec61f44ca2ece7df11bc}{cluon\+::\+Envelope\+Converter\+::get\+Proto\+Encoded\+Envelope\+From\+JSON()}}, \mbox{\hyperlink{classcluon_1_1SharedMemory_a37eec40b45c7c4301ffa602772178661}{cluon\+::\+Shared\+Memory\+::get\+Time\+Stamp()}}, \mbox{\hyperlink{cluon-complete_8hpp_ab73f32d36cdefe0d26a217ecb3fd46b2}{if()}}, \mbox{\hyperlink{classcluon_1_1Player_a93d9d6f11bb8f22ad392c746e5048a3e}{cluon\+::\+Player\+::initialize\+Index()}}, \mbox{\hyperlink{classcluon_1_1SharedMemory_a7bb84bfeba277061c82fbc05db764d81}{cluon\+::\+Shared\+Memory\+::init\+POSIX()}}, \mbox{\hyperlink{classcluon_1_1ToJSONVisitor_aafec5e48f036cc0695f3ddf1195be429}{cluon\+::\+To\+JSONVisitor\+::json()}}, \mbox{\hyperlink{classcluon_1_1SharedMemory_aa892756d72243b253e838bd342224174}{cluon\+::\+Shared\+Memory\+::lock\+POSIX()}}, \mbox{\hyperlink{classcluon_1_1ToODVDVisitor_a7f126f7fd6a563b1b9c73b588689ef6a}{cluon\+::\+To\+ODVDVisitor\+::message\+Specification()}}, \mbox{\hyperlink{classcluon_1_1MessageParser_a6ba94f0f1b6a790d8fe436ffa2512892}{cluon\+::\+Message\+Parser\+::parse()}}, \mbox{\hyperlink{classcluon_1_1FromMsgPackVisitor_a8c29b366571e694482700a561540c92a}{cluon\+::\+From\+Msg\+Pack\+Visitor\+::read\+Int()}}, \mbox{\hyperlink{classcluon_1_1FromJSONVisitor_ac5de314a65fd9244c50713401111b8d4}{cluon\+::\+From\+JSONVisitor\+::read\+Key\+Values()}}, \mbox{\hyperlink{classcluon_1_1FromMsgPackVisitor_a6cb0afbd71be0131edbaa8e11396c32c}{cluon\+::\+From\+Msg\+Pack\+Visitor\+::read\+String()}}, \mbox{\hyperlink{classcluon_1_1FromMsgPackVisitor_a86255aa58ff68f97e329870826e1f447}{cluon\+::\+From\+Msg\+Pack\+Visitor\+::read\+Uint()}}, \mbox{\hyperlink{namespacestringtoolbox_a3033e64f6b7ad7047ef241338446b879}{stringtoolbox\+::replace\+All()}}, \mbox{\hyperlink{classcluon_1_1EnvelopeConverter_af4879d33814e727df61273fdd4ed973b}{cluon\+::\+Envelope\+Converter\+::set\+Message\+Specification()}}, \mbox{\hyperlink{classcluon_1_1LCMToGenericMessage_ae807e1b1dc231c340d8360a1297f0488}{cluon\+::\+LCMTo\+Generic\+Message\+::set\+Message\+Specification()}}, \mbox{\hyperlink{classcluon_1_1SharedMemory_a242387ce57180dd51ad9c4cd37e0a21f}{cluon\+::\+Shared\+Memory\+::set\+Time\+Stamp()}}, \mbox{\hyperlink{namespacestringtoolbox_a76bd13481e3c53dd861442f0e9cbfb96}{stringtoolbox\+::split()}}, \mbox{\hyperlink{classcluon_1_1TCPConnection_a944df3d518fbbc5fc462d522d30a0cd3}{cluon\+::\+TCPConnection\+::\+TCPConnection()}}, \mbox{\hyperlink{classcluon_1_1TCPServer_ab4687285c5779ff7135f388f81d90f50}{cluon\+::\+TCPServer\+::\+TCPServer()}}, and \mbox{\hyperlink{classcluon_1_1UDPReceiver_a067d67a9a40ebcd0d000969c1020706e}{cluon\+::\+UDPReceiver\+::\+UDPReceiver()}}.
+
+\mbox{\Hypertarget{cluon-complete_8hpp_a3c3ec6e5d04c71378a8094a882da7b54}\label{cluon-complete_8hpp_a3c3ec6e5d04c71378a8094a882da7b54}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!STRING\_TO\_DATATYPE\_MAP@{STRING\_TO\_DATATYPE\_MAP}}
+\index{STRING\_TO\_DATATYPE\_MAP@{STRING\_TO\_DATATYPE\_MAP}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{STRING\_TO\_DATATYPE\_MAP}{STRING\_TO\_DATATYPE\_MAP}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, Meta\+Message\+::\+Meta\+Field\+::\+Meta\+Field\+Data\+Types$>$ STRING\+\_\+\+TO\+\_\+\+DATATYPE\+\_\+\+MAP}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}bool"{}}, MetaMessage::MetaField::BOOL\_T\},}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}char"{}}, MetaMessage::MetaField::CHAR\_T\},}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}uint8"{}}, MetaMessage::MetaField::UINT8\_T\},}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}int8"{}}, MetaMessage::MetaField::INT8\_T\},}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}uint16"{}}, MetaMessage::MetaField::UINT16\_T\},}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}int16"{}}, MetaMessage::MetaField::INT16\_T\},}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}uint32"{}}, MetaMessage::MetaField::UINT32\_T\},}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}int32"{}}, MetaMessage::MetaField::INT32\_T\},}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}uint64"{}}, MetaMessage::MetaField::UINT64\_T\},}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}int64"{}}, MetaMessage::MetaField::INT64\_T\},}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}float"{}}, MetaMessage::MetaField::FLOAT\_T\},}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}double"{}}, MetaMessage::MetaField::DOUBLE\_T\},}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}string"{}}, MetaMessage::MetaField::STRING\_T\},}
+\DoxyCodeLine{                              \{\textcolor{stringliteral}{"{}bytes"{}}, MetaMessage::MetaField::BYTES\_T\},}
+\DoxyCodeLine{                          \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{cluon-complete_8hpp_aff34bdca67de3a6f77d73006dad4e0fc}{if()}}.
+
+\mbox{\Hypertarget{cluon-complete_8hpp_abe4cc9788f52e49485473dc699537388}\label{cluon-complete_8hpp_abe4cc9788f52e49485473dc699537388}} 
+\index{cluon-\/complete.hpp@{cluon-\/complete.hpp}!try@{try}}
+\index{try@{try}!cluon-\/complete.hpp@{cluon-\/complete.hpp}}
+\doxysubsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        \textcolor{keyword}{const} std::string MATCH\_COMMENTS\_REGEX = R\textcolor{stringliteral}{"{}(/\(\backslash\)*([\(\backslash\)s\(\backslash\)S]*?)\(\backslash\)*/|//.*)"{}}}
+
+\end{DoxyCode}

@@ -1,0 +1,600 @@
+\hypertarget{classlinb_1_1any}{}\doxysection{linb\+::any Class Reference}
+\label{classlinb_1_1any}\index{linb::any@{linb::any}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for linb\+::any\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlinb_1_1any_1_1requires__allocation}{requires\+\_\+allocation}}
+\begin{DoxyCompactList}\small\item\em Whether the type T must be dynamically allocated or can be stored on the stack. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}}
+\item 
+struct \mbox{\hyperlink{structlinb_1_1any_1_1vtable__dynamic}{vtable\+\_\+dynamic}}
+\begin{DoxyCompactList}\small\item\em VTable for dynamically allocated storage. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack}{vtable\+\_\+stack}}
+\begin{DoxyCompactList}\small\item\em VTable for stack allocated storage. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type}{vtable\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Base VTable specification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlinb_1_1any_a4235c73347f588664514be22a85680d9}{any}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an object of type any with an empty state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlinb_1_1any_a56847f22e44c42dfe1b74633cf81d083}{any}} (const \mbox{\hyperlink{classlinb_1_1any}{any}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Constructs an object of type any with an equivalent state as other. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlinb_1_1any_a50ccd807f1ded03ca732c5450d6f8117}{any}} (\mbox{\hyperlink{classlinb_1_1any}{any}} \&\&rhs) noexcept
+\item 
+\mbox{\hyperlink{classlinb_1_1any_ae43b1437e9e7b51a0ae90463914c0fb3}{$\sim$any}} ()
+\begin{DoxyCompactList}\small\item\em Same effect as this-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}{clear()}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Value\+Type , typename  = typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$typename std\+::decay$<$\+Value\+Type$>$\+::type, any$>$\+::value$>$\+::type$>$ }\\\mbox{\hyperlink{classlinb_1_1any_ac8364f28330ef3d4b1533ce108d5596c}{any}} (Value\+Type \&\&value)
+\item 
+\mbox{\hyperlink{classlinb_1_1any}{any}} \& \mbox{\hyperlink{classlinb_1_1any_afd195875f1dbc7c458c0b89c92e3319c}{operator=}} (const \mbox{\hyperlink{classlinb_1_1any}{any}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Has the same effect as any(rhs).swap($\ast$this). No effects if an exception is thrown. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlinb_1_1any}{any}} \& \mbox{\hyperlink{classlinb_1_1any_addd5a3e3fe9a20b7c7c31b3e5feaae3c}{operator=}} (\mbox{\hyperlink{classlinb_1_1any}{any}} \&\&rhs) noexcept
+\item 
+{\footnotesize template$<$typename Value\+Type , typename  = typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$typename std\+::decay$<$\+Value\+Type$>$\+::type, any$>$\+::value$>$\+::type$>$ }\\\mbox{\hyperlink{classlinb_1_1any}{any}} \& \mbox{\hyperlink{classlinb_1_1any_ad0bec760d8a8b790fbc1f5b299144b89}{operator=}} (Value\+Type \&\&value)
+\item 
+void \mbox{\hyperlink{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}{clear}} () noexcept
+\begin{DoxyCompactList}\small\item\em If not empty, destroys the contained object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlinb_1_1any_a8959e7cf6d97c91f126cf5d17814017a}{empty}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns true if $\ast$this has no contained object, otherwise false. \end{DoxyCompactList}\item 
+const std\+::type\+\_\+info \& \mbox{\hyperlink{classlinb_1_1any_a418dda0f87b24c4eb127f42f760cde25}{type}} () const noexcept
+\begin{DoxyCompactList}\small\item\em If $\ast$this has a contained object of type T, typeid(\+T); otherwise typeid(void). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlinb_1_1any_a6bd50f2fd178deacf049be223f73646e}{swap}} (\mbox{\hyperlink{classlinb_1_1any}{any}} \&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em Exchange the states of $\ast$this and rhs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\const T $\ast$ \mbox{\hyperlink{classlinb_1_1any_af0449384684f4bfa5624d09ce463a51d}{cast}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Casts (with no type\+\_\+info checks) the storage pointer as const T$\ast$. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{classlinb_1_1any_a2aa2a19ba860abb57f45f66e983553dd}{cast}} () noexcept
+\begin{DoxyCompactList}\small\item\em Casts (with no type\+\_\+info checks) the storage pointer as T$\ast$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Value\+Type , typename T $>$ }\\std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structlinb_1_1any_1_1requires__allocation}{requires\+\_\+allocation}}$<$ T $>$\+::value $>$\mbox{\hyperlink{classlinb_1_1any_a418dda0f87b24c4eb127f42f760cde25}{\+::type}} \mbox{\hyperlink{classlinb_1_1any_ae1a10c332313e3fb6f8da2f74e356e3b}{do\+\_\+construct}} (Value\+Type \&\&value)
+\item 
+{\footnotesize template$<$typename Value\+Type , typename T $>$ }\\std\+::enable\+\_\+if$<$!\mbox{\hyperlink{structlinb_1_1any_1_1requires__allocation}{requires\+\_\+allocation}}$<$ T $>$\+::value $>$\mbox{\hyperlink{classlinb_1_1any_a418dda0f87b24c4eb127f42f760cde25}{\+::type}} \mbox{\hyperlink{classlinb_1_1any_aa2a0672c1f126636eb022cbe706e6eb2}{do\+\_\+construct}} (Value\+Type \&\&value)
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\void \mbox{\hyperlink{classlinb_1_1any_a712294fe6097ce70f1e39c49ed19ba6a}{construct}} (Value\+Type \&\&value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type}{vtable\+\_\+type}} $\ast$ \mbox{\hyperlink{classlinb_1_1any_a49989b231c313f1247665e4469971b48}{vtable\+\_\+for\+\_\+type}} ()
+\begin{DoxyCompactList}\small\item\em Returns the pointer to the vtable of the type T. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}
+\item 
+\mbox{\hyperlink{structlinb_1_1any_1_1vtable__type}{vtable\+\_\+type}} $\ast$ \mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\const T $\ast$ \mbox{\hyperlink{classlinb_1_1any_ac7e9ad959f8889131c1d2d239179b85f}{any\+\_\+cast}} (const \mbox{\hyperlink{classlinb_1_1any}{any}} $\ast$operand) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{classlinb_1_1any_ac361b39dec968d41cc7b0a7f63ba9f3c}{any\+\_\+cast}} (\mbox{\hyperlink{classlinb_1_1any}{any}} $\ast$operand) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlinb_1_1any_a4235c73347f588664514be22a85680d9}\label{classlinb_1_1any_a4235c73347f588664514be22a85680d9}} 
+\index{linb::any@{linb::any}!any@{any}}
+\index{any@{any}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{any()}{any()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily linb\+::any\+::any (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs an object of type any with an empty state. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63           :}
+\DoxyCodeLine{64         \mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}}(\textcolor{keyword}{nullptr})}
+\DoxyCodeLine{65     \{}
+\DoxyCodeLine{66     \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{classlinb_1_1any_afd195875f1dbc7c458c0b89c92e3319c}{operator=()}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classlinb_1_1any_a56847f22e44c42dfe1b74633cf81d083}\label{classlinb_1_1any_a56847f22e44c42dfe1b74633cf81d083}} 
+\index{linb::any@{linb::any}!any@{any}}
+\index{any@{any}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{any()}{any()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily linb\+::any\+::any (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlinb_1_1any}{any}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs an object of type any with an equivalent state as other. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                         :}
+\DoxyCodeLine{70         \mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}}(rhs.vtable)}
+\DoxyCodeLine{71     \{}
+\DoxyCodeLine{72         \textcolor{keywordflow}{if}(!rhs.empty())}
+\DoxyCodeLine{73         \{}
+\DoxyCodeLine{74             rhs.vtable-\/>\mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_a30a6d14d0a8652e6364e1b3195e30133}{copy}}(rhs.storage, this-\/>storage);}
+\DoxyCodeLine{75         \}}
+\DoxyCodeLine{76     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_a30a6d14d0a8652e6364e1b3195e30133}{linb\+::any\+::vtable\+\_\+type\+::copy}}, \mbox{\hyperlink{classlinb_1_1any_a8959e7cf6d97c91f126cf5d17814017a}{empty()}}, \mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}, and \mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classlinb_1_1any_a50ccd807f1ded03ca732c5450d6f8117}\label{classlinb_1_1any_a50ccd807f1ded03ca732c5450d6f8117}} 
+\index{linb::any@{linb::any}!any@{any}}
+\index{any@{any}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{any()}{any()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily linb\+::any\+::any (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlinb_1_1any}{any}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Constructs an object of type any with a state equivalent to the original state of other. rhs is left in a valid but otherwise unspecified state. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80                             :}
+\DoxyCodeLine{81         \mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}}(rhs.vtable)}
+\DoxyCodeLine{82     \{}
+\DoxyCodeLine{83         \textcolor{keywordflow}{if}(!rhs.empty())}
+\DoxyCodeLine{84         \{}
+\DoxyCodeLine{85             rhs.vtable-\/>\mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_aa539551c552458e9d08951abb7055630}{move}}(rhs.storage, this-\/>storage);}
+\DoxyCodeLine{86             rhs.vtable = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{87         \}}
+\DoxyCodeLine{88     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_aa539551c552458e9d08951abb7055630}{linb\+::any\+::vtable\+\_\+type\+::move}}.
+
+\mbox{\Hypertarget{classlinb_1_1any_ae43b1437e9e7b51a0ae90463914c0fb3}\label{classlinb_1_1any_ae43b1437e9e7b51a0ae90463914c0fb3}} 
+\index{linb::any@{linb::any}!````~any@{$\sim$any}}
+\index{````~any@{$\sim$any}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{$\sim$any()}{~any()}}
+{\footnotesize\ttfamily linb\+::any\+::$\sim$any (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Same effect as this-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}{clear()}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{92     \{}
+\DoxyCodeLine{93         this-\/>\mbox{\hyperlink{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}{clear}}();}
+\DoxyCodeLine{94     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}{clear()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classlinb_1_1any_ac8364f28330ef3d4b1533ce108d5596c}\label{classlinb_1_1any_ac8364f28330ef3d4b1533ce108d5596c}} 
+\index{linb::any@{linb::any}!any@{any}}
+\index{any@{any}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{any()}{any()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename  = typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$typename std\+::decay$<$\+Value\+Type$>$\+::type, any$>$\+::value$>$\+::type$>$ \\
+linb\+::any\+::any (\begin{DoxyParamCaption}\item[{Value\+Type \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an object of type any that contains an object of type T direct-\/initialized with std\+::forward$<$\+Value\+Type$>$(value).
+
+T shall satisfy the Copy\+Constructible requirements, otherwise the program is ill-\/formed. This is because an {\ttfamily any} may be copy constructed into another {\ttfamily any} at any time, so a copy should always be allowed. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102     \{}
+\DoxyCodeLine{103         \textcolor{keyword}{static\_assert}(std::is\_copy\_constructible<typename std::decay<ValueType>::type>::value,}
+\DoxyCodeLine{104             \textcolor{stringliteral}{"{}T shall satisfy the CopyConstructible requirements."{}});}
+\DoxyCodeLine{105         this-\/>\mbox{\hyperlink{classlinb_1_1any_a712294fe6097ce70f1e39c49ed19ba6a}{construct}}(std::forward<ValueType>(value));}
+\DoxyCodeLine{106     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classlinb_1_1any_a712294fe6097ce70f1e39c49ed19ba6a}{construct()}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlinb_1_1any_af0449384684f4bfa5624d09ce463a51d}\label{classlinb_1_1any_af0449384684f4bfa5624d09ce463a51d}} 
+\index{linb::any@{linb::any}!cast@{cast}}
+\index{cast@{cast}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T $\ast$ linb\+::any\+::cast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [noexcept]}}
+
+
+
+Casts (with no type\+\_\+info checks) the storage pointer as const T$\ast$. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{336     \{}
+\DoxyCodeLine{337         \textcolor{keywordflow}{return} requires\_allocation<typename std::decay<T>::type>::value?}
+\DoxyCodeLine{338             \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }T*\textcolor{keyword}{>}(\mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}.\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union_ad8e102cefb7bc6c4e6db315b8f665168}{dynamic}}) :}
+\DoxyCodeLine{339             \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }T*\textcolor{keyword}{>}(\&\mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}.\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union_abc21bbee60b291e4b93c8ed7d3771691}{stack}});}
+\DoxyCodeLine{340     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classlinb_1_1any_a2aa2a19ba860abb57f45f66e983553dd}\label{classlinb_1_1any_a2aa2a19ba860abb57f45f66e983553dd}} 
+\index{linb::any@{linb::any}!cast@{cast}}
+\index{cast@{cast}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T $\ast$ linb\+::any\+::cast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [noexcept]}}
+
+
+
+Casts (with no type\+\_\+info checks) the storage pointer as T$\ast$. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{345     \{}
+\DoxyCodeLine{346         \textcolor{keywordflow}{return} requires\_allocation<typename std::decay<T>::type>::value?}
+\DoxyCodeLine{347             \textcolor{keyword}{reinterpret\_cast<}T*\textcolor{keyword}{>}(\mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}.\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union_ad8e102cefb7bc6c4e6db315b8f665168}{dynamic}}) :}
+\DoxyCodeLine{348             \textcolor{keyword}{reinterpret\_cast<}T*\textcolor{keyword}{>}(\&\mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}.\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union_abc21bbee60b291e4b93c8ed7d3771691}{stack}});}
+\DoxyCodeLine{349     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}\label{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}} 
+\index{linb::any@{linb::any}!clear@{clear}}
+\index{clear@{clear}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void linb\+::any\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+If not empty, destroys the contained object. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{140     \{}
+\DoxyCodeLine{141         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classlinb_1_1any_a8959e7cf6d97c91f126cf5d17814017a}{empty}}())}
+\DoxyCodeLine{142         \{}
+\DoxyCodeLine{143             this-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}}-\/>\mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_af938d9c1bd6d8f608daf58aa1ddc635a}{destroy}}(\mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}});}
+\DoxyCodeLine{144             this-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{145         \}}
+\DoxyCodeLine{146     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_af938d9c1bd6d8f608daf58aa1ddc635a}{linb\+::any\+::vtable\+\_\+type\+::destroy}}, \mbox{\hyperlink{classlinb_1_1any_a8959e7cf6d97c91f126cf5d17814017a}{empty()}}, \mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}, and \mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}}.
+
+
+
+Referenced by \mbox{\hyperlink{classlinb_1_1any_ae43b1437e9e7b51a0ae90463914c0fb3}{$\sim$any()}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classlinb_1_1any_a712294fe6097ce70f1e39c49ed19ba6a}\label{classlinb_1_1any_a712294fe6097ce70f1e39c49ed19ba6a}} 
+\index{linb::any@{linb::any}!construct@{construct}}
+\index{construct@{construct}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{construct()}{construct()}}
+{\footnotesize\ttfamily template$<$typename Value\+Type $>$ \\
+void linb\+::any\+::construct (\begin{DoxyParamCaption}\item[{Value\+Type \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Chooses between stack and dynamic allocation for the type decay\+\_\+t$<$\+Value\+Type$>$, assigns the correct vtable, and constructs the object on our storage. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{373     \{}
+\DoxyCodeLine{374         \textcolor{keyword}{using} T = \textcolor{keyword}{typename} std::decay<ValueType>::type;}
+\DoxyCodeLine{375 }
+\DoxyCodeLine{376         this-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}} = vtable\_for\_type<T>();}
+\DoxyCodeLine{377 }
+\DoxyCodeLine{378         do\_construct<ValueType,T>(std::forward<ValueType>(value));}
+\DoxyCodeLine{379     \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{classlinb_1_1any_ac8364f28330ef3d4b1533ce108d5596c}{any()}}.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{classlinb_1_1any_ae1a10c332313e3fb6f8da2f74e356e3b}\label{classlinb_1_1any_ae1a10c332313e3fb6f8da2f74e356e3b}} 
+\index{linb::any@{linb::any}!do\_construct@{do\_construct}}
+\index{do\_construct@{do\_construct}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{do\_construct()}{do\_construct()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename T $>$ \\
+std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structlinb_1_1any_1_1requires__allocation}{requires\+\_\+allocation}}$<$ T $>$\+::value $>$\mbox{\hyperlink{classlinb_1_1any_a418dda0f87b24c4eb127f42f760cde25}{\+::type}} linb\+::any\+::do\+\_\+construct (\begin{DoxyParamCaption}\item[{Value\+Type \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{358     \{}
+\DoxyCodeLine{359         \mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}.\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union_ad8e102cefb7bc6c4e6db315b8f665168}{dynamic}} = \textcolor{keyword}{new} T(std::forward<ValueType>(value));}
+\DoxyCodeLine{360     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classlinb_1_1any_aa2a0672c1f126636eb022cbe706e6eb2}\label{classlinb_1_1any_aa2a0672c1f126636eb022cbe706e6eb2}} 
+\index{linb::any@{linb::any}!do\_construct@{do\_construct}}
+\index{do\_construct@{do\_construct}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{do\_construct()}{do\_construct()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename T $>$ \\
+std\+::enable\+\_\+if$<$!\mbox{\hyperlink{structlinb_1_1any_1_1requires__allocation}{requires\+\_\+allocation}}$<$ T $>$\+::value $>$\mbox{\hyperlink{classlinb_1_1any_a418dda0f87b24c4eb127f42f760cde25}{\+::type}} linb\+::any\+::do\+\_\+construct (\begin{DoxyParamCaption}\item[{Value\+Type \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{365     \{}
+\DoxyCodeLine{366         \textcolor{keyword}{new} (\&\mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}.\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union_abc21bbee60b291e4b93c8ed7d3771691}{stack}}) T(std::forward<ValueType>(value));}
+\DoxyCodeLine{367     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classlinb_1_1any_a8959e7cf6d97c91f126cf5d17814017a}\label{classlinb_1_1any_a8959e7cf6d97c91f126cf5d17814017a}} 
+\index{linb::any@{linb::any}!empty@{empty}}
+\index{empty@{empty}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool linb\+::any\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Returns true if $\ast$this has no contained object, otherwise false. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{150     \{}
+\DoxyCodeLine{151         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}} == \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{152     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}}.
+
+
+
+Referenced by \mbox{\hyperlink{classlinb_1_1any_a56847f22e44c42dfe1b74633cf81d083}{any()}}, \mbox{\hyperlink{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}{clear()}}, and \mbox{\hyperlink{classlinb_1_1any_a418dda0f87b24c4eb127f42f760cde25}{type()}}.
+
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{classlinb_1_1any_addd5a3e3fe9a20b7c7c31b3e5feaae3c}\label{classlinb_1_1any_addd5a3e3fe9a20b7c7c31b3e5feaae3c}} 
+\index{linb::any@{linb::any}!operator=@{operator=}}
+\index{operator=@{operator=}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlinb_1_1any}{any}} \& linb\+::any\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlinb_1_1any}{any}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Has the same effect as any(std\+::move(rhs)).swap($\ast$this).
+
+The state of $\ast$this is equivalent to the original state of rhs and rhs is left in a valid but otherwise unspecified state. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{120     \{}
+\DoxyCodeLine{121         \mbox{\hyperlink{classlinb_1_1any_a4235c73347f588664514be22a85680d9}{any}}(std::move(rhs)).swap(*\textcolor{keyword}{this});}
+\DoxyCodeLine{122         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{123     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classlinb_1_1any_a4235c73347f588664514be22a85680d9}{any()}}.
+
+Here is the call graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{classlinb_1_1any_afd195875f1dbc7c458c0b89c92e3319c}\label{classlinb_1_1any_afd195875f1dbc7c458c0b89c92e3319c}} 
+\index{linb::any@{linb::any}!operator=@{operator=}}
+\index{operator=@{operator=}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlinb_1_1any}{any}} \& linb\+::any\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlinb_1_1any}{any}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Has the same effect as any(rhs).swap($\ast$this). No effects if an exception is thrown. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{110     \{}
+\DoxyCodeLine{111         \mbox{\hyperlink{classlinb_1_1any_a4235c73347f588664514be22a85680d9}{any}}(rhs).swap(*\textcolor{keyword}{this});}
+\DoxyCodeLine{112         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{113     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classlinb_1_1any_a4235c73347f588664514be22a85680d9}{any()}}.
+
+Here is the call graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{classlinb_1_1any_ad0bec760d8a8b790fbc1f5b299144b89}\label{classlinb_1_1any_ad0bec760d8a8b790fbc1f5b299144b89}} 
+\index{linb::any@{linb::any}!operator=@{operator=}}
+\index{operator=@{operator=}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename  = typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$typename std\+::decay$<$\+Value\+Type$>$\+::type, any$>$\+::value$>$\+::type$>$ \\
+\mbox{\hyperlink{classlinb_1_1any}{any}} \& linb\+::any\+::operator= (\begin{DoxyParamCaption}\item[{Value\+Type \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Has the same effect as any(std\+::forward$<$\+Value\+Type$>$(value)).swap($\ast$this). No effect if a exception is thrown.
+
+T shall satisfy the Copy\+Constructible requirements, otherwise the program is ill-\/formed. This is because an {\ttfamily any} may be copy constructed into another {\ttfamily any} at any time, so a copy should always be allowed. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131     \{}
+\DoxyCodeLine{132         \textcolor{keyword}{static\_assert}(std::is\_copy\_constructible<typename std::decay<ValueType>::type>::value,}
+\DoxyCodeLine{133             \textcolor{stringliteral}{"{}T shall satisfy the CopyConstructible requirements."{}});}
+\DoxyCodeLine{134         \mbox{\hyperlink{classlinb_1_1any_a4235c73347f588664514be22a85680d9}{any}}(std::forward<ValueType>(value)).swap(*\textcolor{keyword}{this});}
+\DoxyCodeLine{135         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{136     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classlinb_1_1any_a4235c73347f588664514be22a85680d9}{any()}}.
+
+Here is the call graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{classlinb_1_1any_a6bd50f2fd178deacf049be223f73646e}\label{classlinb_1_1any_a6bd50f2fd178deacf049be223f73646e}} 
+\index{linb::any@{linb::any}!swap@{swap}}
+\index{swap@{swap}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void linb\+::any\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlinb_1_1any}{any}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Exchange the states of $\ast$this and rhs. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{164     \{}
+\DoxyCodeLine{165         \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}} != rhs.vtable)}
+\DoxyCodeLine{166         \{}
+\DoxyCodeLine{167             \mbox{\hyperlink{classlinb_1_1any_a4235c73347f588664514be22a85680d9}{any}} tmp(std::move(rhs));}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169             \textcolor{comment}{// move from *this to rhs.}}
+\DoxyCodeLine{170             rhs.vtable = this-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}};}
+\DoxyCodeLine{171             \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}} != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{172             \{}
+\DoxyCodeLine{173                 this-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}}-\/>\mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_aa539551c552458e9d08951abb7055630}{move}}(this-\/>\mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}, rhs.storage);}
+\DoxyCodeLine{174                 \textcolor{comment}{//this-\/>vtable = nullptr; -\/-\/ unneeded, see below}}
+\DoxyCodeLine{175             \}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177             \textcolor{comment}{// move from tmp (previously rhs) to *this.}}
+\DoxyCodeLine{178             this-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}} = tmp.vtable;}
+\DoxyCodeLine{179             \textcolor{keywordflow}{if}(tmp.vtable != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{180             \{}
+\DoxyCodeLine{181                 tmp.vtable-\/>\mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_aa539551c552458e9d08951abb7055630}{move}}(tmp.storage, this-\/>storage);}
+\DoxyCodeLine{182                 tmp.vtable = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{183             \}}
+\DoxyCodeLine{184         \}}
+\DoxyCodeLine{185         \textcolor{keywordflow}{else} \textcolor{comment}{// same types}}
+\DoxyCodeLine{186         \{}
+\DoxyCodeLine{187             \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}} != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{188                 this-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}}-\/>\mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_a1079c06f487353b51e5d4371e3aa3e81}{swap}}(this-\/>\mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}, rhs.storage);}
+\DoxyCodeLine{189         \}}
+\DoxyCodeLine{190     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_aa539551c552458e9d08951abb7055630}{linb\+::any\+::vtable\+\_\+type\+::move}}, \mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}, \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_a1079c06f487353b51e5d4371e3aa3e81}{linb\+::any\+::vtable\+\_\+type\+::swap}}, and \mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}}.
+
+\mbox{\Hypertarget{classlinb_1_1any_a418dda0f87b24c4eb127f42f760cde25}\label{classlinb_1_1any_a418dda0f87b24c4eb127f42f760cde25}} 
+\index{linb::any@{linb::any}!type@{type}}
+\index{type@{type}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily const std\+::type\+\_\+info \& linb\+::any\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+If $\ast$this has a contained object of type T, typeid(\+T); otherwise typeid(void). 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{157     \{}
+\DoxyCodeLine{158         \textcolor{keywordflow}{return} \mbox{\hyperlink{classlinb_1_1any_a8959e7cf6d97c91f126cf5d17814017a}{empty}}()? \textcolor{keyword}{typeid}(void) : this-\/>\mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}}-\/>\mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_afec6f0cdf01ae24deaa532facbf4970a}{type}}();}
+\DoxyCodeLine{159     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classlinb_1_1any_a8959e7cf6d97c91f126cf5d17814017a}{empty()}}, \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type_afec6f0cdf01ae24deaa532facbf4970a}{linb\+::any\+::vtable\+\_\+type\+::type}}, and \mbox{\hyperlink{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}{vtable}}.
+
+Here is the call graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{classlinb_1_1any_a49989b231c313f1247665e4469971b48}\label{classlinb_1_1any_a49989b231c313f1247665e4469971b48}} 
+\index{linb::any@{linb::any}!vtable\_for\_type@{vtable\_for\_type}}
+\index{vtable\_for\_type@{vtable\_for\_type}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{vtable\_for\_type()}{vtable\_for\_type()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type}{vtable\+\_\+type}} $\ast$ linb\+::any\+::vtable\+\_\+for\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Returns the pointer to the vtable of the type T. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{314     \{}
+\DoxyCodeLine{315         \textcolor{keyword}{using} VTableType = \textcolor{keyword}{typename} std::conditional<requires\_allocation<T>::value, vtable\_dynamic<T>, vtable\_stack<T>>\mbox{\hyperlink{classlinb_1_1any_a418dda0f87b24c4eb127f42f760cde25}{::type}};}
+\DoxyCodeLine{316         \textcolor{keyword}{static} vtable\_type table = \{}
+\DoxyCodeLine{317 \textcolor{preprocessor}{\#ifndef ANY\_IMPL\_NO\_RTTI}}
+\DoxyCodeLine{318             VTableType::type,}
+\DoxyCodeLine{319 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{320             VTableType::destroy,}
+\DoxyCodeLine{321             VTableType::copy, VTableType::move,}
+\DoxyCodeLine{322             \mbox{\hyperlink{namespacestd_a30688972b28e08f7ce5dc347344156d8}{VTableType::swap}},}
+\DoxyCodeLine{323         \};}
+\DoxyCodeLine{324         \textcolor{keywordflow}{return} \&table;}
+\DoxyCodeLine{325     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classlinb_1_1any_ac361b39dec968d41cc7b0a7f63ba9f3c}\label{classlinb_1_1any_ac361b39dec968d41cc7b0a7f63ba9f3c}} 
+\index{linb::any@{linb::any}!any\_cast@{any\_cast}}
+\index{any\_cast@{any\_cast}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{any\_cast}{any\_cast}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T $\ast$ any\+\_\+cast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlinb_1_1any}{any}} $\ast$}]{operand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+If operand != nullptr \&\& operand-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{classlinb_1_1any_a418dda0f87b24c4eb127f42f760cde25}{type()}} == typeid(\+Value\+Type), a pointer to the object contained by operand, otherwise nullptr. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{457 \{}
+\DoxyCodeLine{458     \textcolor{keyword}{using} T = \textcolor{keyword}{typename} std::decay<ValueType>::type;}
+\DoxyCodeLine{459 }
+\DoxyCodeLine{460     \textcolor{keywordflow}{if} (operand \&\& operand-\/>vtable == any::vtable\_for\_type<T>())}
+\DoxyCodeLine{461         \textcolor{keywordflow}{return} operand-\/>cast<ValueType>();}
+\DoxyCodeLine{462     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{463         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{464 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classlinb_1_1any_ac7e9ad959f8889131c1d2d239179b85f}\label{classlinb_1_1any_ac7e9ad959f8889131c1d2d239179b85f}} 
+\index{linb::any@{linb::any}!any\_cast@{any\_cast}}
+\index{any\_cast@{any\_cast}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{any\_cast}{any\_cast}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T $\ast$ any\+\_\+cast (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlinb_1_1any}{any}} $\ast$}]{operand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+If operand != nullptr \&\& operand-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{classlinb_1_1any_a418dda0f87b24c4eb127f42f760cde25}{type()}} == typeid(\+Value\+Type), a pointer to the object contained by operand, otherwise nullptr. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{444 \{}
+\DoxyCodeLine{445     \textcolor{keyword}{using} T = \textcolor{keyword}{typename} std::decay<ValueType>::type;}
+\DoxyCodeLine{446 }
+\DoxyCodeLine{447     \textcolor{keywordflow}{if} (operand \&\& operand-\/>vtable == any::vtable\_for\_type<T>())}
+\DoxyCodeLine{448         \textcolor{keywordflow}{return} operand-\/>cast<ValueType>();}
+\DoxyCodeLine{449     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{450         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{451 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}\label{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}} 
+\index{linb::any@{linb::any}!storage@{storage}}
+\index{storage@{storage}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{storage}{storage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} linb\+::any\+::storage\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classlinb_1_1any_a56847f22e44c42dfe1b74633cf81d083}{any()}}, \mbox{\hyperlink{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}{clear()}}, \mbox{\hyperlink{structlinb_1_1any_1_1vtable__dynamic_adad8ff6d2f40eded35c59a1201a40983}{linb\+::any\+::vtable\+\_\+dynamic$<$ T $>$\+::destroy()}}, \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_a9e261628e8215d5c0a091ab5d83e6b73}{linb\+::any\+::vtable\+\_\+stack$<$ T $>$\+::destroy()}}, and \mbox{\hyperlink{classlinb_1_1any_a6bd50f2fd178deacf049be223f73646e}{swap()}}.
+
+\mbox{\Hypertarget{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}\label{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}} 
+\index{linb::any@{linb::any}!vtable@{vtable}}
+\index{vtable@{vtable}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{vtable}{vtable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type}{vtable\+\_\+type}}$\ast$ linb\+::any\+::vtable\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by \mbox{\hyperlink{classlinb_1_1any_a56847f22e44c42dfe1b74633cf81d083}{any()}}, \mbox{\hyperlink{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}{clear()}}, \mbox{\hyperlink{classlinb_1_1any_a8959e7cf6d97c91f126cf5d17814017a}{empty()}}, \mbox{\hyperlink{classlinb_1_1any_a6bd50f2fd178deacf049be223f73646e}{swap()}}, and \mbox{\hyperlink{classlinb_1_1any_a418dda0f87b24c4eb127f42f760cde25}{type()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

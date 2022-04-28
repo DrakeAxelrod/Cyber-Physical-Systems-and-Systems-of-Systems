@@ -1,0 +1,382 @@
+\hypertarget{classcluon_1_1data_1_1PlayerStatus}{}\doxysection{cluon\+::data\+::Player\+Status Class Reference}
+\label{classcluon_1_1data_1_1PlayerStatus}\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for cluon\+::data\+::Player\+Status\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_ab22e6dc5868c0fd32e2fb92eeb7d9a2b}{Player\+Status}} ()=default
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_aa8f9c4ba2bd572907425e9c51f5fa425}{Player\+Status}} (const \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \& \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_ab1d7368535a32063a0aaf86c95f06aff}{operator=}} (const \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_ab24ea395289b92600468c2b2a7f32e47}{Player\+Status}} (\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \&\&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \& \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a36f002972b22ff954c03d84aa451640e}{operator=}} (\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \&\&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_ae434e62fe3cfc199ada0d2e96b19225e}{$\sim$\+Player\+Status}} ()=default
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \& \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a55d08bc0d1f2d543f6770b682a988323}{state}} (const uint8\+\_\+t \&v) noexcept
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a7ca8a09364d0048eb87ab8d1a4384d6f}{state}} () const noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \& \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_ad40aff71b6ac4a837302d648f9096831}{number\+Of\+Entries}} (const uint32\+\_\+t \&v) noexcept
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a5683d1d19d4a030ad993f337cd43370b}{number\+Of\+Entries}} () const noexcept
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \& \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_af48df7572f342437d3b4f8a69ad3c926}{current\+Entry\+For\+Playback}} (const uint32\+\_\+t \&v) noexcept
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_ad31a4ab45aedb3ce4ea4184facfcbd58}{current\+Entry\+For\+Playback}} () const noexcept
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a77a12c68a6d1a43072e70b1854c33582}{accept}} (uint32\+\_\+t field\+Id, Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a2b4dd65d0f773a1a6b5a13dbef55dcba}{accept}} (Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ }\\void \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_af117cac7a9e737c12b5a885a152135d5}{accept}} (Pre\+Visitor \&\&pre\+Visit, Visitor \&\&visit, Post\+Visitor \&\&post\+Visit)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int32\+\_\+t \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a791569fbfd2a8919ef52dedcc4336df9}{ID}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_af02d743166359bf1262d59cf1c9a9d77}{Short\+Name}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_aba8c76d480e91fa448f694db5124c416}{Long\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a3f1e2cfa2f0a5478b32c149be001d2c7}{m\+\_\+state}} \{ 0 \}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a4152f178ffeb6f6f11e8a6f8b997d735}{m\+\_\+number\+Of\+Entries}} \{ 0 \}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_abf92c3d01ec6e748ecaa1a4dcb948ea0}{m\+\_\+current\+Entry\+For\+Playback}} \{ 0 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a3754ced8945e3dd0d26399193dc3dc02}{The\+Short\+Name}} = \char`\"{}Player\+Status\char`\"{}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a6fdaa837bcf199e408c22e6a866fab21}{The\+Long\+Name}} = \char`\"{}cluon.\+data.\+Player\+Status\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_ab22e6dc5868c0fd32e2fb92eeb7d9a2b}\label{classcluon_1_1data_1_1PlayerStatus_ab22e6dc5868c0fd32e2fb92eeb7d9a2b}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!PlayerStatus@{PlayerStatus}}
+\index{PlayerStatus@{PlayerStatus}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{PlayerStatus()}{PlayerStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily cluon\+::data\+::\+Player\+Status\+::\+Player\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_aa8f9c4ba2bd572907425e9c51f5fa425}\label{classcluon_1_1data_1_1PlayerStatus_aa8f9c4ba2bd572907425e9c51f5fa425}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!PlayerStatus@{PlayerStatus}}
+\index{PlayerStatus@{PlayerStatus}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{PlayerStatus()}{PlayerStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily cluon\+::data\+::\+Player\+Status\+::\+Player\+Status (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_ab24ea395289b92600468c2b2a7f32e47}\label{classcluon_1_1data_1_1PlayerStatus_ab24ea395289b92600468c2b2a7f32e47}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!PlayerStatus@{PlayerStatus}}
+\index{PlayerStatus@{PlayerStatus}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{PlayerStatus()}{PlayerStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily cluon\+::data\+::\+Player\+Status\+::\+Player\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_ae434e62fe3cfc199ada0d2e96b19225e}\label{classcluon_1_1data_1_1PlayerStatus_ae434e62fe3cfc199ada0d2e96b19225e}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!````~PlayerStatus@{$\sim$PlayerStatus}}
+\index{````~PlayerStatus@{$\sim$PlayerStatus}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{$\sim$PlayerStatus()}{~PlayerStatus()}}
+{\footnotesize\ttfamily cluon\+::data\+::\+Player\+Status\+::$\sim$\+Player\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_af117cac7a9e737c12b5a885a152135d5}\label{classcluon_1_1data_1_1PlayerStatus_af117cac7a9e737c12b5a885a152135d5}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!accept@{accept}}
+\index{accept@{accept}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ \\
+void cluon\+::data\+::\+Player\+Status\+::accept (\begin{DoxyParamCaption}\item[{Pre\+Visitor \&\&}]{pre\+Visit,  }\item[{Visitor \&\&}]{visit,  }\item[{Post\+Visitor \&\&}]{post\+Visit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5189                                                                                             \{}
+\DoxyCodeLine{5190             (void)visit; \textcolor{comment}{// Prevent warnings from empty messages.}}
+\DoxyCodeLine{5191             std::forward<PreVisitor>(preVisit)(\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a791569fbfd2a8919ef52dedcc4336df9}{ID}}(), \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_af02d743166359bf1262d59cf1c9a9d77}{ShortName}}(), \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_aba8c76d480e91fa448f694db5124c416}{LongName}}());}
+\DoxyCodeLine{5192             }
+\DoxyCodeLine{5193             \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(1, std::move(\textcolor{stringliteral}{"{}uint8\_t"{}}s), std::move(\textcolor{stringliteral}{"{}state"{}}s), \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a3f1e2cfa2f0a5478b32c149be001d2c7}{m\_state}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{5194             }
+\DoxyCodeLine{5195             \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(2, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}numberOfEntries"{}}s), \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a4152f178ffeb6f6f11e8a6f8b997d735}{m\_numberOfEntries}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{5196             }
+\DoxyCodeLine{5197             \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(3, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}currentEntryForPlayback"{}}s), \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_abf92c3d01ec6e748ecaa1a4dcb948ea0}{m\_currentEntryForPlayback}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{5198             }
+\DoxyCodeLine{5199             std::forward<PostVisitor>(postVisit)();}
+\DoxyCodeLine{5200         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{do\+Triplet\+Forward\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_a77a12c68a6d1a43072e70b1854c33582}\label{classcluon_1_1data_1_1PlayerStatus_a77a12c68a6d1a43072e70b1854c33582}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!accept@{accept}}
+\index{accept@{accept}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void cluon\+::data\+::\+Player\+Status\+::accept (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Id,  }\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5152                                                                \{}
+\DoxyCodeLine{5153             (void)fieldId;}
+\DoxyCodeLine{5154             (void)visitor;}
+\DoxyCodeLine{5155 \textcolor{comment}{//            visitor.preVisit(ID(), ShortName(), LongName());}}
+\DoxyCodeLine{5156             }
+\DoxyCodeLine{5157             \textcolor{keywordflow}{if} (1 == fieldId) \{}
+\DoxyCodeLine{5158                 \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}uint8\_t"{}}s), std::move(\textcolor{stringliteral}{"{}state"{}}s), \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a3f1e2cfa2f0a5478b32c149be001d2c7}{m\_state}}, visitor);}
+\DoxyCodeLine{5159                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{5160             \}}
+\DoxyCodeLine{5161             }
+\DoxyCodeLine{5162             \textcolor{keywordflow}{if} (2 == fieldId) \{}
+\DoxyCodeLine{5163                 \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(2, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}numberOfEntries"{}}s), \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a4152f178ffeb6f6f11e8a6f8b997d735}{m\_numberOfEntries}}, visitor);}
+\DoxyCodeLine{5164                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{5165             \}}
+\DoxyCodeLine{5166             }
+\DoxyCodeLine{5167             \textcolor{keywordflow}{if} (3 == fieldId) \{}
+\DoxyCodeLine{5168                 \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(3, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}currentEntryForPlayback"{}}s), \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_abf92c3d01ec6e748ecaa1a4dcb948ea0}{m\_currentEntryForPlayback}}, visitor);}
+\DoxyCodeLine{5169                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{5170             \}}
+\DoxyCodeLine{5171             }
+\DoxyCodeLine{5172 \textcolor{comment}{//            visitor.postVisit();}}
+\DoxyCodeLine{5173         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_a2b4dd65d0f773a1a6b5a13dbef55dcba}\label{classcluon_1_1data_1_1PlayerStatus_a2b4dd65d0f773a1a6b5a13dbef55dcba}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!accept@{accept}}
+\index{accept@{accept}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void cluon\+::data\+::\+Player\+Status\+::accept (\begin{DoxyParamCaption}\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5176                                              \{}
+\DoxyCodeLine{5177             visitor.preVisit(\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a791569fbfd2a8919ef52dedcc4336df9}{ID}}(), \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_af02d743166359bf1262d59cf1c9a9d77}{ShortName}}(), \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_aba8c76d480e91fa448f694db5124c416}{LongName}}());}
+\DoxyCodeLine{5178             }
+\DoxyCodeLine{5179             \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}uint8\_t"{}}s), std::move(\textcolor{stringliteral}{"{}state"{}}s), \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a3f1e2cfa2f0a5478b32c149be001d2c7}{m\_state}}, visitor);}
+\DoxyCodeLine{5180             }
+\DoxyCodeLine{5181             \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(2, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}numberOfEntries"{}}s), \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a4152f178ffeb6f6f11e8a6f8b997d735}{m\_numberOfEntries}}, visitor);}
+\DoxyCodeLine{5182             }
+\DoxyCodeLine{5183             \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(3, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}currentEntryForPlayback"{}}s), \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_abf92c3d01ec6e748ecaa1a4dcb948ea0}{m\_currentEntryForPlayback}}, visitor);}
+\DoxyCodeLine{5184             }
+\DoxyCodeLine{5185             visitor.postVisit();}
+\DoxyCodeLine{5186         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_ad31a4ab45aedb3ce4ea4184facfcbd58}\label{classcluon_1_1data_1_1PlayerStatus_ad31a4ab45aedb3ce4ea4184facfcbd58}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!currentEntryForPlayback@{currentEntryForPlayback}}
+\index{currentEntryForPlayback@{currentEntryForPlayback}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{currentEntryForPlayback()}{currentEntryForPlayback()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t cluon\+::data\+::\+Player\+Status\+::current\+Entry\+For\+Playback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5145                                                                  \{}
+\DoxyCodeLine{5146             \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_abf92c3d01ec6e748ecaa1a4dcb948ea0}{m\_currentEntryForPlayback}};}
+\DoxyCodeLine{5147         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_af48df7572f342437d3b4f8a69ad3c926}\label{classcluon_1_1data_1_1PlayerStatus_af48df7572f342437d3b4f8a69ad3c926}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!currentEntryForPlayback@{currentEntryForPlayback}}
+\index{currentEntryForPlayback@{currentEntryForPlayback}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{currentEntryForPlayback()}{currentEntryForPlayback()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \& cluon\+::data\+::\+Player\+Status\+::current\+Entry\+For\+Playback (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5141                                                                                  \{}
+\DoxyCodeLine{5142             \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_abf92c3d01ec6e748ecaa1a4dcb948ea0}{m\_currentEntryForPlayback}} = v;}
+\DoxyCodeLine{5143             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{5144         \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1Player_ac3ebe3e6290f4f0b46708f008a1e65a3}{cluon\+::\+Player\+::manage\+Cache()}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_a791569fbfd2a8919ef52dedcc4336df9}\label{classcluon_1_1data_1_1PlayerStatus_a791569fbfd2a8919ef52dedcc4336df9}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!ID@{ID}}
+\index{ID@{ID}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{ID()}{ID()}}
+{\footnotesize\ttfamily static int32\+\_\+t cluon\+::data\+::\+Player\+Status\+::\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5105                                    \{}
+\DoxyCodeLine{5106             \textcolor{keywordflow}{return} 10;}
+\DoxyCodeLine{5107         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_aba8c76d480e91fa448f694db5124c416}\label{classcluon_1_1data_1_1PlayerStatus_aba8c76d480e91fa448f694db5124c416}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!LongName@{LongName}}
+\index{LongName@{LongName}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{LongName()}{LongName()}}
+{\footnotesize\ttfamily static const std\+::string cluon\+::data\+::\+Player\+Status\+::\+Long\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5111                                                  \{}
+\DoxyCodeLine{5112             \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a6fdaa837bcf199e408c22e6a866fab21}{TheLongName}};}
+\DoxyCodeLine{5113         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_a5683d1d19d4a030ad993f337cd43370b}\label{classcluon_1_1data_1_1PlayerStatus_a5683d1d19d4a030ad993f337cd43370b}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!numberOfEntries@{numberOfEntries}}
+\index{numberOfEntries@{numberOfEntries}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{numberOfEntries()}{numberOfEntries()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t cluon\+::data\+::\+Player\+Status\+::number\+Of\+Entries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5137                                                          \{}
+\DoxyCodeLine{5138             \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a4152f178ffeb6f6f11e8a6f8b997d735}{m\_numberOfEntries}};}
+\DoxyCodeLine{5139         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_ad40aff71b6ac4a837302d648f9096831}\label{classcluon_1_1data_1_1PlayerStatus_ad40aff71b6ac4a837302d648f9096831}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!numberOfEntries@{numberOfEntries}}
+\index{numberOfEntries@{numberOfEntries}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{numberOfEntries()}{numberOfEntries()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \& cluon\+::data\+::\+Player\+Status\+::number\+Of\+Entries (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5133                                                                          \{}
+\DoxyCodeLine{5134             \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a4152f178ffeb6f6f11e8a6f8b997d735}{m\_numberOfEntries}} = v;}
+\DoxyCodeLine{5135             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{5136         \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1Player_ac3ebe3e6290f4f0b46708f008a1e65a3}{cluon\+::\+Player\+::manage\+Cache()}}.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_ab1d7368535a32063a0aaf86c95f06aff}\label{classcluon_1_1data_1_1PlayerStatus_ab1d7368535a32063a0aaf86c95f06aff}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \& cluon\+::data\+::\+Player\+Status\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_a36f002972b22ff954c03d84aa451640e}\label{classcluon_1_1data_1_1PlayerStatus_a36f002972b22ff954c03d84aa451640e}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \& cluon\+::data\+::\+Player\+Status\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_af02d743166359bf1262d59cf1c9a9d77}\label{classcluon_1_1data_1_1PlayerStatus_af02d743166359bf1262d59cf1c9a9d77}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!ShortName@{ShortName}}
+\index{ShortName@{ShortName}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{ShortName()}{ShortName()}}
+{\footnotesize\ttfamily static const std\+::string cluon\+::data\+::\+Player\+Status\+::\+Short\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5108                                                   \{}
+\DoxyCodeLine{5109             \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a3754ced8945e3dd0d26399193dc3dc02}{TheShortName}};}
+\DoxyCodeLine{5110         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_a7ca8a09364d0048eb87ab8d1a4384d6f}\label{classcluon_1_1data_1_1PlayerStatus_a7ca8a09364d0048eb87ab8d1a4384d6f}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!state@{state}}
+\index{state@{state}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t cluon\+::data\+::\+Player\+Status\+::state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5129                                               \{}
+\DoxyCodeLine{5130             \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a3f1e2cfa2f0a5478b32c149be001d2c7}{m\_state}};}
+\DoxyCodeLine{5131         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_a55d08bc0d1f2d543f6770b682a988323}\label{classcluon_1_1data_1_1PlayerStatus_a55d08bc0d1f2d543f6770b682a988323}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!state@{state}}
+\index{state@{state}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus}{Player\+Status}} \& cluon\+::data\+::\+Player\+Status\+::state (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5125                                                               \{}
+\DoxyCodeLine{5126             \mbox{\hyperlink{classcluon_1_1data_1_1PlayerStatus_a3f1e2cfa2f0a5478b32c149be001d2c7}{m\_state}} = v;}
+\DoxyCodeLine{5127             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{5128         \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{classcluon_1_1Player_ac3ebe3e6290f4f0b46708f008a1e65a3}{cluon\+::\+Player\+::manage\+Cache()}}.
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_abf92c3d01ec6e748ecaa1a4dcb948ea0}\label{classcluon_1_1data_1_1PlayerStatus_abf92c3d01ec6e748ecaa1a4dcb948ea0}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!m\_currentEntryForPlayback@{m\_currentEntryForPlayback}}
+\index{m\_currentEntryForPlayback@{m\_currentEntryForPlayback}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{m\_currentEntryForPlayback}{m\_currentEntryForPlayback}}
+{\footnotesize\ttfamily uint32\+\_\+t cluon\+::data\+::\+Player\+Status\+::m\+\_\+current\+Entry\+For\+Playback \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_a4152f178ffeb6f6f11e8a6f8b997d735}\label{classcluon_1_1data_1_1PlayerStatus_a4152f178ffeb6f6f11e8a6f8b997d735}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!m\_numberOfEntries@{m\_numberOfEntries}}
+\index{m\_numberOfEntries@{m\_numberOfEntries}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{m\_numberOfEntries}{m\_numberOfEntries}}
+{\footnotesize\ttfamily uint32\+\_\+t cluon\+::data\+::\+Player\+Status\+::m\+\_\+number\+Of\+Entries \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_a3f1e2cfa2f0a5478b32c149be001d2c7}\label{classcluon_1_1data_1_1PlayerStatus_a3f1e2cfa2f0a5478b32c149be001d2c7}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!m\_state@{m\_state}}
+\index{m\_state@{m\_state}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{m\_state}{m\_state}}
+{\footnotesize\ttfamily uint8\+\_\+t cluon\+::data\+::\+Player\+Status\+::m\+\_\+state \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_a6fdaa837bcf199e408c22e6a866fab21}\label{classcluon_1_1data_1_1PlayerStatus_a6fdaa837bcf199e408c22e6a866fab21}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!TheLongName@{TheLongName}}
+\index{TheLongName@{TheLongName}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{TheLongName}{TheLongName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ cluon\+::data\+::\+Player\+Status\+::\+The\+Long\+Name = \char`\"{}cluon.\+data.\+Player\+Status\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1PlayerStatus_a3754ced8945e3dd0d26399193dc3dc02}\label{classcluon_1_1data_1_1PlayerStatus_a3754ced8945e3dd0d26399193dc3dc02}} 
+\index{cluon::data::PlayerStatus@{cluon::data::PlayerStatus}!TheShortName@{TheShortName}}
+\index{TheShortName@{TheShortName}!cluon::data::PlayerStatus@{cluon::data::PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{TheShortName}{TheShortName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ cluon\+::data\+::\+Player\+Status\+::\+The\+Short\+Name = \char`\"{}Player\+Status\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

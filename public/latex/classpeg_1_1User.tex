@@ -1,0 +1,105 @@
+\hypertarget{classpeg_1_1User}{}\doxysection{peg\+::User Class Reference}
+\label{classpeg_1_1User}\index{peg::User@{peg::User}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Inheritance diagram for peg\+::User\+:
+% FIG 0
+
+
+Collaboration diagram for peg\+::User\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpeg_1_1User_a711e772f0b10517e37a0a1aae86b174f}{User}} (\mbox{\hyperlink{namespacepeg_ad6ce400709114a4985d8248bb782ebdf}{Parser}} fn)
+\item 
+size\+\_\+t \mbox{\hyperlink{classpeg_1_1User_a5b543530a7ff57ad3e11ae381711d666}{parse}} (const char $\ast$s, size\+\_\+t n, \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1Context}{Context}} \&c, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt) const override
+\item 
+void \mbox{\hyperlink{classpeg_1_1User_a5779406fe224a68166e7375eb3820bc3}{accept}} (\mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor}{Visitor}} \&v) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ size\+\_\+t(const char $\ast$s, size\+\_\+t n, \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt)$>$ \mbox{\hyperlink{classpeg_1_1User_a38a52da080b53af5eb66ee6828c9d503}{fn\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpeg_1_1User_a711e772f0b10517e37a0a1aae86b174f}\label{classpeg_1_1User_a711e772f0b10517e37a0a1aae86b174f}} 
+\index{peg::User@{peg::User}!User@{User}}
+\index{User@{User}!peg::User@{peg::User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily peg\+::\+User\+::\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepeg_ad6ce400709114a4985d8248bb782ebdf}{Parser}}}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1925 : \mbox{\hyperlink{classpeg_1_1User_a38a52da080b53af5eb66ee6828c9d503}{fn\_}}(fn) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpeg_1_1User_a5779406fe224a68166e7375eb3820bc3}\label{classpeg_1_1User_a5779406fe224a68166e7375eb3820bc3}} 
+\index{peg::User@{peg::User}!accept@{accept}}
+\index{accept@{accept}!peg::User@{peg::User}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void peg\+::\+User\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor}{Visitor}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpeg_1_1Ope_af57615cfe8938c0f4c9a0dd6df9da560}{peg\+::\+Ope}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2874 \{ v.visit(*\textcolor{keyword}{this}); \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor_ade8440f9ed92da93693329208ba10381}{peg\+::\+Ope\+::\+Visitor\+::visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classpeg_1_1User_a5b543530a7ff57ad3e11ae381711d666}\label{classpeg_1_1User_a5b543530a7ff57ad3e11ae381711d666}} 
+\index{peg::User@{peg::User}!parse@{parse}}
+\index{parse@{parse}!peg::User@{peg::User}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily size\+\_\+t peg\+::\+User\+::parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&}]{sv,  }\item[{\mbox{\hyperlink{classpeg_1_1Context}{Context}} \&}]{c,  }\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{dt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpeg_1_1Ope_a431b9481130d91a0d51e97cffd8ace80}{peg\+::\+Ope}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1926                                                                                                    \{}
+\DoxyCodeLine{1927         c.trace(\textcolor{stringliteral}{"{}User"{}}, s, n, sv, dt);}
+\DoxyCodeLine{1928         assert(\mbox{\hyperlink{classpeg_1_1User_a38a52da080b53af5eb66ee6828c9d503}{fn\_}});}
+\DoxyCodeLine{1929         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpeg_1_1User_a38a52da080b53af5eb66ee6828c9d503}{fn\_}}(s, n, sv, dt);}
+\DoxyCodeLine{1930     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{classpeg_1_1Context_a62d90cb77e73de57eb6b51367f60d961}{peg\+::\+Context\+::trace()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpeg_1_1User_a38a52da080b53af5eb66ee6828c9d503}\label{classpeg_1_1User_a38a52da080b53af5eb66ee6828c9d503}} 
+\index{peg::User@{peg::User}!fn\_@{fn\_}}
+\index{fn\_@{fn\_}!peg::User@{peg::User}}
+\doxysubsubsection{\texorpdfstring{fn\_}{fn\_}}
+{\footnotesize\ttfamily std\+::function$<$size\+\_\+t (const char$\ast$ s, size\+\_\+t n, \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}}\& sv, \mbox{\hyperlink{classpeg_1_1any}{any}}\& dt)$>$ peg\+::\+User\+::fn\+\_\+}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

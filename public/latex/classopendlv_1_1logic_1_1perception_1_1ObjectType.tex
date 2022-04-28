@@ -1,0 +1,307 @@
+\hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType}{}\doxysection{opendlv\+::logic\+::perception\+::Object\+Type Class Reference}
+\label{classopendlv_1_1logic_1_1perception_1_1ObjectType}\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+
+
+{\ttfamily \#include $<$opendlv-\/standard-\/message-\/set.\+hpp$>$}
+
+
+
+Collaboration diagram for opendlv\+::logic\+::perception\+::Object\+Type\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a6be40b94e2d85f28cb78570f6436d8f0}{Object\+Type}} ()=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a783954658cd247e490f46c217407d2d5}{Object\+Type}} (const \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \& \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a3080a2671e84b8d998743206cc7c4449}{operator=}} (const \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_aa2f551ccc9326db06c4507241a3e4050}{Object\+Type}} (\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \&\&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \& \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ab25463e038ddb18f692574b35072692d}{operator=}} (\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \&\&)=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_afbc64df066661259e0c3230dd8786292}{$\sim$\+Object\+Type}} ()=default
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \& \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac96880fe9c849353dba724f25f6e40dd}{object\+Id}} (const uint32\+\_\+t \&v) noexcept
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a1a8aaa057466295eb86714a3f22b0885}{object\+Id}} () const noexcept
+\item 
+\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \& \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a589c6dffca8f262fd8676d0fdd962fae}{type}} (const uint32\+\_\+t \&v) noexcept
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ab47a0b0ed668304bc281f101138e0ee5}{type}} () const noexcept
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_af73755e4abc8f9657cf5e1271f68bb1f}{accept}} (uint32\+\_\+t field\+Id, Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac56362a5c364662f784c7439486fcf6f}{accept}} (Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ }\\void \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac1c5686d1125a324de763153c952ed73}{accept}} (Pre\+Visitor \&\&pre\+Visit, Visitor \&\&visit, Post\+Visitor \&\&post\+Visit)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int32\+\_\+t \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ab314edd618bc00188ff918d07379e22d}{ID}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac4f7746b9926ebdee13dbe29a2878233}{Short\+Name}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a9417b9c2aed3729d1a68748c97ba8318}{Long\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ae5c493e723869f5ec31b07a93e1a82d9}{m\+\_\+object\+Id}} \{ 0 \}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a31fcd15febaa5e1f791c8eed51d637ab}{m\+\_\+type}} \{ 0 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a166d3fb9100c80d9977cb598c0cdc18f}{The\+Short\+Name}} = \char`\"{}Object\+Type\char`\"{}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a306f592bd51ab5bd92b125f9c3de3846}{The\+Long\+Name}} = \char`\"{}opendlv.\+logic.\+perception.\+Object\+Type\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_a6be40b94e2d85f28cb78570f6436d8f0}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_a6be40b94e2d85f28cb78570f6436d8f0}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!ObjectType@{ObjectType}}
+\index{ObjectType@{ObjectType}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{ObjectType()}{ObjectType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily opendlv\+::logic\+::perception\+::\+Object\+Type\+::\+Object\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_a783954658cd247e490f46c217407d2d5}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_a783954658cd247e490f46c217407d2d5}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!ObjectType@{ObjectType}}
+\index{ObjectType@{ObjectType}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{ObjectType()}{ObjectType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily opendlv\+::logic\+::perception\+::\+Object\+Type\+::\+Object\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_aa2f551ccc9326db06c4507241a3e4050}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_aa2f551ccc9326db06c4507241a3e4050}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!ObjectType@{ObjectType}}
+\index{ObjectType@{ObjectType}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{ObjectType()}{ObjectType()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily opendlv\+::logic\+::perception\+::\+Object\+Type\+::\+Object\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_afbc64df066661259e0c3230dd8786292}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_afbc64df066661259e0c3230dd8786292}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!````~ObjectType@{$\sim$ObjectType}}
+\index{````~ObjectType@{$\sim$ObjectType}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{$\sim$ObjectType()}{~ObjectType()}}
+{\footnotesize\ttfamily opendlv\+::logic\+::perception\+::\+Object\+Type\+::$\sim$\+Object\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac1c5686d1125a324de763153c952ed73}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac1c5686d1125a324de763153c952ed73}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!accept@{accept}}
+\index{accept@{accept}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ \\
+void opendlv\+::logic\+::perception\+::\+Object\+Type\+::accept (\begin{DoxyParamCaption}\item[{Pre\+Visitor \&\&}]{pre\+Visit,  }\item[{Visitor \&\&}]{visit,  }\item[{Post\+Visitor \&\&}]{post\+Visit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9787                                                                                             \{}
+\DoxyCodeLine{9788             (void)visit; \textcolor{comment}{// Prevent warnings from empty messages.}}
+\DoxyCodeLine{9789             std::forward<PreVisitor>(preVisit)(\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ab314edd618bc00188ff918d07379e22d}{ID}}(), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac4f7746b9926ebdee13dbe29a2878233}{ShortName}}(), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a9417b9c2aed3729d1a68748c97ba8318}{LongName}}());}
+\DoxyCodeLine{9790             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(1, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}objectId"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ae5c493e723869f5ec31b07a93e1a82d9}{m\_objectId}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{9791             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(2, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}type"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a31fcd15febaa5e1f791c8eed51d637ab}{m\_type}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{9792             std::forward<PostVisitor>(postVisit)();}
+\DoxyCodeLine{9793         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{do\+Triplet\+Forward\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_af73755e4abc8f9657cf5e1271f68bb1f}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_af73755e4abc8f9657cf5e1271f68bb1f}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!accept@{accept}}
+\index{accept@{accept}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void opendlv\+::logic\+::perception\+::\+Object\+Type\+::accept (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Id,  }\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9763                                                                \{}
+\DoxyCodeLine{9764             (void)fieldId;}
+\DoxyCodeLine{9765             (void)visitor;}
+\DoxyCodeLine{9766 \textcolor{comment}{//            visitor.preVisit(ID(), ShortName(), LongName());}}
+\DoxyCodeLine{9767             \textcolor{keywordflow}{if} (1 == fieldId) \{}
+\DoxyCodeLine{9768                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}objectId"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ae5c493e723869f5ec31b07a93e1a82d9}{m\_objectId}}, visitor);}
+\DoxyCodeLine{9769                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{9770             \}}
+\DoxyCodeLine{9771             \textcolor{keywordflow}{if} (2 == fieldId) \{}
+\DoxyCodeLine{9772                 \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(2, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}type"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a31fcd15febaa5e1f791c8eed51d637ab}{m\_type}}, visitor);}
+\DoxyCodeLine{9773                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{9774             \}}
+\DoxyCodeLine{9775 \textcolor{comment}{//            visitor.postVisit();}}
+\DoxyCodeLine{9776         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac56362a5c364662f784c7439486fcf6f}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac56362a5c364662f784c7439486fcf6f}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!accept@{accept}}
+\index{accept@{accept}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void opendlv\+::logic\+::perception\+::\+Object\+Type\+::accept (\begin{DoxyParamCaption}\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9779                                              \{}
+\DoxyCodeLine{9780             visitor.preVisit(\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ab314edd618bc00188ff918d07379e22d}{ID}}(), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac4f7746b9926ebdee13dbe29a2878233}{ShortName}}(), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a9417b9c2aed3729d1a68748c97ba8318}{LongName}}());}
+\DoxyCodeLine{9781             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}objectId"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ae5c493e723869f5ec31b07a93e1a82d9}{m\_objectId}}, visitor);}
+\DoxyCodeLine{9782             \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(2, std::move(\textcolor{stringliteral}{"{}uint32\_t"{}}s), std::move(\textcolor{stringliteral}{"{}type"{}}s), \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a31fcd15febaa5e1f791c8eed51d637ab}{m\_type}}, visitor);}
+\DoxyCodeLine{9783             visitor.postVisit();}
+\DoxyCodeLine{9784         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{opendlv-standard-message-set_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_ab314edd618bc00188ff918d07379e22d}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_ab314edd618bc00188ff918d07379e22d}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!ID@{ID}}
+\index{ID@{ID}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{ID()}{ID()}}
+{\footnotesize\ttfamily static int32\+\_\+t opendlv\+::logic\+::perception\+::\+Object\+Type\+::\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9727                                    \{}
+\DoxyCodeLine{9728             \textcolor{keywordflow}{return} 1131;}
+\DoxyCodeLine{9729         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_a9417b9c2aed3729d1a68748c97ba8318}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_a9417b9c2aed3729d1a68748c97ba8318}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!LongName@{LongName}}
+\index{LongName@{LongName}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{LongName()}{LongName()}}
+{\footnotesize\ttfamily static const std\+::string opendlv\+::logic\+::perception\+::\+Object\+Type\+::\+Long\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9733                                                  \{}
+\DoxyCodeLine{9734             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a306f592bd51ab5bd92b125f9c3de3846}{TheLongName}};}
+\DoxyCodeLine{9735         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_a1a8aaa057466295eb86714a3f22b0885}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_a1a8aaa057466295eb86714a3f22b0885}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!objectId@{objectId}}
+\index{objectId@{objectId}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{objectId()}{objectId()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t opendlv\+::logic\+::perception\+::\+Object\+Type\+::object\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9750                                                   \{}
+\DoxyCodeLine{9751             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ae5c493e723869f5ec31b07a93e1a82d9}{m\_objectId}};}
+\DoxyCodeLine{9752         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac96880fe9c849353dba724f25f6e40dd}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac96880fe9c849353dba724f25f6e40dd}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!objectId@{objectId}}
+\index{objectId@{objectId}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{objectId()}{objectId()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \& opendlv\+::logic\+::perception\+::\+Object\+Type\+::object\+Id (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9746                                                                 \{}
+\DoxyCodeLine{9747             \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_ae5c493e723869f5ec31b07a93e1a82d9}{m\_objectId}} = v;}
+\DoxyCodeLine{9748             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{9749         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_a3080a2671e84b8d998743206cc7c4449}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_a3080a2671e84b8d998743206cc7c4449}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!operator=@{operator=}}
+\index{operator=@{operator=}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \& opendlv\+::logic\+::perception\+::\+Object\+Type\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_ab25463e038ddb18f692574b35072692d}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_ab25463e038ddb18f692574b35072692d}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!operator=@{operator=}}
+\index{operator=@{operator=}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \& opendlv\+::logic\+::perception\+::\+Object\+Type\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac4f7746b9926ebdee13dbe29a2878233}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_ac4f7746b9926ebdee13dbe29a2878233}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!ShortName@{ShortName}}
+\index{ShortName@{ShortName}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{ShortName()}{ShortName()}}
+{\footnotesize\ttfamily static const std\+::string opendlv\+::logic\+::perception\+::\+Object\+Type\+::\+Short\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9730                                                   \{}
+\DoxyCodeLine{9731             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a166d3fb9100c80d9977cb598c0cdc18f}{TheShortName}};}
+\DoxyCodeLine{9732         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_ab47a0b0ed668304bc281f101138e0ee5}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_ab47a0b0ed668304bc281f101138e0ee5}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!type@{type}}
+\index{type@{type}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t opendlv\+::logic\+::perception\+::\+Object\+Type\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9757                                               \{}
+\DoxyCodeLine{9758             \textcolor{keywordflow}{return} \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a31fcd15febaa5e1f791c8eed51d637ab}{m\_type}};}
+\DoxyCodeLine{9759         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_a589c6dffca8f262fd8676d0fdd962fae}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_a589c6dffca8f262fd8676d0fdd962fae}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!type@{type}}
+\index{type@{type}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType}{Object\+Type}} \& opendlv\+::logic\+::perception\+::\+Object\+Type\+::type (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9753                                                             \{}
+\DoxyCodeLine{9754             \mbox{\hyperlink{classopendlv_1_1logic_1_1perception_1_1ObjectType_a31fcd15febaa5e1f791c8eed51d637ab}{m\_type}} = v;}
+\DoxyCodeLine{9755             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{9756         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_ae5c493e723869f5ec31b07a93e1a82d9}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_ae5c493e723869f5ec31b07a93e1a82d9}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!m\_objectId@{m\_objectId}}
+\index{m\_objectId@{m\_objectId}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{m\_objectId}{m\_objectId}}
+{\footnotesize\ttfamily uint32\+\_\+t opendlv\+::logic\+::perception\+::\+Object\+Type\+::m\+\_\+object\+Id \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_a31fcd15febaa5e1f791c8eed51d637ab}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_a31fcd15febaa5e1f791c8eed51d637ab}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!m\_type@{m\_type}}
+\index{m\_type@{m\_type}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{m\_type}{m\_type}}
+{\footnotesize\ttfamily uint32\+\_\+t opendlv\+::logic\+::perception\+::\+Object\+Type\+::m\+\_\+type \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_a306f592bd51ab5bd92b125f9c3de3846}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_a306f592bd51ab5bd92b125f9c3de3846}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!TheLongName@{TheLongName}}
+\index{TheLongName@{TheLongName}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{TheLongName}{TheLongName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ opendlv\+::logic\+::perception\+::\+Object\+Type\+::\+The\+Long\+Name = \char`\"{}opendlv.\+logic.\+perception.\+Object\+Type\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classopendlv_1_1logic_1_1perception_1_1ObjectType_a166d3fb9100c80d9977cb598c0cdc18f}\label{classopendlv_1_1logic_1_1perception_1_1ObjectType_a166d3fb9100c80d9977cb598c0cdc18f}} 
+\index{opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}!TheShortName@{TheShortName}}
+\index{TheShortName@{TheShortName}!opendlv::logic::perception::ObjectType@{opendlv::logic::perception::ObjectType}}
+\doxysubsubsection{\texorpdfstring{TheShortName}{TheShortName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ opendlv\+::logic\+::perception\+::\+Object\+Type\+::\+The\+Short\+Name = \char`\"{}Object\+Type\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{opendlv-standard-message-set_8hpp}{opendlv-\/standard-\/message-\/set.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,145 @@
+\hypertarget{structlinb_1_1any_1_1vtable__stack}{}\doxysection{linb\+::any\+::vtable\+\_\+stack\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\label{structlinb_1_1any_1_1vtable__stack}\index{linb::any::vtable\_stack$<$ T $>$@{linb::any::vtable\_stack$<$ T $>$}}
+
+
+VTable for stack allocated storage.  
+
+
+
+
+Collaboration diagram for linb\+::any\+::vtable\+\_\+stack\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+% FIG 0
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::type\+\_\+info \& \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_a83e26b5994f305dbb81f43cf536de509}{type}} () noexcept
+\item 
+static void \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_a9e261628e8215d5c0a091ab5d83e6b73}{destroy}} (\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&\mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}) noexcept
+\item 
+static void \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_a4931583dfdb30aa4eef278269bec4ef2}{copy}} (const \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&src, \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&dest)
+\item 
+static void \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_ae34f9c0d030c522da7b731a53dcffc26}{move}} (\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&src, \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&dest) noexcept
+\item 
+static void \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_ad17b49112340a5d57e8f2ec6774bd85c}{swap}} (\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&lhs, \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&rhs) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct linb\+::any\+::vtable\+\_\+stack$<$ T $>$}
+VTable for stack allocated storage. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structlinb_1_1any_1_1vtable__stack_a4931583dfdb30aa4eef278269bec4ef2}\label{structlinb_1_1any_1_1vtable__stack_a4931583dfdb30aa4eef278269bec4ef2}} 
+\index{linb::any::vtable\_stack$<$ T $>$@{linb::any::vtable\_stack$<$ T $>$}!copy@{copy}}
+\index{copy@{copy}!linb::any::vtable\_stack$<$ T $>$@{linb::any::vtable\_stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack}{linb\+::any\+::vtable\+\_\+stack}}$<$ T $>$\+::copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&}]{src,  }\item[{\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{281         \{}
+\DoxyCodeLine{282             \textcolor{keyword}{new} (\&dest.stack) T(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }T\&\textcolor{keyword}{>}(src.stack));}
+\DoxyCodeLine{283         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union_abc21bbee60b291e4b93c8ed7d3771691}{linb\+::any\+::storage\+\_\+union\+::stack}}.
+
+\mbox{\Hypertarget{structlinb_1_1any_1_1vtable__stack_a9e261628e8215d5c0a091ab5d83e6b73}\label{structlinb_1_1any_1_1vtable__stack_a9e261628e8215d5c0a091ab5d83e6b73}} 
+\index{linb::any::vtable\_stack$<$ T $>$@{linb::any::vtable\_stack$<$ T $>$}!destroy@{destroy}}
+\index{destroy@{destroy}!linb::any::vtable\_stack$<$ T $>$@{linb::any::vtable\_stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack}{linb\+::any\+::vtable\+\_\+stack}}$<$ T $>$\+::destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&}]{storage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{276         \{}
+\DoxyCodeLine{277             \textcolor{keyword}{reinterpret\_cast<}T*\textcolor{keyword}{>}(\&\mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{storage}}.\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union_abc21bbee60b291e4b93c8ed7d3771691}{stack}})-\/>\string~T();}
+\DoxyCodeLine{278         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union_abc21bbee60b291e4b93c8ed7d3771691}{linb\+::any\+::storage\+\_\+union\+::stack}}, and \mbox{\hyperlink{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}{linb\+::any\+::storage}}.
+
+
+
+Referenced by \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_ae34f9c0d030c522da7b731a53dcffc26}{linb\+::any\+::vtable\+\_\+stack$<$ T $>$\+::move()}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{structlinb_1_1any_1_1vtable__stack_ae34f9c0d030c522da7b731a53dcffc26}\label{structlinb_1_1any_1_1vtable__stack_ae34f9c0d030c522da7b731a53dcffc26}} 
+\index{linb::any::vtable\_stack$<$ T $>$@{linb::any::vtable\_stack$<$ T $>$}!move@{move}}
+\index{move@{move}!linb::any::vtable\_stack$<$ T $>$@{linb::any::vtable\_stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack}{linb\+::any\+::vtable\+\_\+stack}}$<$ T $>$\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&}]{src,  }\item[{\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{286         \{}
+\DoxyCodeLine{287             \textcolor{comment}{// one of the conditions for using vtable\_stack is a nothrow move constructor,}}
+\DoxyCodeLine{288             \textcolor{comment}{// so this move constructor will never throw a exception.}}
+\DoxyCodeLine{289             \textcolor{keyword}{new} (\&dest.stack) T(std::move(\textcolor{keyword}{reinterpret\_cast<}T\&\textcolor{keyword}{>}(src.stack)));}
+\DoxyCodeLine{290             \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_a9e261628e8215d5c0a091ab5d83e6b73}{destroy}}(src);}
+\DoxyCodeLine{291         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_a9e261628e8215d5c0a091ab5d83e6b73}{linb\+::any\+::vtable\+\_\+stack$<$ T $>$\+::destroy()}}.
+
+
+
+Referenced by \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_ad17b49112340a5d57e8f2ec6774bd85c}{linb\+::any\+::vtable\+\_\+stack$<$ T $>$\+::swap()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{structlinb_1_1any_1_1vtable__stack_ad17b49112340a5d57e8f2ec6774bd85c}\label{structlinb_1_1any_1_1vtable__stack_ad17b49112340a5d57e8f2ec6774bd85c}} 
+\index{linb::any::vtable\_stack$<$ T $>$@{linb::any::vtable\_stack$<$ T $>$}!swap@{swap}}
+\index{swap@{swap}!linb::any::vtable\_stack$<$ T $>$@{linb::any::vtable\_stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack}{linb\+::any\+::vtable\+\_\+stack}}$<$ T $>$\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&}]{lhs,  }\item[{\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{294         \{}
+\DoxyCodeLine{295             storage\_union tmp\_storage;}
+\DoxyCodeLine{296             \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_ae34f9c0d030c522da7b731a53dcffc26}{move}}(rhs, tmp\_storage);}
+\DoxyCodeLine{297             \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_ae34f9c0d030c522da7b731a53dcffc26}{move}}(lhs, rhs);}
+\DoxyCodeLine{298             \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_ae34f9c0d030c522da7b731a53dcffc26}{move}}(tmp\_storage, lhs);}
+\DoxyCodeLine{299         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack_ae34f9c0d030c522da7b731a53dcffc26}{linb\+::any\+::vtable\+\_\+stack$<$ T $>$\+::move()}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{structlinb_1_1any_1_1vtable__stack_a83e26b5994f305dbb81f43cf536de509}\label{structlinb_1_1any_1_1vtable__stack_a83e26b5994f305dbb81f43cf536de509}} 
+\index{linb::any::vtable\_stack$<$ T $>$@{linb::any::vtable\_stack$<$ T $>$}!type@{type}}
+\index{type@{type}!linb::any::vtable\_stack$<$ T $>$@{linb::any::vtable\_stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static const std\+::type\+\_\+info \& \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack}{linb\+::any\+::vtable\+\_\+stack}}$<$ T $>$\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{270         \{}
+\DoxyCodeLine{271             \textcolor{keywordflow}{return} \textcolor{keyword}{typeid}(T);}
+\DoxyCodeLine{272         \}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

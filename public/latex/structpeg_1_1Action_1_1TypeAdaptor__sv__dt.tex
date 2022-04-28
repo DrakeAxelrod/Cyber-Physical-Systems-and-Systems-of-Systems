@@ -1,0 +1,65 @@
+\hypertarget{structpeg_1_1Action_1_1TypeAdaptor__sv__dt}{}\doxysection{peg\+::Action\+::Type\+Adaptor\+\_\+sv\+\_\+dt\texorpdfstring{$<$}{<} R \texorpdfstring{$>$}{>} Struct Template Reference}
+\label{structpeg_1_1Action_1_1TypeAdaptor__sv__dt}\index{peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$@{peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$}}
+
+
+Collaboration diagram for peg\+::Action\+::Type\+Adaptor\+\_\+sv\+\_\+dt\texorpdfstring{$<$}{<} R \texorpdfstring{$>$}{>}\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__sv__dt_a6146b3a818ca79a476979cf10dfb8938}{Type\+Adaptor\+\_\+sv\+\_\+dt}} (std\+::function$<$ R(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt)$>$ fn)
+\item 
+\mbox{\hyperlink{classpeg_1_1any}{any}} \mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__sv__dt_a71e3fc5fb2a3f376c85ab6e047ee3fa4}{operator()}} (\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ R(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt)$>$ \mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__sv__dt_a9dd234e9fb8ac568d9a2dc31c3227a74}{fn\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structpeg_1_1Action_1_1TypeAdaptor__sv__dt_a6146b3a818ca79a476979cf10dfb8938}\label{structpeg_1_1Action_1_1TypeAdaptor__sv__dt_a6146b3a818ca79a476979cf10dfb8938}} 
+\index{peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$@{peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$}!TypeAdaptor\_sv\_dt@{TypeAdaptor\_sv\_dt}}
+\index{TypeAdaptor\_sv\_dt@{TypeAdaptor\_sv\_dt}!peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$@{peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$}}
+\doxysubsubsection{\texorpdfstring{TypeAdaptor\_sv\_dt()}{TypeAdaptor\_sv\_dt()}}
+{\footnotesize\ttfamily template$<$typename R $>$ \\
+\mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__sv__dt}{peg\+::\+Action\+::\+Type\+Adaptor\+\_\+sv\+\_\+dt}}$<$ R $>$\+::\+Type\+Adaptor\+\_\+sv\+\_\+dt (\begin{DoxyParamCaption}\item[{std\+::function$<$ R(\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt)$>$}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1142             : \mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__sv__dt_a9dd234e9fb8ac568d9a2dc31c3227a74}{fn\_}}(fn) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpeg_1_1Action_1_1TypeAdaptor__sv__dt_a71e3fc5fb2a3f376c85ab6e047ee3fa4}\label{structpeg_1_1Action_1_1TypeAdaptor__sv__dt_a71e3fc5fb2a3f376c85ab6e047ee3fa4}} 
+\index{peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$@{peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$@{peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename R $>$ \\
+\mbox{\hyperlink{classpeg_1_1any}{any}} \mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__sv__dt}{peg\+::\+Action\+::\+Type\+Adaptor\+\_\+sv\+\_\+dt}}$<$ R $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&}]{sv,  }\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1143                                                     \{}
+\DoxyCodeLine{1144             \textcolor{keywordflow}{return} call<R>(\mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__sv__dt_a9dd234e9fb8ac568d9a2dc31c3227a74}{fn\_}}, sv, dt);}
+\DoxyCodeLine{1145         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpeg_1_1Action_1_1TypeAdaptor__sv__dt_a9dd234e9fb8ac568d9a2dc31c3227a74}\label{structpeg_1_1Action_1_1TypeAdaptor__sv__dt_a9dd234e9fb8ac568d9a2dc31c3227a74}} 
+\index{peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$@{peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$}!fn\_@{fn\_}}
+\index{fn\_@{fn\_}!peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$@{peg::Action::TypeAdaptor\_sv\_dt$<$ R $>$}}
+\doxysubsubsection{\texorpdfstring{fn\_}{fn\_}}
+{\footnotesize\ttfamily template$<$typename R $>$ \\
+std\+::function$<$R (\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}}\& sv, \mbox{\hyperlink{classpeg_1_1any}{any}}\& dt)$>$ \mbox{\hyperlink{structpeg_1_1Action_1_1TypeAdaptor__sv__dt}{peg\+::\+Action\+::\+Type\+Adaptor\+\_\+sv\+\_\+dt}}$<$ R $>$\+::fn\+\_\+}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}
