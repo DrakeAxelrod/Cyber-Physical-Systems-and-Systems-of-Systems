@@ -1,0 +1,136 @@
+\hypertarget{classpeg_1_1LiteralString}{}\doxysection{peg\+::Literal\+String Class Reference}
+\label{classpeg_1_1LiteralString}\index{peg::LiteralString@{peg::LiteralString}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Inheritance diagram for peg\+::Literal\+String\+:
+% FIG 0
+
+
+Collaboration diagram for peg\+::Literal\+String\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpeg_1_1LiteralString_ae12db59409ffc44f27871889e67b4e04}{Literal\+String}} (const std\+::string \&s, bool ignore\+\_\+case)
+\item 
+size\+\_\+t \mbox{\hyperlink{classpeg_1_1LiteralString_a3d4a1e8c3c3780dae595e39e795a543a}{parse}} (const char $\ast$s, size\+\_\+t n, \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1Context}{Context}} \&c, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt) const override
+\item 
+void \mbox{\hyperlink{classpeg_1_1LiteralString_a371f85943aa4a102a511c79b0b274e82}{accept}} (\mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor}{Visitor}} \&v) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classpeg_1_1LiteralString_a93e625bb2f3e9dea5e94a1e91486d80e}{lit\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classpeg_1_1LiteralString_a5715ddf3a8bd41f8f6b737b2b186af55}{ignore\+\_\+case\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classpeg_1_1LiteralString_aa709a73ba10ee254035b24d4aa157e3b}{init\+\_\+is\+\_\+word\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classpeg_1_1LiteralString_aadde08d13fa02c2754a8cc07e63d368f}{is\+\_\+word\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpeg_1_1LiteralString_ae12db59409ffc44f27871889e67b4e04}\label{classpeg_1_1LiteralString_ae12db59409ffc44f27871889e67b4e04}} 
+\index{peg::LiteralString@{peg::LiteralString}!LiteralString@{LiteralString}}
+\index{LiteralString@{LiteralString}!peg::LiteralString@{peg::LiteralString}}
+\doxysubsubsection{\texorpdfstring{LiteralString()}{LiteralString()}}
+{\footnotesize\ttfamily peg\+::\+Literal\+String\+::\+Literal\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s,  }\item[{bool}]{ignore\+\_\+case }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1741         : \mbox{\hyperlink{classpeg_1_1LiteralString_a93e625bb2f3e9dea5e94a1e91486d80e}{lit\_}}(s)}
+\DoxyCodeLine{1742         , \mbox{\hyperlink{classpeg_1_1LiteralString_a5715ddf3a8bd41f8f6b737b2b186af55}{ignore\_case\_}}(ignore\_case)}
+\DoxyCodeLine{1743         , \mbox{\hyperlink{classpeg_1_1LiteralString_aa709a73ba10ee254035b24d4aa157e3b}{init\_is\_word\_}}(\textcolor{keyword}{false})}
+\DoxyCodeLine{1744         , \mbox{\hyperlink{classpeg_1_1LiteralString_aadde08d13fa02c2754a8cc07e63d368f}{is\_word\_}}(\textcolor{keyword}{false})}
+\DoxyCodeLine{1745         \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpeg_1_1LiteralString_a371f85943aa4a102a511c79b0b274e82}\label{classpeg_1_1LiteralString_a371f85943aa4a102a511c79b0b274e82}} 
+\index{peg::LiteralString@{peg::LiteralString}!accept@{accept}}
+\index{accept@{accept}!peg::LiteralString@{peg::LiteralString}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void peg\+::\+Literal\+String\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor}{Visitor}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpeg_1_1Ope_af57615cfe8938c0f4c9a0dd6df9da560}{peg\+::\+Ope}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2866 \{ v.visit(*\textcolor{keyword}{this}); \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor_ade8440f9ed92da93693329208ba10381}{peg\+::\+Ope\+::\+Visitor\+::visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classpeg_1_1LiteralString_a3d4a1e8c3c3780dae595e39e795a543a}\label{classpeg_1_1LiteralString_a3d4a1e8c3c3780dae595e39e795a543a}} 
+\index{peg::LiteralString@{peg::LiteralString}!parse@{parse}}
+\index{parse@{parse}!peg::LiteralString@{peg::LiteralString}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily size\+\_\+t peg\+::\+Literal\+String\+::parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&}]{sv,  }\item[{\mbox{\hyperlink{classpeg_1_1Context}{Context}} \&}]{c,  }\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{dt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpeg_1_1Ope_a431b9481130d91a0d51e97cffd8ace80}{peg\+::\+Ope}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2695                                                                                                          \{}
+\DoxyCodeLine{2696     c.trace(\textcolor{stringliteral}{"{}LiteralString"{}}, s, n, sv, dt);}
+\DoxyCodeLine{2697     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacepeg_ad8f1730e05c5fc8603922a10b6a11d7a}{parse\_literal}}(s, n, sv, c, dt, \mbox{\hyperlink{classpeg_1_1LiteralString_a93e625bb2f3e9dea5e94a1e91486d80e}{lit\_}}, \mbox{\hyperlink{classpeg_1_1LiteralString_aa709a73ba10ee254035b24d4aa157e3b}{init\_is\_word\_}}, \mbox{\hyperlink{classpeg_1_1LiteralString_aadde08d13fa02c2754a8cc07e63d368f}{is\_word\_}}, \mbox{\hyperlink{classpeg_1_1LiteralString_a5715ddf3a8bd41f8f6b737b2b186af55}{ignore\_case\_}});}
+\DoxyCodeLine{2698 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacepeg_ad8f1730e05c5fc8603922a10b6a11d7a}{peg\+::parse\+\_\+literal()}}, and \mbox{\hyperlink{classpeg_1_1Context_a62d90cb77e73de57eb6b51367f60d961}{peg\+::\+Context\+::trace()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpeg_1_1LiteralString_a5715ddf3a8bd41f8f6b737b2b186af55}\label{classpeg_1_1LiteralString_a5715ddf3a8bd41f8f6b737b2b186af55}} 
+\index{peg::LiteralString@{peg::LiteralString}!ignore\_case\_@{ignore\_case\_}}
+\index{ignore\_case\_@{ignore\_case\_}!peg::LiteralString@{peg::LiteralString}}
+\doxysubsubsection{\texorpdfstring{ignore\_case\_}{ignore\_case\_}}
+{\footnotesize\ttfamily bool peg\+::\+Literal\+String\+::ignore\+\_\+case\+\_\+}
+
+\mbox{\Hypertarget{classpeg_1_1LiteralString_aa709a73ba10ee254035b24d4aa157e3b}\label{classpeg_1_1LiteralString_aa709a73ba10ee254035b24d4aa157e3b}} 
+\index{peg::LiteralString@{peg::LiteralString}!init\_is\_word\_@{init\_is\_word\_}}
+\index{init\_is\_word\_@{init\_is\_word\_}!peg::LiteralString@{peg::LiteralString}}
+\doxysubsubsection{\texorpdfstring{init\_is\_word\_}{init\_is\_word\_}}
+{\footnotesize\ttfamily bool peg\+::\+Literal\+String\+::init\+\_\+is\+\_\+word\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}}
+
+\mbox{\Hypertarget{classpeg_1_1LiteralString_aadde08d13fa02c2754a8cc07e63d368f}\label{classpeg_1_1LiteralString_aadde08d13fa02c2754a8cc07e63d368f}} 
+\index{peg::LiteralString@{peg::LiteralString}!is\_word\_@{is\_word\_}}
+\index{is\_word\_@{is\_word\_}!peg::LiteralString@{peg::LiteralString}}
+\doxysubsubsection{\texorpdfstring{is\_word\_}{is\_word\_}}
+{\footnotesize\ttfamily bool peg\+::\+Literal\+String\+::is\+\_\+word\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}}
+
+\mbox{\Hypertarget{classpeg_1_1LiteralString_a93e625bb2f3e9dea5e94a1e91486d80e}\label{classpeg_1_1LiteralString_a93e625bb2f3e9dea5e94a1e91486d80e}} 
+\index{peg::LiteralString@{peg::LiteralString}!lit\_@{lit\_}}
+\index{lit\_@{lit\_}!peg::LiteralString@{peg::LiteralString}}
+\doxysubsubsection{\texorpdfstring{lit\_}{lit\_}}
+{\footnotesize\ttfamily std\+::string peg\+::\+Literal\+String\+::lit\+\_\+}
+
+
+
+Referenced by \mbox{\hyperlink{structpeg_1_1DetectLeftRecursion_aaf3535af5de2957b4d6ed1f4cb520936}{peg\+::\+Detect\+Left\+Recursion\+::visit()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

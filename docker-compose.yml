@@ -16,7 +16,7 @@ services:
     image: h264decoder:v0.0.4
     build: 
       context: https://github.com/chalmers-revere/opendlv-video-h264-decoder.git 
-      dockerfile: Dockerfile.amd64
+      dockerfile: Dockerfile
     restart: always
     network_mode: "host"
     ipc: host
@@ -33,7 +33,7 @@ services:
   cyphy:
     image: cyphy/group5:latest
     build:
-      context: ./cyphy
+      context: ./
       dockerfile: Dockerfile
     restart: always
     network_mode: "host"

@@ -1,0 +1,31 @@
+digraph "peg::SemanticValues"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{peg::SemanticValues\n||+ c_str()\l+ length()\l+ str()\l+ name()\l+ line_info()\l+ choice_count()\l+ choice()\l+ token()\l+ transform()\l+ SemanticValues()\l- transform()\l- transform()\l- reset()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkgreen",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{std::vector\< T \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +elements" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{T\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +path\n+ss\n-s_" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{char\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +tags" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 [label="{std::vector\< unsigned\l int \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node5 [color="grey25",fontsize="10",style="solid",label=" +elements" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node6 [label="{int\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node5 [dir="back",color="orange",fontsize="10",style="solid",label=" \< unsigned int \>" ,fontname="Helvetica"];
+  Node7 [label="{std::vector\< T \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node7 [color="grey25",fontsize="10",style="solid",label=" +elements" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node8 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +tokens" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node8 [label="{std::vector\< std::pair\l\< const char *, size_t \> \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node9 -> Node8 [color="grey25",fontsize="10",style="solid",label=" +elements" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node9 [label="{pair\< const char *,\l size_t \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="orange",fontsize="10",style="solid",label=" \< std::pair\< const\l char *, size_t \> \>" ,fontname="Helvetica"];
+  Node10 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -choice_\n-choice_count_\n-n_" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node10 [label="{size_t\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -name_" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node11 [label="{std::string\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node12 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node12 [label="{std::basic_string\<\l Char \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+}

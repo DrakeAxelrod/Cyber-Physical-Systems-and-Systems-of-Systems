@@ -1,0 +1,158 @@
+\hypertarget{opencv-template_8cpp}{}\doxysection{src/opencv-\/template.cpp File Reference}
+\label{opencv-template_8cpp}\index{src/opencv-\/template.cpp@{src/opencv-\/template.cpp}}
+{\ttfamily \#include \char`\"{}steering-\/angle-\/generator.\+hpp\char`\"{}}\newline
+Include dependency graph for opencv-\/template.cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{opencv-template_8cpp_af19ddca125f05a2090dd132045573ee4}{main}} (int32\+\_\+t argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{opencv-template_8cpp_af19ddca125f05a2090dd132045573ee4}\label{opencv-template_8cpp_af19ddca125f05a2090dd132045573ee4}} 
+\index{opencv-\/template.cpp@{opencv-\/template.cpp}!main@{main}}
+\index{main@{main}!opencv-\/template.cpp@{opencv-\/template.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int32\+\_\+t main (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22   int32\_t retCode\{1\};}
+\DoxyCodeLine{23   \textcolor{comment}{// Parse the command line parameters as we require the user to specify some}}
+\DoxyCodeLine{24   \textcolor{comment}{// mandatory information on startup.}}
+\DoxyCodeLine{25   \textcolor{keyword}{auto} commandlineArguments = \mbox{\hyperlink{namespacecluon_a276317d2317901f48d8283de15bdd924}{cluon::getCommandlineArguments}}(argc, argv);}
+\DoxyCodeLine{26   \textcolor{keywordflow}{if} ((0 == commandlineArguments.count(\textcolor{stringliteral}{"{}cid"{}})) ||}
+\DoxyCodeLine{27       (0 == commandlineArguments.count(\textcolor{stringliteral}{"{}name"{}})) ||}
+\DoxyCodeLine{28       (0 == commandlineArguments.count(\textcolor{stringliteral}{"{}width"{}})) ||}
+\DoxyCodeLine{29       (0 == commandlineArguments.count(\textcolor{stringliteral}{"{}height"{}})))}
+\DoxyCodeLine{30   \{}
+\DoxyCodeLine{31     std::cerr << argv[0]}
+\DoxyCodeLine{32               << \textcolor{stringliteral}{"{} attaches to a shared memory area containing an ARGB image."{}}}
+\DoxyCodeLine{33               << std::endl;}
+\DoxyCodeLine{34     std::cerr << \textcolor{stringliteral}{"{}Usage:   "{}} << argv[0]}
+\DoxyCodeLine{35               << \textcolor{stringliteral}{"{} -\/-\/cid=<OD4 session> -\/-\/name=<name of shared memory area> "{}}}
+\DoxyCodeLine{36                  \textcolor{stringliteral}{"{}[-\/-\/verbose]"{}}}
+\DoxyCodeLine{37               << std::endl;}
+\DoxyCodeLine{38     std::cerr << \textcolor{stringliteral}{"{}         -\/-\/cid:    CID of the OD4Session to send and receive "{}}}
+\DoxyCodeLine{39                  \textcolor{stringliteral}{"{}messages"{}}}
+\DoxyCodeLine{40               << std::endl;}
+\DoxyCodeLine{41     std::cerr << \textcolor{stringliteral}{"{}         -\/-\/name:   name of the shared memory area to attach"{}}}
+\DoxyCodeLine{42               << std::endl;}
+\DoxyCodeLine{43     std::cerr << \textcolor{stringliteral}{"{}         -\/-\/width:  width of the frame"{}} << std::endl;}
+\DoxyCodeLine{44     std::cerr << \textcolor{stringliteral}{"{}         -\/-\/height: height of the frame"{}} << std::endl;}
+\DoxyCodeLine{45     std::cerr << \textcolor{stringliteral}{"{}Example: "{}} << argv[0]}
+\DoxyCodeLine{46               << \textcolor{stringliteral}{"{} -\/-\/cid=253 -\/-\/name=img -\/-\/width=640 -\/-\/height=480 -\/-\/verbose"{}}}
+\DoxyCodeLine{47               << std::endl;}
+\DoxyCodeLine{48   \}}
+\DoxyCodeLine{49   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{50   \{}
+\DoxyCodeLine{51     \textcolor{comment}{// Extract the values from the command line parameters}}
+\DoxyCodeLine{52     \textcolor{keyword}{const} std::string NAME\{commandlineArguments[\textcolor{stringliteral}{"{}name"{}}]\};}
+\DoxyCodeLine{53     \textcolor{keyword}{const} uint32\_t WIDTH\{}
+\DoxyCodeLine{54         \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(std::stoi(commandlineArguments[\textcolor{stringliteral}{"{}width"{}}]))\};}
+\DoxyCodeLine{55     \textcolor{keyword}{const} uint32\_t HEIGHT\{}
+\DoxyCodeLine{56         \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(std::stoi(commandlineArguments[\textcolor{stringliteral}{"{}height"{}}]))\};}
+\DoxyCodeLine{57     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} VERBOSE\{commandlineArguments.count(\textcolor{stringliteral}{"{}verbose"{}}) != 0\};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{comment}{// Attach to the shared memory.}}
+\DoxyCodeLine{60     std::unique\_ptr<cluon::SharedMemory> sharedMemory\{}
+\DoxyCodeLine{61         \textcolor{keyword}{new} \mbox{\hyperlink{classcluon_1_1SharedMemory}{cluon::SharedMemory}}\{NAME\}\};}
+\DoxyCodeLine{62     \textcolor{keywordflow}{if} (sharedMemory \&\& sharedMemory-\/>valid())}
+\DoxyCodeLine{63     \{}
+\DoxyCodeLine{64       std::clog << argv[0] << \textcolor{stringliteral}{"{}: Attached to shared memory '"{}}}
+\DoxyCodeLine{65                 << sharedMemory-\/>\mbox{\hyperlink{classcluon_1_1SharedMemory_a5a8aaf2d017e3b92c66266a37915be66}{name}}() << \textcolor{stringliteral}{"{} ("{}} << sharedMemory-\/>size()}
+\DoxyCodeLine{66                 << \textcolor{stringliteral}{"{} bytes)."{}} << std::endl;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68       \textcolor{comment}{// Interface to a running OpenDaVINCI session where network messages are}}
+\DoxyCodeLine{69       \textcolor{comment}{// exchanged. The instance od4 allows you to send and receive messages.}}
+\DoxyCodeLine{70       \mbox{\hyperlink{classcluon_1_1OD4Session}{cluon::OD4Session}} od4\{}
+\DoxyCodeLine{71           \textcolor{keyword}{static\_cast<}uint16\_t\textcolor{keyword}{>}(std::stoi(commandlineArguments[\textcolor{stringliteral}{"{}cid"{}}]))\};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73       \mbox{\hyperlink{classopendlv_1_1proxy_1_1GroundSteeringRequest}{opendlv::proxy::GroundSteeringRequest}} gsr;}
+\DoxyCodeLine{74       std::mutex gsrMutex;}
+\DoxyCodeLine{75       \textcolor{keyword}{auto} onGroundSteeringRequest = [\&gsr,}
+\DoxyCodeLine{76                                       \&gsrMutex](\mbox{\hyperlink{classcluon_1_1data_1_1Envelope}{cluon::data::Envelope}} \&\&env)}
+\DoxyCodeLine{77       \{}
+\DoxyCodeLine{78         \textcolor{comment}{// The envelope data structure provide further details, such as}}
+\DoxyCodeLine{79         \textcolor{comment}{// sampleTimePoint as shown in this test case:}}
+\DoxyCodeLine{80         \textcolor{comment}{// https://github.com/chrberger/libcluon/blob/master/libcluon/testsuites/TestEnvelopeConverter.cpp\#L31-\/L40}}
+\DoxyCodeLine{81         std::lock\_guard<std::mutex> lck(gsrMutex);}
+\DoxyCodeLine{82         gsr = cluon::extractMessage<opendlv::proxy::GroundSteeringRequest>(}
+\DoxyCodeLine{83             std::move(env));}
+\DoxyCodeLine{84         std::cout << \textcolor{stringliteral}{"{}lambda: groundSteering = "{}} << gsr.\mbox{\hyperlink{classopendlv_1_1proxy_1_1GroundSteeringRequest_acb3a731751b54cc85401c20fcd37902f}{groundSteering}}()}
+\DoxyCodeLine{85                   << std::endl;}
+\DoxyCodeLine{86       \};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88       od4.dataTrigger(\mbox{\hyperlink{classopendlv_1_1proxy_1_1GroundSteeringRequest_a7d055ddccd1b0db7b8b4190c39142aec}{opendlv::proxy::GroundSteeringRequest::ID}}(),}
+\DoxyCodeLine{89                       onGroundSteeringRequest);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91       \textcolor{comment}{// Endless loop; end the program by pressing Ctrl-\/C.}}
+\DoxyCodeLine{92       \textcolor{keywordflow}{while} (od4.isRunning())}
+\DoxyCodeLine{93       \{}
+\DoxyCodeLine{94 \textcolor{comment}{        /**************************************************************}}
+\DoxyCodeLine{95 \textcolor{comment}{        *********************** Code Goes Here ************************}}
+\DoxyCodeLine{96 \textcolor{comment}{        **************************************************************/}}
+\DoxyCodeLine{97         \textcolor{comment}{// OpenCV data structure to hold an image.}}
+\DoxyCodeLine{98         cv::Mat img;}
+\DoxyCodeLine{99         \textcolor{comment}{// Lock the shared memory.}}
+\DoxyCodeLine{100         sharedMemory-\/>lock();}
+\DoxyCodeLine{101         \{}
+\DoxyCodeLine{102           \textcolor{comment}{// Copy the pixels from the shared memory into our own data structure.}}
+\DoxyCodeLine{103           cv::Mat wrapped(HEIGHT, WIDTH, CV\_8UC4, sharedMemory-\/>data());}
+\DoxyCodeLine{104           img = wrapped.clone();}
+\DoxyCodeLine{105         \}}
+\DoxyCodeLine{106         \textcolor{comment}{// Code to show the current timestamp}}
+\DoxyCodeLine{107         \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon::data::TimeStamp}} utctime\{\mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{cluon::time::now}}()\};}
+\DoxyCodeLine{108         time\_t epoch = utctime.\mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_ac8c0f1d9f06177d7dd8568261fe14dac}{seconds}}();}
+\DoxyCodeLine{109         \textcolor{keyword}{struct }tm *timeutc;}
+\DoxyCodeLine{110         \textcolor{keywordtype}{char} buffer[60];}
+\DoxyCodeLine{111         timeutc = gmtime(\&epoch);}
+\DoxyCodeLine{112         \textcolor{keyword}{const} \textcolor{keywordtype}{char} *fmt = \textcolor{stringliteral}{"{}\%Y-\/\%m-\/\%dT\%H:\%M:\%SZ"{}};}
+\DoxyCodeLine{113         strftime(buffer, 60, fmt, timeutc);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115         std::pair<bool, cluon::data::TimeStamp> timestamp = sharedMemory-\/>getTimeStamp();}
+\DoxyCodeLine{116         \textcolor{keyword}{const} \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp}{cluon::data::TimeStamp}} timeNow = timestamp.second;}
+\DoxyCodeLine{117         \textcolor{keyword}{const} uint64 thistime = \mbox{\hyperlink{namespacecluon_1_1time_ad7e0afa86b32cbb3e78b392664d0793a}{cluon::time::toMicroseconds}}(timeNow);}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119         \textcolor{keyword}{auto} timeframe = std::to\_string(thistime);}
+\DoxyCodeLine{120         \textcolor{keywordtype}{char} output[100];}
+\DoxyCodeLine{121         \textcolor{comment}{// lock mutex in order to read from the gsr}}
+\DoxyCodeLine{122         std::lock\_guard<std::mutex> lck(gsrMutex);}
+\DoxyCodeLine{123         sprintf(output, \textcolor{stringliteral}{"{}timestamp: \%lu; steering angle: \%f"{}}, thistime, gsr.\mbox{\hyperlink{classopendlv_1_1proxy_1_1GroundSteeringRequest_acb3a731751b54cc85401c20fcd37902f}{groundSteering}}());}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125         sharedMemory-\/>unlock();}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127         cv::putText(img,}
+\DoxyCodeLine{128                     output, \textcolor{comment}{// text}}
+\DoxyCodeLine{129                     cv::Point(10, 15),}
+\DoxyCodeLine{130                     cv::FONT\_HERSHEY\_SIMPLEX,}
+\DoxyCodeLine{131                     0.5,}
+\DoxyCodeLine{132                     CV\_RGB(255, 255, 255), \textcolor{comment}{// font color}}
+\DoxyCodeLine{133                     1);}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135         \textcolor{comment}{// Display image on your screen.}}
+\DoxyCodeLine{136         \textcolor{keywordflow}{if} (VERBOSE)}
+\DoxyCodeLine{137         \{}
+\DoxyCodeLine{138           cv::imshow(sharedMemory-\/>name().c\_str(), img);}
+\DoxyCodeLine{139           cv::waitKey(1);}
+\DoxyCodeLine{140         \}}
+\DoxyCodeLine{141       \}}
+\DoxyCodeLine{142     \}}
+\DoxyCodeLine{143 \textcolor{comment}{    /**************************************************************}}
+\DoxyCodeLine{144 \textcolor{comment}{    *********************** Code Ends Here ************************}}
+\DoxyCodeLine{145 \textcolor{comment}{    **************************************************************/}}
+\DoxyCodeLine{146     retCode = 0;}
+\DoxyCodeLine{147   \}}
+\DoxyCodeLine{148   \textcolor{keywordflow}{return} retCode;}
+\DoxyCodeLine{149 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacecluon_a276317d2317901f48d8283de15bdd924}{cluon\+::get\+Commandline\+Arguments()}}, \mbox{\hyperlink{classopendlv_1_1proxy_1_1GroundSteeringRequest_acb3a731751b54cc85401c20fcd37902f}{opendlv\+::proxy\+::\+Ground\+Steering\+Request\+::ground\+Steering()}}, \mbox{\hyperlink{classopendlv_1_1proxy_1_1GroundSteeringRequest_a7d055ddccd1b0db7b8b4190c39142aec}{opendlv\+::proxy\+::\+Ground\+Steering\+Request\+::\+ID()}}, \mbox{\hyperlink{classcluon_1_1SharedMemory_a5a8aaf2d017e3b92c66266a37915be66}{cluon\+::\+Shared\+Memory\+::name()}}, \mbox{\hyperlink{namespacecluon_1_1time_a4265a23bd4bd2b5ed37abff8dffddd25}{cluon\+::time\+::now()}}, \mbox{\hyperlink{classcluon_1_1data_1_1TimeStamp_ac8c0f1d9f06177d7dd8568261fe14dac}{cluon\+::data\+::\+Time\+Stamp\+::seconds()}}, and \mbox{\hyperlink{namespacecluon_1_1time_ad7e0afa86b32cbb3e78b392664d0793a}{cluon\+::time\+::to\+Microseconds()}}.
+
+Here is the call graph for this function\+:
+% FIG 1

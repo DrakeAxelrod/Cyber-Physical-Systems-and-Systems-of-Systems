@@ -1,0 +1,18 @@
+digraph "argh::parser::trim_leading_dashes"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="argh::parser::trim\l_leading_dashes",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="argh::parser::add_param",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classargh_1_1parser.html#ad8d0b03ff213ca4fde28f917b276ccad",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="argh::parser::add_params",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classargh_1_1parser.html#a258a17036735a83a0219f7dec19cb189",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="argh::parser::parser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classargh_1_1parser.html#ae0b1c02f35e0d3dd2df4a4d5ccd3355e",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="argh::parser::operator()",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classargh_1_1parser.html#a34ca4079b6439ee899e1e8700763771c",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="argh::parser::parse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classargh_1_1parser.html#ae73b26b8aeca0c3c0a9cd7aa8e1070be",tooltip=" "];
+}

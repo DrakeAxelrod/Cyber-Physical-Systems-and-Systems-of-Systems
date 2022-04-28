@@ -1,0 +1,268 @@
+\hypertarget{classcluon_1_1data_1_1RecorderCommand}{}\doxysection{cluon\+::data\+::Recorder\+Command Class Reference}
+\label{classcluon_1_1data_1_1RecorderCommand}\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Collaboration diagram for cluon\+::data\+::Recorder\+Command\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a0edf07217c607c886f8c13dc0ab59c75}{Recorder\+Command}} ()=default
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a72c686d2d72b6fa02f4d32665af18811}{Recorder\+Command}} (const \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \& \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a6338da6744b81b17a4fbdc0d7acd25e9}{operator=}} (const \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_adeb6ff28cdcaeb1091a8117532476482}{Recorder\+Command}} (\mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \&\&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \& \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a8c6f4658dc08cb1798bb558ec5f2038a}{operator=}} (\mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \&\&)=default
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a8256b68a28cbecb9513f049df999ca99}{$\sim$\+Recorder\+Command}} ()=default
+\item 
+\mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \& \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a981a40c615bbcde7a207cc515cc8cfe3}{command}} (const uint8\+\_\+t \&v) noexcept
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_ae59069666b687598dcf49e34b0deca30}{command}} () const noexcept
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a1ed97bd86d20a06214b3ed180f7d4db5}{accept}} (uint32\+\_\+t field\+Id, Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Visitor $>$ }\\void \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a194d54b23e8d8f2db385045342dbd3cc}{accept}} (Visitor \&visitor)
+\item 
+{\footnotesize template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ }\\void \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a2d055410532eab810ee17f54ab220342}{accept}} (Pre\+Visitor \&\&pre\+Visit, Visitor \&\&visit, Post\+Visitor \&\&post\+Visit)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int32\+\_\+t \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a48aee68e1e58e20262ca43202eb3b351}{ID}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_aa02d7a5244905b30d30b642a1d9d5a5d}{Short\+Name}} ()
+\item 
+static const std\+::string \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a422ab825b355eadb8224aa771b815a5f}{Long\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a59aa0d72e101c6f325ed9577b73e9b7f}{m\+\_\+command}} \{ 0 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_aa88d6dded28dd5fea26fa910a322710a}{The\+Short\+Name}} = \char`\"{}Recorder\+Command\char`\"{}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_aa2f987ffce7cc36df39ce1c6aa030561}{The\+Long\+Name}} = \char`\"{}cluon.\+data.\+Recorder\+Command\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_a0edf07217c607c886f8c13dc0ab59c75}\label{classcluon_1_1data_1_1RecorderCommand_a0edf07217c607c886f8c13dc0ab59c75}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!RecorderCommand@{RecorderCommand}}
+\index{RecorderCommand@{RecorderCommand}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{RecorderCommand()}{RecorderCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily cluon\+::data\+::\+Recorder\+Command\+::\+Recorder\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_a72c686d2d72b6fa02f4d32665af18811}\label{classcluon_1_1data_1_1RecorderCommand_a72c686d2d72b6fa02f4d32665af18811}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!RecorderCommand@{RecorderCommand}}
+\index{RecorderCommand@{RecorderCommand}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{RecorderCommand()}{RecorderCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily cluon\+::data\+::\+Recorder\+Command\+::\+Recorder\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_adeb6ff28cdcaeb1091a8117532476482}\label{classcluon_1_1data_1_1RecorderCommand_adeb6ff28cdcaeb1091a8117532476482}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!RecorderCommand@{RecorderCommand}}
+\index{RecorderCommand@{RecorderCommand}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{RecorderCommand()}{RecorderCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily cluon\+::data\+::\+Recorder\+Command\+::\+Recorder\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_a8256b68a28cbecb9513f049df999ca99}\label{classcluon_1_1data_1_1RecorderCommand_a8256b68a28cbecb9513f049df999ca99}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!````~RecorderCommand@{$\sim$RecorderCommand}}
+\index{````~RecorderCommand@{$\sim$RecorderCommand}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{$\sim$RecorderCommand()}{~RecorderCommand()}}
+{\footnotesize\ttfamily cluon\+::data\+::\+Recorder\+Command\+::$\sim$\+Recorder\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_a2d055410532eab810ee17f54ab220342}\label{classcluon_1_1data_1_1RecorderCommand_a2d055410532eab810ee17f54ab220342}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!accept@{accept}}
+\index{accept@{accept}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Pre\+Visitor , class Visitor , class Post\+Visitor $>$ \\
+void cluon\+::data\+::\+Recorder\+Command\+::accept (\begin{DoxyParamCaption}\item[{Pre\+Visitor \&\&}]{pre\+Visit,  }\item[{Visitor \&\&}]{visit,  }\item[{Post\+Visitor \&\&}]{post\+Visit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5385                                                                                             \{}
+\DoxyCodeLine{5386             (void)visit; \textcolor{comment}{// Prevent warnings from empty messages.}}
+\DoxyCodeLine{5387             std::forward<PreVisitor>(preVisit)(\mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a48aee68e1e58e20262ca43202eb3b351}{ID}}(), \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_aa02d7a5244905b30d30b642a1d9d5a5d}{ShortName}}(), \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a422ab825b355eadb8224aa771b815a5f}{LongName}}());}
+\DoxyCodeLine{5388             }
+\DoxyCodeLine{5389             \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{doTripletForwardVisit}}(1, std::move(\textcolor{stringliteral}{"{}uint8\_t"{}}s), std::move(\textcolor{stringliteral}{"{}command"{}}s), \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a59aa0d72e101c6f325ed9577b73e9b7f}{m\_command}}, preVisit, visit, postVisit);}
+\DoxyCodeLine{5390             }
+\DoxyCodeLine{5391             std::forward<PostVisitor>(postVisit)();}
+\DoxyCodeLine{5392         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_aee3f7bb867bb626a3ce9b8a1f4434c43}{do\+Triplet\+Forward\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_a1ed97bd86d20a06214b3ed180f7d4db5}\label{classcluon_1_1data_1_1RecorderCommand_a1ed97bd86d20a06214b3ed180f7d4db5}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!accept@{accept}}
+\index{accept@{accept}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void cluon\+::data\+::\+Recorder\+Command\+::accept (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Id,  }\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5362                                                                \{}
+\DoxyCodeLine{5363             (void)fieldId;}
+\DoxyCodeLine{5364             (void)visitor;}
+\DoxyCodeLine{5365 \textcolor{comment}{//            visitor.preVisit(ID(), ShortName(), LongName());}}
+\DoxyCodeLine{5366             }
+\DoxyCodeLine{5367             \textcolor{keywordflow}{if} (1 == fieldId) \{}
+\DoxyCodeLine{5368                 \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}uint8\_t"{}}s), std::move(\textcolor{stringliteral}{"{}command"{}}s), \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a59aa0d72e101c6f325ed9577b73e9b7f}{m\_command}}, visitor);}
+\DoxyCodeLine{5369                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{5370             \}}
+\DoxyCodeLine{5371             }
+\DoxyCodeLine{5372 \textcolor{comment}{//            visitor.postVisit();}}
+\DoxyCodeLine{5373         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_a194d54b23e8d8f2db385045342dbd3cc}\label{classcluon_1_1data_1_1RecorderCommand_a194d54b23e8d8f2db385045342dbd3cc}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!accept@{accept}}
+\index{accept@{accept}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Visitor $>$ \\
+void cluon\+::data\+::\+Recorder\+Command\+::accept (\begin{DoxyParamCaption}\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5376                                              \{}
+\DoxyCodeLine{5377             visitor.preVisit(\mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a48aee68e1e58e20262ca43202eb3b351}{ID}}(), \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_aa02d7a5244905b30d30b642a1d9d5a5d}{ShortName}}(), \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a422ab825b355eadb8224aa771b815a5f}{LongName}}());}
+\DoxyCodeLine{5378             }
+\DoxyCodeLine{5379             \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{doVisit}}(1, std::move(\textcolor{stringliteral}{"{}uint8\_t"{}}s), std::move(\textcolor{stringliteral}{"{}command"{}}s), \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a59aa0d72e101c6f325ed9577b73e9b7f}{m\_command}}, visitor);}
+\DoxyCodeLine{5380             }
+\DoxyCodeLine{5381             visitor.postVisit();}
+\DoxyCodeLine{5382         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cluon-complete_8hpp_a51df6099bbb5cf8ad95fc798d3010b4c}{do\+Visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_ae59069666b687598dcf49e34b0deca30}\label{classcluon_1_1data_1_1RecorderCommand_ae59069666b687598dcf49e34b0deca30}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!command@{command}}
+\index{command@{command}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{command()}{command()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t cluon\+::data\+::\+Recorder\+Command\+::command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5355                                                 \{}
+\DoxyCodeLine{5356             \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a59aa0d72e101c6f325ed9577b73e9b7f}{m\_command}};}
+\DoxyCodeLine{5357         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_a981a40c615bbcde7a207cc515cc8cfe3}\label{classcluon_1_1data_1_1RecorderCommand_a981a40c615bbcde7a207cc515cc8cfe3}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!command@{command}}
+\index{command@{command}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{command()}{command()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \& cluon\+::data\+::\+Recorder\+Command\+::command (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5351                                                                    \{}
+\DoxyCodeLine{5352             \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_a59aa0d72e101c6f325ed9577b73e9b7f}{m\_command}} = v;}
+\DoxyCodeLine{5353             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{5354         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_a48aee68e1e58e20262ca43202eb3b351}\label{classcluon_1_1data_1_1RecorderCommand_a48aee68e1e58e20262ca43202eb3b351}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!ID@{ID}}
+\index{ID@{ID}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{ID()}{ID()}}
+{\footnotesize\ttfamily static int32\+\_\+t cluon\+::data\+::\+Recorder\+Command\+::\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5331                                    \{}
+\DoxyCodeLine{5332             \textcolor{keywordflow}{return} 11;}
+\DoxyCodeLine{5333         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_a422ab825b355eadb8224aa771b815a5f}\label{classcluon_1_1data_1_1RecorderCommand_a422ab825b355eadb8224aa771b815a5f}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!LongName@{LongName}}
+\index{LongName@{LongName}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{LongName()}{LongName()}}
+{\footnotesize\ttfamily static const std\+::string cluon\+::data\+::\+Recorder\+Command\+::\+Long\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5337                                                  \{}
+\DoxyCodeLine{5338             \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_aa2f987ffce7cc36df39ce1c6aa030561}{TheLongName}};}
+\DoxyCodeLine{5339         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_a6338da6744b81b17a4fbdc0d7acd25e9}\label{classcluon_1_1data_1_1RecorderCommand_a6338da6744b81b17a4fbdc0d7acd25e9}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \& cluon\+::data\+::\+Recorder\+Command\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_a8c6f4658dc08cb1798bb558ec5f2038a}\label{classcluon_1_1data_1_1RecorderCommand_a8c6f4658dc08cb1798bb558ec5f2038a}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!operator=@{operator=}}
+\index{operator=@{operator=}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \& cluon\+::data\+::\+Recorder\+Command\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand}{Recorder\+Command}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_aa02d7a5244905b30d30b642a1d9d5a5d}\label{classcluon_1_1data_1_1RecorderCommand_aa02d7a5244905b30d30b642a1d9d5a5d}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!ShortName@{ShortName}}
+\index{ShortName@{ShortName}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{ShortName()}{ShortName()}}
+{\footnotesize\ttfamily static const std\+::string cluon\+::data\+::\+Recorder\+Command\+::\+Short\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5334                                                   \{}
+\DoxyCodeLine{5335             \textcolor{keywordflow}{return} \mbox{\hyperlink{classcluon_1_1data_1_1RecorderCommand_aa88d6dded28dd5fea26fa910a322710a}{TheShortName}};}
+\DoxyCodeLine{5336         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_a59aa0d72e101c6f325ed9577b73e9b7f}\label{classcluon_1_1data_1_1RecorderCommand_a59aa0d72e101c6f325ed9577b73e9b7f}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!m\_command@{m\_command}}
+\index{m\_command@{m\_command}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{m\_command}{m\_command}}
+{\footnotesize\ttfamily uint8\+\_\+t cluon\+::data\+::\+Recorder\+Command\+::m\+\_\+command \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_aa2f987ffce7cc36df39ce1c6aa030561}\label{classcluon_1_1data_1_1RecorderCommand_aa2f987ffce7cc36df39ce1c6aa030561}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!TheLongName@{TheLongName}}
+\index{TheLongName@{TheLongName}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{TheLongName}{TheLongName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ cluon\+::data\+::\+Recorder\+Command\+::\+The\+Long\+Name = \char`\"{}cluon.\+data.\+Recorder\+Command\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcluon_1_1data_1_1RecorderCommand_aa88d6dded28dd5fea26fa910a322710a}\label{classcluon_1_1data_1_1RecorderCommand_aa88d6dded28dd5fea26fa910a322710a}} 
+\index{cluon::data::RecorderCommand@{cluon::data::RecorderCommand}!TheShortName@{TheShortName}}
+\index{TheShortName@{TheShortName}!cluon::data::RecorderCommand@{cluon::data::RecorderCommand}}
+\doxysubsubsection{\texorpdfstring{TheShortName}{TheShortName}}
+{\footnotesize\ttfamily constexpr const char$\ast$ cluon\+::data\+::\+Recorder\+Command\+::\+The\+Short\+Name = \char`\"{}Recorder\+Command\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

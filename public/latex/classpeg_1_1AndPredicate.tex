@@ -1,0 +1,122 @@
+\hypertarget{classpeg_1_1AndPredicate}{}\doxysection{peg\+::And\+Predicate Class Reference}
+\label{classpeg_1_1AndPredicate}\index{peg::AndPredicate@{peg::AndPredicate}}
+
+
+{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+
+
+
+Inheritance diagram for peg\+::And\+Predicate\+:
+% FIG 0
+
+
+Collaboration diagram for peg\+::And\+Predicate\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpeg_1_1AndPredicate_a4047f03115677ed24a2c2ae3289ff016}{And\+Predicate}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ \&ope)
+\item 
+size\+\_\+t \mbox{\hyperlink{classpeg_1_1AndPredicate_aca8b9ef4e1c47e85e8966d13e662d3d3}{parse}} (const char $\ast$s, size\+\_\+t n, \mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&sv, \mbox{\hyperlink{classpeg_1_1Context}{Context}} \&c, \mbox{\hyperlink{classpeg_1_1any}{any}} \&dt) const override
+\item 
+void \mbox{\hyperlink{classpeg_1_1AndPredicate_ab139102ab1802e0868b48e2744adffd0}{accept}} (\mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor}{Visitor}} \&v) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ \mbox{\hyperlink{classpeg_1_1AndPredicate_a78aa1543cd27f07a41ec9051c6fa9231}{ope\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpeg_1_1AndPredicate_a4047f03115677ed24a2c2ae3289ff016}\label{classpeg_1_1AndPredicate_a4047f03115677ed24a2c2ae3289ff016}} 
+\index{peg::AndPredicate@{peg::AndPredicate}!AndPredicate@{AndPredicate}}
+\index{AndPredicate@{AndPredicate}!peg::AndPredicate@{peg::AndPredicate}}
+\doxysubsubsection{\texorpdfstring{AndPredicate()}{AndPredicate()}}
+{\footnotesize\ttfamily peg\+::\+And\+Predicate\+::\+And\+Predicate (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classpeg_1_1Ope}{Ope}} $>$ \&}]{ope }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1678 : \mbox{\hyperlink{classpeg_1_1AndPredicate_a78aa1543cd27f07a41ec9051c6fa9231}{ope\_}}(ope) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpeg_1_1AndPredicate_ab139102ab1802e0868b48e2744adffd0}\label{classpeg_1_1AndPredicate_ab139102ab1802e0868b48e2744adffd0}} 
+\index{peg::AndPredicate@{peg::AndPredicate}!accept@{accept}}
+\index{accept@{accept}!peg::AndPredicate@{peg::AndPredicate}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void peg\+::\+And\+Predicate\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor}{Visitor}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpeg_1_1Ope_af57615cfe8938c0f4c9a0dd6df9da560}{peg\+::\+Ope}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2864 \{ v.visit(*\textcolor{keyword}{this}); \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structpeg_1_1Ope_1_1Visitor_ade8440f9ed92da93693329208ba10381}{peg\+::\+Ope\+::\+Visitor\+::visit()}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classpeg_1_1AndPredicate_aca8b9ef4e1c47e85e8966d13e662d3d3}\label{classpeg_1_1AndPredicate_aca8b9ef4e1c47e85e8966d13e662d3d3}} 
+\index{peg::AndPredicate@{peg::AndPredicate}!parse@{parse}}
+\index{parse@{parse}!peg::AndPredicate@{peg::AndPredicate}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily size\+\_\+t peg\+::\+And\+Predicate\+::parse (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{\mbox{\hyperlink{structpeg_1_1SemanticValues}{Semantic\+Values}} \&}]{sv,  }\item[{\mbox{\hyperlink{classpeg_1_1Context}{Context}} \&}]{c,  }\item[{\mbox{\hyperlink{classpeg_1_1any}{any}} \&}]{dt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpeg_1_1Ope_a431b9481130d91a0d51e97cffd8ace80}{peg\+::\+Ope}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1680                                                                                                   \{}
+\DoxyCodeLine{1681         c.trace(\textcolor{stringliteral}{"{}AndPredicate"{}}, s, n, sv, dt);}
+\DoxyCodeLine{1682         c.nest\_level++;}
+\DoxyCodeLine{1683         \textcolor{keyword}{auto}\& chldsv = c.push();}
+\DoxyCodeLine{1684         c.push\_capture\_scope();}
+\DoxyCodeLine{1685         \textcolor{keyword}{auto} se = \mbox{\hyperlink{namespacepeg_ac2158f086910efbd32f003dbb2ea3e65}{make\_scope\_exit}}([\&]() \{}
+\DoxyCodeLine{1686             c.nest\_level-\/-\/;}
+\DoxyCodeLine{1687             c.pop();}
+\DoxyCodeLine{1688             c.pop\_capture\_scope();}
+\DoxyCodeLine{1689         \});}
+\DoxyCodeLine{1690         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& rule = *\mbox{\hyperlink{classpeg_1_1AndPredicate_a78aa1543cd27f07a41ec9051c6fa9231}{ope\_}};}
+\DoxyCodeLine{1691         \textcolor{keyword}{auto} len = rule.parse(s, n, chldsv, c, dt);}
+\DoxyCodeLine{1692         \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacepeg_abb0779cb4c0b5f8e157e81bac9686c8a}{success}}(len)) \{}
+\DoxyCodeLine{1693             \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{1694         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{1695             \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(-\/1);}
+\DoxyCodeLine{1696         \}}
+\DoxyCodeLine{1697     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{namespacepeg_ac2158f086910efbd32f003dbb2ea3e65}{peg\+::make\+\_\+scope\+\_\+exit()}}, \mbox{\hyperlink{classpeg_1_1Context_a03a90936d615e6c2553f71456b3cd02e}{peg\+::\+Context\+::nest\+\_\+level}}, \mbox{\hyperlink{classpeg_1_1Context_ac35d91467ae20e6b13a39ace7d853eb4}{peg\+::\+Context\+::pop()}}, \mbox{\hyperlink{classpeg_1_1Context_ac3038d83aacd1c2992239eae43f9f120}{peg\+::\+Context\+::pop\+\_\+capture\+\_\+scope()}}, \mbox{\hyperlink{classpeg_1_1Context_acf1bfdc49e3ea328c8cacb78b712cb0b}{peg\+::\+Context\+::push()}}, \mbox{\hyperlink{classpeg_1_1Context_a5be010190aa699d634fb3b552b417111}{peg\+::\+Context\+::push\+\_\+capture\+\_\+scope()}}, \mbox{\hyperlink{namespacepeg_abb0779cb4c0b5f8e157e81bac9686c8a}{peg\+::success()}}, and \mbox{\hyperlink{classpeg_1_1Context_a62d90cb77e73de57eb6b51367f60d961}{peg\+::\+Context\+::trace()}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpeg_1_1AndPredicate_a78aa1543cd27f07a41ec9051c6fa9231}\label{classpeg_1_1AndPredicate_a78aa1543cd27f07a41ec9051c6fa9231}} 
+\index{peg::AndPredicate@{peg::AndPredicate}!ope\_@{ope\_}}
+\index{ope\_@{ope\_}!peg::AndPredicate@{peg::AndPredicate}}
+\doxysubsubsection{\texorpdfstring{ope\_}{ope\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classpeg_1_1Ope}{Ope}}$>$ peg\+::\+And\+Predicate\+::ope\+\_\+}
+
+
+
+Referenced by \mbox{\hyperlink{structpeg_1_1AssignIDToDefinition_aa76536aedf80c0d8802915eb1db22087}{peg\+::\+Assign\+IDTo\+Definition\+::visit()}}, \mbox{\hyperlink{structpeg_1_1DetectLeftRecursion_a2db5f4214c94c7dc6764da5dd8768973}{peg\+::\+Detect\+Left\+Recursion\+::visit()}}, \mbox{\hyperlink{structpeg_1_1ReferenceChecker_adb8d5111c4e4525e885e9f4663418dd2}{peg\+::\+Reference\+Checker\+::visit()}}, \mbox{\hyperlink{structpeg_1_1LinkReferences_a4f8d06c4a223c98d9b7cca06f96b2980}{peg\+::\+Link\+References\+::visit()}}, and \mbox{\hyperlink{structpeg_1_1FindReference_aca0bad3cd08e584b466f18e95c1e1aa2}{peg\+::\+Find\+Reference\+::visit()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\end{DoxyCompactItemize}

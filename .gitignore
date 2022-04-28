@@ -33,5 +33,5 @@
 
 # Ignore stuff :D
 export
-
+.vscode
 build

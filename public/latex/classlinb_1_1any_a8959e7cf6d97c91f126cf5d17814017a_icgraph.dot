@@ -1,0 +1,16 @@
+digraph "linb::any::empty"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="linb::any::empty",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Returns true if *this has no contained object, otherwise false."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="linb::any::any",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlinb_1_1any.html#a56847f22e44c42dfe1b74633cf81d083",tooltip="Constructs an object of type any with an equivalent state as other."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="linb::any::clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlinb_1_1any.html#a3fdc740fdcf5fd3f0a6d6628702c54b3",tooltip="If not empty, destroys the contained object."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="linb::any::~any",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlinb_1_1any.html#ae43b1437e9e7b51a0ae90463914c0fb3",tooltip="Same effect as this->clear()."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="linb::any::type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classlinb_1_1any.html#a418dda0f87b24c4eb127f42f760cde25",tooltip="If *this has a contained object of type T, typeid(T); otherwise typeid(void)."];
+}

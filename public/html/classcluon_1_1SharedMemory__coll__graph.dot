@@ -1,0 +1,37 @@
+digraph "cluon::SharedMemory"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{cluon::SharedMemory\n||+ SharedMemory()\l+ ~SharedMemory()\l+ isLocked()\l+ lock()\l+ unlock()\l+ wait()\l+ notifyAll()\l+ setTimeStamp()\l+ getTimeStamp()\l+ valid()\l+ data()\l+ size()\l+ name()\l- SharedMemory()\l- SharedMemory()\l- operator=()\l- operator=()\l- initPOSIX()\l- deinitPOSIX()\l- lockPOSIX()\l- unlockPOSIX()\l- waitPOSIX()\l- notifyAllPOSIX()\l- validPOSIX()\l- initSysV()\l- deinitSysV()\l- lockSysV()\l- unlockSysV()\l- waitSysV()\l- notifyAllSysV()\l- validSysV()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_name\n-m_nameForTimeStamping" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{std::string\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{std::basic_string\<\l Char \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_size" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{uint32_t\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_sharedMemory\n-m_userAccessibleShared\lMemory" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 [label="{char\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_hasOnlyAttachedToShared\lMemory\n-m_usePOSIX" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node6 [label="{bool\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_broken\n-m_isLocked" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node7 [label="{std::atomic\< bool \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node7 [color="grey25",fontsize="10",style="solid",label=" +ptr" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node8 -> Node7 [dir="back",color="orange",fontsize="10",style="solid",label=" \< bool \>" ,fontname="Helvetica"];
+  Node8 [label="{std::atomic\< T \>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node9 -> Node8 [color="grey25",fontsize="10",style="solid",label=" +ptr" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node9 [label="{T\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node10 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_fd\n-m_fdForTimeStamping" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node10 [label="{int32_t\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_sharedMemoryHeader" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node11 [label="{cluon::SharedMemory\l::SharedMemoryHeader\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcluon_1_1SharedMemory_1_1SharedMemoryHeader.html",tooltip=" "];
+  Node4 -> Node11 [color="grey25",fontsize="10",style="solid",label=" +__size" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node12 -> Node11 [color="grey25",fontsize="10",style="solid",label=" +__mutex" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node12 [label="{pthread_mutex_t\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node13 -> Node11 [color="grey25",fontsize="10",style="solid",label=" +__condition" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node13 [label="{pthread_cond_t\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node14 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_conditionKeySysV\n-m_mutexKeySysV\n-m_shmKeySysV" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node14 [label="{key_t\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node15 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_conditionIDSysV\n-m_mutexIDSysV\n-m_sharedMemoryIDSysV" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node15 [label="{int\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+}

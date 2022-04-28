@@ -1,0 +1,15 @@
+digraph "cluon::time::now"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="cluon::time::now",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="cluon::time::convert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacecluon_1_1time.html#ae2df73301f037b992abdb8b66c5e35b3",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="cluon::data::TimeStamp\l::microseconds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1data_1_1TimeStamp.html#a6330ea6b06cdce2b2a30098f3ec87a9a",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="cluon::data::TimeStamp\l::seconds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcluon_1_1data_1_1TimeStamp.html#ac8c0f1d9f06177d7dd8568261fe14dac",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
