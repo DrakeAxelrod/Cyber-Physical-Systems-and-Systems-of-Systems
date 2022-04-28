@@ -30,23 +30,23 @@ services:
       - opendlv-vehicle-view
     command: --cid=253 --name=img
   # overlay for image data
-  cyphy:
-    image: cyphy/group5:latest
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    restart: always
-    network_mode: "host"
-    ipc: host
-    environment:
-      DISPLAY: $DISPLAY
-    volumes:
-      - /tmp:/tmp
-      - /tmp/.X11-unix:/tmp/.X11-unix
-      - ~/.Xauthority:/root/.Xauthority
-    depends_on:
-      - h264decoder
-      - opendlv-vehicle-view
-    links: 
-      - h264decoder
-    command: --cid=253 --name=img --width=640 --height=480 --verbose
+  # cyphy:
+  #   image: cyphy/group5:latest
+  #   build:
+  #     context: ./
+  #     dockerfile: Dockerfile
+  #   restart: always
+  #   network_mode: "host"
+  #   ipc: host
+  #   environment:
+  #     DISPLAY: $DISPLAY
+  #   volumes:
+  #     - /tmp:/tmp
+  #     - /tmp/.X11-unix:/tmp/.X11-unix
+  #     - ~/.Xauthority:/root/.Xauthority
+  #   depends_on:
+  #     - h264decoder
+  #     - opendlv-vehicle-view
+  #   links: 
+  #     - h264decoder
+  #   command: --cid=253 --name=img --width=640 --height=480 --verbose

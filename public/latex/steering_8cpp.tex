@@ -9,7 +9,9 @@ Include dependency graph for steering.\+cpp\+:
 void \mbox{\hyperlink{steering_8cpp_ab94cdf65831cab90335e52dbee4c6ca0}{steer}} ()
 \begin{DoxyCompactList}\small\item\em the primary function to return the computed steering angle \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{steering_8cpp_adaacbf22bcb103b723484b3642ccbfea}{do\+\_\+magic}} ()
-\begin{DoxyCompactList}\small\item\em your a wizard, you can do magic here \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em your a wizard, you can do magic here \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{steering_8cpp_a497b1582194f5244ed398d25345dc23c}{get\+\_\+timestamp}} (std\+::pair$<$ bool, cluon\+::data\+::\+Time\+Stamp $>$ ts, time\+\_\+t now)
+\begin{DoxyCompactList}\small\item\em returns the timestamp of the current frame \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -35,6 +37,53 @@ Referenced by \mbox{\hyperlink{steering-angle-generator_8hpp_ab94cdf65831cab9033
 
 Here is the caller graph for this function\+:
 % FIG 1
+\mbox{\Hypertarget{steering_8cpp_a497b1582194f5244ed398d25345dc23c}\label{steering_8cpp_a497b1582194f5244ed398d25345dc23c}} 
+\index{steering.cpp@{steering.cpp}!get\_timestamp@{get\_timestamp}}
+\index{get\_timestamp@{get\_timestamp}!steering.cpp@{steering.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_timestamp()}{get\_timestamp()}}
+{\footnotesize\ttfamily std\+::string get\+\_\+timestamp (\begin{DoxyParamCaption}\item[{std\+::pair$<$ bool, cluon\+::data\+::\+Time\+Stamp $>$}]{ts,  }\item[{time\+\_\+t}]{now }\end{DoxyParamCaption})}
+
+
+
+returns the timestamp of the current frame 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ts} & \\
+\hline
+{\em now} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14   \textcolor{keywordtype}{char} buf[60];}
+\DoxyCodeLine{15   std::stringstream s;}
+\DoxyCodeLine{16   \textcolor{keywordflow}{if} (ts.first)}
+\DoxyCodeLine{17   \{}
+\DoxyCodeLine{18     strftime(buf, 60, \textcolor{stringliteral}{"{}\%Y-\/\%m-\/\%dT\%H:\%M:\%SZ"{}}, gmtime(\&now));}
+\DoxyCodeLine{19     s << \textcolor{stringliteral}{"{}Now: "{}} << buf << \textcolor{stringliteral}{"{}, ts: "{}}}
+\DoxyCodeLine{20       << ts.second.seconds() << \textcolor{stringliteral}{"{}."{}}}
+\DoxyCodeLine{21       << ts.second.microseconds();}
+\DoxyCodeLine{22   \}}
+\DoxyCodeLine{23   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{24   \{}
+\DoxyCodeLine{25     std::stringstream ss;}
+\DoxyCodeLine{26     s << \textcolor{stringliteral}{"{}No timestamp available."{}};}
+\DoxyCodeLine{27   \}}
+\DoxyCodeLine{28   \textcolor{keywordflow}{return} s.str();}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{opencv-template_8cpp_af19ddca125f05a2090dd132045573ee4}{main()}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{steering_8cpp_ab94cdf65831cab90335e52dbee4c6ca0}\label{steering_8cpp_ab94cdf65831cab90335e52dbee4c6ca0}} 
 \index{steering.cpp@{steering.cpp}!steer@{steer}}
 \index{steer@{steer}!steering.cpp@{steering.cpp}}
@@ -57,4 +106,4 @@ the primary function to return the computed steering angle
 References \mbox{\hyperlink{steering_8cpp_adaacbf22bcb103b723484b3642ccbfea}{do\+\_\+magic()}}.
 
 Here is the call graph for this function\+:
-% FIG 2
+% FIG 3
