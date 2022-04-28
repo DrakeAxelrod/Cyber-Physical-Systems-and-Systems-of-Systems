@@ -29,8 +29,9 @@ function run_lcov() {
 
 function run_pmccabe() {
     local dir="/opt/sources/src"
-    local file="SensorReading.cpp" #to change during sprint 2 #apt-get install -y pmccabe
-    output "cd $dir && pmccabe -vc $file 2>/dev/null > $dir/complexity.details.csv"
+    local file="*.cpp" #to change during sprint 2 
+    apt-get install -y pmccabe #to delete once pmccabe is installed in docker
+    output "$(pmccabe -vc $dir/$file)"
 }
 
 declare_section "Running build.sh"
@@ -45,6 +46,6 @@ lcov --list /opt/sources/build/coverage.info 2>/dev/null
 
 declare_section "Generating Complexity"
 
-run_pmccabe &> /dev/null
+run_pmccabe 
 
 declare_section "Finished Running"
