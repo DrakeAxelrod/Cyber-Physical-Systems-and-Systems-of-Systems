@@ -48,6 +48,8 @@ build-and-test:
   allow_failure: false
 
 pages:
+  tags:
+    - docker-build
   image: ruby:2.7
   script:
   - apk update && apk add doxygen
