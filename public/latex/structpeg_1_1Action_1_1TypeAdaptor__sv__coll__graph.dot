@@ -1,9 +1,0 @@
-digraph "peg::Action::TypeAdaptor_sv&lt; R &gt;"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{peg::Action::TypeAdaptor\l_sv\< R \>\n||+ TypeAdaptor_sv()\l+ operator()()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
-  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +fn_" ,arrowhead="odiamond"];
-  Node2 [label="{function\< R(peg::Semantic\lValues &sv)\>\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
-}

@@ -47,6 +47,16 @@ build-and-test:
     - $CI_COMMIT_TAG  
   allow_failure: false
 
+pages:
+  script:
+  - apk update && apk add doxygen
+  - doxygen doxygen/Doxyfile
+  - mv doxygen/documentation/html/ public/
+  artifacts:
+    paths:
+    - public
+  # only:
+  # - main
 # pages:
 #   image: ruby:2.7
 #   script:
