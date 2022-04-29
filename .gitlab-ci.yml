@@ -52,14 +52,10 @@ pages:
   tags:
     - docker-build
   stage: documentation
-  image: ruby:2.7
   script:
-  - gem install bundler
-  - bundle install
   - apk update && apk add doxygen
   - doxygen doxygen/Doxyfile
   - mv doxygen/html/ public/
-  - bundle exec jekyll build -d public
   artifacts:
     paths:
     - public
