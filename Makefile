@@ -21,10 +21,20 @@ doc:
 	rm -rf docs
 	doxygen
 
+docker-build:
+	@echo building Project
+	docker build -t group5/cyphy:latest -f Dockerfile .
+
+docker-run:
+	@echo Running Project
+	bash ./scripts/run-docker-container.sh
+
 clean:
 	@echo Cleaning up the project :D
 	rm -rf build
 	rm -rf public
+
+
 
 secret:
 	@echo Secret
