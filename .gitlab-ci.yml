@@ -55,7 +55,7 @@ pages:
   script:
   - apk update && apk add doxygen
   - doxygen doxygen/Doxyfile
-  - mv doxygen/documentation/html/ public/
+  - mv doxygen/html/ public/
   artifacts:
     paths:
     - public
