@@ -48,15 +48,18 @@ build-and-test:
   allow_failure: false
 
 pages:
+  image: ruby:2.7
   script:
   - apk update && apk add doxygen
+  - gem install bundler
+  - bundle install
   - doxygen doxygen/Doxyfile
   - mv doxygen/documentation/html/ public/
+  - bundle exec jekyll build -d public
   artifacts:
     paths:
     - public
-  # only:
-  # - main
+
 # pages:
 #   image: ruby:2.7
 #   script:
@@ -66,6 +69,8 @@ pages:
 #   artifacts:
 #     paths:
 #       - public
+  # only:
+  # - main
 
 # test:
 #   tags:
