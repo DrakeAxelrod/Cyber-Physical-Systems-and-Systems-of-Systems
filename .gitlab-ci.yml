@@ -27,6 +27,7 @@ services:
 
 stages:
   - build
+  - documentation
   - test
   - deploy
 
@@ -50,6 +51,7 @@ build-and-test:
 pages:
   tags:
     - docker-build
+  stage: documentation
   script:
   - apk update && apk add doxygen
   - doxygen doxygen/Doxyfile

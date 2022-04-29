@@ -1,5 +1,5 @@
 PROJECT_NAME = "Cyphy"
-OUTPUT_DIRECTORY = ./doxygen/public/
+OUTPUT_DIRECTORY = ./doxygen/
 BUILTIN_STL_SUPPORT = YES
 EXTRACT_ALL = YES
 INPUT = ./src
