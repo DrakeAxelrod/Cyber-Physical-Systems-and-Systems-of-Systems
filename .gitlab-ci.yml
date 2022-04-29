@@ -27,6 +27,7 @@ services:
 
 stages:
   - build
+  - documentation
   - test
   - deploy
 
@@ -47,6 +48,19 @@ build-and-test:
     - $CI_COMMIT_TAG  
   allow_failure: false
 
+pages:
+  tags:
+    - docker-build
+  stage: documentation
+  script:
+  - apk update && apk add doxygen
+  - doxygen doxygen/Doxyfile
+  - mv doxygen/html/ public/
+  artifacts:
+    paths:
+    - public
+  # only:
+  # - main
 # pages:
 #   image: ruby:2.7
 #   script:
@@ -56,6 +70,8 @@ build-and-test:
 #   artifacts:
 #     paths:
 #       - public
+  # only:
+  # - main
 
 # test:
 #   tags:
