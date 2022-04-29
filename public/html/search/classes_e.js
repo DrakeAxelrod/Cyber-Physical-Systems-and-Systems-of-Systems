@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['object_0',['Object',['../classopendlv_1_1logic_1_1perception_1_1Object.html',1,'opendlv::logic::perception']]],
-  ['objectangularblob_1',['ObjectAngularBlob',['../classopendlv_1_1logic_1_1perception_1_1ObjectAngularBlob.html',1,'opendlv::logic::perception']]],
-  ['objectdirection_2',['ObjectDirection',['../classopendlv_1_1logic_1_1perception_1_1ObjectDirection.html',1,'opendlv::logic::perception']]],
-  ['objectdistance_3',['ObjectDistance',['../classopendlv_1_1logic_1_1perception_1_1ObjectDistance.html',1,'opendlv::logic::perception']]],
-  ['objectproperty_4',['ObjectProperty',['../classopendlv_1_1logic_1_1perception_1_1ObjectProperty.html',1,'opendlv::logic::perception']]],
-  ['objecttype_5',['ObjectType',['../classopendlv_1_1logic_1_1perception_1_1ObjectType.html',1,'opendlv::logic::perception']]],
-  ['od4session_6',['OD4Session',['../classcluon_1_1OD4Session.html',1,'cluon']]],
-  ['oneormore_7',['OneOrMore',['../classpeg_1_1OneOrMore.html',1,'peg']]],
-  ['ope_8',['Ope',['../classpeg_1_1Ope.html',1,'peg']]],
-  ['option_9',['Option',['../classpeg_1_1Option.html',1,'peg']]]
+  ['sensorinfo_0',['SensorInfo',['../classopendlv_1_1body_1_1SensorInfo.html',1,'opendlv::body']]],
+  ['signalinfo_1',['SignalInfo',['../classopendlv_1_1body_1_1SignalInfo.html',1,'opendlv::body']]],
+  ['signalstatusmessage_2',['SignalStatusMessage',['../classopendlv_1_1system_1_1SignalStatusMessage.html',1,'opendlv::system']]],
+  ['switchstatereading_3',['SwitchStateReading',['../classopendlv_1_1proxy_1_1SwitchStateReading.html',1,'opendlv::proxy']]],
+  ['switchstaterequest_4',['SwitchStateRequest',['../classopendlv_1_1proxy_1_1SwitchStateRequest.html',1,'opendlv::proxy']]],
+  ['systemoperationstate_5',['SystemOperationState',['../classopendlv_1_1system_1_1SystemOperationState.html',1,'opendlv::system']]]
 ];

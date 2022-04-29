@@ -1,0 +1,128 @@
+\hypertarget{classHSVBounds}{}\doxysection{HSVBounds Class Reference}
+\label{classHSVBounds}\index{HSVBounds@{HSVBounds}}
+
+
+This struct is data object to hold an upper and lower bounds for HSV values.  
+
+
+
+
+{\ttfamily \#include $<$steering-\/angle-\/generator.\+hpp$>$}
+
+
+
+Collaboration diagram for HSVBounds\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHSVBounds_a67e3f13b5728fcf17c4e8dc7261f52be}{HSVBounds}} (\mbox{\hyperlink{classint}{int}} hl, \mbox{\hyperlink{classint}{int}} hh, \mbox{\hyperlink{classint}{int}} sl, \mbox{\hyperlink{classint}{int}} sh, \mbox{\hyperlink{classint}{int}} vl, \mbox{\hyperlink{classint}{int}} vh)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBound}{Bound}}$<$ \mbox{\hyperlink{classint}{int}} $>$ \mbox{\hyperlink{classHSVBounds_ab8aad4a06a349f0dd84e1f66d828b0d1}{h}}
+\begin{DoxyCompactList}\small\item\em The upper and lower bounds for Hue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBound}{Bound}}$<$ \mbox{\hyperlink{classint}{int}} $>$ \mbox{\hyperlink{classHSVBounds_a07a5f2685695152f6f591b9ef91bd7cb}{s}}
+\begin{DoxyCompactList}\small\item\em The upper and lower bounds for Saturation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBound}{Bound}}$<$ \mbox{\hyperlink{classint}{int}} $>$ \mbox{\hyperlink{classHSVBounds_a7ead0b619ba40a5c962d3e24aaa57b9e}{v}}
+\begin{DoxyCompactList}\small\item\em The upper and lower bounds for Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This struct is data object to hold an upper and lower bounds for HSV values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Bound$<$int$>$\+:h} & The upper and lower bounds for Hue. \\
+\hline
+{\em Bound$<$int$>$\+:s} & The upper and lower bounds for Saturation. \\
+\hline
+{\em Bound$<$int$>$\+:v} & The upper and lower bounds for Value. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHSVBounds_a67e3f13b5728fcf17c4e8dc7261f52be}\label{classHSVBounds_a67e3f13b5728fcf17c4e8dc7261f52be}} 
+\index{HSVBounds@{HSVBounds}!HSVBounds@{HSVBounds}}
+\index{HSVBounds@{HSVBounds}!HSVBounds@{HSVBounds}}
+\doxysubsubsection{\texorpdfstring{HSVBounds()}{HSVBounds()}}
+{\footnotesize\ttfamily HSVBounds\+::\+HSVBounds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classint}{int}}}]{hl,  }\item[{\mbox{\hyperlink{classint}{int}}}]{hh,  }\item[{\mbox{\hyperlink{classint}{int}}}]{sl,  }\item[{\mbox{\hyperlink{classint}{int}}}]{sh,  }\item[{\mbox{\hyperlink{classint}{int}}}]{vl,  }\item[{\mbox{\hyperlink{classint}{int}}}]{vh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The constructor. 
+
+The constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hl} & The lower bound for Hue. \\
+\hline
+{\em hh} & The upper bound for Hue. \\
+\hline
+{\em sl} & The lower bound for Saturation. \\
+\hline
+{\em sh} & The upper bound for Saturation. \\
+\hline
+{\em vl} & The lower bound for Value. \\
+\hline
+{\em vh} & The upper bound for Value. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82 : \mbox{\hyperlink{classHSVBounds_ab8aad4a06a349f0dd84e1f66d828b0d1}{h}}(hl, hh), \mbox{\hyperlink{classHSVBounds_a07a5f2685695152f6f591b9ef91bd7cb}{s}}(sl, sh), \mbox{\hyperlink{classHSVBounds_a7ead0b619ba40a5c962d3e24aaa57b9e}{v}}(vl, vh) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classHSVBounds_ab8aad4a06a349f0dd84e1f66d828b0d1}\label{classHSVBounds_ab8aad4a06a349f0dd84e1f66d828b0d1}} 
+\index{HSVBounds@{HSVBounds}!h@{h}}
+\index{h@{h}!HSVBounds@{HSVBounds}}
+\doxysubsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBound}{Bound}}$<$\mbox{\hyperlink{classint}{int}}$>$ HSVBounds\+::h}
+
+
+
+The upper and lower bounds for Hue. 
+
+The upper and lower bounds for Hue. 
+
+Referenced by \mbox{\hyperlink{opencv-template_8cpp_af19ddca125f05a2090dd132045573ee4}{main()}}.
+
+\mbox{\Hypertarget{classHSVBounds_a07a5f2685695152f6f591b9ef91bd7cb}\label{classHSVBounds_a07a5f2685695152f6f591b9ef91bd7cb}} 
+\index{HSVBounds@{HSVBounds}!s@{s}}
+\index{s@{s}!HSVBounds@{HSVBounds}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBound}{Bound}}$<$\mbox{\hyperlink{classint}{int}}$>$ HSVBounds\+::s}
+
+
+
+The upper and lower bounds for Saturation. 
+
+The upper and lower bounds for Saturation. 
+
+Referenced by \mbox{\hyperlink{opencv-template_8cpp_af19ddca125f05a2090dd132045573ee4}{main()}}.
+
+\mbox{\Hypertarget{classHSVBounds_a7ead0b619ba40a5c962d3e24aaa57b9e}\label{classHSVBounds_a7ead0b619ba40a5c962d3e24aaa57b9e}} 
+\index{HSVBounds@{HSVBounds}!v@{v}}
+\index{v@{v}!HSVBounds@{HSVBounds}}
+\doxysubsubsection{\texorpdfstring{v}{v}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBound}{Bound}}$<$\mbox{\hyperlink{classint}{int}}$>$ HSVBounds\+::v}
+
+
+
+The upper and lower bounds for Value. 
+
+The upper and lower bounds for Value. 
+
+Referenced by \mbox{\hyperlink{opencv-template_8cpp_af19ddca125f05a2090dd132045573ee4}{main()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{steering-angle-generator_8hpp}{steering-\/angle-\/generator.\+hpp}}\end{DoxyCompactItemize}

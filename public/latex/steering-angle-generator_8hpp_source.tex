@@ -7,7 +7,7 @@
 \DoxyCodeLine{3 }
 \DoxyCodeLine{4 \textcolor{comment}{// Include the single-\/file, header-\/only middleware libcluon to create}}
 \DoxyCodeLine{5 \textcolor{comment}{// high-\/performance microservices}}
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.hpp}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}cluon-\/complete.hpp"{}}}
 \DoxyCodeLine{7 \textcolor{comment}{// Include the OpenDLV Standard Message Set that contains messages that are}}
 \DoxyCodeLine{8 \textcolor{comment}{// usually exchanged for automotive or robotic applications}}
 \DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{opendlv-standard-message-set_8hpp}{opendlv-\/standard-\/message-\/set.hpp}}"{}}}
@@ -15,14 +15,34 @@
 \DoxyCodeLine{11 \textcolor{comment}{// Include the GUI and image processing header files from OpenCV}}
 \DoxyCodeLine{12 \textcolor{preprocessor}{\#include <opencv2/highgui/highgui.hpp>}}
 \DoxyCodeLine{13 \textcolor{preprocessor}{\#include <opencv2/imgproc/imgproc.hpp>}}
-\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <chrono>}}
-\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <time.h>}}
-\DoxyCodeLine{17 }
-\DoxyCodeLine{22 \textcolor{keywordtype}{void} \mbox{\hyperlink{steering-angle-generator_8hpp_ab94cdf65831cab90335e52dbee4c6ca0}{steer}}();}
-\DoxyCodeLine{23 }
-\DoxyCodeLine{28 \textcolor{keywordtype}{void} \mbox{\hyperlink{steering-angle-generator_8hpp_adaacbf22bcb103b723484b3642ccbfea}{do\_magic}}();}
-\DoxyCodeLine{29 }
-\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// STEERING\_ANGLE\_GENERATOR\_HPP}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{24 \textcolor{keyword}{template} <\textcolor{keyword}{class} T> \textcolor{keyword}{class }\mbox{\hyperlink{classBound}{Bound}} \{}
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30   T \mbox{\hyperlink{classBound_a09b951b02d04e0e9feae37c3746f3476}{low}};}
+\DoxyCodeLine{35   T \mbox{\hyperlink{classBound_a6e1c9e982c7f3aef7361c21294be70d0}{high}};}
+\DoxyCodeLine{43   \mbox{\hyperlink{classBound_a8d4ca1110e98d9ad0fdb1b1b58297a83}{Bound}}(T l, T h) : \mbox{\hyperlink{classBound_a09b951b02d04e0e9feae37c3746f3476}{low}}(l), \mbox{\hyperlink{classBound_a6e1c9e982c7f3aef7361c21294be70d0}{high}}(h) \{\}}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{53 \textcolor{keyword}{class }\mbox{\hyperlink{classHSVBounds}{HSVBounds}} \{}
+\DoxyCodeLine{54 \textcolor{keyword}{public}:}
+\DoxyCodeLine{59   \mbox{\hyperlink{classBound}{Bound<int>}} \mbox{\hyperlink{classHSVBounds_ab8aad4a06a349f0dd84e1f66d828b0d1}{h}};}
+\DoxyCodeLine{64   \mbox{\hyperlink{classBound}{Bound<int>}} \mbox{\hyperlink{classHSVBounds_a07a5f2685695152f6f591b9ef91bd7cb}{s}};}
+\DoxyCodeLine{69   \mbox{\hyperlink{classBound}{Bound<int>}} \mbox{\hyperlink{classHSVBounds_a7ead0b619ba40a5c962d3e24aaa57b9e}{v}};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{82   \mbox{\hyperlink{classHSVBounds_a67e3f13b5728fcf17c4e8dc7261f52be}{HSVBounds}}(\textcolor{keywordtype}{int} hl, \textcolor{keywordtype}{int} hh, \textcolor{keywordtype}{int} sl, \textcolor{keywordtype}{int} sh, \textcolor{keywordtype}{int} vl, \textcolor{keywordtype}{int} vh) : \mbox{\hyperlink{classHSVBounds_ab8aad4a06a349f0dd84e1f66d828b0d1}{h}}(hl, hh), \mbox{\hyperlink{classHSVBounds_a07a5f2685695152f6f591b9ef91bd7cb}{s}}(sl, sh), \mbox{\hyperlink{classHSVBounds_a7ead0b619ba40a5c962d3e24aaa57b9e}{v}}(vl, vh) \{\}}
+\DoxyCodeLine{83 \};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{89 \textcolor{keywordtype}{void} \mbox{\hyperlink{steering-angle-generator_8hpp_ab94cdf65831cab90335e52dbee4c6ca0}{steer}}();}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{95 \textcolor{keywordtype}{void} \mbox{\hyperlink{steering-angle-generator_8hpp_adaacbf22bcb103b723484b3642ccbfea}{do\_magic}}();}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{104 std::string \mbox{\hyperlink{steering-angle-generator_8hpp_ab3c8aae057effd42640ab6fa51ac8226}{get\_timestamp}}(std::pair<bool, cluon::data::TimeStamp>, time\_t);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// STEERING\_ANGLE\_GENERATOR\_HPP}}
 
 \end{DoxyCode}

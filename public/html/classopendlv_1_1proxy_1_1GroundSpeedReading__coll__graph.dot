@@ -5,7 +5,7 @@ digraph "opendlv::proxy::GroundSpeedReading"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="{opendlv::proxy::GroundSpeed\lReading\n||+ GroundSpeedReading()\l+ GroundSpeedReading()\l+ operator=()\l+ GroundSpeedReading()\l+ operator=()\l+ ~GroundSpeedReading()\l+ groundSpeed()\l+ groundSpeed()\l+ accept()\l+ accept()\l+ accept()\l+ ID()\l+ ShortName()\l+ LongName()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -TheLongName\n-TheShortName" ,arrowhead="odiamond",fontname="Helvetica"];
-  Node2 [label="{char\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
+  Node2 [label="{static constexpr const\l char *\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -m_groundSpeed" ,arrowhead="odiamond",fontname="Helvetica"];
   Node3 [label="{float\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
 }

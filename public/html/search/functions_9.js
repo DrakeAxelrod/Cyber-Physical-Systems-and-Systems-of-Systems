@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['json_0',['json',['../classcluon_1_1ToJSONVisitor.html#aafec5e48f036cc0695f3ddf1195be429',1,'cluon::ToJSONVisitor']]],
-  ['jsonkeyvalue_1',['JSONKeyValue',['../classcluon_1_1FromJSONVisitor_1_1JSONKeyValue.html#af7948f722ec01514762c0980cf449174',1,'cluon::FromJSONVisitor::JSONKeyValue::JSONKeyValue()=default'],['../classcluon_1_1FromJSONVisitor_1_1JSONKeyValue.html#a0174d03cfa7c4d631b9480af5c7b3e59',1,'cluon::FromJSONVisitor::JSONKeyValue::JSONKeyValue(const JSONKeyValue &amp;)=default'],['../classcluon_1_1FromJSONVisitor_1_1JSONKeyValue.html#a9eee3c19c87a5dda18b40dc3b26188c8',1,'cluon::FromJSONVisitor::JSONKeyValue::JSONKeyValue(JSONKeyValue &amp;&amp;)=default']]]
+  ['kinematicstate_0',['KinematicState',['../classopendlv_1_1sim_1_1KinematicState.html#acabc3034cf1b2fc84d5984a2cc2fea36',1,'opendlv::sim::KinematicState::KinematicState()=default'],['../classopendlv_1_1sim_1_1KinematicState.html#a8678ef4990b96f9070f899713fcf2a17',1,'opendlv::sim::KinematicState::KinematicState(const KinematicState &amp;)=default'],['../classopendlv_1_1sim_1_1KinematicState.html#af53e115f3d8e59028f4e0e6872371563',1,'opendlv::sim::KinematicState::KinematicState(KinematicState &amp;&amp;)=default']]]
 ];

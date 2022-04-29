@@ -2,7 +2,7 @@
 \label{structvisitorSelector_3_01true_01_4}\index{visitorSelector$<$ true $>$@{visitorSelector$<$ true $>$}}
 
 
-{\ttfamily \#include $<$cluon-\/complete.\+hpp$>$}
+{\ttfamily \#include $<$opendlv-\/standard-\/message-\/set.\+hpp$>$}
 
 
 
@@ -11,9 +11,7 @@ Collaboration diagram for visitor\+Selector\texorpdfstring{$<$}{<} true \texorpd
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T , class Visitor $>$ }\\static void \mbox{\hyperlink{structvisitorSelector_3_01true_01_4_a0b724d596073217e9b46ed7d1232baeb}{impl}} (uint32\+\_\+t \mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{field\+Identifier}}, std\+::string \&\&type\+Name, std\+::string \&\&name, T \&value, Visitor \&visitor)
-\item 
-{\footnotesize template$<$typename T , class Visitor $>$ }\\static void \mbox{\hyperlink{structvisitorSelector_3_01true_01_4_a0b724d596073217e9b46ed7d1232baeb}{impl}} (uint32\+\_\+t \mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{field\+Identifier}}, std\+::string \&\&type\+Name, std\+::string \&\&name, T \&value, Visitor \&visitor)
+{\footnotesize template$<$typename T , class Visitor $>$ }\\static void \mbox{\hyperlink{structvisitorSelector_3_01true_01_4_a0b724d596073217e9b46ed7d1232baeb}{impl}} (uint32\+\_\+t field\+Identifier, std\+::string \&\&type\+Name, std\+::string \&\&name, T \&value, Visitor \&visitor)
 \end{DoxyCompactItemize}
 
 
@@ -21,46 +19,19 @@ Collaboration diagram for visitor\+Selector\texorpdfstring{$<$}{<} true \texorpd
 \mbox{\Hypertarget{structvisitorSelector_3_01true_01_4_a0b724d596073217e9b46ed7d1232baeb}\label{structvisitorSelector_3_01true_01_4_a0b724d596073217e9b46ed7d1232baeb}} 
 \index{visitorSelector$<$ true $>$@{visitorSelector$<$ true $>$}!impl@{impl}}
 \index{impl@{impl}!visitorSelector$<$ true $>$@{visitorSelector$<$ true $>$}}
-\doxysubsubsection{\texorpdfstring{impl()}{impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename T , class Visitor $>$ \\
-static void \mbox{\hyperlink{structvisitorSelector}{visitor\+Selector}}$<$ true $>$\+::impl (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Identifier,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{T \&}]{value,  }\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{4322                                                                                                                    \{}
-\DoxyCodeLine{4323         visitor.visit(\mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{fieldIdentifier}}, std::move(typeName), std::move(name), value);}
-\DoxyCodeLine{4324     \}}
-
-\end{DoxyCode}
-
-
-References \mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{field\+Identifier()}}.
-
-Here is the call graph for this function\+:
-% FIG 1
-\mbox{\Hypertarget{structvisitorSelector_3_01true_01_4_a0b724d596073217e9b46ed7d1232baeb}\label{structvisitorSelector_3_01true_01_4_a0b724d596073217e9b46ed7d1232baeb}} 
-\index{visitorSelector$<$ true $>$@{visitorSelector$<$ true $>$}!impl@{impl}}
-\index{impl@{impl}!visitorSelector$<$ true $>$@{visitorSelector$<$ true $>$}}
-\doxysubsubsection{\texorpdfstring{impl()}{impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{impl()}{impl()}}
 {\footnotesize\ttfamily template$<$typename T , class Visitor $>$ \\
 static void \mbox{\hyperlink{structvisitorSelector}{visitor\+Selector}}$<$ true $>$\+::impl (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{field\+Identifier,  }\item[{std\+::string \&\&}]{type\+Name,  }\item[{std\+::string \&\&}]{name,  }\item[{T \&}]{value,  }\item[{Visitor \&}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{23                                                                                                                    \{}
-\DoxyCodeLine{24         visitor.visit(\mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{fieldIdentifier}}, std::move(typeName), std::move(name), value);}
+\DoxyCodeLine{24         visitor.visit(fieldIdentifier, std::move(typeName), std::move(name), value);}
 \DoxyCodeLine{25     \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{cluon-complete_8hpp_afab98cfce6f426b1a7deea4ca827a245}{field\+Identifier()}}.
-
-Here is the call graph for this function\+:
-% FIG 2
-
-
-The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{cluon-complete_8hpp}{cluon-\/complete.\+hpp}}\item 
 src/\mbox{\hyperlink{opendlv-standard-message-set_8hpp}{opendlv-\/standard-\/message-\/set.\+hpp}}\end{DoxyCompactItemize}
