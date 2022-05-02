@@ -36,3 +36,4 @@ export
 .vscode
 build
 .ccls-cache
+.cache

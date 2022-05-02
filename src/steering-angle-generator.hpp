@@ -21,7 +21,9 @@
  * @details This struct is used to hold an upper and lower bounds.
  * @tparam T The type of the bounds.
  */
-template <class T> class Bound {
+template <class T>
+class Bound
+{
 public:
   /**
    * @brief The lower bound.
@@ -36,7 +38,7 @@ public:
   /**
    * @brief The constructor.
    * @details The constructor.
-   * 
+   *
    * @param l The lower bound.
    * @param h The upper bound.
    */
@@ -45,12 +47,13 @@ public:
 
 /**
  * @brief This struct is data object to hold an upper and lower bounds for HSV values.
- * 
+ *
  * @param Bound<int>:h The upper and lower bounds for Hue.
  * @param Bound<int>:s The upper and lower bounds for Saturation.
  * @param Bound<int>:v The upper and lower bounds for Value.
-*/
-class HSVBounds {
+ */
+class HSVBounds
+{
 public:
   /**
    * @brief The upper and lower bounds for Hue.
@@ -71,7 +74,7 @@ public:
   /**
    * @brief The constructor.
    * @details The constructor.
-   * 
+   *
    * @param hl The lower bound for Hue.
    * @param hh The upper bound for Hue.
    * @param sl The lower bound for Saturation.
@@ -84,13 +87,13 @@ public:
 
 /**
  * @brief the primary function to return the computed steering angle
- * 
+ *
  */
 void steer();
 
 /**
  * @brief your a wizard, you can do magic here
- * 
+ *
  */
 void do_magic();
 
@@ -103,5 +106,12 @@ void do_magic();
  */
 std::string get_timestamp(std::pair<bool, cluon::data::TimeStamp>, time_t);
 
+/**
+ * @brief the final turn-in console print timestamp
+ *
+ * @param timestamp
+ * @param angle
+ */
+void turn_in_timestamp(std::pair<bool, cluon::data::TimeStamp>, double);
 
 #endif // STEERING_ANGLE_GENERATOR_HPP
