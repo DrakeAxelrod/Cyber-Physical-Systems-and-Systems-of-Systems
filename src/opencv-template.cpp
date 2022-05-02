@@ -17,6 +17,7 @@ bool b_detected = false;
 bool y_detected = false;
 float steering_angle = 0;
 float threshold = 50;
+//
 struct Images
 {
   cv::Mat main;
@@ -133,6 +134,48 @@ cv::Rect getYellowBoundingBox(cv::Mat cropped_frame, float distance)
   return previous_box;
 }
 
+float getAngle(cv::Rect box, cv::Point center)
+{
+  // get the angle between the center of the bounding box and the center of the feed
+  float angle = atan2(center_pt.y - center.y, center_pt.x - center.x) * 180 / 3.14;
+  // turn the angle positive if it is negative
+  if (angle < 0)
+  {
+    angle = angle + 360;
+  }
+  // get the angle between the center of the bounding box and the center of the feed
+  float angle_2 = atan2(center_pt.y - box.y, center_pt.x - box.x) * 180 / 3.14;
+  // turn the angle positive if it is negative
+  if (angle_2 < 0)
+  {
+    angle_2 = angle_2 + 360;
+  }
+  // return the difference between the two angles
+  return angle_2 - angle;
+}
+
+void getSteeringAngle(cv::Rect box, cv::Point center)
+{
+  // get the angle between the center of the bounding box and the center of the feed
+  float angle = atan2(center_pt.y - center.y, center_pt.x - center.x) * 180 / 3.14;
+  // turn the angle positive if it is negative
+  if (angle < 0)
+  {
+    angle = angle + 360;
+  }
+  // get the angle between the center of the bounding box and the center of the feed
+  float angle_2 = atan2(center_pt.y - box.y, center_pt.x - box.x) * 180 / 3.14;
+  // turn the angle positive if it is negative
+  if (angle_2 < 0)
+  {
+    angle_2 = angle_2 + 360;
+  }
+  // return the difference between the two angles
+  steering_angle = angle_2 - angle;
+}
+
+
+
 // calculate the give steering adjustment based on the
 // distance of the blue cones bounding box from the center of the feed
 // distance of the yellow cones bounding box from the center of the feed
@@ -148,9 +191,6 @@ float getSteeringAngle(float distance)
   cv::Rect y_bounding_box(getYellowBoundingBox(Imgs.fr_cropped, distance));
   // get the current steering angle based on the bounding boxes
 
-  // display the current angle on the feed
-  cv::putText(Imgs.fr_cropped, std::to_string(b_mag), cv::Point(10, 30), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(0, 255, 0), 2);
-
   // draw the center point as a green colored circle when distance is greater than the threshold
   // and a red colored circle when distance is less than the threshold
   if (distance > threshold)
@@ -160,6 +200,15 @@ float getSteeringAngle(float distance)
   else
   {
     cv::circle(Imgs.fr_cropped, center_pt, 5, cv::Scalar(0, 0, 255), -1);
+  }
+  // determine whether the yellow cone or the blue cone is closer
+  if (y_bounding_box.width > b_bounding_box.width)
+  {
+    return getAngle(y_bounding_box, center_pt);
+  }
+  else
+  {
+    return getAngle(b_bounding_box, center_pt);
   }
   // TODO currently not complete so return 0.0
   return 0.0;
@@ -288,10 +337,11 @@ int32_t main(int32_t argc, char **argv)
         }
         sharedMemory->unlock();
 
-        // Cropped image frame (only ned a small slice the rest is noice)
+        // Cropped image frame (only need a small slice the rest is noice)
         Imgs.fr_cropped = Imgs.main(roi);
         // Blur the input image data
-        cv::blur(Imgs.fr_cropped, Imgs.img_blur, cv::Size(7, 7));
+        cv::GaussianBlur(Imgs.fr_cropped, Imgs.img_blur, cv::Size(5, 5), 0);
+        // cv::blur(Imgs.fr_cropped, Imgs.img_blur, cv::Size(7, 7));
         // convert bgr to hsv
         cv::cvtColor(Imgs.img_blur, Imgs.img_hsv, cv::COLOR_BGR2HSV);
         // calculate steering adjustment based on the distance from the center of the image
