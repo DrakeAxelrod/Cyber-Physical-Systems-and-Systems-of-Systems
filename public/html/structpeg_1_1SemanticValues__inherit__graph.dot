@@ -1,9 +1,0 @@
-digraph "peg::SemanticValues"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{peg::SemanticValues\n|+ path\l+ ss\l+ tags\l+ tokens\l- s_\l- n_\l- choice_count_\l- choice_\l- name_\l|+ c_str()\l+ length()\l+ str()\l+ name()\l+ line_info()\l+ choice_count()\l+ choice()\l+ token()\l+ transform()\l+ SemanticValues()\l- transform()\l- transform()\l- reset()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
-  Node2 -> Node1 [dir="back",color="darkgreen",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node2 [label="{std::vector\< T \>\n|+ elements\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",tooltip=" "];
-}

@@ -18,8 +18,7 @@ lint:
 
 doc:
 	@echo Generate Documentation
-	rm -rf docs
-	doxygen
+	doxygen doxygen/Doxyfile
 
 docker-build:
 	@echo building Project
@@ -32,7 +31,7 @@ docker-run:
 clean:
 	@echo Cleaning up the project :D
 	rm -rf build
-	rm -rf public
+	rm -rf doxygen/public
 
 
 
