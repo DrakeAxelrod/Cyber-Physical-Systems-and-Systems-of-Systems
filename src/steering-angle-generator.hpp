@@ -104,4 +104,12 @@ void do_magic();
 std::string get_timestamp(std::pair<bool, cluon::data::TimeStamp>, time_t);
 
 
+/**
+ * @brief the final turn-in console print timestamp
+ *
+ * @param timestamp
+ * @param angle
+ */
+void turn_in_timestamp(std::pair<bool, cluon::data::TimeStamp>, double);
+
 #endif // STEERING_ANGLE_GENERATOR_HPP
