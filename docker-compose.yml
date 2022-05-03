@@ -28,7 +28,7 @@ services:
       - ~/.Xauthority:/root/.Xauthority
     depends_on:
       - opendlv-vehicle-view
-    command: --cid=253 --name=img
+    command: --cid=253 --name=video0.argb 
   # overlay for image data
   cyphy:
     image: cyphy/group5:latest
@@ -50,3 +50,22 @@ services:
     links: 
       - h264decoder
     command: --cid=253 --name=img --width=640 --height=480 --verbose
+# decode image data
+  hsv-inspector:
+    image: hsv-inspector
+    build: 
+      context: https://github.com/chalmers-revere/opendlv-video-hsv-inspector.git 
+      dockerfile: Dockerfile.amd64
+    restart: always
+    network_mode: "host"
+    ipc: host
+    environment:
+      DISPLAY: $DISPLAY
+    volumes:
+      - /tmp:/tmp
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/root/.Xauthority
+    depends_on:
+      - opendlv-vehicle-view
+      - h264decoder
+    command: --name=video0.argb --width=640 --height=480
