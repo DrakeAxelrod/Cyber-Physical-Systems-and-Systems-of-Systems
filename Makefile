@@ -1,13 +1,13 @@
 SHELL := /usr/bin/env bash
 
-all: build lint doc clean
+all: build run lint doc clean
 
-build:
-	@echo Building
-	rm -rf build
-	mkdir -p build
-	cmake -B./build -S./
-	cd build && make
+# build:
+# 	@echo Building
+# 	rm -rf build
+# 	mkdir -p build
+# 	cmake -B./build -S./
+# 	cd build && make
 
 lint:
 	@echo Linting Project
@@ -20,11 +20,11 @@ doc:
 	@echo Generate Documentation
 	doxygen doxygen/Doxyfile
 
-docker-build:
+build:
 	@echo building Project
 	docker build -t group5/cyphy:latest -f Dockerfile .
 
-docker-run:
+run:
 	@echo Running Project
 	bash ./scripts/run-docker-container.sh
 
