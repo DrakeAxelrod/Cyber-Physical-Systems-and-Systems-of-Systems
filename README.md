@@ -86,34 +86,38 @@
 
 ---
 
-5. Set up Docker in order to run the project. There are various ways to install docker. Follow the instructions for your specific setup at [installation](https://docs.docker.com/get-docker/).
+5. Set up Docker in order to run the project. There are various ways to install docker. Follow the instructions for your specific setup at [installation](https://docs.docker.com/get-docker/) and more information on [Docker Compose](https://docs.docker.com/compose/install/).
 
-    Once you've downloaded docker, navigate to the project repository in your terminal and run the following command:
+    Once you've downloaded docker, navigate to the project repository folder, where the Dockerfile is located, in your terminal and run the following command:
     ```
-    docker start
+    docker-compose up
     ```
 
-    After docker has started successfully and you're in the correct folder, run the following command:
+    This will start the [OpenDLV-Vehicle-View](https://github.com/chalmers-revere/opendlv-vehicle-view) and the h264 decoder. You should see a message ending with something similar the following **before** proceeding:
     ```
-    docker build -rm 2022-group-05/project -f Dockerfile .
+    server listening on port: 8081, joining live OD4Session 111, using OD4Session 253 for playback.
     ```
-    This might take a while when you run it the first time. 
+
+    Then point your browser (preferably Chrome 80+) to: http://localhost:8081 
+
+    Click on the folder on the top center bar and then choose a file to inspect by clicking the small playbutton next to the bin symbol. You should see a view with the video as well as some playback options. 
+
+    ![img](resources/dlv.PNG)
+
+    Now, open another terminal and navigate to the same folder as previously. Then run the following command:
+    ```
+    make docker-build
+    ```
+    This will build the project and attach to the shared memory. 
     
-    Once completed, you should be able to see the image with the following command:
+    Once completed, you can run with the following command:
 
     ```
-    docker images
+    make docker-run
     ```
-    The output will look like this:
+    Now navigate to the web application where the video is running again and play the video. Three new windows should pop up:
     
-    ![images](https://imgur.com/AJAvKw0l.png)
-
-    When the image has been built, run the image by using the following command:
-    ```
-    docker run --rm 2022-group-05/project:latest <arguments>
-    ```
-
-    - This command will run the program and you will see the output based on the argument input.
+    ![img](resources/img.PNG)
 
 ## Feature management
 

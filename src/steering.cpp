@@ -27,3 +27,22 @@ std::string get_timestamp(std::pair<bool, cluon::data::TimeStamp> ts, time_t now
   }
   return s.str();
 }
+
+void turn_in_timestamp(std::pair<bool, cluon::data::TimeStamp> timestamp, double angle)
+{
+  if (timestamp.first)
+  {
+    auto ts = timestamp.second;
+    std::cout << "group_05;"
+              << ts.seconds()
+              << ts.microseconds()
+              << ";"
+              << angle
+              << std::endl;
+  }
+  else
+  {
+    std::stringstream ss;
+    std::cout << "No timestamp available." << std::endl;
+  }
+}
