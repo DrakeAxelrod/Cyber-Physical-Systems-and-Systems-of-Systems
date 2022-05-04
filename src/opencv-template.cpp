@@ -21,6 +21,7 @@ double steering_angle = 0;
 double acceptable_noise = 0;
 double threshold = 350;
 bool blue_is_left = false;
+bool check_orientation = false;
 double blue_threshold;
 double yellow_threshold;
 
@@ -73,9 +74,12 @@ double getBlueConeDistance(cv::Mat cropped_frame)
       cv::Point center(box.x + box.width / 2, box.y + box.height / 2);
       cv::circle(cropped_frame, center, 5, color_blue, -1);
       // check if circle is to the left or right of the center point
-      blue_is_left = (center.x < center_pt.x) ? true : false;
+      if (!check_orientation) {
+        blue_is_left = (center.x < center_pt.x) ? true : false;
+        check_orientation = true;
+      }
       // draw the center of the bounding bounding box
-      if (box.width > 0)
+      if (bounding_box.width > 0)
       {
         // calculate the angle between the center of the bounding box and the center of the bounding bounding box
         cv::Point bounding_center(bounding_box.x + bounding_box.width / 2, bounding_box.y + bounding_box.height / 2);
@@ -130,8 +134,7 @@ double getYellowConeDistance(cv::Mat cropped_frame)
 }
 
 // calculate the give steering adjustment based on the
-// distance of the blue cones bounding box from the center of the feed
-// distance of the yellow cones bounding box from the center of the feed
+// distance of the blue & yellow cones from the center of the feed
 float getSteeringAngle()
 {
   double blue_correction = 0;
@@ -150,29 +153,33 @@ float getSteeringAngle()
 
   yellow_magnitude = (yellow_magnitude / 100);
   blue_magnitude = (blue_magnitude / 100);
-  if (blue_is_left && blue_distance < threshold) {
-    if (blue_distance < 200) {
+  if (blue_is_left && (blue_distance < threshold)) {
+    std::cout << "blue is left" << std::endl;
+    if (blue_distance < 100) {
       return -MAX_STEERING_ANGLE;
     }
     blue_correction = -MEDIAN_TURN_VALUE * blue_magnitude;
   }
 
-  if (!blue_is_left && blue_distance < threshold) {
-    if (blue_distance < 200) {
+  if (!blue_is_left && (blue_distance < threshold)) {
+    std::cout << "blue is right" << std::endl;
+    if (blue_distance < 100) {
       return MAX_STEERING_ANGLE;
     }
-    blue_correction = MEDIAN_TURN_VALUE * blue_magnitude);
+    blue_correction = MEDIAN_TURN_VALUE * blue_magnitude;
   }
 
-  if (blue_is_left && yellow_distance < threshold) {
-    if (yellow_distance < 200) {
+  if (blue_is_left && (yellow_distance < threshold)) {
+    std::cout << "yellow is right" << std::endl;
+    if (yellow_distance < 100) {
       return MAX_STEERING_ANGLE;
     }
-    yellow_correction = MEDIAN_TURN_VALUE * (*);
+    yellow_correction = MEDIAN_TURN_VALUE * yellow_magnitude;
   }
 
-  if (!blue_is_left && yellow_distance < threshold) {
-    if (yellow_distance < 200) {
+  if (!blue_is_left && (yellow_distance < threshold)) {
+    std::cout << "yellow is left" << std::endl;
+    if (yellow_distance < 100) {
       return -MAX_STEERING_ANGLE;
     }
     yellow_correction = -MEDIAN_TURN_VALUE * yellow_magnitude;

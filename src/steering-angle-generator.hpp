@@ -121,7 +121,7 @@ steer();
  * @brief your a wizard, you can do magic here
  *
  */
-void do_magic();
+int do_magic();
 
 /**
  * @brief returns the timestamp of the current frame
