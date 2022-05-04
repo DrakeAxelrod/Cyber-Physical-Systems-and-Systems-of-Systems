@@ -1,8 +1,9 @@
 #include "steering-angle-generator.hpp"
+
 const std::string hsv_window_name = "HSVView";
 // Matrix to store points of cones in HSV filter.
-std::vector<std::vector<cv::Point>> b_pts;
-std::vector<std::vector<cv::Point>> y_pts;
+std::vector<std::vector<cv::Point>> blue_points;
+std::vector<std::vector<cv::Point>> yellow_points;
 
 // upper and lower bounds of the yellow and blue cones (hsv)
 Bound<cv::Scalar> yellow(cv::Scalar(17, 89, 128), cv::Scalar(35, 175, 216));
@@ -12,84 +13,92 @@ HSVBounds hsv_bounds = HSVBounds(17, 35, 89, 175, 128, 216);
 // center point of feed
 cv::Point center_pt;
 // booleans to trach whether a given cone has been detected
-bool b_detected = false;
-bool y_detected = false;
-double b_magnitude = 0;
-double y_magnitude = 0;
+bool blue_detected = false;
+bool yellow_detected = false;
+double blue_magnitude = 0;
+double yellow_magnitude = 0;
 double steering_angle = 0;
 double acceptable_noise = 0;
 double threshold = 350;
 bool blue_is_left = false;
+double blue_threshold;
+double yellow_threshold;
 
 Images imgs = Images();
+
+// color blue as a scalar value BGR (blue, green, red)
+cv::Scalar color_blue(255, 0, 0);
+// color yellow as a scalar value BGR (blue, green, red)
+cv::Scalar color_yellow(0, 255, 255);
 
 // Constants
 const double CLOCKWISE_LEFT = 0.1771807038;
 const double CLOCKWISE_RIGHT = -0.1356987459;
 const double COUNTERCLOCKWISE_LEFT = 0.1203680391;
 const double COUNTERCLOCKWISE_RIGHT = -0.1308372994;
-const double MAX_STEERING_ANGLE = 0.20888;
+
+const double MEDIAN_TURN_VALUE = 0.14102119705;
+const double MAX_STEERING_ANGLE = 0.290888;
 
 bool detectBlueCones(cv::Mat hsv_frame)
 {
-  cv::findContours(hsv_frame, b_pts, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE, cv::Point());
-  return b_pts.size() > 0 ? true : false;
+  cv::findContours(hsv_frame, blue_points, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE, cv::Point());
+  return blue_points.size() > 0 ? true : false;
 }
 
 bool detectYellowCones(cv::Mat hsv_frame)
 {
-  cv::findContours(hsv_frame, y_pts, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE, cv::Point());
-  return y_pts.size() > 0 ? true : false;
+  cv::findContours(hsv_frame, yellow_points, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE, cv::Point());
+  return yellow_points.size() > 0 ? true : false;
 }
 
-double getBlueBoundingBox(cv::Mat cropped_frame)
+double getDistance(cv::Rect bounding_box) {
+  return (sqrt(pow(center_pt.x - bounding_box.x, 2) + pow(center_pt.y - bounding_box.y, 2)));
+}
+
+double getBlueConeDistance(cv::Mat cropped_frame)
 {
-  // bgr (blue, green, red)
-  cv::Scalar cl_blue(255, 0, 0);
-  cv::Rect previous_box(cv::Point(0, 0), cv::Size(0, 0));
+  cv::Rect bounding_box(cv::Point(0, 0), cv::Size(0, 0));
   // create a bounding box from the contour points of the cone and draw it
   // only if the size of the bounding box is larger than a certain threshold
-  for (auto &contour : b_pts)
+  for (auto &contour : blue_points)
   {
-    cv::Rect bounding_box = cv::boundingRect(contour);
     cv::Rect box = cv::boundingRect(contour);
     cv::Point center;
     if (box.area() > acceptable_noise)
     {
       // draw the bounding box
-      cv::rectangle(cropped_frame, box, cl_blue, 2);
+      cv::rectangle(cropped_frame, box, color_blue, 2);
       // draw the center of the bounding box
       cv::Point center(box.x + box.width / 2, box.y + box.height / 2);
-      cv::circle(cropped_frame, center, 5, cl_blue, -1);
+      cv::circle(cropped_frame, center, 5, color_blue, -1);
       // check if circle is to the left or right of the center point
-      blue_is_left = (center.x < center_pt.x) ? true : true;
-      // draw the center of the previous bounding box
-      if (previous_box.width > 0)
+      blue_is_left = (center.x < center_pt.x) ? true : false;
+      // draw the center of the bounding bounding box
+      if (box.width > 0)
       {
-        cv::Point previous_center(previous_box.x + previous_box.width / 2, previous_box.y + previous_box.height / 2);
-        cv::circle(cropped_frame, previous_center, 5, cl_blue, -1);
-        // draw a line between the center of the previous bounding box and the center of the current bounding box
-        cv::line(cropped_frame, previous_center, center, cl_blue, 2);
+        // calculate the angle between the center of the bounding box and the center of the bounding bounding box
+        cv::Point bounding_center(bounding_box.x + bounding_box.width / 2, bounding_box.y + bounding_box.height / 2);
+        blue_magnitude = atan2(center_pt.y - bounding_center.y, center_pt.x - bounding_center.x);
+        // yellow_magnitude converted to degrees
+        blue_magnitude = blue_magnitude * 180 / M_PI;
+        cv::circle(cropped_frame, bounding_center, 5, color_blue, -1);
+        // draw a line between the center of the bounding bounding box and the center of the current bounding box
+        cv::line(cropped_frame, bounding_center, bounding_center, color_blue, 2);
       }
-      previous_box = box;
+      bounding_box = box;
     }
   }
-  // calcualte the angle between the center of the bounding box and the center of the previous bounding box
-  cv::Point previous_center(previous_box.x + previous_box.width / 2, previous_box.y + previous_box.height / 2);
-  b_magnitude = (atan2(center_pt.y - previous_center.y, center_pt.x - previous_center.x) * 180 / M_PI) / 100;
   // calculate the distance from the center of the feed to the center of the bounding box
-  float distance = sqrt(pow(center_pt.x - previous_box.x, 2) + pow(center_pt.y - previous_box.y, 2));
-  return distance;
+  return getDistance(bounding_box);
 }
 
-double getYellowBoundingBox(cv::Mat cropped_frame)
+double getYellowConeDistance(cv::Mat cropped_frame)
 {
-  // bgr (blue, green, red)
-  cv::Scalar cl_yellow(0, 255, 255);
-  cv::Rect previous_box(cv::Point(0, 0), cv::Size(0, 0));
+  cv::Rect bounding_box(cv::Point(0, 0), cv::Size(0, 0));
   // create a bounding box from the contour points of the cone and draw it
   // only if the size of the bounding box is larger than a certain threshold
-  for (auto &contour : y_pts)
+  for (auto &contour : yellow_points)
   {
     // cv::Rect bounding_box = cv::boundingRect(contour);
     cv::Rect box = cv::boundingRect(contour);
@@ -97,27 +106,27 @@ double getYellowBoundingBox(cv::Mat cropped_frame)
     if (box.area() > acceptable_noise)
     {
       // draw the bounding box
-      cv::rectangle(cropped_frame, box, cl_yellow, 2);
+      cv::rectangle(cropped_frame, box, color_yellow, 2);
       // draw the center of the bounding box
       cv::Point center(box.x + box.width / 2, box.y + box.height / 2);
-      cv::circle(cropped_frame, center, 5, cl_yellow, -1);
-      // draw the center of the previous bounding box
-      if (previous_box.width > 0)
+      cv::circle(cropped_frame, center, 5, color_yellow, -1);
+      // draw the center of the bounding bounding box
+      if (bounding_box.width > 0)
       {
-        cv::Point previous_center(previous_box.x + previous_box.width / 2, previous_box.y + previous_box.height / 2);
-        cv::circle(cropped_frame, previous_center, 5, cl_yellow, -1);
-        // draw a line between the center of the previous bounding box and the center of the current bounding box
-        cv::line(cropped_frame, previous_center, center, cl_yellow, 2);
+        cv::Point bounding_center(bounding_box.x + bounding_box.width / 2, bounding_box.y + bounding_box.height / 2);
+        yellow_magnitude = atan2(center_pt.y - bounding_center.y, center_pt.x - bounding_center.x);
+        // yellow_magnitude converted to degrees
+        yellow_magnitude = yellow_magnitude * 180 / M_PI;
+        // calculate the angle between the center of the bounding box and the center of the bounding bounding box
+        cv::circle(cropped_frame, bounding_center, 5, color_yellow, -1);
+        // draw a line between the center of the bounding bounding box and the center of the current bounding box
+        cv::line(cropped_frame, bounding_center, center, color_yellow, 2);
       }
-      previous_box = box;
+      bounding_box = box;
     }
   }
-  // calculate the angle between the center of the bounding box and the center of the previous bounding box
-  cv::Point previous_center(previous_box.x + previous_box.width / 2, previous_box.y + previous_box.height / 2);
-  y_magnitude = (atan2(center_pt.y - previous_center.y, center_pt.x - previous_center.x) * 180 / M_PI) / 100;
   // calculate the distance from the center of the feed to the center of the bounding box
-  float distance = sqrt(pow(center_pt.x - previous_box.x, 2) + pow(center_pt.y - previous_box.y, 2));
-  return distance;
+  return getDistance(bounding_box);
 }
 
 // calculate the give steering adjustment based on the
@@ -125,48 +134,88 @@ double getYellowBoundingBox(cv::Mat cropped_frame)
 // distance of the yellow cones bounding box from the center of the feed
 float getSteeringAngle()
 {
-  double b_correction = 0;
-  double y_correction = 0;
+  double blue_correction = 0;
+  double yellow_correction = 0;
   // segment blue
   cv::inRange(imgs.img_hsv, blue.low, blue.high, imgs.fr_hsv);
-  b_detected = detectBlueCones(imgs.fr_hsv);
-  double b_distance = getBlueBoundingBox(imgs.fr_cropped);
+  blue_detected = detectBlueCones(imgs.fr_hsv);
+  double blue_distance = getBlueConeDistance(imgs.fr_cropped);
   // segment yellow
   cv::inRange(imgs.img_hsv, yellow.low, yellow.high, imgs.fr_hsv);
-  y_detected = detectYellowCones(imgs.fr_hsv);
-  double y_distance = getYellowBoundingBox(imgs.fr_cropped);
-  if (b_detected && y_detected)
-    return 0;
-  if (b_distance < threshold && y_distance < threshold)
-  {
+  yellow_detected = detectYellowCones(imgs.fr_hsv);
+  double yellow_distance = getYellowConeDistance(imgs.fr_cropped);
+  if (blue_detected && yellow_detected) {
     return 0;
   }
 
-  if (b_detected && b_distance < threshold)
-  {
-    if (blue_is_left)
-    {
-      b_correction = CLOCKWISE_LEFT * b_magnitude;
+  yellow_magnitude = (yellow_magnitude / 100);
+  blue_magnitude = (blue_magnitude / 100);
+  if (blue_is_left && blue_distance < threshold) {
+    if (blue_distance < 200) {
+      return -MAX_STEERING_ANGLE;
     }
-    else
-    {
-      b_correction = COUNTERCLOCKWISE_LEFT * b_magnitude;
-    }
-    return b_correction;
+    blue_correction = -MEDIAN_TURN_VALUE * blue_magnitude;
   }
-  if (y_detected && y_distance < threshold)
-  {
-    if (blue_is_left)
-    {
-      y_correction = CLOCKWISE_RIGHT * y_magnitude;
+
+  if (!blue_is_left && blue_distance < threshold) {
+    if (blue_distance < 200) {
+      return MAX_STEERING_ANGLE;
     }
-    else
-    {
-      y_correction = COUNTERCLOCKWISE_RIGHT * y_magnitude;
-    }
-    return y_correction;
+    blue_correction = MEDIAN_TURN_VALUE * blue_magnitude);
   }
-  return 0;
+
+  if (blue_is_left && yellow_distance < threshold) {
+    if (yellow_distance < 200) {
+      return MAX_STEERING_ANGLE;
+    }
+    yellow_correction = MEDIAN_TURN_VALUE * (*);
+  }
+
+  if (!blue_is_left && yellow_distance < threshold) {
+    if (yellow_distance < 200) {
+      return -MAX_STEERING_ANGLE;
+    }
+    yellow_correction = -MEDIAN_TURN_VALUE * yellow_magnitude;
+  }
+
+
+  // if (blue_distance < threshold && yellow_distance < threshold)
+  // {
+  //   return 0;
+  // }
+
+  // if (blue_detected && blue_distance < threshold)
+  // {
+  //   double difference = threshold - blue_threshold;
+  //   if (blue_is_left)
+  //   {
+  //     blue_correction = CLOCKWISE_RIGHT * blue_magnitude * (difference/400);
+  //     //* blue_magnitude;
+  //   }
+  //   else
+  //   {
+      
+  //     blue_correction = COUNTERCLOCKWISE_LEFT * blue_magnitude * (difference/400);
+  //     //* blue_magnitude;
+  //   }
+  //   return blue_correction;
+  // }
+  // if (yellow_detected && yellow_distance < threshold)
+  // {
+  //   double difference = (threshold - yellow_distance)/50;
+  //   if (blue_is_left)
+  //   {
+  //     yellow_correction = CLOCKWISE_LEFT * yellow_magnitude;
+  //     //* yellow_magnitude;
+  //   }
+  //   else
+  //   {
+  //     yellow_correction = COUNTERCLOCKWISE_RIGHT * yellow_magnitude;
+  //     //yellow_magnitude;
+  //   }
+  //   return yellow_correction;
+  // }
+  // return 0;
 }
 
 int32_t main(int32_t argc, char **argv)
@@ -192,8 +241,10 @@ int32_t main(int32_t argc, char **argv)
               << std::endl;
     std::cerr << "         --name:   name of the shared memory area to attach"
               << std::endl;
-    std::cerr << "         --width:  width of the frame" << std::endl;
-    std::cerr << "         --height: height of the frame" << std::endl;
+    std::cerr << "         --width:  width of the frame"
+              << std::endl;
+    std::cerr << "         --height: height of the frame"
+              << std::endl;
     std::cerr << "Example: " << argv[0]
               << " --cid=253 --name=img --width=640 --height=480 --verbose"
               << std::endl;
@@ -268,9 +319,9 @@ int32_t main(int32_t argc, char **argv)
       od4.dataTrigger(opendlv::proxy::ImageReading::ID(), getImageReading);
       // region on image (bounding box)
       //          (x, y,          width,    height)
-      cv::Rect range(0, HEIGHT / 2, WIDTH - 1, (HEIGHT / 5));
+      cv::Rect region_of_interest(0, HEIGHT / 2, WIDTH - 1, (HEIGHT / 5));
       // OpenCV data structure to hold an image.
-      center_pt = cv::Point(WIDTH / 2, double(HEIGHT) / 1.3);
+      center_pt = cv::Point(WIDTH / 2, HEIGHT / 1.3);
 
       // Endless loop; end the program by pressing Ctrl-C.
       while (od4.isRunning())
@@ -293,7 +344,7 @@ int32_t main(int32_t argc, char **argv)
         sharedMemory->unlock();
 
         // Cropped image frame (only need a small slice the rest is noice)
-        imgs.fr_cropped = imgs.main(range);
+        imgs.fr_cropped = imgs.main(region_of_interest);
         // Blur the input image data
         cv::GaussianBlur(imgs.fr_cropped, imgs.img_blur, cv::Size(5, 5), 0);
         // cv::blur(imgs.fr_cropped, imgs.img_blur, cv::Size(7, 7));
@@ -303,12 +354,12 @@ int32_t main(int32_t argc, char **argv)
         // and the yellow and blue bounding boxes
         steering_angle = getSteeringAngle();
 
-        ss << "Blue Detected:   " << (b_detected ? "true" : "false");
+        ss << "Blue Detected:   " << (blue_detected ? "true" : "false");
         cv::putText(imgs.main, ss.str(), cv::Point(10, 377), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
         ss.str("");
         ss.clear();
 
-        ss << "Yellow Detected:   " << (y_detected ? "true" : "false");
+        ss << "Yellow Detected:   " << (yellow_detected ? "true" : "false");
         cv::putText(imgs.main, ss.str(), cv::Point(10, 393), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
         ss.str("");
         ss.clear();
@@ -335,13 +386,13 @@ int32_t main(int32_t argc, char **argv)
         // turn_in_timestamp(ts, gsr.groundSteering());
 
         std::cout << "actual steering:    " << gsr.groundSteering() << std::endl;
-        std::cout << "computed steering:  " << steering_angle << std::endl;
-        // calculate the difference between actual and computed steering
-        // double diff = gsr.groundSteering() - steering_angle;
-        // std::cout << "difference: " << diff << std::endl;
-        // // calculate the percentage of the difference
-        // double perc = 100 - (diff / gsr.groundSteering() * 100);
-        // std::cout << "accuracy percentage: " << perc << std::endl;
+        std::cout << "computed steering:  "
+                  << steering_angle
+                  << ", bmag: "
+                  << blue_magnitude
+                  << ", ymag: "
+                  << yellow_magnitude
+                  << std::endl;
         if (VERBOSE)
         {
           imgs.hsv_debug = imgs.img_hsv.clone();
