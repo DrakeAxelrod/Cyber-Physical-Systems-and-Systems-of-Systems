@@ -309,6 +309,26 @@ int32_t main(int32_t argc, char **argv)
       };
       od4.dataTrigger(opendlv::proxy::MagneticFieldReading::ID(), getMagnetFieldReading);
 
+      // get acceleration
+      opendlv::proxy::AccelerationReading ar;
+      std::mutex arMutex;
+      auto getAccelerationReading = [&ar, &arMutex](cluon::data::Envelope &&env)
+      {
+        std::lock_guard<std::mutex> lck(arMutex);
+        ar = cluon::extractMessage<opendlv::proxy::AccelerationReading>(std::move(env));
+      };
+      od4.dataTrigger(opendlv::proxy::AccelerationReading::ID(), getAccelerationReading);
+
+      // get velocity
+      opendlv::proxy::AngularVelocityReading vel;
+      std::mutex velMutex;
+      auto getVelocityReading = [&vel, &velMutex](cluon::data::Envelope &&env)
+      {
+        std::lock_guard<std::mutex> lck(velMutex);
+        vel = cluon::extractMessage<opendlv::proxy::AngularVelocityReading>(std::move(env));
+      };
+      od4.dataTrigger(opendlv::proxy::AngularVelocityReading::ID(), getVelocityReading);
+
       // get distance reading
       opendlv::proxy::DistanceReading dr;
       std::mutex drMutex;
@@ -387,6 +407,16 @@ int32_t main(int32_t argc, char **argv)
 
         ss << "ComputedSteering: " << steering_angle;
         cv::putText(imgs.main, ss.str(), cv::Point(10, 441), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
+        ss.str("");
+        ss.clear();
+
+        // ss << "AccelerationX: " << ar.accelerationX() <<"AccelerationY: " << ar.accelerationY();
+        // cv::putText(imgs.main, ss.str(), cv::Point(10, 457), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
+        // ss.str("");
+        // ss.clear();
+
+        ss << "VelocityZ: " << vel.angularVelocityZ();
+        cv::putText(imgs.main, ss.str(), cv::Point(10, 457), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
         ss.str("");
         ss.clear();
 
