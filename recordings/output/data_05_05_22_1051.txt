@@ -1,0 +1,441 @@
+actual steering:    -0
+computed steering:  0, bmag: 1.88004, ymag: 0.723293
+actual steering:    0.125962
+computed steering:  0, bmag: 1.88004, ymag: 1.0612
+actual steering:    -0
+computed steering:  0, bmag: 1.89842, ymag: 0.999296
+actual steering:    -0
+computed steering:  0, bmag: 1.89842, ymag: 0.902183
+actual steering:    -0
+computed steering:  0, bmag: 1.89842, ymag: 0.873024
+actual steering:    -0
+computed steering:  0, bmag: 1.89842, ymag: 0.892269
+actual steering:    -0
+computed steering:  0, bmag: 1.89842, ymag: 1.25571
+actual steering:    -0
+computed steering:  0, bmag: 1.89842, ymag: 1.23469
+actual steering:    -0
+computed steering:  0, bmag: 1.89842, ymag: 1.20559
+actual steering:    -0.18593
+computed steering:  0, bmag: 1.89842, ymag: 1.4158
+actual steering:    -0
+computed steering:  0, bmag: 1.89842, ymag: 1.41648
+yellow is left
+actual steering:    -0
+computed steering:  -0.199685, bmag: 1.89842, ymag: 1.41599
+yellow is left
+actual steering:    -0
+computed steering:  -0.123644, bmag: 1.89842, ymag: 0.876776
+actual steering:    -0
+computed steering:  0, bmag: 1.98165, ymag: 1.27511
+actual steering:    -0
+computed steering:  0, bmag: 1.98165, ymag: 1.23008
+actual steering:    -0
+computed steering:  0, bmag: 1.98165, ymag: 1.19133
+actual steering:    -0
+computed steering:  0, bmag: 2.05032, ymag: 1.05133
+actual steering:    -0
+computed steering:  0, bmag: 2.10613, ymag: 1.0962
+actual steering:    0.125962
+computed steering:  0, bmag: 2.17504, ymag: 0.953411
+actual steering:    0.122962
+computed steering:  0, bmag: 2.24642, ymag: 0.950244
+actual steering:    0.0749791
+computed steering:  0, bmag: 2.24642, ymag: 0.862981
+actual steering:    0.0329887
+computed steering:  0, bmag: 2.24642, ymag: 0.807847
+actual steering:    0.0120023
+computed steering:  0, bmag: 1.8715, ymag: 0.847817
+actual steering:    -0
+computed steering:  0, bmag: 1.8715, ymag: 0.875366
+actual steering:    -0
+computed steering:  0, bmag: 1.75839, ymag: 0.875366
+actual steering:    -0
+computed steering:  0, bmag: 1.79907, ymag: 0.875366
+actual steering:    -0
+computed steering:  0, bmag: 1.81577, ymag: 0.875366
+blue is right
+actual steering:    0.0239958
+computed steering:  0.258684, bmag: 1.83436, ymag: 0.875366
+blue is right
+actual steering:    0.0239958
+computed steering:  0.268343, bmag: 1.90286, ymag: 0.875366
+blue is right
+actual steering:    0.0239958
+computed steering:  0.275512, bmag: 1.9537, ymag: 0.875366
+blue is right
+actual steering:    0.0239958
+computed steering:  0.157975, bmag: 1.12022, ymag: 0.875366
+blue is right
+actual steering:    0.0929737
+computed steering:  0.149963, bmag: 1.06341, ymag: 0.875366
+actual steering:    0.0929737
+computed steering:  0, bmag: 1.44302, ymag: 0.875366
+blue is right
+actual steering:    0.0689779
+computed steering:  0.201367, bmag: 1.42792, ymag: 0.875366
+actual steering:    0.0689779
+computed steering:  0, bmag: 1.45348, ymag: 0.875366
+blue is right
+actual steering:    0.098966
+computed steering:  0.136986, bmag: 0.971384, ymag: 0.875366
+blue is right
+actual steering:    0.098966
+computed steering:  0.140633, bmag: 0.997248, ymag: 0.875366
+blue is right
+actual steering:    0.182938
+computed steering:  0.209791, bmag: 1.48766, ymag: 0.875366
+blue is right
+actual steering:    0.212926
+computed steering:  0.233846, bmag: 1.65824, ymag: 0.875366
+blue is right
+actual steering:    0.290888
+computed steering:  0.105197, bmag: 0.745967, ymag: 0.875366
+blue is right
+actual steering:    0.290888
+computed steering:  0.296956, bmag: 2.10575, ymag: 0.875366
+actual steering:    0.290888
+computed steering:  0, bmag: 0.802697, ymag: 0.875366
+actual steering:    0.290888
+computed steering:  0, bmag: 0.802697, ymag: 0.875366
+actual steering:    0.290888
+computed steering:  0, bmag: 1.09602, ymag: 0.875366
+blue is right
+actual steering:    0.242914
+computed steering:  0.188018, bmag: 1.33326, ymag: 0.875366
+blue is right
+actual steering:    -0
+computed steering:  0.181876, bmag: 1.28971, ymag: 0.875366
+blue is right
+actual steering:    -0
+computed steering:  0.220536, bmag: 1.56385, ymag: 0.875366
+blue is right
+actual steering:    -0
+computed steering:  0.220536, bmag: 1.56385, ymag: 0.875366
+actual steering:    -0
+computed steering:  0, bmag: 1.56385, ymag: 0.875366
+actual steering:    -0.053975
+computed steering:  0, bmag: 1.56385, ymag: 0.875366
+actual steering:    -0
+computed steering:  0, bmag: 2.10745, ymag: 0.875366
+actual steering:    0.188939
+computed steering:  0, bmag: 2.10745, ymag: 0.875366
+actual steering:    -0
+computed steering:  0, bmag: 2.25426, ymag: 0.875366
+actual steering:    -0
+computed steering:  0, bmag: 1.59791, ymag: 0.875366
+actual steering:    0.0120023
+computed steering:  0, bmag: 1.59791, ymag: 0.875366
+actual steering:    -0
+computed steering:  0, bmag: 1.59791, ymag: 0.875366
+yellow is left
+actual steering:    -0
+computed steering:  -0.123445, bmag: 1.59791, ymag: 0.875366
+actual steering:    -0
+computed steering:  0, bmag: 1.59791, ymag: 0.875366
+yellow is left
+actual steering:    -0
+computed steering:  -0.123445, bmag: 1.59791, ymag: 0.875366
+actual steering:    -0
+computed steering:  0, bmag: 1.59791, ymag: 1.14187
+actual steering:    -0
+computed steering:  0, bmag: 1.59791, ymag: 1.14187
+actual steering:    -0
+computed steering:  0, bmag: 1.59791, ymag: 1.09108
+actual steering:    -0
+computed steering:  0, bmag: 1.59791, ymag: 1.09108
+actual steering:    0.0629856
+computed steering:  0, bmag: 1.59791, ymag: 1.02756
+actual steering:    0.290888
+computed steering:  0, bmag: 1.59791, ymag: 1.04662
+actual steering:    -0
+computed steering:  0, bmag: 1.95747, ymag: 1.02946
+actual steering:    -0
+computed steering:  0, bmag: 1.95747, ymag: 0.968647
+actual steering:    -0
+computed steering:  0, bmag: 1.95747, ymag: 1.11112
+yellow is left
+actual steering:    -0
+computed steering:  -0.158406, bmag: 1.95747, ymag: 1.12328
+yellow is left
+actual steering:    -0
+computed steering:  -0.175743, bmag: 1.95747, ymag: 1.24622
+actual steering:    -0
+computed steering:  0, bmag: 1.95747, ymag: 1.22535
+actual steering:    -0.0269875
+computed steering:  0, bmag: 2.26278, ymag: 1.1084
+actual steering:    -0.290888
+computed steering:  0, bmag: 2.33579, ymag: 1.05963
+actual steering:    -0
+computed steering:  0, bmag: 2.33579, ymag: 0.86685
+actual steering:    -0
+computed steering:  0, bmag: 2.40506, ymag: 0.949552
+actual steering:    -0
+computed steering:  0, bmag: 1.76358, ymag: 0.949552
+blue is right
+actual steering:    0.0479916
+computed steering:  0.242633, bmag: 1.72054, ymag: 0.949552
+blue is right
+actual steering:    0.221928
+computed steering:  0.237175, bmag: 1.68184, ymag: 0.949552
+blue is right
+actual steering:    0.125962
+computed steering:  0.237175, bmag: 1.68184, ymag: 0.949552
+blue is right
+actual steering:    0.00600117
+computed steering:  0.237175, bmag: 1.68184, ymag: 0.949552
+blue is right
+actual steering:    0.233921
+computed steering:  0.237175, bmag: 1.68184, ymag: 0.949552
+blue is right
+actual steering:    0.206934
+computed steering:  0.237175, bmag: 1.68184, ymag: 0.949552
+blue is right
+actual steering:    0.197932
+computed steering:  0.246835, bmag: 1.75034, ymag: 0.949552
+blue is right
+actual steering:    0.164943
+computed steering:  0.246835, bmag: 1.75034, ymag: 0.949552
+blue is right
+actual steering:    0.164943
+computed steering:  0.235521, bmag: 1.67011, ymag: 0.949552
+blue is right
+actual steering:    0.140956
+computed steering:  0.282208, bmag: 2.00117, ymag: 0.949552
+blue is right
+actual steering:    0.0749791
+computed steering:  0.251388, bmag: 1.78262, ymag: 0.949552
+actual steering:    0.0150029
+computed steering:  0, bmag: 1.78262, ymag: 0.949552
+actual steering:    -0
+computed steering:  0, bmag: 1.78262, ymag: 0.902935
+actual steering:    -0
+computed steering:  0, bmag: 1.78262, ymag: 0.931576
+actual steering:    -0
+computed steering:  0, bmag: 1.78262, ymag: 0.836394
+actual steering:    -0
+computed steering:  0, bmag: 1.78262, ymag: 0.870117
+actual steering:    -0
+computed steering:  0, bmag: 2.26272, ymag: 1.01193
+actual steering:    0.0899731
+computed steering:  0, bmag: 2.26272, ymag: 0.857301
+actual steering:    0.185939
+computed steering:  0, bmag: 2.26272, ymag: 0.81796
+actual steering:    0.206934
+computed steering:  0, bmag: 2.26272, ymag: 0.81796
+actual steering:    0.173945
+computed steering:  0, bmag: 2.26272, ymag: 0.81796
+actual steering:    0.0539839
+computed steering:  0, bmag: 2.26272, ymag: 0.81796
+yellow is left
+actual steering:    -0
+computed steering:  -0.11535, bmag: 2.26272, ymag: 0.81796
+actual steering:    -0
+computed steering:  0, bmag: 2.26272, ymag: 1.46508
+yellow is left
+actual steering:    -0
+computed steering:  -0.183692, bmag: 2.26272, ymag: 1.30258
+yellow is left
+actual steering:    -0
+computed steering:  -0.184255, bmag: 2.26272, ymag: 1.30657
+yellow is left
+actual steering:    -0.239914
+computed steering:  -0.18123, bmag: 2.26272, ymag: 1.28512
+yellow is left
+actual steering:    -0
+computed steering:  -0.235571, bmag: 2.26272, ymag: 1.67046
+yellow is left
+actual steering:    -0
+computed steering:  -0.238873, bmag: 2.26272, ymag: 1.69388
+yellow is left
+actual steering:    -0
+computed steering:  -0.222505, bmag: 2.26272, ymag: 1.57781
+yellow is left
+actual steering:    -0.137947
+computed steering:  -0.206726, bmag: 2.26272, ymag: 1.46592
+yellow is left
+actual steering:    -0
+computed steering:  -0.199122, bmag: 2.26272, ymag: 1.412
+yellow is left
+actual steering:    -0
+computed steering:  -0.268848, bmag: 2.26272, ymag: 1.90643
+yellow is left
+actual steering:    -0.152941
+computed steering:  -0.259262, bmag: 2.26272, ymag: 1.83846
+actual steering:    -0
+computed steering:  0, bmag: 2.26272, ymag: 1.99791
+actual steering:    -0
+computed steering:  0, bmag: 2.26272, ymag: 2.12562
+actual steering:    -0.290888
+computed steering:  0, bmag: 2.26272, ymag: 2.03937
+actual steering:    -0.290888
+computed steering:  0, bmag: 2.26272, ymag: 2.03937
+actual steering:    -0.290888
+computed steering:  0, bmag: 2.26272, ymag: 1.99126
+actual steering:    -0.290888
+computed steering:  0, bmag: 2.26272, ymag: 1.88969
+actual steering:    -0
+computed steering:  0, bmag: 2.26272, ymag: 1.92462
+yellow is left
+actual steering:    -0
+computed steering:  -0.259312, bmag: 2.26272, ymag: 1.83882
+yellow is left
+actual steering:    -0.014994
+computed steering:  -0.230791, bmag: 2.26272, ymag: 1.63657
+actual steering:    -0.290888
+computed steering:  0, bmag: 2.26272, ymag: 1.58623
+yellow is left
+actual steering:    -0
+computed steering:  -0.219764, bmag: 2.26272, ymag: 1.55837
+yellow is left
+actual steering:    -0
+computed steering:  -0.215369, bmag: 2.26272, ymag: 1.52721
+actual steering:    -0.104958
+computed steering:  0, bmag: 2.26272, ymag: 1.41838
+actual steering:    -0.0989571
+computed steering:  0, bmag: 2.26272, ymag: 1.31254
+actual steering:    -0
+computed steering:  0, bmag: 2.26272, ymag: 1.27586
+actual steering:    -0
+computed steering:  0, bmag: 2.26272, ymag: 0.950881
+actual steering:    -0
+computed steering:  0, bmag: 2.26272, ymag: 0.75383
+actual steering:    -0.0599762
+computed steering:  0, bmag: 1.91094, ymag: 0.75383
+actual steering:    -0
+computed steering:  0, bmag: 1.92094, ymag: 0.827926
+actual steering:    -0
+computed steering:  0, bmag: 1.92094, ymag: 0.827926
+blue is right
+actual steering:    -0
+computed steering:  0.270893, bmag: 1.92094, ymag: 0.827926
+blue is right
+actual steering:    0.0120023
+computed steering:  0.270893, bmag: 1.92094, ymag: 0.827926
+blue is right
+actual steering:    0.290888
+computed steering:  0.277225, bmag: 1.96584, ymag: 0.827926
+actual steering:    0.290888
+computed steering:  0, bmag: 1.30055, ymag: 0.827926
+blue is right
+actual steering:    -0
+computed steering:  0.183405, bmag: 1.30055, ymag: 0.827926
+blue is right
+actual steering:    -0
+computed steering:  0.183405, bmag: 1.30055, ymag: 0.827926
+blue is right
+actual steering:    0.290888
+computed steering:  0.206929, bmag: 1.46736, ymag: 0.827926
+blue is right
+actual steering:    0.290888
+computed steering:  0.206929, bmag: 1.46736, ymag: 0.827926
+blue is right
+actual steering:    0.257917
+computed steering:  0.206929, bmag: 1.46736, ymag: 0.827926
+blue is right
+actual steering:    -0
+computed steering:  0.206929, bmag: 1.46736, ymag: 0.827926
+blue is right
+actual steering:    0.272911
+computed steering:  0.206929, bmag: 1.46736, ymag: 0.827926
+blue is right
+actual steering:    0.290888
+computed steering:  0.206929, bmag: 1.46736, ymag: 0.827926
+blue is right
+actual steering:    0.290888
+computed steering:  0.206929, bmag: 1.46736, ymag: 0.827926
+blue is right
+actual steering:    -0
+computed steering:  0.206929, bmag: 1.46736, ymag: 0.827926
+blue is right
+actual steering:    -0
+computed steering:  0.206929, bmag: 1.46736, ymag: 0.827926
+actual steering:    0.188939
+computed steering:  0, bmag: 2.14554, ymag: 0.827926
+actual steering:    0.290888
+computed steering:  0, bmag: 2.14554, ymag: 0.792178
+actual steering:    -0
+computed steering:  0, bmag: 2.14554, ymag: 0.792178
+blue is right
+actual steering:    -0
+computed steering:  0.302567, bmag: 2.14554, ymag: 0.792178
+actual steering:    0.0150029
+computed steering:  0, bmag: 2.14554, ymag: 0.855988
+actual steering:    0.125962
+computed steering:  0, bmag: 2.23331, ymag: 0.899141
+actual steering:    0.137956
+computed steering:  0, bmag: 2.28636, ymag: 0.888834
+actual steering:    0.137956
+computed steering:  0, bmag: 2.31355, ymag: 0.788523
+actual steering:    0.134955
+computed steering:  0, bmag: 2.31355, ymag: 0.843763
+actual steering:    0.143957
+computed steering:  0, bmag: 2.31355, ymag: 0.845101
+actual steering:    0.0659773
+computed steering:  0, bmag: 2.31355, ymag: 0.862421
+actual steering:    -0
+computed steering:  0, bmag: 2.31355, ymag: 0.811913
+actual steering:    -0
+computed steering:  0, bmag: 2.39713, ymag: 1.05676
+actual steering:    -0
+computed steering:  0, bmag: 2.06968, ymag: 0.879083
+actual steering:    0.0749791
+computed steering:  0, bmag: 2.06968, ymag: 0.997264
+actual steering:    0.122962
+computed steering:  0, bmag: 2.06968, ymag: 0.942383
+actual steering:    -0
+computed steering:  0, bmag: 2.41318, ymag: 0.89645
+actual steering:    -0
+computed steering:  0, bmag: 2.41318, ymag: 0.898025
+actual steering:    -0
+computed steering:  0, bmag: 2.41318, ymag: 0.896055
+actual steering:    -0
+computed steering:  0, bmag: 2.41318, ymag: 0.896055
+actual steering:    -0
+computed steering:  0, bmag: 2.41318, ymag: 0.896055
+actual steering:    -0
+computed steering:  0, bmag: 2.41495, ymag: 0.896055
+actual steering:    -0
+computed steering:  0, bmag: 2.41495, ymag: 0.896055
+actual steering:    -0
+computed steering:  0, bmag: 2.41495, ymag: 0.896055
+actual steering:    -0
+computed steering:  0, bmag: 1.93774, ymag: 0.873604
+actual steering:    -0
+computed steering:  0, bmag: 1.93774, ymag: 0.873604
+actual steering:    -0
+computed steering:  0, bmag: 1.93774, ymag: 0.873604
+actual steering:    -0
+computed steering:  0, bmag: 1.93774, ymag: 0.873604
+actual steering:    -0
+computed steering:  0, bmag: 1.93774, ymag: 0.873604
+actual steering:    -0
+computed steering:  0, bmag: 1.93774, ymag: 0.875139
+actual steering:    -0
+computed steering:  0, bmag: 1.93774, ymag: 0.875139
+actual steering:    -0
+computed steering:  0, bmag: 1.93774, ymag: 0.875139
+actual steering:    -0
+computed steering:  0, bmag: 2.4116, ymag: 0.873604
+actual steering:    -0
+computed steering:  0, bmag: 2.41318, ymag: 0.897626
+actual steering:    -0
+computed steering:  0, bmag: 2.4116, ymag: 0.897626
+actual steering:    -0
+computed steering:  0, bmag: 2.4116, ymag: 0.897626
+actual steering:    -0
+computed steering:  0, bmag: 2.4116, ymag: 0.897626
+actual steering:    -0
+computed steering:  0, bmag: 2.4116, ymag: 0.897626
+actual steering:    -0
+computed steering:  0, bmag: 2.4116, ymag: 0.897626
+actual steering:    -0
+computed steering:  0, bmag: 2.4116, ymag: 0.897626
+actual steering:    -0
+computed steering:  0, bmag: 2.4116, ymag: 0.897626
+actual steering:    -0
+computed steering:  0, bmag: 2.4116, ymag: 0.897626
+actual steering:    -0
+computed steering:  0, bmag: 2.4116, ymag: 0.897626
+actual steering:    -0
+computed steering:  0, bmag: 2.4116, ymag: 0.897626
