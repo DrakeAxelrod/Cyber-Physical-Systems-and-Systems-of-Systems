@@ -19,43 +19,22 @@ double blue_magnitude = 0;
 double yellow_magnitude = 0;
 double steering_angle = 0;
 double acceptable_noise = 0;
-double threshold = 365;
+double threshold = 340;
 bool blue_is_left = false;
 bool check_orientation = false;
-int tstamp = 0; // timestamp of the last frame
-
-
 Images imgs = Images();
-
 // color blue as a scalar value BGR (blue, green, red)
 cv::Scalar color_blue(255, 0, 0);
 // color yellow as a scalar value BGR (blue, green, red)
 cv::Scalar color_yellow(0, 255, 255);
-
 // Constants
 const double CLOCKWISE_LEFT = 0.1771807038;
 const double CLOCKWISE_RIGHT = -0.1356987459;
 const double COUNTERCLOCKWISE_LEFT = 0.1203680391;
 const double COUNTERCLOCKWISE_RIGHT = -0.1308372994;
-
 const double MEDIAN_TURN_VALUE = 0.14102119705;
 const double MAX_STEERING_VALUE = 0.290888;
-
-bool detectBlueCones(cv::Mat hsv_frame)
-{
-  cv::findContours(hsv_frame, blue_points, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE, cv::Point());
-  return blue_points.size() > 0 ? true : false;
-}
-
-bool detectYellowCones(cv::Mat hsv_frame)
-{
-  cv::findContours(hsv_frame, yellow_points, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE, cv::Point());
-  return yellow_points.size() > 0 ? true : false;
-}
-
-double getDistance(cv::Rect bounding_box) {
-  return (sqrt(pow(car.x - bounding_box.x, 2) + pow(car.y - bounding_box.y, 2)));
-}
+const int NOISE_THRESHOLD = 0;
 
 class Cone {
 public:
@@ -88,7 +67,17 @@ public:
   }
 };
 
-const int NOISE_THRESHOLD = 0;
+bool detectBlueCones(cv::Mat hsv_frame)
+{
+  cv::findContours(hsv_frame, blue_points, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE, cv::Point());
+  return blue_points.size() > 0 ? true : false;
+}
+
+bool detectYellowCones(cv::Mat hsv_frame)
+{
+  cv::findContours(hsv_frame, yellow_points, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE, cv::Point());
+  return yellow_points.size() > 0 ? true : false;
+}
 
 Cone getCone(cv::Mat cropped_frame, cv::Mat hsv_frame, cv::Scalar color, std::vector<std::vector<cv::Point>> matrix) {
   // create a bounding box
@@ -122,7 +111,6 @@ Cone getCone(cv::Mat cropped_frame, cv::Mat hsv_frame, cv::Scalar color, std::ve
   }
   return Cone(box, color);
 }
-
 
 // calculate the give steering adjustment based on the
 // distance of the blue & yellow cones from the center of the car
@@ -163,6 +151,70 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr, opendlv::proxy
   double angular_velocity_y = vel.angularVelocityY();
   double angular_velocity_z = vel.angularVelocityZ();
 
+  cv::Point blue_center = blue_cone.getCenter();
+  cv::Point yellow_center = yellow_cone.getCenter();
+  
+  // check if blue center is to the left of the car
+  if (blue_center.x < car.x) {
+    blue_is_left = true;
+  } else {
+    blue_is_left = false;
+  }
+
+  if (blue_distance < threshold && yellow_distance < threshold)
+  {
+    return 0;
+  }
+
+  if (blue_detected && blue_is_left && (blue_distance < threshold))
+  {
+    double turn_intensity = (threshold - blue_distance)/20;
+    std::cout << "blue is left. b_distance: " << blue_distance << std::endl;
+    if (blue_distance < 250)
+    {
+      return -MAX_STEERING_VALUE;
+    }
+    blue_correction = CLOCKWISE_RIGHT * turn_intensity * blue_magnitude;
+    return blue_correction;
+  }
+
+
+  if (blue_detected && !blue_is_left && (blue_distance < threshold))
+  {
+    double turn_intensity = (threshold - blue_distance)/20;
+    std::cout << "blue is right. b_distance: " << blue_distance << "turn_intensity: " << turn_intensity << "b_mag: " << blue_magnitude << std::endl;
+    if (blue_distance < 250)
+    {
+      return MAX_STEERING_VALUE;
+    }
+    blue_correction = COUNTERCLOCKWISE_LEFT * turn_intensity * blue_magnitude;
+    return blue_correction;
+  }
+
+  if (yellow_detected && blue_is_left && (yellow_distance < threshold))
+  {
+    double turn_intensity = (threshold - yellow_distance)/20;
+    std::cout << "yellow is right. y_distance: " << yellow_distance << std::endl;
+    if (yellow_distance < 250)
+    {
+      return MAX_STEERING_VALUE;
+    }
+    yellow_correction = CLOCKWISE_LEFT * turn_intensity * yellow_magnitude;
+    return yellow_correction;
+  }
+
+  if (yellow_detected && !blue_is_left && (yellow_distance < threshold))
+  {    
+    double turn_intensity = (threshold - yellow_distance)/20;
+    std::cout << "yellow is left. y_distance: " << yellow_distance << "turn_intensity: " << turn_intensity << " y_mag: " << yellow_magnitude << std::endl;
+    if (yellow_distance < 250)
+    {
+      return -MAX_STEERING_VALUE;
+    }
+    yellow_correction = COUNTERCLOCKWISE_RIGHT * turn_intensity * yellow_magnitude;
+    return yellow_correction;
+  }
+  return 0;
 }
 
 
@@ -378,14 +430,7 @@ int32_t main(int32_t argc, char **argv)
         sendData(ss.str());
         ss.str("");
         ss.clear();
-        // std::cout << "actual steering:    " << gsr.groundSteering() << std::endl;
-        // std::cout << "computed steering:  "
-        //           << steering_angle
-        //           << ", b-angle: "
-        //           << blue_magnitude
-        //           << ", y-angle: "
-        //           << yellow_magnitude
-        //           << std::endl;
+
         if (VERBOSE)
         {
           imgs.hsv_debug = imgs.img_hsv.clone();
