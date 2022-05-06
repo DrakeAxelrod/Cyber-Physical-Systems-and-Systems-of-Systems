@@ -40,7 +40,7 @@ def display_stats():
             computed_num_0 += 1
         if abs(computed_steering[i]) == 0.290888:
             computed_num_max += 1
-        if abs(computed_steering[i] - actual_steering[i]) < 0.05:
+        if abs(computed_steering[i] - actual_steering[i]) <= 0.05:
             correct_predictions += 1
     perc = correct_predictions / len(computed_steering)
     # print the results
