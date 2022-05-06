@@ -40,7 +40,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 WORKDIR /usr/bin
 
-EXPOSE 9900:9900
+EXPOSE 9900
 
 COPY --from=builder /tmp/bin/template-opencv .
 ENTRYPOINT ["/usr/bin/template-opencv"]

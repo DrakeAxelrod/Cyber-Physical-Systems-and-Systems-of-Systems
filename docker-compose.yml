@@ -14,8 +14,8 @@ services:
   # decode image data
   h264decoder:
     image: h264decoder:v0.0.4
-    build: 
-      context: https://github.com/chalmers-revere/opendlv-video-h264-decoder.git 
+    build:
+      context: https://github.com/chalmers-revere/opendlv-video-h264-decoder.git
       dockerfile: Dockerfile
     restart: always
     network_mode: "host"

@@ -15,8 +15,6 @@ cv::Point car;
 // booleans to trach whether a given cone has been detected
 bool blue_detected = false;
 bool yellow_detected = false;
-double blue_magnitude = 0;
-double yellow_magnitude = 0;
 double steering_angle = 0;
 double acceptable_noise = 0;
 double threshold = 340;
@@ -36,33 +34,40 @@ const double MEDIAN_TURN_VALUE = 0.14102119705;
 const double MAX_STEERING_VALUE = 0.290888;
 const int NOISE_THRESHOLD = 0;
 
-class Cone {
+class Cone
+{
 public:
   cv::Rect box;
   cv::Scalar color;
   // constructor
-  Cone(cv::Rect box, cv::Scalar color) {
+  Cone(cv::Rect box, cv::Scalar color)
+  {
     this->box = box;
     this->color = color;
   }
   // getters
-  cv::Rect getBox() {
+  cv::Rect getBox()
+  {
     return box;
   }
-  cv::Scalar getColor() {
+  cv::Scalar getColor()
+  {
     return color;
   }
   // get the angrom from the center of the box to the center of a point
-  double getAngleFrom(cv::Point point) {
+  double getAngleFrom(cv::Point point)
+  {
     double angle = atan2(point.y - box.y - box.height / 2, point.x - box.x - box.width / 2);
     return angle;
   }
   // get the distance from the center of the box to the center of a point
-  double getDistanceFrom(cv::Point point) {
+  double getDistanceFrom(cv::Point point)
+  {
     return sqrt(pow(point.x - box.x - box.width / 2, 2) + pow(point.y - box.y - box.height / 2, 2));
   }
   // get the center of the box
-  cv::Point getCenter() {
+  cv::Point getCenter()
+  {
     return cv::Point(box.x + box.width / 2, box.y + box.height / 2);
   }
 };
@@ -79,16 +84,19 @@ bool detectYellowCones(cv::Mat hsv_frame)
   return yellow_points.size() > 0 ? true : false;
 }
 
-Cone getCone(cv::Mat cropped_frame, cv::Mat hsv_frame, cv::Scalar color, std::vector<std::vector<cv::Point>> matrix) {
+Cone getCone(cv::Mat cropped_frame, cv::Mat hsv_frame, cv::Scalar color, std::vector<std::vector<cv::Point>> matrix)
+{
   // create a bounding box
   cv::Rect box(cv::Point(0, 0), cv::Size(0, 0));
   // extract the bounding box of the cone from the provided matrix
   cv::findContours(hsv_frame, matrix, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE, cv::Point());
   // draw box
   cv::rectangle(cropped_frame, box, color, 2);
-  for (auto &contour : matrix) {
+  for (auto &contour : matrix)
+  {
     cv::Rect tmp = cv::boundingRect(contour);
-    if (tmp.area() > NOISE_THRESHOLD) {
+    if (tmp.area() > NOISE_THRESHOLD)
+    {
       // using the matrix build a bounding box
       cv::Rect tmp = cv::boundingRect(contour);
       cv::Point tmp_center = cv::Point(tmp.x + tmp.width / 2, tmp.y + tmp.height / 2);
@@ -96,7 +104,8 @@ Cone getCone(cv::Mat cropped_frame, cv::Mat hsv_frame, cv::Scalar color, std::ve
       cv::rectangle(cropped_frame, tmp, color, 2);
       // draw the center of the bounding box
       cv::circle(cropped_frame, tmp_center, 5, color, -1);
-      if (box.width > 0) {
+      if (box.width > 0)
+      {
         // get the box center
         cv::Point center = cv::Point(box.x + box.width / 2, box.y + box.height / 2);
         // draw the bounding box
@@ -153,70 +162,91 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr, opendlv::proxy
 
   cv::Point blue_center = blue_cone.getCenter();
   cv::Point yellow_center = yellow_cone.getCenter();
-  
+
   // check if blue center is to the left of the car
-  if (blue_center.x < car.x) {
+  if (blue_center.x < car.x)
+  {
     blue_is_left = true;
-  } else {
+  }
+  else
+  {
     blue_is_left = false;
   }
 
-  if (blue_distance < threshold && yellow_distance < threshold)
-  {
-    return 0;
-  }
+  // if (blue_distance < threshold && yellow_distance < threshold)
+  // {
+  //   return 0;
+  // }
 
   if (blue_detected && blue_is_left && (blue_distance < threshold))
   {
-    double turn_intensity = (threshold - blue_distance)/20;
+    double turn_intensity = (threshold - blue_distance) / 20;
     std::cout << "blue is left. b_distance: " << blue_distance << std::endl;
     if (blue_distance < 250)
     {
       return -MAX_STEERING_VALUE;
     }
-    blue_correction = CLOCKWISE_RIGHT * turn_intensity * blue_magnitude;
-    return blue_correction;
+    blue_correction = CLOCKWISE_RIGHT * turn_intensity * blue_angle_from_car;
+    if (blue_correction < MAX_STEERING_VALUE)
+    {
+      return -MAX_STEERING_VALUE;
+    }
+    else
+      return blue_correction;
   }
-
 
   if (blue_detected && !blue_is_left && (blue_distance < threshold))
   {
-    double turn_intensity = (threshold - blue_distance)/20;
-    std::cout << "blue is right. b_distance: " << blue_distance << "turn_intensity: " << turn_intensity << "b_mag: " << blue_magnitude << std::endl;
+    double turn_intensity = (threshold - blue_distance) / 20;
+    std::cout << "blue is right. b_distance: " << blue_distance << "turn_intensity: " << turn_intensity << "b_mag: " << blue_angle_from_car << std::endl;
     if (blue_distance < 250)
     {
       return MAX_STEERING_VALUE;
     }
-    blue_correction = COUNTERCLOCKWISE_LEFT * turn_intensity * blue_magnitude;
-    return blue_correction;
+    blue_correction = COUNTERCLOCKWISE_LEFT * turn_intensity * blue_angle_from_car;
+    if (blue_correction > MAX_STEERING_VALUE)
+    {
+      return MAX_STEERING_VALUE;
+    }
+    else
+      return blue_correction;
   }
 
   if (yellow_detected && blue_is_left && (yellow_distance < threshold))
   {
-    double turn_intensity = (threshold - yellow_distance)/20;
+    double turn_intensity = (threshold - yellow_distance) / 20;
     std::cout << "yellow is right. y_distance: " << yellow_distance << std::endl;
     if (yellow_distance < 250)
     {
       return MAX_STEERING_VALUE;
     }
-    yellow_correction = CLOCKWISE_LEFT * turn_intensity * yellow_magnitude;
-    return yellow_correction;
+    yellow_correction = CLOCKWISE_LEFT * turn_intensity * yellow_angle_from_car;
+    if (yellow_correction > MAX_STEERING_VALUE)
+    {
+      return MAX_STEERING_VALUE;
+    }
+    else
+      return yellow_correction;
   }
 
   if (yellow_detected && !blue_is_left && (yellow_distance < threshold))
-  {    
-    double turn_intensity = (threshold - yellow_distance)/20;
-    std::cout << "yellow is left. y_distance: " << yellow_distance << "turn_intensity: " << turn_intensity << " y_mag: " << yellow_magnitude << std::endl;
+  {
+    double turn_intensity = (threshold - yellow_distance) / 20;
+    std::cout << "yellow is left. y_distance: " << yellow_distance << "turn_intensity: " << turn_intensity << " y_mag: " << yellow_angle_from_car << std::endl;
     if (yellow_distance < 250)
     {
       return -MAX_STEERING_VALUE;
     }
-    yellow_correction = COUNTERCLOCKWISE_RIGHT * turn_intensity * yellow_magnitude;
-    return yellow_correction;
+    yellow_correction = COUNTERCLOCKWISE_RIGHT * turn_intensity * yellow_angle_from_car;
+    if (yellow_correction < MAX_STEERING_VALUE)
+    {
+      return -MAX_STEERING_VALUE;
+    }
+    else
+      return yellow_correction;
   }
   return 0;
 }
-
 
 int32_t main(int32_t argc, char **argv)
 {
@@ -421,7 +451,7 @@ int32_t main(int32_t argc, char **argv)
           {
             sendData(str);
           }
-          catch(const std::exception& e)
+          catch (const std::exception &e)
           {
             std::cerr << e.what() << '\n';
           }
