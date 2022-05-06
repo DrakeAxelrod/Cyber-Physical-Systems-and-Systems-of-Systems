@@ -140,4 +140,7 @@ std::string get_timestamp(std::pair<bool, cluon::data::TimeStamp>, time_t);
  */
 void turn_in_timestamp(std::pair<bool, cluon::data::TimeStamp>, double);
 
+int sendData(std::string msg);
+int error(std::string msg);
+
 #endif // STEERING_ANGLE_GENERATOR_HPP

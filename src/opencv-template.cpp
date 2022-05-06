@@ -24,6 +24,8 @@ bool blue_is_left = false;
 bool check_orientation = false;
 double blue_threshold;
 double yellow_threshold;
+int tstamp = 0; // timestamp of the last frame
+
 
 Images imgs = Images();
 
@@ -443,7 +445,15 @@ int32_t main(int32_t argc, char **argv)
         // the turn in time stamp requirement
         // turn_in_timestamp(ts, steering_angle);
         // turn_in_timestamp(ts, gsr.groundSteering());
-
+        if (ts.second.seconds() == 1584542901)
+        {
+          std::string str = "FINISHED";
+          sendData(str);
+        }
+        ss << gsr.groundSteering() << "|" << steering_angle;
+        sendData(ss.str());
+        ss.str("");
+        ss.clear();
         std::cout << "actual steering:    " << gsr.groundSteering() << std::endl;
         std::cout << "computed steering:  "
                   << steering_angle
