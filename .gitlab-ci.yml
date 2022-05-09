@@ -26,6 +26,8 @@ variables:
   BUILDX_URL: https://github.com/docker/buildx/releases/download/v0.3.1/buildx-v0.3.1.linux-amd64
   BUILDX_BUILDER: platformbuilder
   BUILDX_PLATFORM: linux/amd64,linux/arm/v7
+  IMAGE: registry.git.chalmers.se/courses/dit638/students/2022-group-05/cyphy
+
 
 services:
   - name: registry.git.chalmers.se/courses/dit638/students/docker/docker:19.03.3-dind
@@ -43,33 +45,33 @@ stages:
 before_script:
   - docker info
   # - docker login -u $DOCKER_REG_CID -p $DOCKER_REG_TOKEN $CI_REGISTRY
-  # - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
 
 
 # This section describes what shall be done to build and test the project.
-# build-and-test:
-#   tags:
-#     - docker-build
-#   stage: build
-#   script:
-#     - docker build -f Dockerfile .
-#   except:
-#     - $CI_COMMIT_TAG  
-#   allow_failure: false
+build-and-test:
+  tags:
+    - docker-build
+  stage: build
+  script:
+    - docker build -f Dockerfile .
+  except:
+    - $CI_COMMIT_TAG  
+  allow_failure: false
 
-# pages:
-#   tags:
-#     - docker-build
-#   stage: documentation
-#   script:
-#   - apk update && apk add doxygen
-#   - doxygen doxygen/Doxyfile
-#   - mv doxygen/html/ public/
-#   artifacts:
-#     paths:
-#     - public
-#   only:
-#   - main
+pages:
+  tags:
+    - docker-build
+  stage: documentation
+  script:
+  - apk update && apk add doxygen
+  - doxygen doxygen/Doxyfile
+  - mv doxygen/html/ public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - main
 
 # This section describes what shall be done to deploy artefacts from the project.
 release:
@@ -89,11 +91,9 @@ release:
     - mkdir -p $HOME/.docker/cli-plugins/
     - wget -O $HOME/.docker/cli-plugins/docker-buildx $BUILDX_URL
     - chmod a+x $HOME/.docker/cli-plugins/docker-buildx
-    # - docker buildx build --platform=${BUILDX_PLATFORM} -f Dockerfile -t "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG" .
-    # - docker push "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
-    - docker buildx build --platform=${BUILDX_PLATFORM} -f Dockerfile -t cyphy:latest .
-    - docker push cyphy:latest
+    - docker buildx build --platform=${BUILDX_PLATFORM} -f Dockerfile -t "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG" --push "."
+    - docker push "$IMAGE":"$CI_COMMIT_TAG"
     # docker push registry.git.chalmers.se/courses/dit638/students/2022-group-05/cyphy
-  # rules: 
-  #   - if: $CI_COMMIT_TAG && $CI_COMMIT_TAG =~ /^v[0-9]+.[0-9]+.[0-9]+$/ 
+  rules: 
+    - if: $CI_COMMIT_TAG && $CI_COMMIT_TAG =~ /^v[0-9]+.[0-9]+.[0-9]+$/ 
     
