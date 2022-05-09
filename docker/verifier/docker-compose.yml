@@ -1,0 +1,58 @@
+version: '2' # Must be present exactly once at the beginning of the docker-compose.yml file
+services:
+  # Must be present exactly once at the beginning of the docker-compose.yml file
+  video-h264-replay:
+    build:
+      context: https://github.com/chalmers-revere/opendlv-video-h264-replay.git#v0.0.3
+      dockerfile: Dockerfile
+    restart: on-failure
+    network_mode: "host"
+    ipc: "host"
+    volumes:
+      - $PWD/../../recordings:/recordings
+      - /tmp:/tmp
+    environment:
+      - DISPLAY=${DISPLAY}
+    command: "--cid=111 --name=img /recordings/CID-140-recording-2020-03-18_144821-selection.rec"
+  # Must be present exactly once at the beginning of the docker-compose.yml file
+  # overlay for image data
+  cyphy:
+    image: cyphy/group5:latest
+    build:
+      context: $PWD/../../
+      dockerfile: Dockerfile
+    restart: on-failure
+    network_mode: "host"
+    ipc: host
+    ports:
+      - "9900:9900"
+    environment:
+      DISPLAY: $DISPLAY
+    volumes:
+      - /tmp:/tmp
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/root/.Xauthority
+    depends_on:
+      - video-h264-replay
+    links: 
+      - video-h264-replay
+    command: --cid=253 --name=img --width=640 --height=480
+  # verifier:
+  #   image: python:latest
+  #   build:
+  #     context: $PWD/
+  #     dockerfile: Dockerfile
+  #   restart: on-failure
+  #   network_mode: "host"
+  #   ipc: host
+  #   ports:
+  #     - "9900:9900"
+  #   environment:
+  #     DISPLAY: $DISPLAY
+  #   volumes:
+  #     - /tmp:/tmp
+  #   depends_on:
+  #     - video-h264-replay
+  #   links: 
+  #     - video-h264-replay
+  #   command: python main.py

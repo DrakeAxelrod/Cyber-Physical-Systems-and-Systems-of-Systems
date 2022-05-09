@@ -1,0 +1,845 @@
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+// This line is only needed when using Google Protobuf 3.
+syntax = "proto2";
+
+
+// Message identifier: 1001.
+message opendlv_sim_Frame {
+    optional float x = 1;
+    optional float y = 2;
+    optional float z = 3;
+    optional float roll = 4;
+    optional float pitch = 5;
+    optional float yaw = 6;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1002.
+message opendlv_sim_KinematicState {
+    optional float vx = 1;
+    optional float vy = 2;
+    optional float vz = 3;
+    optional float rollRate = 4;
+    optional float pitchRate = 5;
+    optional float yawRate = 6;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1021.
+message opendlv_body_ComponentInfo {
+    optional string description = 1;
+    optional float x = 2;
+    optional float y = 3;
+    optional float z = 4;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1022.
+message opendlv_body_ActuatorInfo {
+    optional string description = 1;
+    optional float x = 2;
+    optional float y = 3;
+    optional float z = 4;
+    optional uint32 signalId = 5;
+    optional float minValue = 6;
+    optional float maxValue = 7;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1023.
+message opendlv_body_SensorInfo {
+    optional string description = 1;
+    optional float x = 2;
+    optional float y = 3;
+    optional float z = 4;
+    optional uint32 signalId = 5;
+    optional float accuracyStd = 6;
+    optional uint32 minFrequency = 7;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1024.
+message opendlv_body_SignalInfo {
+    optional string description = 1;
+    optional uint32 signalId = 2;
+    optional float accuracyStd = 3;
+    optional uint32 minFrequency = 4;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1030.
+message opendlv_proxy_AccelerationReading {
+    optional float accelerationX = 1;
+    optional float accelerationY = 2;
+    optional float accelerationZ = 3;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1031.
+message opendlv_proxy_AngularVelocityReading {
+    optional float angularVelocityX = 1;
+    optional float angularVelocityY = 2;
+    optional float angularVelocityZ = 3;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1032.
+message opendlv_proxy_MagneticFieldReading {
+    optional float magneticFieldX = 1;
+    optional float magneticFieldY = 2;
+    optional float magneticFieldZ = 3;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1033.
+message opendlv_proxy_AltitudeReading {
+    optional float altitude = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1034.
+message opendlv_proxy_PressureReading {
+    optional float pressure = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1035.
+message opendlv_proxy_TemperatureReading {
+    optional float temperature = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1036.
+message opendlv_proxy_TorqueReading {
+    optional float torque = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1037.
+message opendlv_proxy_VoltageReading {
+    optional float voltage = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1038.
+message opendlv_proxy_AngleReading {
+    optional float angle = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1039.
+message opendlv_proxy_DistanceReading {
+    optional float distance = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1040.
+message opendlv_proxy_SwitchStateReading {
+    optional sint32 state = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1041.
+message opendlv_proxy_PedalPositionReading {
+    optional float position = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1045.
+message opendlv_proxy_GroundSteeringReading {
+    optional float groundSteering = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1046.
+message opendlv_proxy_GroundSpeedReading {
+    optional float groundSpeed = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1047.
+message opendlv_proxy_WheelSpeedReading {
+    optional float wheelSpeed = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1050.
+message opendlv_proxy_WeightReading {
+    optional float weight = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1051.
+message opendlv_proxy_GeodeticHeadingReading {
+    optional float northHeading = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 19.
+message opendlv_proxy_GeodeticWgs84Reading {
+    optional double latitude = 1;
+    optional double longitude = 3;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1055.
+message opendlv_proxy_ImageReading {
+    optional string fourcc = 1;
+    optional uint32 width = 2;
+    optional uint32 height = 3;
+    optional bytes data = 4;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 14.
+message opendlv_proxy_ImageReadingShared {
+    optional string name = 1;
+    optional uint32 size = 2;
+    optional uint32 width = 3;
+    optional uint32 height = 4;
+    optional uint32 bytesPerPixel = 5;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 49.
+message opendlv_proxy_PointCloudReading {
+    optional float startAzimuth = 1;
+    optional float endAzimuth = 2;
+    optional uint32 entriesPerAzimuth = 3;
+    optional bytes distances = 4;
+    optional uint32 numberOfBitsForIntensity = 5;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 28.
+message opendlv_proxy_PointCloudReadingShared {
+    optional string name = 1;
+    optional uint32 size = 2;
+    optional uint32 width = 3;
+    optional uint32 height = 4;
+    optional uint32 numberOfComponentsPerPoint = 5;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1080.
+message opendlv_proxy_PressureRequest {
+    optional float pressure = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1081.
+message opendlv_proxy_TemperatureRequest {
+    optional float temperature = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1082.
+message opendlv_proxy_TorqueRequest {
+    optional float torque = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1083.
+message opendlv_proxy_VoltageRequest {
+    optional float voltage = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1084.
+message opendlv_proxy_AngleRequest {
+    optional float angle = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1085.
+message opendlv_proxy_SwitchStateRequest {
+    optional sint32 state = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1086.
+message opendlv_proxy_PedalPositionRequest {
+    optional float position = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1087.
+message opendlv_proxy_PulseWidthModulationRequest {
+    optional uint32 dutyCycleNs = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1090.
+message opendlv_proxy_GroundSteeringRequest {
+    optional float groundSteering = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1091.
+message opendlv_proxy_GroundSpeedRequest {
+    optional float groundSpeed = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1092.
+message opendlv_proxy_GroundAccelerationRequest {
+    optional float groundAcceleration = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1093.
+message opendlv_proxy_GroundDecelerationRequest {
+    optional float groundDeceleration = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1094.
+message opendlv_proxy_WheelSpeedRequest {
+    optional float wheelSpeed = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1100.
+message opendlv_system_SignalStatusMessage {
+    optional sint32 code = 1;
+    optional string description = 2;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1101.
+message opendlv_system_SystemOperationState {
+    optional sint32 code = 1;
+    optional string description = 2;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1102.
+message opendlv_system_NetworkStatusMessage {
+    optional sint32 code = 1;
+    optional string description = 2;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1110.
+message opendlv_logic_sensation_Direction {
+    optional float azimuthAngle = 1;
+    optional float zenithAngle = 2;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1111.
+message opendlv_logic_sensation_Point {
+    optional float azimuthAngle = 1;
+    optional float zenithAngle = 2;
+    optional float distance = 3;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1116.
+message opendlv_logic_sensation_Geolocation {
+    optional double latitude = 1;
+    optional double longitude = 2;
+    optional float altitude = 3;
+    optional float heading = 4;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1017.
+message opendlv_logic_sensation_Equilibrioception {
+    optional float vx = 1;
+    optional float vy = 2;
+    optional float vz = 3;
+    optional float rollRate = 4;
+    optional float pitchRate = 5;
+    optional float yawRate = 6;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1130.
+message opendlv_logic_perception_Object {
+    optional uint32 objectId = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1131.
+message opendlv_logic_perception_ObjectType {
+    optional uint32 objectId = 1;
+    optional uint32 type = 2;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1132.
+message opendlv_logic_perception_ObjectProperty {
+    optional uint32 objectId = 1;
+    optional string property = 2;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1133.
+message opendlv_logic_perception_ObjectDirection {
+    optional uint32 objectId = 1;
+    optional float azimuthAngle = 2;
+    optional float zenithAngle = 3;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1134.
+message opendlv_logic_perception_ObjectDistance {
+    optional uint32 objectId = 1;
+    optional float distance = 2;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1135.
+message opendlv_logic_perception_ObjectAngularBlob {
+    optional uint32 objectId = 1;
+    optional float width = 2;
+    optional float height = 3;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1140.
+message opendlv_logic_perception_GroundSurface {
+    optional uint32 surfaceId = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1141.
+message opendlv_logic_perception_GroundSurfaceType {
+    optional uint32 surfaceId = 1;
+    optional uint32 type = 2;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1142.
+message opendlv_logic_perception_GroundSurfaceProperty {
+    optional uint32 surfaceId = 1;
+    optional string property = 2;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1143.
+message opendlv_logic_perception_GroundSurfaceArea {
+    optional uint32 surfaceId = 1;
+    optional float x1 = 2;
+    optional float y1 = 3;
+    optional float x2 = 4;
+    optional float y2 = 5;
+    optional float x3 = 6;
+    optional float y3 = 7;
+    optional float x4 = 8;
+    optional float y4 = 9;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1171.
+message opendlv_logic_action_AimDirection {
+    optional float azimuthAngle = 1;
+    optional float zenithAngle = 2;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1172.
+message opendlv_logic_action_AimPoint {
+    optional float azimuthAngle = 1;
+    optional float zenithAngle = 2;
+    optional float distance = 3;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1173.
+message opendlv_logic_action_PreviewPoint {
+    optional float azimuthAngle = 1;
+    optional float zenithAngle = 2;
+    optional float distance = 3;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1191.
+message opendlv_logic_cognition_GroundSteeringLimit {
+    optional float steeringLimit = 1;
+}
+
+
+//
+// THIS IS AN AUTO-GENERATED FILE. DO NOT MODIFY AS CHANGES MIGHT BE OVERWRITTEN!
+//
+
+
+
+// Message identifier: 1192.
+message opendlv_logic_cognition_GroundSpeedLimit {
+    optional float speedLimit = 1;
+}
+
