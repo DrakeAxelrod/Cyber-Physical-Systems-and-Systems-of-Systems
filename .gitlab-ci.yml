@@ -24,7 +24,7 @@ variables:
   DOCKER_BUILDKIT: 1
   DOCKER_CLI_EXPERIMENTAL: enabled
   BUILDX_URL: https://github.com/docker/buildx/releases/download/v0.3.1/buildx-v0.3.1.linux-amd64
-  BUILDX_BUILDER: moby/buildkit:buildx-stable-1 
+  BUILDX_BUILDER: platformbuilder
   BUILDX_PLATFORM: linux/amd64,linux/arm/v7
   IMAGE: registry.git.chalmers.se/courses/dit638/students/2022-group-05/cyphy
 
