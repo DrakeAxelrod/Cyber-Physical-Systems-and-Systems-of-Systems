@@ -26,7 +26,7 @@ variables:
   BUILDX_URL: https://github.com/docker/buildx/releases/download/v0.3.1/buildx-v0.3.1.linux-amd64
   BUILDX_BUILDER: platformbuilder
   BUILDX_PLATFORM: linux/amd64,linux/arm/v7
-  IMAGE: registry.git.chalmers.se/courses/dit638/students/2022-group-05/cyphy
+  IMAGE: registry.git.chalmers.se/courses/dit638/students/2022-group-05
 
 
 services:
@@ -91,8 +91,10 @@ release:
     - mkdir -p $HOME/.docker/cli-plugins/
     - wget -O $HOME/.docker/cli-plugins/docker-buildx $BUILDX_URL
     - chmod a+x $HOME/.docker/cli-plugins/docker-buildx
-    - docker buildx build --platform=${BUILDX_PLATFORM} -f Dockerfile -t "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG" --push "."
-    - docker push "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
+    - docker buildx build --platform=${BUILDX_PLATFORM} -t "$IMAGE":"$CI_COMMIT_SHA" --push "."
+    # - docker push "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
+    # - docker tag ${IMAGE}:${CI_COMMIT_SHA} ${IMAGE}:latest
+    # - docker push ${IMAGE}:latest
     # docker push registry.git.chalmers.se/courses/dit638/students/2022-group-05/cyphy
   rules: 
     - if: $CI_COMMIT_TAG && $CI_COMMIT_TAG =~ /^v[0-9]+.[0-9]+.[0-9]+$/ 

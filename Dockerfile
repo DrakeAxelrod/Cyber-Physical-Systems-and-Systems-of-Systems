@@ -41,4 +41,4 @@ WORKDIR /usr/bin
 EXPOSE 9900
 
 COPY --from=builder /tmp/bin/solution .
-ENTRYPOINT ["/usr/bin/template-opencv"]
+ENTRYPOINT ["/usr/bin/solution"]
