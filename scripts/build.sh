@@ -14,16 +14,26 @@ function output() {
 cat << EOF
 $@
 EOF
+
 }
 
 function run_code() {
-    output "$(/opt/sources/build/SensorReading-Runner)"
+    output "$(/opt/sources/build/solution-Runner)"
 }
 
+function lint() {
+  clang-tidy  src/solution.cpp src/steering-angel-generator.cpp src/steering-angle-generator.hpp \
+		-header-filter=.* --fix-errors --use-color -p build/*/**
+}
 function run_lcov() {
-    local dir="/opt/sources/build/CMakeFiles/SensorReading-Runner.dir/src"
+    local dir="/opt/sources/build/CMakeFiles/solution-Runner.dir/src/test"
     local file="/opt/sources/build/coverage.info"
-    output "$(lcov --capture --directory $dir --output-file $file)"
+    output "$(lcov --capture --directory $dir --output-file $file )"
+
+    lcov --remove coverage.info '/usr/include/*' 'opt/sources/src/include/*' -o filtered_coverage.info &> /dev/null
+
+    rm coverage.info && mv filtered_coverage.info coverage.info
+
     output "$(genhtml $file -o /opt/sources/build)"
 }
 
@@ -34,15 +44,19 @@ function run_pmccabe() {
     output "$(pmccabe -vc $dir/$file)"
 }
 
-declare_section "Running build.sh"
+declare_section "Running Tests"
 
-run_code &> /dev/null
+run_code
+
+declare_section "Displaying Linting information"
+
+lint
 
 declare_section "Generating Code Coverage"
 
-run_lcov &> /dev/null
+run_lcov
 
-lcov --list /opt/sources/build/coverage.info 2>/dev/null
+lcov --list /opt/sources/build/coverage.info
 
 declare_section "Generating Complexity"
 

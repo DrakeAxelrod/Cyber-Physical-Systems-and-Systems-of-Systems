@@ -28,9 +28,7 @@ RUN rm -rf build && \
   mkdir build && \
   cd build && \
   cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/tmp .. && \
-  make && make install 
-  #&& \
-  #/opt/sources/scripts/build.sh
+  make && make test && /opt/sources/scripts/build.sh && make install
 
 # Second stage for packaging the software into a software bundle:
 FROM drakeaxelrod/cyphyrunner:0.0.1
@@ -42,5 +40,5 @@ WORKDIR /usr/bin
 
 EXPOSE 9900
 
-COPY --from=builder /tmp/bin/template-opencv .
+COPY --from=builder /tmp/bin/solution .
 ENTRYPOINT ["/usr/bin/template-opencv"]
