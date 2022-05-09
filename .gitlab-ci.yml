@@ -89,8 +89,10 @@ release:
     - mkdir -p $HOME/.docker/cli-plugins/
     - wget -O $HOME/.docker/cli-plugins/docker-buildx $BUILDX_URL
     - chmod a+x $HOME/.docker/cli-plugins/docker-buildx
-    - docker buildx build --platform=${BUILDX_PLATFORM} -f Dockerfile -t "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG" .
-    - docker push "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
+    # - docker buildx build --platform=${BUILDX_PLATFORM} -f Dockerfile -t "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG" .
+    # - docker push "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
+    - docker buildx build --platform=${BUILDX_PLATFORM} -f Dockerfile -t cyphy:latest .
+    - docker push cyphy:latest
     # docker push registry.git.chalmers.se/courses/dit638/students/2022-group-05/cyphy
   # rules: 
   #   - if: $CI_COMMIT_TAG && $CI_COMMIT_TAG =~ /^v[0-9]+.[0-9]+.[0-9]+$/ 
