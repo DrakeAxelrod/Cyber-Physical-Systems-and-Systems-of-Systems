@@ -15,21 +15,22 @@
 # Which Docker image shall be used on the GitLab runner?
 
 image: registry.git.chalmers.se/courses/dit638/students/docker/docker:19.03.3
-
+# image: docker:19.03.3
 # Details about how to connect to the Docker service to run this build.
 variables:
   DOCKER_HOST: tcp://docker:2375
   DOCKER_TLS_CERTDIR: ""
   DOCKER_DRIVER: overlay2
-  DOCKER_BUILDKIT: 1
+  # DOCKER_BUILDKIT: 1
   DOCKER_CLI_EXPERIMENTAL: enabled
   BUILDX_URL: https://github.com/docker/buildx/releases/download/v0.3.1/buildx-v0.3.1.linux-amd64
   BUILDX_BUILDER: platformbuilder
   BUILDX_PLATFORM: linux/amd64,linux/arm/v7
-  IMAGE: registry.git.chalmers.se/courses/dit638/students/2022-group-05/cyphy
+  IMAGE: cyphy
 
 services:
   - name: registry.git.chalmers.se/courses/dit638/students/docker/docker:19.03.3-dind
+  # - name: docker:19.03.3-dind
     alias: docker
     command: ["--experimental"]    # Enable experimental features in Docker server
 
@@ -43,7 +44,7 @@ stages:
 before_script:
   - docker info
   # - docker login -u $DOCKER_REG_CID -p $DOCKER_REG_TOKEN $CI_REGISTRY
-  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  # - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
 
 
 # This section describes what shall be done to build and test the project.
@@ -77,7 +78,6 @@ release:
     - docker-build
   stage: deploy
   script:
-    # before_script:
     - mkdir -p $HOME/.docker/cli-plugins/
     - wget -O $HOME/.docker/cli-plugins/docker-buildx $BUILDX_URL
     - chmod a+x $HOME/.docker/cli-plugins/docker-buildx
@@ -90,9 +90,8 @@ release:
     - mkdir -p $HOME/.docker/cli-plugins/
     - wget -O $HOME/.docker/cli-plugins/docker-buildx $BUILDX_URL
     - chmod a+x $HOME/.docker/cli-plugins/docker-buildx
-    # script:
-    - docker buildx build --platform=${BUILDX_PLATFORM} -f Dockerfile -t "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG" --push "."
-    - docker tag ${CI_REGISTRY_IMAGE}:${CI_COMMIT_TAG} ${IMAGE}:latest
+    - docker buildx build --platform=${BUILDX_PLATFORM} -f Dockerfile -t $CI_REGISTRY_IMAGE:$CI_COMMIT_TAG --push "."
+    # - docker tag ${CI_REGISTRY_IMAGE}:${CI_COMMIT_TAG} ${IMAGE}:latest
     - docker push ${CI_REGISTRY_IMAGE}:${CI_COMMIT_TAG}
   rules: 
     - if: $CI_COMMIT_TAG && $CI_COMMIT_TAG =~ /^v[0-9]+.[0-9]+.[0-9]+$/ 
