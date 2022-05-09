@@ -114,8 +114,7 @@ public:
  * @brief the primary function to return the computed steering angle
  *
  */
-void
-steer();
+int steer();
 
 /**
  * @brief your a wizard, you can do magic here
@@ -138,7 +137,7 @@ std::string get_timestamp(std::pair<bool, cluon::data::TimeStamp>, time_t);
  * @param timestamp
  * @param angle
  */
-void turn_in_timestamp(std::pair<bool, cluon::data::TimeStamp>, double);
+std::string turn_in_timestamp(std::pair<bool, cluon::data::TimeStamp>, double);
 
 int sendData(std::string msg);
 int error(std::string msg);

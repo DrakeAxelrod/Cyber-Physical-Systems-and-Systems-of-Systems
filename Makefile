@@ -11,9 +11,7 @@ all: build run lint doc clean
 
 lint:
 	@echo Linting Project
-	clang-tidy \
-		src/cyphy.cpp src/SensorReading.cpp \
-		src/cyphy.hpp src/SensorReading.hpp \
+	clang-tidy  src/solution.cpp src/steering-angel-generator.cpp src/steering-angle-generator.hpp \
 		-header-filter=.* --fix-errors --use-color -p build/*/**
 
 doc:
