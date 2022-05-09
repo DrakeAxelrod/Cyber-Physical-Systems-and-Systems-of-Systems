@@ -9,21 +9,21 @@
 #include <stdio.h>
 #include <string>
 
+const char* HOST = "127.0.0.1";
+const int PORT = 9900;
+
 int error(std::string msg)
 {
   perror(msg.c_str());
   return 1;
-  // exit(0);
 }
 
 int sendData(std::string msg)
 {
-  int sockfd, portno, n;
+  int sockfd, n;
   struct sockaddr_in serv_addr;
   struct hostent *server;
-  server = gethostbyname("127.0.0.1");
-  portno = 9900;
-  char buffer[256];
+  server = gethostbyname(HOST);
   sockfd = socket(AF_INET, SOCK_STREAM, 0);
   if (sockfd < 0)
   {
@@ -37,7 +37,7 @@ int sendData(std::string msg)
   bzero((char *)&serv_addr, sizeof(serv_addr));
   serv_addr.sin_family = AF_INET;
   bcopy((char *)server->h_addr, (char *)&serv_addr.sin_addr.s_addr, server->h_length);
-  serv_addr.sin_port = htons(portno);
+  serv_addr.sin_port = htons(PORT);
   if (connect(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
   {
     error("ERROR connecting");
@@ -47,12 +47,6 @@ int sendData(std::string msg)
   {
     error("ERROR writing to socket");
   }
-  // bzero(buffer, 256);
-  // n = read(sockfd, buffer, 255);
-  // if (n < 0) {
-  //   error("ERROR reading from socket");
-  // }
-  // printf("%s\n", buffer);
   close(sockfd);
   return 0;
 }
