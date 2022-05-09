@@ -92,6 +92,6 @@ release:
     - docker buildx build --platform=${BUILDX_PLATFORM} -f Dockerfile -t "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG" .
     - docker push "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
     # docker push registry.git.chalmers.se/courses/dit638/students/2022-group-05/cyphy
-  rules: 
-    - if: $CI_COMMIT_TAG && $CI_COMMIT_TAG =~ /^v[0-9]+.[0-9]+.[0-9]+$/ 
+  # rules: 
+  #   - if: $CI_COMMIT_TAG && $CI_COMMIT_TAG =~ /^v[0-9]+.[0-9]+.[0-9]+$/ 
     
