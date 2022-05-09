@@ -27,6 +27,7 @@ def display_stats():
     actual_num_0 = 0
     # get the standard deviation of the steering angle
     std_steering = np.std(actual_steering)
+    # std_steering = statistics.pstdev(actual_steering)
     # check whether the computed steering angle is within the threshold +/- 0.05
     # and calculate the number of correct predictions
     correct_predictions = 0

@@ -23,7 +23,7 @@ function run_code() {
 
 function lint() {
   clang-tidy  src/solution.cpp src/steering-angel-generator.cpp src/steering-angle-generator.hpp \
-		-header-filter=.* --fix-errors --use-color -p build/*/**
+		-header-filter=.* --fix-errors -p build/*/**
 }
 function run_lcov() {
     local dir="/opt/sources/build/CMakeFiles/solution-Runner.dir/src/test"

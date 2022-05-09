@@ -3,8 +3,8 @@ LABEL maintainer="<%= group5 %>"
 
 RUN pip3 install numpy
 
-COPY verifier.py /verifier.py
+COPY main.py /main.py
 
 EXPOSE 9900
 
-CMD [ "python3", "verifier.py" ]
+CMD [ "python3", "main.py" ]

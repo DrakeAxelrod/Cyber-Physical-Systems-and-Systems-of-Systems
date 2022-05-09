@@ -70,8 +70,6 @@ pages:
   artifacts:
     paths:
     - public
-  only:
-  - main
 
 # This section describes what shall be done to deploy artefacts from the project.
 release:
