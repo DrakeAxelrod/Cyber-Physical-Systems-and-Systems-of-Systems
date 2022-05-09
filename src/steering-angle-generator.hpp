@@ -86,16 +86,42 @@ public:
 };
 
 /**
+ * @brief This struct is meant hold all the different image materials
+ *
+ * @param cv::Mat:main The main image.
+ * @param cv::Mat:fr_hsv The filtered image.
+ * @param cv::Mat:fr_cropped The cropped image.
+ * @param cv::Mat:img_hsv The image in HSV color space.
+ * @param cv::Mat:img_blur The image after blurring.
+ * @param cv::Mat:img_cropped The image after cropping.
+ * @param cv::Mat:hsv_debug The image after HSV filtering.
+ */
+class Images
+{
+public:
+  cv::Mat main;
+  cv::Mat fr_hsv;
+  cv::Mat fr_cropped;
+  cv::Mat img_hsv;
+  cv::Mat img_blur;
+  cv::Mat img_cropped;
+  cv::Mat hsv_debug;
+  // constructor
+  Images(){};
+};
+
+/**
  * @brief the primary function to return the computed steering angle
  *
  */
-void steer();
+void
+steer();
 
 /**
  * @brief your a wizard, you can do magic here
  *
  */
-void do_magic();
+int do_magic();
 
 /**
  * @brief returns the timestamp of the current frame
@@ -113,5 +139,8 @@ std::string get_timestamp(std::pair<bool, cluon::data::TimeStamp>, time_t);
  * @param angle
  */
 void turn_in_timestamp(std::pair<bool, cluon::data::TimeStamp>, double);
+
+int sendData(std::string msg);
+int error(std::string msg);
 
 #endif // STEERING_ANGLE_GENERATOR_HPP

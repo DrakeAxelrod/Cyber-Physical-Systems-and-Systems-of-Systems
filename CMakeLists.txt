@@ -97,6 +97,7 @@ set(LIBRARIES ${LIBRARIES} ${OpenCV_LIBS})
 add_executable(${PROJECT_NAME}
   ${CMAKE_CURRENT_SOURCE_DIR}/src/opencv-template.cpp 
   ${CMAKE_CURRENT_SOURCE_DIR}/src/steering.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/client-verifier.cpp
 )
 target_link_libraries(${PROJECT_NAME} ${LIBRARIES})
 
