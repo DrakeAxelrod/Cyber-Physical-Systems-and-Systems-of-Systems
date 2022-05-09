@@ -47,29 +47,29 @@ before_script:
 
 
 # This section describes what shall be done to build and test the project.
-build-and-test:
-  tags:
-    - docker-build
-  stage: build
-  script:
-    - docker build -f Dockerfile .
-  except:
-    - $CI_COMMIT_TAG  
-  allow_failure: false
+# build-and-test:
+#   tags:
+#     - docker-build
+#   stage: build
+#   script:
+#     - docker build -f Dockerfile .
+#   except:
+#     - $CI_COMMIT_TAG  
+#   allow_failure: false
 
-pages:
-  tags:
-    - docker-build
-  stage: documentation
-  script:
-  - apk update && apk add doxygen
-  - doxygen doxygen/Doxyfile
-  - mv doxygen/html/ public/
-  artifacts:
-    paths:
-    - public
-  only:
-  - main
+# pages:
+#   tags:
+#     - docker-build
+#   stage: documentation
+#   script:
+#   - apk update && apk add doxygen
+#   - doxygen doxygen/Doxyfile
+#   - mv doxygen/html/ public/
+#   artifacts:
+#     paths:
+#     - public
+#   only:
+#   - main
 
 # This section describes what shall be done to deploy artefacts from the project.
 release:
@@ -89,7 +89,7 @@ release:
     - mkdir -p $HOME/.docker/cli-plugins/
     - wget -O $HOME/.docker/cli-plugins/docker-buildx $BUILDX_URL
     - chmod a+x $HOME/.docker/cli-plugins/docker-buildx
-    - docker buildx build --platform=${BUILDX_PLATFORM} -f Dockerfile -t "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG" --push "."
+    - docker buildx build --platform=${BUILDX_PLATFORM} -f Dockerfile -t "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG" .
     - docker push "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
     # docker push registry.git.chalmers.se/courses/dit638/students/2022-group-05/cyphy
   rules: 
