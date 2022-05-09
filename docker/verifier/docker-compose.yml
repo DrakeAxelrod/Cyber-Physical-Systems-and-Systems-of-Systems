@@ -9,8 +9,28 @@ services:
     network_mode: "host"
     ipc: "host"
     volumes:
-      - $PWD/recordings:/recordings
+      - $PWD/../../recordings:/recordings
       - /tmp:/tmp
     environment:
       - DISPLAY=${DISPLAY}
-    command: "--cid=111 --verbose --name=img /recordings/.rec"
+    command: "--cid=111 --name=img /recordings/CID-140-recording-2020-03-18_144821-selection.rec"
+  # overlay for image data
+  cyphy:
+    image: cyphy/group5:latest
+    build:
+      context: $PWD/../../
+      dockerfile: Dockerfile
+    restart: always
+    network_mode: "host"
+    ipc: host
+    environment:
+      DISPLAY: $DISPLAY
+    volumes:
+      - /tmp:/tmp
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/root/.Xauthority
+    depends_on:
+      - video-h264-replay
+    links: 
+      - video-h264-replay
+    command: --cid=253 --name=img --width=640 --height=480 --verbose
