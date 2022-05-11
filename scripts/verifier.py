@@ -1,26 +1,8 @@
+#!/usr/bin/env python3
 import socket
 import numpy as np
 
-computed_steering = list()
-actual_steering = list()
-
-
-def flush_data():
-    actual_steering.clear()
-    computed_steering.clear()
-
-
-def load_data(data: str):
-    global computed_steering
-    global actual_steering
-    result = data.split("|")
-    actual_steering.append(float(result[0]))
-    computed_steering.append(float(result[1]))
-
-
-def display_stats():
-    global computed_steering
-    global actual_steering
+def display_stats(actual_steering: list, computed_steering: list):
     computed_num_max = 0
     computed_num_0 = 0
     actual_num_max = 0
@@ -54,25 +36,17 @@ def display_stats():
     print('The percentage of correct predictions is: ' + str(round(perc *100)) + '%')
     print('The total # of data points: ' + str(len(computed_steering)))
     print("=====================================================================")
-    flush_data()
 
+# open a csv file called results.csv and reatd the actualSteering column into a list and the computedSteering column into a list
+actual_steering = list()
+computed_steering = list()
+with open('/tmp/results.csv', 'r') as f:
+    for line in f:
+        line = line.split(';')
+        if line[0] != None:
+          actual_steering.append(float(line[0]))
+        if line[1] != None:
+          computed_steering.append(float(line[1]))
+    f.close()
 
-
-serv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-serv.bind(("127.0.0.1", 9900))
-serv.listen(5)
-while True:
-    conn, addr = serv.accept()
-    from_client = ""
-    while True:
-        data = conn.recv(4096)
-        if not data:
-            break
-        from_client += str(data.decode())
-        if from_client == "FINISHED":
-            display_stats()
-        else:
-            load_data(from_client)
-
-        # print(from_client)
-    conn.close()
+display_stats(actual_steering, computed_steering)

@@ -1,45 +1,113 @@
-#!/usr/bin/env python2
-# OpenDaVINCI - Portable middleware for distributed components.
-# Copyright (C) 2017 Christian Berger, Julian Scholle
-#
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
-# of the License, or (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#!/usr/bin/env python3
+import socket
+import os
+import subprocess
+import datetime
+import numpy as np
+import matplotlib.pyplot as plt
+from multiprocessing import Pool
 
-import cv2
+def display_stats(timestamps: list, computed_steering: list, actual_steering: list):
+    computed_num_max = 0
+    computed_num_0 = 0
+    actual_num_max = 0
+    actual_num_0 = 0
+    # get the standard deviation of the steering angle
+    std_steering = np.std(actual_steering)
+    # check whether the computed steering angle is within the threshold +/- 0.05
+    # and calculate the number of correct predictions
+    correct_predictions = 0
+    for i in range(len(actual_steering)):
+        if abs(actual_steering[i]) == 0:
+            actual_num_0 += 1
+        if abs(actual_steering[i]) == 0.290888:
+            actual_num_max += 1
+    for i in range(len(computed_steering)):
+        if abs(computed_steering[i]) == 0:
+            computed_num_0 += 1
+        if abs(computed_steering[i]) == 0.290888:
+            computed_num_max += 1
+        if abs(computed_steering[i] - actual_steering[i]) <= 0.05:
+            correct_predictions += 1
+    perc = correct_predictions / len(computed_steering)
+    # print the results
+    print("============================== Results ==============================")
+    print('the steering angle standard deviation: ' + str(std_steering))
+    print("The number of actual 0s: " + str(actual_num_0))
+    print("The number of computed 0s: " + str(computed_num_0))
+    print("The number of actual maxs: " + str(actual_num_max))
+    print('The number of computed maxs: ' + str(computed_num_max))
+    print('the number correct predictions: ' + str(correct_predictions))
+    print('The percentage of correct predictions is: ' + str(round(perc *100)) + '%')
+    print('The total # of data points: ' + str(len(computed_steering)))
+    print("=====================================================================")
+    # plot
 
-import OD4Listener
-import opendlv_standard_message_set_pb2
+def create_graph(timestamps: list, computed_steering: list, actual_steering: list, name: str):
+  pngname = rec_file.replace("CID-140-recording-2020-03-18_", "").replace("-selection.rec", "")
+  # convert the timestamps to seconds passed since entry 0
+  timestamps = [
+    str(x) + "0" if len(str(x)) == 15 else  str(x)
+  for x in timestamps]
+  # plot the steering angle
+  # 0 margins
+  plt.figure(figsize=(16,10))
+  plt.plot(timestamps, actual_steering, 'r', label='actual steering')
+  plt.plot(timestamps, computed_steering, 'b', label='computed steering')
+  plt.legend()
+  plt.title(f"{name}")
+  # rotate all the x-axis labels by 90 degrees
+  plt.xticks(rotation=90)
+  # skip every other label
+  plt.xticks(timestamps[::10])
+  # change the font size of the x-axis labels to be half
+  plt.xticks(fontsize=8)
+  plt.xlabel("sampleTimeStamp (microseconds)")
+  plt.ylabel("steeringAngles (radians)")
+  # remove white space around the plot
+  plt.tight_layout()
+  plt.savefig(f"./graphs/{pngname}.png")
+  plt.close()
 
-def onMessage(msg, timeStamps):
-    print("sent: " + str(timeStamps[0]) + ", received: " + str(timeStamps[1]) + ", sample time point: "  + str(timeStamps[2]))
-    print(msg)
 
 
-def onImage(msg, image, timeStamps):
-    print("sent: " + str(timeStamps[0]) + ", received: " + str(timeStamps[1]) + ", sample time point: "  + str(timeStamps[2]))
-    print(msg)
-    cv2.imshow('image', image)
-    cv2.waitKey(1)
+def readCSV(filepath: str):
+  # open a csv file called results.csv and reatd the actualSteering column into a list and the computedSteering column into a list
+  timestamps = list()
+  actual_steering = list()
+  computed_steering = list()
+  file, ext = os.path.splitext(filepath)
+  filepath = f"./csvs/{file}.csv"
+  with open(filepath, 'r') as f:
+      for line in f:
+          line = line.split(';')
+          if line[1] != None:
+            timestamps.append(int(line[1]))
+          if line[2] != None:
+            computed_steering.append(float(line[2]))
+          if line[3] != None:
+            actual_steering.append(float(line[3]))
+      f.close()
+  return timestamps, computed_steering, actual_steering
 
-# "Main" part.
-listener = OD4Listener.OD4Listener(cid=253, port=9900) # Connect to OpenDaVINCI CID session under CID 189.
-#node.registerMessageCallback(28, onMessage, opendavinci_pb2.odcore_data_SharedPointCloud)
 
-# // Message identifier: 1039.
-# message opendlv_proxy_DistanceReading {
-#     optional float distance = 1;
-# }
-listener.registerMessageCallback(1039, onMessage, opendlv_standard_message_set_pb2.opendlv_proxy_DistanceReading)
-listener.connect()
-listener.run()
+def run_rec_file(rec_file: str):
+  filename = rec_file.replace("CID-140-recording-2020-03-18_", "").replace("-selection.rec", "")
+  cmd = f"./runner.sh ./recordings/{rec_file} {rec_file}"
+  p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
+  (output, err) = p.communicate()
+  #This makes the wait possible
+  p_status = p.wait()
+  (timestamps, computed_steering, actual_steering) = readCSV(rec_file)
+  display_stats(timestamps, computed_steering, actual_steering)
+  create_graph(timestamps, computed_steering, actual_steering, rec_file)
+
+def run_all_rec_files():
+  run_rec_file("CID-140-recording-2020-03-18_144821-selection.rec")
+  run_rec_file("CID-140-recording-2020-03-18_145043-selection.rec")
+  run_rec_file("CID-140-recording-2020-03-18_145233-selection.rec")
+  run_rec_file("CID-140-recording-2020-03-18_145641-selection.rec")
+  run_rec_file("CID-140-recording-2020-03-18_150001-selection.rec")
+
+if __name__ == '__main__':
+  run_all_rec_files()

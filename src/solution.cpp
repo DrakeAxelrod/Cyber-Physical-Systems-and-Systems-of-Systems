@@ -1,5 +1,6 @@
 #include "steering-angle-generator.hpp"
 #include <limits>
+#include <fstream>
 const std::string hsv_window_name = "HSVView";
 // Matrix to store points of cones in HSV filter.
 std::vector<std::vector<cv::Point>> blue_points;
@@ -20,7 +21,7 @@ cv::Scalar color_blue(255, 0, 0);
 // color yellow as a scalar value BGR (blue, green, red)
 cv::Scalar color_yellow(0, 255, 255);
 // Constants
-const double CLOCKWISE_LEFT = 0.1771807038;
+const double CLOCKWISE_LEFT = 0.1171807038;
 const double CLOCKWISE_RIGHT = -0.1356987459;
 const double COUNTERCLOCKWISE_LEFT = 0.1203680391;
 const double COUNTERCLOCKWISE_RIGHT = -0.1308372994;
@@ -28,102 +29,30 @@ const double MEDIAN_TURN_VALUE = 0.14102119705;
 const double MAX_STEERING_VALUE = 0.290888;
 const int NOISE_THRESHOLD = 0;
 
-
 // ================= verifier code ====================== //
-std::vector<double> actual_steering = std::vector<double>();
-std::vector<double> computed_steering = std::vector<double>();
-// std calculation taken from https://www.programiz.com/cpp-programming/examples/standard-deviation
-double calculateSTD(std::vector<double> data) {
-  double sum = 0.0, mean, standardDeviation = 0.0;
-  int n = data.size();
-  for (int i = 0; i < n; ++i) {
-    sum += data[i];
-  }
-  mean = sum / n;
-  for (int i = 0; i < n; ++i) {
-    standardDeviation += pow(data[i] - mean, 2);
-  }
-  return sqrt(standardDeviation / n);
-}
-// https://stackoverflow.com/questions/17333/what-is-the-most-effective-way-for-float-and-double-comparison
-bool doubleEquality(double a, double b)
+std::vector<std::string> csv_lines = std::vector<std::string>();
+std::string output;
+void toCSV(std::string filepath)
 {
-    return std::fabs(a - b) < std::numeric_limits<double>::epsilon();
-}
-void compute_results() {
-  // print the contents of the vectors
-  std::cout << "Actual steering: ";
-  for (int i = 0; i < actual_steering.size(); i++) {
-    std::cout << actual_steering[i] << " ";
+  std::ofstream myfile;
+  myfile.open(filepath);
+  // myfile << "actualSteering" << ";" << "computedSteering" << std::endl;
+  for (int i = 0; i < csv_lines.size(); i++)
+  {
+    myfile << csv_lines[i] << std::endl;
   }
-  std::cout << std::endl;
-  std::cout << "Computed steering: ";
-  for (int i = 0; i < computed_steering.size(); i++) {
-    std::cout << computed_steering[i] << " ";
-  }
-  std::cout << std::endl;
-
-  int computed_num_max = 0;
-  int computed_num_0 = 0;
-  int actual_num_max = 0;
-  int actual_num_0 = 0;
-  int correct_predictions = 0;
-  // check whether the computed steering angle is within the threshold +/- 0.05
-  // standard deviation function
-  double std_actual_steering = calculateSTD(actual_steering);
-  // get computed number of max steering angles both negative and positive
-  for (int i = 0; i < computed_steering.size(); i++) {
-    // check if the computed steering angle is within +/- 0.05 of the actual steering angle
-    if (computed_steering[i] > actual_steering[i] - 0.05 && computed_steering[i] < actual_steering[i] + 0.05) {
-      correct_predictions++;
-    }
-    if (doubleEquality(computed_steering[i], MAX_STEERING_VALUE)) {
-      computed_num_max++;
-    }
-    if (doubleEquality(computed_steering[i], -MAX_STEERING_VALUE)) {
-      computed_num_max++;
-    }
-    if (doubleEquality(computed_steering[i], 0)) {
-      computed_num_0++;
-    }
-  }
-  // get actual number of max steering angles both negative and positive
-  for (int i = 0; i < actual_steering.size(); i++) {
-    if (doubleEquality(actual_steering[i], MAX_STEERING_VALUE)) {
-      actual_num_max++;
-    }
-    if (doubleEquality(actual_steering[i], -MAX_STEERING_VALUE)) {
-      actual_num_max++;
-    }
-    if (doubleEquality(actual_steering[i], 0)) {
-      actual_num_0++;
-    }
-  }
-  // calculate the percentage of correct predictions
-  // double percentage_correct = correct_predictions / actual_steering.size();
-  // round to 2 decimal places
-  // percentage_correct = (percentage_correct * 100);
-  // print the results
-    std::cout << "============================== Results ==============================" << std::endl;
-    std::cout << "the steering angle standard deviation: " << std_actual_steering << std::endl;
-    std::cout << "The number of actual 0s: " << actual_num_0 << std::endl;
-    std::cout << "The number of computed 0s: " << computed_num_0 << std::endl;
-    std::cout << "The number of actual maxs: " << actual_num_max << std::endl;
-    std::cout << "The number of computed maxs: " << computed_num_max << std::endl;
-    std::cout << "the number correct predictions: " << correct_predictions << std::endl;
-    std::cout << "The percentage of correct predictions is: " << (correct_predictions / actual_steering.size()) << "%" << std::endl;
-    std::cout << "The total # of data points: " << actual_steering.size() << std::endl;
-    std::cout << "=====================================================================" << std::endl;
+  myfile.close();
 }
 // ================= verifier code ====================== //
 
-
-class Cone {
+class Cone
+{
 public:
   cv::Rect box;
   cv::Scalar color;
   // constructor
-  Cone(cv::Rect box, cv::Scalar color) {
+  Cone(cv::Rect box, cv::Scalar color)
+  {
     this->box = box;
     this->color = color;
   }
@@ -131,45 +60,53 @@ public:
   cv::Rect getBox() { return box; }
   cv::Scalar getColor() { return color; }
   // get the angrom from the center of the box to the center of a point
-  double getAngleFrom(cv::Point point) {
+  double getAngleFrom(cv::Point point)
+  {
     double angle = atan2(point.y - box.y - box.height / 2,
                          point.x - box.x - box.width / 2);
     return angle;
   }
   // get the distance from the center of the box to the center of a point
-  double getDistanceFrom(cv::Point point) {
+  double getDistanceFrom(cv::Point point)
+  {
     return sqrt(pow(point.x - box.x - box.width / 2, 2) +
                 pow(point.y - box.y - box.height / 2, 2));
   }
   // get the center of the box
-  cv::Point getCenter() {
+  cv::Point getCenter()
+  {
     return cv::Point(box.x + box.width / 2, box.y + box.height / 2);
   }
 };
 
-bool detectBlueCones(cv::Mat hsv_frame) {
+bool detectBlueCones(cv::Mat hsv_frame)
+{
   cv::findContours(hsv_frame, blue_points, cv::RETR_EXTERNAL,
                    cv::CHAIN_APPROX_SIMPLE, cv::Point());
   return blue_points.size() > 0 ? true : false;
 }
 
-bool detectYellowCones(cv::Mat hsv_frame) {
+bool detectYellowCones(cv::Mat hsv_frame)
+{
   cv::findContours(hsv_frame, yellow_points, cv::RETR_EXTERNAL,
                    cv::CHAIN_APPROX_SIMPLE, cv::Point());
   return yellow_points.size() > 0 ? true : false;
 }
 
 Cone getCone(cv::Mat cropped_frame, cv::Mat hsv_frame, cv::Scalar color,
-             std::vector<std::vector<cv::Point>> matrix) {
+             std::vector<std::vector<cv::Point>> matrix)
+{
   // create a bounding box
   cv::Rect box(cv::Point(0, 0), cv::Size(0, 0));
   // extract the bounding box of the cone from the provided matrix
   // cv::findContours(hsv_frame, matrix, cv::RETR_EXTERNAL,
   // cv::CHAIN_APPROX_SIMPLE, cv::Point()); draw box
   cv::rectangle(cropped_frame, box, color, 2);
-  for (auto &contour : matrix) {
+  for (auto &contour : matrix)
+  {
     cv::Rect tmp = cv::boundingRect(contour);
-    if (tmp.area() > NOISE_THRESHOLD) {
+    if (tmp.area() > NOISE_THRESHOLD)
+    {
       // using the matrix build a bounding box
       cv::Rect tmp = cv::boundingRect(contour);
       cv::Point tmp_center =
@@ -178,7 +115,8 @@ Cone getCone(cv::Mat cropped_frame, cv::Mat hsv_frame, cv::Scalar color,
       cv::rectangle(cropped_frame, tmp, color, 2);
       // draw the center of the bounding box
       cv::circle(cropped_frame, tmp_center, 5, color, -1);
-      if (box.width > 0) {
+      if (box.width > 0)
+      {
         // get the box center
         cv::Point center =
             cv::Point(box.x + box.width / 2, box.y + box.height / 2);
@@ -200,7 +138,8 @@ Cone getCone(cv::Mat cropped_frame, cv::Mat hsv_frame, cv::Scalar color,
 double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
                         opendlv::proxy::AccelerationReading ar,
                         opendlv::proxy::AngularVelocityReading vel,
-                        opendlv::logic::sensation::Geolocation gr) {
+                        opendlv::logic::sensation::Geolocation gr)
+{
   double blue_correction = 0;
   double yellow_correction = 0;
   // segment blue
@@ -259,10 +198,14 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
 
   bool blue_is_left = false;
   // check if blue center is to the left of the car
-  if (blue_detected && yellow_detected) {
-    if (blue_center.x < car.x) {
+  if (blue_detected && yellow_detected)
+  {
+    if (blue_center.x < car.x)
+    {
       blue_is_left = true;
-    } else {
+    }
+    else
+    {
       blue_is_left = false;
     }
   }
@@ -277,82 +220,103 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   //    return middle_angle_from_car;
   // }
   if (!blue_is_left && blue_detected && !yellow_detected &&
-      blue_distance < 200) {
+      blue_distance < 200)
+  {
     return MAX_STEERING_VALUE;
-  } else if (!blue_is_left && yellow_detected && !blue_detected &&
-             yellow_distance < 200) {
+  }
+  else if (!blue_is_left && yellow_detected && !blue_detected &&
+           yellow_distance < 200)
+  {
     return -MAX_STEERING_VALUE;
   }
   if (blue_detected && yellow_detected && blue_distance > 300 &&
-      yellow_distance > 300) {
+      yellow_distance > 300)
+  {
     // if ((blue_is_left && blue_distance > 320 && yellow_distance > 340) ||
     // (!blue_is_left && blue_distance > 320 && yellow_distance > 300))
     // {
     return 0;
   }
 
-  if (blue_detected && blue_is_left && (blue_distance < threshold)) {
+  if (blue_detected && blue_is_left && (blue_distance < threshold))
+  {
     double turn_intensity = (threshold - blue_distance) / 100;
     // std::cout << "blue is left. b_distance: " << blue_distance << std::endl;
-    if (blue_distance < 120) {
+    if (blue_distance < 120)
+    {
       return -MAX_STEERING_VALUE;
     }
     blue_correction = CLOCKWISE_RIGHT * turn_intensity * blue_angle_from_car;
-    if (blue_correction < MAX_STEERING_VALUE) {
+    if (blue_correction < MAX_STEERING_VALUE)
+    {
       return -MAX_STEERING_VALUE;
-    } else
+    }
+    else
       return blue_correction;
   }
 
-  if (blue_detected && !blue_is_left && (blue_distance < threshold)) {
+  if (blue_detected && !blue_is_left && (blue_distance < threshold))
+  {
     double turn_intensity = (threshold - blue_distance) / 100;
     // std::cout << "blue is right. b_distance: " << blue_distance <<
     // "turn_intensity: " << turn_intensity << "b_mag: " << blue_angle_from_car
     // << std::endl;
-    if (blue_distance < 120) {
+    if (blue_distance < 120)
+    {
       return MAX_STEERING_VALUE;
     }
     blue_correction =
         COUNTERCLOCKWISE_LEFT * turn_intensity * blue_angle_from_car;
-    if (blue_correction > MAX_STEERING_VALUE) {
+    if (blue_correction > MAX_STEERING_VALUE)
+    {
       return MAX_STEERING_VALUE;
-    } else
+    }
+    else
       return blue_correction;
   }
 
-  if (yellow_detected && blue_is_left && (yellow_distance < threshold)) {
+  if (yellow_detected && blue_is_left && (yellow_distance < threshold))
+  {
     double turn_intensity = (threshold - yellow_distance) / 100;
     // std::cout << "yellow is right. y_distance: " << yellow_distance <<
     // std::endl;
-    if (yellow_distance < 120) {
+    if (yellow_distance < 120)
+    {
       return MAX_STEERING_VALUE;
     }
     yellow_correction = CLOCKWISE_LEFT * turn_intensity * yellow_angle_from_car;
-    if (yellow_correction > MAX_STEERING_VALUE) {
+    if (yellow_correction > MAX_STEERING_VALUE)
+    {
       return MAX_STEERING_VALUE;
-    } else
+    }
+    else
       return yellow_correction;
   }
 
-  if (yellow_detected && !blue_is_left && (yellow_distance < threshold)) {
+  if (yellow_detected && !blue_is_left && (yellow_distance < threshold))
+  {
     double turn_intensity = (threshold - yellow_distance) / 100;
     // std::cout << "yellow is left. y_distance: " << yellow_distance <<
     // "turn_intensity: " << turn_intensity << " y_mag: " <<
     // yellow_angle_from_car << std::endl;
-    if (yellow_distance < 120) {
+    if (yellow_distance < 120)
+    {
       return -MAX_STEERING_VALUE;
     }
     yellow_correction =
         COUNTERCLOCKWISE_RIGHT * turn_intensity * yellow_angle_from_car;
-    if (yellow_correction < MAX_STEERING_VALUE) {
+    if (yellow_correction < MAX_STEERING_VALUE)
+    {
       return -MAX_STEERING_VALUE;
-    } else
+    }
+    else
       return yellow_correction;
   }
   return 0;
 }
 
-int32_t main(int32_t argc, char **argv) {
+int32_t main(int32_t argc, char **argv)
+{
   int32_t retCode{1};
   // Parse the command line parameters as we require the user to specify some
   // mandatory information on startup.
@@ -360,13 +324,16 @@ int32_t main(int32_t argc, char **argv) {
   if ((0 == commandlineArguments.count("cid")) ||
       (0 == commandlineArguments.count("name")) ||
       (0 == commandlineArguments.count("width")) ||
-      (0 == commandlineArguments.count("height"))) {
+      (0 == commandlineArguments.count("height")) ||
+      (0 == commandlineArguments.count("output")))
+  {
     std::cerr << argv[0]
               << " attaches to a shared memory area containing an ARGB image."
               << std::endl;
     std::cerr << "Usage:   " << argv[0]
               << " --cid=<OD4 session> --name=<name of shared memory area> "
                  "[--verbose]"
+                 "[--output]"
               << std::endl;
     std::cerr << "         --cid:    CID of the OD4Session to send and receive "
                  "messages"
@@ -376,9 +343,11 @@ int32_t main(int32_t argc, char **argv) {
     std::cerr << "         --width:  width of the frame" << std::endl;
     std::cerr << "         --height: height of the frame" << std::endl;
     std::cerr << "Example: " << argv[0]
-              << " --cid=253 --name=img --width=640 --height=480 --verbose"
+              << " --cid=253 --name=img --width=640 --height=480 --output=example.csv --verbose"
               << std::endl;
-  } else {
+  }
+  else
+  {
     // Extract the values from the command line parameters
     const std::string NAME{commandlineArguments["name"]};
     const uint32_t WIDTH{
@@ -386,11 +355,12 @@ int32_t main(int32_t argc, char **argv) {
     const uint32_t HEIGHT{
         static_cast<uint32_t>(std::stoi(commandlineArguments["height"]))};
     const bool VERBOSE{commandlineArguments.count("verbose") != 0};
-
+    const std::string OUTPUT{commandlineArguments["output"]};
     // Attach to the shared memory.
     std::unique_ptr<cluon::SharedMemory> sharedMemory{
         new cluon::SharedMemory{NAME}};
-    if (sharedMemory && sharedMemory->valid()) {
+    if (sharedMemory && sharedMemory->valid())
+    {
       std::clog << argv[0] << ": Attached to shared memory '"
                 << sharedMemory->name() << " (" << sharedMemory->size()
                 << " bytes)." << std::endl;
@@ -399,7 +369,8 @@ int32_t main(int32_t argc, char **argv) {
       // exchanged. The instance od4 allows you to send and receive messages.
       cluon::OD4Session od4{
           static_cast<uint16_t>(std::stoi(commandlineArguments["cid"]))};
-      if (VERBOSE) {
+      if (VERBOSE)
+      {
         cv::namedWindow(hsv_window_name, cv::WINDOW_NORMAL);
         cv::createTrackbar("Hue - low", hsv_window_name, &hsv_bounds.h.low,
                            179);
@@ -418,7 +389,8 @@ int32_t main(int32_t argc, char **argv) {
       opendlv::proxy::GroundSteeringRequest gsr;
       std::mutex gsrMutex;
       auto onGroundSteeringRequest = [&gsr,
-                                      &gsrMutex](cluon::data::Envelope &&env) {
+                                      &gsrMutex](cluon::data::Envelope &&env)
+      {
         std::lock_guard<std::mutex> lck(gsrMutex);
         gsr = cluon::extractMessage<opendlv::proxy::GroundSteeringRequest>(
             std::move(env));
@@ -430,7 +402,8 @@ int32_t main(int32_t argc, char **argv) {
       opendlv::proxy::MagneticFieldReading mfr;
       std::mutex mfrMutex;
       auto getMagnetFieldReading = [&mfr,
-                                    &mfrMutex](cluon::data::Envelope &&env) {
+                                    &mfrMutex](cluon::data::Envelope &&env)
+      {
         std::lock_guard<std::mutex> lck(mfrMutex);
         mfr = cluon::extractMessage<opendlv::proxy::MagneticFieldReading>(
             std::move(env));
@@ -442,7 +415,8 @@ int32_t main(int32_t argc, char **argv) {
       opendlv::proxy::AccelerationReading ar;
       std::mutex arMutex;
       auto getAccelerationReading = [&ar,
-                                     &arMutex](cluon::data::Envelope &&env) {
+                                     &arMutex](cluon::data::Envelope &&env)
+      {
         std::lock_guard<std::mutex> lck(arMutex);
         ar = cluon::extractMessage<opendlv::proxy::AccelerationReading>(
             std::move(env));
@@ -453,7 +427,8 @@ int32_t main(int32_t argc, char **argv) {
       // get velocity
       opendlv::proxy::AngularVelocityReading vel;
       std::mutex velMutex;
-      auto getVelocityReading = [&vel, &velMutex](cluon::data::Envelope &&env) {
+      auto getVelocityReading = [&vel, &velMutex](cluon::data::Envelope &&env)
+      {
         std::lock_guard<std::mutex> lck(velMutex);
         vel = cluon::extractMessage<opendlv::proxy::AngularVelocityReading>(
             std::move(env));
@@ -464,7 +439,8 @@ int32_t main(int32_t argc, char **argv) {
       // get distance reading
       opendlv::proxy::DistanceReading dr;
       std::mutex drMutex;
-      auto getDistanceReading = [&dr, &drMutex](cluon::data::Envelope &&env) {
+      auto getDistanceReading = [&dr, &drMutex](cluon::data::Envelope &&env)
+      {
         std::lock_guard<std::mutex> lck(drMutex);
         dr = cluon::extractMessage<opendlv::proxy::DistanceReading>(
             std::move(env));
@@ -476,7 +452,8 @@ int32_t main(int32_t argc, char **argv) {
       opendlv::proxy::ImageReading ireading;
       std::mutex ireadingMutex;
       auto getImageReading = [&ireading,
-                              &ireadingMutex](cluon::data::Envelope &&env) {
+                              &ireadingMutex](cluon::data::Envelope &&env)
+      {
         std::lock_guard<std::mutex> lck(ireadingMutex);
         ireading =
             cluon::extractMessage<opendlv::proxy::ImageReading>(std::move(env));
@@ -487,14 +464,15 @@ int32_t main(int32_t argc, char **argv) {
       opendlv::logic::sensation::Geolocation gr;
       std::mutex grMutex;
       auto getGeolocationReading = [&gr,
-                                    &grMutex](cluon::data::Envelope &&env) {
+                                    &grMutex](cluon::data::Envelope &&env)
+      {
         std::lock_guard<std::mutex> lck(grMutex);
         gr = cluon::extractMessage<opendlv::logic::sensation::Geolocation>(
             std::move(env));
       };
       od4.dataTrigger(opendlv::logic::sensation::Geolocation::ID(),
                       getGeolocationReading);
-
+      output = OUTPUT;
       // region on image (bounding box)
       //          (x, y,          width,    height)
       cv::Rect region_of_interest(0, HEIGHT / 2, WIDTH - 1, (HEIGHT / 5));
@@ -502,7 +480,8 @@ int32_t main(int32_t argc, char **argv) {
       car = cv::Point(WIDTH / 2, HEIGHT / 1.3);
 
       // Endless loop; end the program by pressing Ctrl-C.
-      while (od4.isRunning() && sharedMemory->valid()) {
+      while (od4.isRunning() && sharedMemory->valid())
+      {
         std::stringstream ss; // stringstream to hold text for the image.
         // std::string timestamp; // timestamp :D
         std::pair<bool, cluon::data::TimeStamp> ts;
@@ -573,32 +552,15 @@ int32_t main(int32_t argc, char **argv) {
                     cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
         ss.str("");
         ss.clear();
-
-        std::cout << (turn_in_timestamp(ts, steering_angle)) << std::endl;
-        std::cout << gsr.groundSteering() << std::endl;
+        std::string timestamp = turn_in_timestamp(ts, steering_angle);
+        std::cout << timestamp << std::endl;
         // float *gsr_steer_angle = &gsr.groundSteering();
-        actual_steering.push_back(gsr.groundSteering());
-        computed_steering.push_back(steering_angle);
-        // if (ts.second.seconds() == 1584542901) {
-        // try {
-        //   sendData(str);
-        // } catch (const std::exception &e) {
-        //   std::cerr << e.what() << '\n';
-        // }
-        // }
-        // ss << gsr.groundSteering() << "|" << steering_angle;
-        // try {
-        //   sendData(ss.str());
-        // } catch (const std::exception &e) {
-        //   std::cerr << e.what() << '\n';
-        // }
-        // std::cout << "actual_steering.append(" << gsr.groundSteering() << ")"
-        // << "actual_steering.computed(" << steering_angle << ")" << std::endl;
-        // ss.str("");
-        // ss.clear();
+        ss << timestamp << ";" << gsr.groundSteering();
+        std::cout << ss.str() << std::endl;
+        csv_lines.push_back(ss.str());
 
-
-        if (VERBOSE) {
+        if (VERBOSE)
+        {
           imgs.hsv_debug = imgs.img_hsv.clone();
           cv::blur(imgs.hsv_debug, imgs.hsv_debug, cv::Size(7, 7));
           cv::cvtColor(imgs.hsv_debug, imgs.hsv_debug, cv::COLOR_BGR2HSV);
@@ -622,12 +584,8 @@ int32_t main(int32_t argc, char **argv) {
     }
     retCode = 0;
   }
-  // try {
-  //   int clientRetCode = sendData("FINISHED");
-  //   std::cout << "clientRetCode: " << clientRetCode << std::endl;
-  // } catch (const std::exception &e) {
-  //   std::cerr << e.what() << '\n';
-  // }
-  compute_results();
+  if (output != "") {
+    toCSV(output);
+  }
   return retCode;
 }

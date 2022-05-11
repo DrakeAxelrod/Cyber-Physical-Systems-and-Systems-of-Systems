@@ -3,10 +3,10 @@
 
 // Include the single-file, header-only middleware libcluon to create
 // high-performance microservices
-#include "cluon-complete.hpp"
+#include "cluon-complete-v0.0.127.hpp"
 // Include the OpenDLV Standard Message Set that contains messages that are
 // usually exchanged for automotive or robotic applications
-#include "opendlv-standard-message-set.hpp"
+#include "opendlv-standard-message-set-v0.9.6.odvd"
 
 // Include the GUI and image processing header files from OpenCV
 #include <opencv2/highgui/highgui.hpp>

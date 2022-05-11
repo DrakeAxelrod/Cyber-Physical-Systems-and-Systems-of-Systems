@@ -11,9 +11,11 @@ services:
     volumes:
       - $PWD/../../recordings:/recordings
       - /tmp:/tmp
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/root/.Xauthority
     environment:
       - DISPLAY=${DISPLAY}
-    command: "--cid=111 --name=img /recordings/CID-140-recording-2020-03-18_144821-selection.rec"
+    command: "--cid=253 --name=img /recordings/CID-140-recording-2020-03-18_144821-selection.rec"
   # Must be present exactly once at the beginning of the docker-compose.yml file
   # overlay for image data
   cyphy:

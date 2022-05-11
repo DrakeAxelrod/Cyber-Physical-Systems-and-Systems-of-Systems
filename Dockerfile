@@ -38,7 +38,9 @@ ENV DEBIAN_FRONTEND noninteractive
 
 WORKDIR /usr/bin
 
-EXPOSE 9900
+RUN apt-get update -y && apt-get upgrade -y && apt-get install -y \
+  python3 python3-pip \
+  && pip3 install numpy
 
 COPY --from=builder /tmp/bin/solution .
 ENTRYPOINT ["/usr/bin/solution"]
