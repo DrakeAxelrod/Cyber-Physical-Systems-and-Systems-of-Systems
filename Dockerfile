@@ -30,6 +30,16 @@ RUN rm -rf build && \
   cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/tmp .. && \
   make && make test && /opt/sources/scripts/build.sh && make install
 
+FROM python:latest as verifier
+LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
+
+RUN pip3 install numpy && pip3 install seaborn && pip3 install matplotlib
+
+COPY ./docker/verifier/ /opt/sources/
+COPY --from=builder /tmp/bin/solution /opt/sources/
+
+RUN python3 /opt/sources/main.py
+
 # Second stage for packaging the software into a software bundle:
 FROM drakeaxelrod/cyphyrunner:0.0.1
 LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
@@ -38,9 +48,9 @@ ENV DEBIAN_FRONTEND noninteractive
 
 WORKDIR /usr/bin
 
-RUN apt-get update -y && apt-get upgrade -y && apt-get install -y \
-  python3 python3-pip \
-  && pip3 install numpy
+RUN apt-get update -y && apt-get upgrade -y
 
-COPY --from=builder /tmp/bin/solution .
+# COPY --from=builder /tmp/bin/solution .
+COPY --from=verifier /opt/sources/ .
+
 ENTRYPOINT ["/usr/bin/solution"]
