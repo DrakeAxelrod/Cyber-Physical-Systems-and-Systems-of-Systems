@@ -42,7 +42,9 @@ def display_stats():
             computed_num_max += 1
         if abs(computed_steering[i] - actual_steering[i]) <= 0.05:
             correct_predictions += 1
-    perc = correct_predictions / len(computed_steering)
+    perc = 0
+    if len(computed_steering) > 0:
+        perc = correct_predictions / len(computed_steering)
     # print the results
     print("============================== Results ==============================")
     print('the steering angle standard deviation: ' + str(std_steering))
