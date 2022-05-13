@@ -50,27 +50,27 @@ before_script:
 
 
 # This section describes what shall be done to build and test the project.
-build-and-test:
-  tags:
-    - docker-build
-  stage: build
-  script:
-    - docker build -f Dockerfile .
-  except:
-    - $CI_COMMIT_TAG  
-  allow_failure: false
+# build-and-test:
+#   tags:
+#     - docker-build
+#   stage: build
+#   script:
+#     - docker build -f Dockerfile .
+#   except:
+#     - $CI_COMMIT_TAG  
+#   allow_failure: false
 
-pages:
-  tags:
-    - docker-build
-  stage: documentation
-  script:
-  - apk update && apk add doxygen
-  - doxygen doxygen/Doxyfile
-  - mv doxygen/html/ public/
-  artifacts:
-    paths:
-    - public
+# pages:
+#   tags:
+#     - docker-build
+#   stage: documentation
+#   script:
+#   - apk update && apk add doxygen
+#   - doxygen doxygen/Doxyfile
+#   - mv doxygen/html/ public/
+#   artifacts:
+#     paths:
+#     - public
 
 verify:
   image: ubuntu:18.04
