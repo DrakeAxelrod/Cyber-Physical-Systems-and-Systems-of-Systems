@@ -1,26 +1,12 @@
 # First stage for building the software:
-# FROM drakeaxelrod/cyphybuilder:0.0.1 as builder
-# LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
-
-# ENV DEBIAN_FRONTEND noninteractive
-# ADD . /opt/sources
-# WORKDIR /opt/sources
-
-# RUN rm -rf build && \
-#   mkdir build && \
-#   cd build && \
-#   cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/tmp .. && \
-#   make && make test && /opt/sources/scripts/build.sh && make install
-
-# FROM opendlv-video-h264-replay/verifier:latest
-FROM drakeaxelrod/opendlv-video-h264-replay:latest as verifier
+FROM drakeaxelrod/opendlv-video-h264-replay:latest as builder
 LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
 
 ENV DEBIAN_FRONTEND noninteractive
 
 ADD . /opt/sources
 WORKDIR /opt/sources
-
+VOLUME ./verification-results
 RUN apt-get update -y && \
     apt-get upgrade -y && \
     apt-get dist-upgrade -y && \
@@ -43,19 +29,7 @@ RUN rm -rf build && \
   cd build && \
   cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/tmp .. && \
   make && make test && /opt/sources/scripts/build.sh && make install && \
-  cd .. &&  cp /tmp/bin/solution /usr/bin/solution && \
-  cd verifier && python3 main.py
+  cp /tmp/bin/solution /usr/bin/solution
+  # chmod +x ./scripts/verifier && chmod +x ./scripts/verifier-runner.sh
 
-# # Second stage for packaging the software into a software bundle:
-FROM drakeaxelrod/cyphyrunner:0.0.1
-LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
-
-ENV DEBIAN_FRONTEND noninteractive
-
-WORKDIR /usr/bin
-
-RUN apt-get update -y && apt-get upgrade -y
-
-COPY --from=verifier /usr/bin/solution .
-
-ENTRYPOINT ["/usr/bin/solution"]
+ENTRYPOINT [ "/opt/sources/verifier" ]

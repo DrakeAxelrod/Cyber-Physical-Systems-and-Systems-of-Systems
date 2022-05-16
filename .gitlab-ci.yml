@@ -54,11 +54,12 @@ build-and-test:
   stage: build
   script:
     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
-    - docker cp $(docker create --rm group5/buildntest:latest):/opt/sources/verifier ./verification-results
+    # copy the verification result folder from the container to the docker process filesystem
+    - docker cp buildntest:/opt/sources/verification-results/ ./results/
   artifacts:
+    expose_as: results
     paths:
-    - verification-results/csvs
-    - verification-results/graphs
+      - results/
   except:
     - $CI_COMMIT_TAG  
   allow_failure: false
@@ -68,12 +69,12 @@ pages:
     - docker-build
   stage: pages
   script:
-  - apk update && apk add doxygen
-  - doxygen doxygen/Doxyfile
-  - mv doxygen/html/ public/
+    - apk update && apk add doxygen
+    - doxygen doxygen/Doxyfile
+    - mv doxygen/html/ public/
   artifacts:
     paths:
-    - public
+      - public
 
 # This section describes what shall be done to deploy artefacts from the project.
 release:
