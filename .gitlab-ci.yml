@@ -54,7 +54,7 @@ build-and-test:
   stage: build
   script:
     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
-    # copy the verification result folder from the container to the docker process filesystem
+    - mkdir results
     - docker cp buildntest:/opt/sources/verification-results/ ./results/
   artifacts:
     expose_as: results
