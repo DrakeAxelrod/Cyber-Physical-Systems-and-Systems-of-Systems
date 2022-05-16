@@ -1,44 +1,61 @@
 # First stage for building the software:
-FROM drakeaxelrod/cyphybuilder:0.0.1 as builder
+# FROM drakeaxelrod/cyphybuilder:0.0.1 as builder
+# LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
+
+# ENV DEBIAN_FRONTEND noninteractive
+# ADD . /opt/sources
+# WORKDIR /opt/sources
+
+# RUN rm -rf build && \
+#   mkdir build && \
+#   cd build && \
+#   cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/tmp .. && \
+#   make && make test && /opt/sources/scripts/build.sh && make install
+
+# FROM opendlv-video-h264-replay/verifier:latest
+FROM drakeaxelrod/opendlv-video-h264-replay:latest as verifier
 LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
 
 ENV DEBIAN_FRONTEND noninteractive
+
 ADD . /opt/sources
 WORKDIR /opt/sources
-
-RUN rm -rf build && \
-  mkdir build && \
-  cd build && \
-  cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/tmp .. && \
-  make && make test && /opt/sources/scripts/build.sh && make install
-
-
-FROM opendlv-video-h264-replay:latest
-LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
-
-ENV DEBIAN_FRONTEND noninteractive
-ADD . /opt/sources
-WORKDIR /opt/sources
-
-COPY ./docker/verifier/ /opt/sources/
-COPY --from=builder /tmp/bin/solution /opt/sources/solution
 
 RUN apt-get update -y && \
     apt-get upgrade -y && \
     apt-get dist-upgrade -y && \
     apt-get install -y --no-install-recommends \
-      python3 python3-pip
+      python3 \
+      python3-pip \
+      ca-certificates \
+      cmake \
+      build-essential \
+      libopencv-dev \
+      lcov \
+      clang-tidy \
+      pmccabe && \
+      pip3 install numpy && \
+      pip3 install seaborn && \
+      pip3 install matplotlib
 
-RUN pip3 install numpy && pip3 install seaborn && pip3 install matplotlib
+RUN rm -rf build && \
+  mkdir build && \
+  cd build && \
+  cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/tmp .. && \
+  make && make test && /opt/sources/scripts/build.sh && make install && \
+  cd .. &&  cp /tmp/bin/solution /usr/bin/solution && \
+  cd verifier && python3 main.py
 
-CMD [ "python3", "/opt/sources/main.py" ]
+# # Second stage for packaging the software into a software bundle:
+FROM drakeaxelrod/cyphyrunner:0.0.1
+LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
 
-# FROM python:latest
-# LABEL group 5 "https://git.chalmers.se/courses/dit638/students/2022-group-05"
+ENV DEBIAN_FRONTEND noninteractive
 
-# RUN pip3 install numpy && pip3 install seaborn && pip3 install matplotlib
+WORKDIR /usr/bin
 
-# COPY ./docker/verifier/ /opt/sources/
-# COPY --from=builder /tmp/bin/solution /opt/sources/
+RUN apt-get update -y && apt-get upgrade -y
 
-# CMD [ "python3", "/opt/sources/main.py" ]
+COPY --from=verifier /usr/bin/solution .
+
+ENTRYPOINT ["/usr/bin/solution"]
