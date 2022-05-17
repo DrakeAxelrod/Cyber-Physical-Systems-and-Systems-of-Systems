@@ -1,0 +1,55 @@
+File: /opt/sources/verification-results/csvs/CID-140-recording-2020-03-18_144821-selection.csv
+============================== Results ==============================
+the steering angle standard deviation: 0.1081652422779655
+The number of actual 0s: 233
+The number of computed 0s: 197
+The number of actual maxs: 38
+The number of computed maxs: 22
+the number correct predictions: 200
+The percentage of correct predictions is: 55%
+The total # of data points: 366
+=====================================================================
+File: /opt/sources/verification-results/csvs/CID-140-recording-2020-03-18_145233-selection.csv
+============================== Results ==============================
+the steering angle standard deviation: 0.08844496295769887
+The number of actual 0s: 496
+The number of computed 0s: 413
+The number of actual maxs: 48
+The number of computed maxs: 39
+the number correct predictions: 374
+The percentage of correct predictions is: 47%
+The total # of data points: 798
+=====================================================================
+File: /opt/sources/verification-results/csvs/CID-140-recording-2020-03-18_145043-selection.csv
+============================== Results ==============================
+the steering angle standard deviation: 0.12024490320356652
+The number of actual 0s: 420
+The number of computed 0s: 383
+The number of actual maxs: 109
+The number of computed maxs: 41
+the number correct predictions: 443
+The percentage of correct predictions is: 54%
+The total # of data points: 813
+=====================================================================
+File: /opt/sources/verification-results/csvs/CID-140-recording-2020-03-18_145641-selection.csv
+============================== Results ==============================
+the steering angle standard deviation: 0.10379645556896754
+The number of actual 0s: 484
+The number of computed 0s: 401
+The number of actual maxs: 79
+The number of computed maxs: 39
+the number correct predictions: 366
+The percentage of correct predictions is: 46%
+The total # of data points: 803
+=====================================================================
+File: /opt/sources/verification-results/csvs/CID-140-recording-2020-03-18_150001-selection.csv
+============================== Results ==============================
+the steering angle standard deviation: 0.10686543775256381
+The number of actual 0s: 487
+The number of computed 0s: 375
+The number of actual maxs: 80
+The number of computed maxs: 13
+the number correct predictions: 484
+The percentage of correct predictions is: 59%
+The total # of data points: 819
+=====================================================================

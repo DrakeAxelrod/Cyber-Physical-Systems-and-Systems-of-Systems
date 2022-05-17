@@ -70,8 +70,8 @@ class DataSet():
     # make stats dir if it doesn't exist
     if not os.path.exists("/opt/sources/verification-results/stats"):
       os.makedirs("/opt/sources/verification-results/stats")
-    path = self.rec_file.replace("/opt/sources/verification-results/csvs/CID-140-recording-2020-03-18_", "").replace("-selection.csv", "")
-    path = f"{path}.txt"
+    name = self.rec_file.replace("/opt/sources/verification-results/csvs/CID-140-recording-2020-03-18_", "").replace("-selection.csv", "")
+    path = f"/opt/sources/verification-results/stats/{name}.txt"
     with open(path, "a") as f:
       f.write(f"""
 File: {self.rec_file}
