@@ -19,6 +19,7 @@ if __name__ == "__main__":
   # curl --output test.zip -H "PRIVATE-TOKEN: glpat-UAyNtbYBMZQxPv_h2jzs" https://git.chalmers.se/api/v4/projects/5345/jobs/197615/artifacts
   subprocess.run(["curl", "-o", "vresults.zip", "--globoff", "-H", f"PRIVATE-TOKEN: {TOKEN}", f"{API}/jobs/{id}/artifacts"])
   subprocess.run(["ls", "-al"])
+  subprocess.run(["cat", "vresults.zip"])
   with zipfile.ZipFile("./vresults.zip", "r") as zip_ref:
       zip_ref.extractall(".")
   subprocess.run(["mv", "vresults", "verification-results"])
