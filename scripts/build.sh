@@ -22,7 +22,7 @@ function run_code() {
 }
 
 function lint() {
-  clang-tidy  src/solution.cpp src/steering-angel-generator.cpp src/steering-angle-generator.hpp \
+  clang-tidy  src/solution.cpp src/steering-angle-generator.cpp src/steering-angle-generator.hpp \
 		-header-filter=.* --fix-errors -p build/*/**
 }
 function run_lcov() {
