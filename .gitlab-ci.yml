@@ -53,7 +53,7 @@ build-and-test:
   stage: build
   script:
     - apk add curl unzip
-    - curl https://git.chalmers.se/api/v4/projects/$CI_PROJECT_ID/jobs/artifacts/main/download?job=build-and-test&job_token=$CI_JOB_TOKEN
+    - 'curl https://git.chalmers.se/api/v4/projects/$CI_PROJECT_ID/jobs/artifacts/main/download?job=build-and-test&job_token=$CI_JOB_TOKEN'
     # - unzip ./artifacts.zip
     # - mv ./vresults ./verifications-results
     - apk add --no-cache python3 py3-pip
