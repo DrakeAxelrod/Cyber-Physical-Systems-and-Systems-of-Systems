@@ -11,7 +11,7 @@ import sys
 
 
 if __name__ == "__main__":
-  TOKEN = sys.argv[1]
+  TOKEN = "glpat-UAyNtbYBMZQxPv_h2jzs"
   API = "https://git.chalmers.se/api/v4/projects/5345"
   url = f"{API}/jobs"
   response = requests.get(url, headers={ "PRIVATE-TOKEN": TOKEN })
