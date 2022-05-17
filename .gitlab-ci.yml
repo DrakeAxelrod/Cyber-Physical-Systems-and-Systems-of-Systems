@@ -53,8 +53,8 @@ build-and-test:
   stage: build
   script:
     - apk add curl unzip
-    - curl --output ./vresults.zip https://git.chalmers.se/api/v4/projects/$CI_PROJECT_ID/jobs/artifacts/main/download?job=build-and-test&job_token=$CI_JOB_TOKEN
-    - unzip ./vresults.zip
+    - curl https://git.chalmers.se/api/v4/projects/$CI_PROJECT_ID/jobs/artifacts/main/download?job=build-and-test&job_token=$CI_JOB_TOKEN
+    - unzip ./artifacts.zip
     - mv ./vresults ./verifications-results
     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
     - docker cp $(docker create group5/buildntest:latest):/opt/sources/verification-results ./vresults
