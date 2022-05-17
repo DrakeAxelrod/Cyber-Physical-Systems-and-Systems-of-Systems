@@ -134,6 +134,7 @@ Cone getCone(cv::Mat cropped_frame, cv::Mat hsv_frame, cv::Scalar color,
   return Cone(box, color);
 }
 
+
 // calculate the give steering adjustment based on the
 // distance of the blue & yellow cones from the center of the car
 double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
@@ -245,11 +246,20 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
     {
       return -MAX_STEERING_VALUE;
     }
-    blue_correction = CLOCKWISE_RIGHT * turn_intensity * blue_angle_from_car;
-    if (blue_correction < MAX_STEERING_VALUE)
     blue_correction = CLOCKWISE_RIGHT * turn_intensity * (blue_angle_from_car / 4) * (vel.angularVelocityZ()/-10);
+    if (blue_correction < -MAX_STEERING_VALUE)
+    {
+      return -MAX_STEERING_VALUE;
+    }
+    else
+    {
+      std::cout << "steering: " << blue_correction << std::endl;
+      return blue_correction;
+    }
   }
+
   if (blue_detected && !blue_is_left && (blue_distance < threshold))
+  {
     double turn_intensity = (threshold - blue_distance) / 50;
     // std::cout << "blue is right. b_distance: " << blue_distance << std::endl;
     // "turn_intensity: " << turn_intensity << "b_mag: " << blue_angle_from_car
@@ -260,17 +270,30 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
     }
     blue_correction =
         COUNTERCLOCKWISE_LEFT * turn_intensity * (blue_angle_from_car / 4) * (vel.angularVelocityZ()/10);
+    if (blue_correction > MAX_STEERING_VALUE)
+    {
+      return MAX_STEERING_VALUE;
     }
+    else
       return blue_correction;
   }
 
   if (yellow_detected && blue_is_left && (yellow_distance < threshold))
   {
-    double turn_intensity = (threshold - yellow_distance) / 100;
-    // std::cout << "yellow is right. y_distance: " << yellow_distance <<
-    // std::endl;
+    double turn_intensity = (threshold - yellow_distance) / 50;
+    std::cout << "yellow is right. y_distance: " << yellow_distance << std::endl;
+    if (yellow_distance < 120)
+    {
+      return MAX_STEERING_VALUE;
+    }
+    yellow_correction = CLOCKWISE_LEFT * turn_intensity * (yellow_angle_from_car / 4) * (vel.angularVelocityZ()/10);
+    if (yellow_correction > MAX_STEERING_VALUE)
+    {
+      return MAX_STEERING_VALUE;
     }
     else
+      return yellow_correction;
+  }
 
   if (yellow_detected && !blue_is_left && (yellow_distance < threshold))
   {
@@ -280,8 +303,9 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
     // yellow_angle_from_car << std::endl;
     if (yellow_distance < 120)
     {
-        COUNTERCLOCKWISE_RIGHT * turn_intensity * yellow_angle_from_car;
-    if (yellow_correction < MAX_STEERING_VALUE)
+      return -MAX_STEERING_VALUE;
+    }
+    yellow_correction =
         COUNTERCLOCKWISE_RIGHT * turn_intensity * (yellow_angle_from_car / 4) * (vel.angularVelocityZ()/-10);
     if (yellow_correction < -MAX_STEERING_VALUE)
     {
@@ -292,6 +316,7 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   }
   return 0;
 }
+
 
 int32_t main(int32_t argc, char **argv)
 {
