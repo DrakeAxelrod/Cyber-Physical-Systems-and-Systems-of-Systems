@@ -53,7 +53,8 @@ build-and-test:
     - docker-build
   stage: build
   script:
-    - docker cp $(docker build -t group5/buildntest:latest -f Dockerfile.verifier .):/opt/sources/verification-results ./vresults
+    - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
+    - docker cp $(docker create group5/buildntest:latest):/opt/sources/verification-results ./vresults
   artifacts:
     expose_as: vresults
     paths:
