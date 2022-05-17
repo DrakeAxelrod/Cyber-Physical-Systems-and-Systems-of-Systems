@@ -1,5 +1,6 @@
 #include "steering-angle-generator.hpp"
 #include <limits>
+#include <fstream>
 const std::string hsv_window_name = "HSVView";
 // Matrix to store points of cones in HSV filter.
 std::vector<std::vector<cv::Point>> blue_points;
@@ -30,118 +31,18 @@ const double MAX_STEERING_VALUE = 0.290888;
 const int NOISE_THRESHOLD = 0;
 
 // ================= verifier code ====================== //
-std::vector<double> actual_steering = std::vector<double>();
-std::vector<double> computed_steering = std::vector<double>();
-// std calculation taken from https://www.programiz.com/cpp-programming/examples/standard-deviation
-double calculateSTD(std::vector<double> data)
+std::vector<std::string> csv_lines = std::vector<std::string>();
+std::string output;
+void toCSV(std::string filepath)
 {
-  double sum = 0.0, mean, standardDeviation = 0.0;
-  int n = data.size();
-  for (int i = 0; i < n; ++i)
+  std::ofstream myfile;
+  myfile.open(filepath);
+  // myfile << "actualSteering" << ";" << "computedSteering" << std::endl;
+  for (int i = 0; i < csv_lines.size(); i++)
   {
-    sum += data[i];
+    myfile << csv_lines[i] << std::endl;
   }
-  mean = sum / n;
-  for (int i = 0; i < n; ++i)
-  {
-    standardDeviation += pow(data[i] - mean, 2);
-  }
-  return sqrt(standardDeviation / n);
-}
-// https://stackoverflow.com/questions/17333/what-is-the-most-effective-way-for-float-and-double-comparison
-bool doubleEquality(double a, double b)
-{
-  return std::fabs(a - b) < std::numeric_limits<double>::epsilon();
-}
-
-bool accuracy(double computed, double actual)
-{
-  std::cout << "actual: " << actual << "computed: " << computed << std::endl;
-  if (abs(computed - actual) <= 0.05)
-  {
-    std::cout << "true" << std::endl;
-    return 1;
-  }
-  return 0;
-}
-
-void compute_results()
-{
-  // print the contents of the vectors
-  std::cout << "Actual steering: ";
-  for (int i = 0; i < actual_steering.size(); i++)
-  {
-    std::cout << actual_steering[i] << " ";
-  }
-  std::cout << std::endl;
-  std::cout << "Computed steering: ";
-  for (int i = 0; i < computed_steering.size(); i++)
-  {
-    std::cout << computed_steering[i] << " ";
-  }
-  std::cout << std::endl;
-
-  int computed_num_max = 0;
-  int computed_num_0 = 0;
-  int actual_num_max = 0;
-  int actual_num_0 = 0;
-  int correct_predictions = 0;
-  // check whether the computed steering angle is within the threshold +/- 0.05
-  // standard deviation function
-  double std_actual_steering = calculateSTD(actual_steering);
-  // get computed number of max steering angles both negative and positive
-  for (int i = 0; i < computed_steering.size(); i++)
-  {
-    // check if the computed steering angle is within +/- 0.05 of the actual steering angle
-    if (accuracy(computed_steering[i], actual_steering[i]))
-    {
-      correct_predictions++;
-    }
-    if (doubleEquality(computed_steering[i], MAX_STEERING_VALUE))
-    {
-      computed_num_max++;
-    }
-    if (doubleEquality(computed_steering[i], -MAX_STEERING_VALUE))
-    {
-      computed_num_max++;
-    }
-    if (doubleEquality(computed_steering[i], 0))
-    {
-      computed_num_0++;
-    }
-  }
-  // get actual number of max steering angles both negative and positive
-  for (int i = 0; i < actual_steering.size(); i++)
-  {
-    if (doubleEquality(actual_steering[i], MAX_STEERING_VALUE))
-    {
-      actual_num_max++;
-    }
-    if (doubleEquality(actual_steering[i], -MAX_STEERING_VALUE))
-    {
-      actual_num_max++;
-    }
-    if (doubleEquality(actual_steering[i], 0))
-    {
-      actual_num_0++;
-    }
-  }
-  // calculate the percentage of correct predictions
-  // double percentage_correct = correct_predictions / actual_steering.size();
-  // round to 2 decimal places
-  double percentage_correct = ((correct_predictions / actual_steering.size()) * 100);
-  // print the results
-  //
-  std::cout << "============================== Results ==============================" << std::endl;
-  std::cout << "the steering angle standard deviation: " << std_actual_steering << std::endl;
-  std::cout << "The number of actual 0s: " << actual_num_0 << std::endl;
-  std::cout << "The number of computed 0s: " << computed_num_0 << std::endl;
-  std::cout << "The number of actual maxs: " << actual_num_max << std::endl;
-  std::cout << "The number of computed maxs: " << computed_num_max << std::endl;
-  std::cout << "the number correct predictions: " << correct_predictions << std::endl;
-  std::cout << "The percentage of correct predictions is: " << percentage_correct << "%" << std::endl;
-  std::cout << "The total # of data points: " << actual_steering.size() << std::endl;
-  std::cout << "=====================================================================" << std::endl;
+  myfile.close();
 }
 // ================= verifier code ====================== //
 
@@ -232,6 +133,7 @@ Cone getCone(cv::Mat cropped_frame, cv::Mat hsv_frame, cv::Scalar color,
   }
   return Cone(box, color);
 }
+
 
 // calculate the give steering adjustment based on the
 // distance of the blue & yellow cones from the center of the car
@@ -415,6 +317,7 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   return 0;
 }
 
+
 int32_t main(int32_t argc, char **argv)
 {
   int32_t retCode{1};
@@ -424,7 +327,8 @@ int32_t main(int32_t argc, char **argv)
   if ((0 == commandlineArguments.count("cid")) ||
       (0 == commandlineArguments.count("name")) ||
       (0 == commandlineArguments.count("width")) ||
-      (0 == commandlineArguments.count("height")))
+      (0 == commandlineArguments.count("height")) ||
+      (0 == commandlineArguments.count("output")))
   {
     std::cerr << argv[0]
               << " attaches to a shared memory area containing an ARGB image."
@@ -432,6 +336,7 @@ int32_t main(int32_t argc, char **argv)
     std::cerr << "Usage:   " << argv[0]
               << " --cid=<OD4 session> --name=<name of shared memory area> "
                  "[--verbose]"
+                 "[--output]"
               << std::endl;
     std::cerr << "         --cid:    CID of the OD4Session to send and receive "
                  "messages"
@@ -441,7 +346,7 @@ int32_t main(int32_t argc, char **argv)
     std::cerr << "         --width:  width of the frame" << std::endl;
     std::cerr << "         --height: height of the frame" << std::endl;
     std::cerr << "Example: " << argv[0]
-              << " --cid=253 --name=img --width=640 --height=480 --verbose"
+              << " --cid=253 --name=img --width=640 --height=480 --output=example.csv --verbose"
               << std::endl;
   }
   else
@@ -453,7 +358,7 @@ int32_t main(int32_t argc, char **argv)
     const uint32_t HEIGHT{
         static_cast<uint32_t>(std::stoi(commandlineArguments["height"]))};
     const bool VERBOSE{commandlineArguments.count("verbose") != 0};
-
+    const std::string OUTPUT{commandlineArguments["output"]};
     // Attach to the shared memory.
     std::unique_ptr<cluon::SharedMemory> sharedMemory{
         new cluon::SharedMemory{NAME}};
@@ -570,7 +475,7 @@ int32_t main(int32_t argc, char **argv)
       };
       od4.dataTrigger(opendlv::logic::sensation::Geolocation::ID(),
                       getGeolocationReading);
-
+      output = OUTPUT;
       // region on image (bounding box)
       //          (x, y,          width,    height)
       cv::Rect region_of_interest(0, HEIGHT / 2, WIDTH - 1, (HEIGHT / 5));
@@ -650,30 +555,12 @@ int32_t main(int32_t argc, char **argv)
                     cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
         ss.str("");
         ss.clear();
-
-        std::cout << (turn_in_timestamp(ts, steering_angle)) << std::endl;
-        std::cout << gsr.groundSteering() << std::endl;
-        double gsr_steer_angle = gsr.groundSteering();
-        actual_steering.push_back(gsr_steer_angle);
-        //actual_steering.push_back(gsr.groundSteering());
-        computed_steering.push_back(steering_angle);
-        // if (ts.second.seconds() == 1584542901) {
-        // try {
-        //   sendData(str);
-        // } catch (const std::exception &e) {
-        //   std::cerr << e.what() << '\n';
-        // }
-        // }
-        // ss << gsr.groundSteering() << "|" << steering_angle;
-        // try {
-        //   sendData(ss.str());
-        // } catch (const std::exception &e) {
-        //   std::cerr << e.what() << '\n';
-        // }
-        // std::cout << "actual_steering.append(" << gsr.groundSteering() << ")"
-        // << "actual_steering.computed(" << steering_angle << ")" << std::endl;
-        // ss.str("");
-        // ss.clear();
+        std::string timestamp = turn_in_timestamp(ts, steering_angle);
+        std::cout << timestamp << std::endl;
+        // float *gsr_steer_angle = &gsr.groundSteering();
+        ss << timestamp << ";" << gsr.groundSteering();
+        std::cout << ss.str() << std::endl;
+        csv_lines.push_back(ss.str());
 
         if (VERBOSE)
         {
@@ -700,15 +587,8 @@ int32_t main(int32_t argc, char **argv)
     }
     retCode = 0;
   }
-  try
-  {
-    int clientRetCode = sendData("FINISHED");
-    std::cout << "clientRetCode: " << clientRetCode << std::endl;
+  if (output != "") {
+    toCSV(output);
   }
-  catch (const std::exception &e)
-  {
-    std::cerr << e.what() << '\n';
-  }
-  compute_results();
   return retCode;
 }

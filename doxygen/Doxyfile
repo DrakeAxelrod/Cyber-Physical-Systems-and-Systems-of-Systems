@@ -9,12 +9,14 @@ HAVE_DOT = YES
 UML_LOOK = YES
 CALL_GRAPH = YES
 CALLER_GRAPH = YES
-EXCLUDE =  src/cluon-complete-v0.0.127.hpp \
-					 src/catch.hpp \
-					 src/opendlv-standard-message-set-v0.9.6.odvd \
-					 src/cluon-complete.hpp \
-					 src/catch.hpp \
-					 src/opendlv-standard-message-set.hpp
+COLLABORATION_GRAPH = YES
+HAVE_DOT = YES
+EXCLUDE =  src/include/cluon-complete-v0.0.127.hpp \
+					 src/include/catch.hpp \
+					 src/include/opendlv-standard-message-set-v0.9.6.odvd \
+					 src/include/cluon-complete.hpp \
+					 src/include/catch.hpp \
+					 src/include/opendlv-standard-message-set.hpp
 
 BUILTIN_STL_SUPPORT = YES
 

@@ -37,8 +37,7 @@ services:
 
 stages:
   - build
-  - documentation
-  - test
+  - pages
   - deploy
 
 # Display information before we start the build.
@@ -54,7 +53,12 @@ build-and-test:
     - docker-build
   stage: build
   script:
-    - docker build -f Dockerfile .
+    - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
+    - docker cp $(docker create group5/buildntest:latest):/opt/sources/verification-results ./vresults
+  artifacts:
+    expose_as: vresults
+    paths:
+      - vresults/
   except:
     - $CI_COMMIT_TAG  
   allow_failure: false
@@ -62,14 +66,14 @@ build-and-test:
 pages:
   tags:
     - docker-build
-  stage: documentation
+  stage: pages
   script:
-  - apk update && apk add doxygen
-  - doxygen doxygen/Doxyfile
-  - mv doxygen/html/ public/
+    - apk update && apk add doxygen
+    - doxygen doxygen/Doxyfile
+    - mv doxygen/html/ public/
   artifacts:
     paths:
-    - public
+      - public
 
 # This section describes what shall be done to deploy artefacts from the project.
 release:
