@@ -1,10 +1,10 @@
 # make a http request
 # parse the response
 # print the job id
-import requests
+# import requests
 import json
 import subprocess
-import zipfile
+# import zipfile
 import os
 import time
 import sys
