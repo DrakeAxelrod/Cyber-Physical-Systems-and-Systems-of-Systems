@@ -66,6 +66,26 @@ class DataSet():
     print('The percentage of correct predictions is: ' + str(round(perc *100)) + '%')
     print('The total # of data points: ' + str(len(self.computed_steering)))
     print("=====================================================================")
+    # write the results to a file
+    # make stats dir if it doesn't exist
+    if not os.path.exists("/opt/sources/verification-results/stats"):
+      os.makedirs("/opt/sources/verification-results/stats")
+    path = self.rec_file.replace("/opt/sources/verification-results/csvs/CID-140-recording-2020-03-18_", "").replace("-selection.csv", "")
+    path = f"{path}.txt"
+    with open(path, "a") as f:
+      f.write(f"""
+File: {self.rec_file}
+============================== Results ==============================
+the steering angle standard deviation: {str(std_steering)}
+The number of actual 0s: {str(actual_num_0)}
+The number of computed 0s: {str(computed_num_0)}
+The number of actual maxs: {str(actual_num_max)}
+The number of computed maxs: {str(computed_num_max)}
+the number correct predictions: {str(correct_predictions)}
+The percentage of correct predictions is: {str(round(perc *100))}%
+The total # of data points: {str(len(self.computed_steering))}
+=====================================================================
+""")
 
   def create_graph(self):
     # make all lists normalized on the timestamp length
@@ -114,40 +134,6 @@ class DataSet():
     self.computed_steering = self.computed_steering[:len(self.timestamps)]
     self.previous_computed_steering = self.previous_computed_steering[:len(self.timestamps)]
 
-def display_stats(timestamps: list, computed_steering: list, actual_steering: list):
-    computed_num_max = 0
-    computed_num_0 = 0
-    actual_num_max = 0
-    actual_num_0 = 0
-    # get the standard deviation of the steering angle
-    std_steering = np.std(actual_steering)
-    # check whether the computed steering angle is within the threshold +/- 0.05
-    # and calculate the number of correct predictions
-    correct_predictions = 0
-    for i in range(len(actual_steering)):
-        if abs(actual_steering[i]) == 0:
-            actual_num_0 += 1
-        if abs(actual_steering[i]) == 0.290888:
-            actual_num_max += 1
-    for i in range(len(computed_steering)):
-        if abs(computed_steering[i]) == 0:
-            computed_num_0 += 1
-        if abs(computed_steering[i]) == 0.290888:
-            computed_num_max += 1
-        if abs(computed_steering[i] - actual_steering[i]) <= 0.05:
-            correct_predictions += 1
-    perc = correct_predictions / len(computed_steering)
-    # print the results
-    print("============================== Results ==============================")
-    print('the steering angle standard deviation: ' + str(std_steering))
-    print("The number of actual 0s: " + str(actual_num_0))
-    print("The number of computed 0s: " + str(computed_num_0))
-    print("The number of actual maxs: " + str(actual_num_max))
-    print('The number of computed maxs: ' + str(computed_num_max))
-    print('the number correct predictions: ' + str(correct_predictions))
-    print('The percentage of correct predictions is: ' + str(round(perc *100)) + '%')
-    print('The total # of data points: ' + str(len(computed_steering)))
-    print("=====================================================================")
 
 def readCSV(filepath: str):
   # open a csv file called results.csv and reatd the actualSteering column into a list and the computedSteering column into a list
@@ -319,7 +305,7 @@ if __name__ == '__main__':
   try:
     for k in datasets.keys():
       datasets[k].create_graph()
-      print(datasets[k])
+      datasets[k].display_stats()
     make_box_plot(datasets)
   except Exception as e:
     print(e)

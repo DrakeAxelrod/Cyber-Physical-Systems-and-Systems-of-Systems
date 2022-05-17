@@ -13,10 +13,10 @@ if __name__ == "__main__":
   TOKEN = sys.argv[1]
   API = "https://git.chalmers.se/api/v4/projects/5345"
   url = f"{API}/jobs"
-  response = requests.get(url, headers={ "PRIVATE-TOKEN": TOKEN })
+  response = requests.get(url, headers={ "JOB-TOKEN": TOKEN })
   data = json.loads(response.text)
   id = data[1]["id"]
-  subprocess.run(["curl", "-o", "vresults.zip", "--globoff", "-H", f"PRIVATE-TOKEN: {TOKEN}", f"{API}/jobs/{id}/artifacts"])
+  subprocess.run(["curl", "-o", "vresults.zip", "--globoff", "-H", f"JOB-TOKEN: {TOKEN}", f"{API}/jobs/{id}/artifacts"])
   subprocess.run(["ls", "-al"])
   with zipfile.ZipFile("./vresults.zip", "r") as zip_ref:
       zip_ref.extractall(".")
