@@ -55,25 +55,7 @@ class DataSet():
         correct_predictions += 1
     perc = correct_predictions / len(self.computed_steering)
     # print the results
-    print("File: " + self.rec_file)
-    print("============================== Results ==============================")
-    print('the steering angle standard deviation: ' + str(std_steering))
-    print("The number of actual 0s: " + str(actual_num_0))
-    print("The number of computed 0s: " + str(computed_num_0))
-    print("The number of actual maxs: " + str(actual_num_max))
-    print('The number of computed maxs: ' + str(computed_num_max))
-    print('the number correct predictions: ' + str(correct_predictions))
-    print('The percentage of correct predictions is: ' + str(round(perc *100)) + '%')
-    print('The total # of data points: ' + str(len(self.computed_steering)))
-    print("=====================================================================")
-    # write the results to a file
-    # make stats dir if it doesn't exist
-    if not os.path.exists("/opt/sources/verification-results/stats"):
-      os.makedirs("/opt/sources/verification-results/stats")
-    name = self.rec_file.replace("/opt/sources/verification-results/csvs/CID-140-recording-2020-03-18_", "").replace("-selection.csv", "")
-    path = f"/opt/sources/verification-results/stats/{name}.txt"
-    with open(path, "a") as f:
-      f.write(f"""
+    s = f"""
 File: {self.rec_file}
 ============================== Results ==============================
 the steering angle standard deviation: {str(std_steering)}
@@ -85,7 +67,16 @@ the number correct predictions: {str(correct_predictions)}
 The percentage of correct predictions is: {str(round(perc *100))}%
 The total # of data points: {str(len(self.computed_steering))}
 =====================================================================
-""")
+"""
+    print(s)
+    # write the results to a file
+    # make stats dir if it doesn't exist
+    if not os.path.exists("/opt/sources/verification-results/stats"):
+      os.makedirs("/opt/sources/verification-results/stats")
+    name = self.rec_file.replace("/opt/sources/verification-results/csvs/CID-140-recording-2020-03-18_", "").replace("-selection.csv", "")
+    path = f"/opt/sources/verification-results/stats/{name}.txt"
+    with open(path, "a") as f:
+      f.write(s)
 
   def create_graph(self):
     # make all lists normalized on the timestamp length
