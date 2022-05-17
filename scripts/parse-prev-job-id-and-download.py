@@ -15,6 +15,7 @@ if __name__ == "__main__":
   url = f"{API}/jobs"
   response = requests.get(url, headers={ "JOB-TOKEN": TOKEN })
   data = json.loads(response.text)
+  print(data)
   id = data[1]["id"]
   subprocess.run(["curl", "-o", "vresults.zip", "--globoff", "-H", f"JOB-TOKEN: {TOKEN}", f"{API}/jobs/{id}/artifacts"])
   subprocess.run(["ls", "-al"])
