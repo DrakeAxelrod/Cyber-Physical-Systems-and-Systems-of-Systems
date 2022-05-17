@@ -17,7 +17,7 @@ if __name__ == "__main__":
   data = json.loads(response.text)
   id = data[1]["id"]
   # curl --output test.zip -H "PRIVATE-TOKEN: glpat-UAyNtbYBMZQxPv_h2jzs" https://git.chalmers.se/api/v4/projects/5345/jobs/197615/artifacts
-  subprocess.run(["curl", "-o", "vresults.zip", "--globoff", "-H", f"PRIVATE-TOKEN: {TOKEN}", f"{API}/jobs/{id}/artifacts"])
+  subprocess.run(["curl", "-o", "vresults.zip", "--globoff", "-H", f"JOB-TOKEN: {sys.argv[1]}", f"{API}/jobs/{id}/artifacts"])
   subprocess.run(["ls", "-al"])
   subprocess.run(["cat", "vresults.zip"])
   with zipfile.ZipFile("./vresults.zip", "r") as zip_ref:
