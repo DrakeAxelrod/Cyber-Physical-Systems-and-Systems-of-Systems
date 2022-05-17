@@ -53,11 +53,11 @@ build-and-test:
   stage: build
   script:
     - apk add curl unzip
-    - 'curl -H "PRIVATE-TOKEN: glpat-UAyNtbYBMZQxPv_h2jzs" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=build-and-test'
-    # - unzip ./artifacts.zip
-    # - mv ./vresults ./verifications-results
-    - apk add --no-cache python3 py3-pip
-    - python3 scripts/parse-prev-job-id-and-download.py
+    - 'curl -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=build-and-test'
+    - unzip ./artifacts.zip
+    - mv ./vresults ./verifications-results
+    # - apk add --no-cache python3 py3-pip
+    # - python3 scripts/parse-prev-job-id-and-download.py
     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
     - docker cp $(docker create group5/buildntest:latest):/opt/sources/verification-results ./vresults
   artifacts:
