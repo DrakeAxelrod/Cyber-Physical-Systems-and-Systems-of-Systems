@@ -18,7 +18,7 @@ if __name__ == "__main__":
   id = data[1]["id"]
   subprocess.run(["curl", "-o", "vresults.zip", "--globoff", "-H", f"PRIVATE-TOKEN: {TOKEN}", f"{API}/jobs/{id}/artifacts"])
   # zzz
-  sleep(5)
+  time.sleep(5)
   with zipfile.ZipFile("vresults.zip", "r") as zip_ref:
       zip_ref.extractall(".")
   subprocess.run(["rm", "vresults.zip"])
