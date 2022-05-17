@@ -54,12 +54,10 @@ build-and-test:
   stage: build
   script:
     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
-    - mkdir results
-    - docker cp buildntest:/opt/sources/verification-results/ ./results/
   artifacts:
-    expose_as: results
+    expose_as: verification-results
     paths:
-      - results/
+      - verification-results/
   except:
     - $CI_COMMIT_TAG  
   allow_failure: false
