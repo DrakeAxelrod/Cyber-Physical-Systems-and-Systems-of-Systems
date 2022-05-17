@@ -14,7 +14,8 @@ HSVBounds hsv_bounds = HSVBounds(17, 35, 89, 175, 128, 216);
 // nose of the car
 cv::Point car;
 double steering_angle = 0;
-double threshold = 355;
+double threshold = 340;
+bool blue_is_left;
 Images imgs = Images();
 // color blue as a scalar value BGR (blue, green, red)
 cv::Scalar color_blue(255, 0, 0);
@@ -196,7 +197,6 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   // cv::putText(imgs.fr_cropped, oss.str(), cv::Point(10, 20),
   // cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(255, 255, 255), 1, CV_AA);
 
-  bool blue_is_left = false;
   // check if blue center is to the left of the car
   if (blue_detected && yellow_detected)
   {
@@ -209,6 +209,9 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
       blue_is_left = false;
     }
   }
+  std::cout << "yellow angle:  " << yellow_angle_from_car << std::endl;
+  std::cout << "blue angle:  " << blue_angle_from_car << std::endl;
+
   // if (blue_detected && !yellow_detected)
   // {
   //    // get the middle point between the blue cone and the yellow cone
@@ -219,46 +222,36 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   //   // correct the steering angle to have the car align with the middle point
   //    return middle_angle_from_car;
   // }
-  if (!blue_is_left && blue_detected && !yellow_detected &&
-      blue_distance < 200)
+  // if (!blue_is_left && blue_detected && !yellow_detected &&
+  //     blue_distance < 200) {
+  //   return MAX_STEERING_VALUE;
+  // } else if (!blue_is_left && yellow_detected && !blue_detected &&
+  //            yellow_distance < 200) {
+  //   return -MAX_STEERING_VALUE;
+  // }
+  // if (blue_detected && yellow_detected && blue_distance > 300 &&
+  //     yellow_distance > 300)
+  // {
+  if (blue_distance > 320 && yellow_distance > 340)
   {
-    return MAX_STEERING_VALUE;
-  }
-  else if (!blue_is_left && yellow_detected && !blue_detected &&
-           yellow_distance < 200)
-  {
-    return -MAX_STEERING_VALUE;
-  }
-  if (blue_detected && yellow_detected && blue_distance > 300 &&
-      yellow_distance > 300)
-  {
-    // if ((blue_is_left && blue_distance > 320 && yellow_distance > 340) ||
-    // (!blue_is_left && blue_distance > 320 && yellow_distance > 300))
-    // {
     return 0;
   }
 
   if (blue_detected && blue_is_left && (blue_distance < threshold))
   {
-    double turn_intensity = (threshold - blue_distance) / 100;
-    // std::cout << "blue is left. b_distance: " << blue_distance << std::endl;
+    double turn_intensity = (threshold - blue_distance) / 50;
+    std::cout << "blue is left. b_distance: " << blue_distance << std::endl;
     if (blue_distance < 120)
     {
       return -MAX_STEERING_VALUE;
     }
     blue_correction = CLOCKWISE_RIGHT * turn_intensity * blue_angle_from_car;
     if (blue_correction < MAX_STEERING_VALUE)
-    {
-      return -MAX_STEERING_VALUE;
-    }
-    else
-      return blue_correction;
+    blue_correction = CLOCKWISE_RIGHT * turn_intensity * (blue_angle_from_car / 4) * (vel.angularVelocityZ()/-10);
   }
-
   if (blue_detected && !blue_is_left && (blue_distance < threshold))
-  {
-    double turn_intensity = (threshold - blue_distance) / 100;
-    // std::cout << "blue is right. b_distance: " << blue_distance <<
+    double turn_intensity = (threshold - blue_distance) / 50;
+    // std::cout << "blue is right. b_distance: " << blue_distance << std::endl;
     // "turn_intensity: " << turn_intensity << "b_mag: " << blue_angle_from_car
     // << std::endl;
     if (blue_distance < 120)
@@ -266,12 +259,8 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
       return MAX_STEERING_VALUE;
     }
     blue_correction =
-        COUNTERCLOCKWISE_LEFT * turn_intensity * blue_angle_from_car;
-    if (blue_correction > MAX_STEERING_VALUE)
-    {
-      return MAX_STEERING_VALUE;
+        COUNTERCLOCKWISE_LEFT * turn_intensity * (blue_angle_from_car / 4) * (vel.angularVelocityZ()/10);
     }
-    else
       return blue_correction;
   }
 
@@ -280,32 +269,21 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
     double turn_intensity = (threshold - yellow_distance) / 100;
     // std::cout << "yellow is right. y_distance: " << yellow_distance <<
     // std::endl;
-    if (yellow_distance < 120)
-    {
-      return MAX_STEERING_VALUE;
-    }
-    yellow_correction = CLOCKWISE_LEFT * turn_intensity * yellow_angle_from_car;
-    if (yellow_correction > MAX_STEERING_VALUE)
-    {
-      return MAX_STEERING_VALUE;
     }
     else
-      return yellow_correction;
-  }
 
   if (yellow_detected && !blue_is_left && (yellow_distance < threshold))
   {
-    double turn_intensity = (threshold - yellow_distance) / 100;
-    // std::cout << "yellow is left. y_distance: " << yellow_distance <<
+    double turn_intensity = (threshold - yellow_distance) / 50;
+    std::cout << "yellow is left. y_distance: " << yellow_distance << std::endl;
     // "turn_intensity: " << turn_intensity << " y_mag: " <<
     // yellow_angle_from_car << std::endl;
     if (yellow_distance < 120)
     {
-      return -MAX_STEERING_VALUE;
-    }
-    yellow_correction =
         COUNTERCLOCKWISE_RIGHT * turn_intensity * yellow_angle_from_car;
     if (yellow_correction < MAX_STEERING_VALUE)
+        COUNTERCLOCKWISE_RIGHT * turn_intensity * (yellow_angle_from_car / 4) * (vel.angularVelocityZ()/-10);
+    if (yellow_correction < -MAX_STEERING_VALUE)
     {
       return -MAX_STEERING_VALUE;
     }
