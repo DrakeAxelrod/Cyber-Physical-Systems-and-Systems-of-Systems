@@ -53,6 +53,10 @@ build-and-test:
     - docker-build
   stage: build
   script:
+    - apk add --no-cache python3 py3-pip
+    - pip3 install requests
+    - pip3 install
+    - python3 ./scripts/parse-prev-job-id-and-download.py
     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
     - docker cp $(docker create group5/buildntest:latest):/opt/sources/verification-results ./vresults
   artifacts:
