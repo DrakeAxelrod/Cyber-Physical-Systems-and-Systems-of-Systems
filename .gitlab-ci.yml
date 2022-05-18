@@ -35,7 +35,6 @@ services:
 
 stages:
   - build
-  - verify
   - documentation
   - pages
   - deploy
@@ -67,7 +66,7 @@ verify:
     - unzip ./artifacts.zip
     - mv ./vresults ./verification-results
     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
-    - docker cp $(docker create group5/buildntest:latest):/opt/sources/verification-results ./vresults
+    - docker cp group5/buildntest:latest:/opt/sources/verification-results ./vresults
   artifacts:
     expose_as: vresults
     paths:
