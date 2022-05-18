@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 ADD . /opt/sources
 WORKDIR /opt/sources
-VOLUME ./verification-results
+
 RUN apt-get update -y && \
     apt-get upgrade -y && \
     apt-get dist-upgrade -y && \
@@ -29,7 +29,7 @@ RUN rm -rf build && \
   cd build && \
   cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/tmp .. && \
   make && make test && /opt/sources/scripts/build.sh && make install && \
-  cp /tmp/bin/solution /usr/bin/solution
-  # chmod +x ./scripts/verifier && chmod +x ./scripts/verifier-runner.sh
+  cp /tmp/bin/solution /usr/bin/solution && \
+  python3 /opt/sources/verifier
 
 ENTRYPOINT [ "/opt/sources/verifier" ]
