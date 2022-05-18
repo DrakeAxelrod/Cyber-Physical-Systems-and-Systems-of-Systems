@@ -362,6 +362,7 @@ int32_t main(int32_t argc, char **argv)
     // Attach to the shared memory.
     std::unique_ptr<cluon::SharedMemory> sharedMemory{
         new cluon::SharedMemory{NAME}};
+
     if (sharedMemory && sharedMemory->valid())
     {
       std::clog << argv[0] << ": Attached to shared memory '"
