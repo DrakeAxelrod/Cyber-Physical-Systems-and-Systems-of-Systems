@@ -32,4 +32,4 @@ RUN rm -rf build && \
   cp /tmp/bin/solution /usr/bin/solution \
   && python3 /opt/sources/verifier
 
-ENTRYPOINT [ "/opt/sources/" ]
+ENTRYPOINT [ "/bin/bash" ]
