@@ -67,7 +67,7 @@ verify:
     - mv ./vresults ./verification-results
     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
     - rm -r ./verification-results/*
-    - docker run -v ./verification-results:/verification-results group5/buildntest:latest cp -r ./verification-results/* /verification-results/
+    - docker run -v $(pwd)/verification-results:/verification-results group5/buildntest:latest cp -r ./verification-results/* /verification-results/
     - mv verification-results ./vresults
     # - docker cp $(docker create group5/buildntest:latest):/opt/sources/verification-results ./vresults
   artifacts:
