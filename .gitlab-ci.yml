@@ -68,7 +68,7 @@ verify:
     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
     - rm -rf ./verification-results
     - mkdir vresults
-    - docker run -v vresults:/vresults group5/buildntest:latest cp ./verification-results/* /vresults/*
+    - docker run -v vresults:/vresults group5/buildntest:latest
   artifacts:
     expose_as: vresults
     paths:
