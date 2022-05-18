@@ -35,6 +35,7 @@ services:
 
 stages:
   - build
+  - verify
   - documentation
   - pages
   - deploy
@@ -46,6 +47,17 @@ before_script:
 
 # This section describes what shall be done to build and test the project.
 build-and-test:
+  tags:
+    - docker-build
+  stage: build
+  script:
+    - docker build -t group5/buildntest:latest -f Dockerfile .
+  except:
+    - $CI_COMMIT_TAG  
+  allow_failure: false
+
+# This section describes what shall be done to build and test the project.
+verify:
   tags:
     - docker-build
   stage: build
@@ -63,6 +75,7 @@ build-and-test:
   except:
     - $CI_COMMIT_TAG  
   allow_failure: false
+
 
 documentation:
   tags:
