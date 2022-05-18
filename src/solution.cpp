@@ -14,7 +14,7 @@ HSVBounds hsv_bounds = HSVBounds(17, 35, 89, 175, 128, 216);
 // nose of the car
 cv::Point car;
 double steering_angle = 0;
-double threshold = 340;
+double threshold = 335;
 bool blue_is_left;
 Images imgs = Images();
 // color blue as a scalar value BGR (blue, green, red)
@@ -257,7 +257,7 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
       return blue_correction;
     }
   }
-
+  // hi from the rabbit in the hat
   if (blue_detected && !blue_is_left && (blue_distance < threshold))
   {
     double turn_intensity = (threshold - blue_distance) / 50;
