@@ -56,12 +56,24 @@ bool doubleEquality(double a, double b)
 
 bool accuracy(double computed, double actual)
 {
-  std::cout << "actual: " << actual << "computed: " << computed << std::endl;
-  if (abs(computed - actual) <= 0.05)
+  std::cout << "actual: " << actual << ";"
+            << "computed: " << computed << std::endl;
+  if (doubleEqulity(abs(actual), 0.0))
+  {
+    if (abs(computed - actual) <= 0.05)
+    {
+      std::cout << "true" << std::endl;
+      return 1;
+    }
+    std::cout << "false" << std::endl;
+    return 0;
+  }
+  if (abs(computed - actual) <= abs(0.5 * actual))
   {
     std::cout << "true" << std::endl;
     return 1;
   }
+  std::cout << "false" << std::endl;
   return 0;
 }
 
@@ -308,8 +320,6 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
       blue_is_left = false;
     }
   }
-  std::cout << "yellow angle:  " << yellow_angle_from_car << std::endl;
-  std::cout << "blue angle:  " << blue_angle_from_car << std::endl;
 
   // if (blue_detected && !yellow_detected)
   // {
@@ -339,12 +349,12 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   if (blue_detected && blue_is_left && (blue_distance < threshold))
   {
     double turn_intensity = (threshold - blue_distance) / 50;
-    std::cout << "blue is left. b_distance: " << blue_distance << std::endl;
+    // std::cout << "blue is left. b_distance: " << blue_distance << std::endl;
     if (blue_distance < 120)
     {
       return -MAX_STEERING_VALUE;
     }
-    blue_correction = CLOCKWISE_RIGHT * turn_intensity * (blue_angle_from_car / 4) * (vel.angularVelocityZ()/-10);
+    blue_correction = CLOCKWISE_RIGHT * turn_intensity * (blue_angle_from_car / 4) * (vel.angularVelocityZ() / -10);
     if (blue_correction < -MAX_STEERING_VALUE)
     {
       return -MAX_STEERING_VALUE;
@@ -367,7 +377,7 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
       return MAX_STEERING_VALUE;
     }
     blue_correction =
-        COUNTERCLOCKWISE_LEFT * turn_intensity * (blue_angle_from_car / 4) * (vel.angularVelocityZ()/10);
+        COUNTERCLOCKWISE_LEFT * turn_intensity * (blue_angle_from_car / 4) * (vel.angularVelocityZ() / 10);
     if (blue_correction > MAX_STEERING_VALUE)
     {
       return MAX_STEERING_VALUE;
@@ -379,12 +389,12 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   if (yellow_detected && blue_is_left && (yellow_distance < threshold))
   {
     double turn_intensity = (threshold - yellow_distance) / 50;
-    std::cout << "yellow is right. y_distance: " << yellow_distance << std::endl;
+    // std::cout << "yellow is right. y_distance: " << yellow_distance << std::endl;
     if (yellow_distance < 120)
     {
       return MAX_STEERING_VALUE;
     }
-    yellow_correction = CLOCKWISE_LEFT * turn_intensity * (yellow_angle_from_car / 4) * (vel.angularVelocityZ()/10);
+    yellow_correction = CLOCKWISE_LEFT * turn_intensity * (yellow_angle_from_car / 4) * (vel.angularVelocityZ() / 10);
     if (yellow_correction > MAX_STEERING_VALUE)
     {
       return MAX_STEERING_VALUE;
@@ -396,7 +406,7 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   if (yellow_detected && !blue_is_left && (yellow_distance < threshold))
   {
     double turn_intensity = (threshold - yellow_distance) / 50;
-    std::cout << "yellow is left. y_distance: " << yellow_distance << std::endl;
+    // std::cout << "yellow is left. y_distance: " << yellow_distance << std::endl;
     // "turn_intensity: " << turn_intensity << " y_mag: " <<
     // yellow_angle_from_car << std::endl;
     if (yellow_distance < 120)
@@ -404,7 +414,7 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
       return -MAX_STEERING_VALUE;
     }
     yellow_correction =
-        COUNTERCLOCKWISE_RIGHT * turn_intensity * (yellow_angle_from_car / 4) * (vel.angularVelocityZ()/-10);
+        COUNTERCLOCKWISE_RIGHT * turn_intensity * (yellow_angle_from_car / 4) * (vel.angularVelocityZ() / -10);
     if (yellow_correction < -MAX_STEERING_VALUE)
     {
       return -MAX_STEERING_VALUE;
@@ -655,7 +665,7 @@ int32_t main(int32_t argc, char **argv)
         std::cout << gsr.groundSteering() << std::endl;
         double gsr_steer_angle = gsr.groundSteering();
         actual_steering.push_back(gsr_steer_angle);
-        //actual_steering.push_back(gsr.groundSteering());
+        // actual_steering.push_back(gsr.groundSteering());
         computed_steering.push_back(steering_angle);
         // if (ts.second.seconds() == 1584542901) {
         // try {
