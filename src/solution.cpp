@@ -14,7 +14,7 @@ HSVBounds hsv_bounds = HSVBounds(17, 35, 89, 175, 128, 216);
 // nose of the car
 cv::Point car;
 double steering_angle = 0;
-double threshold = 340;
+double threshold = 335;
 bool blue_is_left;
 Images imgs = Images();
 // color blue as a scalar value BGR (blue, green, red)
@@ -242,7 +242,7 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   {
     double turn_intensity = (threshold - blue_distance) / 50;
     std::cout << "blue is left. b_distance: " << blue_distance << std::endl;
-    if (blue_distance < 120)
+    if (blue_distance < 130)
     {
       return -MAX_STEERING_VALUE;
     }
@@ -264,7 +264,7 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
     // std::cout << "blue is right. b_distance: " << blue_distance << std::endl;
     // "turn_intensity: " << turn_intensity << "b_mag: " << blue_angle_from_car
     // << std::endl;
-    if (blue_distance < 120)
+    if (blue_distance < 130)
     {
       return MAX_STEERING_VALUE;
     }
@@ -282,7 +282,7 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   {
     double turn_intensity = (threshold - yellow_distance) / 50;
     std::cout << "yellow is right. y_distance: " << yellow_distance << std::endl;
-    if (yellow_distance < 120)
+    if (yellow_distance < 130)
     {
       return MAX_STEERING_VALUE;
     }
@@ -301,7 +301,7 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
     std::cout << "yellow is left. y_distance: " << yellow_distance << std::endl;
     // "turn_intensity: " << turn_intensity << " y_mag: " <<
     // yellow_angle_from_car << std::endl;
-    if (yellow_distance < 120)
+    if (yellow_distance < 130)
     {
       return -MAX_STEERING_VALUE;
     }
