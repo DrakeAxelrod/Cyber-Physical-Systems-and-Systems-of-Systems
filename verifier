@@ -75,7 +75,7 @@ The total # of data points: {str(len(self.computed_steering))}
       os.makedirs("/opt/sources/verification-results/stats")
     name = self.rec_file.replace("/opt/sources/verification-results/csvs/CID-140-recording-2020-03-18_", "").replace("-selection.csv", "")
     path = f"/opt/sources/verification-results/stats/{name}.txt"
-    with open(path, "a") as f:
+    with open(path, "w") as f:
       f.write(s)
 
   def create_graph(self):
@@ -239,38 +239,38 @@ def make_box_plot(datasets: list):
   # close the plot
   plt.close()
   # before and after slope chart
-  # create a seaborn slope char of the previous and computed steering angles
-  sns.set(style="whitegrid")
-  # create a figure with a size of 16x10
-  plt.figure(figsize=(16,10))
-  # create a list of the actual steering angles
-  previous_steering = list()
-  # create a list of the computed steering angles
-  current_steering = list()
-  # loop through all the data sets
-  for k in datasets.keys():
-    # add the previous steering angles to the list
-    previous_steering.append(datasets[k].previous_computed_steering)
-    # add the current steering angles to the list
-    current_steering.append(datasets[k].computed_steering)
-  # crate a df from timestamps and previous steering angles
-  df = pd.DataFrame({"timestamps": datasets[k].timestamps, "previous_steering": previous_steering})
-  # create a df from timestamps and current steering angles
-  df2 = pd.DataFrame({"timestamps": datasets[k].timestamps, "current_steering": current_steering})
-  # create a slope chart of previous steering angles vs current steering angles
-  sns.lineplot(x="timestamps", y="previous_steering", data=df)
-  # create a slope chart of current steering angles vs current steering angles
-  sns.lineplot(x="timestamps", y="current_steering", data=df2)
-  # set the title of the plot
-  plt.title("Previous Steering Angles vs Current Steering Angles")
-  # set the x-axis label
-  plt.xlabel("Data Set")
-  # set the y-axis label
-  plt.ylabel("Steering Angles (radians)")
-  # save the plot
-  plt.savefig("/opt/sources/verification-results/graphs/slope_chart_previous_vs_current.png")
-  # close the plot
-  plt.close()
+  # # create a seaborn slope char of the previous and computed steering angles
+  # sns.set(style="whitegrid")
+  # # create a figure with a size of 16x10
+  # plt.figure(figsize=(16,10))
+  # # create a list of the actual steering angles
+  # previous_steering = list()
+  # # create a list of the computed steering angles
+  # current_steering = list()
+  # # loop through all the data sets
+  # for k in datasets.keys():
+  #   # add the previous steering angles to the list
+  #   previous_steering.append(datasets[k].previous_computed_steering)
+  #   # add the current steering angles to the list
+  #   current_steering.append(datasets[k].computed_steering)
+  # # crate a df from timestamps and previous steering angles
+  # df = pd.DataFrame({"timestamps": datasets[k].timestamps, "previous_steering": previous_steering})
+  # # create a df from timestamps and current steering angles
+  # df2 = pd.DataFrame({"timestamps": datasets[k].timestamps, "current_steering": current_steering})
+  # # create a slope chart of previous steering angles vs current steering angles
+  # sns.lineplot(x="timestamps", y="previous_steering", data=df)
+  # # create a slope chart of current steering angles vs current steering angles
+  # sns.lineplot(x="timestamps", y="current_steering", data=df2)
+  # # set the title of the plot
+  # plt.title("Previous Steering Angles vs Current Steering Angles")
+  # # set the x-axis label
+  # plt.xlabel("Data Set")
+  # # set the y-axis label
+  # plt.ylabel("Steering Angles (radians)")
+  # # save the plot
+  # plt.savefig("/opt/sources/verification-results/graphs/slope_chart_previous_vs_current.png")
+  # # close the plot
+  # plt.close()
 
 if __name__ == '__main__':
   # run_all_rec_files_as_threads()

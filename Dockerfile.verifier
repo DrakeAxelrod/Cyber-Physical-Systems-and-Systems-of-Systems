@@ -24,8 +24,6 @@ RUN apt-get update -y && \
       pip3 install seaborn && \
       pip3 install matplotlib
 
-RUN ls
-
 RUN rm -rf build && \
   mkdir build && \
   cd build && \
