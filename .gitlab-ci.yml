@@ -55,21 +55,41 @@ build-and-test:
     - $CI_COMMIT_TAG  
   allow_failure: false
 
+# # This section describes what shall be done to build and test the project.
+# verify:
+#   tags:
+#     - docker-build
+#   stage: build
+#   script:
+#     - apk add curl unzip
+#     - 'curl -o ./artifacts.zip -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=build-and-test'
+#     - unzip ./artifacts.zip
+#     - mv ./vresults ./verification-results
+#     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
+#     - docker cp $(docker create group5/buildntest:latest):/opt/sources/verification-results ./vresults
+#     - docker run hello-world
+#   artifacts:
+#     expose_as: vresults
+#     paths:
+#       - vresults/
+#   except:
+#     - $CI_COMMIT_TAG  
+#   allow_failure: false
+
 # This section describes what shall be done to build and test the project.
 verify:
+  image: drakeaxelrod/opendlv-video-h264-replay:latest
   tags:
     - docker-build
   stage: build
   script:
-    - apk add curl unzip
+    - rm -rf build && mkdir build && cd build && cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/tmp .. && make && make test && /opt/sources/scripts/build.sh && make install && cp /tmp/bin/solution /usr/bin/solution 
+    - apt-get install curl unzip
     - 'curl -o ./artifacts.zip -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=build-and-test'
     - unzip ./artifacts.zip
     - mv ./vresults ./verification-results
-    - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
-    - rm -r ./verification-results/*
-    - docker run -v $(pwd)/verification-results:/verification-results group5/buildntest:latest cp -r ./verification-results/* /verification-results/
-    - mv verification-results ./vresults
-    # - docker cp $(docker create group5/buildntest:latest):/opt/sources/verification-results ./vresults
+    - python3 /opt/sources/verifier
+    - mv ./verification-results ./vresults
   artifacts:
     expose_as: vresults
     paths:
