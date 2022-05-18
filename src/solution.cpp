@@ -100,8 +100,6 @@ Cone getCone(cv::Mat cropped_frame, cv::Mat hsv_frame, cv::Scalar color,
   // create a bounding box
   cv::Rect box(cv::Point(0, 0), cv::Size(0, 0));
   // extract the bounding box of the cone from the provided matrix
-  // cv::findContours(hsv_frame, matrix, cv::RETR_EXTERNAL,
-  // cv::CHAIN_APPROX_SIMPLE, cv::Point()); draw box
   cv::rectangle(cropped_frame, box, color, 2);
   for (auto &contour : matrix)
   {
@@ -166,14 +164,6 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   double blue_distance = blue_cone.getDistanceFrom(car);
   // get the distance of the yellow cone from the center of the car
   double yellow_distance = yellow_cone.getDistanceFrom(car);
-  // get the magnentic field readings of the car
-  double magnetic_field_x = mfr.magneticFieldX();
-  double magnetic_field_y = mfr.magneticFieldY();
-  double magnetic_field_z = mfr.magneticFieldZ();
-  // get the acceleration of the car
-  double acceleration_y = ar.accelerationY();
-  double acceleration_x = ar.accelerationX();
-  double acceleration_z = ar.accelerationZ();
   // get the angular velocity of the car
   double angular_velocity_x = vel.angularVelocityX();
   double angular_velocity_y = vel.angularVelocityY();
@@ -182,7 +172,6 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   cv::Point blue_center = blue_cone.getCenter();
   cv::Point yellow_center = yellow_cone.getCenter();
   double car_heading = gr.heading();
-  //
 
   // display the blue distance and the yellow distance on the screen
   std::string blue_distance_str = std::to_string(blue_distance);
@@ -194,9 +183,6 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
 
   // display on the screen the gr.latitude(), gr.longitude(), gr.heading()
   std::ostringstream oss;
-  // oss << " Heading: " << gr.heading();
-  // cv::putText(imgs.fr_cropped, oss.str(), cv::Point(10, 20),
-  // cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(255, 255, 255), 1, CV_AA);
 
   // check if blue center is to the left of the car
   if (blue_detected && yellow_detected)
@@ -210,29 +196,7 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
       blue_is_left = false;
     }
   }
-  std::cout << "yellow angle:  " << yellow_angle_from_car << std::endl;
-  std::cout << "blue angle:  " << blue_angle_from_car << std::endl;
-
-  // if (blue_detected && !yellow_detected)
-  // {
-  //    // get the middle point between the blue cone and the yellow cone
-  //    cv::Point middle = cv::Point((blue_center.x + yellow_center.x) / 2,
-  //    (blue_center.y + yellow_center.y) / 2);
-  //    // get the angle of the middle point from the car in radians
-  //    double middle_angle_from_car = middle.getAngleFrom(car);
-  //   // correct the steering angle to have the car align with the middle point
-  //    return middle_angle_from_car;
-  // }
-  // if (!blue_is_left && blue_detected && !yellow_detected &&
-  //     blue_distance < 200) {
-  //   return MAX_STEERING_VALUE;
-  // } else if (!blue_is_left && yellow_detected && !blue_detected &&
-  //            yellow_distance < 200) {
-  //   return -MAX_STEERING_VALUE;
-  // }
-  // if (blue_detected && yellow_detected && blue_distance > 300 &&
-  //     yellow_distance > 300)
-  // {
+  
   if (blue_distance > 320 && yellow_distance > 340)
   {
     return 0;
@@ -261,9 +225,6 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   if (blue_detected && !blue_is_left && (blue_distance < threshold))
   {
     double turn_intensity = (threshold - blue_distance) / 50;
-    // std::cout << "blue is right. b_distance: " << blue_distance << std::endl;
-    // "turn_intensity: " << turn_intensity << "b_mag: " << blue_angle_from_car
-    // << std::endl;
     if (blue_distance < 130)
     {
       return MAX_STEERING_VALUE;
@@ -299,8 +260,6 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
   {
     double turn_intensity = (threshold - yellow_distance) / 50;
     std::cout << "yellow is left. y_distance: " << yellow_distance << std::endl;
-    // "turn_intensity: " << turn_intensity << " y_mag: " <<
-    // yellow_angle_from_car << std::endl;
     if (yellow_distance < 130)
     {
       return -MAX_STEERING_VALUE;
@@ -477,10 +436,7 @@ int32_t main(int32_t argc, char **argv)
       od4.dataTrigger(opendlv::logic::sensation::Geolocation::ID(),
                       getGeolocationReading);
       output = OUTPUT;
-      // region on image (bounding box)
-      //          (x, y,          width,    height)
       cv::Rect region_of_interest(0, HEIGHT / 2, WIDTH - 1, (HEIGHT / 5));
-      // OpenCV data structure to hold an image.
       car = cv::Point(WIDTH / 2, HEIGHT / 1.3);
 
       // Endless loop; end the program by pressing Ctrl-C.
@@ -508,24 +464,9 @@ int32_t main(int32_t argc, char **argv)
         imgs.fr_cropped = imgs.main(region_of_interest);
         // Blur the input image data
         cv::GaussianBlur(imgs.fr_cropped, imgs.img_blur, cv::Size(5, 5), 0);
-        // cv::blur(imgs.fr_cropped, imgs.img_blur, cv::Size(7, 7));
         // convert bgr to hsv
         cv::cvtColor(imgs.img_blur, imgs.img_hsv, cv::COLOR_BGR2HSV);
-        // calculate steering adjustment based on the distance from the center
-        // of the image and the yellow and blue bounding boxes
         steering_angle = getSteeringAngle(mfr, ar, vel, gr);
-        // std::cout << "steering angle : " << gsr.groundSteering()
-        //           << " compsteer: " << steering_angle << std::endl;
-
-        // ss << "Blue Detected:   " << (blue_detected ? "true" : "false");
-        // cv::putText(imgs.main, ss.str(), cv::Point(10, 377),
-        // cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1); ss.str("");
-        // ss.clear();
-
-        // ss << "Yellow Detected:   " << (yellow_detected ? "true" : "false");
-        // cv::putText(imgs.main, ss.str(), cv::Point(10, 393),
-        // cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1); ss.str("");
-        // ss.clear();
 
         ss << "ActualDistanceReading:   " << dr.distance();
         cv::putText(imgs.main, ss.str(), cv::Point(10, 409),
@@ -544,12 +485,6 @@ int32_t main(int32_t argc, char **argv)
                     cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
         ss.str("");
         ss.clear();
-
-        // ss << "AccelerationX: " << ar.accelerationX() <<"AccelerationY: " <<
-        // ar.accelerationY(); cv::putText(imgs.main, ss.str(), cv::Point(10,
-        // 457), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 255, 255), 1);
-        // ss.str("");
-        // ss.clear();
 
         ss << "VelocityZ: " << vel.angularVelocityZ();
         cv::putText(imgs.main, ss.str(), cv::Point(10, 457),
