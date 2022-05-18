@@ -29,7 +29,8 @@ RUN rm -rf build && \
   cd build && \
   cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/tmp .. && \
   make && make test && /opt/sources/scripts/build.sh && make install && \
-  cp /tmp/bin/solution /usr/bin/solution \
-  && python3 /opt/sources/verifier
+  cp /tmp/bin/solution /usr/bin/solution 
+  #\
+  #&& python3 /opt/sources/verifier
 
-CMD [ "/bin/bash", "cp", "./verification-results/*", "/vresults/*"]
+CMD [ "python3", "/opt/sources/verifier" ]
