@@ -1,7 +1,5 @@
 # 2022-group-05
 
-![144821](https://git.chalmers.se/courses/dit638/students/2022-group-05/-/jobs/198641/artifacts/file/vresults/graphs/144821.png)
-
 ### Pipeline status
 ![[pipeline status](https://git.chalmers.se/courses/dit638/students/2022-group-05/badges/main/pipeline.svg)](https://git.chalmers.se/courses/dit638/students/2022-group-05/-/commits/main)
 
