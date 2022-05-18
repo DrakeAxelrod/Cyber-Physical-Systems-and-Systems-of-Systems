@@ -66,7 +66,10 @@ verify:
     - unzip ./artifacts.zip
     - mv ./vresults ./verification-results
     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
-    - docker cp group5/buildntest:latest:/opt/sources/verification-results ./vresults
+    - rm -r ./verification-results/*
+    - docker run -v ./verification-results:/verification-results group5/buildntest:latest cp -r ./verification-results/* /verification-results/
+    - mv verification-results ./vresults
+    # - docker cp $(docker create group5/buildntest:latest):/opt/sources/verification-results ./vresults
   artifacts:
     expose_as: vresults
     paths:
