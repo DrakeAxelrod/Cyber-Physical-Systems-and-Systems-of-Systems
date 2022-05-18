@@ -270,8 +270,11 @@ if __name__ == '__main__':
   # create the verification-results directory if it doesn't exist
   if not os.path.exists("/opt/sources/verification-results"):
     os.mkdir("/opt/sources/verification-results")
+  if not os.path.exists("/opt/sources/verification-results/graphs"):
     os.mkdir("/opt/sources/verification-results/graphs")
+  if not os.path.exists("/opt/sources/verification-results/csvs"):
     os.mkdir("/opt/sources/verification-results/csvs")
+  if not os.path.exists("/opt/sources/verification-results/stats"):
     os.mkdir("/opt/sources/verification-results/stats")
   # run_all_rec_files_as_threads()
   datasets = dict()
