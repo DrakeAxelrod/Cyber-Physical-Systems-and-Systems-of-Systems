@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 ADD . /opt/sources
 WORKDIR /opt/sources
-VOLUME ./verification-results
+
 RUN apt-get update -y && \
     apt-get upgrade -y && \
     apt-get dist-upgrade -y && \
@@ -23,6 +23,8 @@ RUN apt-get update -y && \
       pip3 install numpy && \
       pip3 install seaborn && \
       pip3 install matplotlib
+
+RUN ls
 
 RUN rm -rf build && \
   mkdir build && \
