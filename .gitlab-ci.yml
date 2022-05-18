@@ -28,24 +28,21 @@ variables:
   BUILDX_PLATFORM: linux/amd64,linux/arm/v7
   IMAGE: registry.git.chalmers.se/courses/dit638/students/2022-group-05
 
-
 services:
   - name: registry.git.chalmers.se/courses/dit638/students/docker/docker:19.03.3-dind
-  # - name: docker:19.03.3-dind
     alias: docker
     command: ["--experimental"]    # Enable experimental features in Docker server
 
 stages:
   - build
+  - documentation
   - pages
   - deploy
 
 # Display information before we start the build.
 before_script:
   - docker info
-  # - docker login -u $DOCKER_REG_CID -p $DOCKER_REG_TOKEN $CI_REGISTRY
   - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-
 
 # This section describes what shall be done to build and test the project.
 build-and-test:
@@ -53,6 +50,10 @@ build-and-test:
     - docker-build
   stage: build
   script:
+    - apk add curl unzip
+    - 'curl -o ./artifacts.zip -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=build-and-test'
+    - unzip ./artifacts.zip
+    - mv ./vresults ./verification-results
     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
     - docker cp $(docker create group5/buildntest:latest):/opt/sources/verification-results ./vresults
   artifacts:
@@ -63,10 +64,10 @@ build-and-test:
     - $CI_COMMIT_TAG  
   allow_failure: false
 
-pages:
+documentation:
   tags:
     - docker-build
-  stage: pages
+  stage: documentation
   script:
     - apk update && apk add doxygen
     - doxygen doxygen/Doxyfile
@@ -74,6 +75,22 @@ pages:
   artifacts:
     paths:
       - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+
+pages:
+  before_script:
+    - gem install bundler
+    - bundle install
+  image: ruby:latest
+  stage: pages
+  script:
+    - bundle exec jekyll build -d public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
 
 # This section describes what shall be done to deploy artefacts from the project.
 release:
