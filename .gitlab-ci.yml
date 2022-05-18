@@ -50,12 +50,22 @@ build-and-test:
     - docker-build
   stage: build
   script:
+    - docker build -t group5/buildntest:latest -f Dockerfile .
+  except:
+    - $CI_COMMIT_TAG  
+  allow_failure: false
+
+# This section describes what shall be done to build and test the project.
+verify:
+  tags:
+    - docker-build
+  stage: build
+  script:
     - apk add curl unzip
+    - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
     - 'curl -o ./artifacts.zip -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=build-and-test'
     - unzip ./artifacts.zip
-    - mv ./vresults ./verification-results
-    - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
-    - docker cp $(docker create group5/buildntest:latest):/opt/sources/verification-results ./vresults
+    - docker run -v $(pwd)/vresults:/opt/sources/verification-results group5/buildntest:latest
   artifacts:
     expose_as: vresults
     paths:
@@ -72,20 +82,6 @@ documentation:
     - apk update && apk add doxygen
     - doxygen doxygen/Doxyfile
     - mv doxygen/html/ public/
-  artifacts:
-    paths:
-      - public
-  rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-
-pages:
-  before_script:
-    - gem install bundler
-    - bundle install
-  image: ruby:latest
-  stage: pages
-  script:
-    - bundle exec jekyll build -d public
   artifacts:
     paths:
       - public

@@ -1,18 +1,11 @@
 SHELL := /usr/bin/env bash
 
-all: build run lint doc clean
-
-# build:
-# 	@echo Building
-# 	rm -rf build
-# 	mkdir -p build
-# 	cmake -B./build -S./
-# 	cd build && make
+all: build run verify lint doc clean
 
 lint:
 	@echo Linting Project
 	clang-tidy  src/solution.cpp src/steering-angel-generator.cpp src/steering-angle-generator.hpp \
-		-header-filter=.* --fix-errors --use-color -p build/*/**
+		-header-filter=.* --fix-errors -p build/*/**
 
 doc:
 	@echo Generate Documentation
@@ -26,12 +19,14 @@ run:
 	@echo Running Project
 	bash ./scripts/run-docker-container.sh
 
+verify:
+	@echo Verifying Project
+	docker build -t group5/verifier:latest -f Dockerfile.verifier .
+
 clean:
 	@echo Cleaning up the project :D
 	rm -rf build
 	rm -rf doxygen/public
-
-
 
 secret:
 	@echo Secret

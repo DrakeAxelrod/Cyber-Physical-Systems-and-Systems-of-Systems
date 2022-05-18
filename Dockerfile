@@ -41,6 +41,6 @@ WORKDIR /usr/bin
 
 RUN apt-get update -y && apt-get upgrade -y
 
-COPY --from=verifier /opt/sources/ .
+COPY --from=builder /tmp/bin/solution .
 
 ENTRYPOINT ["/usr/bin/solution"]
