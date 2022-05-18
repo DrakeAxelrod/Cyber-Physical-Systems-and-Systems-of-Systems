@@ -61,14 +61,14 @@ verify:
     - docker-build
   stage: build
   script:
-    - docker run hello-world
-    # - apk add curl unzip
-    # - 'curl -o ./artifacts.zip -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=build-and-test'
-    # - unzip ./artifacts.zip
-    # - mv ./vresults ./verification-results
-    # - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
-    # - docker cp $(docker create group5/buildntest:latest):/opt/sources/verification-results ./vresults
-    # - docker run hello-world
+    - apk add curl unzip
+    - 'curl -o ./artifacts.zip -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=build-and-test'
+    - unzip ./artifacts.zip
+    - mv ./vresults ./verification-results
+    - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
+    - rm -rf ./verification-results
+    - mkdir vresults
+    - docker run -v vresults:/vresults group5/buildntest:latest cp ./verification-results/* /vresults/*
   artifacts:
     expose_as: vresults
     paths:
