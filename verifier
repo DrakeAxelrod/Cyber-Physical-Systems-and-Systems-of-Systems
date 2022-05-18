@@ -297,7 +297,7 @@ if __name__ == '__main__':
     for k in datasets.keys():
       datasets[k].create_graph()
       datasets[k].display_stats()
-    make_box_plot(datasets)
+    # make_box_plot(datasets)
   except Exception as e:
     print(e)
     move_csvs_back()

@@ -65,9 +65,7 @@ verify:
     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
     - 'curl -o ./artifacts.zip -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=build-and-test'
     - unzip ./artifacts.zip
-    - mv ./vresults ./verification-results
-    - docker run -v verification-results:/opt/sources/verification-results group5/buildntest:latest
-    - mv ./verification-results ./vresults
+    - docker run -v $(pwd)/vresults:/opt/sources/verification-results group5/buildntest:latest
   artifacts:
     expose_as: vresults
     paths:
