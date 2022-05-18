@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 from time import sleep
+from copy import deepcopy
 
 class DataSet():
   def __init__(self, rec_file: str, timestamps: list, actual_steering: list, computed_steering: list):
@@ -19,7 +20,7 @@ class DataSet():
     self.actual_steering = actual_steering
     # computed angle list
     self.computed_steering = computed_steering
-    self.previous_computed_steering = [0 for i in range(len(self.computed_steering))]
+    self.previous_computed_steering = list()
 
   # the __str__ method is used to print the object display the class attributes in a pretty way
   def __str__(self):
@@ -88,12 +89,6 @@ The total # of data points: {str(len(self.computed_steering))}
     plt.plot(self.timestamps, self.actual_steering, 'r', label='actual steering')
     plt.plot(self.timestamps, self.computed_steering, 'b', label='computed steering')
     if len(self.previous_computed_steering) > 0:
-      # make previous_computed_steering the same length as actual_steering if its shorter than actual_steering
-      # append 0s until it is the same length
-      if len(self.previous_computed_steering) < len(self.actual_steering):
-        self.previous_computed_steering = self.previous_computed_steering + [0 for i in range(len(self.actual_steering) - len(self.previous_computed_steering))]
-      elif len(self.previous_computed_steering) > len(self.actual_steering):
-        self.previous_computed_steering = self.previous_computed_steering[:len(self.actual_steering)]
       plt.plot(self.timestamps, self.previous_computed_steering, 'g', label='previous computed steering')
     plt.legend()
     plt.title(f"{self.rec_file}")
@@ -112,8 +107,9 @@ The total # of data points: {str(len(self.computed_steering))}
     plt.close()
 
   def update(self, rec_file, timestamps, actual_steering, computed_steering):
+    prev = deepcopy(self.computed_steering)
     # update the previous computed steering angle
-    self.previous_computed_steering = self.computed_steering
+    self.previous_computed_steering = prev
     # update the computed steering angle
     self.computed_steering = computed_steering
     # update the actual steering angle
@@ -162,6 +158,7 @@ def run_rec_file(filepath: str, i):
 
 # run all the records as threads and wait for them to finish before moving on
 def run_all_rec_files_as_threads():
+  # create the 
   threads = []
   for i, file in enumerate(os.listdir("/opt/sources/recordings")):
     if file.endswith(".rec"):
@@ -270,14 +267,23 @@ def make_box_plot(datasets: list):
   # plt.close()
 
 if __name__ == '__main__':
+  # create the verification-results directory if it doesn't exist
+  if not os.path.exists("/opt/sources/verification-results"):
+    os.mkdir("/opt/sources/verification-results")
+    os.mkdir("/opt/sources/verification-results/graphs")
+    os.mkdir("/opt/sources/verification-results/csvs")
+    os.mkdir("/opt/sources/verification-results/stats")
   # run_all_rec_files_as_threads()
   datasets = dict()
-  for file in os.listdir("/opt/sources/verification-results/csvs"):
-    if file.endswith(".csv"):
-      (filepath, timestamps, computed_steering, actual_steering) = readCSV("/opt/sources/verification-results/csvs/" + file)
-      datasets[file] = DataSet(file, timestamps, computed_steering, actual_steering)
-  sleep(1)
-  move_csvs_to_tmp()
+  # check if /opt/sources/verification-results/csvs is empty
+  dir = os.listdir("/opt/sources/verification-results/csvs")
+  if len(dir) > 0:
+    for file in os.listdir("/opt/sources/verification-results/csvs"):
+      if file.endswith(".csv"):
+        (filepath, timestamps, computed_steering, actual_steering) = readCSV("/opt/sources/verification-results/csvs/" + file)
+        datasets[file] = DataSet(file, timestamps, computed_steering, actual_steering)
+    sleep(1)
+    move_csvs_to_tmp()
   sleep(1)
   run_all_rec_files_as_threads()
   sleep(1)
