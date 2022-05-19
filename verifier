@@ -127,7 +127,7 @@ The total # of data points: {str(len(self.computed_steering))}
 def readCSV(filepath: str):
   # open a csv file called results.csv and reatd the actualSteering column into a list and the computedSteering column into a list
   timestamps = list()
-  actual_steering = list()str(x) 
+  actual_steering = list()
   filepath = f"{file}.csv"
   with open(filepath, 'r') as f:
       for line in f:
