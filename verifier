@@ -12,7 +12,7 @@ from time import sleep
 from copy import deepcopy
 
 # "/opt/sources"
-GIT_DIR = "."
+GIT_DIR = "/opt/sources"
 # /opt/sources/verification-results/
 ROOT_DIR = f"{GIT_DIR}/verification-results"
 
