@@ -23,6 +23,7 @@ verify:
 	@echo Verifying Project
 	docker build -t group5/verifier:latest -f Dockerfile.verifier .
 
+
 clean:
 	@echo Cleaning up the project :D
 	rm -rf build
