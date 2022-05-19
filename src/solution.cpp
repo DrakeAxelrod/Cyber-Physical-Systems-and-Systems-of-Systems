@@ -495,7 +495,7 @@ int32_t main(int32_t argc, char **argv)
         ss.str("");
         ss.clear();
 
-        std::cout << "group_05;" << timestamp << ";" << steering_angle;
+        std::cout << "group_05;" << timestamp << ";" << steering_angle << std::endl;
         ss << "group_05;" << timestamp << ";" << steering_angle << ";" << gsr.groundSteering();
   
         csv_lines.push_back(ss.str());
