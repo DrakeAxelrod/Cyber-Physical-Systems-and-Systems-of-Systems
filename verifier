@@ -273,15 +273,15 @@ def make_box_plot(datasets: list):
 
 if __name__ == '__main__':
   # create the verification-results directory if it doesn't exist
-  # if not os.path.exists(f"{ROOT_DIR}"):
-  #   os.mkdir(f"{ROOT_DIR}")
-  # if not os.path.exists(f"{ROOT_DIR}/graphs"):
-  #   os.mkdir(f"{ROOT_DIR}/graphs")
-  # if not os.path.exists(f"{ROOT_DIR}/csvs"):
-  #   os.mkdir(f"{ROOT_DIR}/csvs")
-  # if not os.path.exists(f"{ROOT_DIR}/stats"):
-  #   os.mkdir(f"{ROOT_DIR}/stats")
-  # run_all_rec_files_as_threads()
+  if not os.path.exists(f"{ROOT_DIR}"):
+    os.mkdir(f"{ROOT_DIR}")
+  if not os.path.exists(f"{ROOT_DIR}/graphs"):
+    os.mkdir(f"{ROOT_DIR}/graphs")
+  if not os.path.exists(f"{ROOT_DIR}/csvs"):
+    os.mkdir(f"{ROOT_DIR}/csvs")
+  if not os.path.exists(f"{ROOT_DIR}/stats"):
+    os.mkdir(f"{ROOT_DIR}/stats")
+  run_all_rec_files_as_threads()
   datasets = dict()
   # check if /opt/sources/verification-results/csvs is empty
   dir = os.listdir(f"{ROOT_DIR}/csvs")
@@ -290,27 +290,27 @@ if __name__ == '__main__':
       if file.endswith(".csv"):
         (filepath, timestamps, computed_steering, actual_steering) = readCSV(f"{ROOT_DIR}/csvs/" + file)
         datasets[file] = DataSet(file, timestamps, computed_steering, actual_steering)
-    sleep(1)
-  #   move_csvs_to_tmp()
-  # sleep(1)
-  # run_all_rec_files_as_threads()
+  sleep(1)
+  move_csvs_to_tmp()
+  sleep(1)
+  run_all_rec_files_as_threads()
   sleep(1)
   # block until all the threads are done
-  # while threading.active_count() > 1:
-  #   pass
+  while threading.active_count() > 1:
+    pass
   sleep(1)
   # update the data sets with the new csv files
-  # for k in datasets.keys():
-  #   (filepath, timestamps, computed_steering, actual_steering) = readCSV(f"{ROOT_DIR}/csvs/" + datasets[k].rec_file)
-  #   datasets[k].update(filepath, timestamps, computed_steering, actual_steering)
+  for k in datasets.keys():
+    (filepath, timestamps, computed_steering, actual_steering) = readCSV(f"{ROOT_DIR}/csvs/" + datasets[k].rec_file)
+    datasets[k].update(filepath, timestamps, computed_steering, actual_steering)
   sleep(1)
-  # try:
+  try:
   for k in datasets.keys():
     datasets[k].create_graph()
     datasets[k].display_stats()
     # make_box_plot(datasets)
-  # except Exception as e:
-  #   print(e)
-  #   move_csvs_back()
+  except Exception as e:
+    print(e)
+    move_csvs_back()
   sleep(1)
   clean_tmp()
