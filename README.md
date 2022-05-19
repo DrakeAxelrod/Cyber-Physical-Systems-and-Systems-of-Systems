@@ -105,16 +105,16 @@
 
     Now, open another terminal and navigate to the same folder as previously. Then run the following command:
     ```
-    make docker-build
+    make build
     ```
     This will build the project and attach to the shared memory. 
     
     Once completed, you can run with the following command:
 
     ```
-    make docker-run
+    make run
     ```
-    Now navigate to the web application where the video is running again and play the video. Three new windows should pop up:
+    Now navigate to the web application where the video is running again and play the video. Three new windows should pop up, in addition to output being printed to the terminal:
     
     ![img](resources/img.PNG)
 
