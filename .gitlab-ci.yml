@@ -73,7 +73,7 @@ build-and-test:
 #   except:
 #     - $CI_COMMIT_TAG  
 #   allow_failure: false
-
+docker build -t registry.git.chalmers.se/courses/dit638/students/2022-group-05 .
 documentation:
   tags:
     - docker-build
@@ -106,7 +106,7 @@ release:
     - mkdir -p $HOME/.docker/cli-plugins/
     - wget -O $HOME/.docker/cli-plugins/docker-buildx $BUILDX_URL
     - chmod a+x $HOME/.docker/cli-plugins/docker-buildx
-    - docker buildx build --platform=${BUILDX_PLATFORM} -t "$IMAGE":"$CI_COMMIT_SHA" --push "."
+    - docker buildx build --platform=${BUILDX_PLATFORM} -t "$IMAGE":"$CI_COMMIT_TAG" --push "."
     # - docker push "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
     # - docker tag ${IMAGE}:${CI_COMMIT_SHA} ${IMAGE}:latest
     # - docker push ${IMAGE}:latest
