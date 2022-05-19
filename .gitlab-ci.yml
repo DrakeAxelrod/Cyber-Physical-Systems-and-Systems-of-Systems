@@ -56,23 +56,23 @@ build-and-test:
   allow_failure: false
 
 # This section describes what shall be done to build and test the project.
-# verify:
-#   tags:
-#     - docker-build
-#   stage: build
-#   script:
-#     - apk add curl unzip
-#     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
-#     - 'curl -o ./artifacts.zip -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=verify'
-#     - unzip ./artifacts.zip
-#     - docker run -v $(pwd)/vresults:/opt/sources/verification-results group5/buildntest:latest
-#   artifacts:
-#     expose_as: vresults
-#     paths:
-#       - vresults/
-#   except:
-#     - $CI_COMMIT_TAG  
-#   allow_failure: false
+verify:
+  tags:
+    - docker-build
+  stage: build
+  script:
+    - apk add curl unzip
+    - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
+    # - 'curl -o ./artifacts.zip -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=verify'
+    # - unzip ./artifacts.zip
+    - docker run -v $(pwd)/vresults:/opt/sources/verification-results group5/buildntest:latest
+  artifacts:
+    expose_as: vresults
+    paths:
+      - vresults/
+  except:
+    - $CI_COMMIT_TAG  
+  allow_failure: false
 
 documentation:
   tags:
@@ -101,12 +101,11 @@ release:
     - docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
     - docker buildx create --use --driver docker-container --name ${BUILDX_BUILDER} --platform=${BUILDX_PLATFORM}
     - docker buildx inspect --bootstrap ${BUILDX_BUILDER}
-    - docker buildx ls
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - mkdir -p $HOME/.docker/cli-plugins/
     - wget -O $HOME/.docker/cli-plugins/docker-buildx $BUILDX_URL
     - chmod a+x $HOME/.docker/cli-plugins/docker-buildx
-    - docker buildx build --platform=${BUILDX_PLATFORM} -t "$IMAGE":"$CI_COMMIT_SHA" --push "."
+    - docker buildx build --platform=${BUILDX_PLATFORM} -t "$IMAGE":"$CI_COMMIT_TAG" --push "."
     # - docker push "$CI_REGISTRY_IMAGE":"$CI_COMMIT_TAG"
     # - docker tag ${IMAGE}:${CI_COMMIT_SHA} ${IMAGE}:latest
     # - docker push ${IMAGE}:latest
