@@ -118,6 +118,12 @@
     
     ![img](resources/img.PNG)
 
+    Note: In the case that you are pulling the image from the group's release tag, you will instead need to use the following command in the terminal. You will need to provide the release hash in the indicated <> space:
+
+
+```sh
+docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp:/tmp registry.git.chalmers.se/courses/dit638/students/2022-group-05:<release> --cid=253 --name=img --width=640 --height=480 --output=example.csv
+```
 ## Feature management
 
 1. The process that our team will follow for **new features** incorporates these steps:  

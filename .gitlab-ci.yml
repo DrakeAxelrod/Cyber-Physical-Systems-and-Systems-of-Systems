@@ -56,23 +56,23 @@ build-and-test:
   allow_failure: false
 
 # This section describes what shall be done to build and test the project.
-verify:
-  tags:
-    - docker-build
-  stage: build
-  script:
-    - apk add curl unzip
-    - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
-    # - 'curl -o ./artifacts.zip -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=verify'
-    # - unzip ./artifacts.zip
-    - docker run -v $(pwd)/vresults:/opt/sources/verification-results group5/buildntest:latest
-  artifacts:
-    expose_as: vresults
-    paths:
-      - vresults/
-  except:
-    - $CI_COMMIT_TAG  
-  allow_failure: false
+# verify:
+#   tags:
+#     - docker-build
+#   stage: build
+#   script:
+#     - apk add curl unzip
+#     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
+#     - 'curl -o ./artifacts.zip -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=verify'
+#     - unzip ./artifacts.zip
+#     - docker run -v $(pwd)/vresults:/opt/sources/verification-results group5/buildntest:latest
+#   artifacts:
+#     expose_as: vresults
+#     paths:
+#       - vresults/
+#   except:
+#     - $CI_COMMIT_TAG  
+#   allow_failure: false
 
 documentation:
   tags:
