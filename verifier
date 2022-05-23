@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Vernia says we need some commmmmmmmments!!!!!!!!!!!!!!!!!!!!!!
 import socket
 import os
 import shutil
@@ -18,7 +19,6 @@ def read_csv(file_name):
     df = pd.read_csv(file_name)
     return df
 
-# rename file to avoid overwriting
 def rename_file(path, f):
   if os.path.isfile(path + f):
     os.rename(path + f, path + "prev-" + f)
@@ -109,7 +109,6 @@ def display_stats(f, df: pd.DataFrame):
   actual_num_0 = 0
   correct_predictions = 0
   std_steering = np.std(df["actual"])
-  # do the same shit but with a dataframe
   for i, row in df.iterrows():
     if row["computed"] == 0.0:
       computed_num_0 += 1
@@ -137,8 +136,6 @@ The total # of data points: {str(len(df))}
 =====================================================================
 """
   print(s)
-  # write the results to a file
-  # make stats dir if it doesn't exist
   if not os.path.exists(f"{ROOT_DIR}/stats"):
     os.makedirs(f"{ROOT_DIR}/stats")
   name = f.replace(f"{ROOT_DIR}/csvs/CID-140-recording-2020-03-18_", "").replace("-selection.csv", "")
@@ -157,7 +154,6 @@ def looper():
       create_graph(f.replace('prev-', ''), df)
       display_stats(f.replace('prev-', ''), df)
 
-# entrypoint
 if __name__ == '__main__':
   create_dirs_if_needed()
   rename_to_prev()

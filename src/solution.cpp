@@ -1,27 +1,22 @@
+// This is a vernita comment which is super important!
 #include "steering-angle-generator.hpp"
 #include <limits>
 #include <fstream>
 const std::string hsv_window_name = "HSVView";
-// Matrix to store points of cones in HSV filter.
 std::vector<std::vector<cv::Point>> blue_points;
 std::vector<std::vector<cv::Point>> yellow_points;
 
-// upper and lower bounds of the yellow and blue cones (hsv)
 Bound<cv::Scalar> yellow(cv::Scalar(17, 89, 128), cv::Scalar(35, 175, 216));
 Bound<cv::Scalar> blue(cv::Scalar(70, 43, 34), cv::Scalar(120, 255, 255));
 
 HSVBounds hsv_bounds = HSVBounds(17, 35, 89, 175, 128, 216);
-// nose of the car
 cv::Point car;
 double steering_angle = 0;
-double threshold = 400;
+double threshold = 333;
 bool blue_is_left;
 Images imgs = Images();
-// color blue as a scalar value BGR (blue, green, red)
 cv::Scalar color_blue(255, 0, 0);
-// color yellow as a scalar value BGR (blue, green, red)
 cv::Scalar color_yellow(0, 255, 255);
-// Constants
 const double CLOCKWISE_LEFT = 0.1171807038;
 const double CLOCKWISE_RIGHT = -0.1356987459;
 const double COUNTERCLOCKWISE_LEFT = 0.1203680391;
@@ -30,7 +25,6 @@ const double MEDIAN_TURN_VALUE = 0.14102119705;
 const double MAX_STEERING_VALUE = 0.290888;
 const int NOISE_THRESHOLD = 0;
 
-// ================= verifier code ====================== //
 std::vector<std::string> csv_lines = std::vector<std::string>();
 std::string output;
 void toCSV(std::string filepath)
@@ -43,7 +37,6 @@ void toCSV(std::string filepath)
   }
   myfile.close();
 }
-// ================= verifier code ====================== //
 
 class Cone
 {
@@ -56,23 +49,19 @@ public:
     this->box = box;
     this->color = color;
   }
-  // getters
   cv::Rect getBox() { return box; }
   cv::Scalar getColor() { return color; }
-  // get the angrom from the center of the box to the center of a point
   double getAngleFrom(cv::Point point)
   {
     double angle = atan2(point.y - box.y - box.height / 2,
                          point.x - box.x - box.width / 2);
     return angle;
   }
-  // get the distance from the center of the box to the center of a point
   double getDistanceFrom(cv::Point point)
   {
     return sqrt(pow(point.x - box.x - box.width / 2, 2) +
                 pow(point.y - box.y - box.height / 2, 2));
   }
-  // get the center of the box
   cv::Point getCenter()
   {
     return cv::Point(box.x + box.width / 2, box.y + box.height / 2);
@@ -96,33 +85,24 @@ bool detectYellowCones(cv::Mat hsv_frame)
 Cone getCone(cv::Mat cropped_frame, cv::Mat hsv_frame, cv::Scalar color,
              std::vector<std::vector<cv::Point>> matrix)
 {
-  // create a bounding box
   cv::Rect box(cv::Point(0, 0), cv::Size(0, 0));
-  // extract the bounding box of the cone from the provided matrix
   cv::rectangle(cropped_frame, box, color, 2);
   for (auto &contour : matrix)
   {
     cv::Rect tmp = cv::boundingRect(contour);
     if (tmp.area() > NOISE_THRESHOLD)
     {
-      // using the matrix build a bounding box
       cv::Rect tmp = cv::boundingRect(contour);
       cv::Point tmp_center =
           cv::Point(tmp.x + tmp.width / 2, tmp.y + tmp.height / 2);
-      // draw the bounding box
       cv::rectangle(cropped_frame, tmp, color, 2);
-      // draw the center of the bounding box
       cv::circle(cropped_frame, tmp_center, 5, color, -1);
       if (box.width > 0)
       {
-        // get the box center
         cv::Point center =
             cv::Point(box.x + box.width / 2, box.y + box.height / 2);
-        // draw the bounding box
         cv::rectangle(cropped_frame, box, color, 2);
-        // // draw the center of the bounding box
         cv::circle(cropped_frame, center, 5, color, -1);
-        // draw a line between previous center and current center
         cv::line(cropped_frame, center, tmp_center, color, 2);
       }
       box = tmp;
@@ -131,8 +111,6 @@ Cone getCone(cv::Mat cropped_frame, cv::Mat hsv_frame, cv::Scalar color,
   return Cone(box, color);
 }
 
-// calculate the give steering adjustment based on the
-// distance of the blue & yellow cones from the center of the car
 double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
                         opendlv::proxy::AccelerationReading ar,
                         opendlv::proxy::AngularVelocityReading vel,
@@ -140,35 +118,23 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
 {
   double blue_correction = 0;
   double yellow_correction = 0;
-  // segment blue
   cv::inRange(imgs.img_hsv, blue.low, blue.high, imgs.fr_hsv);
-  // check for blue
   bool blue_detected = detectBlueCones(imgs.fr_hsv);
-  // get the blue cone
   Cone blue_cone =
       getCone(imgs.fr_cropped, imgs.fr_hsv, color_blue, blue_points);
-  // segment yellow
   cv::inRange(imgs.img_hsv, yellow.low, yellow.high, imgs.fr_hsv);
-  // check for yellow
   bool yellow_detected = detectYellowCones(imgs.fr_hsv);
-  // get the yellow cone
   Cone yellow_cone =
       getCone(imgs.fr_cropped, imgs.fr_hsv, color_yellow, yellow_points);
-  // get the angle of the yellow cone from the car in radians
   double yellow_angle_from_car = yellow_cone.getAngleFrom(car);
-  // get the angle of the blue cone from the car in radians
   double blue_angle_from_car = blue_cone.getAngleFrom(car);
-  // get the distance of the blue cone from the center of the car
   double blue_distance = blue_cone.getDistanceFrom(car);
-  // get the distance of the yellow cone from the center of the car
   double yellow_distance = yellow_cone.getDistanceFrom(car);
-  // get the magnentic field readings of the car
 
   cv::Point yellow_center = yellow_cone.getCenter();
   cv::Point blue_center = blue_cone.getCenter();
   double car_heading = gr.heading();
 
-  // display the blue distance and the yellow distance on the screen
   std::string blue_distance_str = std::to_string(blue_distance);
   std::string yellow_distance_str = std::to_string(yellow_distance);
   cv::putText(imgs.main, blue_distance_str, cv::Point(10, 30),
@@ -281,8 +247,6 @@ double getSteeringAngle(opendlv::proxy::MagneticFieldReading mfr,
 int32_t main(int32_t argc, char **argv)
 {
   int32_t retCode{1};
-  // Parse the command line parameters as we require the user to specify some
-  // mandatory information on startup.
   auto commandlineArguments = cluon::getCommandlineArguments(argc, argv);
   if ((0 == commandlineArguments.count("cid")) ||
       (0 == commandlineArguments.count("name")) ||
@@ -311,7 +275,6 @@ int32_t main(int32_t argc, char **argv)
   }
   else
   {
-    // Extract the values from the command line parameters
     const std::string NAME{commandlineArguments["name"]};
     const uint32_t WIDTH{
         static_cast<uint32_t>(std::stoi(commandlineArguments["width"]))};
@@ -319,7 +282,6 @@ int32_t main(int32_t argc, char **argv)
         static_cast<uint32_t>(std::stoi(commandlineArguments["height"]))};
     const bool VERBOSE{commandlineArguments.count("verbose") != 0};
     const std::string OUTPUT{commandlineArguments["output"]};
-    // Attach to the shared memory.
     std::unique_ptr<cluon::SharedMemory> sharedMemory{
         new cluon::SharedMemory{NAME}};
 
@@ -329,8 +291,6 @@ int32_t main(int32_t argc, char **argv)
                 << sharedMemory->name() << " (" << sharedMemory->size()
                 << " bytes)." << std::endl;
 
-      // Interface to a running OpenDaVINCI session where network messages are
-      // exchanged. The instance od4 allows you to send and receive messages.
       cluon::OD4Session od4{
           static_cast<uint16_t>(std::stoi(commandlineArguments["cid"]))};
       if (VERBOSE)
@@ -349,7 +309,6 @@ int32_t main(int32_t argc, char **argv)
         cv::createTrackbar("Val - high", hsv_window_name, &hsv_bounds.v.high,
                            255);
       }
-      // Get the steering angle request
       opendlv::proxy::GroundSteeringRequest gsr;
       std::mutex gsrMutex;
       auto onGroundSteeringRequest = [&gsr,
@@ -362,7 +321,6 @@ int32_t main(int32_t argc, char **argv)
       od4.dataTrigger(opendlv::proxy::GroundSteeringRequest::ID(),
                       onGroundSteeringRequest);
 
-      // get magnetic field
       opendlv::proxy::MagneticFieldReading mfr;
       std::mutex mfrMutex;
       auto getMagnetFieldReading = [&mfr,
@@ -375,7 +333,6 @@ int32_t main(int32_t argc, char **argv)
       od4.dataTrigger(opendlv::proxy::MagneticFieldReading::ID(),
                       getMagnetFieldReading);
 
-      // get acceleration
       opendlv::proxy::AccelerationReading ar;
       std::mutex arMutex;
       auto getAccelerationReading = [&ar,
@@ -388,7 +345,6 @@ int32_t main(int32_t argc, char **argv)
       od4.dataTrigger(opendlv::proxy::AccelerationReading::ID(),
                       getAccelerationReading);
 
-      // get velocity
       opendlv::proxy::AngularVelocityReading vel;
       std::mutex velMutex;
       auto getVelocityReading = [&vel, &velMutex](cluon::data::Envelope &&env)
@@ -400,7 +356,6 @@ int32_t main(int32_t argc, char **argv)
       od4.dataTrigger(opendlv::proxy::AngularVelocityReading::ID(),
                       getVelocityReading);
 
-      // get distance reading
       opendlv::proxy::DistanceReading dr;
       std::mutex drMutex;
       auto getDistanceReading = [&dr, &drMutex](cluon::data::Envelope &&env)
@@ -412,7 +367,6 @@ int32_t main(int32_t argc, char **argv)
       od4.dataTrigger(opendlv::proxy::DistanceReading::ID(),
                       getDistanceReading);
 
-      // get image reading
       opendlv::proxy::ImageReading ireading;
       std::mutex ireadingMutex;
       auto getImageReading = [&ireading,
@@ -424,7 +378,6 @@ int32_t main(int32_t argc, char **argv)
       };
       od4.dataTrigger(opendlv::proxy::ImageReading::ID(), getImageReading);
 
-      // get geolocation reading
       opendlv::logic::sensation::Geolocation gr;
       std::mutex grMutex;
       auto getGeolocationReading = [&gr,
@@ -437,19 +390,14 @@ int32_t main(int32_t argc, char **argv)
       od4.dataTrigger(opendlv::logic::sensation::Geolocation::ID(),
                       getGeolocationReading);
       output = OUTPUT;
-      // region on image (bounding box)
-      //          (x, y,          width,    height)
       cv::Rect region_of_interest(0, HEIGHT / 2, WIDTH - 1, (HEIGHT / 5));
-      // OpenCV data structure to hold an image.
       car = cv::Point(WIDTH / 2, HEIGHT / 1.3);
 
-      // Endless loop; end the program by pressing Ctrl-C.
       while (od4.isRunning() && sharedMemory->valid())
       {
-        std::stringstream ss; // stringstream to hold text for the image.
+        std::stringstream ss;
         std::pair<bool, cluon::data::TimeStamp> ts;
         std::string timestamp;
-        // Wait for a new frame.
         sharedMemory->wait();
 
         sharedMemory->lock();
@@ -461,15 +409,9 @@ int32_t main(int32_t argc, char **argv)
         }
         sharedMemory->unlock();
 
-        // Cropped image frame (only need a small slice the rest is noice)
         imgs.fr_cropped = imgs.main(region_of_interest);
-        // Blur the input image data
         cv::GaussianBlur(imgs.fr_cropped, imgs.img_blur, cv::Size(5, 5), 0);
-        // cv::blur(imgs.fr_cropped, imgs.img_blur, cv::Size(7, 7));
-        // convert bgr to hsv
         cv::cvtColor(imgs.img_blur, imgs.img_hsv, cv::COLOR_BGR2HSV);
-        // calculate steering adjustment based on the distance from the center
-        // of the image and the yellow and blue bounding boxes
         steering_angle = getSteeringAngle(mfr, ar, vel, gr);
 
         ss << "ActualDistanceReading:   " << dr.distance();
