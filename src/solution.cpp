@@ -14,7 +14,7 @@ HSVBounds hsv_bounds = HSVBounds(17, 35, 89, 175, 128, 216);
 // nose of the car
 cv::Point car;
 double steering_angle = 0;
-double threshold = 330;
+double threshold = 400;
 bool blue_is_left;
 Images imgs = Images();
 // color blue as a scalar value BGR (blue, green, red)
