@@ -63,8 +63,8 @@ verify:
   script:
     - apk add curl unzip
     - docker build -t group5/buildntest:latest -f Dockerfile.verifier .
-    # - 'curl -o ./artifacts.zip -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=verify'
-    # - unzip ./artifacts.zip
+    - 'curl -o ./artifacts.zip -H "PRIVATE-TOKEN: $ACCESS_TOKEN" https://git.chalmers.se/api/v4/projects/5345/jobs/artifacts/main/download?job=verify'
+    - unzip ./artifacts.zip
     - docker run -v $(pwd)/vresults:/opt/sources/verification-results group5/buildntest:latest
   artifacts:
     expose_as: vresults
