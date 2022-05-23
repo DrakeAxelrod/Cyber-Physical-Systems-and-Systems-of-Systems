@@ -157,6 +157,7 @@ def looper()
       create_graph(f.replace('prev-', ''), df)
       display_stats(f.replace('prev-', ''), df)
 
+# entrypoint
 if __name__ == '__main__':
   create_dirs_if_needed()
   rename_to_prev()
