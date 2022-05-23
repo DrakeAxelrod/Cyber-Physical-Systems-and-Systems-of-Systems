@@ -146,7 +146,7 @@ The total # of data points: {str(len(df))}
   with open(f"{ROOT_DIR}/stats/{name}.txt", "w") as f:
     f.write(s)
 
-def looper()
+def looper():
   for f in os.listdir(f"{ROOT_DIR}/csvs"):
     if f.startswith("prev-"):
       current = get_steering_data(f"{ROOT_DIR}/csvs/{f}")
