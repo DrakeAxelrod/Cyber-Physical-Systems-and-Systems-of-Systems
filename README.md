@@ -175,5 +175,5 @@ docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp:/tmp regis
 ### For further information, the contributors can be contacted:
 Drake Axelrod - drake@draxel.io  
 Klara Svensson - gussvekla@student.gu.se  
-Sicily Brannen - gusbrannsi@student.gu.se  
+S. A. Brannen - gusbrannsi@student.gu.se  
 Vernita Gouws - gusgouve@student.gu.se 
