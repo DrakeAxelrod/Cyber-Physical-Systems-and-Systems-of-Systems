@@ -149,8 +149,8 @@ The total # of data points: {str(len(df))}
 def looper():
   for f in os.listdir(f"{ROOT_DIR}/csvs"):
     if f.startswith("prev-"):
-      current = get_steering_data(f"{ROOT_DIR}/csvs/{f}")
-      previous = get_steering_data(f"{ROOT_DIR}/csvs/{f.replace('prev-', '')}")
+      previous = get_steering_data(f"{ROOT_DIR}/csvs/{f}")
+      current = get_steering_data(f"{ROOT_DIR}/csvs/{f.replace('prev-', '')}")
       previous.rename(columns={"computed": "prev-computed", "actual": "prev-actual"}, inplace=True)
       df = pd.merge(previous, current, on='timestamp', how='outer')
       df.drop(columns=['prev-actual'], inplace=True)
