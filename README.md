@@ -105,19 +105,25 @@
 
     Now, open another terminal and navigate to the same folder as previously. Then run the following command:
     ```
-    make docker-build
+    make build
     ```
     This will build the project and attach to the shared memory. 
     
     Once completed, you can run with the following command:
 
     ```
-    make docker-run
+    make run
     ```
-    Now navigate to the web application where the video is running again and play the video. Three new windows should pop up:
+    Now navigate to the web application where the video is running again and play the video. Three new windows should pop up, in addition to output being printed to the terminal:
     
     ![img](resources/img.PNG)
 
+    Note: In the case that you are pulling the image from the group's release tag, you will instead need to use the following command in the terminal. You will need to provide the release hash in the indicated <> space:
+
+
+```sh
+docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp:/tmp registry.git.chalmers.se/courses/dit638/students/2022-group-05:<release> --cid=253 --name=img --width=640 --height=480 --output=example.csv
+```
 ## Feature management
 
 1. The process that our team will follow for **new features** incorporates these steps:  
@@ -169,5 +175,5 @@
 ### For further information, the contributors can be contacted:
 Drake Axelrod - drake@draxel.io  
 Klara Svensson - gussvekla@student.gu.se  
-Sicily Brannen - gusbrannsi@student.gu.se  
+S. A. Brannen - gusbrannsi@student.gu.se  
 Vernita Gouws - gusgouve@student.gu.se 

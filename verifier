@@ -9,6 +9,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 from time import sleep
+from copy import deepcopy
+
+# "/opt/sources"
+GIT_DIR = "/opt/sources"
+# /opt/sources/verification-results/
+ROOT_DIR = f"{GIT_DIR}/verification-results"
 
 class DataSet():
   def __init__(self, rec_file: str, timestamps: list, actual_steering: list, computed_steering: list):
@@ -19,7 +25,7 @@ class DataSet():
     self.actual_steering = actual_steering
     # computed angle list
     self.computed_steering = computed_steering
-    self.previous_computed_steering = [0 for i in range(len(self.computed_steering))]
+    self.previous_computed_steering = list()
 
   # the __str__ method is used to print the object display the class attributes in a pretty way
   def __str__(self):
@@ -71,16 +77,16 @@ The total # of data points: {str(len(self.computed_steering))}
     print(s)
     # write the results to a file
     # make stats dir if it doesn't exist
-    if not os.path.exists("/opt/sources/verification-results/stats"):
-      os.makedirs("/opt/sources/verification-results/stats")
-    name = self.rec_file.replace("/opt/sources/verification-results/csvs/CID-140-recording-2020-03-18_", "").replace("-selection.csv", "")
-    path = f"/opt/sources/verification-results/stats/{name}.txt"
-    with open(f"/opt/sources/verification-results/stats/{name}.txt", "w") as f:
+    if not os.path.exists(f"{ROOT_DIR}/stats"):
+      os.makedirs(f"{ROOT_DIR}/stats")
+    name = self.rec_file.replace(f"{ROOT_DIR}/csvs/CID-140-recording-2020-03-18_", "").replace("-selection.csv", "")
+    path = f"{ROOT_DIR}/stats/{name}.txt"
+    with open(f"{ROOT_DIR}/stats/{name}.txt", "w") as f:
       f.write(s)
 
   def create_graph(self):
     # create the graph
-    pngname = self.rec_file.replace("/opt/sources/verification-results/csvs/CID-140-recording-2020-03-18_", "").replace("-selection.csv", "")
+    pngname = self.rec_file.replace(f"{ROOT_DIR}/csvs/CID-140-recording-2020-03-18_", "").replace("-selection.csv", "")
     # convert the timestamps to seconds passed since entry 0
     self.timestamps = [str(x) for x in self.timestamps]
     # plot the steering angles
@@ -88,12 +94,6 @@ The total # of data points: {str(len(self.computed_steering))}
     plt.plot(self.timestamps, self.actual_steering, 'r', label='actual steering')
     plt.plot(self.timestamps, self.computed_steering, 'b', label='computed steering')
     if len(self.previous_computed_steering) > 0:
-      # make previous_computed_steering the same length as actual_steering if its shorter than actual_steering
-      # append 0s until it is the same length
-      if len(self.previous_computed_steering) < len(self.actual_steering):
-        self.previous_computed_steering = self.previous_computed_steering + [0 for i in range(len(self.actual_steering) - len(self.previous_computed_steering))]
-      elif len(self.previous_computed_steering) > len(self.actual_steering):
-        self.previous_computed_steering = self.previous_computed_steering[:len(self.actual_steering)]
       plt.plot(self.timestamps, self.previous_computed_steering, 'g', label='previous computed steering')
     plt.legend()
     plt.title(f"{self.rec_file}")
@@ -108,12 +108,14 @@ The total # of data points: {str(len(self.computed_steering))}
     # remove white space around the plot
     plt.tight_layout()
     # save the plot
-    plt.savefig(f"/opt/sources/verification-results/graphs/{pngname}.png")
+    plt.savefig(f"{ROOT_DIR}/graphs/{pngname}.png")
     plt.close()
+    print("hello")
 
   def update(self, rec_file, timestamps, actual_steering, computed_steering):
+    prev = deepcopy(self.computed_steering)
     # update the previous computed steering angle
-    self.previous_computed_steering = self.computed_steering
+    self.previous_computed_steering = prev
     # update the computed steering angle
     self.computed_steering = computed_steering
     # update the actual steering angle
@@ -128,8 +130,7 @@ def readCSV(filepath: str):
   timestamps = list()
   actual_steering = list()
   computed_steering = list()
-  file, ext = os.path.splitext(filepath)
-  filepath = f"{file}.csv"
+  filepath = f"{ROOT_DIR}/csvs/{file}"
   with open(filepath, 'r') as f:
       for line in f:
           line = line.split(';')
@@ -146,7 +147,7 @@ def readCSV(filepath: str):
 def run_all_rec_files():
   for file in os.listdir("/opt/sources/recordings"):
     if file.endswith(".rec"):
-      cmd = f"/opt/sources/scripts/verifier-runner.sh /opt/sources/recordings/{file} {file}"
+      cmd = f"{GIT_DIR}/scripts/verifier-runner.sh {GIT_DIR}/recordings/{file} {file}"
       p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
       (output, err) = p.communicate()
       p_status = p.wait()
@@ -155,15 +156,16 @@ def run_all_rec_files():
 def run_rec_file(filepath: str, i):
   # pngname = filepath.replace("CID-140-recording-2020-03-18_", "").replace("-selection.rec", "")
   # get the id of the current thread
-  cmd = f"/opt/sources/scripts/verifier-runner.sh /opt/sources/recordings/{filepath} {filepath.replace('.rec', '')} {i+1}"
+  cmd = f"{GIT_DIR}/scripts/verifier-runner.sh {GIT_DIR}/recordings/{filepath} {filepath.replace('.rec', '')} {i+1}"
   p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
   (output, err) = p.communicate()
   p_status = p.wait()
 
 # run all the records as threads and wait for them to finish before moving on
 def run_all_rec_files_as_threads():
+  # create the 
   threads = []
-  for i, file in enumerate(os.listdir("/opt/sources/recordings")):
+  for i, file in enumerate(os.listdir(f"{GIT_DIR}/recordings")):
     if file.endswith(".rec"):
       t = threading.Thread(target=run_rec_file, args=(file,i,))
       threads.append(t)
@@ -174,7 +176,7 @@ def run_all_rec_files_as_threads():
 
 def create_data_sets():
   datasets = list()
-  for file in os.listdir("/opt/sources/verification-results/csvs"):
+  for file in os.listdir(f"{ROOT_DIR}/csvs"):
     if file.endswith(".csv"):
       # the base name of the file
       name = os.path.basename(file)
@@ -184,28 +186,28 @@ def create_data_sets():
 # move the csv files into a tmp folder
 def move_csvs_to_tmp():
   # create a tmp folder if it doesn't exist
-  if not os.path.exists("/opt/sources/verification-results/tmp"):
-    os.mkdir("/opt/sources/verification-results/tmp")
+  if not os.path.exists(f"{ROOT_DIR}/tmp"):
+    os.mkdir(f"{ROOT_DIR}/tmp")
   # move all the csv files into the tmp folder
-  for file in os.listdir("/opt/sources/verification-results/csvs"):
+  for file in os.listdir(f"{ROOT_DIR}/csvs"):
     if file.endswith(".csv"):
-      shutil.move(f"/opt/sources/verification-results/csvs/{file}", f"/opt/sources/verification-results/tmp/{file}")
+      shutil.move(f"{ROOT_DIR}/csvs/{file}", f"{ROOT_DIR}/tmp/{file}")
 
 def move_csvs_back():
   # move all the csv files back into the csvs folder
-  for file in os.listdir("/opt/sources/verification-results/tmp"):
+  for file in os.listdir(f"{ROOT_DIR}/tmp"):
     if file.endswith(".csv"):
-      shutil.move(f"/opt/sources/verification-results/tmp/{file}", f"/opt/sources/verification-results/csvs/{file}")
+      shutil.move(f"{ROOT_DIR}/tmp/{file}", f"{ROOT_DIR}/csvs/{file}")
 
 
 def clean_tmp():
   # if the tmp folder exists, delete it
-  if os.path.exists("/opt/sources/verification-results/tmp"):
-    for file in os.listdir("/opt/sources/verification-results/tmp"):
+  if os.path.exists(f"{ROOT_DIR}/tmp"):
+    for file in os.listdir(f"{ROOT_DIR}/tmp"):
       if file.endswith(".csv"):
-        os.remove(f"/opt/sources/verification-results/tmp/{file}")
+        os.remove(f"{ROOT_DIR}/tmp/{file}")
   # delete the tmp folder
-    os.rmdir("/opt/sources/verification-results/tmp")
+    os.rmdir(f"{ROOT_DIR}/tmp")
 
 # make a box plot of all of the actual steering angles vs the computed steering angles of all the data sets
 def make_box_plot(datasets: list):
@@ -232,7 +234,7 @@ def make_box_plot(datasets: list):
   # set the y-axis label
   plt.ylabel("Steering Angles (radians)")
   # save the plot
-  plt.savefig("/opt/sources/verification-results/graphs/boxplot_actual_vs_computed.png")
+  plt.savefig(f"{ROOT_DIR}/graphs/boxplot_actual_vs_computed.png")
   # close the plot
   plt.close()
   # before and after slope chart
@@ -265,17 +267,29 @@ def make_box_plot(datasets: list):
   # # set the y-axis label
   # plt.ylabel("Steering Angles (radians)")
   # # save the plot
-  # plt.savefig("/opt/sources/verification-results/graphs/slope_chart_previous_vs_current.png")
+  # plt.savefig(f"{ROOT_DIR}/graphs/slope_chart_previous_vs_current.png")
   # # close the plot
   # plt.close()
 
 if __name__ == '__main__':
-  # run_all_rec_files_as_threads()
+  # create the verification-results directory if it doesn't exist
+  if not os.path.exists(f"{ROOT_DIR}"):
+    os.mkdir(f"{ROOT_DIR}")
+  if not os.path.exists(f"{ROOT_DIR}/graphs"):
+    os.mkdir(f"{ROOT_DIR}/graphs")
+  if not os.path.exists(f"{ROOT_DIR}/csvs"):
+    os.mkdir(f"{ROOT_DIR}/csvs")
+  if not os.path.exists(f"{ROOT_DIR}/stats"):
+    os.mkdir(f"{ROOT_DIR}/stats")
+  run_all_rec_files_as_threads()
   datasets = dict()
-  for file in os.listdir("/opt/sources/verification-results/csvs"):
-    if file.endswith(".csv"):
-      (filepath, timestamps, computed_steering, actual_steering) = readCSV("/opt/sources/verification-results/csvs/" + file)
-      datasets[file] = DataSet(file, timestamps, computed_steering, actual_steering)
+  # check if /opt/sources/verification-results/csvs is empty
+  dir = os.listdir(f"{ROOT_DIR}/csvs")
+  if len(dir) > 0:
+    for file in os.listdir(f"{ROOT_DIR}/csvs"):
+      if file.endswith(".csv"):
+        (filepath, timestamps, computed_steering, actual_steering) = readCSV(f"{ROOT_DIR}/csvs/" + file)
+        datasets[file] = DataSet(file, timestamps, computed_steering, actual_steering)
   sleep(1)
   move_csvs_to_tmp()
   sleep(1)
@@ -287,14 +301,14 @@ if __name__ == '__main__':
   sleep(1)
   # update the data sets with the new csv files
   for k in datasets.keys():
-    (filepath, timestamps, computed_steering, actual_steering) = readCSV("/opt/sources/verification-results/csvs/" + datasets[k].rec_file)
+    (filepath, timestamps, computed_steering, actual_steering) = readCSV(f"{ROOT_DIR}/csvs/" + datasets[k].rec_file)
     datasets[k].update(filepath, timestamps, computed_steering, actual_steering)
   sleep(1)
   try:
     for k in datasets.keys():
       datasets[k].create_graph()
       datasets[k].display_stats()
-    # make_box_plot(datasets)
+  # make_box_plot(datasets)
   except Exception as e:
     print(e)
     move_csvs_back()
